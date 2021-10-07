@@ -37,14 +37,14 @@ impl crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedback
     pub const APPLICATION_PIPELINE_CACHE_HIT_EXT: Self = Self(2);
     pub const BASE_PIPELINE_ACCELERATION_EXT: Self = Self(4);
 }
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNVBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXT> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCreationFeedbackCreateInfoEXTBuilder<'_>> for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreationFeedbackEXT.html) · Structure"]
 #[doc(alias = "VkPipelineCreationFeedbackEXT")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq)]

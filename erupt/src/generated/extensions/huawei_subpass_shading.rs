@@ -32,14 +32,14 @@ pub type PFN_vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = unsafe extern "sy
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSubpassShadingHUAWEI.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSubpassShadingHUAWEI = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer) -> ();
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEI> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SubpassShadingPipelineCreateInfoHUAWEI> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SubpassShadingPipelineCreateInfoHUAWEIBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEI> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubpassShadingPropertiesHUAWEI> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubpassShadingPropertiesHUAWEIBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEI> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SubpassShadingPipelineCreateInfoHUAWEI> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SubpassShadingPipelineCreateInfoHUAWEIBuilder<'_>> for crate::vk1_0::ComputePipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEI> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingPropertiesHUAWEI> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingPropertiesHUAWEIBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html) · Structure"]
 #[doc(alias = "VkSubpassShadingPipelineCreateInfoHUAWEI")]
 #[derive(Copy, Clone)]

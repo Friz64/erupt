@@ -75,16 +75,16 @@ pub type PFN_vkCmdSetFragmentShadingRateKHR = unsafe extern "system" fn(command_
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceFragmentShadingRatesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, p_fragment_shading_rate_count: *mut u32, p_fragment_shading_rates: *mut crate::extensions::khr_fragment_shading_rate::PhysicalDeviceFragmentShadingRateKHR) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateStateCreateInfoKHR> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRatePropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, FragmentShadingRateAttachmentInfoKHR> for crate::vk1_2::SubpassDescription2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, FragmentShadingRateAttachmentInfoKHRBuilder<'_>> for crate::vk1_2::SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineFragmentShadingRateStateCreateInfoKHR> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'_>> for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRatePropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, FragmentShadingRateAttachmentInfoKHR> for crate::vk1_2::SubpassDescription2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, FragmentShadingRateAttachmentInfoKHRBuilder<'_>> for crate::vk1_2::SubpassDescription2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateAttachmentInfoKHR.html) · Structure"]
 #[doc(alias = "VkFragmentShadingRateAttachmentInfoKHR")]
 #[derive(Copy, Clone)]

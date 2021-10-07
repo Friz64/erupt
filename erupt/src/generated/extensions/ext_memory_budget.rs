@@ -8,8 +8,8 @@ pub const EXT_MEMORY_BUDGET_EXTENSION_NAME: *const std::os::raw::c_char = crate:
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT: Self = Self(1000237000);
 }
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMemoryBudgetPropertiesEXT> for crate::vk1_1::PhysicalDeviceMemoryProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceMemoryProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMemoryBudgetPropertiesEXT> for crate::vk1_1::PhysicalDeviceMemoryProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceMemoryProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryBudgetPropertiesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMemoryBudgetPropertiesEXT")]
 #[derive(Copy, Clone)]

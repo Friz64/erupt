@@ -13,8 +13,8 @@ impl crate::vk1_0::SubpassDescriptionFlagBits {
     pub const PER_VIEW_ATTRIBUTES_NVX: Self = Self(1);
     pub const PER_VIEW_POSITION_X_ONLY_NVX: Self = Self(2);
 }
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX")]
 #[derive(Copy, Clone)]

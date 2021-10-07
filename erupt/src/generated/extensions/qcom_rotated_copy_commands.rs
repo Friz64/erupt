@@ -78,7 +78,7 @@ impl<'a> std::ops::DerefMut for CopyCommandTransformInfoQCOMBuilder<'a> {
         &mut self.0
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOM> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOMBuilder<'_>> for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}

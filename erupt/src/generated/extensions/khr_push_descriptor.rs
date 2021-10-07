@@ -26,8 +26,8 @@ pub type PFN_vkCmdPushDescriptorSetKHR = unsafe extern "system" fn(command_buffe
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPushDescriptorSetWithTemplateKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPushDescriptorSetWithTemplateKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, descriptor_update_template: crate::vk1_1::DescriptorUpdateTemplate, layout: crate::vk1_0::PipelineLayout, set: u32, p_data: *const std::ffi::c_void) -> ();
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePushDescriptorPropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDevicePushDescriptorPropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePushDescriptorPropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePushDescriptorPropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Structure"]
 #[doc(alias = "VkPhysicalDevicePushDescriptorPropertiesKHR")]
 #[derive(Copy, Clone)]

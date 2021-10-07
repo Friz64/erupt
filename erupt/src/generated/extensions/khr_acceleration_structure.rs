@@ -389,14 +389,14 @@ pub type PFN_vkGetAccelerationStructureDeviceAddressKHR = unsafe extern "system"
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureBuildSizesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureBuildSizesKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, build_type: crate::extensions::khr_acceleration_structure::AccelerationStructureBuildTypeKHR, p_build_info: *const crate::extensions::khr_acceleration_structure::AccelerationStructureBuildGeometryInfoKHR, p_max_primitive_counts: *const u32, p_size_info: *mut crate::extensions::khr_acceleration_structure::AccelerationStructureBuildSizesInfoKHR) -> ();
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceAccelerationStructureFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureKHR> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureKHRBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructureFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructurePropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceAccelerationStructureFeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetAccelerationStructureKHR> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetAccelerationStructureKHRBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceAccelerationStructureFeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceAccelerationStructureFeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceAccelerationStructurePropertiesKHR> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceAccelerationStructurePropertiesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureKHR.html) · Structure"]
 #[doc(alias = "VkWriteDescriptorSetAccelerationStructureKHR")]
 #[derive(Copy, Clone)]

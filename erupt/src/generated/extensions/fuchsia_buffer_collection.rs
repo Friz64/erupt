@@ -104,12 +104,12 @@ pub type PFN_vkDestroyBufferCollectionFUCHSIA = unsafe extern "system" fn(device
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferCollectionPropertiesFUCHSIA.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferCollectionPropertiesFUCHSIA = unsafe extern "system" fn(device: crate::vk1_0::Device, collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA, p_properties: *mut crate::extensions::fuchsia_buffer_collection::BufferCollectionPropertiesFUCHSIA) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ImportMemoryBufferCollectionFUCHSIA> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImportMemoryBufferCollectionFUCHSIABuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, BufferCollectionBufferCreateInfoFUCHSIA> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, BufferCollectionBufferCreateInfoFUCHSIABuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, BufferCollectionImageCreateInfoFUCHSIA> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, BufferCollectionImageCreateInfoFUCHSIABuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportMemoryBufferCollectionFUCHSIA> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImportMemoryBufferCollectionFUCHSIABuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, BufferCollectionBufferCreateInfoFUCHSIA> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, BufferCollectionBufferCreateInfoFUCHSIABuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, BufferCollectionImageCreateInfoFUCHSIA> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, BufferCollectionImageCreateInfoFUCHSIABuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryBufferCollectionFUCHSIA.html) · Structure"]
 #[doc(alias = "VkImportMemoryBufferCollectionFUCHSIA")]
 #[derive(Copy, Clone)]

@@ -33,16 +33,16 @@ impl crate::vk1_0::StructureType {
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageDrmFormatModifierPropertiesEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageDrmFormatModifierPropertiesEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, image: crate::vk1_0::Image, p_properties: *mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierListCreateInfoEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierListCreateInfoEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierExplicitCreateInfoEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, DrmFormatModifierPropertiesListEXT> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, DrmFormatModifierPropertiesListEXTBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, DrmFormatModifierPropertiesList2EXT> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, DrmFormatModifierPropertiesList2EXTBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageDrmFormatModifierInfoEXT> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImageDrmFormatModifierListCreateInfoEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImageDrmFormatModifierListCreateInfoEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImageDrmFormatModifierExplicitCreateInfoEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DrmFormatModifierPropertiesListEXT> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DrmFormatModifierPropertiesListEXTBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DrmFormatModifierPropertiesList2EXT> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DrmFormatModifierPropertiesList2EXTBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceImageDrmFormatModifierInfoEXT> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure"]
 #[doc(alias = "VkDrmFormatModifierPropertiesListEXT")]
 #[derive(Copy, Clone)]

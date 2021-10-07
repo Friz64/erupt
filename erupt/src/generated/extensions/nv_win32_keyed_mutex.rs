@@ -8,8 +8,8 @@ pub const NV_WIN32_KEYED_MUTEX_EXTENSION_NAME: *const std::os::raw::c_char = cra
 impl crate::vk1_0::StructureType {
     pub const WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV: Self = Self(1000058000);
 }
-impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNV> for crate::vk1_0::SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoNV> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoNV.html) · Structure"]
 #[doc(alias = "VkWin32KeyedMutexAcquireReleaseInfoNV")]
 #[derive(Copy, Clone)]
@@ -111,5 +111,5 @@ impl<'a> std::ops::DerefMut for Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNV> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoNV> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoNVBuilder<'_>> for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}

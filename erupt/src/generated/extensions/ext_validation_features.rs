@@ -64,8 +64,8 @@ impl crate::extensions::ext_validation_features::ValidationFeatureDisableEXT {
     pub const UNIQUE_HANDLES_EXT: Self = Self(6);
     pub const SHADER_VALIDATION_CACHE_EXT: Self = Self(7);
 }
-impl<'a> crate::ExtendableFromConst<'a, ValidationFeaturesEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ValidationFeaturesEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ValidationFeaturesEXT> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ValidationFeaturesEXTBuilder<'_>> for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkValidationFeaturesEXT")]
 #[derive(Copy, Clone)]

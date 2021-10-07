@@ -51,8 +51,8 @@ impl crate::extensions::nv_framebuffer_mixed_samples::CoverageModulationModeNV {
     pub const ALPHA_NV: Self = Self(2);
     pub const RGBA_NV: Self = Self(3);
 }
-impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageModulationStateCreateInfoNV> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineCoverageModulationStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCoverageModulationStateCreateInfoNV> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineCoverageModulationStateCreateInfoNVBuilder<'_>> for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkPipelineCoverageModulationStateCreateInfoNV")]
 #[derive(Copy, Clone)]

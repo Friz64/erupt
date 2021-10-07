@@ -92,8 +92,8 @@ impl crate::extensions::khr_format_feature_flags2::FormatFeatureFlagBits2KHR {
 impl crate::vk1_0::StructureType {
     pub const FORMAT_PROPERTIES_3_KHR: Self = Self(1000360000);
 }
-impl<'a> crate::ExtendableFromMut<'a, FormatProperties3KHR> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, FormatProperties3KHRBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, FormatProperties3KHR> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, FormatProperties3KHRBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFormatProperties3KHR.html) · Structure"]
 #[doc(alias = "VkFormatProperties3KHR")]
 #[derive(Copy, Clone)]

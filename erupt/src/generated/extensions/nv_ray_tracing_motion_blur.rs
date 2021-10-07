@@ -83,14 +83,14 @@ impl crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionI
     pub const MATRIX_MOTION_NV: Self = Self(1);
     pub const SRT_MOTION_NV: Self = Self(2);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureGeometryMotionTrianglesDataNV> for crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureGeometryMotionTrianglesDataNVBuilder<'_>> for crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureMotionInfoNV> for crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, AccelerationStructureMotionInfoNVBuilder<'_>> for crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNV> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNV> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AccelerationStructureGeometryMotionTrianglesDataNV> for crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AccelerationStructureGeometryMotionTrianglesDataNVBuilder<'_>> for crate::extensions::khr_acceleration_structure::AccelerationStructureGeometryTrianglesDataKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AccelerationStructureMotionInfoNV> for crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, AccelerationStructureMotionInfoNVBuilder<'_>> for crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRayTracingMotionBlurFeaturesNV")]
 #[derive(Copy, Clone)]

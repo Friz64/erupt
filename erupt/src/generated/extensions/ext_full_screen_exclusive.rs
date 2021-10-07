@@ -57,16 +57,16 @@ pub type PFN_vkAcquireFullScreenExclusiveModeEXT = unsafe extern "system" fn(dev
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkReleaseFullScreenExclusiveModeEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkReleaseFullScreenExclusiveModeEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXT> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXT> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, SurfaceCapabilitiesFullScreenExclusiveEXT> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveInfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveWin32InfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveInfoEXT> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveInfoEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveWin32InfoEXT> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceCapabilitiesFullScreenExclusiveEXT> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'_>> for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Structure"]
 #[doc(alias = "VkSurfaceFullScreenExclusiveInfoEXT")]
 #[derive(Copy, Clone)]

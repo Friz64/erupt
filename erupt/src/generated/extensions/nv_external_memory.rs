@@ -9,10 +9,10 @@ impl crate::vk1_0::StructureType {
     pub const EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV: Self = Self(1000056000);
     pub const EXPORT_MEMORY_ALLOCATE_INFO_NV: Self = Self(1000056001);
 }
-impl<'a> crate::ExtendableFromConst<'a, ExportMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExportMemoryAllocateInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryImageCreateInfoNV> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExternalMemoryImageCreateInfoNVBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExportMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExportMemoryAllocateInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExternalMemoryImageCreateInfoNV> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExternalMemoryImageCreateInfoNVBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkExternalMemoryImageCreateInfoNV")]
 #[derive(Copy, Clone)]

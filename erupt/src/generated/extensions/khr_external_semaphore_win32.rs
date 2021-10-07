@@ -21,10 +21,10 @@ pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn(device: cr
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_semaphore_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ExportSemaphoreWin32HandleInfoKHR> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExportSemaphoreWin32HandleInfoKHRBuilder<'_>> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, D3D12FenceSubmitInfoKHR> for crate::vk1_0::SubmitInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, D3D12FenceSubmitInfoKHRBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExportSemaphoreWin32HandleInfoKHR> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExportSemaphoreWin32HandleInfoKHRBuilder<'_>> for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, D3D12FenceSubmitInfoKHR> for crate::vk1_0::SubmitInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, D3D12FenceSubmitInfoKHRBuilder<'_>> for crate::vk1_0::SubmitInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportSemaphoreWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]

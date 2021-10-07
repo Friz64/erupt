@@ -17,10 +17,10 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_0::Filter {
     pub const CUBIC_EXT: Self = Self::CUBIC_IMG;
 }
-impl<'a> crate::ExtendableFromMut<'a, FilterCubicImageViewImageFormatPropertiesEXT> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, FilterCubicImageViewImageFormatPropertiesEXTBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageViewImageFormatInfoEXT> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, FilterCubicImageViewImageFormatPropertiesEXT> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, FilterCubicImageViewImageFormatPropertiesEXTBuilder<'_>> for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceImageViewImageFormatInfoEXT> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceImageViewImageFormatInfoEXT")]
 #[derive(Copy, Clone)]

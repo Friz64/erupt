@@ -147,8 +147,8 @@ impl crate::extensions::khr_video_encode_queue::VideoEncodeRateControlModeFlagBi
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEncodeVideoKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEncodeVideoKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_encode_info: *const crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHR) -> ();
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeRateControlInfoKHR> for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoEncodeRateControlInfoKHRBuilder<'_>> for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeRateControlInfoKHR> for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeRateControlInfoKHRBuilder<'_>> for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeInfoKHR.html) · Structure"]
 #[doc(alias = "VkVideoEncodeInfoKHR")]
 #[derive(Copy, Clone)]

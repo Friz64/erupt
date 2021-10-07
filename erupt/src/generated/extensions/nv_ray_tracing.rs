@@ -259,10 +259,10 @@ pub type PFN_vkGetAccelerationStructureHandleNV = unsafe extern "system" fn(devi
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRayTracingPipelinesNV = unsafe extern "system" fn(device: crate::vk1_0::Device, pipeline_cache: crate::vk1_0::PipelineCache, create_info_count: u32, p_create_infos: *const crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNV, p_allocator: *const crate::vk1_0::AllocationCallbacks, p_pipelines: *mut crate::vk1_0::Pipeline) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureNV> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, WriteDescriptorSetAccelerationStructureNVBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceRayTracingPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetAccelerationStructureNV> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetAccelerationStructureNVBuilder<'_>> for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingPropertiesNV> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingPropertiesNVBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkRayTracingShaderGroupCreateInfoNV")]
 #[derive(Copy, Clone)]

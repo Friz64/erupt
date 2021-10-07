@@ -15,14 +15,14 @@ impl crate::vk1_0::StructureType {
     pub const PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO_EXT: Self = Self(1000225001);
     pub const PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES_EXT: Self = Self(1000225002);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'_>> for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubgroupSizeControlPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceSubgroupSizeControlFeaturesEXT")]
 #[derive(Copy, Clone)]

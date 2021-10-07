@@ -10,12 +10,12 @@ impl crate::vk1_0::StructureType {
     pub const DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV: Self = Self(1000026001);
     pub const DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV: Self = Self(1000026002);
 }
-impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationMemoryAllocateInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationBufferCreateInfoNV> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationBufferCreateInfoNVBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationImageCreateInfoNV> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DedicatedAllocationImageCreateInfoNVBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationMemoryAllocateInfoNV> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationMemoryAllocateInfoNVBuilder<'_>> for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationBufferCreateInfoNV> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationBufferCreateInfoNVBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationImageCreateInfoNV> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationImageCreateInfoNVBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Structure"]
 #[doc(alias = "VkDedicatedAllocationImageCreateInfoNV")]
 #[derive(Copy, Clone)]

@@ -300,14 +300,14 @@ pub type PFN_vkCmdWriteBufferMarker2AMD = unsafe extern "system" fn(command_buff
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetQueueCheckpointData2NV = unsafe extern "system" fn(queue: crate::vk1_0::Queue, p_checkpoint_data_count: *mut u32, p_checkpoint_data: *mut crate::extensions::khr_synchronization2::CheckpointData2NV) -> ();
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSynchronization2FeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSynchronization2FeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, QueueFamilyCheckpointProperties2NV> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, QueueFamilyCheckpointProperties2NVBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, MemoryBarrier2KHR> for crate::vk1_2::SubpassDependency2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, MemoryBarrier2KHRBuilder<'_>> for crate::vk1_2::SubpassDependency2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSynchronization2FeaturesKHR> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSynchronization2FeaturesKHR> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSynchronization2FeaturesKHRBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueueFamilyCheckpointProperties2NV> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueueFamilyCheckpointProperties2NVBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, MemoryBarrier2KHR> for crate::vk1_2::SubpassDependency2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, MemoryBarrier2KHRBuilder<'_>> for crate::vk1_2::SubpassDependency2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryBarrier2KHR.html) · Structure"]
 #[doc(alias = "VkMemoryBarrier2KHR")]
 #[derive(Copy, Clone)]

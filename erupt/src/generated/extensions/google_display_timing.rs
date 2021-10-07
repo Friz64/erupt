@@ -18,8 +18,8 @@ pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn(device:
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, p_presentation_timing_count: *mut u32, p_presentation_timings: *mut crate::extensions::google_display_timing::PastPresentationTimingGOOGLE) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, PresentTimesInfoGOOGLE> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PresentTimesInfoGOOGLEBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PresentTimesInfoGOOGLE> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PresentTimesInfoGOOGLEBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure"]
 #[doc(alias = "VkRefreshCycleDurationGOOGLE")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq)]

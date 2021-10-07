@@ -47,16 +47,16 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_0::PipelineStageFlagBits {
     pub const FRAGMENT_DENSITY_PROCESS_EXT: Self = Self(8388608);
 }
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentDensityMapFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXT> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXT> for crate::vk1_2::RenderPassCreateInfo2Builder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for crate::vk1_2::RenderPassCreateInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentDensityMapFeaturesEXT> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassFragmentDensityMapCreateInfoEXT> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for crate::vk1_0::RenderPassCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentDensityMapFeaturesEXT> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentDensityMapPropertiesEXT> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'_>> for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassFragmentDensityMapCreateInfoEXT> for crate::vk1_2::RenderPassCreateInfo2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, RenderPassFragmentDensityMapCreateInfoEXTBuilder<'_>> for crate::vk1_2::RenderPassCreateInfo2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapFeaturesEXT")]
 #[derive(Copy, Clone)]

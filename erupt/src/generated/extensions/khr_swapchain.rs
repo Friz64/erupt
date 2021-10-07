@@ -133,8 +133,8 @@ pub type PFN_vkAcquireNextImage2KHR = unsafe extern "system" fn(device: crate::v
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDevicePresentRectanglesKHR = unsafe extern "system" fn(physical_device: crate::vk1_0::PhysicalDevice, surface: crate::extensions::khr_surface::SurfaceKHR, p_rect_count: *mut u32, p_rects: *mut crate::vk1_0::Rect2D) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ImageSwapchainCreateInfoKHR> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ImageSwapchainCreateInfoKHRBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImageSwapchainCreateInfoKHR> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ImageSwapchainCreateInfoKHRBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Structure"]
 #[doc(alias = "VkSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone)]
@@ -178,8 +178,8 @@ impl SwapchainCreateInfoKHR {
         SwapchainCreateInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, DeviceGroupSwapchainCreateInfoKHR> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DeviceGroupSwapchainCreateInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceGroupSwapchainCreateInfoKHR> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceGroupSwapchainCreateInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Builder of [`SwapchainCreateInfoKHR`]"]
 #[repr(transparent)]
@@ -326,8 +326,8 @@ impl PresentInfoKHR {
         PresentInfoKHRBuilder(self, std::marker::PhantomData)
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, DeviceGroupPresentInfoKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DeviceGroupPresentInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceGroupPresentInfoKHR> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceGroupPresentInfoKHRBuilder<'_>> for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentInfoKHR.html) · Builder of [`PresentInfoKHR`]"]
 #[repr(transparent)]
@@ -389,8 +389,8 @@ impl<'a> std::ops::DerefMut for PresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-impl<'a> crate::ExtendableFromConst<'a, BindImageMemorySwapchainInfoKHR> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, BindImageMemorySwapchainInfoKHRBuilder<'_>> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, BindImageMemorySwapchainInfoKHR> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, BindImageMemorySwapchainInfoKHRBuilder<'_>> for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Structure"]
 #[doc(alias = "VkDeviceGroupPresentCapabilitiesKHR")]
 #[derive(Copy, Clone)]

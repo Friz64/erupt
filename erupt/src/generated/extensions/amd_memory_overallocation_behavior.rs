@@ -29,8 +29,8 @@ impl crate::extensions::amd_memory_overallocation_behavior::MemoryOverallocation
     pub const ALLOWED_AMD: Self = Self(1);
     pub const DISALLOWED_AMD: Self = Self(2);
 }
-impl<'a> crate::ExtendableFromConst<'a, DeviceMemoryOverallocationCreateInfoAMD> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, DeviceMemoryOverallocationCreateInfoAMDBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceMemoryOverallocationCreateInfoAMD> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceMemoryOverallocationCreateInfoAMDBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Structure"]
 #[doc(alias = "VkDeviceMemoryOverallocationCreateInfoAMD")]
 #[derive(Copy, Clone)]

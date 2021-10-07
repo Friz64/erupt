@@ -86,8 +86,8 @@ pub type PFN_vkRegisterDisplayEventEXT = unsafe extern "system" fn(device: crate
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainCounterEXT.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainCounterEXT = unsafe extern "system" fn(device: crate::vk1_0::Device, swapchain: crate::extensions::khr_swapchain::SwapchainKHR, counter: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagBitsEXT, p_counter_value: *mut u64) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, SwapchainCounterCreateInfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, SwapchainCounterCreateInfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SwapchainCounterCreateInfoEXT> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, SwapchainCounterCreateInfoEXTBuilder<'_>> for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPowerInfoEXT.html) · Structure"]
 #[doc(alias = "VkDisplayPowerInfoEXT")]
 #[derive(Copy, Clone)]

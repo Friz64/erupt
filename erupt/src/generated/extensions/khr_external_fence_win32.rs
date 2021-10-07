@@ -20,8 +20,8 @@ pub type PFN_vkGetFenceWin32HandleKHR = unsafe extern "system" fn(device: crate:
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportFenceWin32HandleKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportFenceWin32HandleKHR = unsafe extern "system" fn(device: crate::vk1_0::Device, p_import_fence_win32_handle_info: *const crate::extensions::khr_external_fence_win32::ImportFenceWin32HandleInfoKHR) -> crate::vk1_0::Result;
-impl<'a> crate::ExtendableFromConst<'a, ExportFenceWin32HandleInfoKHR> for crate::vk1_0::FenceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, ExportFenceWin32HandleInfoKHRBuilder<'_>> for crate::vk1_0::FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExportFenceWin32HandleInfoKHR> for crate::vk1_0::FenceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ExportFenceWin32HandleInfoKHRBuilder<'_>> for crate::vk1_0::FenceCreateInfoBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportFenceWin32HandleInfoKHR.html) · Structure"]
 #[doc(alias = "VkImportFenceWin32HandleInfoKHR")]
 #[derive(Copy, Clone)]

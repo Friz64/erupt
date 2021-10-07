@@ -367,26 +367,26 @@ pub type PFN_vkCmdControlVideoCodingKHR = unsafe extern "system" fn(command_buff
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndVideoCodingKHR.html) · Function"]
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndVideoCodingKHR = unsafe extern "system" fn(command_buffer: crate::vk1_0::CommandBuffer, p_end_coding_info: *const crate::extensions::khr_video_queue::VideoEndCodingInfoKHR) -> ();
-impl<'a> crate::ExtendableFromConst<'a, VideoProfilesKHR> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHR> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfilesKHR> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHR> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfilesKHR> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHR> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHR> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromConst<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoProfilesKHR> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoProfileKHR> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoQueueFamilyProperties2KHR> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFromMut<'a, VideoQueueFamilyProperties2KHRBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHR> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHR> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHR> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHR> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHR> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHR> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHR> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHR> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHRBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHR> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoQueueFamilyProperties2KHR> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoQueueFamilyProperties2KHRBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoQueueFamilyProperties2KHR.html) · Structure"]
 #[doc(alias = "VkVideoQueueFamilyProperties2KHR")]
 #[derive(Copy, Clone)]

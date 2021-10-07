@@ -416,8 +416,7 @@ impl Structure {
             self.has_p_next(Mutability::Const),
             self.has_p_next(Mutability::Mut),
         ) {
-            (true, false) => Some(quote! { ExtendableFromConst }),
-            (false, true) => Some(quote! { ExtendableFromMut }),
+            (true, false) | (false, true) => Some(quote! { ExtendableFrom }),
             (false, false) => None,
             (true, true) => Some(quote! { unreachable!() }),
         };

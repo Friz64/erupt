@@ -52,6 +52,8 @@ pub mod ext_acquire_xlib_display;
 pub mod ext_astc_decode_mode;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_blend_operation_advanced.html) · Vulkan extension"]
 pub mod ext_blend_operation_advanced;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_border_color_swizzle.html) · Vulkan extension"]
+pub mod ext_border_color_swizzle;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_buffer_device_address.html) · Vulkan extension"]
 pub mod ext_buffer_device_address;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_calibrated_timestamps.html) · Vulkan extension"]
@@ -212,6 +214,8 @@ pub mod ext_video_decode_h264;
 pub mod ext_video_decode_h265;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_video_encode_h264.html) · Vulkan extension"]
 pub mod ext_video_encode_h264;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_video_encode_h265.html) · Vulkan extension"]
+pub mod ext_video_encode_h265;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_ycbcr_2plane_444_formats.html) · Vulkan extension"]
 pub mod ext_ycbcr_2plane_444_formats;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_ycbcr_image_arrays.html) · Vulkan extension"]

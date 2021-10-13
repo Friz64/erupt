@@ -53,6 +53,8 @@ pub use crate::extensions::ext_astc_decode_mode::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_blend_operation_advanced::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_border_color_swizzle::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_buffer_device_address::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_calibrated_timestamps::*;
@@ -212,6 +214,8 @@ pub use crate::extensions::ext_video_decode_h264::*;
 pub use crate::extensions::ext_video_decode_h265::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_video_encode_h264::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_video_encode_h265::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_ycbcr_2plane_444_formats::*;
 #[doc(no_inline)]

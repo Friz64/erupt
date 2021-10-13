@@ -108,7 +108,7 @@ impl crate::vk1_0::ObjectType {
     pub const VIDEO_SESSION_KHR: Self = Self(1000023000);
     pub const VIDEO_SESSION_PARAMETERS_KHR: Self = Self(1000023001);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagsKHR.html) · Bitmask of [`VideoCodecOperationFlagBitsKHR`]"] # [doc (alias = "VkVideoCodecOperationFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodecOperationFlagsKHR : u32 { const INVALID_KHR = VideoCodecOperationFlagBitsKHR :: INVALID_KHR . 0 ; const ENCODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: ENCODE_H264_EXT . 0 ; const DECODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H264_EXT . 0 ; const DECODE_H265_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H265_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagsKHR.html) · Bitmask of [`VideoCodecOperationFlagBitsKHR`]"] # [doc (alias = "VkVideoCodecOperationFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCodecOperationFlagsKHR : u32 { const INVALID_KHR = VideoCodecOperationFlagBitsKHR :: INVALID_KHR . 0 ; const ENCODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: ENCODE_H264_EXT . 0 ; const ENCODE_H265_EXT = VideoCodecOperationFlagBitsKHR :: ENCODE_H265_EXT . 0 ; const DECODE_H264_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H264_EXT . 0 ; const DECODE_H265_EXT = VideoCodecOperationFlagBitsKHR :: DECODE_H265_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagBitsKHR.html) · Bits enum of [`VideoCodecOperationFlagsKHR`]"]
 #[doc(alias = "VkVideoCodecOperationFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -126,6 +126,7 @@ impl std::fmt::Debug for VideoCodecOperationFlagBitsKHR {
         f.write_str(match self {
             &Self::INVALID_KHR => "INVALID_KHR",
             &Self::ENCODE_H264_EXT => "ENCODE_H264_EXT",
+            &Self::ENCODE_H265_EXT => "ENCODE_H265_EXT",
             &Self::DECODE_H264_EXT => "DECODE_H264_EXT",
             &Self::DECODE_H265_EXT => "DECODE_H265_EXT",
             _ => "(unknown variant)",

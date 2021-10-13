@@ -15,23 +15,6 @@ pub const FN_DESTROY_BUFFER_COLLECTION_FUCHSIA: *const std::os::raw::c_char = cr
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_BUFFER_COLLECTION_PROPERTIES_FUCHSIA: *const std::os::raw::c_char = crate::cstr!("vkGetBufferCollectionPropertiesFUCHSIA");
 crate::non_dispatchable_handle!(BufferCollectionFUCHSIA, BUFFER_COLLECTION_FUCHSIA, "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionFUCHSIA.html) · Non-dispatchable Handle", "VkBufferCollectionFUCHSIA");
-#[doc = "Provided by [`crate::extensions::fuchsia_buffer_collection`]"]
-impl crate::vk1_0::StructureType {
-    pub const BUFFER_COLLECTION_CREATE_INFO_FUCHSIA: Self = Self(1000366000);
-    pub const IMPORT_MEMORY_BUFFER_COLLECTION_FUCHSIA: Self = Self(1000366001);
-    pub const BUFFER_COLLECTION_IMAGE_CREATE_INFO_FUCHSIA: Self = Self(1000366002);
-    pub const BUFFER_COLLECTION_PROPERTIES_FUCHSIA: Self = Self(1000366003);
-    pub const BUFFER_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366004);
-    pub const BUFFER_COLLECTION_BUFFER_CREATE_INFO_FUCHSIA: Self = Self(1000366005);
-    pub const IMAGE_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366006);
-    pub const IMAGE_FORMAT_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366007);
-    pub const SYSMEM_COLOR_SPACE_FUCHSIA: Self = Self(1000366008);
-    pub const BUFFER_COLLECTION_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366009);
-}
-#[doc = "Provided by [`crate::extensions::fuchsia_buffer_collection`]"]
-impl crate::vk1_0::ObjectType {
-    pub const BUFFER_COLLECTION_FUCHSIA: Self = Self(1000366000);
-}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatConstraintsFlagsFUCHSIA.html) · Bitmask of [`ImageFormatConstraintsFlagBitsFUCHSIA`]"] # [doc (alias = "VkImageFormatConstraintsFlagsFUCHSIA")] # [derive (Default)] # [repr (transparent)] pub struct ImageFormatConstraintsFlagsFUCHSIA : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`ImageFormatConstraintsFlagsFUCHSIA`]"]
 #[doc(alias = "VkImageFormatConstraintsFlagBitsFUCHSIA")]
@@ -51,6 +34,23 @@ impl std::fmt::Debug for ImageFormatConstraintsFlagBitsFUCHSIA {
             _ => "(unknown variant)",
         })
     }
+}
+#[doc = "Provided by [`crate::extensions::fuchsia_buffer_collection`]"]
+impl crate::vk1_0::StructureType {
+    pub const BUFFER_COLLECTION_CREATE_INFO_FUCHSIA: Self = Self(1000366000);
+    pub const IMPORT_MEMORY_BUFFER_COLLECTION_FUCHSIA: Self = Self(1000366001);
+    pub const BUFFER_COLLECTION_IMAGE_CREATE_INFO_FUCHSIA: Self = Self(1000366002);
+    pub const BUFFER_COLLECTION_PROPERTIES_FUCHSIA: Self = Self(1000366003);
+    pub const BUFFER_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366004);
+    pub const BUFFER_COLLECTION_BUFFER_CREATE_INFO_FUCHSIA: Self = Self(1000366005);
+    pub const IMAGE_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366006);
+    pub const IMAGE_FORMAT_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366007);
+    pub const SYSMEM_COLOR_SPACE_FUCHSIA: Self = Self(1000366008);
+    pub const BUFFER_COLLECTION_CONSTRAINTS_INFO_FUCHSIA: Self = Self(1000366009);
+}
+#[doc = "Provided by [`crate::extensions::fuchsia_buffer_collection`]"]
+impl crate::vk1_0::ObjectType {
+    pub const BUFFER_COLLECTION_FUCHSIA: Self = Self(1000366000);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageConstraintsInfoFlagsFUCHSIA.html) · Bitmask of [`ImageConstraintsInfoFlagBitsFUCHSIA`]"] # [doc (alias = "VkImageConstraintsInfoFlagsFUCHSIA")] # [derive (Default)] # [repr (transparent)] pub struct ImageConstraintsInfoFlagsFUCHSIA : u32 { const CPU_READ_RARELY_FUCHSIA = ImageConstraintsInfoFlagBitsFUCHSIA :: CPU_READ_RARELY_FUCHSIA . 0 ; const CPU_READ_OFTEN_FUCHSIA = ImageConstraintsInfoFlagBitsFUCHSIA :: CPU_READ_OFTEN_FUCHSIA . 0 ; const CPU_WRITE_RARELY_FUCHSIA = ImageConstraintsInfoFlagBitsFUCHSIA :: CPU_WRITE_RARELY_FUCHSIA . 0 ; const CPU_WRITE_OFTEN_FUCHSIA = ImageConstraintsInfoFlagBitsFUCHSIA :: CPU_WRITE_OFTEN_FUCHSIA . 0 ; const PROTECTED_OPTIONAL_FUCHSIA = ImageConstraintsInfoFlagBitsFUCHSIA :: PROTECTED_OPTIONAL_FUCHSIA . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageConstraintsInfoFlagBitsFUCHSIA.html) · Bits enum of [`ImageConstraintsInfoFlagsFUCHSIA`]"]

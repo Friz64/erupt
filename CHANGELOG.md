@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Optimize construction of larger pointer chains
-- Update Vulkan Headers to version 195
+- Update Vulkan Headers to version 196
 - Simplify function definitions containing handles
 
 ## [0.20.0+190] - 2021-08-30

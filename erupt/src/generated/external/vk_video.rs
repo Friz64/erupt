@@ -404,6 +404,63 @@ impl crate::external::vk_video::StdVideoH265Level {
     pub const _6_2: Self = Self(12);
     pub const INVALID: Self = Self(2147483647);
 }
+#[doc = "<s>Vulkan Manual Page</s> · Enum"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct StdVideoH265SliceType(pub i32);
+impl std::fmt::Debug for StdVideoH265SliceType {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::B => "B",
+            &Self::P => "P",
+            &Self::I => "I",
+            &Self::INVALID => "INVALID",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`crate::external::vk_video`]"]
+impl crate::external::vk_video::StdVideoH265SliceType {
+    pub const B: Self = Self(0);
+    pub const P: Self = Self(1);
+    pub const I: Self = Self(2);
+    pub const INVALID: Self = Self(2147483647);
+}
+#[doc = "<s>Vulkan Manual Page</s> · Enum"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct StdVideoH265PictureType(pub i32);
+impl std::fmt::Debug for StdVideoH265PictureType {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::I => "I",
+            &Self::P => "P",
+            &Self::B => "B",
+            &Self::IDR => "IDR",
+            &Self::INVALID => "INVALID",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`crate::external::vk_video`]"]
+impl crate::external::vk_video::StdVideoH265PictureType {
+    pub const I: Self = Self(0);
+    pub const P: Self = Self(1);
+    pub const B: Self = Self(2);
+    pub const IDR: Self = Self(3);
+    pub const INVALID: Self = Self(2147483647);
+}
+#[doc = "<s>Vulkan Manual Page</s> · Enum"]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265SliceSegmentHeader(pub i32);
+impl std::fmt::Debug for StdVideoEncodeH265SliceSegmentHeader {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            _ => "(unknown variant)",
+        })
+    }
+}
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
 #[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
@@ -5188,6 +5245,867 @@ impl<'a> std::ops::Deref for StdVideoEncodeH264RefPicMarkingEntryBuilder<'a> {
     }
 }
 impl<'a> std::ops::DerefMut for StdVideoEncodeH264RefPicMarkingEntryBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct StdVideoEncodeH265PictureInfoFlags {
+    pub is_reference_flag_and_more_bitfield: u32,
+}
+impl Default for StdVideoEncodeH265PictureInfoFlags {
+    fn default() -> Self {
+        Self { is_reference_flag_and_more_bitfield: Default::default() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265PictureInfoFlags {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265PictureInfoFlags").field("is_reference_flag_and_more_bitfield", &format!("{:#b}", &self.is_reference_flag_and_more_bitfield)).finish()
+    }
+}
+impl StdVideoEncodeH265PictureInfoFlags {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+        StdVideoEncodeH265PictureInfoFlagsBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265PictureInfoFlags`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265PictureInfoFlagsBuilder<'a>(StdVideoEncodeH265PictureInfoFlags, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+        StdVideoEncodeH265PictureInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn is_reference_flag(mut self, is_reference_flag: u32) -> Self {
+        self.0.is_reference_flag_and_more_bitfield = crate::bits_copy!(self.0.is_reference_flag_and_more_bitfield, is_reference_flag, 0usize, 0usize);
+        self
+    }
+    #[inline]
+    pub fn irap_pic_flag(mut self, irap_pic_flag: u32) -> Self {
+        self.0.is_reference_flag_and_more_bitfield = crate::bits_copy!(self.0.is_reference_flag_and_more_bitfield, irap_pic_flag, 1usize, 1usize);
+        self
+    }
+    #[inline]
+    pub fn long_term_flag(mut self, long_term_flag: u32) -> Self {
+        self.0.is_reference_flag_and_more_bitfield = crate::bits_copy!(self.0.is_reference_flag_and_more_bitfield, long_term_flag, 2usize, 2usize);
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265PictureInfoFlags {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+    fn default() -> StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+    type Target = StdVideoEncodeH265PictureInfoFlags;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct StdVideoEncodeH265PictureInfo {
+    pub picture_type: crate::external::vk_video::StdVideoH265PictureType,
+    pub sps_video_parameter_set_id: u8,
+    pub pps_seq_parameter_set_id: u8,
+    pub pic_order_cnt_val: i32,
+    pub temporal_id: u8,
+    pub flags: crate::external::vk_video::StdVideoEncodeH265PictureInfoFlags,
+}
+impl Default for StdVideoEncodeH265PictureInfo {
+    fn default() -> Self {
+        Self { picture_type: Default::default(), sps_video_parameter_set_id: Default::default(), pps_seq_parameter_set_id: Default::default(), pic_order_cnt_val: Default::default(), temporal_id: Default::default(), flags: Default::default() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265PictureInfo {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265PictureInfo").field("picture_type", &self.picture_type).field("sps_video_parameter_set_id", &self.sps_video_parameter_set_id).field("pps_seq_parameter_set_id", &self.pps_seq_parameter_set_id).field("pic_order_cnt_val", &self.pic_order_cnt_val).field("temporal_id", &self.temporal_id).field("flags", &self.flags).finish()
+    }
+}
+impl StdVideoEncodeH265PictureInfo {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265PictureInfoBuilder<'a> {
+        StdVideoEncodeH265PictureInfoBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265PictureInfo`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265PictureInfoBuilder<'a>(StdVideoEncodeH265PictureInfo, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265PictureInfoBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265PictureInfoBuilder<'a> {
+        StdVideoEncodeH265PictureInfoBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn picture_type(mut self, picture_type: crate::external::vk_video::StdVideoH265PictureType) -> Self {
+        self.0.picture_type = picture_type as _;
+        self
+    }
+    #[inline]
+    pub fn sps_video_parameter_set_id(mut self, sps_video_parameter_set_id: u8) -> Self {
+        self.0.sps_video_parameter_set_id = sps_video_parameter_set_id as _;
+        self
+    }
+    #[inline]
+    pub fn pps_seq_parameter_set_id(mut self, pps_seq_parameter_set_id: u8) -> Self {
+        self.0.pps_seq_parameter_set_id = pps_seq_parameter_set_id as _;
+        self
+    }
+    #[inline]
+    pub fn pic_order_cnt_val(mut self, pic_order_cnt_val: i32) -> Self {
+        self.0.pic_order_cnt_val = pic_order_cnt_val as _;
+        self
+    }
+    #[inline]
+    pub fn temporal_id(mut self, temporal_id: u8) -> Self {
+        self.0.temporal_id = temporal_id as _;
+        self
+    }
+    #[inline]
+    pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265PictureInfoFlags) -> Self {
+        self.0.flags = flags as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265PictureInfo {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265PictureInfoBuilder<'a> {
+    fn default() -> StdVideoEncodeH265PictureInfoBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265PictureInfoBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265PictureInfoBuilder<'a> {
+    type Target = StdVideoEncodeH265PictureInfo;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265PictureInfoBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct StdVideoEncodeH265SliceHeader {
+    pub slice_type: crate::external::vk_video::StdVideoH265SliceType,
+    pub slice_pic_parameter_set_id: u8,
+    pub num_short_term_ref_pic_sets: u8,
+    pub slice_segment_address: u32,
+    pub short_term_ref_pic_set_idx: u8,
+    pub num_long_term_sps: u8,
+    pub num_long_term_pics: u8,
+    pub collocated_ref_idx: u8,
+    pub num_ref_idx_l0_active_minus1: u8,
+    pub num_ref_idx_l1_active_minus1: u8,
+    pub luma_log2_weight_denom: u8,
+    pub delta_chroma_log2_weight_denom: i8,
+    pub delta_luma_weight_l0: [i8; 15],
+    pub luma_offset_l0: [i8; 15],
+    pub delta_chroma_weight_l0: [[i8; 2]; 15],
+    pub delta_chroma_offset_l0: [[i8; 2]; 15],
+    pub delta_luma_weight_l1: [i8; 15],
+    pub luma_offset_l1: [i8; 15],
+    pub delta_chroma_weight_l1: [[i8; 2]; 15],
+    pub delta_chroma_offset_l1: [[i8; 2]; 15],
+    pub max_num_merge_cand: u8,
+    pub slice_qp_delta: i8,
+    pub slice_cb_qp_offset: i8,
+    pub slice_cr_qp_offset: i8,
+    pub slice_beta_offset_div2: i8,
+    pub slice_tc_offset_div2: i8,
+    pub slice_act_y_qp_offset: i8,
+    pub slice_act_cb_qp_offset: i8,
+    pub slice_act_cr_qp_offset: i8,
+    pub flags: crate::external::vk_video::StdVideoEncodeH265SliceHeaderFlags,
+}
+impl Default for StdVideoEncodeH265SliceHeader {
+    fn default() -> Self {
+        Self { slice_type: Default::default(), slice_pic_parameter_set_id: Default::default(), num_short_term_ref_pic_sets: Default::default(), slice_segment_address: Default::default(), short_term_ref_pic_set_idx: Default::default(), num_long_term_sps: Default::default(), num_long_term_pics: Default::default(), collocated_ref_idx: Default::default(), num_ref_idx_l0_active_minus1: Default::default(), num_ref_idx_l1_active_minus1: Default::default(), luma_log2_weight_denom: Default::default(), delta_chroma_log2_weight_denom: Default::default(), delta_luma_weight_l0: unsafe { std::mem::zeroed() }, luma_offset_l0: unsafe { std::mem::zeroed() }, delta_chroma_weight_l0: unsafe { std::mem::zeroed() }, delta_chroma_offset_l0: unsafe { std::mem::zeroed() }, delta_luma_weight_l1: unsafe { std::mem::zeroed() }, luma_offset_l1: unsafe { std::mem::zeroed() }, delta_chroma_weight_l1: unsafe { std::mem::zeroed() }, delta_chroma_offset_l1: unsafe { std::mem::zeroed() }, max_num_merge_cand: Default::default(), slice_qp_delta: Default::default(), slice_cb_qp_offset: Default::default(), slice_cr_qp_offset: Default::default(), slice_beta_offset_div2: Default::default(), slice_tc_offset_div2: Default::default(), slice_act_y_qp_offset: Default::default(), slice_act_cb_qp_offset: Default::default(), slice_act_cr_qp_offset: Default::default(), flags: Default::default() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265SliceHeader {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265SliceHeader").field("slice_type", &self.slice_type).field("slice_pic_parameter_set_id", &self.slice_pic_parameter_set_id).field("num_short_term_ref_pic_sets", &self.num_short_term_ref_pic_sets).field("slice_segment_address", &self.slice_segment_address).field("short_term_ref_pic_set_idx", &self.short_term_ref_pic_set_idx).field("num_long_term_sps", &self.num_long_term_sps).field("num_long_term_pics", &self.num_long_term_pics).field("collocated_ref_idx", &self.collocated_ref_idx).field("num_ref_idx_l0_active_minus1", &self.num_ref_idx_l0_active_minus1).field("num_ref_idx_l1_active_minus1", &self.num_ref_idx_l1_active_minus1).field("luma_log2_weight_denom", &self.luma_log2_weight_denom).field("delta_chroma_log2_weight_denom", &self.delta_chroma_log2_weight_denom).field("delta_luma_weight_l0", &self.delta_luma_weight_l0).field("luma_offset_l0", &self.luma_offset_l0).field("delta_chroma_weight_l0", &self.delta_chroma_weight_l0).field("delta_chroma_offset_l0", &self.delta_chroma_offset_l0).field("delta_luma_weight_l1", &self.delta_luma_weight_l1).field("luma_offset_l1", &self.luma_offset_l1).field("delta_chroma_weight_l1", &self.delta_chroma_weight_l1).field("delta_chroma_offset_l1", &self.delta_chroma_offset_l1).field("max_num_merge_cand", &self.max_num_merge_cand).field("slice_qp_delta", &self.slice_qp_delta).field("slice_cb_qp_offset", &self.slice_cb_qp_offset).field("slice_cr_qp_offset", &self.slice_cr_qp_offset).field("slice_beta_offset_div2", &self.slice_beta_offset_div2).field("slice_tc_offset_div2", &self.slice_tc_offset_div2).field("slice_act_y_qp_offset", &self.slice_act_y_qp_offset).field("slice_act_cb_qp_offset", &self.slice_act_cb_qp_offset).field("slice_act_cr_qp_offset", &self.slice_act_cr_qp_offset).field("flags", &self.flags).finish()
+    }
+}
+impl StdVideoEncodeH265SliceHeader {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265SliceHeaderBuilder<'a> {
+        StdVideoEncodeH265SliceHeaderBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265SliceHeader`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265SliceHeaderBuilder<'a>(StdVideoEncodeH265SliceHeader, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265SliceHeaderBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265SliceHeaderBuilder<'a> {
+        StdVideoEncodeH265SliceHeaderBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn slice_type(mut self, slice_type: crate::external::vk_video::StdVideoH265SliceType) -> Self {
+        self.0.slice_type = slice_type as _;
+        self
+    }
+    #[inline]
+    pub fn slice_pic_parameter_set_id(mut self, slice_pic_parameter_set_id: u8) -> Self {
+        self.0.slice_pic_parameter_set_id = slice_pic_parameter_set_id as _;
+        self
+    }
+    #[inline]
+    pub fn num_short_term_ref_pic_sets(mut self, num_short_term_ref_pic_sets: u8) -> Self {
+        self.0.num_short_term_ref_pic_sets = num_short_term_ref_pic_sets as _;
+        self
+    }
+    #[inline]
+    pub fn slice_segment_address(mut self, slice_segment_address: u32) -> Self {
+        self.0.slice_segment_address = slice_segment_address as _;
+        self
+    }
+    #[inline]
+    pub fn short_term_ref_pic_set_idx(mut self, short_term_ref_pic_set_idx: u8) -> Self {
+        self.0.short_term_ref_pic_set_idx = short_term_ref_pic_set_idx as _;
+        self
+    }
+    #[inline]
+    pub fn num_long_term_sps(mut self, num_long_term_sps: u8) -> Self {
+        self.0.num_long_term_sps = num_long_term_sps as _;
+        self
+    }
+    #[inline]
+    pub fn num_long_term_pics(mut self, num_long_term_pics: u8) -> Self {
+        self.0.num_long_term_pics = num_long_term_pics as _;
+        self
+    }
+    #[inline]
+    pub fn collocated_ref_idx(mut self, collocated_ref_idx: u8) -> Self {
+        self.0.collocated_ref_idx = collocated_ref_idx as _;
+        self
+    }
+    #[inline]
+    pub fn num_ref_idx_l0_active_minus1(mut self, num_ref_idx_l0_active_minus1: u8) -> Self {
+        self.0.num_ref_idx_l0_active_minus1 = num_ref_idx_l0_active_minus1 as _;
+        self
+    }
+    #[inline]
+    pub fn num_ref_idx_l1_active_minus1(mut self, num_ref_idx_l1_active_minus1: u8) -> Self {
+        self.0.num_ref_idx_l1_active_minus1 = num_ref_idx_l1_active_minus1 as _;
+        self
+    }
+    #[inline]
+    pub fn luma_log2_weight_denom(mut self, luma_log2_weight_denom: u8) -> Self {
+        self.0.luma_log2_weight_denom = luma_log2_weight_denom as _;
+        self
+    }
+    #[inline]
+    pub fn delta_chroma_log2_weight_denom(mut self, delta_chroma_log2_weight_denom: i8) -> Self {
+        self.0.delta_chroma_log2_weight_denom = delta_chroma_log2_weight_denom as _;
+        self
+    }
+    #[inline]
+    pub fn delta_luma_weight_l0(mut self, delta_luma_weight_l0: [i8; 15]) -> Self {
+        self.0.delta_luma_weight_l0 = delta_luma_weight_l0 as _;
+        self
+    }
+    #[inline]
+    pub fn luma_offset_l0(mut self, luma_offset_l0: [i8; 15]) -> Self {
+        self.0.luma_offset_l0 = luma_offset_l0 as _;
+        self
+    }
+    #[inline]
+    pub fn delta_chroma_weight_l0(mut self, delta_chroma_weight_l0: [[i8; 2]; 15]) -> Self {
+        self.0.delta_chroma_weight_l0 = delta_chroma_weight_l0 as _;
+        self
+    }
+    #[inline]
+    pub fn delta_chroma_offset_l0(mut self, delta_chroma_offset_l0: [[i8; 2]; 15]) -> Self {
+        self.0.delta_chroma_offset_l0 = delta_chroma_offset_l0 as _;
+        self
+    }
+    #[inline]
+    pub fn delta_luma_weight_l1(mut self, delta_luma_weight_l1: [i8; 15]) -> Self {
+        self.0.delta_luma_weight_l1 = delta_luma_weight_l1 as _;
+        self
+    }
+    #[inline]
+    pub fn luma_offset_l1(mut self, luma_offset_l1: [i8; 15]) -> Self {
+        self.0.luma_offset_l1 = luma_offset_l1 as _;
+        self
+    }
+    #[inline]
+    pub fn delta_chroma_weight_l1(mut self, delta_chroma_weight_l1: [[i8; 2]; 15]) -> Self {
+        self.0.delta_chroma_weight_l1 = delta_chroma_weight_l1 as _;
+        self
+    }
+    #[inline]
+    pub fn delta_chroma_offset_l1(mut self, delta_chroma_offset_l1: [[i8; 2]; 15]) -> Self {
+        self.0.delta_chroma_offset_l1 = delta_chroma_offset_l1 as _;
+        self
+    }
+    #[inline]
+    pub fn max_num_merge_cand(mut self, max_num_merge_cand: u8) -> Self {
+        self.0.max_num_merge_cand = max_num_merge_cand as _;
+        self
+    }
+    #[inline]
+    pub fn slice_qp_delta(mut self, slice_qp_delta: i8) -> Self {
+        self.0.slice_qp_delta = slice_qp_delta as _;
+        self
+    }
+    #[inline]
+    pub fn slice_cb_qp_offset(mut self, slice_cb_qp_offset: i8) -> Self {
+        self.0.slice_cb_qp_offset = slice_cb_qp_offset as _;
+        self
+    }
+    #[inline]
+    pub fn slice_cr_qp_offset(mut self, slice_cr_qp_offset: i8) -> Self {
+        self.0.slice_cr_qp_offset = slice_cr_qp_offset as _;
+        self
+    }
+    #[inline]
+    pub fn slice_beta_offset_div2(mut self, slice_beta_offset_div2: i8) -> Self {
+        self.0.slice_beta_offset_div2 = slice_beta_offset_div2 as _;
+        self
+    }
+    #[inline]
+    pub fn slice_tc_offset_div2(mut self, slice_tc_offset_div2: i8) -> Self {
+        self.0.slice_tc_offset_div2 = slice_tc_offset_div2 as _;
+        self
+    }
+    #[inline]
+    pub fn slice_act_y_qp_offset(mut self, slice_act_y_qp_offset: i8) -> Self {
+        self.0.slice_act_y_qp_offset = slice_act_y_qp_offset as _;
+        self
+    }
+    #[inline]
+    pub fn slice_act_cb_qp_offset(mut self, slice_act_cb_qp_offset: i8) -> Self {
+        self.0.slice_act_cb_qp_offset = slice_act_cb_qp_offset as _;
+        self
+    }
+    #[inline]
+    pub fn slice_act_cr_qp_offset(mut self, slice_act_cr_qp_offset: i8) -> Self {
+        self.0.slice_act_cr_qp_offset = slice_act_cr_qp_offset as _;
+        self
+    }
+    #[inline]
+    pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265SliceHeaderFlags) -> Self {
+        self.0.flags = flags as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265SliceHeader {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265SliceHeaderBuilder<'a> {
+    fn default() -> StdVideoEncodeH265SliceHeaderBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265SliceHeaderBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265SliceHeaderBuilder<'a> {
+    type Target = StdVideoEncodeH265SliceHeader;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265SliceHeaderBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct StdVideoEncodeH265ReferenceInfo {
+    pub pic_order_cnt_val: i32,
+    pub temporal_id: u8,
+    pub flags: crate::external::vk_video::StdVideoEncodeH265ReferenceInfoFlags,
+}
+impl Default for StdVideoEncodeH265ReferenceInfo {
+    fn default() -> Self {
+        Self { pic_order_cnt_val: Default::default(), temporal_id: Default::default(), flags: Default::default() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265ReferenceInfo {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265ReferenceInfo").field("pic_order_cnt_val", &self.pic_order_cnt_val).field("temporal_id", &self.temporal_id).field("flags", &self.flags).finish()
+    }
+}
+impl StdVideoEncodeH265ReferenceInfo {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+        StdVideoEncodeH265ReferenceInfoBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265ReferenceInfo`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265ReferenceInfoBuilder<'a>(StdVideoEncodeH265ReferenceInfo, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+        StdVideoEncodeH265ReferenceInfoBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn pic_order_cnt_val(mut self, pic_order_cnt_val: i32) -> Self {
+        self.0.pic_order_cnt_val = pic_order_cnt_val as _;
+        self
+    }
+    #[inline]
+    pub fn temporal_id(mut self, temporal_id: u8) -> Self {
+        self.0.temporal_id = temporal_id as _;
+        self
+    }
+    #[inline]
+    pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265ReferenceInfoFlags) -> Self {
+        self.0.flags = flags as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265ReferenceInfo {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+    fn default() -> StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+    type Target = StdVideoEncodeH265ReferenceInfo;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265ReferenceInfoBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct StdVideoEncodeH265ReferenceModifications {
+    pub flags: crate::external::vk_video::StdVideoEncodeH265ReferenceModificationFlags,
+    pub reference_list0_modifications_count: u8,
+    pub p_reference_list0_modifications: *mut u8,
+    pub reference_list1_modifications_count: u8,
+    pub p_reference_list1_modifications: *mut u8,
+}
+impl Default for StdVideoEncodeH265ReferenceModifications {
+    fn default() -> Self {
+        Self { flags: Default::default(), reference_list0_modifications_count: Default::default(), p_reference_list0_modifications: std::ptr::null_mut(), reference_list1_modifications_count: Default::default(), p_reference_list1_modifications: std::ptr::null_mut() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265ReferenceModifications {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265ReferenceModifications").field("flags", &self.flags).field("reference_list0_modifications_count", &self.reference_list0_modifications_count).field("p_reference_list0_modifications", &self.p_reference_list0_modifications).field("reference_list1_modifications_count", &self.reference_list1_modifications_count).field("p_reference_list1_modifications", &self.p_reference_list1_modifications).finish()
+    }
+}
+impl StdVideoEncodeH265ReferenceModifications {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+        StdVideoEncodeH265ReferenceModificationsBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265ReferenceModifications`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265ReferenceModificationsBuilder<'a>(StdVideoEncodeH265ReferenceModifications, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+        StdVideoEncodeH265ReferenceModificationsBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265ReferenceModificationFlags) -> Self {
+        self.0.flags = flags as _;
+        self
+    }
+    #[inline]
+    pub fn reference_list0_modifications_count(mut self, reference_list0_modifications_count: u8) -> Self {
+        self.0.reference_list0_modifications_count = reference_list0_modifications_count as _;
+        self
+    }
+    #[inline]
+    pub fn reference_list0_modifications(mut self, reference_list0_modifications: &'a mut u8) -> Self {
+        self.0.p_reference_list0_modifications = reference_list0_modifications as _;
+        self
+    }
+    #[inline]
+    pub fn reference_list1_modifications_count(mut self, reference_list1_modifications_count: u8) -> Self {
+        self.0.reference_list1_modifications_count = reference_list1_modifications_count as _;
+        self
+    }
+    #[inline]
+    pub fn reference_list1_modifications(mut self, reference_list1_modifications: &'a mut u8) -> Self {
+        self.0.p_reference_list1_modifications = reference_list1_modifications as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265ReferenceModifications {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+    fn default() -> StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+    type Target = StdVideoEncodeH265ReferenceModifications;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct StdVideoEncodeH265SliceHeaderFlags {
+    pub first_slice_segment_in_pic_flag_and_more_bitfield: u32,
+    pub luma_weight_l0_flag: u16,
+    pub chroma_weight_l0_flag: u16,
+    pub luma_weight_l1_flag: u16,
+    pub chroma_weight_l1_flag: u16,
+}
+impl Default for StdVideoEncodeH265SliceHeaderFlags {
+    fn default() -> Self {
+        Self { first_slice_segment_in_pic_flag_and_more_bitfield: Default::default(), luma_weight_l0_flag: Default::default(), chroma_weight_l0_flag: Default::default(), luma_weight_l1_flag: Default::default(), chroma_weight_l1_flag: Default::default() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265SliceHeaderFlags {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265SliceHeaderFlags").field("first_slice_segment_in_pic_flag_and_more_bitfield", &format!("{:#b}", &self.first_slice_segment_in_pic_flag_and_more_bitfield)).field("luma_weight_l0_flag", &self.luma_weight_l0_flag).field("chroma_weight_l0_flag", &self.chroma_weight_l0_flag).field("luma_weight_l1_flag", &self.luma_weight_l1_flag).field("chroma_weight_l1_flag", &self.chroma_weight_l1_flag).finish()
+    }
+}
+impl StdVideoEncodeH265SliceHeaderFlags {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+        StdVideoEncodeH265SliceHeaderFlagsBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265SliceHeaderFlags`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265SliceHeaderFlagsBuilder<'a>(StdVideoEncodeH265SliceHeaderFlags, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+        StdVideoEncodeH265SliceHeaderFlagsBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn first_slice_segment_in_pic_flag(mut self, first_slice_segment_in_pic_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, first_slice_segment_in_pic_flag, 0usize, 0usize);
+        self
+    }
+    #[inline]
+    pub fn no_output_of_prior_pics_flag(mut self, no_output_of_prior_pics_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, no_output_of_prior_pics_flag, 1usize, 1usize);
+        self
+    }
+    #[inline]
+    pub fn dependent_slice_segment_flag(mut self, dependent_slice_segment_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, dependent_slice_segment_flag, 2usize, 2usize);
+        self
+    }
+    #[inline]
+    pub fn short_term_ref_pic_set_sps_flag(mut self, short_term_ref_pic_set_sps_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, short_term_ref_pic_set_sps_flag, 3usize, 3usize);
+        self
+    }
+    #[inline]
+    pub fn slice_temporal_mvp_enable_flag(mut self, slice_temporal_mvp_enable_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_temporal_mvp_enable_flag, 4usize, 4usize);
+        self
+    }
+    #[inline]
+    pub fn slice_sao_luma_flag(mut self, slice_sao_luma_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_sao_luma_flag, 5usize, 5usize);
+        self
+    }
+    #[inline]
+    pub fn slice_sao_chroma_flag(mut self, slice_sao_chroma_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_sao_chroma_flag, 6usize, 6usize);
+        self
+    }
+    #[inline]
+    pub fn num_ref_idx_active_override_flag(mut self, num_ref_idx_active_override_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, num_ref_idx_active_override_flag, 7usize, 7usize);
+        self
+    }
+    #[inline]
+    pub fn mvd_l1_zero_flag(mut self, mvd_l1_zero_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, mvd_l1_zero_flag, 8usize, 8usize);
+        self
+    }
+    #[inline]
+    pub fn cabac_init_flag(mut self, cabac_init_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, cabac_init_flag, 9usize, 9usize);
+        self
+    }
+    #[inline]
+    pub fn slice_deblocking_filter_disable_flag(mut self, slice_deblocking_filter_disable_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_deblocking_filter_disable_flag, 10usize, 10usize);
+        self
+    }
+    #[inline]
+    pub fn collocated_from_l0_flag(mut self, collocated_from_l0_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, collocated_from_l0_flag, 11usize, 11usize);
+        self
+    }
+    #[inline]
+    pub fn slice_loop_filter_across_slices_enabled_flag(mut self, slice_loop_filter_across_slices_enabled_flag: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_loop_filter_across_slices_enabled_flag, 12usize, 12usize);
+        self
+    }
+    #[inline]
+    pub fn b_last_slice_in_pic(mut self, b_last_slice_in_pic: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, b_last_slice_in_pic, 13usize, 13usize);
+        self
+    }
+    #[inline]
+    pub fn luma_weight_l0_flag(mut self, luma_weight_l0_flag: u16) -> Self {
+        self.0.luma_weight_l0_flag = luma_weight_l0_flag as _;
+        self
+    }
+    #[inline]
+    pub fn chroma_weight_l0_flag(mut self, chroma_weight_l0_flag: u16) -> Self {
+        self.0.chroma_weight_l0_flag = chroma_weight_l0_flag as _;
+        self
+    }
+    #[inline]
+    pub fn luma_weight_l1_flag(mut self, luma_weight_l1_flag: u16) -> Self {
+        self.0.luma_weight_l1_flag = luma_weight_l1_flag as _;
+        self
+    }
+    #[inline]
+    pub fn chroma_weight_l1_flag(mut self, chroma_weight_l1_flag: u16) -> Self {
+        self.0.chroma_weight_l1_flag = chroma_weight_l1_flag as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265SliceHeaderFlags {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+    fn default() -> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+    type Target = StdVideoEncodeH265SliceHeaderFlags;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct StdVideoEncodeH265ReferenceInfoFlags {
+    pub is_long_term_and_is_used_flag: u32,
+}
+impl Default for StdVideoEncodeH265ReferenceInfoFlags {
+    fn default() -> Self {
+        Self { is_long_term_and_is_used_flag: Default::default() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265ReferenceInfoFlags {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265ReferenceInfoFlags").field("is_long_term_and_is_used_flag", &format!("{:#b}", &self.is_long_term_and_is_used_flag)).finish()
+    }
+}
+impl StdVideoEncodeH265ReferenceInfoFlags {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+        StdVideoEncodeH265ReferenceInfoFlagsBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265ReferenceInfoFlags`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a>(StdVideoEncodeH265ReferenceInfoFlags, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+        StdVideoEncodeH265ReferenceInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn is_long_term(mut self, is_long_term: u32) -> Self {
+        self.0.is_long_term_and_is_used_flag = crate::bits_copy!(self.0.is_long_term_and_is_used_flag, is_long_term, 0usize, 0usize);
+        self
+    }
+    #[inline]
+    pub fn is_used_flag(mut self, is_used_flag: u32) -> Self {
+        self.0.is_long_term_and_is_used_flag = crate::bits_copy!(self.0.is_long_term_and_is_used_flag, is_used_flag, 1usize, 1usize);
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265ReferenceInfoFlags {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+    fn default() -> StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+    type Target = StdVideoEncodeH265ReferenceInfoFlags;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "<s>Vulkan Manual Page</s> · Structure"]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct StdVideoEncodeH265ReferenceModificationFlags {
+    pub ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1: u32,
+}
+impl Default for StdVideoEncodeH265ReferenceModificationFlags {
+    fn default() -> Self {
+        Self { ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1: Default::default() }
+    }
+}
+impl std::fmt::Debug for StdVideoEncodeH265ReferenceModificationFlags {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("StdVideoEncodeH265ReferenceModificationFlags").field("ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1", &format!("{:#b}", &self.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1)).finish()
+    }
+}
+impl StdVideoEncodeH265ReferenceModificationFlags {
+    #[inline]
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
+        StdVideoEncodeH265ReferenceModificationFlagsBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265ReferenceModificationFlags`]"]
+#[repr(transparent)]
+pub struct StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a>(StdVideoEncodeH265ReferenceModificationFlags, std::marker::PhantomData<&'a ()>);
+impl<'a> StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
+    #[inline]
+    pub fn new() -> StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
+        StdVideoEncodeH265ReferenceModificationFlagsBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn ref_pic_list_modification_flag_l0(mut self, ref_pic_list_modification_flag_l0: u32) -> Self {
+        self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1 = crate::bits_copy!(self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1, ref_pic_list_modification_flag_l0, 0usize, 0usize);
+        self
+    }
+    #[inline]
+    pub fn ref_pic_list_modification_flag_l1(mut self, ref_pic_list_modification_flag_l1: u32) -> Self {
+        self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1 = crate::bits_copy!(self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1, ref_pic_list_modification_flag_l1, 1usize, 1usize);
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build(self) -> StdVideoEncodeH265ReferenceModificationFlags {
+        self.0
+    }
+}
+impl<'a> std::default::Default for StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
+    fn default() -> StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
+    type Target = StdVideoEncodeH265ReferenceModificationFlags;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }

@@ -329,9 +329,10 @@ impl HeaderSource {
             registry,
         );
 
-        let unit = &driver::parse(&header_config, root_header_path)
-            .expect("Failed to parse header")
-            .unit;
+        let unit = match driver::parse(&header_config, root_header_path) {
+            Ok(parse) => parse.unit,
+            Err(err) => panic!("Failed to parse header!\n{}", err),
+        };
 
         // toggle manually
         if false {
@@ -341,7 +342,7 @@ impl HeaderSource {
             fs::write("header_debug", debug_print).expect("Failed to write header_debug");
         }
 
-        unit.into()
+        (&unit).into()
     }
 
     pub fn take_structure(&mut self, name: &str) -> Option<Structure> {

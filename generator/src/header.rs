@@ -25,7 +25,6 @@ use lang_c::{
     span::Node,
 };
 use std::{
-    convert::TryFrom,
     fmt::Debug,
     fs, mem,
     path::{Path, PathBuf},

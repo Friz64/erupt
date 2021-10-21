@@ -119,7 +119,7 @@ impl Alias {
                 #[doc = #doc]
                 #doc_alias_code
                 #[allow(non_camel_case_types)]
-                pub type #ident#lifetime = #alias#lifetime;
+                pub type #ident #lifetime = #alias #lifetime;
 
                 #builder_tokens
             },

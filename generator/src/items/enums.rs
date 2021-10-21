@@ -376,7 +376,7 @@ impl Enum {
                 .or_insert_with(TokenStream::new)
                 .extend(quote! {
                     #[doc = #doc]
-                    impl crate::#enum_path#enum_ident {
+                    impl crate:: #enum_path #enum_ident {
                         #(pub const #variant_idents: Self = #variant_values;)*
                     }
                 });

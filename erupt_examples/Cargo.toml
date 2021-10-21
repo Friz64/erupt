@@ -2,7 +2,7 @@
 name = "erupt_examples"
 version = "0.0.0"
 authors = ["Friz64 <friz64@protonmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 erupt = { path = "../erupt" }

@@ -455,10 +455,10 @@ impl Structure {
                 .or_insert_with(TokenStream::new)
                 .extend(quote! {
                     impl<'a> crate::#extendable_from_kind<'a, #other_ident>
-                        for crate::#this_path#ident<'a> {}
+                        for crate:: #this_path #ident<'a> {}
 
                     impl<'a> crate::#extendable_from_kind<'a, #other_builder_ident<'_>>
-                        for crate::#this_path#ident<'a> {}
+                        for crate:: #this_path #ident<'a> {}
                 });
         }
 

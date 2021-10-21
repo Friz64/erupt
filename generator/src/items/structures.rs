@@ -19,7 +19,7 @@ use lang_c::ast::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::{cell::RefCell, cmp::Ordering, collections::HashMap, convert::TryFrom};
+use std::{cell::RefCell, cmp::Ordering, collections::HashMap};
 
 impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
     fn from(field: &'a StructField) -> Self {

@@ -34,7 +34,7 @@ impl Name {
     pub fn path(&self, source: &Source) -> TokenStream {
         let path = source.origin(self).module_path();
         let ident = self.ident();
-        quote! { crate::#path#ident }
+        quote! { crate:: #path #ident }
     }
 
     pub fn supports_hash_eq(&self, source: &Source) -> bool {

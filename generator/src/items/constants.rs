@@ -10,7 +10,7 @@ use lang_c::ast::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::{collections::HashMap, convert::TryFrom};
+use std::collections::HashMap;
 
 const PREFIX: &str = "__ERUPT_CONSTANT_";
 

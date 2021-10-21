@@ -17,11 +17,7 @@ use lang_c::{
 };
 use proc_macro2::TokenStream;
 use quote::quote;
-use std::{
-    collections::HashMap,
-    convert::{TryFrom, TryInto},
-    fmt::Debug,
-};
+use std::{collections::HashMap, fmt::Debug};
 
 impl<'a> From<&'a ParameterDeclaration> for DeclarationInfo<'a> {
     fn from(parameter_declaration: &'a ParameterDeclaration) -> Self {

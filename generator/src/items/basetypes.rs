@@ -10,10 +10,7 @@ use crate::{
 use lang_c::ast::{Declaration as CDeclaration, DeclarationSpecifier, TypeSpecifier};
 use proc_macro2::TokenStream;
 use quote::quote;
-use std::{
-    collections::HashMap,
-    convert::{TryFrom, TryInto},
-};
+use std::collections::HashMap;
 
 #[derive(Debug)]
 pub struct Basetype {

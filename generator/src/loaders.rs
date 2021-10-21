@@ -41,7 +41,7 @@ impl CommandLevel {
 
         let generics = self.generics();
 
-        quote! { crate::#ident#generics }
+        quote! { crate:: #ident #generics }
     }
 
     fn handle_type(&self) -> Option<Type> {
@@ -173,10 +173,10 @@ impl EnabledData {
 
                 match enabled_kind {
                     EnabledKind::Normal => quote! {
-                        enabled_extension(crate::#module_path#ident)
+                        enabled_extension(crate:: #module_path #ident)
                     },
                     EnabledKind::InstanceAvailableDeviceExtension => quote! {
-                        available_device_extension(crate::#module_path#ident)
+                        available_device_extension(crate:: #module_path #ident)
                     },
                 }
             }
@@ -212,12 +212,12 @@ impl LoaderData {
 
         let pointer_ident = function.name.pointer_ident();
         let path = origin.module_path();
-        self.types.push(quote! { Option<#path#pointer_ident> });
+        self.types.push(quote! { Option< #path #pointer_ident> });
 
         let module_path = origin.module_path();
         let constant_ident = format_ident!("{}", function.name.constant_name());
         self.loads.push(quote! {
-            std::mem::transmute(symbol(crate::#module_path#constant_ident))
+            std::mem::transmute(symbol(crate:: #module_path #constant_ident))
         });
 
         self.requirements.push(function.requirements.clone());
@@ -345,7 +345,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             .or_insert_with(TokenStream::new)
             .extend(quote! {
                 #[doc = #doc]
-                impl#generics #loader {
+                impl #generics #loader {
                     #(#wrappers)*
                 }
             })

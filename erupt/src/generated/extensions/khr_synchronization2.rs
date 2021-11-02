@@ -374,7 +374,7 @@ impl<'a> MemoryBarrier2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryBarrier2KHR {
+    pub fn build_dangling(self) -> MemoryBarrier2KHR {
         self.0
     }
 }
@@ -498,7 +498,7 @@ impl<'a> ImageMemoryBarrier2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageMemoryBarrier2KHR {
+    pub fn build_dangling(self) -> ImageMemoryBarrier2KHR {
         self.0
     }
 }
@@ -616,7 +616,7 @@ impl<'a> BufferMemoryBarrier2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferMemoryBarrier2KHR {
+    pub fn build_dangling(self) -> BufferMemoryBarrier2KHR {
         self.0
     }
 }
@@ -710,7 +710,7 @@ impl<'a> DependencyInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DependencyInfoKHR {
+    pub fn build_dangling(self) -> DependencyInfoKHR {
         self.0
     }
 }
@@ -798,7 +798,7 @@ impl<'a> SemaphoreSubmitInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SemaphoreSubmitInfoKHR {
+    pub fn build_dangling(self) -> SemaphoreSubmitInfoKHR {
         self.0
     }
 }
@@ -874,7 +874,7 @@ impl<'a> CommandBufferSubmitInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CommandBufferSubmitInfoKHR {
+    pub fn build_dangling(self) -> CommandBufferSubmitInfoKHR {
         self.0
     }
 }
@@ -968,7 +968,7 @@ impl<'a> SubmitInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubmitInfo2KHR {
+    pub fn build_dangling(self) -> SubmitInfo2KHR {
         self.0
     }
 }
@@ -1038,7 +1038,7 @@ impl<'a> QueueFamilyCheckpointProperties2NVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> QueueFamilyCheckpointProperties2NV {
+    pub fn build_dangling(self) -> QueueFamilyCheckpointProperties2NV {
         self.0
     }
 }
@@ -1114,7 +1114,7 @@ impl<'a> CheckpointData2NVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CheckpointData2NV {
+    pub fn build_dangling(self) -> CheckpointData2NV {
         self.0
     }
 }
@@ -1184,7 +1184,7 @@ impl<'a> PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSynchronization2FeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceSynchronization2FeaturesKHR {
         self.0
     }
 }

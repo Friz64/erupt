@@ -66,7 +66,7 @@ impl<'a> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderSMBuiltinsPropertiesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderSMBuiltinsPropertiesNV {
         self.0
     }
 }
@@ -136,7 +136,7 @@ impl<'a> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderSMBuiltinsFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderSMBuiltinsFeaturesNV {
         self.0
     }
 }

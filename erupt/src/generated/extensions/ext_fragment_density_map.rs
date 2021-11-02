@@ -114,7 +114,7 @@ impl<'a> PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFragmentDensityMapFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceFragmentDensityMapFeaturesEXT {
         self.0
     }
 }
@@ -196,7 +196,7 @@ impl<'a> PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFragmentDensityMapPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceFragmentDensityMapPropertiesEXT {
         self.0
     }
 }
@@ -266,7 +266,7 @@ impl<'a> RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderPassFragmentDensityMapCreateInfoEXT {
+    pub fn build_dangling(self) -> RenderPassFragmentDensityMapCreateInfoEXT {
         self.0
     }
 }

@@ -80,7 +80,7 @@ impl<'a> PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDepthClipEnableFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceDepthClipEnableFeaturesEXT {
         self.0
     }
 }
@@ -156,7 +156,7 @@ impl<'a> PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineRasterizationDepthClipStateCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineRasterizationDepthClipStateCreateInfoEXT {
         self.0
     }
 }

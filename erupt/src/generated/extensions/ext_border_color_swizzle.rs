@@ -66,7 +66,7 @@ impl<'a> SamplerBorderColorComponentMappingCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SamplerBorderColorComponentMappingCreateInfoEXT {
+    pub fn build_dangling(self) -> SamplerBorderColorComponentMappingCreateInfoEXT {
         self.0
     }
 }
@@ -142,7 +142,7 @@ impl<'a> PhysicalDeviceBorderColorSwizzleFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceBorderColorSwizzleFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceBorderColorSwizzleFeaturesEXT {
         self.0
     }
 }

@@ -150,7 +150,7 @@ impl<'a> PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePortabilitySubsetFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDevicePortabilitySubsetFeaturesKHR {
         self.0
     }
 }
@@ -220,7 +220,7 @@ impl<'a> PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePortabilitySubsetPropertiesKHR {
+    pub fn build_dangling(self) -> PhysicalDevicePortabilitySubsetPropertiesKHR {
         self.0
     }
 }

@@ -94,7 +94,7 @@ impl<'a> ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportSemaphoreWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> ImportSemaphoreWin32HandleInfoKHR {
         self.0
     }
 }
@@ -176,7 +176,7 @@ impl<'a> ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ExportSemaphoreWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> ExportSemaphoreWin32HandleInfoKHR {
         self.0
     }
 }
@@ -256,7 +256,7 @@ impl<'a> D3D12FenceSubmitInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> D3D12FenceSubmitInfoKHR {
+    pub fn build_dangling(self) -> D3D12FenceSubmitInfoKHR {
         self.0
     }
 }
@@ -332,7 +332,7 @@ impl<'a> SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SemaphoreGetWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> SemaphoreGetWin32HandleInfoKHR {
         self.0
     }
 }

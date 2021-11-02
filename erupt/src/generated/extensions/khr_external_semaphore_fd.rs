@@ -82,7 +82,7 @@ impl<'a> ImportSemaphoreFdInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportSemaphoreFdInfoKHR {
+    pub fn build_dangling(self) -> ImportSemaphoreFdInfoKHR {
         self.0
     }
 }
@@ -158,7 +158,7 @@ impl<'a> SemaphoreGetFdInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SemaphoreGetFdInfoKHR {
+    pub fn build_dangling(self) -> SemaphoreGetFdInfoKHR {
         self.0
     }
 }

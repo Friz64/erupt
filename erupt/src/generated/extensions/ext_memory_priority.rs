@@ -60,7 +60,7 @@ impl<'a> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMemoryPriorityFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceMemoryPriorityFeaturesEXT {
         self.0
     }
 }
@@ -130,7 +130,7 @@ impl<'a> MemoryPriorityAllocateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryPriorityAllocateInfoEXT {
+    pub fn build_dangling(self) -> MemoryPriorityAllocateInfoEXT {
         self.0
     }
 }

@@ -161,7 +161,7 @@ impl<'a> ImportMemoryBufferCollectionFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportMemoryBufferCollectionFUCHSIA {
+    pub fn build_dangling(self) -> ImportMemoryBufferCollectionFUCHSIA {
         self.0
     }
 }
@@ -237,7 +237,7 @@ impl<'a> BufferCollectionImageCreateInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferCollectionImageCreateInfoFUCHSIA {
+    pub fn build_dangling(self) -> BufferCollectionImageCreateInfoFUCHSIA {
         self.0
     }
 }
@@ -313,7 +313,7 @@ impl<'a> BufferCollectionBufferCreateInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferCollectionBufferCreateInfoFUCHSIA {
+    pub fn build_dangling(self) -> BufferCollectionBufferCreateInfoFUCHSIA {
         self.0
     }
 }
@@ -383,7 +383,7 @@ impl<'a> BufferCollectionCreateInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferCollectionCreateInfoFUCHSIA {
+    pub fn build_dangling(self) -> BufferCollectionCreateInfoFUCHSIA {
         self.0
     }
 }
@@ -513,7 +513,7 @@ impl<'a> BufferCollectionPropertiesFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferCollectionPropertiesFUCHSIA {
+    pub fn build_dangling(self) -> BufferCollectionPropertiesFUCHSIA {
         self.0
     }
 }
@@ -595,7 +595,7 @@ impl<'a> BufferConstraintsInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferConstraintsInfoFUCHSIA {
+    pub fn build_dangling(self) -> BufferConstraintsInfoFUCHSIA {
         self.0
     }
 }
@@ -665,7 +665,7 @@ impl<'a> SysmemColorSpaceFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SysmemColorSpaceFUCHSIA {
+    pub fn build_dangling(self) -> SysmemColorSpaceFUCHSIA {
         self.0
     }
 }
@@ -765,7 +765,7 @@ impl<'a> ImageFormatConstraintsInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageFormatConstraintsInfoFUCHSIA {
+    pub fn build_dangling(self) -> ImageFormatConstraintsInfoFUCHSIA {
         self.0
     }
 }
@@ -849,7 +849,7 @@ impl<'a> ImageConstraintsInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageConstraintsInfoFUCHSIA {
+    pub fn build_dangling(self) -> ImageConstraintsInfoFUCHSIA {
         self.0
     }
 }
@@ -943,7 +943,7 @@ impl<'a> BufferCollectionConstraintsInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferCollectionConstraintsInfoFUCHSIA {
+    pub fn build_dangling(self) -> BufferCollectionConstraintsInfoFUCHSIA {
         self.0
     }
 }

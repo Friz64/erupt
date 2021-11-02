@@ -109,7 +109,7 @@ impl<'a> PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDeviceMemoryReportFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceDeviceMemoryReportFeaturesEXT {
         self.0
     }
 }
@@ -191,7 +191,7 @@ impl<'a> DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceDeviceMemoryReportCreateInfoEXT {
+    pub fn build_dangling(self) -> DeviceDeviceMemoryReportCreateInfoEXT {
         self.0
     }
 }
@@ -297,7 +297,7 @@ impl<'a> DeviceMemoryReportCallbackDataEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceMemoryReportCallbackDataEXT {
+    pub fn build_dangling(self) -> DeviceMemoryReportCallbackDataEXT {
         self.0
     }
 }

@@ -107,7 +107,7 @@ impl<'a> PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceBufferDeviceAddressFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceBufferDeviceAddressFeaturesEXT {
         self.0
     }
 }
@@ -177,7 +177,7 @@ impl<'a> BufferDeviceAddressCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferDeviceAddressCreateInfoEXT {
+    pub fn build_dangling(self) -> BufferDeviceAddressCreateInfoEXT {
         self.0
     }
 }

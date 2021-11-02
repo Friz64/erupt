@@ -69,7 +69,7 @@ impl<'a> PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceColorWriteEnableFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceColorWriteEnableFeaturesEXT {
         self.0
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PipelineColorWriteCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineColorWriteCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineColorWriteCreateInfoEXT {
         self.0
     }
 }

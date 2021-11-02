@@ -72,7 +72,7 @@ impl<'a> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceRobustness2FeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceRobustness2FeaturesEXT {
         self.0
     }
 }
@@ -148,7 +148,7 @@ impl<'a> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceRobustness2PropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceRobustness2PropertiesEXT {
         self.0
     }
 }

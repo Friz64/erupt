@@ -105,7 +105,7 @@ impl<'a> PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceCoverageReductionModeFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceCoverageReductionModeFeaturesNV {
         self.0
     }
 }
@@ -181,7 +181,7 @@ impl<'a> PipelineCoverageReductionStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineCoverageReductionStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineCoverageReductionStateCreateInfoNV {
         self.0
     }
 }
@@ -269,7 +269,7 @@ impl<'a> FramebufferMixedSamplesCombinationNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FramebufferMixedSamplesCombinationNV {
+    pub fn build_dangling(self) -> FramebufferMixedSamplesCombinationNV {
         self.0
     }
 }

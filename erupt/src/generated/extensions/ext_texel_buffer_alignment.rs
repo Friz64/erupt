@@ -60,7 +60,7 @@ impl<'a> PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceTexelBufferAlignmentFeaturesEXT {
         self.0
     }
 }
@@ -148,7 +148,7 @@ impl<'a> PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceTexelBufferAlignmentPropertiesEXT {
         self.0
     }
 }

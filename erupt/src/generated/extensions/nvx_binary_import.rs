@@ -98,7 +98,7 @@ impl<'a> CuModuleCreateInfoNVXBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CuModuleCreateInfoNVX {
+    pub fn build_dangling(self) -> CuModuleCreateInfoNVX {
         self.0
     }
 }
@@ -174,7 +174,7 @@ impl<'a> CuFunctionCreateInfoNVXBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CuFunctionCreateInfoNVX {
+    pub fn build_dangling(self) -> CuFunctionCreateInfoNVX {
         self.0
     }
 }
@@ -310,7 +310,7 @@ impl<'a> CuLaunchInfoNVXBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CuLaunchInfoNVX {
+    pub fn build_dangling(self) -> CuLaunchInfoNVX {
         self.0
     }
 }

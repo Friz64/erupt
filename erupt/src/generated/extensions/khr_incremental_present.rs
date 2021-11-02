@@ -57,7 +57,7 @@ impl<'a> PresentRegionsKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PresentRegionsKHR {
+    pub fn build_dangling(self) -> PresentRegionsKHR {
         self.0
     }
 }
@@ -124,7 +124,7 @@ impl<'a> PresentRegionKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PresentRegionKHR {
+    pub fn build_dangling(self) -> PresentRegionKHR {
         self.0
     }
 }
@@ -201,7 +201,7 @@ impl<'a> RectLayerKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RectLayerKHR {
+    pub fn build_dangling(self) -> RectLayerKHR {
         self.0
     }
 }

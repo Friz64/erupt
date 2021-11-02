@@ -74,7 +74,7 @@ impl<'a> PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSubgroupSizeControlFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceSubgroupSizeControlFeaturesEXT {
         self.0
     }
 }
@@ -162,7 +162,7 @@ impl<'a> PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSubgroupSizeControlPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceSubgroupSizeControlPropertiesEXT {
         self.0
     }
 }
@@ -232,7 +232,7 @@ impl<'a> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
         self.0
     }
 }

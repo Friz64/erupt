@@ -285,7 +285,7 @@ impl<'a> VideoEncodeH264CapabilitiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264CapabilitiesEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264CapabilitiesEXT {
         self.0
     }
 }
@@ -367,7 +367,7 @@ impl<'a> VideoEncodeH264SessionCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264SessionCreateInfoEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264SessionCreateInfoEXT {
         self.0
     }
 }
@@ -447,7 +447,7 @@ impl<'a> VideoEncodeH264SessionParametersAddInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264SessionParametersAddInfoEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264SessionParametersAddInfoEXT {
         self.0
     }
 }
@@ -529,7 +529,7 @@ impl<'a> VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264SessionParametersCreateInfoEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264SessionParametersCreateInfoEXT {
         self.0
     }
 }
@@ -605,7 +605,7 @@ impl<'a> VideoEncodeH264DpbSlotInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264DpbSlotInfoEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264DpbSlotInfoEXT {
         self.0
     }
 }
@@ -699,7 +699,7 @@ impl<'a> VideoEncodeH264VclFrameInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264VclFrameInfoEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264VclFrameInfoEXT {
         self.0
     }
 }
@@ -783,7 +783,7 @@ impl<'a> VideoEncodeH264EmitPictureParametersEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264EmitPictureParametersEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264EmitPictureParametersEXT {
         self.0
     }
 }
@@ -853,7 +853,7 @@ impl<'a> VideoEncodeH264ProfileEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264ProfileEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264ProfileEXT {
         self.0
     }
 }
@@ -963,7 +963,7 @@ impl<'a> VideoEncodeH264NaluSliceEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeH264NaluSliceEXT {
+    pub fn build_dangling(self) -> VideoEncodeH264NaluSliceEXT {
         self.0
     }
 }

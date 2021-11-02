@@ -82,7 +82,7 @@ impl<'a> ImportFenceFdInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportFenceFdInfoKHR {
+    pub fn build_dangling(self) -> ImportFenceFdInfoKHR {
         self.0
     }
 }
@@ -158,7 +158,7 @@ impl<'a> FenceGetFdInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FenceGetFdInfoKHR {
+    pub fn build_dangling(self) -> FenceGetFdInfoKHR {
         self.0
     }
 }

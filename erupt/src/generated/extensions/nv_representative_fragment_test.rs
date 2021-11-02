@@ -60,7 +60,7 @@ impl<'a> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
         self.0
     }
 }
@@ -130,7 +130,7 @@ impl<'a> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineRepresentativeFragmentTestStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineRepresentativeFragmentTestStateCreateInfoNV {
         self.0
     }
 }

@@ -161,7 +161,7 @@ impl<'a> ShadingRatePaletteNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ShadingRatePaletteNV {
+    pub fn build_dangling(self) -> ShadingRatePaletteNV {
         self.0
     }
 }
@@ -239,7 +239,7 @@ impl<'a> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineViewportShadingRateImageStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineViewportShadingRateImageStateCreateInfoNV {
         self.0
     }
 }
@@ -315,7 +315,7 @@ impl<'a> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShadingRateImageFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceShadingRateImageFeaturesNV {
         self.0
     }
 }
@@ -397,7 +397,7 @@ impl<'a> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShadingRateImagePropertiesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceShadingRateImagePropertiesNV {
         self.0
     }
 }
@@ -474,7 +474,7 @@ impl<'a> CoarseSampleLocationNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CoarseSampleLocationNV {
+    pub fn build_dangling(self) -> CoarseSampleLocationNV {
         self.0
     }
 }
@@ -553,7 +553,7 @@ impl<'a> CoarseSampleOrderCustomNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CoarseSampleOrderCustomNV {
+    pub fn build_dangling(self) -> CoarseSampleOrderCustomNV {
         self.0
     }
 }
@@ -631,7 +631,7 @@ impl<'a> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineViewportCoarseSampleOrderStateCreateInfoNV {
         self.0
     }
 }

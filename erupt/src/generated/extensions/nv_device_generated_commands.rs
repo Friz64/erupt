@@ -197,7 +197,7 @@ impl<'a> PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
         self.0
     }
 }
@@ -315,7 +315,7 @@ impl<'a> PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
         self.0
     }
 }
@@ -399,7 +399,7 @@ impl<'a> GraphicsShaderGroupCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GraphicsShaderGroupCreateInfoNV {
+    pub fn build_dangling(self) -> GraphicsShaderGroupCreateInfoNV {
         self.0
     }
 }
@@ -479,7 +479,7 @@ impl<'a> GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GraphicsPipelineShaderGroupsCreateInfoNV {
+    pub fn build_dangling(self) -> GraphicsPipelineShaderGroupsCreateInfoNV {
         self.0
     }
 }
@@ -544,7 +544,7 @@ impl<'a> BindShaderGroupIndirectCommandNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BindShaderGroupIndirectCommandNV {
+    pub fn build_dangling(self) -> BindShaderGroupIndirectCommandNV {
         self.0
     }
 }
@@ -621,7 +621,7 @@ impl<'a> BindIndexBufferIndirectCommandNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BindIndexBufferIndirectCommandNV {
+    pub fn build_dangling(self) -> BindIndexBufferIndirectCommandNV {
         self.0
     }
 }
@@ -698,7 +698,7 @@ impl<'a> BindVertexBufferIndirectCommandNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BindVertexBufferIndirectCommandNV {
+    pub fn build_dangling(self) -> BindVertexBufferIndirectCommandNV {
         self.0
     }
 }
@@ -763,7 +763,7 @@ impl<'a> SetStateFlagsIndirectCommandNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SetStateFlagsIndirectCommandNV {
+    pub fn build_dangling(self) -> SetStateFlagsIndirectCommandNV {
         self.0
     }
 }
@@ -834,7 +834,7 @@ impl<'a> IndirectCommandsStreamNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> IndirectCommandsStreamNV {
+    pub fn build_dangling(self) -> IndirectCommandsStreamNV {
         self.0
     }
 }
@@ -973,7 +973,7 @@ impl<'a> IndirectCommandsLayoutTokenNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> IndirectCommandsLayoutTokenNV {
+    pub fn build_dangling(self) -> IndirectCommandsLayoutTokenNV {
         self.0
     }
 }
@@ -1065,7 +1065,7 @@ impl<'a> IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> IndirectCommandsLayoutCreateInfoNV {
+    pub fn build_dangling(self) -> IndirectCommandsLayoutCreateInfoNV {
         self.0
     }
 }
@@ -1203,7 +1203,7 @@ impl<'a> GeneratedCommandsInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GeneratedCommandsInfoNV {
+    pub fn build_dangling(self) -> GeneratedCommandsInfoNV {
         self.0
     }
 }
@@ -1291,7 +1291,7 @@ impl<'a> GeneratedCommandsMemoryRequirementsInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GeneratedCommandsMemoryRequirementsInfoNV {
+    pub fn build_dangling(self) -> GeneratedCommandsMemoryRequirementsInfoNV {
         self.0
     }
 }

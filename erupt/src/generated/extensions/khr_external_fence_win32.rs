@@ -91,7 +91,7 @@ impl<'a> ImportFenceWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportFenceWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> ImportFenceWin32HandleInfoKHR {
         self.0
     }
 }
@@ -173,7 +173,7 @@ impl<'a> ExportFenceWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ExportFenceWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> ExportFenceWin32HandleInfoKHR {
         self.0
     }
 }
@@ -249,7 +249,7 @@ impl<'a> FenceGetWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FenceGetWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> FenceGetWin32HandleInfoKHR {
         self.0
     }
 }

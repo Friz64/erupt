@@ -84,7 +84,7 @@ impl<'a> SampleLocationEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SampleLocationEXT {
+    pub fn build_dangling(self) -> SampleLocationEXT {
         self.0
     }
 }
@@ -168,7 +168,7 @@ impl<'a> SampleLocationsInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SampleLocationsInfoEXT {
+    pub fn build_dangling(self) -> SampleLocationsInfoEXT {
         self.0
     }
 }
@@ -239,7 +239,7 @@ impl<'a> AttachmentSampleLocationsEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AttachmentSampleLocationsEXT {
+    pub fn build_dangling(self) -> AttachmentSampleLocationsEXT {
         self.0
     }
 }
@@ -310,7 +310,7 @@ impl<'a> SubpassSampleLocationsEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubpassSampleLocationsEXT {
+    pub fn build_dangling(self) -> SubpassSampleLocationsEXT {
         self.0
     }
 }
@@ -390,7 +390,7 @@ impl<'a> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderPassSampleLocationsBeginInfoEXT {
+    pub fn build_dangling(self) -> RenderPassSampleLocationsBeginInfoEXT {
         self.0
     }
 }
@@ -466,7 +466,7 @@ impl<'a> PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineSampleLocationsStateCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineSampleLocationsStateCreateInfoEXT {
         self.0
     }
 }
@@ -560,7 +560,7 @@ impl<'a> PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSampleLocationsPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceSampleLocationsPropertiesEXT {
         self.0
     }
 }
@@ -630,7 +630,7 @@ impl<'a> MultisamplePropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MultisamplePropertiesEXT {
+    pub fn build_dangling(self) -> MultisamplePropertiesEXT {
         self.0
     }
 }

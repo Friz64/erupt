@@ -62,7 +62,7 @@ impl<'a> PhysicalDevicePageableDeviceLocalMemoryFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT {
         self.0
     }
 }

@@ -234,7 +234,7 @@ impl<'a> PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePerformanceQueryFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDevicePerformanceQueryFeaturesKHR {
         self.0
     }
 }
@@ -304,7 +304,7 @@ impl<'a> PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePerformanceQueryPropertiesKHR {
+    pub fn build_dangling(self) -> PhysicalDevicePerformanceQueryPropertiesKHR {
         self.0
     }
 }
@@ -392,7 +392,7 @@ impl<'a> PerformanceCounterKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceCounterKHR {
+    pub fn build_dangling(self) -> PerformanceCounterKHR {
         self.0
     }
 }
@@ -480,7 +480,7 @@ impl<'a> PerformanceCounterDescriptionKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceCounterDescriptionKHR {
+    pub fn build_dangling(self) -> PerformanceCounterDescriptionKHR {
         self.0
     }
 }
@@ -558,7 +558,7 @@ impl<'a> QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> QueryPoolPerformanceCreateInfoKHR {
+    pub fn build_dangling(self) -> QueryPoolPerformanceCreateInfoKHR {
         self.0
     }
 }
@@ -656,7 +656,7 @@ impl<'a> AcquireProfilingLockInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AcquireProfilingLockInfoKHR {
+    pub fn build_dangling(self) -> AcquireProfilingLockInfoKHR {
         self.0
     }
 }
@@ -726,7 +726,7 @@ impl<'a> PerformanceQuerySubmitInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceQuerySubmitInfoKHR {
+    pub fn build_dangling(self) -> PerformanceQuerySubmitInfoKHR {
         self.0
     }
 }

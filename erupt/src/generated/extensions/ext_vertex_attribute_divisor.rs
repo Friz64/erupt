@@ -64,7 +64,7 @@ impl<'a> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VertexInputBindingDivisorDescriptionEXT {
+    pub fn build_dangling(self) -> VertexInputBindingDivisorDescriptionEXT {
         self.0
     }
 }
@@ -136,7 +136,7 @@ impl<'a> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineVertexInputDivisorStateCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineVertexInputDivisorStateCreateInfoEXT {
         self.0
     }
 }
@@ -206,7 +206,7 @@ impl<'a> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
         self.0
     }
 }
@@ -282,7 +282,7 @@ impl<'a> PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
         self.0
     }
 }

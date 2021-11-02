@@ -86,7 +86,7 @@ impl<'a> ImportSemaphoreZirconHandleInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportSemaphoreZirconHandleInfoFUCHSIA {
+    pub fn build_dangling(self) -> ImportSemaphoreZirconHandleInfoFUCHSIA {
         self.0
     }
 }
@@ -162,7 +162,7 @@ impl<'a> SemaphoreGetZirconHandleInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SemaphoreGetZirconHandleInfoFUCHSIA {
+    pub fn build_dangling(self) -> SemaphoreGetZirconHandleInfoFUCHSIA {
         self.0
     }
 }

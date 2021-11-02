@@ -61,7 +61,7 @@ impl<'a> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DedicatedAllocationImageCreateInfoNV {
+    pub fn build_dangling(self) -> DedicatedAllocationImageCreateInfoNV {
         self.0
     }
 }
@@ -131,7 +131,7 @@ impl<'a> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DedicatedAllocationBufferCreateInfoNV {
+    pub fn build_dangling(self) -> DedicatedAllocationBufferCreateInfoNV {
         self.0
     }
 }
@@ -207,7 +207,7 @@ impl<'a> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DedicatedAllocationMemoryAllocateInfoNV {
+    pub fn build_dangling(self) -> DedicatedAllocationMemoryAllocateInfoNV {
         self.0
     }
 }

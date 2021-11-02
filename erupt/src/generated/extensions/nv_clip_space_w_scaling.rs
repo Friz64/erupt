@@ -65,7 +65,7 @@ impl<'a> ViewportWScalingNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ViewportWScalingNV {
+    pub fn build_dangling(self) -> ViewportWScalingNV {
         self.0
     }
 }
@@ -143,7 +143,7 @@ impl<'a> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineViewportWScalingStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineViewportWScalingStateCreateInfoNV {
         self.0
     }
 }

@@ -112,7 +112,7 @@ impl<'a> SurfaceFullScreenExclusiveInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SurfaceFullScreenExclusiveInfoEXT {
+    pub fn build_dangling(self) -> SurfaceFullScreenExclusiveInfoEXT {
         self.0
     }
 }
@@ -182,7 +182,7 @@ impl<'a> SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SurfaceFullScreenExclusiveWin32InfoEXT {
+    pub fn build_dangling(self) -> SurfaceFullScreenExclusiveWin32InfoEXT {
         self.0
     }
 }
@@ -252,7 +252,7 @@ impl<'a> SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SurfaceCapabilitiesFullScreenExclusiveEXT {
+    pub fn build_dangling(self) -> SurfaceCapabilitiesFullScreenExclusiveEXT {
         self.0
     }
 }

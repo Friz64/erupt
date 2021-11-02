@@ -242,7 +242,7 @@ impl<'a> PerformanceValueINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceValueINTEL {
+    pub fn build_dangling(self) -> PerformanceValueINTEL {
         self.0
     }
 }
@@ -312,7 +312,7 @@ impl<'a> InitializePerformanceApiInfoINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> InitializePerformanceApiInfoINTEL {
+    pub fn build_dangling(self) -> InitializePerformanceApiInfoINTEL {
         self.0
     }
 }
@@ -382,7 +382,7 @@ impl<'a> QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> QueryPoolPerformanceQueryCreateInfoINTEL {
+    pub fn build_dangling(self) -> QueryPoolPerformanceQueryCreateInfoINTEL {
         self.0
     }
 }
@@ -452,7 +452,7 @@ impl<'a> PerformanceMarkerInfoINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceMarkerInfoINTEL {
+    pub fn build_dangling(self) -> PerformanceMarkerInfoINTEL {
         self.0
     }
 }
@@ -522,7 +522,7 @@ impl<'a> PerformanceStreamMarkerInfoINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceStreamMarkerInfoINTEL {
+    pub fn build_dangling(self) -> PerformanceStreamMarkerInfoINTEL {
         self.0
     }
 }
@@ -604,7 +604,7 @@ impl<'a> PerformanceOverrideInfoINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceOverrideInfoINTEL {
+    pub fn build_dangling(self) -> PerformanceOverrideInfoINTEL {
         self.0
     }
 }
@@ -674,7 +674,7 @@ impl<'a> PerformanceConfigurationAcquireInfoINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PerformanceConfigurationAcquireInfoINTEL {
+    pub fn build_dangling(self) -> PerformanceConfigurationAcquireInfoINTEL {
         self.0
     }
 }

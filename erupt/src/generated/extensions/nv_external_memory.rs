@@ -58,7 +58,7 @@ impl<'a> ExternalMemoryImageCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ExternalMemoryImageCreateInfoNV {
+    pub fn build_dangling(self) -> ExternalMemoryImageCreateInfoNV {
         self.0
     }
 }
@@ -128,7 +128,7 @@ impl<'a> ExportMemoryAllocateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ExportMemoryAllocateInfoNV {
+    pub fn build_dangling(self) -> ExportMemoryAllocateInfoNV {
         self.0
     }
 }

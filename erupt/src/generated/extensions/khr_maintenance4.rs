@@ -77,7 +77,7 @@ impl<'a> DeviceBufferMemoryRequirementsKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceBufferMemoryRequirementsKHR {
+    pub fn build_dangling(self) -> DeviceBufferMemoryRequirementsKHR {
         self.0
     }
 }
@@ -153,7 +153,7 @@ impl<'a> DeviceImageMemoryRequirementsKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceImageMemoryRequirementsKHR {
+    pub fn build_dangling(self) -> DeviceImageMemoryRequirementsKHR {
         self.0
     }
 }
@@ -223,7 +223,7 @@ impl<'a> PhysicalDeviceMaintenance4FeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMaintenance4FeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceMaintenance4FeaturesKHR {
         self.0
     }
 }
@@ -293,7 +293,7 @@ impl<'a> PhysicalDeviceMaintenance4PropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMaintenance4PropertiesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceMaintenance4PropertiesKHR {
         self.0
     }
 }

@@ -57,7 +57,7 @@ impl<'a> PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
         self.0
     }
 }

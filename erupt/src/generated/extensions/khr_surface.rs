@@ -263,7 +263,7 @@ impl<'a> SurfaceCapabilitiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SurfaceCapabilitiesKHR {
+    pub fn build_dangling(self) -> SurfaceCapabilitiesKHR {
         self.0
     }
 }
@@ -334,7 +334,7 @@ impl<'a> SurfaceFormatKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SurfaceFormatKHR {
+    pub fn build_dangling(self) -> SurfaceFormatKHR {
         self.0
     }
 }

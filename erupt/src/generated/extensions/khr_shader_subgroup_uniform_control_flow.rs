@@ -57,7 +57,7 @@ impl<'a> PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR {
         self.0
     }
 }

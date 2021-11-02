@@ -67,7 +67,7 @@ impl<'a> MultiDrawInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MultiDrawInfoEXT {
+    pub fn build_dangling(self) -> MultiDrawInfoEXT {
         self.0
     }
 }
@@ -144,7 +144,7 @@ impl<'a> MultiDrawIndexedInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MultiDrawIndexedInfoEXT {
+    pub fn build_dangling(self) -> MultiDrawIndexedInfoEXT {
         self.0
     }
 }
@@ -214,7 +214,7 @@ impl<'a> PhysicalDeviceMultiDrawPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMultiDrawPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceMultiDrawPropertiesEXT {
         self.0
     }
 }
@@ -288,7 +288,7 @@ impl<'a> PhysicalDeviceMultiDrawFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMultiDrawFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceMultiDrawFeaturesEXT {
         self.0
     }
 }

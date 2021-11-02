@@ -59,7 +59,7 @@ impl<'a> XYColorEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> XYColorEXT {
+    pub fn build_dangling(self) -> XYColorEXT {
         self.0
     }
 }
@@ -171,7 +171,7 @@ impl<'a> HdrMetadataEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> HdrMetadataEXT {
+    pub fn build_dangling(self) -> HdrMetadataEXT {
         self.0
     }
 }

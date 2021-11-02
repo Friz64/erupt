@@ -90,7 +90,7 @@ impl<'a> DrmFormatModifierPropertiesListEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DrmFormatModifierPropertiesListEXT {
+    pub fn build_dangling(self) -> DrmFormatModifierPropertiesListEXT {
         self.0
     }
 }
@@ -167,7 +167,7 @@ impl<'a> DrmFormatModifierPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DrmFormatModifierPropertiesEXT {
+    pub fn build_dangling(self) -> DrmFormatModifierPropertiesEXT {
         self.0
     }
 }
@@ -251,7 +251,7 @@ impl<'a> PhysicalDeviceImageDrmFormatModifierInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceImageDrmFormatModifierInfoEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceImageDrmFormatModifierInfoEXT {
         self.0
     }
 }
@@ -323,7 +323,7 @@ impl<'a> ImageDrmFormatModifierListCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageDrmFormatModifierListCreateInfoEXT {
+    pub fn build_dangling(self) -> ImageDrmFormatModifierListCreateInfoEXT {
         self.0
     }
 }
@@ -401,7 +401,7 @@ impl<'a> ImageDrmFormatModifierExplicitCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageDrmFormatModifierExplicitCreateInfoEXT {
+    pub fn build_dangling(self) -> ImageDrmFormatModifierExplicitCreateInfoEXT {
         self.0
     }
 }
@@ -471,7 +471,7 @@ impl<'a> ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageDrmFormatModifierPropertiesEXT {
+    pub fn build_dangling(self) -> ImageDrmFormatModifierPropertiesEXT {
         self.0
     }
 }
@@ -543,7 +543,7 @@ impl<'a> DrmFormatModifierPropertiesList2EXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DrmFormatModifierPropertiesList2EXT {
+    pub fn build_dangling(self) -> DrmFormatModifierPropertiesList2EXT {
         self.0
     }
 }
@@ -620,7 +620,7 @@ impl<'a> DrmFormatModifierProperties2EXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DrmFormatModifierProperties2EXT {
+    pub fn build_dangling(self) -> DrmFormatModifierProperties2EXT {
         self.0
     }
 }

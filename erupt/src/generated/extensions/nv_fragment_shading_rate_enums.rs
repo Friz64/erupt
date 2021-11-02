@@ -138,7 +138,7 @@ impl<'a> PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
         self.0
     }
 }
@@ -208,7 +208,7 @@ impl<'a> PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
         self.0
     }
 }
@@ -290,7 +290,7 @@ impl<'a> PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineFragmentShadingRateEnumStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineFragmentShadingRateEnumStateCreateInfoNV {
         self.0
     }
 }

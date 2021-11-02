@@ -66,7 +66,7 @@ impl<'a> QueueFamilyCheckpointPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> QueueFamilyCheckpointPropertiesNV {
+    pub fn build_dangling(self) -> QueueFamilyCheckpointPropertiesNV {
         self.0
     }
 }
@@ -142,7 +142,7 @@ impl<'a> CheckpointDataNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CheckpointDataNV {
+    pub fn build_dangling(self) -> CheckpointDataNV {
         self.0
     }
 }

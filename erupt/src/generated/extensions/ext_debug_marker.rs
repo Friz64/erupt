@@ -92,7 +92,7 @@ impl<'a> DebugMarkerObjectNameInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugMarkerObjectNameInfoEXT {
+    pub fn build_dangling(self) -> DebugMarkerObjectNameInfoEXT {
         self.0
     }
 }
@@ -186,7 +186,7 @@ impl<'a> DebugMarkerObjectTagInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugMarkerObjectTagInfoEXT {
+    pub fn build_dangling(self) -> DebugMarkerObjectTagInfoEXT {
         self.0
     }
 }
@@ -262,7 +262,7 @@ impl<'a> DebugMarkerMarkerInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugMarkerMarkerInfoEXT {
+    pub fn build_dangling(self) -> DebugMarkerMarkerInfoEXT {
         self.0
     }
 }

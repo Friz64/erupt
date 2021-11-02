@@ -133,7 +133,7 @@ impl<'a> DisplayPowerInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayPowerInfoEXT {
+    pub fn build_dangling(self) -> DisplayPowerInfoEXT {
         self.0
     }
 }
@@ -203,7 +203,7 @@ impl<'a> DeviceEventInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceEventInfoEXT {
+    pub fn build_dangling(self) -> DeviceEventInfoEXT {
         self.0
     }
 }
@@ -273,7 +273,7 @@ impl<'a> DisplayEventInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayEventInfoEXT {
+    pub fn build_dangling(self) -> DisplayEventInfoEXT {
         self.0
     }
 }
@@ -343,7 +343,7 @@ impl<'a> SwapchainCounterCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SwapchainCounterCreateInfoEXT {
+    pub fn build_dangling(self) -> SwapchainCounterCreateInfoEXT {
         self.0
     }
 }

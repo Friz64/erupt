@@ -154,7 +154,7 @@ impl<'a> PipelineRenderingCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineRenderingCreateInfoKHR {
+    pub fn build_dangling(self) -> PipelineRenderingCreateInfoKHR {
         self.0
     }
 }
@@ -268,7 +268,7 @@ impl<'a> RenderingInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderingInfoKHR {
+    pub fn build_dangling(self) -> RenderingInfoKHR {
         self.0
     }
 }
@@ -380,7 +380,7 @@ impl<'a> RenderingAttachmentInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderingAttachmentInfoKHR {
+    pub fn build_dangling(self) -> RenderingAttachmentInfoKHR {
         self.0
     }
 }
@@ -462,7 +462,7 @@ impl<'a> RenderingFragmentShadingRateAttachmentInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderingFragmentShadingRateAttachmentInfoKHR {
+    pub fn build_dangling(self) -> RenderingFragmentShadingRateAttachmentInfoKHR {
         self.0
     }
 }
@@ -538,7 +538,7 @@ impl<'a> RenderingFragmentDensityMapAttachmentInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderingFragmentDensityMapAttachmentInfoEXT {
+    pub fn build_dangling(self) -> RenderingFragmentDensityMapAttachmentInfoEXT {
         self.0
     }
 }
@@ -608,7 +608,7 @@ impl<'a> PhysicalDeviceDynamicRenderingFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDynamicRenderingFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceDynamicRenderingFeaturesKHR {
         self.0
     }
 }
@@ -710,7 +710,7 @@ impl<'a> CommandBufferInheritanceRenderingInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CommandBufferInheritanceRenderingInfoKHR {
+    pub fn build_dangling(self) -> CommandBufferInheritanceRenderingInfoKHR {
         self.0
     }
 }
@@ -788,7 +788,7 @@ impl<'a> AttachmentSampleCountInfoAMDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AttachmentSampleCountInfoAMD {
+    pub fn build_dangling(self) -> AttachmentSampleCountInfoAMD {
         self.0
     }
 }
@@ -864,7 +864,7 @@ impl<'a> MultiviewPerViewAttributesInfoNVXBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MultiviewPerViewAttributesInfoNVX {
+    pub fn build_dangling(self) -> MultiviewPerViewAttributesInfoNVX {
         self.0
     }
 }

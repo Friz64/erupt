@@ -88,7 +88,7 @@ impl<'a> PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceProvokingVertexFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceProvokingVertexFeaturesEXT {
         self.0
     }
 }
@@ -164,7 +164,7 @@ impl<'a> PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceProvokingVertexPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceProvokingVertexPropertiesEXT {
         self.0
     }
 }
@@ -234,7 +234,7 @@ impl<'a> PipelineRasterizationProvokingVertexStateCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineRasterizationProvokingVertexStateCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineRasterizationProvokingVertexStateCreateInfoEXT {
         self.0
     }
 }

@@ -60,7 +60,7 @@ impl<'a> ImageViewASTCDecodeModeEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageViewASTCDecodeModeEXT {
+    pub fn build_dangling(self) -> ImageViewASTCDecodeModeEXT {
         self.0
     }
 }
@@ -130,7 +130,7 @@ impl<'a> PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceASTCDecodeFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceASTCDecodeFeaturesEXT {
         self.0
     }
 }

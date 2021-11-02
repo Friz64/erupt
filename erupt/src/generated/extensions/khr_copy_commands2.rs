@@ -105,7 +105,7 @@ impl<'a> BufferCopy2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferCopy2KHR {
+    pub fn build_dangling(self) -> BufferCopy2KHR {
         self.0
     }
 }
@@ -199,7 +199,7 @@ impl<'a> ImageCopy2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageCopy2KHR {
+    pub fn build_dangling(self) -> ImageCopy2KHR {
         self.0
     }
 }
@@ -287,7 +287,7 @@ impl<'a> ImageBlit2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageBlit2KHR {
+    pub fn build_dangling(self) -> ImageBlit2KHR {
         self.0
     }
 }
@@ -387,7 +387,7 @@ impl<'a> BufferImageCopy2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferImageCopy2KHR {
+    pub fn build_dangling(self) -> BufferImageCopy2KHR {
         self.0
     }
 }
@@ -481,7 +481,7 @@ impl<'a> ImageResolve2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageResolve2KHR {
+    pub fn build_dangling(self) -> ImageResolve2KHR {
         self.0
     }
 }
@@ -565,7 +565,7 @@ impl<'a> CopyBufferInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CopyBufferInfo2KHR {
+    pub fn build_dangling(self) -> CopyBufferInfo2KHR {
         self.0
     }
 }
@@ -661,7 +661,7 @@ impl<'a> CopyImageInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CopyImageInfo2KHR {
+    pub fn build_dangling(self) -> CopyImageInfo2KHR {
         self.0
     }
 }
@@ -763,7 +763,7 @@ impl<'a> BlitImageInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BlitImageInfo2KHR {
+    pub fn build_dangling(self) -> BlitImageInfo2KHR {
         self.0
     }
 }
@@ -853,7 +853,7 @@ impl<'a> CopyBufferToImageInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CopyBufferToImageInfo2KHR {
+    pub fn build_dangling(self) -> CopyBufferToImageInfo2KHR {
         self.0
     }
 }
@@ -943,7 +943,7 @@ impl<'a> CopyImageToBufferInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CopyImageToBufferInfo2KHR {
+    pub fn build_dangling(self) -> CopyImageToBufferInfo2KHR {
         self.0
     }
 }
@@ -1039,7 +1039,7 @@ impl<'a> ResolveImageInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ResolveImageInfo2KHR {
+    pub fn build_dangling(self) -> ResolveImageInfo2KHR {
         self.0
     }
 }

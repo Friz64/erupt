@@ -332,7 +332,7 @@ impl<'a> RayTracingShaderGroupCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RayTracingShaderGroupCreateInfoNV {
+    pub fn build_dangling(self) -> RayTracingShaderGroupCreateInfoNV {
         self.0
     }
 }
@@ -442,7 +442,7 @@ impl<'a> RayTracingPipelineCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RayTracingPipelineCreateInfoNV {
+    pub fn build_dangling(self) -> RayTracingPipelineCreateInfoNV {
         self.0
     }
 }
@@ -572,7 +572,7 @@ impl<'a> GeometryTrianglesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GeometryTrianglesNV {
+    pub fn build_dangling(self) -> GeometryTrianglesNV {
         self.0
     }
 }
@@ -660,7 +660,7 @@ impl<'a> GeometryAABBNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GeometryAABBNV {
+    pub fn build_dangling(self) -> GeometryAABBNV {
         self.0
     }
 }
@@ -731,7 +731,7 @@ impl<'a> GeometryDataNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GeometryDataNV {
+    pub fn build_dangling(self) -> GeometryDataNV {
         self.0
     }
 }
@@ -813,7 +813,7 @@ impl<'a> GeometryNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> GeometryNV {
+    pub fn build_dangling(self) -> GeometryNV {
         self.0
     }
 }
@@ -903,7 +903,7 @@ impl<'a> AccelerationStructureInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AccelerationStructureInfoNV {
+    pub fn build_dangling(self) -> AccelerationStructureInfoNV {
         self.0
     }
 }
@@ -979,7 +979,7 @@ impl<'a> AccelerationStructureCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AccelerationStructureCreateInfoNV {
+    pub fn build_dangling(self) -> AccelerationStructureCreateInfoNV {
         self.0
     }
 }
@@ -1069,7 +1069,7 @@ impl<'a> BindAccelerationStructureMemoryInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BindAccelerationStructureMemoryInfoNV {
+    pub fn build_dangling(self) -> BindAccelerationStructureMemoryInfoNV {
         self.0
     }
 }
@@ -1141,7 +1141,7 @@ impl<'a> WriteDescriptorSetAccelerationStructureNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> WriteDescriptorSetAccelerationStructureNV {
+    pub fn build_dangling(self) -> WriteDescriptorSetAccelerationStructureNV {
         self.0
     }
 }
@@ -1217,7 +1217,7 @@ impl<'a> AccelerationStructureMemoryRequirementsInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AccelerationStructureMemoryRequirementsInfoNV {
+    pub fn build_dangling(self) -> AccelerationStructureMemoryRequirementsInfoNV {
         self.0
     }
 }
@@ -1329,7 +1329,7 @@ impl<'a> PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceRayTracingPropertiesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceRayTracingPropertiesNV {
         self.0
     }
 }

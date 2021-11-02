@@ -123,7 +123,7 @@ impl<'a> PhysicalDeviceShaderAtomicFloat2FeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderAtomicFloat2FeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderAtomicFloat2FeaturesEXT {
         self.0
     }
 }

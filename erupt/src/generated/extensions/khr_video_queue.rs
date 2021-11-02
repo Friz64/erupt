@@ -433,7 +433,7 @@ impl<'a> VideoQueueFamilyProperties2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoQueueFamilyProperties2KHR {
+    pub fn build_dangling(self) -> VideoQueueFamilyProperties2KHR {
         self.0
     }
 }
@@ -509,7 +509,7 @@ impl<'a> VideoProfilesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoProfilesKHR {
+    pub fn build_dangling(self) -> VideoProfilesKHR {
         self.0
     }
 }
@@ -585,7 +585,7 @@ impl<'a> PhysicalDeviceVideoFormatInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVideoFormatInfoKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceVideoFormatInfoKHR {
         self.0
     }
 }
@@ -655,7 +655,7 @@ impl<'a> VideoFormatPropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoFormatPropertiesKHR {
+    pub fn build_dangling(self) -> VideoFormatPropertiesKHR {
         self.0
     }
 }
@@ -743,7 +743,7 @@ impl<'a> VideoProfileKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoProfileKHR {
+    pub fn build_dangling(self) -> VideoProfileKHR {
         self.0
     }
 }
@@ -855,7 +855,7 @@ impl<'a> VideoCapabilitiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoCapabilitiesKHR {
+    pub fn build_dangling(self) -> VideoCapabilitiesKHR {
         self.0
     }
 }
@@ -931,7 +931,7 @@ impl<'a> VideoGetMemoryPropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoGetMemoryPropertiesKHR {
+    pub fn build_dangling(self) -> VideoGetMemoryPropertiesKHR {
         self.0
     }
 }
@@ -1019,7 +1019,7 @@ impl<'a> VideoBindMemoryKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoBindMemoryKHR {
+    pub fn build_dangling(self) -> VideoBindMemoryKHR {
         self.0
     }
 }
@@ -1107,7 +1107,7 @@ impl<'a> VideoPictureResourceKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoPictureResourceKHR {
+    pub fn build_dangling(self) -> VideoPictureResourceKHR {
         self.0
     }
 }
@@ -1183,7 +1183,7 @@ impl<'a> VideoReferenceSlotKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoReferenceSlotKHR {
+    pub fn build_dangling(self) -> VideoReferenceSlotKHR {
         self.0
     }
 }
@@ -1295,7 +1295,7 @@ impl<'a> VideoSessionCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoSessionCreateInfoKHR {
+    pub fn build_dangling(self) -> VideoSessionCreateInfoKHR {
         self.0
     }
 }
@@ -1371,7 +1371,7 @@ impl<'a> VideoSessionParametersCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoSessionParametersCreateInfoKHR {
+    pub fn build_dangling(self) -> VideoSessionParametersCreateInfoKHR {
         self.0
     }
 }
@@ -1441,7 +1441,7 @@ impl<'a> VideoSessionParametersUpdateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoSessionParametersUpdateInfoKHR {
+    pub fn build_dangling(self) -> VideoSessionParametersUpdateInfoKHR {
         self.0
     }
 }
@@ -1537,7 +1537,7 @@ impl<'a> VideoBeginCodingInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoBeginCodingInfoKHR {
+    pub fn build_dangling(self) -> VideoBeginCodingInfoKHR {
         self.0
     }
 }
@@ -1607,7 +1607,7 @@ impl<'a> VideoEndCodingInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEndCodingInfoKHR {
+    pub fn build_dangling(self) -> VideoEndCodingInfoKHR {
         self.0
     }
 }
@@ -1677,7 +1677,7 @@ impl<'a> VideoCodingControlInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoCodingControlInfoKHR {
+    pub fn build_dangling(self) -> VideoCodingControlInfoKHR {
         self.0
     }
 }

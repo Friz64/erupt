@@ -104,7 +104,7 @@ impl<'a> DevicePrivateDataCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DevicePrivateDataCreateInfoEXT {
+    pub fn build_dangling(self) -> DevicePrivateDataCreateInfoEXT {
         self.0
     }
 }
@@ -174,7 +174,7 @@ impl<'a> PrivateDataSlotCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PrivateDataSlotCreateInfoEXT {
+    pub fn build_dangling(self) -> PrivateDataSlotCreateInfoEXT {
         self.0
     }
 }
@@ -244,7 +244,7 @@ impl<'a> PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePrivateDataFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDevicePrivateDataFeaturesEXT {
         self.0
     }
 }

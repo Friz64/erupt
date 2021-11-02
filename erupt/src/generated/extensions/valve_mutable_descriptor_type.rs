@@ -74,7 +74,7 @@ impl<'a> PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
+    pub fn build_dangling(self) -> PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
         self.0
     }
 }
@@ -141,7 +141,7 @@ impl<'a> MutableDescriptorTypeListVALVEBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MutableDescriptorTypeListVALVE {
+    pub fn build_dangling(self) -> MutableDescriptorTypeListVALVE {
         self.0
     }
 }
@@ -213,7 +213,7 @@ impl<'a> MutableDescriptorTypeCreateInfoVALVEBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MutableDescriptorTypeCreateInfoVALVE {
+    pub fn build_dangling(self) -> MutableDescriptorTypeCreateInfoVALVE {
         self.0
     }
 }

@@ -76,7 +76,7 @@ impl<'a> ValidationFlagsEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ValidationFlagsEXT {
+    pub fn build_dangling(self) -> ValidationFlagsEXT {
         self.0
     }
 }

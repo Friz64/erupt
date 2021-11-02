@@ -76,7 +76,7 @@ impl<'a> ImageViewHandleInfoNVXBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageViewHandleInfoNVX {
+    pub fn build_dangling(self) -> ImageViewHandleInfoNVX {
         self.0
     }
 }
@@ -152,7 +152,7 @@ impl<'a> ImageViewAddressPropertiesNVXBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageViewAddressPropertiesNVX {
+    pub fn build_dangling(self) -> ImageViewAddressPropertiesNVX {
         self.0
     }
 }

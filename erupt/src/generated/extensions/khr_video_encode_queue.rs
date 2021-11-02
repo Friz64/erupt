@@ -244,7 +244,7 @@ impl<'a> VideoEncodeInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeInfoKHR {
+    pub fn build_dangling(self) -> VideoEncodeInfoKHR {
         self.0
     }
 }
@@ -350,7 +350,7 @@ impl<'a> VideoEncodeRateControlInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VideoEncodeRateControlInfoKHR {
+    pub fn build_dangling(self) -> VideoEncodeRateControlInfoKHR {
         self.0
     }
 }

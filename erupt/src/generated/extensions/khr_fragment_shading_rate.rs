@@ -136,7 +136,7 @@ impl<'a> FragmentShadingRateAttachmentInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FragmentShadingRateAttachmentInfoKHR {
+    pub fn build_dangling(self) -> FragmentShadingRateAttachmentInfoKHR {
         self.0
     }
 }
@@ -212,7 +212,7 @@ impl<'a> PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineFragmentShadingRateStateCreateInfoKHR {
+    pub fn build_dangling(self) -> PipelineFragmentShadingRateStateCreateInfoKHR {
         self.0
     }
 }
@@ -294,7 +294,7 @@ impl<'a> PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFragmentShadingRateFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceFragmentShadingRateFeaturesKHR {
         self.0
     }
 }
@@ -460,7 +460,7 @@ impl<'a> PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFragmentShadingRatePropertiesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceFragmentShadingRatePropertiesKHR {
         self.0
     }
 }
@@ -536,7 +536,7 @@ impl<'a> PhysicalDeviceFragmentShadingRateKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFragmentShadingRateKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceFragmentShadingRateKHR {
         self.0
     }
 }

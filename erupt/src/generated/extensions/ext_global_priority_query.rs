@@ -63,7 +63,7 @@ impl<'a> PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
         self.0
     }
 }
@@ -138,7 +138,7 @@ impl<'a> QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> QueueFamilyGlobalPriorityPropertiesEXT {
+    pub fn build_dangling(self) -> QueueFamilyGlobalPriorityPropertiesEXT {
         self.0
     }
 }

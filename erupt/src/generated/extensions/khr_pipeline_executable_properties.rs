@@ -105,7 +105,7 @@ impl<'a> PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
         self.0
     }
 }
@@ -175,7 +175,7 @@ impl<'a> PipelineInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineInfoKHR {
+    pub fn build_dangling(self) -> PipelineInfoKHR {
         self.0
     }
 }
@@ -263,7 +263,7 @@ impl<'a> PipelineExecutablePropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineExecutablePropertiesKHR {
+    pub fn build_dangling(self) -> PipelineExecutablePropertiesKHR {
         self.0
     }
 }
@@ -339,7 +339,7 @@ impl<'a> PipelineExecutableInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineExecutableInfoKHR {
+    pub fn build_dangling(self) -> PipelineExecutableInfoKHR {
         self.0
     }
 }
@@ -447,7 +447,7 @@ impl<'a> PipelineExecutableStatisticKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineExecutableStatisticKHR {
+    pub fn build_dangling(self) -> PipelineExecutableStatisticKHR {
         self.0
     }
 }
@@ -541,7 +541,7 @@ impl<'a> PipelineExecutableInternalRepresentationKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineExecutableInternalRepresentationKHR {
+    pub fn build_dangling(self) -> PipelineExecutableInternalRepresentationKHR {
         self.0
     }
 }

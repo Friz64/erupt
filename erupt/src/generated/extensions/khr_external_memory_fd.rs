@@ -73,7 +73,7 @@ impl<'a> ImportMemoryFdInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportMemoryFdInfoKHR {
+    pub fn build_dangling(self) -> ImportMemoryFdInfoKHR {
         self.0
     }
 }
@@ -143,7 +143,7 @@ impl<'a> MemoryFdPropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryFdPropertiesKHR {
+    pub fn build_dangling(self) -> MemoryFdPropertiesKHR {
         self.0
     }
 }
@@ -219,7 +219,7 @@ impl<'a> MemoryGetFdInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryGetFdInfoKHR {
+    pub fn build_dangling(self) -> MemoryGetFdInfoKHR {
         self.0
     }
 }

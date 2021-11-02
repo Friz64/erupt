@@ -74,7 +74,7 @@ impl<'a> DisplayPresentInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayPresentInfoKHR {
+    pub fn build_dangling(self) -> DisplayPresentInfoKHR {
         self.0
     }
 }

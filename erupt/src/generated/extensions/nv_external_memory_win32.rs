@@ -69,7 +69,7 @@ impl<'a> ImportMemoryWin32HandleInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportMemoryWin32HandleInfoNV {
+    pub fn build_dangling(self) -> ImportMemoryWin32HandleInfoNV {
         self.0
     }
 }
@@ -145,7 +145,7 @@ impl<'a> ExportMemoryWin32HandleInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ExportMemoryWin32HandleInfoNV {
+    pub fn build_dangling(self) -> ExportMemoryWin32HandleInfoNV {
         self.0
     }
 }

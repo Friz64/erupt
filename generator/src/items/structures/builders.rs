@@ -489,7 +489,7 @@ impl Structure {
                 #[inline]
                 /// Discards all lifetime information.
                 /// Use the `Deref` and `DerefMut` implementations if possible.
-                pub fn build(self) -> #inner_ident {
+                pub fn build_dangling(self) -> #inner_ident {
                     self.0
                 }
             }

@@ -82,7 +82,7 @@ impl<'a> ImportMemoryWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportMemoryWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> ImportMemoryWin32HandleInfoKHR {
         self.0
     }
 }
@@ -164,7 +164,7 @@ impl<'a> ExportMemoryWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ExportMemoryWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> ExportMemoryWin32HandleInfoKHR {
         self.0
     }
 }
@@ -234,7 +234,7 @@ impl<'a> MemoryWin32HandlePropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryWin32HandlePropertiesKHR {
+    pub fn build_dangling(self) -> MemoryWin32HandlePropertiesKHR {
         self.0
     }
 }
@@ -310,7 +310,7 @@ impl<'a> MemoryGetWin32HandleInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryGetWin32HandleInfoKHR {
+    pub fn build_dangling(self) -> MemoryGetWin32HandleInfoKHR {
         self.0
     }
 }

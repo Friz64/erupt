@@ -66,7 +66,7 @@ impl<'a> PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceImageViewImageFormatInfoEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceImageViewImageFormatInfoEXT {
         self.0
     }
 }
@@ -142,7 +142,7 @@ impl<'a> FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FilterCubicImageViewImageFormatPropertiesEXT {
+    pub fn build_dangling(self) -> FilterCubicImageViewImageFormatPropertiesEXT {
         self.0
     }
 }

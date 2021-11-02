@@ -83,7 +83,7 @@ impl<'a> ImportAndroidHardwareBufferInfoANDROIDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportAndroidHardwareBufferInfoANDROID {
+    pub fn build_dangling(self) -> ImportAndroidHardwareBufferInfoANDROID {
         self.0
     }
 }
@@ -153,7 +153,7 @@ impl<'a> AndroidHardwareBufferUsageANDROIDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AndroidHardwareBufferUsageANDROID {
+    pub fn build_dangling(self) -> AndroidHardwareBufferUsageANDROID {
         self.0
     }
 }
@@ -233,7 +233,7 @@ impl<'a> AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AndroidHardwareBufferPropertiesANDROID {
+    pub fn build_dangling(self) -> AndroidHardwareBufferPropertiesANDROID {
         self.0
     }
 }
@@ -303,7 +303,7 @@ impl<'a> MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryGetAndroidHardwareBufferInfoANDROID {
+    pub fn build_dangling(self) -> MemoryGetAndroidHardwareBufferInfoANDROID {
         self.0
     }
 }
@@ -415,7 +415,7 @@ impl<'a> AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AndroidHardwareBufferFormatPropertiesANDROID {
+    pub fn build_dangling(self) -> AndroidHardwareBufferFormatPropertiesANDROID {
         self.0
     }
 }
@@ -485,7 +485,7 @@ impl<'a> ExternalFormatANDROIDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ExternalFormatANDROID {
+    pub fn build_dangling(self) -> ExternalFormatANDROID {
         self.0
     }
 }
@@ -597,7 +597,7 @@ impl<'a> AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AndroidHardwareBufferFormatProperties2ANDROID {
+    pub fn build_dangling(self) -> AndroidHardwareBufferFormatProperties2ANDROID {
         self.0
     }
 }

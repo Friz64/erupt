@@ -84,7 +84,7 @@ impl<'a> IOSSurfaceCreateInfoMVKBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> IOSSurfaceCreateInfoMVK {
+    pub fn build_dangling(self) -> IOSSurfaceCreateInfoMVK {
         self.0
     }
 }

@@ -268,7 +268,7 @@ impl<'a> SwapchainCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SwapchainCreateInfoKHR {
+    pub fn build_dangling(self) -> SwapchainCreateInfoKHR {
         self.0
     }
 }
@@ -364,7 +364,7 @@ impl<'a> PresentInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PresentInfoKHR {
+    pub fn build_dangling(self) -> PresentInfoKHR {
         self.0
     }
 }
@@ -442,7 +442,7 @@ impl<'a> DeviceGroupPresentCapabilitiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceGroupPresentCapabilitiesKHR {
+    pub fn build_dangling(self) -> DeviceGroupPresentCapabilitiesKHR {
         self.0
     }
 }
@@ -512,7 +512,7 @@ impl<'a> ImageSwapchainCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageSwapchainCreateInfoKHR {
+    pub fn build_dangling(self) -> ImageSwapchainCreateInfoKHR {
         self.0
     }
 }
@@ -588,7 +588,7 @@ impl<'a> BindImageMemorySwapchainInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BindImageMemorySwapchainInfoKHR {
+    pub fn build_dangling(self) -> BindImageMemorySwapchainInfoKHR {
         self.0
     }
 }
@@ -682,7 +682,7 @@ impl<'a> AcquireNextImageInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AcquireNextImageInfoKHR {
+    pub fn build_dangling(self) -> AcquireNextImageInfoKHR {
         self.0
     }
 }
@@ -760,7 +760,7 @@ impl<'a> DeviceGroupPresentInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceGroupPresentInfoKHR {
+    pub fn build_dangling(self) -> DeviceGroupPresentInfoKHR {
         self.0
     }
 }
@@ -830,7 +830,7 @@ impl<'a> DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceGroupSwapchainCreateInfoKHR {
+    pub fn build_dangling(self) -> DeviceGroupSwapchainCreateInfoKHR {
         self.0
     }
 }

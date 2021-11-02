@@ -86,7 +86,7 @@ impl<'a> Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> Win32KeyedMutexAcquireReleaseInfoKHR {
+    pub fn build_dangling(self) -> Win32KeyedMutexAcquireReleaseInfoKHR {
         self.0
     }
 }

@@ -137,7 +137,7 @@ impl<'a> PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
         self.0
     }
 }
@@ -237,7 +237,7 @@ impl<'a> PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
         self.0
     }
 }
@@ -319,7 +319,7 @@ impl<'a> PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineColorBlendAdvancedStateCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineColorBlendAdvancedStateCreateInfoEXT {
         self.0
     }
 }

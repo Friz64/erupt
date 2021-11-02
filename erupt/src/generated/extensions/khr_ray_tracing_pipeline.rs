@@ -210,7 +210,7 @@ impl<'a> RayTracingShaderGroupCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RayTracingShaderGroupCreateInfoKHR {
+    pub fn build_dangling(self) -> RayTracingShaderGroupCreateInfoKHR {
         self.0
     }
 }
@@ -338,7 +338,7 @@ impl<'a> RayTracingPipelineCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RayTracingPipelineCreateInfoKHR {
+    pub fn build_dangling(self) -> RayTracingPipelineCreateInfoKHR {
         self.0
     }
 }
@@ -432,7 +432,7 @@ impl<'a> PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceRayTracingPipelineFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceRayTracingPipelineFeaturesKHR {
         self.0
     }
 }
@@ -544,7 +544,7 @@ impl<'a> PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceRayTracingPipelinePropertiesKHR {
+    pub fn build_dangling(self) -> PhysicalDeviceRayTracingPipelinePropertiesKHR {
         self.0
     }
 }
@@ -621,7 +621,7 @@ impl<'a> StridedDeviceAddressRegionKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> StridedDeviceAddressRegionKHR {
+    pub fn build_dangling(self) -> StridedDeviceAddressRegionKHR {
         self.0
     }
 }
@@ -698,7 +698,7 @@ impl<'a> TraceRaysIndirectCommandKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> TraceRaysIndirectCommandKHR {
+    pub fn build_dangling(self) -> TraceRaysIndirectCommandKHR {
         self.0
     }
 }
@@ -774,7 +774,7 @@ impl<'a> RayTracingPipelineInterfaceCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RayTracingPipelineInterfaceCreateInfoKHR {
+    pub fn build_dangling(self) -> RayTracingPipelineInterfaceCreateInfoKHR {
         self.0
     }
 }

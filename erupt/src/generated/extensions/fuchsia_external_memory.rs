@@ -77,7 +77,7 @@ impl<'a> ImportMemoryZirconHandleInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportMemoryZirconHandleInfoFUCHSIA {
+    pub fn build_dangling(self) -> ImportMemoryZirconHandleInfoFUCHSIA {
         self.0
     }
 }
@@ -147,7 +147,7 @@ impl<'a> MemoryZirconHandlePropertiesFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryZirconHandlePropertiesFUCHSIA {
+    pub fn build_dangling(self) -> MemoryZirconHandlePropertiesFUCHSIA {
         self.0
     }
 }
@@ -223,7 +223,7 @@ impl<'a> MemoryGetZirconHandleInfoFUCHSIABuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryGetZirconHandleInfoFUCHSIA {
+    pub fn build_dangling(self) -> MemoryGetZirconHandleInfoFUCHSIA {
         self.0
     }
 }

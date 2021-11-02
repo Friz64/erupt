@@ -91,7 +91,7 @@ impl<'a> SubpassShadingPipelineCreateInfoHUAWEIBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubpassShadingPipelineCreateInfoHUAWEI {
+    pub fn build_dangling(self) -> SubpassShadingPipelineCreateInfoHUAWEI {
         self.0
     }
 }
@@ -161,7 +161,7 @@ impl<'a> PhysicalDeviceSubpassShadingPropertiesHUAWEIBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSubpassShadingPropertiesHUAWEI {
+    pub fn build_dangling(self) -> PhysicalDeviceSubpassShadingPropertiesHUAWEI {
         self.0
     }
 }
@@ -231,7 +231,7 @@ impl<'a> PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSubpassShadingFeaturesHUAWEI {
+    pub fn build_dangling(self) -> PhysicalDeviceSubpassShadingFeaturesHUAWEI {
         self.0
     }
 }

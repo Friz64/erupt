@@ -75,7 +75,7 @@ impl<'a> ImportMemoryHostPointerInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImportMemoryHostPointerInfoEXT {
+    pub fn build_dangling(self) -> ImportMemoryHostPointerInfoEXT {
         self.0
     }
 }
@@ -145,7 +145,7 @@ impl<'a> MemoryHostPointerPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryHostPointerPropertiesEXT {
+    pub fn build_dangling(self) -> MemoryHostPointerPropertiesEXT {
         self.0
     }
 }
@@ -215,7 +215,7 @@ impl<'a> PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceExternalMemoryHostPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceExternalMemoryHostPropertiesEXT {
         self.0
     }
 }

@@ -151,7 +151,7 @@ impl<'a> FormatProperties3KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FormatProperties3KHR {
+    pub fn build_dangling(self) -> FormatProperties3KHR {
         self.0
     }
 }

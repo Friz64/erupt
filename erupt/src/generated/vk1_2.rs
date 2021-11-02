@@ -536,7 +536,7 @@ impl<'a> ConformanceVersionBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ConformanceVersion {
+    pub fn build_dangling(self) -> ConformanceVersion {
         self.0
     }
 }
@@ -624,7 +624,7 @@ impl<'a> PhysicalDeviceDriverPropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDriverProperties {
+    pub fn build_dangling(self) -> PhysicalDeviceDriverProperties {
         self.0
     }
 }
@@ -696,7 +696,7 @@ impl<'a> PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderSubgroupExtendedTypesFeatures {
         self.0
     }
 }
@@ -772,7 +772,7 @@ impl<'a> PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSamplerFilterMinmaxProperties {
+    pub fn build_dangling(self) -> PhysicalDeviceSamplerFilterMinmaxProperties {
         self.0
     }
 }
@@ -842,7 +842,7 @@ impl<'a> SamplerReductionModeCreateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SamplerReductionModeCreateInfo {
+    pub fn build_dangling(self) -> SamplerReductionModeCreateInfo {
         self.0
     }
 }
@@ -914,7 +914,7 @@ impl<'a> ImageFormatListCreateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageFormatListCreateInfo {
+    pub fn build_dangling(self) -> ImageFormatListCreateInfo {
         self.0
     }
 }
@@ -992,7 +992,7 @@ impl<'a> PhysicalDeviceShaderFloat16Int8FeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderFloat16Int8Features {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderFloat16Int8Features {
         self.0
     }
 }
@@ -1158,7 +1158,7 @@ impl<'a> PhysicalDeviceFloatControlsPropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceFloatControlsProperties {
+    pub fn build_dangling(self) -> PhysicalDeviceFloatControlsProperties {
         self.0
     }
 }
@@ -1228,7 +1228,7 @@ impl<'a> PhysicalDeviceHostQueryResetFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceHostQueryResetFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceHostQueryResetFeatures {
         self.0
     }
 }
@@ -1412,7 +1412,7 @@ impl<'a> PhysicalDeviceDescriptorIndexingFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDescriptorIndexingFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceDescriptorIndexingFeatures {
         self.0
     }
 }
@@ -1614,7 +1614,7 @@ impl<'a> PhysicalDeviceDescriptorIndexingPropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDescriptorIndexingProperties {
+    pub fn build_dangling(self) -> PhysicalDeviceDescriptorIndexingProperties {
         self.0
     }
 }
@@ -1686,7 +1686,7 @@ impl<'a> DescriptorSetLayoutBindingFlagsCreateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DescriptorSetLayoutBindingFlagsCreateInfo {
+    pub fn build_dangling(self) -> DescriptorSetLayoutBindingFlagsCreateInfo {
         self.0
     }
 }
@@ -1758,7 +1758,7 @@ impl<'a> DescriptorSetVariableDescriptorCountAllocateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DescriptorSetVariableDescriptorCountAllocateInfo {
+    pub fn build_dangling(self) -> DescriptorSetVariableDescriptorCountAllocateInfo {
         self.0
     }
 }
@@ -1828,7 +1828,7 @@ impl<'a> DescriptorSetVariableDescriptorCountLayoutSupportBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DescriptorSetVariableDescriptorCountLayoutSupport {
+    pub fn build_dangling(self) -> DescriptorSetVariableDescriptorCountLayoutSupport {
         self.0
     }
 }
@@ -1948,7 +1948,7 @@ impl<'a> AttachmentDescription2Builder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AttachmentDescription2 {
+    pub fn build_dangling(self) -> AttachmentDescription2 {
         self.0
     }
 }
@@ -2032,7 +2032,7 @@ impl<'a> AttachmentReference2Builder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AttachmentReference2 {
+    pub fn build_dangling(self) -> AttachmentReference2 {
         self.0
     }
 }
@@ -2153,7 +2153,7 @@ impl<'a> SubpassDescription2Builder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubpassDescription2 {
+    pub fn build_dangling(self) -> SubpassDescription2 {
         self.0
     }
 }
@@ -2265,7 +2265,7 @@ impl<'a> SubpassDependency2Builder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubpassDependency2 {
+    pub fn build_dangling(self) -> SubpassDependency2 {
         self.0
     }
 }
@@ -2367,7 +2367,7 @@ impl<'a> RenderPassCreateInfo2Builder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderPassCreateInfo2 {
+    pub fn build_dangling(self) -> RenderPassCreateInfo2 {
         self.0
     }
 }
@@ -2437,7 +2437,7 @@ impl<'a> SubpassBeginInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubpassBeginInfo {
+    pub fn build_dangling(self) -> SubpassBeginInfo {
         self.0
     }
 }
@@ -2501,7 +2501,7 @@ impl<'a> SubpassEndInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubpassEndInfo {
+    pub fn build_dangling(self) -> SubpassEndInfo {
         self.0
     }
 }
@@ -2571,7 +2571,7 @@ impl<'a> PhysicalDeviceTimelineSemaphoreFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceTimelineSemaphoreFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceTimelineSemaphoreFeatures {
         self.0
     }
 }
@@ -2641,7 +2641,7 @@ impl<'a> PhysicalDeviceTimelineSemaphorePropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceTimelineSemaphoreProperties {
+    pub fn build_dangling(self) -> PhysicalDeviceTimelineSemaphoreProperties {
         self.0
     }
 }
@@ -2717,7 +2717,7 @@ impl<'a> SemaphoreTypeCreateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SemaphoreTypeCreateInfo {
+    pub fn build_dangling(self) -> SemaphoreTypeCreateInfo {
         self.0
     }
 }
@@ -2797,7 +2797,7 @@ impl<'a> TimelineSemaphoreSubmitInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> TimelineSemaphoreSubmitInfo {
+    pub fn build_dangling(self) -> TimelineSemaphoreSubmitInfo {
         self.0
     }
 }
@@ -2882,7 +2882,7 @@ impl<'a> SemaphoreWaitInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SemaphoreWaitInfo {
+    pub fn build_dangling(self) -> SemaphoreWaitInfo {
         self.0
     }
 }
@@ -2958,7 +2958,7 @@ impl<'a> SemaphoreSignalInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SemaphoreSignalInfo {
+    pub fn build_dangling(self) -> SemaphoreSignalInfo {
         self.0
     }
 }
@@ -3040,7 +3040,7 @@ impl<'a> PhysicalDevice8BitStorageFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevice8BitStorageFeatures {
+    pub fn build_dangling(self) -> PhysicalDevice8BitStorageFeatures {
         self.0
     }
 }
@@ -3122,7 +3122,7 @@ impl<'a> PhysicalDeviceVulkanMemoryModelFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVulkanMemoryModelFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceVulkanMemoryModelFeatures {
         self.0
     }
 }
@@ -3198,7 +3198,7 @@ impl<'a> PhysicalDeviceShaderAtomicInt64FeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceShaderAtomicInt64Features {
+    pub fn build_dangling(self) -> PhysicalDeviceShaderAtomicInt64Features {
         self.0
     }
 }
@@ -3286,7 +3286,7 @@ impl<'a> PhysicalDeviceDepthStencilResolvePropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDepthStencilResolveProperties {
+    pub fn build_dangling(self) -> PhysicalDeviceDepthStencilResolveProperties {
         self.0
     }
 }
@@ -3368,7 +3368,7 @@ impl<'a> SubpassDescriptionDepthStencilResolveBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SubpassDescriptionDepthStencilResolve {
+    pub fn build_dangling(self) -> SubpassDescriptionDepthStencilResolve {
         self.0
     }
 }
@@ -3438,7 +3438,7 @@ impl<'a> ImageStencilUsageCreateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ImageStencilUsageCreateInfo {
+    pub fn build_dangling(self) -> ImageStencilUsageCreateInfo {
         self.0
     }
 }
@@ -3508,7 +3508,7 @@ impl<'a> PhysicalDeviceScalarBlockLayoutFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceScalarBlockLayoutFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceScalarBlockLayoutFeatures {
         self.0
     }
 }
@@ -3578,7 +3578,7 @@ impl<'a> PhysicalDeviceUniformBufferStandardLayoutFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceUniformBufferStandardLayoutFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceUniformBufferStandardLayoutFeatures {
         self.0
     }
 }
@@ -3660,7 +3660,7 @@ impl<'a> PhysicalDeviceBufferDeviceAddressFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceBufferDeviceAddressFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceBufferDeviceAddressFeatures {
         self.0
     }
 }
@@ -3730,7 +3730,7 @@ impl<'a> BufferDeviceAddressInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferDeviceAddressInfo {
+    pub fn build_dangling(self) -> BufferDeviceAddressInfo {
         self.0
     }
 }
@@ -3800,7 +3800,7 @@ impl<'a> BufferOpaqueCaptureAddressCreateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> BufferOpaqueCaptureAddressCreateInfo {
+    pub fn build_dangling(self) -> BufferOpaqueCaptureAddressCreateInfo {
         self.0
     }
 }
@@ -3870,7 +3870,7 @@ impl<'a> PhysicalDeviceImagelessFramebufferFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceImagelessFramebufferFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceImagelessFramebufferFeatures {
         self.0
     }
 }
@@ -3942,7 +3942,7 @@ impl<'a> FramebufferAttachmentsCreateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FramebufferAttachmentsCreateInfo {
+    pub fn build_dangling(self) -> FramebufferAttachmentsCreateInfo {
         self.0
     }
 }
@@ -4044,7 +4044,7 @@ impl<'a> FramebufferAttachmentImageInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> FramebufferAttachmentImageInfo {
+    pub fn build_dangling(self) -> FramebufferAttachmentImageInfo {
         self.0
     }
 }
@@ -4116,7 +4116,7 @@ impl<'a> RenderPassAttachmentBeginInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderPassAttachmentBeginInfo {
+    pub fn build_dangling(self) -> RenderPassAttachmentBeginInfo {
         self.0
     }
 }
@@ -4186,7 +4186,7 @@ impl<'a> PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
+    pub fn build_dangling(self) -> PhysicalDeviceSeparateDepthStencilLayoutsFeatures {
         self.0
     }
 }
@@ -4256,7 +4256,7 @@ impl<'a> AttachmentReferenceStencilLayoutBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AttachmentReferenceStencilLayout {
+    pub fn build_dangling(self) -> AttachmentReferenceStencilLayout {
         self.0
     }
 }
@@ -4332,7 +4332,7 @@ impl<'a> AttachmentDescriptionStencilLayoutBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> AttachmentDescriptionStencilLayout {
+    pub fn build_dangling(self) -> AttachmentDescriptionStencilLayout {
         self.0
     }
 }
@@ -4402,7 +4402,7 @@ impl<'a> MemoryOpaqueCaptureAddressAllocateInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> MemoryOpaqueCaptureAddressAllocateInfo {
+    pub fn build_dangling(self) -> MemoryOpaqueCaptureAddressAllocateInfo {
         self.0
     }
 }
@@ -4472,7 +4472,7 @@ impl<'a> DeviceMemoryOpaqueCaptureAddressInfoBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DeviceMemoryOpaqueCaptureAddressInfo {
+    pub fn build_dangling(self) -> DeviceMemoryOpaqueCaptureAddressInfo {
         self.0
     }
 }
@@ -4608,7 +4608,7 @@ impl<'a> PhysicalDeviceVulkan11FeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVulkan11Features {
+    pub fn build_dangling(self) -> PhysicalDeviceVulkan11Features {
         self.0
     }
 }
@@ -4762,7 +4762,7 @@ impl<'a> PhysicalDeviceVulkan11PropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVulkan11Properties {
+    pub fn build_dangling(self) -> PhysicalDeviceVulkan11Properties {
         self.0
     }
 }
@@ -5158,7 +5158,7 @@ impl<'a> PhysicalDeviceVulkan12FeaturesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVulkan12Features {
+    pub fn build_dangling(self) -> PhysicalDeviceVulkan12Features {
         self.0
     }
 }
@@ -5589,7 +5589,7 @@ impl<'a> PhysicalDeviceVulkan12PropertiesBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVulkan12Properties {
+    pub fn build_dangling(self) -> PhysicalDeviceVulkan12Properties {
         self.0
     }
 }

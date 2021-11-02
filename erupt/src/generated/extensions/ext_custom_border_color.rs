@@ -74,7 +74,7 @@ impl<'a> SamplerCustomBorderColorCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SamplerCustomBorderColorCreateInfoEXT {
+    pub fn build_dangling(self) -> SamplerCustomBorderColorCreateInfoEXT {
         self.0
     }
 }
@@ -144,7 +144,7 @@ impl<'a> PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceCustomBorderColorPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceCustomBorderColorPropertiesEXT {
         self.0
     }
 }
@@ -220,7 +220,7 @@ impl<'a> PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceCustomBorderColorFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceCustomBorderColorFeaturesEXT {
         self.0
     }
 }

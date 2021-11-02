@@ -69,7 +69,7 @@ impl<'a> PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceExclusiveScissorFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceExclusiveScissorFeaturesNV {
         self.0
     }
 }
@@ -141,7 +141,7 @@ impl<'a> PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineViewportExclusiveScissorStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineViewportExclusiveScissorStateCreateInfoNV {
         self.0
     }
 }

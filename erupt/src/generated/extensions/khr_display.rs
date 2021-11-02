@@ -198,7 +198,7 @@ impl<'a> DisplayPropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayPropertiesKHR {
+    pub fn build_dangling(self) -> DisplayPropertiesKHR {
         self.0
     }
 }
@@ -269,7 +269,7 @@ impl<'a> DisplayPlanePropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayPlanePropertiesKHR {
+    pub fn build_dangling(self) -> DisplayPlanePropertiesKHR {
         self.0
     }
 }
@@ -340,7 +340,7 @@ impl<'a> DisplayModeParametersKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayModeParametersKHR {
+    pub fn build_dangling(self) -> DisplayModeParametersKHR {
         self.0
     }
 }
@@ -411,7 +411,7 @@ impl<'a> DisplayModePropertiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayModePropertiesKHR {
+    pub fn build_dangling(self) -> DisplayModePropertiesKHR {
         self.0
     }
 }
@@ -487,7 +487,7 @@ impl<'a> DisplayModeCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayModeCreateInfoKHR {
+    pub fn build_dangling(self) -> DisplayModeCreateInfoKHR {
         self.0
     }
 }
@@ -600,7 +600,7 @@ impl<'a> DisplayPlaneCapabilitiesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayPlaneCapabilitiesKHR {
+    pub fn build_dangling(self) -> DisplayPlaneCapabilitiesKHR {
         self.0
     }
 }
@@ -712,7 +712,7 @@ impl<'a> DisplaySurfaceCreateInfoKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplaySurfaceCreateInfoKHR {
+    pub fn build_dangling(self) -> DisplaySurfaceCreateInfoKHR {
         self.0
     }
 }

@@ -64,7 +64,7 @@ impl<'a> PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
         self.0
     }
 }

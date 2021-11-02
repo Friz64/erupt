@@ -138,7 +138,7 @@ impl<'a> PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceTransformFeedbackFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceTransformFeedbackFeaturesEXT {
         self.0
     }
 }
@@ -262,7 +262,7 @@ impl<'a> PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceTransformFeedbackPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceTransformFeedbackPropertiesEXT {
         self.0
     }
 }
@@ -338,7 +338,7 @@ impl<'a> PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineRasterizationStateStreamCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineRasterizationStateStreamCreateInfoEXT {
         self.0
     }
 }

@@ -65,7 +65,7 @@ impl<'a> DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DisplayNativeHdrSurfaceCapabilitiesAMD {
+    pub fn build_dangling(self) -> DisplayNativeHdrSurfaceCapabilitiesAMD {
         self.0
     }
 }
@@ -135,7 +135,7 @@ impl<'a> SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SwapchainDisplayNativeHdrCreateInfoAMD {
+    pub fn build_dangling(self) -> SwapchainDisplayNativeHdrCreateInfoAMD {
         self.0
     }
 }

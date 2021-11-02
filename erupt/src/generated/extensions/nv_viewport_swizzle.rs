@@ -119,7 +119,7 @@ impl<'a> ViewportSwizzleNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ViewportSwizzleNV {
+    pub fn build_dangling(self) -> ViewportSwizzleNV {
         self.0
     }
 }
@@ -197,7 +197,7 @@ impl<'a> PipelineViewportSwizzleStateCreateInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineViewportSwizzleStateCreateInfoNV {
+    pub fn build_dangling(self) -> PipelineViewportSwizzleStateCreateInfoNV {
         self.0
     }
 }

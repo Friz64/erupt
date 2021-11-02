@@ -65,7 +65,7 @@ impl<'a> PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceSurfaceInfo2KHR {
+    pub fn build_dangling(self) -> PhysicalDeviceSurfaceInfo2KHR {
         self.0
     }
 }
@@ -135,7 +135,7 @@ impl<'a> SurfaceCapabilities2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SurfaceCapabilities2KHR {
+    pub fn build_dangling(self) -> SurfaceCapabilities2KHR {
         self.0
     }
 }
@@ -205,7 +205,7 @@ impl<'a> SurfaceFormat2KHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> SurfaceFormat2KHR {
+    pub fn build_dangling(self) -> SurfaceFormat2KHR {
         self.0
     }
 }

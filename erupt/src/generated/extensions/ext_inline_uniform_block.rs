@@ -76,7 +76,7 @@ impl<'a> PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceInlineUniformBlockFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceInlineUniformBlockFeaturesEXT {
         self.0
     }
 }
@@ -170,7 +170,7 @@ impl<'a> PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceInlineUniformBlockPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceInlineUniformBlockPropertiesEXT {
         self.0
     }
 }
@@ -246,7 +246,7 @@ impl<'a> WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> WriteDescriptorSetInlineUniformBlockEXT {
+    pub fn build_dangling(self) -> WriteDescriptorSetInlineUniformBlockEXT {
         self.0
     }
 }
@@ -316,7 +316,7 @@ impl<'a> DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DescriptorPoolInlineUniformBlockCreateInfoEXT {
+    pub fn build_dangling(self) -> DescriptorPoolInlineUniformBlockCreateInfoEXT {
         self.0
     }
 }

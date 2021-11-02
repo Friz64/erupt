@@ -68,7 +68,7 @@ impl<'a> PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
         self.0
     }
 }
@@ -156,7 +156,7 @@ impl<'a> VertexInputBindingDescription2EXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VertexInputBindingDescription2EXT {
+    pub fn build_dangling(self) -> VertexInputBindingDescription2EXT {
         self.0
     }
 }
@@ -244,7 +244,7 @@ impl<'a> VertexInputAttributeDescription2EXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> VertexInputAttributeDescription2EXT {
+    pub fn build_dangling(self) -> VertexInputAttributeDescription2EXT {
         self.0
     }
 }

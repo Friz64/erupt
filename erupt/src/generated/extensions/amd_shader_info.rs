@@ -94,7 +94,7 @@ impl<'a> ShaderResourceUsageAMDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ShaderResourceUsageAMD {
+    pub fn build_dangling(self) -> ShaderResourceUsageAMD {
         self.0
     }
 }
@@ -195,7 +195,7 @@ impl<'a> ShaderStatisticsInfoAMDBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ShaderStatisticsInfoAMD {
+    pub fn build_dangling(self) -> ShaderStatisticsInfoAMD {
         self.0
     }
 }

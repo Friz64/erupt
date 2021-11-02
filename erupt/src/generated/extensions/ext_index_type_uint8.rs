@@ -61,7 +61,7 @@ impl<'a> PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceIndexTypeUint8FeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceIndexTypeUint8FeaturesEXT {
         self.0
     }
 }

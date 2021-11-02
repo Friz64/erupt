@@ -41,7 +41,7 @@ fn main() {
             let device_features2 = unsafe {
                 instance.get_physical_device_features2(
                     physical_device,
-                    Some(device_features2_builder.build()),
+                    Some(device_features2_builder.build_dangling()),
                 )
             };
 

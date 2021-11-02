@@ -147,7 +147,7 @@ impl<'a> PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceConservativeRasterizationPropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceConservativeRasterizationPropertiesEXT {
         self.0
     }
 }
@@ -229,7 +229,7 @@ impl<'a> PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineRasterizationConservativeStateCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineRasterizationConservativeStateCreateInfoEXT {
         self.0
     }
 }

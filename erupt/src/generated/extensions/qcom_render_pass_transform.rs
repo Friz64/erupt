@@ -62,7 +62,7 @@ impl<'a> RenderPassTransformBeginInfoQCOMBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> RenderPassTransformBeginInfoQCOM {
+    pub fn build_dangling(self) -> RenderPassTransformBeginInfoQCOM {
         self.0
     }
 }
@@ -138,7 +138,7 @@ impl<'a> CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CommandBufferInheritanceRenderPassTransformInfoQCOM {
+    pub fn build_dangling(self) -> CommandBufferInheritanceRenderPassTransformInfoQCOM {
         self.0
     }
 }

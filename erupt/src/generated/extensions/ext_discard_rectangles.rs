@@ -106,7 +106,7 @@ impl<'a> PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceDiscardRectanglePropertiesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceDiscardRectanglePropertiesEXT {
         self.0
     }
 }
@@ -190,7 +190,7 @@ impl<'a> PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PipelineDiscardRectangleStateCreateInfoEXT {
+    pub fn build_dangling(self) -> PipelineDiscardRectangleStateCreateInfoEXT {
         self.0
     }
 }

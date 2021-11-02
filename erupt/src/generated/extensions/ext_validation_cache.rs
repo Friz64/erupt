@@ -130,7 +130,7 @@ impl<'a> ValidationCacheCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ValidationCacheCreateInfoEXT {
+    pub fn build_dangling(self) -> ValidationCacheCreateInfoEXT {
         self.0
     }
 }
@@ -200,7 +200,7 @@ impl<'a> ShaderModuleValidationCacheCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ShaderModuleValidationCacheCreateInfoEXT {
+    pub fn build_dangling(self) -> ShaderModuleValidationCacheCreateInfoEXT {
         self.0
     }
 }

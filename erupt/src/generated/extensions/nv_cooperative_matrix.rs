@@ -132,7 +132,7 @@ impl<'a> PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceCooperativeMatrixFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceCooperativeMatrixFeaturesNV {
         self.0
     }
 }
@@ -202,7 +202,7 @@ impl<'a> PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceCooperativeMatrixPropertiesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceCooperativeMatrixPropertiesNV {
         self.0
     }
 }
@@ -314,7 +314,7 @@ impl<'a> CooperativeMatrixPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CooperativeMatrixPropertiesNV {
+    pub fn build_dangling(self) -> CooperativeMatrixPropertiesNV {
         self.0
     }
 }

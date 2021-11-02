@@ -91,7 +91,7 @@ impl<'a> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMeshShaderFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceMeshShaderFeaturesNV {
         self.0
     }
 }
@@ -233,7 +233,7 @@ impl<'a> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceMeshShaderPropertiesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceMeshShaderPropertiesNV {
         self.0
     }
 }
@@ -304,7 +304,7 @@ impl<'a> DrawMeshTasksIndirectCommandNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DrawMeshTasksIndirectCommandNV {
+    pub fn build_dangling(self) -> DrawMeshTasksIndirectCommandNV {
         self.0
     }
 }

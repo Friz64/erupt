@@ -60,7 +60,7 @@ impl<'a> PhysicalDevicePresentIdFeaturesKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDevicePresentIdFeaturesKHR {
+    pub fn build_dangling(self) -> PhysicalDevicePresentIdFeaturesKHR {
         self.0
     }
 }
@@ -132,7 +132,7 @@ impl<'a> PresentIdKHRBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PresentIdKHR {
+    pub fn build_dangling(self) -> PresentIdKHR {
         self.0
     }
 }

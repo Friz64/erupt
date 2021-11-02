@@ -60,7 +60,7 @@ impl<'a> PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceInheritedViewportScissorFeaturesNV {
+    pub fn build_dangling(self) -> PhysicalDeviceInheritedViewportScissorFeaturesNV {
         self.0
     }
 }
@@ -142,7 +142,7 @@ impl<'a> CommandBufferInheritanceViewportScissorInfoNVBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CommandBufferInheritanceViewportScissorInfoNV {
+    pub fn build_dangling(self) -> CommandBufferInheritanceViewportScissorInfoNV {
         self.0
     }
 }

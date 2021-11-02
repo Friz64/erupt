@@ -120,7 +120,7 @@ impl<'a> ConditionalRenderingBeginInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> ConditionalRenderingBeginInfoEXT {
+    pub fn build_dangling(self) -> ConditionalRenderingBeginInfoEXT {
         self.0
     }
 }
@@ -190,7 +190,7 @@ impl<'a> CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> CommandBufferInheritanceConditionalRenderingInfoEXT {
+    pub fn build_dangling(self) -> CommandBufferInheritanceConditionalRenderingInfoEXT {
         self.0
     }
 }
@@ -266,7 +266,7 @@ impl<'a> PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> PhysicalDeviceConditionalRenderingFeaturesEXT {
+    pub fn build_dangling(self) -> PhysicalDeviceConditionalRenderingFeaturesEXT {
         self.0
     }
 }

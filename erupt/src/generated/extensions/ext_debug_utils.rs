@@ -234,7 +234,7 @@ impl<'a> DebugUtilsObjectNameInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugUtilsObjectNameInfoEXT {
+    pub fn build_dangling(self) -> DebugUtilsObjectNameInfoEXT {
         self.0
     }
 }
@@ -328,7 +328,7 @@ impl<'a> DebugUtilsObjectTagInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugUtilsObjectTagInfoEXT {
+    pub fn build_dangling(self) -> DebugUtilsObjectTagInfoEXT {
         self.0
     }
 }
@@ -404,7 +404,7 @@ impl<'a> DebugUtilsLabelEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugUtilsLabelEXT {
+    pub fn build_dangling(self) -> DebugUtilsLabelEXT {
         self.0
     }
 }
@@ -498,7 +498,7 @@ impl<'a> DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugUtilsMessengerCreateInfoEXT {
+    pub fn build_dangling(self) -> DebugUtilsMessengerCreateInfoEXT {
         self.0
     }
 }
@@ -610,7 +610,7 @@ impl<'a> DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
     #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build(self) -> DebugUtilsMessengerCallbackDataEXT {
+    pub fn build_dangling(self) -> DebugUtilsMessengerCallbackDataEXT {
         self.0
     }
 }

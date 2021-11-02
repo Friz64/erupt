@@ -289,6 +289,8 @@ pub use crate::extensions::khr_draw_indirect_count::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_driver_properties::*;
 #[doc(no_inline)]
+pub use crate::extensions::khr_dynamic_rendering::*;
+#[doc(no_inline)]
 pub use crate::extensions::khr_external_fence::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_external_fence_capabilities::*;

@@ -749,7 +749,7 @@ impl std::fmt::Debug for AttachmentStoreOp {
         f.write_str(match self {
             &Self::STORE => "STORE",
             &Self::DONT_CARE => "DONT_CARE",
-            &Self::NONE_EXT => "NONE_EXT",
+            &Self::NONE_KHR => "NONE_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -2630,7 +2630,7 @@ impl crate::vk1_0::PipelineBindPoint {
     pub const GRAPHICS: Self = Self(0);
     pub const COMPUTE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const RAY_TRACING_ALLOW_MOTION_NV = PipelineCreateFlagBits :: RAY_TRACING_ALLOW_MOTION_NV . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineCreateFlagBits :: PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT = PipelineCreateFlagBits :: PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const RAY_TRACING_ALLOW_MOTION_NV = PipelineCreateFlagBits :: RAY_TRACING_ALLOW_MOTION_NV . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlagBits.html) · Bits enum of [`PipelineCreateFlags`]"]
 #[doc(alias = "VkPipelineCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2651,6 +2651,8 @@ impl std::fmt::Debug for PipelineCreateFlagBits {
             &Self::DERIVATIVE => "DERIVATIVE",
             &Self::VIEW_INDEX_FROM_DEVICE_INDEX => "VIEW_INDEX_FROM_DEVICE_INDEX",
             &Self::DISPATCH_BASE => "DISPATCH_BASE",
+            &Self::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
+            &Self::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT => "PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT",
             &Self::RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR => "RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR",
             &Self::RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR => "RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR",
             &Self::RAY_TRACING_NO_NULL_MISS_SHADERS_KHR => "RAY_TRACING_NO_NULL_MISS_SHADERS_KHR",
@@ -3352,6 +3354,15 @@ impl std::fmt::Debug for StructureType {
             &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => "VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT",
             &Self::VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT => "VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT",
             &Self::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD => "TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD",
+            &Self::RENDERING_INFO_KHR => "RENDERING_INFO_KHR",
+            &Self::RENDERING_ATTACHMENT_INFO_KHR => "RENDERING_ATTACHMENT_INFO_KHR",
+            &Self::PIPELINE_RENDERING_CREATE_INFO_KHR => "PIPELINE_RENDERING_CREATE_INFO_KHR",
+            &Self::PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES_KHR => "PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES_KHR",
+            &Self::COMMAND_BUFFER_INHERITANCE_RENDERING_INFO_KHR => "COMMAND_BUFFER_INHERITANCE_RENDERING_INFO_KHR",
+            &Self::RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => "RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR",
+            &Self::RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_INFO_EXT => "RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_INFO_EXT",
+            &Self::ATTACHMENT_SAMPLE_COUNT_INFO_AMD => "ATTACHMENT_SAMPLE_COUNT_INFO_AMD",
+            &Self::MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX => "MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX",
             &Self::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP => "STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP",
             &Self::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV => "PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV",
             &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV => "EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV",
@@ -15493,10 +15504,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 196u32;
+pub const HEADER_VERSION: u32 = 197u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 196u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 197u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

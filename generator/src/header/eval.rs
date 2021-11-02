@@ -2,6 +2,7 @@ use lang_c::ast::{
     BinaryOperator, Constant, Expression as CExpression, FloatFormat, IntegerBase, IntegerSize,
     UnaryOperator,
 };
+use log::warn;
 use proc_macro2::{Ident, Literal as RustLiteral};
 use quote::format_ident;
 use std::{
@@ -218,6 +219,17 @@ impl From<&CExpression> for Expression {
                 lhs: Box::new(Expression::from(&binary.node.lhs.node)),
                 rhs: Box::new(Expression::from(&binary.node.rhs.node)),
             },
+            CExpression::Identifier(ident) => {
+                let manual_val = match ident.node.name.as_str() {
+                    "STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_LIST_SIZE" => {
+                        Expression::Literal(Literal::UnsignedInt64(2))
+                    }
+                    other => unimplemented!("Manual val: {:?}", other),
+                };
+
+                warn!("Using manually defined variable until properly fixed. https://gitlab.com/Friz64/erupt/-/issues/33");
+                manual_val
+            }
             unsupported => panic!("Unsupported expression: {:?}", unsupported),
         }
     }

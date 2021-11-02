@@ -10,6 +10,26 @@ pub const EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H265_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_video_encode_h265");
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH265CapabilityFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH265CapabilityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH265CapabilityFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
+#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`VideoEncodeH265CapabilityFlagsEXT`]"]
+#[doc(alias = "VkVideoEncodeH265CapabilityFlagBitsEXT")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct VideoEncodeH265CapabilityFlagBitsEXT(pub u32);
+impl VideoEncodeH265CapabilityFlagBitsEXT {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> VideoEncodeH265CapabilityFlagsEXT {
+        VideoEncodeH265CapabilityFlagsEXT::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for VideoEncodeH265CapabilityFlagBitsEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            _ => "(unknown variant)",
+        })
+    }
+}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CreateFlagsEXT.html) · Bitmask of [`VideoEncodeH265CreateFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH265CreateFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH265CreateFlagsEXT : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`VideoEncodeH265CreateFlagsEXT`]"]
 #[doc(alias = "VkVideoEncodeH265CreateFlagBitsEXT")]
@@ -46,47 +66,6 @@ impl crate::vk1_0::StructureType {
 #[doc = "Provided by [`crate::extensions::ext_video_encode_h265`]"]
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
     pub const ENCODE_H265_EXT: Self = Self(131072);
-}
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH265CapabilityFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH265CapabilityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH265CapabilityFlagsEXT : u32 { const WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; const TRANSFORM_8X8_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: TRANSFORM_8X8_EXT . 0 ; const CHROMA_QP_OFFSET_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: CHROMA_QP_OFFSET_EXT . 0 ; const SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: SECOND_CHROMA_QP_OFFSET_EXT . 0 ; const DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_DISABLED_EXT . 0 ; const DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_ENABLED_EXT . 0 ; const DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; const MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH265CapabilityFlagBitsEXT :: EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; } }
-#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CapabilityFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265CapabilityFlagsEXT`]"]
-#[doc(alias = "VkVideoEncodeH265CapabilityFlagBitsEXT")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct VideoEncodeH265CapabilityFlagBitsEXT(pub u32);
-impl VideoEncodeH265CapabilityFlagBitsEXT {
-    #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> VideoEncodeH265CapabilityFlagsEXT {
-        VideoEncodeH265CapabilityFlagsEXT::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for VideoEncodeH265CapabilityFlagBitsEXT {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(match self {
-            &Self::WEIGHTED_BI_PRED_IMPLICIT_EXT => "WEIGHTED_BI_PRED_IMPLICIT_EXT",
-            &Self::TRANSFORM_8X8_EXT => "TRANSFORM_8X8_EXT",
-            &Self::CHROMA_QP_OFFSET_EXT => "CHROMA_QP_OFFSET_EXT",
-            &Self::SECOND_CHROMA_QP_OFFSET_EXT => "SECOND_CHROMA_QP_OFFSET_EXT",
-            &Self::DEBLOCKING_FILTER_DISABLED_EXT => "DEBLOCKING_FILTER_DISABLED_EXT",
-            &Self::DEBLOCKING_FILTER_ENABLED_EXT => "DEBLOCKING_FILTER_ENABLED_EXT",
-            &Self::DEBLOCKING_FILTER_PARTIAL_EXT => "DEBLOCKING_FILTER_PARTIAL_EXT",
-            &Self::MULTIPLE_SLICE_PER_FRAME_EXT => "MULTIPLE_SLICE_PER_FRAME_EXT",
-            &Self::EVENLY_DISTRIBUTED_SLICE_SIZE_EXT => "EVENLY_DISTRIBUTED_SLICE_SIZE_EXT",
-            _ => "(unknown variant)",
-        })
-    }
-}
-#[doc = "Provided by [`crate::extensions::ext_video_encode_h265`]"]
-impl crate::extensions::ext_video_encode_h265::VideoEncodeH265CapabilityFlagBitsEXT {
-    pub const WEIGHTED_BI_PRED_IMPLICIT_EXT: Self = Self(1);
-    pub const TRANSFORM_8X8_EXT: Self = Self(2);
-    pub const CHROMA_QP_OFFSET_EXT: Self = Self(4);
-    pub const SECOND_CHROMA_QP_OFFSET_EXT: Self = Self(8);
-    pub const DEBLOCKING_FILTER_DISABLED_EXT: Self = Self(16);
-    pub const DEBLOCKING_FILTER_ENABLED_EXT: Self = Self(32);
-    pub const DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(64);
-    pub const MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(128);
-    pub const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT: Self = Self(256);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265InputModeFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH265InputModeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH265InputModeFlagsEXT : u32 { const FRAME_EXT = VideoEncodeH265InputModeFlagBitsEXT :: FRAME_EXT . 0 ; const SLICE_EXT = VideoEncodeH265InputModeFlagBitsEXT :: SLICE_EXT . 0 ; const NON_VCL_EXT = VideoEncodeH265InputModeFlagBitsEXT :: NON_VCL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265InputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265InputModeFlagsEXT`]"]
@@ -177,6 +156,16 @@ impl crate::extensions::ext_video_encode_h265::VideoEncodeH265CtbSizeFlagBitsEXT
     pub const _32_EXT: Self = Self(4);
     pub const _64_EXT: Self = Self(8);
 }
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}

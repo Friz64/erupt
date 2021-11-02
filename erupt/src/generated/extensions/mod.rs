@@ -288,6 +288,8 @@ pub mod khr_display_swapchain;
 pub mod khr_draw_indirect_count;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_driver_properties.html) · Vulkan extension"]
 pub mod khr_driver_properties;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_dynamic_rendering.html) · Vulkan extension"]
+pub mod khr_dynamic_rendering;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_external_fence.html) · Vulkan extension"]
 pub mod khr_external_fence;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_KHR_external_fence_capabilities.html) · Vulkan extension"]

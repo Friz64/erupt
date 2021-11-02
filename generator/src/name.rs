@@ -3,6 +3,7 @@ use crate::{
     source::{NotApplicable, Source},
 };
 use heck::{ShoutySnakeCase, SnakeCase};
+use log::warn;
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
 use std::{
@@ -264,6 +265,11 @@ impl EnumVariantName {
         }
 
         let prefix_compliant = trimmed.starts_with(&enum_type_prefix);
+
+        let prefix_compliance_warning_exempt = [TypeName::result()];
+        if !prefix_compliant && !prefix_compliance_warning_exempt.contains(enum_type) {
+            warn!("{:?} (from {:?}) is not prefix compliant", src, enum_type);
+        }
 
         let mut variant = trimmed
             .trim_start_matches(&enum_type_prefix)

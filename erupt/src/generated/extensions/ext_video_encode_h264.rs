@@ -156,6 +156,16 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CreateFlagBitsEXT 
     pub const DEFAULT_EXT: Self = Self(0);
     pub const RESERVED_0_EXT: Self = Self(1);
 }
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::vk1_0::ImageViewCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::vk1_1::FormatProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264CapabilitiesEXT> for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}

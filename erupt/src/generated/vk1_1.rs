@@ -6125,6 +6125,8 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderDrawParametersFeaturesBuilde
         &mut self.0
     }
 }
+impl<'a> crate::ExtendableFrom<'a, DeviceGroupRenderPassBeginInfo> for crate::extensions::khr_dynamic_rendering::RenderingInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DeviceGroupRenderPassBeginInfoBuilder<'_>> for crate::extensions::khr_dynamic_rendering::RenderingInfoKHRBuilder<'a> {}
 #[doc = "Provided by [`crate::vk1_1`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

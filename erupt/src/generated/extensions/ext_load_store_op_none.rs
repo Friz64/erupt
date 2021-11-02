@@ -10,5 +10,5 @@ impl crate::vk1_0::AttachmentLoadOp {
 }
 #[doc = "Provided by [`crate::extensions::ext_load_store_op_none`]"]
 impl crate::vk1_0::AttachmentStoreOp {
-    pub const NONE_EXT: Self = Self(1000301000);
+    pub const NONE_EXT: Self = Self::NONE_KHR;
 }

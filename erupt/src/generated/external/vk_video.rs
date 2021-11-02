@@ -87,6 +87,7 @@ impl std::fmt::Debug for StdVideoH264ChromaFormatIdc {
             &Self::_420 => "_420",
             &Self::_422 => "_422",
             &Self::_444 => "_444",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
@@ -97,6 +98,7 @@ impl crate::external::vk_video::StdVideoH264ChromaFormatIdc {
     pub const _420: Self = Self(1);
     pub const _422: Self = Self(2);
     pub const _444: Self = Self(3);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -175,24 +177,24 @@ impl crate::external::vk_video::StdVideoH264AspectRatioIdc {
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
-pub struct StdVideoH264WeightedBiPredIdc(pub i32);
-impl std::fmt::Debug for StdVideoH264WeightedBiPredIdc {
+pub struct StdVideoH264WeightedBipredIdc(pub i32);
+impl std::fmt::Debug for StdVideoH264WeightedBipredIdc {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::STD_VIDEO_H264_DEFAULT_WEIGHTED_B_SLICES_PREDICTION_IDC => "STD_VIDEO_H264_DEFAULT_WEIGHTED_B_SLICES_PREDICTION_IDC",
-            &Self::STD_VIDEO_H264_EXPLICIT_WEIGHTED_B_SLICES_PREDICTION_IDC => "STD_VIDEO_H264_EXPLICIT_WEIGHTED_B_SLICES_PREDICTION_IDC",
-            &Self::STD_VIDEO_H264_IMPLICIT_WEIGHTED_B_SLICES_PREDICTION_IDC => "STD_VIDEO_H264_IMPLICIT_WEIGHTED_B_SLICES_PREDICTION_IDC",
-            &Self::STD_VIDEO_H264_INVALID_WEIGHTED_B_SLICES_PREDICTION_IDC => "STD_VIDEO_H264_INVALID_WEIGHTED_B_SLICES_PREDICTION_IDC",
+            &Self::DEFAULT => "DEFAULT",
+            &Self::EXPLICIT => "EXPLICIT",
+            &Self::IMPLICIT => "IMPLICIT",
+            &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
-impl crate::external::vk_video::StdVideoH264WeightedBiPredIdc {
-    pub const STD_VIDEO_H264_DEFAULT_WEIGHTED_B_SLICES_PREDICTION_IDC: Self = Self(0);
-    pub const STD_VIDEO_H264_EXPLICIT_WEIGHTED_B_SLICES_PREDICTION_IDC: Self = Self(1);
-    pub const STD_VIDEO_H264_IMPLICIT_WEIGHTED_B_SLICES_PREDICTION_IDC: Self = Self(2);
-    pub const STD_VIDEO_H264_INVALID_WEIGHTED_B_SLICES_PREDICTION_IDC: Self = Self(2147483647);
+impl crate::external::vk_video::StdVideoH264WeightedBipredIdc {
+    pub const DEFAULT: Self = Self(0);
+    pub const EXPLICIT: Self = Self(1);
+    pub const IMPLICIT: Self = Self(2);
+    pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -201,9 +203,9 @@ pub struct StdVideoH264SliceType(pub i32);
 impl std::fmt::Debug for StdVideoH264SliceType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::I => "I",
             &Self::P => "P",
             &Self::B => "B",
+            &Self::I => "I",
             &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
@@ -211,9 +213,9 @@ impl std::fmt::Debug for StdVideoH264SliceType {
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl crate::external::vk_video::StdVideoH264SliceType {
-    pub const I: Self = Self(0);
-    pub const P: Self = Self(1);
-    pub const B: Self = Self(2);
+    pub const P: Self = Self(0);
+    pub const B: Self = Self(1);
+    pub const I: Self = Self(2);
     pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
@@ -267,9 +269,10 @@ pub struct StdVideoH264PictureType(pub i32);
 impl std::fmt::Debug for StdVideoH264PictureType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::I => "I",
             &Self::P => "P",
             &Self::B => "B",
+            &Self::I => "I",
+            &Self::IDR => "IDR",
             &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
         })
@@ -277,9 +280,10 @@ impl std::fmt::Debug for StdVideoH264PictureType {
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl crate::external::vk_video::StdVideoH264PictureType {
-    pub const I: Self = Self(0);
-    pub const P: Self = Self(1);
-    pub const B: Self = Self(2);
+    pub const P: Self = Self(0);
+    pub const B: Self = Self(1);
+    pub const I: Self = Self(2);
+    pub const IDR: Self = Self(5);
     pub const INVALID: Self = Self(2147483647);
 }
 #[doc = "<s>Vulkan Manual Page</s> · Enum"]
@@ -433,9 +437,9 @@ pub struct StdVideoH265PictureType(pub i32);
 impl std::fmt::Debug for StdVideoH265PictureType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::I => "I",
             &Self::P => "P",
             &Self::B => "B",
+            &Self::I => "I",
             &Self::IDR => "IDR",
             &Self::INVALID => "INVALID",
             _ => "(unknown variant)",
@@ -444,9 +448,9 @@ impl std::fmt::Debug for StdVideoH265PictureType {
 }
 #[doc = "Provided by [`crate::external::vk_video`]"]
 impl crate::external::vk_video::StdVideoH265PictureType {
-    pub const I: Self = Self(0);
-    pub const P: Self = Self(1);
-    pub const B: Self = Self(2);
+    pub const P: Self = Self(0);
+    pub const B: Self = Self(1);
+    pub const I: Self = Self(2);
     pub const IDR: Self = Self(3);
     pub const INVALID: Self = Self(2147483647);
 }
@@ -543,8 +547,8 @@ impl<'a> StdVideoH264SpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    pub fn residual_colour_transform_flag(mut self, residual_colour_transform_flag: u32) -> Self {
-        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, residual_colour_transform_flag, 10usize, 10usize);
+    pub fn separate_colour_plane_flag(mut self, separate_colour_plane_flag: u32) -> Self {
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, separate_colour_plane_flag, 10usize, 10usize);
         self
     }
     #[inline]
@@ -553,28 +557,23 @@ impl<'a> StdVideoH264SpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    pub fn first_picture_after_seek_flag(mut self, first_picture_after_seek_flag: u32) -> Self {
-        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, first_picture_after_seek_flag, 12usize, 12usize);
-        self
-    }
-    #[inline]
     pub fn qpprime_y_zero_transform_bypass_flag(mut self, qpprime_y_zero_transform_bypass_flag: u32) -> Self {
-        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, qpprime_y_zero_transform_bypass_flag, 13usize, 13usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, qpprime_y_zero_transform_bypass_flag, 12usize, 12usize);
         self
     }
     #[inline]
     pub fn frame_cropping_flag(mut self, frame_cropping_flag: u32) -> Self {
-        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, frame_cropping_flag, 14usize, 14usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, frame_cropping_flag, 13usize, 13usize);
         self
     }
     #[inline]
-    pub fn scaling_matrix_present_flag(mut self, scaling_matrix_present_flag: u32) -> Self {
-        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, scaling_matrix_present_flag, 15usize, 15usize);
+    pub fn seq_scaling_matrix_present_flag(mut self, seq_scaling_matrix_present_flag: u32) -> Self {
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, seq_scaling_matrix_present_flag, 14usize, 14usize);
         self
     }
     #[inline]
     pub fn vui_parameters_present_flag(mut self, vui_parameters_present_flag: u32) -> Self {
-        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, vui_parameters_present_flag, 16usize, 16usize);
+        self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, vui_parameters_present_flag, 15usize, 15usize);
         self
     }
     #[inline]
@@ -688,7 +687,7 @@ impl<'a> std::ops::DerefMut for StdVideoH264ScalingListsBuilder<'a> {
     }
 }
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
-#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct StdVideoH264SequenceParameterSetVui {
     pub aspect_ratio_idc: crate::external::vk_video::StdVideoH264AspectRatioIdc,
@@ -700,19 +699,19 @@ pub struct StdVideoH264SequenceParameterSetVui {
     pub matrix_coefficients: u8,
     pub num_units_in_tick: u32,
     pub time_scale: u32,
-    pub hrd_parameters: crate::external::vk_video::StdVideoH264HrdParameters,
-    pub num_reorder_frames: u8,
+    pub p_hrd_parameters: *mut crate::external::vk_video::StdVideoH264HrdParameters,
+    pub max_num_reorder_frames: u8,
     pub max_dec_frame_buffering: u8,
     pub flags: crate::external::vk_video::StdVideoH264SpsVuiFlags,
 }
 impl Default for StdVideoH264SequenceParameterSetVui {
     fn default() -> Self {
-        Self { aspect_ratio_idc: Default::default(), sar_width: Default::default(), sar_height: Default::default(), video_format: Default::default(), color_primaries: Default::default(), transfer_characteristics: Default::default(), matrix_coefficients: Default::default(), num_units_in_tick: Default::default(), time_scale: Default::default(), hrd_parameters: Default::default(), num_reorder_frames: Default::default(), max_dec_frame_buffering: Default::default(), flags: Default::default() }
+        Self { aspect_ratio_idc: Default::default(), sar_width: Default::default(), sar_height: Default::default(), video_format: Default::default(), color_primaries: Default::default(), transfer_characteristics: Default::default(), matrix_coefficients: Default::default(), num_units_in_tick: Default::default(), time_scale: Default::default(), p_hrd_parameters: std::ptr::null_mut(), max_num_reorder_frames: Default::default(), max_dec_frame_buffering: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH264SequenceParameterSetVui {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH264SequenceParameterSetVui").field("aspect_ratio_idc", &self.aspect_ratio_idc).field("sar_width", &self.sar_width).field("sar_height", &self.sar_height).field("video_format", &self.video_format).field("color_primaries", &self.color_primaries).field("transfer_characteristics", &self.transfer_characteristics).field("matrix_coefficients", &self.matrix_coefficients).field("num_units_in_tick", &self.num_units_in_tick).field("time_scale", &self.time_scale).field("hrd_parameters", &self.hrd_parameters).field("num_reorder_frames", &self.num_reorder_frames).field("max_dec_frame_buffering", &self.max_dec_frame_buffering).field("flags", &self.flags).finish()
+        f.debug_struct("StdVideoH264SequenceParameterSetVui").field("aspect_ratio_idc", &self.aspect_ratio_idc).field("sar_width", &self.sar_width).field("sar_height", &self.sar_height).field("video_format", &self.video_format).field("color_primaries", &self.color_primaries).field("transfer_characteristics", &self.transfer_characteristics).field("matrix_coefficients", &self.matrix_coefficients).field("num_units_in_tick", &self.num_units_in_tick).field("time_scale", &self.time_scale).field("p_hrd_parameters", &self.p_hrd_parameters).field("max_num_reorder_frames", &self.max_num_reorder_frames).field("max_dec_frame_buffering", &self.max_dec_frame_buffering).field("flags", &self.flags).finish()
     }
 }
 impl StdVideoH264SequenceParameterSetVui {
@@ -776,13 +775,13 @@ impl<'a> StdVideoH264SequenceParameterSetVuiBuilder<'a> {
         self
     }
     #[inline]
-    pub fn hrd_parameters(mut self, hrd_parameters: crate::external::vk_video::StdVideoH264HrdParameters) -> Self {
-        self.0.hrd_parameters = hrd_parameters as _;
+    pub fn hrd_parameters(mut self, hrd_parameters: &'a mut crate::external::vk_video::StdVideoH264HrdParameters) -> Self {
+        self.0.p_hrd_parameters = hrd_parameters as _;
         self
     }
     #[inline]
-    pub fn num_reorder_frames(mut self, num_reorder_frames: u8) -> Self {
-        self.0.num_reorder_frames = num_reorder_frames as _;
+    pub fn max_num_reorder_frames(mut self, max_num_reorder_frames: u8) -> Self {
+        self.0.max_num_reorder_frames = max_num_reorder_frames as _;
         self
     }
     #[inline]
@@ -1132,8 +1131,8 @@ impl<'a> StdVideoH264PpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    pub fn scaling_matrix_present_flag(mut self, scaling_matrix_present_flag: u32) -> Self {
-        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, scaling_matrix_present_flag, 8usize, 8usize);
+    pub fn pic_scaling_matrix_present_flag(mut self, pic_scaling_matrix_present_flag: u32) -> Self {
+        self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, pic_scaling_matrix_present_flag, 8usize, 8usize);
         self
     }
     #[inline]
@@ -1819,18 +1818,18 @@ pub struct StdVideoH264SequenceParameterSet {
     pub frame_crop_top_offset: u32,
     pub frame_crop_bottom_offset: u32,
     pub flags: crate::external::vk_video::StdVideoH264SpsFlags,
-    pub offset_for_ref_frame: [i32; 255],
+    pub p_offset_for_ref_frame: *mut i32,
     pub p_scaling_lists: *mut crate::external::vk_video::StdVideoH264ScalingLists,
     pub p_sequence_parameter_set_vui: *mut crate::external::vk_video::StdVideoH264SequenceParameterSetVui,
 }
 impl Default for StdVideoH264SequenceParameterSet {
     fn default() -> Self {
-        Self { profile_idc: Default::default(), level_idc: Default::default(), seq_parameter_set_id: Default::default(), chroma_format_idc: Default::default(), bit_depth_luma_minus8: Default::default(), bit_depth_chroma_minus8: Default::default(), log2_max_frame_num_minus4: Default::default(), pic_order_cnt_type: Default::default(), log2_max_pic_order_cnt_lsb_minus4: Default::default(), offset_for_non_ref_pic: Default::default(), offset_for_top_to_bottom_field: Default::default(), num_ref_frames_in_pic_order_cnt_cycle: Default::default(), max_num_ref_frames: Default::default(), pic_width_in_mbs_minus1: Default::default(), pic_height_in_map_units_minus1: Default::default(), frame_crop_left_offset: Default::default(), frame_crop_right_offset: Default::default(), frame_crop_top_offset: Default::default(), frame_crop_bottom_offset: Default::default(), flags: Default::default(), offset_for_ref_frame: unsafe { std::mem::zeroed() }, p_scaling_lists: std::ptr::null_mut(), p_sequence_parameter_set_vui: std::ptr::null_mut() }
+        Self { profile_idc: Default::default(), level_idc: Default::default(), seq_parameter_set_id: Default::default(), chroma_format_idc: Default::default(), bit_depth_luma_minus8: Default::default(), bit_depth_chroma_minus8: Default::default(), log2_max_frame_num_minus4: Default::default(), pic_order_cnt_type: Default::default(), log2_max_pic_order_cnt_lsb_minus4: Default::default(), offset_for_non_ref_pic: Default::default(), offset_for_top_to_bottom_field: Default::default(), num_ref_frames_in_pic_order_cnt_cycle: Default::default(), max_num_ref_frames: Default::default(), pic_width_in_mbs_minus1: Default::default(), pic_height_in_map_units_minus1: Default::default(), frame_crop_left_offset: Default::default(), frame_crop_right_offset: Default::default(), frame_crop_top_offset: Default::default(), frame_crop_bottom_offset: Default::default(), flags: Default::default(), p_offset_for_ref_frame: std::ptr::null_mut(), p_scaling_lists: std::ptr::null_mut(), p_sequence_parameter_set_vui: std::ptr::null_mut() }
     }
 }
 impl std::fmt::Debug for StdVideoH264SequenceParameterSet {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH264SequenceParameterSet").field("profile_idc", &self.profile_idc).field("level_idc", &self.level_idc).field("seq_parameter_set_id", &self.seq_parameter_set_id).field("chroma_format_idc", &self.chroma_format_idc).field("bit_depth_luma_minus8", &self.bit_depth_luma_minus8).field("bit_depth_chroma_minus8", &self.bit_depth_chroma_minus8).field("log2_max_frame_num_minus4", &self.log2_max_frame_num_minus4).field("pic_order_cnt_type", &self.pic_order_cnt_type).field("log2_max_pic_order_cnt_lsb_minus4", &self.log2_max_pic_order_cnt_lsb_minus4).field("offset_for_non_ref_pic", &self.offset_for_non_ref_pic).field("offset_for_top_to_bottom_field", &self.offset_for_top_to_bottom_field).field("num_ref_frames_in_pic_order_cnt_cycle", &self.num_ref_frames_in_pic_order_cnt_cycle).field("max_num_ref_frames", &self.max_num_ref_frames).field("pic_width_in_mbs_minus1", &self.pic_width_in_mbs_minus1).field("pic_height_in_map_units_minus1", &self.pic_height_in_map_units_minus1).field("frame_crop_left_offset", &self.frame_crop_left_offset).field("frame_crop_right_offset", &self.frame_crop_right_offset).field("frame_crop_top_offset", &self.frame_crop_top_offset).field("frame_crop_bottom_offset", &self.frame_crop_bottom_offset).field("flags", &self.flags).field("offset_for_ref_frame", &self.offset_for_ref_frame).field("p_scaling_lists", &self.p_scaling_lists).field("p_sequence_parameter_set_vui", &self.p_sequence_parameter_set_vui).finish()
+        f.debug_struct("StdVideoH264SequenceParameterSet").field("profile_idc", &self.profile_idc).field("level_idc", &self.level_idc).field("seq_parameter_set_id", &self.seq_parameter_set_id).field("chroma_format_idc", &self.chroma_format_idc).field("bit_depth_luma_minus8", &self.bit_depth_luma_minus8).field("bit_depth_chroma_minus8", &self.bit_depth_chroma_minus8).field("log2_max_frame_num_minus4", &self.log2_max_frame_num_minus4).field("pic_order_cnt_type", &self.pic_order_cnt_type).field("log2_max_pic_order_cnt_lsb_minus4", &self.log2_max_pic_order_cnt_lsb_minus4).field("offset_for_non_ref_pic", &self.offset_for_non_ref_pic).field("offset_for_top_to_bottom_field", &self.offset_for_top_to_bottom_field).field("num_ref_frames_in_pic_order_cnt_cycle", &self.num_ref_frames_in_pic_order_cnt_cycle).field("max_num_ref_frames", &self.max_num_ref_frames).field("pic_width_in_mbs_minus1", &self.pic_width_in_mbs_minus1).field("pic_height_in_map_units_minus1", &self.pic_height_in_map_units_minus1).field("frame_crop_left_offset", &self.frame_crop_left_offset).field("frame_crop_right_offset", &self.frame_crop_right_offset).field("frame_crop_top_offset", &self.frame_crop_top_offset).field("frame_crop_bottom_offset", &self.frame_crop_bottom_offset).field("flags", &self.flags).field("p_offset_for_ref_frame", &self.p_offset_for_ref_frame).field("p_scaling_lists", &self.p_scaling_lists).field("p_sequence_parameter_set_vui", &self.p_sequence_parameter_set_vui).finish()
     }
 }
 impl StdVideoH264SequenceParameterSet {
@@ -1949,8 +1948,9 @@ impl<'a> StdVideoH264SequenceParameterSetBuilder<'a> {
         self
     }
     #[inline]
-    pub fn offset_for_ref_frame(mut self, offset_for_ref_frame: [i32; 255]) -> Self {
-        self.0.offset_for_ref_frame = offset_for_ref_frame as _;
+    pub fn offset_for_ref_frame(mut self, offset_for_ref_frame: &'a mut [i32]) -> Self {
+        self.0.p_offset_for_ref_frame = offset_for_ref_frame.as_ptr() as _;
+        self.0.num_ref_frames_in_pic_order_cnt_cycle = offset_for_ref_frame.len() as _;
         self
     }
     #[inline]
@@ -1999,7 +1999,7 @@ pub struct StdVideoH264PictureParameterSet {
     pub pic_parameter_set_id: u8,
     pub num_ref_idx_l0_default_active_minus1: u8,
     pub num_ref_idx_l1_default_active_minus1: u8,
-    pub weighted_bipred_idc: crate::external::vk_video::StdVideoH264WeightedBiPredIdc,
+    pub weighted_bipred_idc: crate::external::vk_video::StdVideoH264WeightedBipredIdc,
     pub pic_init_qp_minus26: i8,
     pub pic_init_qs_minus26: i8,
     pub chroma_qp_index_offset: i8,
@@ -2053,7 +2053,7 @@ impl<'a> StdVideoH264PictureParameterSetBuilder<'a> {
         self
     }
     #[inline]
-    pub fn weighted_bipred_idc(mut self, weighted_bipred_idc: crate::external::vk_video::StdVideoH264WeightedBiPredIdc) -> Self {
+    pub fn weighted_bipred_idc(mut self, weighted_bipred_idc: crate::external::vk_video::StdVideoH264WeightedBipredIdc) -> Self {
         self.0.weighted_bipred_idc = weighted_bipred_idc as _;
         self
     }
@@ -2125,17 +2125,17 @@ pub struct StdVideoH265VideoParameterSet {
     pub vps_time_scale: u32,
     pub vps_num_ticks_poc_diff_one_minus1: u32,
     pub p_dec_pic_buf_mgr: *mut crate::external::vk_video::StdVideoH265DecPicBufMgr,
-    pub hrd_parameters: *mut crate::external::vk_video::StdVideoH265HrdParameters,
+    pub p_hrd_parameters: *mut crate::external::vk_video::StdVideoH265HrdParameters,
     pub flags: crate::external::vk_video::StdVideoH265VpsFlags,
 }
 impl Default for StdVideoH265VideoParameterSet {
     fn default() -> Self {
-        Self { vps_video_parameter_set_id: Default::default(), vps_max_sub_layers_minus1: Default::default(), vps_num_units_in_tick: Default::default(), vps_time_scale: Default::default(), vps_num_ticks_poc_diff_one_minus1: Default::default(), p_dec_pic_buf_mgr: std::ptr::null_mut(), hrd_parameters: std::ptr::null_mut(), flags: Default::default() }
+        Self { vps_video_parameter_set_id: Default::default(), vps_max_sub_layers_minus1: Default::default(), vps_num_units_in_tick: Default::default(), vps_time_scale: Default::default(), vps_num_ticks_poc_diff_one_minus1: Default::default(), p_dec_pic_buf_mgr: std::ptr::null_mut(), p_hrd_parameters: std::ptr::null_mut(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265VideoParameterSet {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265VideoParameterSet").field("vps_video_parameter_set_id", &self.vps_video_parameter_set_id).field("vps_max_sub_layers_minus1", &self.vps_max_sub_layers_minus1).field("vps_num_units_in_tick", &self.vps_num_units_in_tick).field("vps_time_scale", &self.vps_time_scale).field("vps_num_ticks_poc_diff_one_minus1", &self.vps_num_ticks_poc_diff_one_minus1).field("p_dec_pic_buf_mgr", &self.p_dec_pic_buf_mgr).field("hrd_parameters", &self.hrd_parameters).field("flags", &self.flags).finish()
+        f.debug_struct("StdVideoH265VideoParameterSet").field("vps_video_parameter_set_id", &self.vps_video_parameter_set_id).field("vps_max_sub_layers_minus1", &self.vps_max_sub_layers_minus1).field("vps_num_units_in_tick", &self.vps_num_units_in_tick).field("vps_time_scale", &self.vps_time_scale).field("vps_num_ticks_poc_diff_one_minus1", &self.vps_num_ticks_poc_diff_one_minus1).field("p_dec_pic_buf_mgr", &self.p_dec_pic_buf_mgr).field("p_hrd_parameters", &self.p_hrd_parameters).field("flags", &self.flags).finish()
     }
 }
 impl StdVideoH265VideoParameterSet {
@@ -2185,7 +2185,7 @@ impl<'a> StdVideoH265VideoParameterSetBuilder<'a> {
     }
     #[inline]
     pub fn hrd_parameters(mut self, hrd_parameters: &'a mut crate::external::vk_video::StdVideoH265HrdParameters) -> Self {
-        self.0.hrd_parameters = hrd_parameters as _;
+        self.0.p_hrd_parameters = hrd_parameters as _;
         self
     }
     #[inline]
@@ -2880,18 +2880,18 @@ pub struct StdVideoH265HrdParameters {
     pub dpb_output_delay_length_minus1: u8,
     pub cpb_cnt_minus1: [u8; 7],
     pub elemental_duration_in_tc_minus1: [u16; 7],
-    pub sub_layer_hrd_parameters_nal: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7],
-    pub sub_layer_hrd_parameters_vcl: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7],
+    pub p_sub_layer_hrd_parameters_nal: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7],
+    pub p_sub_layer_hrd_parameters_vcl: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7],
     pub flags: crate::external::vk_video::StdVideoH265HrdFlags,
 }
 impl Default for StdVideoH265HrdParameters {
     fn default() -> Self {
-        Self { tick_divisor_minus2: Default::default(), du_cpb_removal_delay_increment_length_minus1: Default::default(), dpb_output_delay_du_length_minus1: Default::default(), bit_rate_scale: Default::default(), cpb_size_scale: Default::default(), cpb_size_du_scale: Default::default(), initial_cpb_removal_delay_length_minus1: Default::default(), au_cpb_removal_delay_length_minus1: Default::default(), dpb_output_delay_length_minus1: Default::default(), cpb_cnt_minus1: unsafe { std::mem::zeroed() }, elemental_duration_in_tc_minus1: unsafe { std::mem::zeroed() }, sub_layer_hrd_parameters_nal: unsafe { std::mem::zeroed() }, sub_layer_hrd_parameters_vcl: unsafe { std::mem::zeroed() }, flags: Default::default() }
+        Self { tick_divisor_minus2: Default::default(), du_cpb_removal_delay_increment_length_minus1: Default::default(), dpb_output_delay_du_length_minus1: Default::default(), bit_rate_scale: Default::default(), cpb_size_scale: Default::default(), cpb_size_du_scale: Default::default(), initial_cpb_removal_delay_length_minus1: Default::default(), au_cpb_removal_delay_length_minus1: Default::default(), dpb_output_delay_length_minus1: Default::default(), cpb_cnt_minus1: unsafe { std::mem::zeroed() }, elemental_duration_in_tc_minus1: unsafe { std::mem::zeroed() }, p_sub_layer_hrd_parameters_nal: unsafe { std::mem::zeroed() }, p_sub_layer_hrd_parameters_vcl: unsafe { std::mem::zeroed() }, flags: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265HrdParameters {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265HrdParameters").field("tick_divisor_minus2", &self.tick_divisor_minus2).field("du_cpb_removal_delay_increment_length_minus1", &self.du_cpb_removal_delay_increment_length_minus1).field("dpb_output_delay_du_length_minus1", &self.dpb_output_delay_du_length_minus1).field("bit_rate_scale", &self.bit_rate_scale).field("cpb_size_scale", &self.cpb_size_scale).field("cpb_size_du_scale", &self.cpb_size_du_scale).field("initial_cpb_removal_delay_length_minus1", &self.initial_cpb_removal_delay_length_minus1).field("au_cpb_removal_delay_length_minus1", &self.au_cpb_removal_delay_length_minus1).field("dpb_output_delay_length_minus1", &self.dpb_output_delay_length_minus1).field("cpb_cnt_minus1", &self.cpb_cnt_minus1).field("elemental_duration_in_tc_minus1", &self.elemental_duration_in_tc_minus1).field("sub_layer_hrd_parameters_nal", &self.sub_layer_hrd_parameters_nal).field("sub_layer_hrd_parameters_vcl", &self.sub_layer_hrd_parameters_vcl).field("flags", &self.flags).finish()
+        f.debug_struct("StdVideoH265HrdParameters").field("tick_divisor_minus2", &self.tick_divisor_minus2).field("du_cpb_removal_delay_increment_length_minus1", &self.du_cpb_removal_delay_increment_length_minus1).field("dpb_output_delay_du_length_minus1", &self.dpb_output_delay_du_length_minus1).field("bit_rate_scale", &self.bit_rate_scale).field("cpb_size_scale", &self.cpb_size_scale).field("cpb_size_du_scale", &self.cpb_size_du_scale).field("initial_cpb_removal_delay_length_minus1", &self.initial_cpb_removal_delay_length_minus1).field("au_cpb_removal_delay_length_minus1", &self.au_cpb_removal_delay_length_minus1).field("dpb_output_delay_length_minus1", &self.dpb_output_delay_length_minus1).field("cpb_cnt_minus1", &self.cpb_cnt_minus1).field("elemental_duration_in_tc_minus1", &self.elemental_duration_in_tc_minus1).field("p_sub_layer_hrd_parameters_nal", &self.p_sub_layer_hrd_parameters_nal).field("p_sub_layer_hrd_parameters_vcl", &self.p_sub_layer_hrd_parameters_vcl).field("flags", &self.flags).finish()
     }
 }
 impl StdVideoH265HrdParameters {
@@ -2966,12 +2966,12 @@ impl<'a> StdVideoH265HrdParametersBuilder<'a> {
     }
     #[inline]
     pub fn sub_layer_hrd_parameters_nal(mut self, sub_layer_hrd_parameters_nal: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7]) -> Self {
-        self.0.sub_layer_hrd_parameters_nal = sub_layer_hrd_parameters_nal as _;
+        self.0.p_sub_layer_hrd_parameters_nal = sub_layer_hrd_parameters_nal as _;
         self
     }
     #[inline]
     pub fn sub_layer_hrd_parameters_vcl(mut self, sub_layer_hrd_parameters_vcl: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7]) -> Self {
-        self.0.sub_layer_hrd_parameters_vcl = sub_layer_hrd_parameters_vcl as _;
+        self.0.p_sub_layer_hrd_parameters_vcl = sub_layer_hrd_parameters_vcl as _;
         self
     }
     #[inline]
@@ -3394,7 +3394,7 @@ pub struct StdVideoH265SequenceParameterSetVui {
     pub vui_num_units_in_tick: u32,
     pub vui_time_scale: u32,
     pub vui_num_ticks_poc_diff_one_minus1: u32,
-    pub hrd_parameters: *mut crate::external::vk_video::StdVideoH265HrdParameters,
+    pub p_hrd_parameters: *mut crate::external::vk_video::StdVideoH265HrdParameters,
     pub min_spatial_segmentation_idc: u16,
     pub max_bytes_per_pic_denom: u8,
     pub max_bits_per_min_cu_denom: u8,
@@ -3404,12 +3404,12 @@ pub struct StdVideoH265SequenceParameterSetVui {
 }
 impl Default for StdVideoH265SequenceParameterSetVui {
     fn default() -> Self {
-        Self { aspect_ratio_idc: Default::default(), sar_width: Default::default(), sar_height: Default::default(), video_format: Default::default(), colour_primaries: Default::default(), transfer_characteristics: Default::default(), matrix_coeffs: Default::default(), chroma_sample_loc_type_top_field: Default::default(), chroma_sample_loc_type_bottom_field: Default::default(), def_disp_win_left_offset: Default::default(), def_disp_win_right_offset: Default::default(), def_disp_win_top_offset: Default::default(), def_disp_win_bottom_offset: Default::default(), vui_num_units_in_tick: Default::default(), vui_time_scale: Default::default(), vui_num_ticks_poc_diff_one_minus1: Default::default(), hrd_parameters: std::ptr::null_mut(), min_spatial_segmentation_idc: Default::default(), max_bytes_per_pic_denom: Default::default(), max_bits_per_min_cu_denom: Default::default(), log2_max_mv_length_horizontal: Default::default(), log2_max_mv_length_vertical: Default::default(), flags: Default::default() }
+        Self { aspect_ratio_idc: Default::default(), sar_width: Default::default(), sar_height: Default::default(), video_format: Default::default(), colour_primaries: Default::default(), transfer_characteristics: Default::default(), matrix_coeffs: Default::default(), chroma_sample_loc_type_top_field: Default::default(), chroma_sample_loc_type_bottom_field: Default::default(), def_disp_win_left_offset: Default::default(), def_disp_win_right_offset: Default::default(), def_disp_win_top_offset: Default::default(), def_disp_win_bottom_offset: Default::default(), vui_num_units_in_tick: Default::default(), vui_time_scale: Default::default(), vui_num_ticks_poc_diff_one_minus1: Default::default(), p_hrd_parameters: std::ptr::null_mut(), min_spatial_segmentation_idc: Default::default(), max_bytes_per_pic_denom: Default::default(), max_bits_per_min_cu_denom: Default::default(), log2_max_mv_length_horizontal: Default::default(), log2_max_mv_length_vertical: Default::default(), flags: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265SequenceParameterSetVui {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265SequenceParameterSetVui").field("aspect_ratio_idc", &self.aspect_ratio_idc).field("sar_width", &self.sar_width).field("sar_height", &self.sar_height).field("video_format", &self.video_format).field("colour_primaries", &self.colour_primaries).field("transfer_characteristics", &self.transfer_characteristics).field("matrix_coeffs", &self.matrix_coeffs).field("chroma_sample_loc_type_top_field", &self.chroma_sample_loc_type_top_field).field("chroma_sample_loc_type_bottom_field", &self.chroma_sample_loc_type_bottom_field).field("def_disp_win_left_offset", &self.def_disp_win_left_offset).field("def_disp_win_right_offset", &self.def_disp_win_right_offset).field("def_disp_win_top_offset", &self.def_disp_win_top_offset).field("def_disp_win_bottom_offset", &self.def_disp_win_bottom_offset).field("vui_num_units_in_tick", &self.vui_num_units_in_tick).field("vui_time_scale", &self.vui_time_scale).field("vui_num_ticks_poc_diff_one_minus1", &self.vui_num_ticks_poc_diff_one_minus1).field("hrd_parameters", &self.hrd_parameters).field("min_spatial_segmentation_idc", &self.min_spatial_segmentation_idc).field("max_bytes_per_pic_denom", &self.max_bytes_per_pic_denom).field("max_bits_per_min_cu_denom", &self.max_bits_per_min_cu_denom).field("log2_max_mv_length_horizontal", &self.log2_max_mv_length_horizontal).field("log2_max_mv_length_vertical", &self.log2_max_mv_length_vertical).field("flags", &self.flags).finish()
+        f.debug_struct("StdVideoH265SequenceParameterSetVui").field("aspect_ratio_idc", &self.aspect_ratio_idc).field("sar_width", &self.sar_width).field("sar_height", &self.sar_height).field("video_format", &self.video_format).field("colour_primaries", &self.colour_primaries).field("transfer_characteristics", &self.transfer_characteristics).field("matrix_coeffs", &self.matrix_coeffs).field("chroma_sample_loc_type_top_field", &self.chroma_sample_loc_type_top_field).field("chroma_sample_loc_type_bottom_field", &self.chroma_sample_loc_type_bottom_field).field("def_disp_win_left_offset", &self.def_disp_win_left_offset).field("def_disp_win_right_offset", &self.def_disp_win_right_offset).field("def_disp_win_top_offset", &self.def_disp_win_top_offset).field("def_disp_win_bottom_offset", &self.def_disp_win_bottom_offset).field("vui_num_units_in_tick", &self.vui_num_units_in_tick).field("vui_time_scale", &self.vui_time_scale).field("vui_num_ticks_poc_diff_one_minus1", &self.vui_num_ticks_poc_diff_one_minus1).field("p_hrd_parameters", &self.p_hrd_parameters).field("min_spatial_segmentation_idc", &self.min_spatial_segmentation_idc).field("max_bytes_per_pic_denom", &self.max_bytes_per_pic_denom).field("max_bits_per_min_cu_denom", &self.max_bits_per_min_cu_denom).field("log2_max_mv_length_horizontal", &self.log2_max_mv_length_horizontal).field("log2_max_mv_length_vertical", &self.log2_max_mv_length_vertical).field("flags", &self.flags).finish()
     }
 }
 impl StdVideoH265SequenceParameterSetVui {
@@ -3509,7 +3509,7 @@ impl<'a> StdVideoH265SequenceParameterSetVuiBuilder<'a> {
     }
     #[inline]
     pub fn hrd_parameters(mut self, hrd_parameters: &'a mut crate::external::vk_video::StdVideoH265HrdParameters) -> Self {
-        self.0.hrd_parameters = hrd_parameters as _;
+        self.0.p_hrd_parameters = hrd_parameters as _;
         self
     }
     #[inline]
@@ -3941,18 +3941,15 @@ impl<'a> std::ops::DerefMut for StdVideoH265SubLayerHrdParametersBuilder<'a> {
 #[repr(C)]
 pub struct StdVideoH265HrdFlags {
     pub nal_hrd_parameters_present_flag_and_more_bitfield: u32,
-    pub fixed_pic_rate_general_flag: u8,
-    pub fixed_pic_rate_within_cvs_flag: u8,
-    pub low_delay_hrd_flag: u8,
 }
 impl Default for StdVideoH265HrdFlags {
     fn default() -> Self {
-        Self { nal_hrd_parameters_present_flag_and_more_bitfield: Default::default(), fixed_pic_rate_general_flag: Default::default(), fixed_pic_rate_within_cvs_flag: Default::default(), low_delay_hrd_flag: Default::default() }
+        Self { nal_hrd_parameters_present_flag_and_more_bitfield: Default::default() }
     }
 }
 impl std::fmt::Debug for StdVideoH265HrdFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("StdVideoH265HrdFlags").field("nal_hrd_parameters_present_flag_and_more_bitfield", &format!("{:#b}", &self.nal_hrd_parameters_present_flag_and_more_bitfield)).field("fixed_pic_rate_general_flag", &self.fixed_pic_rate_general_flag).field("fixed_pic_rate_within_cvs_flag", &self.fixed_pic_rate_within_cvs_flag).field("low_delay_hrd_flag", &self.low_delay_hrd_flag).finish()
+        f.debug_struct("StdVideoH265HrdFlags").field("nal_hrd_parameters_present_flag_and_more_bitfield", &format!("{:#b}", &self.nal_hrd_parameters_present_flag_and_more_bitfield)).finish()
     }
 }
 impl StdVideoH265HrdFlags {
@@ -3991,18 +3988,18 @@ impl<'a> StdVideoH265HrdFlagsBuilder<'a> {
         self
     }
     #[inline]
-    pub fn fixed_pic_rate_general_flag(mut self, fixed_pic_rate_general_flag: u8) -> Self {
-        self.0.fixed_pic_rate_general_flag = fixed_pic_rate_general_flag as _;
+    pub fn fixed_pic_rate_general_flag(mut self, fixed_pic_rate_general_flag: u32) -> Self {
+        self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, fixed_pic_rate_general_flag, 4usize, 11usize);
         self
     }
     #[inline]
-    pub fn fixed_pic_rate_within_cvs_flag(mut self, fixed_pic_rate_within_cvs_flag: u8) -> Self {
-        self.0.fixed_pic_rate_within_cvs_flag = fixed_pic_rate_within_cvs_flag as _;
+    pub fn fixed_pic_rate_within_cvs_flag(mut self, fixed_pic_rate_within_cvs_flag: u32) -> Self {
+        self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, fixed_pic_rate_within_cvs_flag, 12usize, 19usize);
         self
     }
     #[inline]
-    pub fn low_delay_hrd_flag(mut self, low_delay_hrd_flag: u8) -> Self {
-        self.0.low_delay_hrd_flag = low_delay_hrd_flag as _;
+    pub fn low_delay_hrd_flag(mut self, low_delay_hrd_flag: u32) -> Self {
+        self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, low_delay_hrd_flag, 20usize, 27usize);
         self
     }
     #[inline]
@@ -5922,6 +5919,11 @@ impl<'a> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
     #[inline]
     pub fn b_last_slice_in_pic(mut self, b_last_slice_in_pic: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, b_last_slice_in_pic, 13usize, 13usize);
+        self
+    }
+    #[inline]
+    pub fn reserved_bits(mut self, reserved_bits: u32) -> Self {
+        self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, reserved_bits, 14usize, 31usize);
         self
     }
     #[inline]

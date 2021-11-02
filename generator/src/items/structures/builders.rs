@@ -150,6 +150,16 @@ fn override_list() -> HashMap<TypeName, Vec<Override>> {
         }],
     );
 
+    map.insert(
+        TypeName::new("StdVideoH264SequenceParameterSet"),
+        vec![Override {
+            index: 20,
+            kind: FieldKind::Array {
+                length: "num_ref_frames_in_pic_order_cnt_cycle".into(),
+            },
+        }],
+    );
+
     map
 }
 

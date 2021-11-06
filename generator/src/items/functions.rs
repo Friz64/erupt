@@ -1,7 +1,7 @@
 use crate::{
     comment_gen::DocCommentGen,
     declaration::{Declaration, Mutability, Type},
-    header::{BitWidth, DeclarationInfo},
+    header::{BitWidth, DeclarationInfo, ValueDependencies},
     items::aliases::Alias,
     name::{FunctionName, Name},
     origin::Origin,
@@ -182,22 +182,24 @@ impl Function {
 
         tokens
     }
-}
 
-impl TryFrom<&CDeclaration> for Function {
-    type Error = NotApplicable;
-
-    fn try_from(declaration: &CDeclaration) -> Result<Self, Self::Error> {
+    pub fn from_c(
+        declaration: &CDeclaration,
+        value_dependencies: &ValueDependencies,
+    ) -> Result<Self, NotApplicable> {
         match declaration.declarators.as_slice() {
             [init_declarator] => {
                 let declarator = &init_declarator.node.declarator.node;
                 for derived in declarator.derived.as_slice() {
                     if let DerivedDeclarator::Function(function_declarator) = &derived.node {
-                        let ty = Declaration::from(DeclarationInfo {
-                            type_info: declaration.specifiers.as_slice().try_into()?,
-                            declarator: Some(&declarator),
-                            bitwidth: BitWidth::Full,
-                        });
+                        let ty = Declaration::from_decl_info(
+                            DeclarationInfo {
+                                type_info: declaration.specifiers.as_slice().try_into()?,
+                                declarator: Some(&declarator),
+                                bitwidth: BitWidth::Full,
+                            },
+                            value_dependencies,
+                        );
 
                         let parameters = &function_declarator.node.parameters;
                         let mut no_parameters = false;
@@ -222,7 +224,9 @@ impl TryFrom<&CDeclaration> for Function {
                         } else {
                             parameters
                                 .iter()
-                                .map(|parameter| Declaration::from(&parameter.node))
+                                .map(|parameter| {
+                                    Declaration::from_decl_info(&parameter.node, value_dependencies)
+                                })
                                 .collect()
                         };
 

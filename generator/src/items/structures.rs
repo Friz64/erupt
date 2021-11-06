@@ -5,7 +5,7 @@ use crate::{
     declaration::{Declaration, Mutability, Type},
     header::{
         eval::{Expression, Literal},
-        BitWidth, DeclarationInfo,
+        BitWidth, DeclarationInfo, ValueDependencies,
     },
     items::aliases::Alias,
     name::{Name, TypeName},
@@ -21,8 +21,11 @@ use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
 use std::{cell::RefCell, cmp::Ordering, collections::HashMap};
 
-impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
-    fn from(field: &'a StructField) -> Self {
+impl<'a> DeclarationInfo<'a> {
+    fn from_struct_field(
+        field: &'a StructField,
+        value_dependencies: &ValueDependencies,
+    ) -> DeclarationInfo<'a> {
         let specifiers = field.specifiers.as_slice();
 
         assert_eq!(field.declarators.len(), 1);
@@ -35,7 +38,9 @@ impl<'a> From<&'a StructField> for DeclarationInfo<'a> {
 
         let bitwidth = match struct_declarator.bit_width.as_ref() {
             Some(bitwidth) => {
-                let bitwidth = match Expression::from(&bitwidth.node).eval_to_literal() {
+                let bitwidth = match Expression::from_c(&bitwidth.node, value_dependencies)
+                    .eval_to_literal()
+                {
                     Literal::Int32(val) => val,
                     unexpected => panic!("Unexpected bit-width type: {:?}", unexpected),
                 };
@@ -343,12 +348,11 @@ impl Structure {
                 })
         }))
     }
-}
 
-impl TryFrom<&CDeclaration> for Structure {
-    type Error = NotApplicable;
-
-    fn try_from(declaration: &CDeclaration) -> Result<Self, Self::Error> {
+    pub fn from_c(
+        declaration: &CDeclaration,
+        value_dependencies: &ValueDependencies,
+    ) -> Result<Self, NotApplicable> {
         let mut result = Err(NotApplicable);
 
         for specifier in &declaration.specifiers {
@@ -359,7 +363,10 @@ impl TryFrom<&CDeclaration> for Structure {
                         struct_type.node.declarations.as_ref(),
                     ) {
                         let field_decls = declarations.iter().filter_map(|decl| match &decl.node {
-                            StructDeclaration::Field(field) => Some(Declaration::from(&field.node)),
+                            StructDeclaration::Field(field) => Some(Declaration::from_decl_info(
+                                DeclarationInfo::from_struct_field(&field.node, value_dependencies),
+                                value_dependencies,
+                            )),
                             _ => None,
                         });
 

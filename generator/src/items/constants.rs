@@ -1,6 +1,9 @@
 use crate::{
     comment_gen::DocCommentGen,
-    header::eval::{Expression, Literal},
+    header::{
+        eval::{Expression, Literal},
+        ValueDependencies,
+    },
     origin::Origin,
     source::{NotApplicable, Source},
     XmlNode,
@@ -79,12 +82,11 @@ impl Constant {
 
         tokens
     }
-}
 
-impl TryFrom<&CDeclaration> for Constant {
-    type Error = NotApplicable;
-
-    fn try_from(declaration: &CDeclaration) -> Result<Self, Self::Error> {
+    pub fn from_c(
+        declaration: &CDeclaration,
+        value_dependencies: &ValueDependencies,
+    ) -> Result<Self, NotApplicable> {
         match declaration.declarators.as_slice() {
             [init_declarator] => {
                 let name = match &init_declarator.node.declarator.node.kind.node {
@@ -101,9 +103,9 @@ impl TryFrom<&CDeclaration> for Constant {
                             CExpression::StringLiteral(strings) => ConstantValue::String(
                                 strings.node.iter().map(|s| s.trim_matches('"')).collect(),
                             ),
-                            other => {
-                                ConstantValue::Number(Expression::from(other).eval_to_literal())
-                            }
+                            other => ConstantValue::Number(
+                                Expression::from_c(other, value_dependencies).eval_to_literal(),
+                            ),
                         },
                         invalid => panic!("Invalid constant initializer: {:?}", invalid),
                     },

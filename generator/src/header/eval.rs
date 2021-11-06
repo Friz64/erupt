@@ -1,8 +1,8 @@
+use super::ValueDependencies;
 use lang_c::ast::{
     BinaryOperator, Constant, Expression as CExpression, FloatFormat, IntegerBase, IntegerSize,
     UnaryOperator,
 };
-use log::warn;
 use proc_macro2::{Ident, Literal as RustLiteral};
 use quote::format_ident;
 use std::{
@@ -204,31 +204,33 @@ impl Expression {
             }
         }
     }
-}
 
-impl From<&CExpression> for Expression {
-    fn from(expression: &CExpression) -> Self {
+    pub fn from_c(expression: &CExpression, value_dependencies: &ValueDependencies) -> Expression {
         match expression {
             CExpression::Constant(constant) => Expression::Literal(Literal::from(&constant.node)),
             CExpression::UnaryOperator(unary) => Expression::Unary {
                 operator: unary.node.operator.node.clone(),
-                operand: Box::new(Expression::from(&unary.node.operand.node)),
+                operand: Box::new(Expression::from_c(
+                    &unary.node.operand.node,
+                    value_dependencies,
+                )),
             },
             CExpression::BinaryOperator(binary) => Expression::Binary {
                 operator: binary.node.operator.node.clone(),
-                lhs: Box::new(Expression::from(&binary.node.lhs.node)),
-                rhs: Box::new(Expression::from(&binary.node.rhs.node)),
+                lhs: Box::new(Expression::from_c(
+                    &binary.node.lhs.node,
+                    value_dependencies,
+                )),
+                rhs: Box::new(Expression::from_c(
+                    &binary.node.rhs.node,
+                    value_dependencies,
+                )),
             },
             CExpression::Identifier(ident) => {
-                let manual_val = match ident.node.name.as_str() {
-                    "STD_VIDEO_DECODE_H264_FIELD_ORDER_COUNT_LIST_SIZE" => {
-                        Expression::Literal(Literal::UnsignedInt64(2))
-                    }
-                    other => unimplemented!("Manual val: {:?}", other),
-                };
-
-                warn!("Using manually defined variable until properly fixed. https://gitlab.com/Friz64/erupt/-/issues/33");
-                manual_val
+                match value_dependencies.value(ident.node.name.as_str()) {
+                    Some(value) => Expression::Literal(value),
+                    None => panic!("Failed to find value for {:?}", ident),
+                }
             }
             unsupported => panic!("Unsupported expression: {:?}", unsupported),
         }

@@ -1,7 +1,7 @@
 use crate::{
     comment_gen::DocCommentGen,
     declaration::{Declaration, Type},
-    header::{BitWidth, DeclarationInfo},
+    header::{BitWidth, DeclarationInfo, ValueDependencies},
     name::TypeName,
     origin::Origin,
     source::{NotApplicable, Source},
@@ -45,19 +45,21 @@ impl Basetype {
 
         tokens
     }
-}
 
-impl TryFrom<&CDeclaration> for Basetype {
-    type Error = NotApplicable;
-
-    fn try_from(declaration: &CDeclaration) -> Result<Self, Self::Error> {
+    pub fn from_c(
+        declaration: &CDeclaration,
+        value_dependencies: &ValueDependencies,
+    ) -> Result<Self, NotApplicable> {
         match declaration.declarators.as_slice() {
             [init_declarator] => {
-                let declaration = Declaration::from(DeclarationInfo {
-                    type_info: declaration.specifiers.as_slice().try_into()?,
-                    declarator: Some(&init_declarator.node.declarator.node),
-                    bitwidth: BitWidth::Full,
-                });
+                let declaration = Declaration::from_decl_info(
+                    DeclarationInfo {
+                        type_info: declaration.specifiers.as_slice().try_into()?,
+                        declarator: Some(&init_declarator.node.declarator.node),
+                        bitwidth: BitWidth::Full,
+                    },
+                    value_dependencies,
+                );
 
                 let ty = declaration.ty;
                 declaration.name.ok_or(NotApplicable).map(|name| Basetype {

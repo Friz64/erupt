@@ -1,6 +1,9 @@
 use crate::{
     comment_gen::DocCommentGen,
-    header::eval::{Expression, Literal},
+    header::{
+        eval::{Expression, Literal},
+        ValueDependencies,
+    },
     items::aliases::Alias,
     name::{EnumVariantName, Name, TypeName},
     origin::Origin,
@@ -107,7 +110,11 @@ pub enum EnumVariantKind {
 }
 
 impl EnumVariantKind {
-    pub fn new(expression: &CExpression, enum_type_name: &TypeName) -> EnumVariantKind {
+    pub fn from_c(
+        expression: &CExpression,
+        enum_type_name: &TypeName,
+        value_dependencies: &ValueDependencies,
+    ) -> EnumVariantKind {
         match expression {
             CExpression::Identifier(identifier) => {
                 let name = match EnumVariantName::new(&identifier.node.name, enum_type_name) {
@@ -120,7 +127,9 @@ impl EnumVariantKind {
 
                 EnumVariantKind::Alias(name)
             }
-            value => EnumVariantKind::Value(Expression::from(value).eval_to_literal()),
+            value => EnumVariantKind::Value(
+                Expression::from_c(value, value_dependencies).eval_to_literal(),
+            ),
         }
     }
 
@@ -153,13 +162,14 @@ impl EnumVariant {
     pub fn from_enumerator(
         enumerator: &Enumerator,
         enum_type_name: &TypeName,
+        value_dependencies: &ValueDependencies,
     ) -> Result<EnumVariant, NotApplicable> {
         let name = &enumerator.identifier.node.name;
         match &enumerator.expression {
             Some(expression) => Ok(EnumVariant {
                 origin: Default::default(),
                 name: EnumVariantName::new(name, enum_type_name)?,
-                kind: EnumVariantKind::new(&expression.node, enum_type_name),
+                kind: EnumVariantKind::from_c(&expression.node, enum_type_name, value_dependencies),
             }),
             None => panic!("Enumerator has no expression: {:?}", enumerator),
         }
@@ -168,6 +178,7 @@ impl EnumVariant {
     pub fn from_init_declarator(
         init_declarator: &InitDeclarator,
         enum_type_name: &TypeName,
+        value_dependencies: &ValueDependencies,
     ) -> Result<EnumVariant, NotApplicable> {
         let name = match &init_declarator.declarator.node.kind.node {
             DeclaratorKind::Identifier(ident) => &ident.node.name,
@@ -179,7 +190,11 @@ impl EnumVariant {
                 Initializer::Expression(expression) => Ok(EnumVariant {
                     origin: Default::default(),
                     name: EnumVariantName::new(name, enum_type_name)?,
-                    kind: EnumVariantKind::new(&expression.node, enum_type_name),
+                    kind: EnumVariantKind::from_c(
+                        &expression.node,
+                        enum_type_name,
+                        value_dependencies,
+                    ),
                 }),
                 _ => panic!("Initializer is not an expression"),
             },
@@ -187,7 +202,10 @@ impl EnumVariant {
         }
     }
 
-    pub fn all_from(declaration: &CDeclaration) -> Result<Vec<EnumVariant>, NotApplicable> {
+    pub fn all_from_c(
+        declaration: &CDeclaration,
+        value_dependencies: &ValueDependencies,
+    ) -> Result<Vec<EnumVariant>, NotApplicable> {
         let mut variants = Vec::new();
 
         if let [static_, const_, ident_specifier] = declaration.specifiers.as_slice() {
@@ -221,7 +239,12 @@ impl EnumVariant {
                     _ => panic!("Expected type specifier"),
                 };
 
-                let variant = EnumVariant::from_init_declarator(init_declarator, &enum_type_name);
+                let variant = EnumVariant::from_init_declarator(
+                    init_declarator,
+                    &enum_type_name,
+                    value_dependencies,
+                );
+
                 if let Ok(v) = variant {
                     if !variants.contains(&v) {
                         variants.push(v);
@@ -239,8 +262,11 @@ impl EnumVariant {
                     };
 
                     for enumerator in &enum_type.node.enumerators {
-                        let variant =
-                            EnumVariant::from_enumerator(&enumerator.node, &enum_type_name);
+                        let variant = EnumVariant::from_enumerator(
+                            &enumerator.node,
+                            &enum_type_name,
+                            value_dependencies,
+                        );
                         if let Ok(v) = variant {
                             if !variants.contains(&v) {
                                 variants.push(v);

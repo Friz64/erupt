@@ -5,8 +5,8 @@ use crate::{
     declaration::{Declaration, DeclarationMetadata, Mutability, Optional, Type},
     items::{
         basetypes::Basetype,
-        constants::Constant,
-        enums::{EnumKind, EnumVariant},
+        constants::{Constant, ConstantValue},
+        enums::{EnumKind, EnumVariant, EnumVariantKind},
         functions::Function,
         structures::Structure,
     },
@@ -17,9 +17,9 @@ use crate::{
 use eval::{Expression, Literal};
 use lang_c::{
     ast::{
-        ArraySize, DeclarationSpecifier, Declarator, DeclaratorKind, DerivedDeclarator,
-        ExternalDeclaration, PointerQualifier, SpecifierQualifier, StorageClassSpecifier,
-        TranslationUnit, TypeQualifier, TypeSpecifier,
+        ArraySize, Declaration as CDeclaration, DeclarationSpecifier, Declarator, DeclaratorKind,
+        DerivedDeclarator, ExternalDeclaration, PointerQualifier, SpecifierQualifier,
+        StorageClassSpecifier, TranslationUnit, TypeQualifier, TypeSpecifier,
     },
     driver::{self, Config},
     span::Node,
@@ -112,11 +112,11 @@ impl From<XmlNode<'_, '_>> for DeclarationMetadata {
     }
 }
 
-impl<'a, T> From<T> for Declaration
-where
-    T: Into<DeclarationInfo<'a>>,
-{
-    fn from(info: T) -> Self {
+impl Declaration {
+    pub fn from_decl_info<'a, T: Into<DeclarationInfo<'a>>>(
+        info: T,
+        value_dependencies: &ValueDependencies,
+    ) -> Self {
         let info: DeclarationInfo = info.into();
 
         let mut signed = false;
@@ -256,7 +256,8 @@ where
                 }
                 DerivedDeclarator::Array(declarator) => match &declarator.node.size {
                     ArraySize::VariableExpression(expression) => {
-                        let val = match Expression::from(&expression.node).eval_to_literal() {
+                        let expr = Expression::from_c(&expression.node, value_dependencies);
+                        let val = match expr.eval_to_literal() {
                             Literal::Int32(val) => val as usize,
                             Literal::Int64(val) => val as usize,
                             Literal::UnsignedInt32(val) => val as usize,
@@ -384,27 +385,82 @@ impl HeaderSource {
     }
 }
 
+/// items which are required to calculate the definition of other values
+/// (e.g. array length in a struct field)
+#[derive(Default)]
+pub struct ValueDependencies {
+    constants: Vec<Constant>,
+    enum_variants: Vec<EnumVariant>,
+}
+
+impl ValueDependencies {
+    fn collect(declarations: &[&CDeclaration]) -> ValueDependencies {
+        let mut value_dependencies = ValueDependencies::default();
+
+        for declaration in declarations {
+            if let Ok(constant) = Constant::from_c(declaration, &value_dependencies) {
+                value_dependencies.constants.push(constant);
+            } else if let Ok(enum_variant) =
+                EnumVariant::all_from_c(declaration, &value_dependencies)
+            {
+                value_dependencies.enum_variants.extend(enum_variant);
+            }
+        }
+
+        value_dependencies
+    }
+
+    pub fn value(&self, key: &str) -> Option<Literal> {
+        let enum_variant = || {
+            self.enum_variants
+                .iter()
+                .find(|variant| &*variant.name.original == key)
+                .and_then(|variant| match &variant.kind {
+                    EnumVariantKind::Alias(name) => self.value(&name.original),
+                    EnumVariantKind::Value(lit) => Some(lit.clone()),
+                })
+        };
+
+        let constant = || {
+            self.constants
+                .iter()
+                .find(|constant| &*constant.original_name == key)
+                .map(|constant| match &constant.value {
+                    ConstantValue::Number(lit) => lit.clone(),
+                    ConstantValue::String(_) => panic!("{:?} is a string constant", key),
+                })
+        };
+
+        enum_variant().or_else(constant)
+    }
+}
+
 impl From<&TranslationUnit> for HeaderSource {
     fn from(unit: &TranslationUnit) -> Self {
         let mut structures = Vec::new();
         let mut functions = Vec::new();
         let mut basetypes = Vec::new();
-        let mut constants = Vec::new();
-        let mut enum_variants = Vec::new();
 
-        for external in &unit.0 {
-            if let ExternalDeclaration::Declaration(declaration) = &external.node {
-                if let Ok(constant) = Constant::try_from(&declaration.node) {
-                    constants.push(constant);
-                } else if let Ok(structure) = Structure::try_from(&declaration.node) {
-                    structures.push(structure);
-                } else if let Ok(function) = Function::try_from(&declaration.node) {
-                    functions.push(function);
-                } else if let Ok(enum_variant) = EnumVariant::all_from(&declaration.node) {
-                    enum_variants.extend(enum_variant.into_iter());
-                } else if let Ok(basetype) = Basetype::try_from(&declaration.node) {
-                    basetypes.push(basetype);
+        let declarations: Vec<_> = unit
+            .0
+            .iter()
+            .filter_map(|external| {
+                if let ExternalDeclaration::Declaration(declaration) = &external.node {
+                    Some(&declaration.node)
+                } else {
+                    None
                 }
+            })
+            .collect();
+
+        let value_dependencies = ValueDependencies::collect(&declarations);
+        for &declaration in &declarations {
+            if let Ok(structure) = Structure::from_c(declaration, &value_dependencies) {
+                structures.push(structure);
+            } else if let Ok(function) = Function::from_c(declaration, &value_dependencies) {
+                functions.push(function);
+            } else if let Ok(basetype) = Basetype::from_c(declaration, &value_dependencies) {
+                basetypes.push(basetype);
             }
         }
 
@@ -412,8 +468,8 @@ impl From<&TranslationUnit> for HeaderSource {
             structures,
             functions,
             basetypes,
-            constants,
-            enum_variants,
+            constants: value_dependencies.constants,
+            enum_variants: value_dependencies.enum_variants,
         }
     }
 }

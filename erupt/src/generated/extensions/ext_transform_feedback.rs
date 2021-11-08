@@ -399,18 +399,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function"]
     #[doc(alias = "vkCmdBeginQueryIndexedEXT")]
-    pub unsafe fn cmd_begin_query_indexed_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: Option<crate::vk1_0::QueryControlFlags>, index: u32) -> () {
+    pub unsafe fn cmd_begin_query_indexed_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: crate::vk1_0::QueryControlFlags, index: u32) -> () {
         let _function = self.cmd_begin_query_indexed_ext.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            query_pool as _,
-            query as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            index as _,
-        );
+        let _return = _function(command_buffer as _, query_pool as _, query as _, flags as _, index as _);
         ()
     }
     #[inline]

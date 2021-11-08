@@ -38,16 +38,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPoolKHR.html) · Function"]
     #[doc(alias = "vkTrimCommandPoolKHR")]
-    pub unsafe fn trim_command_pool_khr(&self, command_pool: crate::vk1_0::CommandPool, flags: Option<crate::vk1_1::CommandPoolTrimFlags>) -> () {
+    pub unsafe fn trim_command_pool_khr(&self, command_pool: crate::vk1_0::CommandPool, flags: crate::vk1_1::CommandPoolTrimFlags) -> () {
         let _function = self.trim_command_pool_khr.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            command_pool as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(self.handle, command_pool as _, flags as _);
         ()
     }
 }

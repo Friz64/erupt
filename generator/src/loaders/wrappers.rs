@@ -2,7 +2,7 @@ use super::{value::Value, CommandLevel};
 use crate::{
     comment_gen::DocCommentGen,
     declaration::{self, Declaration, Mutability, Optional, Type},
-    items::functions::Function,
+    items::{enums::EnumKind, functions::Function},
     name::{Name, TypeName},
     source::Source,
 };
@@ -131,8 +131,15 @@ impl ParameterKind {
                                 length: length.into(),
                             })
                         }
+                        // this prevents handles and flags, which
+                        // have a ::null() and ::empty() method respectively,
+                        // from being passed as an `Option`
                         (Optional::Always, Type::Named(Name::Type(name)), None)
-                            if source.find_handle(name).is_some() =>
+                            if source.find_handle(name).is_some()
+                                || source.enums.iter().any(|en| match &en.kind {
+                                    EnumKind::Bitflag { flags_name, .. } => flags_name == name,
+                                    EnumKind::Enum { .. } => false,
+                                }) =>
                         {
                             *param_kind = Some(ParameterKind::Regular)
                         }

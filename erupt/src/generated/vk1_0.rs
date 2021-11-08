@@ -15690,21 +15690,10 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceImageFormatProperties")]
-    pub unsafe fn get_physical_device_image_format_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, tiling: crate::vk1_0::ImageTiling, usage: crate::vk1_0::ImageUsageFlags, flags: Option<crate::vk1_0::ImageCreateFlags>) -> crate::utils::VulkanResult<crate::vk1_0::ImageFormatProperties> {
+    pub unsafe fn get_physical_device_image_format_properties(&self, physical_device: crate::vk1_0::PhysicalDevice, format: crate::vk1_0::Format, _type: crate::vk1_0::ImageType, tiling: crate::vk1_0::ImageTiling, usage: crate::vk1_0::ImageUsageFlags, flags: crate::vk1_0::ImageCreateFlags) -> crate::utils::VulkanResult<crate::vk1_0::ImageFormatProperties> {
         let _function = self.get_physical_device_image_format_properties.expect(crate::NOT_LOADED_MESSAGE);
         let mut image_format_properties = Default::default();
-        let _return = _function(
-            physical_device as _,
-            format as _,
-            _type as _,
-            tiling as _,
-            usage as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            &mut image_format_properties,
-        );
+        let _return = _function(physical_device as _, format as _, _type as _, tiling as _, usage as _, flags as _, &mut image_format_properties);
         crate::utils::VulkanResult::new(_return, image_format_properties)
     }
     #[inline]
@@ -15904,19 +15893,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMapMemory.html) · Function"]
     #[doc(alias = "vkMapMemory")]
-    pub unsafe fn map_memory(&self, memory: crate::vk1_0::DeviceMemory, offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, flags: Option<crate::vk1_0::MemoryMapFlags>, data: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn map_memory(&self, memory: crate::vk1_0::DeviceMemory, offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, flags: crate::vk1_0::MemoryMapFlags, data: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
         let _function = self.map_memory.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            memory as _,
-            offset as _,
-            size as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            data,
-        );
+        let _return = _function(self.handle, memory as _, offset as _, size as _, flags as _, data);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -16220,21 +16199,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueryPoolResults.html) · Function"]
     #[doc(alias = "vkGetQueryPoolResults")]
-    pub unsafe fn get_query_pool_results(&self, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, data_size: usize, data: *mut std::ffi::c_void, stride: crate::vk1_0::DeviceSize, flags: Option<crate::vk1_0::QueryResultFlags>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_query_pool_results(&self, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, data_size: usize, data: *mut std::ffi::c_void, stride: crate::vk1_0::DeviceSize, flags: crate::vk1_0::QueryResultFlags) -> crate::utils::VulkanResult<()> {
         let _function = self.get_query_pool_results.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            query_pool as _,
-            first_query as _,
-            query_count as _,
-            data_size,
-            data,
-            stride as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(self.handle, query_pool as _, first_query as _, query_count as _, data_size, data, stride as _, flags as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -16668,16 +16635,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetDescriptorPool.html) · Function"]
     #[doc(alias = "vkResetDescriptorPool")]
-    pub unsafe fn reset_descriptor_pool(&self, descriptor_pool: crate::vk1_0::DescriptorPool, flags: Option<crate::vk1_0::DescriptorPoolResetFlags>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn reset_descriptor_pool(&self, descriptor_pool: crate::vk1_0::DescriptorPool, flags: crate::vk1_0::DescriptorPoolResetFlags) -> crate::utils::VulkanResult<()> {
         let _function = self.reset_descriptor_pool.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            descriptor_pool as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(self.handle, descriptor_pool as _, flags as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -16827,16 +16787,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetCommandPool.html) · Function"]
     #[doc(alias = "vkResetCommandPool")]
-    pub unsafe fn reset_command_pool(&self, command_pool: crate::vk1_0::CommandPool, flags: Option<crate::vk1_0::CommandPoolResetFlags>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn reset_command_pool(&self, command_pool: crate::vk1_0::CommandPool, flags: crate::vk1_0::CommandPoolResetFlags) -> crate::utils::VulkanResult<()> {
         let _function = self.reset_command_pool.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            self.handle,
-            command_pool as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(self.handle, command_pool as _, flags as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -16881,15 +16834,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetCommandBuffer.html) · Function"]
     #[doc(alias = "vkResetCommandBuffer")]
-    pub unsafe fn reset_command_buffer(&self, command_buffer: crate::vk1_0::CommandBuffer, flags: Option<crate::vk1_0::CommandBufferResetFlags>) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn reset_command_buffer(&self, command_buffer: crate::vk1_0::CommandBuffer, flags: crate::vk1_0::CommandBufferResetFlags) -> crate::utils::VulkanResult<()> {
         let _function = self.reset_command_buffer.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(command_buffer as _, flags as _);
         crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
@@ -17181,112 +17128,52 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetEvent.html) · Function"]
     #[doc(alias = "vkCmdSetEvent")]
-    pub unsafe fn cmd_set_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: Option<crate::vk1_0::PipelineStageFlags>) -> () {
+    pub unsafe fn cmd_set_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::vk1_0::PipelineStageFlags) -> () {
         let _function = self.cmd_set_event.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            event as _,
-            match stage_mask {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(command_buffer as _, event as _, stage_mask as _);
         ()
     }
     #[inline]
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdResetEvent.html) · Function"]
     #[doc(alias = "vkCmdResetEvent")]
-    pub unsafe fn cmd_reset_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: Option<crate::vk1_0::PipelineStageFlags>) -> () {
+    pub unsafe fn cmd_reset_event(&self, command_buffer: crate::vk1_0::CommandBuffer, event: crate::vk1_0::Event, stage_mask: crate::vk1_0::PipelineStageFlags) -> () {
         let _function = self.cmd_reset_event.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            event as _,
-            match stage_mask {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(command_buffer as _, event as _, stage_mask as _);
         ()
     }
     #[inline]
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWaitEvents.html) · Function"]
     #[doc(alias = "vkCmdWaitEvents")]
-    pub unsafe fn cmd_wait_events(&self, command_buffer: crate::vk1_0::CommandBuffer, events: &[crate::vk1_0::Event], src_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, dst_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
+    pub unsafe fn cmd_wait_events(&self, command_buffer: crate::vk1_0::CommandBuffer, events: &[crate::vk1_0::Event], src_stage_mask: crate::vk1_0::PipelineStageFlags, dst_stage_mask: crate::vk1_0::PipelineStageFlags, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
         let _function = self.cmd_wait_events.expect(crate::NOT_LOADED_MESSAGE);
         let event_count = events.len();
         let memory_barrier_count = memory_barriers.len();
         let buffer_memory_barrier_count = buffer_memory_barriers.len();
         let image_memory_barrier_count = image_memory_barriers.len();
-        let _return = _function(
-            command_buffer as _,
-            event_count as _,
-            events.as_ptr() as _,
-            match src_stage_mask {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            match dst_stage_mask {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            memory_barrier_count as _,
-            memory_barriers.as_ptr() as _,
-            buffer_memory_barrier_count as _,
-            buffer_memory_barriers.as_ptr() as _,
-            image_memory_barrier_count as _,
-            image_memory_barriers.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, event_count as _, events.as_ptr() as _, src_stage_mask as _, dst_stage_mask as _, memory_barrier_count as _, memory_barriers.as_ptr() as _, buffer_memory_barrier_count as _, buffer_memory_barriers.as_ptr() as _, image_memory_barrier_count as _, image_memory_barriers.as_ptr() as _);
         ()
     }
     #[inline]
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPipelineBarrier.html) · Function"]
     #[doc(alias = "vkCmdPipelineBarrier")]
-    pub unsafe fn cmd_pipeline_barrier(&self, command_buffer: crate::vk1_0::CommandBuffer, src_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, dst_stage_mask: Option<crate::vk1_0::PipelineStageFlags>, dependency_flags: Option<crate::vk1_0::DependencyFlags>, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
+    pub unsafe fn cmd_pipeline_barrier(&self, command_buffer: crate::vk1_0::CommandBuffer, src_stage_mask: crate::vk1_0::PipelineStageFlags, dst_stage_mask: crate::vk1_0::PipelineStageFlags, dependency_flags: crate::vk1_0::DependencyFlags, memory_barriers: &[crate::vk1_0::MemoryBarrierBuilder], buffer_memory_barriers: &[crate::vk1_0::BufferMemoryBarrierBuilder], image_memory_barriers: &[crate::vk1_0::ImageMemoryBarrierBuilder]) -> () {
         let _function = self.cmd_pipeline_barrier.expect(crate::NOT_LOADED_MESSAGE);
         let memory_barrier_count = memory_barriers.len();
         let buffer_memory_barrier_count = buffer_memory_barriers.len();
         let image_memory_barrier_count = image_memory_barriers.len();
-        let _return = _function(
-            command_buffer as _,
-            match src_stage_mask {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            match dst_stage_mask {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            match dependency_flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-            memory_barrier_count as _,
-            memory_barriers.as_ptr() as _,
-            buffer_memory_barrier_count as _,
-            buffer_memory_barriers.as_ptr() as _,
-            image_memory_barrier_count as _,
-            image_memory_barriers.as_ptr() as _,
-        );
+        let _return = _function(command_buffer as _, src_stage_mask as _, dst_stage_mask as _, dependency_flags as _, memory_barrier_count as _, memory_barriers.as_ptr() as _, buffer_memory_barrier_count as _, buffer_memory_barriers.as_ptr() as _, image_memory_barrier_count as _, image_memory_barriers.as_ptr() as _);
         ()
     }
     #[inline]
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQuery.html) · Function"]
     #[doc(alias = "vkCmdBeginQuery")]
-    pub unsafe fn cmd_begin_query(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: Option<crate::vk1_0::QueryControlFlags>) -> () {
+    pub unsafe fn cmd_begin_query(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, query: u32, flags: crate::vk1_0::QueryControlFlags) -> () {
         let _function = self.cmd_begin_query.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            query_pool as _,
-            query as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(command_buffer as _, query_pool as _, query as _, flags as _);
         ()
     }
     #[inline]
@@ -17320,21 +17207,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyQueryPoolResults.html) · Function"]
     #[doc(alias = "vkCmdCopyQueryPoolResults")]
-    pub unsafe fn cmd_copy_query_pool_results(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, stride: crate::vk1_0::DeviceSize, flags: Option<crate::vk1_0::QueryResultFlags>) -> () {
+    pub unsafe fn cmd_copy_query_pool_results(&self, command_buffer: crate::vk1_0::CommandBuffer, query_pool: crate::vk1_0::QueryPool, first_query: u32, query_count: u32, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, stride: crate::vk1_0::DeviceSize, flags: crate::vk1_0::QueryResultFlags) -> () {
         let _function = self.cmd_copy_query_pool_results.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            query_pool as _,
-            first_query as _,
-            query_count as _,
-            dst_buffer as _,
-            dst_offset as _,
-            stride as _,
-            match flags {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(command_buffer as _, query_pool as _, first_query as _, query_count as _, dst_buffer as _, dst_offset as _, stride as _, flags as _);
         ()
     }
     #[inline]

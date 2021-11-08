@@ -163,15 +163,9 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCullModeEXT.html) · Function"]
     #[doc(alias = "vkCmdSetCullModeEXT")]
-    pub unsafe fn cmd_set_cull_mode_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, cull_mode: Option<crate::vk1_0::CullModeFlags>) -> () {
+    pub unsafe fn cmd_set_cull_mode_ext(&self, command_buffer: crate::vk1_0::CommandBuffer, cull_mode: crate::vk1_0::CullModeFlags) -> () {
         let _function = self.cmd_set_cull_mode_ext.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(
-            command_buffer as _,
-            match cull_mode {
-                Some(v) => v,
-                None => Default::default(),
-            },
-        );
+        let _return = _function(command_buffer as _, cull_mode as _);
         ()
     }
     #[inline]

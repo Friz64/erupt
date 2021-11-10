@@ -1463,18 +1463,23 @@ impl<'a> StdVideoDecodeH264PictureInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
+    pub fn idr_pic_flag(mut self, idr_pic_flag: u32) -> Self {
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, idr_pic_flag, 2usize, 2usize);
+        self
+    }
+    #[inline]
     pub fn bottom_field_flag(mut self, bottom_field_flag: u32) -> Self {
-        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, bottom_field_flag, 2usize, 2usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, bottom_field_flag, 3usize, 3usize);
         self
     }
     #[inline]
     pub fn is_reference(mut self, is_reference: u32) -> Self {
-        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, is_reference, 3usize, 3usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, is_reference, 4usize, 4usize);
         self
     }
     #[inline]
     pub fn complementary_field_pair(mut self, complementary_field_pair: u32) -> Self {
-        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, complementary_field_pair, 4usize, 4usize);
+        self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, complementary_field_pair, 5usize, 5usize);
         self
     }
     #[inline]

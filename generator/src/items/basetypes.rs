@@ -97,7 +97,7 @@ impl Source {
             .find(|n| n.has_tag_name("name"))
             .and_then(|n| n.text())
         {
-            if let Some(basetype) = self.header.take_basetype(&name) {
+            if let Some(basetype) = self.header.take_basetype(name) {
                 self.basetypes.push(basetype);
             }
         }

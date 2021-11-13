@@ -74,9 +74,9 @@ impl EnumKind {
 
     pub fn guess_from_name(name: &str) -> Self {
         if name.contains("FlagBits") {
-            EnumKind::from_flagbits_name(&name, FlagBitWidth::Unknown)
+            EnumKind::from_flagbits_name(name, FlagBitWidth::Unknown)
         } else {
-            EnumKind::from_enum_name(&name)
+            EnumKind::from_enum_name(name)
         }
     }
 
@@ -385,7 +385,7 @@ impl Enum {
         let mut variant_map = IndexMap::new();
         for variant in &self.variants {
             variant_map
-                .entry(variant.origin.as_ref().or(Some(&enum_origin)).unwrap())
+                .entry(variant.origin.as_ref().or(Some(enum_origin)).unwrap())
                 .or_insert_with(Vec::new)
                 .push(variant);
         }
@@ -395,7 +395,7 @@ impl Enum {
             let enum_path = enum_origin.module_path();
             let variant_idents = variants.iter().map(|variant| variant.name.ident());
             let variant_values = variants.iter().map(|variant| variant.kind.value());
-            let doc = comment_gen.provided_by(&origin);
+            let doc = comment_gen.provided_by(origin);
 
             tokens
                 .entry(origin.clone())
@@ -464,7 +464,7 @@ impl Source {
                                     other => panic!("Unexpected bitmask type: {:?}", other),
                                 };
 
-                                EnumKind::from_flags_name(&name, bitwidth)
+                                EnumKind::from_flags_name(name, bitwidth)
                             }
                             Some("enum") => EnumKind::guess_from_name(name),
                             invalid => {

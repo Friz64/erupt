@@ -323,9 +323,9 @@ impl HeaderSource {
 
         let root_header_path = Path::new("generator/root.h");
         root_gen::generate(
-            &root_header_path,
+            root_header_path,
             include_vulkan,
-            &other_includes_headers,
+            other_includes_headers,
             registry,
         );
 

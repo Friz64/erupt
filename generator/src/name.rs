@@ -45,9 +45,9 @@ impl Name {
                     alias.resolve(source).supports_hash_eq(source)
                 } else if let Some(structure) = source.find_structure(type_name) {
                     structure.supports_hash_eq(source)
-                } else if let Some(_) = source.find_enum(type_name) {
-                    true
-                } else if let Some(_) = source.find_handle(type_name) {
+                } else if source.find_enum(type_name).is_some()
+                    || source.find_handle(type_name).is_some()
+                {
                     true
                 } else if let Some(basetype) = source.find_basetype(type_name) {
                     basetype.ty.supports_hash_eq(source)

@@ -57,11 +57,8 @@ impl ParameterKind {
                     continue;
                 }
 
-                let is_passthrough = match &param.ty {
-                    Type::Pointer { to, .. } if **to == Type::Void => true,
-                    _ => false,
-                };
-
+                let is_passthrough =
+                    matches!(&param.ty, Type::Pointer { to, .. } if **to == Type::Void);
                 match group {
                     // Apply `Handle` kind if it qualifies as a handle
                     0 => {
@@ -119,7 +116,7 @@ impl ParameterKind {
                             });
 
                             if let Type::Named(Name::Type(type_name)) = &**to {
-                                if let Some(structure) = source.find_structure(&type_name) {
+                                if let Some(structure) = source.find_structure(type_name) {
                                     if structure.has_p_next(Mutability::Mut) {
                                         *param_kind = Some(ParameterKind::ValueWrittenToChained {
                                             inner: (**to).clone(),
@@ -182,7 +179,6 @@ impl Function {
         //log::trace!("Processing wrapper for `{}`", ident);
 
         let handle_type = command_level.handle_type();
-
         let kinds = ParameterKind::generate_list(source, &self.parameters, handle_type.as_ref());
 
         // Parameters to the user-facing function

@@ -260,9 +260,9 @@ impl Type {
 
     pub fn builderify(self, source: &Source) -> Type {
         if let Type::Named(Name::Type(name)) = &self {
-            let structure = source.find_structure(&name).or_else(|| {
+            let structure = source.find_structure(name).or_else(|| {
                 source
-                    .find_type_alias(&name)
+                    .find_type_alias(name)
                     .and_then(|alias| source.find_structure(alias.resolve_to_type_name(source)))
             });
 

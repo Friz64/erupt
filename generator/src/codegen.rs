@@ -155,11 +155,11 @@ pub fn generate(source: &Source) {
     }
 
     for alias in source.aliases.iter().filter(|v| v.origin.is_some()) {
-        codemap.extend(alias.tokens(&comment_gen, &source));
+        codemap.extend(alias.tokens(&comment_gen, source));
     }
 
     for basetype in source.basetypes.iter().filter(|v| v.origin.is_some()) {
-        codemap.extend(basetype.tokens(&comment_gen, &source));
+        codemap.extend(basetype.tokens(&comment_gen, source));
     }
 
     for handle in source.handles.iter().filter(|v| v.origin.is_some()) {
@@ -176,11 +176,11 @@ pub fn generate(source: &Source) {
         .chain(&source.func_pointers)
         .filter(|v| v.origin.is_some());
     for func in functions {
-        codemap.extend(func.tokens(&comment_gen, &source));
+        codemap.extend(func.tokens(&comment_gen, source));
     }
 
     for structure in source.structures.iter().filter(|v| v.origin.is_some()) {
-        codemap.extend(structure.tokens(&comment_gen, &source));
+        codemap.extend(structure.tokens(&comment_gen, source));
     }
 
     codemap.extend(defines::tokens(&comment_gen));

@@ -195,7 +195,7 @@ impl Function {
                         let ty = Declaration::from_decl_info(
                             DeclarationInfo {
                                 type_info: declaration.specifiers.as_slice().try_into()?,
-                                declarator: Some(&declarator),
+                                declarator: Some(declarator),
                                 bitwidth: BitWidth::Full,
                             },
                             value_dependencies,
@@ -279,7 +279,7 @@ impl Source {
                     .and_then(|n| n.children().find(|n| n.has_tag_name("name")))
                     .and_then(|n| n.text())
                 {
-                    Some(name) => FunctionName::new(&name),
+                    Some(name) => FunctionName::new(name),
                     _ => panic!("Function has no proto/name text: {:?}", node),
                 };
 
@@ -304,7 +304,7 @@ impl Source {
             .find(|n| n.has_tag_name("name"))
             .and_then(|n| n.text())
         {
-            if let Some(mut function) = self.header.take_function(&FunctionName::new(&name)) {
+            if let Some(mut function) = self.header.take_function(&FunctionName::new(name)) {
                 function.pfn = true;
                 self.func_pointers.push(function);
             }

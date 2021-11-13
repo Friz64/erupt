@@ -254,10 +254,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryZirconHandleFUCHSIA.html) · Function"]
     #[doc(alias = "vkGetMemoryZirconHandleFUCHSIA")]
-    pub unsafe fn get_memory_zircon_handle_fuchsia(&self, get_zircon_handle_info: &crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA, zircon_handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_memory_zircon_handle_fuchsia(&self, get_zircon_handle_info: &crate::extensions::fuchsia_external_memory::MemoryGetZirconHandleInfoFUCHSIA) -> crate::utils::VulkanResult<*mut std::ffi::c_void> {
         let _function = self.get_memory_zircon_handle_fuchsia.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(self.handle, get_zircon_handle_info as _, zircon_handle);
-        crate::utils::VulkanResult::new(_return, ())
+        let mut zircon_handle = std::ptr::null_mut();
+        let _return = _function(self.handle, get_zircon_handle_info as _, &mut zircon_handle);
+        crate::utils::VulkanResult::new(_return, zircon_handle)
     }
     #[inline]
     #[track_caller]

@@ -363,10 +363,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function"]
     #[doc(alias = "vkGetSemaphoreWin32HandleKHR")]
-    pub unsafe fn get_semaphore_win32_handle_khr(&self, get_win32_handle_info: &crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_semaphore_win32_handle_khr(&self, get_win32_handle_info: &crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR) -> crate::utils::VulkanResult<*mut std::ffi::c_void> {
         let _function = self.get_semaphore_win32_handle_khr.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(self.handle, get_win32_handle_info as _, handle);
-        crate::utils::VulkanResult::new(_return, ())
+        let mut handle = std::ptr::null_mut();
+        let _return = _function(self.handle, get_win32_handle_info as _, &mut handle);
+        crate::utils::VulkanResult::new(_return, handle)
     }
     #[inline]
     #[track_caller]

@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Optimize construction of larger pointer chains
 - Simplify function definitions containing handles
 
+### Fixed
+
+- Wrappers now return instead of taking a `&mut` in more cases
+
 ## [0.20.0+190] - 2021-08-30
 
 ### Added

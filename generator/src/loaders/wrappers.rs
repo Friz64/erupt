@@ -57,7 +57,11 @@ impl ParameterKind {
                     continue;
                 }
 
-                let is_passthrough = param.ty.has_types(&[Type::Void]);
+                let is_passthrough = match &param.ty {
+                    Type::Pointer { to, .. } if **to == Type::Void => true,
+                    _ => false,
+                };
+
                 match group {
                     // Apply `Handle` kind if it qualifies as a handle
                     0 => {
@@ -105,9 +109,11 @@ impl ParameterKind {
                     }
                     // Apply other kinds
                     5 => match (&param.metadata.optional, &param.ty, &param.metadata.length) {
-                        (Optional::Never, Type::Pointer { kind, to }, None)
-                            if *kind == Mutability::Mut =>
-                        {
+                        (
+                            Optional::Never | Optional::Sometimes,
+                            Type::Pointer { kind, to },
+                            None,
+                        ) if *kind == Mutability::Mut => {
                             *param_kind = Some(ParameterKind::ValueWrittenTo {
                                 inner: (**to).clone(),
                             });
@@ -122,10 +128,11 @@ impl ParameterKind {
                                 }
                             }
                         }
-                        (optional, Type::Pointer { kind, to }, Some(length))
-                            if matches!(optional, Optional::Never | Optional::Always)
-                                && *kind == Mutability::Mut =>
-                        {
+                        (
+                            Optional::Never | Optional::Always,
+                            Type::Pointer { kind, to },
+                            Some(length),
+                        ) if *kind == Mutability::Mut => {
                             *param_kind = Some(ParameterKind::ArrayWrittenTo {
                                 inner: (**to).clone(),
                                 length: length.into(),
@@ -175,6 +182,7 @@ impl Function {
         //log::trace!("Processing wrapper for `{}`", ident);
 
         let handle_type = command_level.handle_type();
+
         let kinds = ParameterKind::generate_list(source, &self.parameters, handle_type.as_ref());
 
         // Parameters to the user-facing function

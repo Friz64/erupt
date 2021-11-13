@@ -945,10 +945,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function"]
     #[doc(alias = "vkGetDeviceGroupSurfacePresentModesKHR")]
-    pub unsafe fn get_device_group_surface_present_modes_khr(&self, surface: crate::extensions::khr_surface::SurfaceKHR, modes: &mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_device_group_surface_present_modes_khr(&self, surface: crate::extensions::khr_surface::SurfaceKHR) -> crate::utils::VulkanResult<crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR> {
         let _function = self.get_device_group_surface_present_modes_khr.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(self.handle, surface as _, modes as _);
-        crate::utils::VulkanResult::new(_return, ())
+        let mut modes = Default::default();
+        let _return = _function(self.handle, surface as _, &mut modes);
+        crate::utils::VulkanResult::new(_return, modes)
     }
     #[inline]
     #[track_caller]

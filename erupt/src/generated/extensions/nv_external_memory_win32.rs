@@ -176,9 +176,10 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function"]
     #[doc(alias = "vkGetMemoryWin32HandleNV")]
-    pub unsafe fn get_memory_win32_handle_nv(&self, memory: crate::vk1_0::DeviceMemory, handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV, handle: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn get_memory_win32_handle_nv(&self, memory: crate::vk1_0::DeviceMemory, handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> crate::utils::VulkanResult<*mut std::ffi::c_void> {
         let _function = self.get_memory_win32_handle_nv.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(self.handle, memory as _, handle_type as _, handle);
-        crate::utils::VulkanResult::new(_return, ())
+        let mut handle = std::ptr::null_mut();
+        let _return = _function(self.handle, memory as _, handle_type as _, &mut handle);
+        crate::utils::VulkanResult::new(_return, handle)
     }
 }

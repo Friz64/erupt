@@ -15893,10 +15893,11 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkMapMemory.html) · Function"]
     #[doc(alias = "vkMapMemory")]
-    pub unsafe fn map_memory(&self, memory: crate::vk1_0::DeviceMemory, offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, flags: crate::vk1_0::MemoryMapFlags, data: *mut *mut std::ffi::c_void) -> crate::utils::VulkanResult<()> {
+    pub unsafe fn map_memory(&self, memory: crate::vk1_0::DeviceMemory, offset: crate::vk1_0::DeviceSize, size: crate::vk1_0::DeviceSize, flags: crate::vk1_0::MemoryMapFlags) -> crate::utils::VulkanResult<*mut std::ffi::c_void> {
         let _function = self.map_memory.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(self.handle, memory as _, offset as _, size as _, flags as _, data);
-        crate::utils::VulkanResult::new(_return, ())
+        let mut data = std::ptr::null_mut();
+        let _return = _function(self.handle, memory as _, offset as _, size as _, flags as _, &mut data);
+        crate::utils::VulkanResult::new(_return, data)
     }
     #[inline]
     #[track_caller]

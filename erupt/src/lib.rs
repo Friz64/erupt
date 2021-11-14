@@ -500,7 +500,7 @@ unsafe fn insert_ptr_chain(mut host: *mut vk1_0::BaseOutStructure, mut addition:
 
 #[cfg(test)]
 mod tests {
-    use super::vk;
+    use super::{vk, ExtendableFrom};
     use std::{iter, ptr};
 
     // safety: assumes all pointers in the pointer chain are valid
@@ -520,28 +520,34 @@ mod tests {
     fn ptr_chain_simple() {
         // s1 -> s2 -> s3 -> (null)
         let mut s1 = vk::BaseOutStructure { s_type: vk::StructureType(1), p_next: ptr::null_mut() };
+        let s1 = ptr::addr_of_mut!(s1);
         let mut s2 = vk::BaseOutStructure { s_type: vk::StructureType(2), p_next: ptr::null_mut() };
-        s1.p_next = &mut s2;
+        let s2 = ptr::addr_of_mut!(s2);
         let mut s3 = vk::BaseOutStructure { s_type: vk::StructureType(3), p_next: ptr::null_mut() };
-        s2.p_next = &mut s3;
+        let s3 = ptr::addr_of_mut!(s3);
+        unsafe {
+            (*s1).p_next = s2;
+            (*s2).p_next = s3;
+        }
 
         // s4 -> (null)
         let mut s4 = vk::BaseOutStructure { s_type: vk::StructureType(4), p_next: ptr::null_mut() };
-
+        let s4 = ptr::addr_of_mut!(s4);
         // s5 -> (null)
         let mut s5 = vk::BaseOutStructure { s_type: vk::StructureType(5), p_next: ptr::null_mut() };
-
+        let s5 = ptr::addr_of_mut!(s5);
         // s6 -> (null)
         let mut s6 = vk::BaseOutStructure { s_type: vk::StructureType(6), p_next: ptr::null_mut() };
+        let s6 = ptr::addr_of_mut!(s6);
 
         // s1 -> s6 -> s5 -> s4 -> s2 -> s3 -> (null)
         unsafe {
-            super::insert_ptr_chain(&mut s1, &mut s4);
-            super::insert_ptr_chain(&mut s1, &mut s5);
-            super::insert_ptr_chain(&mut s1, &mut s6);
+            super::insert_ptr_chain(s1, s4);
+            super::insert_ptr_chain(s1, s5);
+            super::insert_ptr_chain(s1, s6);
         }
 
-        let mut iter = unsafe { iterate_ptr_chain(&mut s1) }.map(|item| unsafe { *item }.s_type.0);
+        let mut iter = unsafe { iterate_ptr_chain(s1) }.map(|item| unsafe { (*item).s_type.0 });
         assert_eq!(iter.next(), Some(1));
         assert_eq!(iter.next(), Some(6));
         assert_eq!(iter.next(), Some(5));
@@ -555,30 +561,54 @@ mod tests {
     fn ptr_chain_addition_chain() {
         // s1 -> s2 -> s3 -> (null)
         let mut s1 = vk::BaseOutStructure { s_type: vk::StructureType(1), p_next: ptr::null_mut() };
+        let s1 = ptr::addr_of_mut!(s1);
         let mut s2 = vk::BaseOutStructure { s_type: vk::StructureType(2), p_next: ptr::null_mut() };
-        s1.p_next = &mut s2;
+        let s2 = ptr::addr_of_mut!(s2);
         let mut s3 = vk::BaseOutStructure { s_type: vk::StructureType(3), p_next: ptr::null_mut() };
-        s2.p_next = &mut s3;
+        let s3 = ptr::addr_of_mut!(s3);
+        unsafe {
+            (*s1).p_next = s2;
+            (*s2).p_next = s3;
+        }
 
         // s4 -> s5 -> s6 -> (null)
         let mut s4 = vk::BaseOutStructure { s_type: vk::StructureType(4), p_next: ptr::null_mut() };
+        let s4 = ptr::addr_of_mut!(s4);
         let mut s5 = vk::BaseOutStructure { s_type: vk::StructureType(5), p_next: ptr::null_mut() };
-        s4.p_next = &mut s5;
+        let s5 = ptr::addr_of_mut!(s5);
         let mut s6 = vk::BaseOutStructure { s_type: vk::StructureType(6), p_next: ptr::null_mut() };
-        s5.p_next = &mut s6;
+        let s6 = ptr::addr_of_mut!(s6);
+        unsafe {
+            (*s4).p_next = s5;
+            (*s5).p_next = s6;
+        }
 
         // s1 -> s4 -> s5 -> s6 -> s2 -> s3 -> (null)
         unsafe {
-            super::insert_ptr_chain(&mut s1, &mut s4);
+            super::insert_ptr_chain(s1, s4);
         }
 
-        let mut iter = unsafe { iterate_ptr_chain(&mut s1) }.map(|item| unsafe { *item }.s_type.0);
+        let mut iter = unsafe { iterate_ptr_chain(s1) }.map(|item| unsafe { (*item).s_type.0 });
         assert_eq!(iter.next(), Some(1));
         assert_eq!(iter.next(), Some(4));
         assert_eq!(iter.next(), Some(5));
         assert_eq!(iter.next(), Some(6));
         assert_eq!(iter.next(), Some(2));
         assert_eq!(iter.next(), Some(3));
+        assert_eq!(iter.next(), None);
+    }
+
+    #[test]
+    fn ptr_chain_real_world() {
+        let mut vk1_1features = vk::PhysicalDeviceVulkan11FeaturesBuilder::new();
+        let mut vk1_2features = vk::PhysicalDeviceVulkan12FeaturesBuilder::new();
+        let mut features = vk::PhysicalDeviceFeatures2Builder::new().extend_from(&mut vk1_1features).extend_from(&mut vk1_2features);
+
+        let base_ptr = ptr::addr_of_mut!(features) as *mut vk::BaseOutStructure;
+        let mut iter = unsafe { iterate_ptr_chain(base_ptr) }.map(|item| unsafe { (*item).s_type });
+        assert_eq!(iter.next(), Some(vk::StructureType::PHYSICAL_DEVICE_FEATURES_2));
+        assert_eq!(iter.next(), Some(vk::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES));
+        assert_eq!(iter.next(), Some(vk::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES));
         assert_eq!(iter.next(), None);
     }
 }

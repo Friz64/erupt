@@ -122,6 +122,8 @@ pub mod ext_host_query_reset;
 pub mod ext_image_drm_format_modifier;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_image_robustness.html) · Vulkan extension"]
 pub mod ext_image_robustness;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_image_view_min_lod.html) · Vulkan extension"]
+pub mod ext_image_view_min_lod;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_index_type_uint8.html) · Vulkan extension"]
 pub mod ext_index_type_uint8;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_inline_uniform_block.html) · Vulkan extension"]

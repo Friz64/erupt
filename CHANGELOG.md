@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 198
+- Update Vulkan Headers to version 199
 - Rename `.build()` to `.build_dangling()` to make it look less innocent
 - Optimize construction of larger pointer chains
 - Simplify function definitions containing handles

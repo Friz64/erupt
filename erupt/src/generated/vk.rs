@@ -123,6 +123,8 @@ pub use crate::extensions::ext_image_drm_format_modifier::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_image_robustness::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_image_view_min_lod::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_index_type_uint8::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_inline_uniform_block::*;

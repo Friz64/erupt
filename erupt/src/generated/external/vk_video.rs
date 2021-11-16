@@ -454,17 +454,6 @@ impl crate::external::vk_video::StdVideoH265PictureType {
     pub const IDR: Self = Self(3);
     pub const INVALID: Self = Self(2147483647);
 }
-#[doc = "<s>Vulkan Manual Page</s> · Enum"]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct StdVideoEncodeH265SliceSegmentHeader(pub i32);
-impl std::fmt::Debug for StdVideoEncodeH265SliceSegmentHeader {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(match self {
-            _ => "(unknown variant)",
-        })
-    }
-}
 #[doc = "<s>Vulkan Manual Page</s> · Structure"]
 #[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]

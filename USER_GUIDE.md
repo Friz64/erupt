@@ -15,15 +15,15 @@ let app_info = vk::ApplicationInfoBuilder::new()
     .api_version(vk::API_VERSION_1_1);
 
 let instance_info = vk::InstanceCreateInfoBuilder::new()
-    .application_info(&app_info); // <--- `Deref` instead of `.build()`
+    .application_info(&app_info); // <--- `Deref` instead of `.build_dangling()`
 ```
 
-You can use the `.build()` method on builders to convert back to the raw inner
-struct. Wherever possible, its use should be avoided because it gets rid of the
-associated lifetime, allowing for memory safety hazards. Every builder
-implements `Deref` and `DerefMut` to its inner struct, which is the preferred
-method of accessing it. Only call `.build()` as late as possible when you need
-ownership access.
+You can use the `.build_dangling()` method on builders to convert back to the
+raw inner struct. Wherever possible, its use should be avoided because it gets
+rid of the associated lifetime, allowing for memory safety hazards. Every
+builder implements `Deref` and `DerefMut` to its inner struct, which is the
+preferred method of accessing it. Only call `.build_dangling()` as late as
+possible when you need ownership access.
 
 ## Loaders
 
@@ -131,7 +131,7 @@ let features_builder = vk::PhysicalDeviceFeatures2Builder::new()
 
 let features = instance.get_physical_device_features2(
     physical_device,
-    Some(features_builder.build()),
+    Some(features_builder.build_dangling()),
 );
 
 // `features`, `line_rasterization_features` and `shader_clock_features`

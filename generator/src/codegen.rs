@@ -151,7 +151,7 @@ pub fn generate(source: &Source) {
             constant.origin = Some(Origin::Feature { major: 1, minor: 0 });
         }
 
-        codemap.extend(constant.tokens(&comment_gen));
+        codemap.extend(constant.tokens(&comment_gen, &source.deprecated_variants));
     }
 
     for alias in source.aliases.iter().filter(|v| v.origin.is_some()) {
@@ -166,8 +166,9 @@ pub fn generate(source: &Source) {
         codemap.extend(handle.tokens(&comment_gen));
     }
 
+    dbg!(&source.deprecated_variants);
     for en in source.enums.iter().filter(|v| v.origin.is_some()) {
-        codemap.extend(en.tokens(&comment_gen));
+        codemap.extend(en.tokens(&comment_gen, &source.deprecated_variants));
     }
 
     let functions = source

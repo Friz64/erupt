@@ -170,7 +170,7 @@ impl crate::extensions::khr_video_queue::VideoChromaSubsamplingFlagBitsKHR {
     pub const _422_KHR: Self = Self(4);
     pub const _444_KHR: Self = Self(8);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagsKHR.html) · Bitmask of [`VideoComponentBitDepthFlagBitsKHR`]"] # [doc (alias = "VkVideoComponentBitDepthFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoComponentBitDepthFlagsKHR : u32 { const VIDEO_COMPONENT_DEPTH_INVALID_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_INVALID_KHR . 0 ; const VIDEO_COMPONENT_DEPTH_8_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_8_KHR . 0 ; const VIDEO_COMPONENT_DEPTH_10_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_10_KHR . 0 ; const VIDEO_COMPONENT_DEPTH_12_KHR = VideoComponentBitDepthFlagBitsKHR :: VIDEO_COMPONENT_DEPTH_12_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagsKHR.html) · Bitmask of [`VideoComponentBitDepthFlagBitsKHR`]"] # [doc (alias = "VkVideoComponentBitDepthFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoComponentBitDepthFlagsKHR : u32 { const INVALID_KHR = VideoComponentBitDepthFlagBitsKHR :: INVALID_KHR . 0 ; const _8_KHR = VideoComponentBitDepthFlagBitsKHR :: _8_KHR . 0 ; const _10_KHR = VideoComponentBitDepthFlagBitsKHR :: _10_KHR . 0 ; const _12_KHR = VideoComponentBitDepthFlagBitsKHR :: _12_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagBitsKHR.html) · Bits enum of [`VideoComponentBitDepthFlagsKHR`]"]
 #[doc(alias = "VkVideoComponentBitDepthFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -186,20 +186,20 @@ impl VideoComponentBitDepthFlagBitsKHR {
 impl std::fmt::Debug for VideoComponentBitDepthFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::VIDEO_COMPONENT_DEPTH_INVALID_KHR => "VIDEO_COMPONENT_DEPTH_INVALID_KHR",
-            &Self::VIDEO_COMPONENT_DEPTH_8_KHR => "VIDEO_COMPONENT_DEPTH_8_KHR",
-            &Self::VIDEO_COMPONENT_DEPTH_10_KHR => "VIDEO_COMPONENT_DEPTH_10_KHR",
-            &Self::VIDEO_COMPONENT_DEPTH_12_KHR => "VIDEO_COMPONENT_DEPTH_12_KHR",
+            &Self::INVALID_KHR => "INVALID_KHR",
+            &Self::_8_KHR => "_8_KHR",
+            &Self::_10_KHR => "_10_KHR",
+            &Self::_12_KHR => "_12_KHR",
             _ => "(unknown variant)",
         })
     }
 }
 #[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
 impl crate::extensions::khr_video_queue::VideoComponentBitDepthFlagBitsKHR {
-    pub const VIDEO_COMPONENT_DEPTH_INVALID_KHR: Self = Self(0);
-    pub const VIDEO_COMPONENT_DEPTH_8_KHR: Self = Self(1);
-    pub const VIDEO_COMPONENT_DEPTH_10_KHR: Self = Self(4);
-    pub const VIDEO_COMPONENT_DEPTH_12_KHR: Self = Self(16);
+    pub const INVALID_KHR: Self = Self(0);
+    pub const _8_KHR: Self = Self(1);
+    pub const _10_KHR: Self = Self(4);
+    pub const _12_KHR: Self = Self(16);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilityFlagsKHR.html) · Bitmask of [`VideoCapabilityFlagBitsKHR`]"] # [doc (alias = "VkVideoCapabilityFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct VideoCapabilityFlagsKHR : u32 { const PROTECTED_CONTENT_KHR = VideoCapabilityFlagBitsKHR :: PROTECTED_CONTENT_KHR . 0 ; const SEPARATE_REFERENCE_IMAGES_KHR = VideoCapabilityFlagBitsKHR :: SEPARATE_REFERENCE_IMAGES_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilityFlagBitsKHR.html) · Bits enum of [`VideoCapabilityFlagsKHR`]"]

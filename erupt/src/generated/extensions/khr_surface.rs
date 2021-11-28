@@ -55,6 +55,7 @@ impl std::fmt::Debug for ColorSpaceKHR {
 #[doc = "Provided by [`crate::extensions::khr_surface`]"]
 impl crate::extensions::khr_surface::ColorSpaceKHR {
     pub const SRGB_NONLINEAR_KHR: Self = Self(0);
+    #[deprecated]
     pub const COLORSPACE_SRGB_NONLINEAR_KHR: Self = Self::SRGB_NONLINEAR_KHR;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`]"] # [doc (alias = "VkCompositeAlphaFlagsKHR")] # [derive (Default)] # [repr (transparent)] pub struct CompositeAlphaFlagsKHR : u32 { const OPAQUE_KHR = CompositeAlphaFlagBitsKHR :: OPAQUE_KHR . 0 ; const PRE_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: PRE_MULTIPLIED_KHR . 0 ; const POST_MULTIPLIED_KHR = CompositeAlphaFlagBitsKHR :: POST_MULTIPLIED_KHR . 0 ; const INHERIT_KHR = CompositeAlphaFlagBitsKHR :: INHERIT_KHR . 0 ; } }

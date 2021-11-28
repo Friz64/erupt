@@ -13,7 +13,7 @@ use lang_c::ast::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 const PREFIX: &str = "__ERUPT_CONSTANT_";
 
@@ -58,7 +58,11 @@ impl Constant {
         format_ident!("{}", *self.trimmed_name)
     }
 
-    pub fn tokens(&self, comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
+    pub fn tokens(
+        &self,
+        comment_gen: &DocCommentGen,
+        deprecated_variants: &HashSet<String>,
+    ) -> HashMap<Origin, TokenStream> {
         let origin = self.origin.as_ref().expect("Constant missing origin");
 
         let ident = self.ident();
@@ -70,11 +74,16 @@ impl Constant {
         let ty = self.value.ty();
         let doc = comment_gen.def(None, "Constant", self.origin.as_ref());
 
+        let deprecated = deprecated_variants
+            .contains(&*self.original_name)
+            .then(|| quote! { #[deprecated] });
+
         let mut tokens = HashMap::new();
         tokens.insert(
             origin.clone(),
             quote! {
                 #[doc = #doc]
+                #deprecated
                 #doc_alias_code
                 pub const #ident: #ty = #value;
             },

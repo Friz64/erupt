@@ -43,6 +43,7 @@ impl crate::vk1_0::StructureType {
     pub const PERFORMANCE_STREAM_MARKER_INFO_INTEL: Self = Self(1000210003);
     pub const PERFORMANCE_OVERRIDE_INFO_INTEL: Self = Self(1000210004);
     pub const PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL: Self = Self(1000210005);
+    #[deprecated]
     pub const QUERY_POOL_CREATE_INFO_INTEL: Self = Self::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL;
 }
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
@@ -111,7 +112,7 @@ impl std::fmt::Debug for PerformanceParameterTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
             &Self::HW_COUNTERS_SUPPORTED_INTEL => "HW_COUNTERS_SUPPORTED_INTEL",
-            &Self::STREAM_MARKER_VALIDS_INTEL => "STREAM_MARKER_VALIDS_INTEL",
+            &Self::STREAM_MARKER_VALID_BITS_INTEL => "STREAM_MARKER_VALID_BITS_INTEL",
             _ => "(unknown variant)",
         })
     }
@@ -119,7 +120,7 @@ impl std::fmt::Debug for PerformanceParameterTypeINTEL {
 #[doc = "Provided by [`crate::extensions::intel_performance_query`]"]
 impl crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL {
     pub const HW_COUNTERS_SUPPORTED_INTEL: Self = Self(0);
-    pub const STREAM_MARKER_VALIDS_INTEL: Self = Self(1);
+    pub const STREAM_MARKER_VALID_BITS_INTEL: Self = Self(1);
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceValueTypeINTEL.html) · Enum"]
 #[doc(alias = "VkPerformanceValueTypeINTEL")]

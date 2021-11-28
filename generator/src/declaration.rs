@@ -1,4 +1,4 @@
-use std::borrow::Borrow;
+use std::{borrow::Borrow, collections::HashSet};
 
 use crate::{
     header::BitWidth,
@@ -376,9 +376,11 @@ impl DeclarationMetadata {
         }
     }
 
-    pub fn structure_type(&self) -> Option<EnumVariantName> {
+    pub fn structure_type(&self, deprecated_variants: &HashSet<String>) -> Option<EnumVariantName> {
         for value in &self.values {
-            if let Ok(name) = EnumVariantName::new(value, &TypeName::structure_type()) {
+            if let Ok(name) =
+                EnumVariantName::new(value, &TypeName::structure_type(), deprecated_variants)
+            {
                 if name.prefix_compliant {
                     return Some(name);
                 }
@@ -448,19 +450,25 @@ impl Declaration {
     }
 
     pub fn structure_type_value(&self, source: &Source) -> Option<TokenStream> {
-        self.metadata.structure_type().map(|variant| {
-            let structure_type = Type::Named(Name::Type(TypeName::structure_type()));
-            assert_eq!(self.ty, structure_type);
+        self.metadata
+            .structure_type(&source.deprecated_variants)
+            .map(|variant| {
+                let structure_type = Type::Named(Name::Type(TypeName::structure_type()));
+                assert_eq!(self.ty, structure_type);
 
-            let ty = structure_type.rust_type(source);
-            let variant_ident = variant.ident();
+                let ty = structure_type.rust_type(source);
+                let variant_ident = variant.ident();
 
-            quote! { #ty::#variant_ident }
-        })
+                quote! { #ty::#variant_ident }
+            })
     }
 
     pub fn default_impl(&self, source: &Source) -> TokenStream {
-        if self.metadata.structure_type().is_some() {
+        if self
+            .metadata
+            .structure_type(&source.deprecated_variants)
+            .is_some()
+        {
             quote! { Self::STRUCTURE_TYPE }
         } else {
             self.ty.default_value(source)

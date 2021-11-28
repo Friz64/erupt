@@ -45,6 +45,7 @@ pub struct Source {
     pub latest_vulkan_version: (u32, u32),
     pub header_version: u32,
     pub provisional_extensions: HashSet<String>,
+    pub deprecated_variants: HashSet<String>,
 }
 
 impl Source {
@@ -99,12 +100,25 @@ impl Source {
             })
             .collect();
 
+        let deprecated_variants: HashSet<String> = registry
+            .descendants()
+            .filter(|n| n.has_tag_name("enum"))
+            .filter_map(|n| {
+                let variant_name = n.attribute("name")?;
+                let comment = n.attribute("comment")?;
+
+                let deprecated = comment == "Backwards-compatible alias containing a typo";
+                deprecated.then(|| variant_name.into())
+            })
+            .collect();
+
         let mut header = HeaderSource::new(
             registry,
             &headers_include,
             &include_vulkan,
             &other_includes_headers,
             opt,
+            &deprecated_variants,
         );
 
         let mut source = Source {
@@ -120,6 +134,7 @@ impl Source {
             latest_vulkan_version,
             header_version,
             provisional_extensions: HashSet::new(),
+            deprecated_variants,
         };
 
         for registry_child in registry.children().filter(|n| n.is_element()) {

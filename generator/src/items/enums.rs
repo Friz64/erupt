@@ -21,7 +21,7 @@ use lang_c::{
 };
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 #[derive(Debug)]
 pub enum FlagBitWidth {
@@ -114,10 +114,15 @@ impl EnumVariantKind {
         expression: &CExpression,
         enum_type_name: &TypeName,
         value_dependencies: &ValueDependencies,
+        deprecated_variants: &HashSet<String>,
     ) -> EnumVariantKind {
         match expression {
             CExpression::Identifier(identifier) => {
-                let name = match EnumVariantName::new(&identifier.node.name, enum_type_name) {
+                let name = match EnumVariantName::new(
+                    &identifier.node.name,
+                    enum_type_name,
+                    deprecated_variants,
+                ) {
                     Ok(name) => name,
                     Err(_) => panic!(
                         "Enum variant name is not applicable: {:?}",
@@ -163,13 +168,19 @@ impl EnumVariant {
         enumerator: &Enumerator,
         enum_type_name: &TypeName,
         value_dependencies: &ValueDependencies,
+        deprecated_variants: &HashSet<String>,
     ) -> Result<EnumVariant, NotApplicable> {
         let name = &enumerator.identifier.node.name;
         match &enumerator.expression {
             Some(expression) => Ok(EnumVariant {
                 origin: Default::default(),
-                name: EnumVariantName::new(name, enum_type_name)?,
-                kind: EnumVariantKind::from_c(&expression.node, enum_type_name, value_dependencies),
+                name: EnumVariantName::new(name, enum_type_name, deprecated_variants)?,
+                kind: EnumVariantKind::from_c(
+                    &expression.node,
+                    enum_type_name,
+                    value_dependencies,
+                    deprecated_variants,
+                ),
             }),
             None => panic!("Enumerator has no expression: {:?}", enumerator),
         }
@@ -179,6 +190,7 @@ impl EnumVariant {
         init_declarator: &InitDeclarator,
         enum_type_name: &TypeName,
         value_dependencies: &ValueDependencies,
+        deprecated_variants: &HashSet<String>,
     ) -> Result<EnumVariant, NotApplicable> {
         let name = match &init_declarator.declarator.node.kind.node {
             DeclaratorKind::Identifier(ident) => &ident.node.name,
@@ -189,11 +201,12 @@ impl EnumVariant {
             Some(initializer) => match &initializer.node {
                 Initializer::Expression(expression) => Ok(EnumVariant {
                     origin: Default::default(),
-                    name: EnumVariantName::new(name, enum_type_name)?,
+                    name: EnumVariantName::new(name, enum_type_name, deprecated_variants)?,
                     kind: EnumVariantKind::from_c(
                         &expression.node,
                         enum_type_name,
                         value_dependencies,
+                        deprecated_variants,
                     ),
                 }),
                 _ => panic!("Initializer is not an expression"),
@@ -205,6 +218,7 @@ impl EnumVariant {
     pub fn all_from_c(
         declaration: &CDeclaration,
         value_dependencies: &ValueDependencies,
+        deprecated_variants: &HashSet<String>,
     ) -> Result<Vec<EnumVariant>, NotApplicable> {
         let mut variants = Vec::new();
 
@@ -243,6 +257,7 @@ impl EnumVariant {
                     init_declarator,
                     &enum_type_name,
                     value_dependencies,
+                    deprecated_variants,
                 );
 
                 if let Ok(v) = variant {
@@ -266,6 +281,7 @@ impl EnumVariant {
                             &enumerator.node,
                             &enum_type_name,
                             value_dependencies,
+                            deprecated_variants,
                         );
                         if let Ok(v) = variant {
                             if !variants.contains(&v) {
@@ -299,7 +315,11 @@ pub struct Enum {
 }
 
 impl Enum {
-    pub fn tokens(&self, comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
+    pub fn tokens(
+        &self,
+        comment_gen: &DocCommentGen,
+        deprecated_variants: &HashSet<String>,
+    ) -> HashMap<Origin, TokenStream> {
         let enum_origin = self.origin.as_ref().expect("Enum missing origin");
 
         let mut stream = match &self.kind {
@@ -340,6 +360,16 @@ impl Enum {
                     self.origin.as_ref(),
                 );
 
+                let flagbits_deprecated = self.variants.iter().map(|variant| {
+                    deprecated_variants
+                        .contains(&*variant.name.original)
+                        .then(|| {
+                            quote! {
+                                    #[allow(deprecated)]
+                                    #[deprecated]
+                            }
+                        })
+                });
                 let flagbits_variants = self.variants.iter().map(|variant| variant.name.ident());
                 let empty_bitflag_workaround = self.variants.is_empty().then(|| {
                     quote! {
@@ -356,7 +386,10 @@ impl Enum {
                         #[repr(transparent)]
                         pub struct #flags_ident: #bitbase {
                             #empty_bitflag_workaround
-                            #(const #flagbits_variants = #flagbits_ident::#flagbits_variants.0;)*
+                            #(
+                                #flagbits_deprecated
+                                const #flagbits_variants = #flagbits_ident::#flagbits_variants.0;
+                            )*
                         }
                     }
 
@@ -393,6 +426,11 @@ impl Enum {
         let enum_ident = self.kind.enum_ident();
         for (origin, variants) in variant_map {
             let enum_path = enum_origin.module_path();
+            let variant_deprecated = variants.iter().map(|variant| {
+                deprecated_variants
+                    .contains(&*variant.name.original)
+                    .then(|| quote! { #[deprecated] })
+            });
             let variant_idents = variants.iter().map(|variant| variant.name.ident());
             let variant_values = variants.iter().map(|variant| variant.kind.value());
             let doc = comment_gen.provided_by(origin);
@@ -403,7 +441,10 @@ impl Enum {
                 .extend(quote! {
                     #[doc = #doc]
                     impl crate:: #enum_path #enum_ident {
-                        #(pub const #variant_idents: Self = #variant_values;)*
+                        #(
+                            #variant_deprecated
+                            pub const #variant_idents: Self = #variant_values;
+                        )*
                     }
                 });
         }

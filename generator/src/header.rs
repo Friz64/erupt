@@ -25,6 +25,7 @@ use lang_c::{
     span::Node,
 };
 use std::{
+    collections::HashSet,
     fmt::Debug,
     fs, mem,
     path::{Path, PathBuf},
@@ -308,6 +309,7 @@ impl HeaderSource {
         include_vulkan: &Path,
         other_includes_headers: &[PathBuf],
         opt: &Opt,
+        deprecated_variants: &HashSet<String>,
     ) -> HeaderSource {
         let header_config = Config {
             cpp_command: opt.preprocessor.display().to_string(),
@@ -342,7 +344,47 @@ impl HeaderSource {
             fs::write("header_debug", debug_print).expect("Failed to write header_debug");
         }
 
-        (&unit).into()
+        HeaderSource::from_translation_unit(&unit, deprecated_variants)
+    }
+
+    fn from_translation_unit(
+        unit: &TranslationUnit,
+        deprecated_variants: &HashSet<String>,
+    ) -> Self {
+        let mut structures = Vec::new();
+        let mut functions = Vec::new();
+        let mut basetypes = Vec::new();
+
+        let declarations: Vec<_> = unit
+            .0
+            .iter()
+            .filter_map(|external| {
+                if let ExternalDeclaration::Declaration(declaration) = &external.node {
+                    Some(&declaration.node)
+                } else {
+                    None
+                }
+            })
+            .collect();
+
+        let value_dependencies = ValueDependencies::collect(&declarations, deprecated_variants);
+        for &declaration in &declarations {
+            if let Ok(structure) = Structure::from_c(declaration, &value_dependencies) {
+                structures.push(structure);
+            } else if let Ok(function) = Function::from_c(declaration, &value_dependencies) {
+                functions.push(function);
+            } else if let Ok(basetype) = Basetype::from_c(declaration, &value_dependencies) {
+                basetypes.push(basetype);
+            }
+        }
+
+        HeaderSource {
+            structures,
+            functions,
+            basetypes,
+            constants: value_dependencies.constants,
+            enum_variants: value_dependencies.enum_variants,
+        }
     }
 
     pub fn take_structure(&mut self, name: &str) -> Option<Structure> {
@@ -394,14 +436,17 @@ pub struct ValueDependencies {
 }
 
 impl ValueDependencies {
-    fn collect(declarations: &[&CDeclaration]) -> ValueDependencies {
+    fn collect(
+        declarations: &[&CDeclaration],
+        deprecated_variants: &HashSet<String>,
+    ) -> ValueDependencies {
         let mut value_dependencies = ValueDependencies::default();
 
         for declaration in declarations {
             if let Ok(constant) = Constant::from_c(declaration, &value_dependencies) {
                 value_dependencies.constants.push(constant);
             } else if let Ok(enum_variant) =
-                EnumVariant::all_from_c(declaration, &value_dependencies)
+                EnumVariant::all_from_c(declaration, &value_dependencies, deprecated_variants)
             {
                 value_dependencies.enum_variants.extend(enum_variant);
             }
@@ -432,44 +477,5 @@ impl ValueDependencies {
         };
 
         enum_variant().or_else(constant)
-    }
-}
-
-impl From<&TranslationUnit> for HeaderSource {
-    fn from(unit: &TranslationUnit) -> Self {
-        let mut structures = Vec::new();
-        let mut functions = Vec::new();
-        let mut basetypes = Vec::new();
-
-        let declarations: Vec<_> = unit
-            .0
-            .iter()
-            .filter_map(|external| {
-                if let ExternalDeclaration::Declaration(declaration) = &external.node {
-                    Some(&declaration.node)
-                } else {
-                    None
-                }
-            })
-            .collect();
-
-        let value_dependencies = ValueDependencies::collect(&declarations);
-        for &declaration in &declarations {
-            if let Ok(structure) = Structure::from_c(declaration, &value_dependencies) {
-                structures.push(structure);
-            } else if let Ok(function) = Function::from_c(declaration, &value_dependencies) {
-                functions.push(function);
-            } else if let Ok(basetype) = Basetype::from_c(declaration, &value_dependencies) {
-                basetypes.push(basetype);
-            }
-        }
-
-        HeaderSource {
-            structures,
-            functions,
-            basetypes,
-            constants: value_dependencies.constants,
-            enum_variants: value_dependencies.enum_variants,
-        }
     }
 }

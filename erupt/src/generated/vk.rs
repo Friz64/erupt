@@ -43,6 +43,8 @@ pub use crate::extensions::amd_texture_gather_bias_lod::*;
 #[doc(no_inline)]
 pub use crate::extensions::android_external_memory_android_hardware_buffer::*;
 #[doc(no_inline)]
+pub use crate::extensions::arm_rasterization_order_attachment_access::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_4444_formats::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_acquire_drm_display::*;
@@ -72,6 +74,8 @@ pub use crate::extensions::ext_debug_marker::*;
 pub use crate::extensions::ext_debug_report::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_debug_utils::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_depth_clip_control::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_depth_clip_enable::*;
 #[doc(no_inline)]

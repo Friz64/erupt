@@ -7,6 +7,7 @@ use log::warn;
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};
 use std::{
+    collections::HashSet,
     fmt::{self, Debug},
     hash::{Hash, Hasher},
 };
@@ -249,11 +250,13 @@ pub struct EnumVariantName {
 }
 
 impl EnumVariantName {
-    pub fn new(src: &str, enum_type: &TypeName) -> Result<EnumVariantName, NotApplicable> {
-        let trimmed = src
-            .trim_start_matches("VK_")
-            .replace("_BIT", "")
-            .to_uppercase();
+    pub fn new(
+        src: &str,
+        enum_type: &TypeName,
+        deprecated_variants: &HashSet<String>,
+    ) -> Result<EnumVariantName, NotApplicable> {
+        let mut trimmed = src.trim_start_matches("VK_").to_uppercase();
+        trim_trailing_bit_part(&mut trimmed);
 
         let mut enum_type_prefix = enum_type
             .no_tag
@@ -267,7 +270,10 @@ impl EnumVariantName {
         let prefix_compliant = trimmed.starts_with(&enum_type_prefix);
 
         let prefix_compliance_warning_exempt = [TypeName::result()];
-        if !prefix_compliant && !prefix_compliance_warning_exempt.contains(enum_type) {
+        if !prefix_compliant
+            && !deprecated_variants.contains(src)
+            && !prefix_compliance_warning_exempt.contains(enum_type)
+        {
             warn!("{:?} (from {:?}) is not prefix compliant", src, enum_type);
         }
 
@@ -305,6 +311,28 @@ impl EnumVariantName {
 
     pub fn ident(&self) -> Ident {
         format_ident!("{}", *self.variant)
+    }
+}
+
+// invalid:
+// VK_VIDEO_COMPONENT_BIT_DEPTH_INVALID_KHR
+//                   ^^^^ - last bit str
+//                                     ^ - last underscore
+
+// valid:
+// VK_VIDEO_COMPONENT_BIT_DEPTH_8_BIT_KHR
+//                               ^^^^ - last bit str
+//                                   ^ - last underscore
+// VK_ACCESS_INDIRECT_COMMAND_READ_BIT
+//                                ^^^^ - last bit str
+//                                ^ - last underscore
+fn trim_trailing_bit_part(trimmed: &mut String) {
+    if let Some((last_bit_idx, bit_str)) = trimmed.match_indices("_BIT").last() {
+        let (last_underscore_idx, _) = trimmed.match_indices("_").last().unwrap();
+        let bit_str_len = bit_str.len();
+        if last_bit_idx + bit_str_len >= last_underscore_idx {
+            trimmed.replace_range(last_bit_idx..last_bit_idx + bit_str_len, "");
+        }
     }
 }
 

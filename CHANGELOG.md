@@ -9,14 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 199
+- Update Vulkan Headers to version 200
 - Rename `.build()` to `.build_dangling()` to make it look less innocent
 - Optimize construction of larger pointer chains
 - Simplify function definitions containing handles
+- Deprecate several invalid enum variants
 
 ### Fixed
 
 - Wrappers now return instead of taking a `&mut` in more cases
+- Fix over-agressive trimming of "BIT" in enum variants
 
 ## [0.20.0+190] - 2021-08-30
 

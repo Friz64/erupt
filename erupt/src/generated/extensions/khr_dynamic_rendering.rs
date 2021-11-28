@@ -22,8 +22,12 @@ impl crate::vk1_0::AttachmentStoreOp {
 }
 #[doc = "Provided by [`crate::extensions::khr_dynamic_rendering`]"]
 impl crate::vk1_0::PipelineCreateFlagBits {
-    pub const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(2097152);
-    pub const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT: Self = Self(4194304);
+    pub const RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self(2097152);
+    pub const RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT: Self = Self(4194304);
+    #[deprecated]
+    pub const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR: Self = Self::RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR;
+    #[deprecated]
+    pub const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT: Self = Self::RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT;
 }
 #[doc = "Provided by [`crate::extensions::khr_dynamic_rendering`]"]
 impl crate::vk1_0::StructureType {

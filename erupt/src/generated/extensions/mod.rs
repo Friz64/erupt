@@ -42,6 +42,8 @@ pub mod amd_shader_trinary_minmax;
 pub mod amd_texture_gather_bias_lod;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_ANDROID_external_memory_android_hardware_buffer.html) · Vulkan extension"]
 pub mod android_external_memory_android_hardware_buffer;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_ARM_rasterization_order_attachment_access.html) · Vulkan extension"]
+pub mod arm_rasterization_order_attachment_access;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_4444_formats.html) · Vulkan extension"]
 pub mod ext_4444_formats;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_acquire_drm_display.html) · Vulkan extension"]
@@ -72,6 +74,8 @@ pub mod ext_debug_marker;
 pub mod ext_debug_report;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_debug_utils.html) · Vulkan extension"]
 pub mod ext_debug_utils;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_depth_clip_control.html) · Vulkan extension"]
+pub mod ext_depth_clip_control;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_depth_clip_enable.html) · Vulkan extension"]
 pub mod ext_depth_clip_enable;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_EXT_depth_range_unrestricted.html) · Vulkan extension"]

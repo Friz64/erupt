@@ -5,9 +5,11 @@ pub const KHR_MAINTENANCE_2_SPEC_VERSION: u32 = 1;
 #[doc(alias = "VK_KHR_MAINTENANCE_2_EXTENSION_NAME")]
 pub const KHR_MAINTENANCE_2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_maintenance2");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[deprecated]
 #[doc(alias = "VK_KHR_MAINTENANCE2_SPEC_VERSION")]
 pub const KHR_MAINTENANCE2_SPEC_VERSION: u32 = 1;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[deprecated]
 #[doc(alias = "VK_KHR_MAINTENANCE2_EXTENSION_NAME")]
 pub const KHR_MAINTENANCE2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_maintenance2");
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPointClippingBehaviorKHR.html) · Alias"]

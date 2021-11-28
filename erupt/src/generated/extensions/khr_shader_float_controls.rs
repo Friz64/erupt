@@ -22,7 +22,7 @@ impl crate::vk1_0::StructureType {
 }
 #[doc = "Provided by [`crate::extensions::khr_shader_float_controls`]"]
 impl crate::vk1_2::ShaderFloatControlsIndependence {
-    pub const _32_ONLY_KHR: Self = Self::_32_ONLY;
+    pub const _32_BIT_ONLY_KHR: Self = Self::_32_ONLY;
     pub const ALL_KHR: Self = Self::ALL;
     pub const NONE_KHR: Self = Self::NONE;
 }

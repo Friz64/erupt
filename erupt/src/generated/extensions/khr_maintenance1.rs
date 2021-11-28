@@ -5,9 +5,11 @@ pub const KHR_MAINTENANCE_1_SPEC_VERSION: u32 = 2;
 #[doc(alias = "VK_KHR_MAINTENANCE_1_EXTENSION_NAME")]
 pub const KHR_MAINTENANCE_1_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_maintenance1");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[deprecated]
 #[doc(alias = "VK_KHR_MAINTENANCE1_SPEC_VERSION")]
 pub const KHR_MAINTENANCE1_SPEC_VERSION: u32 = 2;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
+#[deprecated]
 #[doc(alias = "VK_KHR_MAINTENANCE1_EXTENSION_NAME")]
 pub const KHR_MAINTENANCE1_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_KHR_maintenance1");
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]

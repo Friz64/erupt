@@ -9,6 +9,7 @@ pub const FN_GET_PHYSICAL_DEVICE_SURFACE_CAPABILITIES2_EXT: *const std::os::raw:
 #[doc = "Provided by [`crate::extensions::ext_display_surface_counter`]"]
 impl crate::vk1_0::StructureType {
     pub const SURFACE_CAPABILITIES_2_EXT: Self = Self(1000090000);
+    #[deprecated]
     pub const SURFACE_CAPABILITIES2_EXT: Self = Self::SURFACE_CAPABILITIES_2_EXT;
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCounterFlagsEXT.html) · Bitmask of [`SurfaceCounterFlagBitsEXT`]"] # [doc (alias = "VkSurfaceCounterFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct SurfaceCounterFlagsEXT : u32 { const VBLANK_EXT = SurfaceCounterFlagBitsEXT :: VBLANK_EXT . 0 ; } }

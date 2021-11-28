@@ -20,5 +20,6 @@ impl crate::extensions::khr_surface::ColorSpaceKHR {
     pub const ADOBERGB_NONLINEAR_EXT: Self = Self(1000104012);
     pub const PASS_THROUGH_EXT: Self = Self(1000104013);
     pub const EXTENDED_SRGB_NONLINEAR_EXT: Self = Self(1000104014);
+    #[deprecated]
     pub const DCI_P3_LINEAR_EXT: Self = Self::DISPLAY_P3_LINEAR_EXT;
 }

@@ -46,8 +46,11 @@ impl crate::extensions::khr_performance_query::PerformanceCounterScopeKHR {
     pub const COMMAND_BUFFER_KHR: Self = Self(0);
     pub const RENDER_PASS_KHR: Self = Self(1);
     pub const COMMAND_KHR: Self = Self(2);
+    #[deprecated]
     pub const QUERY_SCOPE_COMMAND_BUFFER_KHR: Self = Self::COMMAND_BUFFER_KHR;
+    #[deprecated]
     pub const QUERY_SCOPE_RENDER_PASS_KHR: Self = Self::RENDER_PASS_KHR;
+    #[deprecated]
     pub const QUERY_SCOPE_COMMAND_KHR: Self = Self::COMMAND_KHR;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPerformanceCounterUnitKHR.html) · Enum"]

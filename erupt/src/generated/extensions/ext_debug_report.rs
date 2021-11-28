@@ -18,6 +18,7 @@ impl crate::vk1_0::Result {
 #[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
 impl crate::vk1_0::StructureType {
     pub const DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT: Self = Self(1000011000);
+    #[deprecated]
     pub const DEBUG_REPORT_CREATE_INFO_EXT: Self = Self::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT;
 }
 #[doc = "Provided by [`crate::extensions::ext_debug_report`]"]
@@ -144,7 +145,9 @@ impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
     pub const VALIDATION_CACHE_EXT_EXT: Self = Self(33);
     pub const SAMPLER_YCBCR_CONVERSION_EXT: Self = Self(1000156000);
     pub const DESCRIPTOR_UPDATE_TEMPLATE_EXT: Self = Self(1000085000);
+    #[deprecated]
     pub const DEBUG_REPORT_EXT: Self = Self::DEBUG_REPORT_CALLBACK_EXT_EXT;
+    #[deprecated]
     pub const VALIDATION_CACHE_EXT: Self = Self::VALIDATION_CACHE_EXT_EXT;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDebugReportCallbackEXT.html) · Function"]

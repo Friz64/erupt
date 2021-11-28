@@ -50,7 +50,7 @@ impl crate::vk1_0::ImageUsageFlagBits {
 }
 #[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
 impl crate::vk1_0::QueryType {
-    pub const VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR: Self = Self(1000299000);
+    pub const VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR: Self = Self(1000299000);
 }
 #[doc = "Provided by [`crate::extensions::khr_video_encode_queue`]"]
 impl crate::vk1_0::QueueFlagBits {

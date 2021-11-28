@@ -397,26 +397,6 @@ impl std::fmt::Debug for PipelineLayoutCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateFlags.html) · Bitmask of [`PipelineDepthStencilStateCreateFlagBits`]"] # [doc (alias = "VkPipelineDepthStencilStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDepthStencilStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDepthStencilStateCreateFlags`]"]
-#[doc(alias = "VkPipelineDepthStencilStateCreateFlagBits")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct PipelineDepthStencilStateCreateFlagBits(pub u32);
-impl PipelineDepthStencilStateCreateFlagBits {
-    #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> PipelineDepthStencilStateCreateFlags {
-        PipelineDepthStencilStateCreateFlags::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for PipelineDepthStencilStateCreateFlagBits {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(match self {
-            _ => "(unknown variant)",
-        })
-    }
-}
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDynamicStateCreateFlags.html) · Bitmask of [`PipelineDynamicStateCreateFlagBits`]"] # [doc (alias = "VkPipelineDynamicStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDynamicStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
 #[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineDynamicStateCreateFlags`]"]
 #[doc(alias = "VkPipelineDynamicStateCreateFlagBits")]
@@ -431,26 +411,6 @@ impl PipelineDynamicStateCreateFlagBits {
     }
 }
 impl std::fmt::Debug for PipelineDynamicStateCreateFlagBits {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(match self {
-            _ => "(unknown variant)",
-        })
-    }
-}
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateFlags.html) · Bitmask of [`PipelineColorBlendStateCreateFlagBits`]"] # [doc (alias = "VkPipelineColorBlendStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineColorBlendStateCreateFlags : u32 { # [cfg (empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0 ; } }
-#[doc = "<s>Vulkan Manual Page</s> · Bits enum of [`PipelineColorBlendStateCreateFlags`]"]
-#[doc(alias = "VkPipelineColorBlendStateCreateFlagBits")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct PipelineColorBlendStateCreateFlagBits(pub u32);
-impl PipelineColorBlendStateCreateFlagBits {
-    #[inline]
-    #[doc = "Converts this enum variant to the corresponding bitmask"]
-    pub const fn bitmask(&self) -> PipelineColorBlendStateCreateFlags {
-        PipelineColorBlendStateCreateFlags::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for PipelineColorBlendStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
             _ => "(unknown variant)",
@@ -2630,7 +2590,7 @@ impl crate::vk1_0::PipelineBindPoint {
     pub const GRAPHICS: Self = Self(0);
     pub const COMPUTE: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineCreateFlagBits :: PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT = PipelineCreateFlagBits :: PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const RAY_TRACING_ALLOW_MOTION_NV = PipelineCreateFlagBits :: RAY_TRACING_ALLOW_MOTION_NV . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlags.html) · Bitmask of [`PipelineCreateFlagBits`]"] # [doc (alias = "VkPipelineCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineCreateFlags : u32 { const DISABLE_OPTIMIZATION = PipelineCreateFlagBits :: DISABLE_OPTIMIZATION . 0 ; const ALLOW_DERIVATIVES = PipelineCreateFlagBits :: ALLOW_DERIVATIVES . 0 ; const DERIVATIVE = PipelineCreateFlagBits :: DERIVATIVE . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX . 0 ; const DISPATCH_BASE = PipelineCreateFlagBits :: DISPATCH_BASE . 0 ; const RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineCreateFlagBits :: RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; const RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT = PipelineCreateFlagBits :: RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT . 0 ; const RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_MISS_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_MISS_SHADERS_KHR . 0 ; const RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR = PipelineCreateFlagBits :: RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR . 0 ; const RAY_TRACING_SKIP_TRIANGLES_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_TRIANGLES_KHR . 0 ; const RAY_TRACING_SKIP_AABBS_KHR = PipelineCreateFlagBits :: RAY_TRACING_SKIP_AABBS_KHR . 0 ; const RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR = PipelineCreateFlagBits :: RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR . 0 ; const DEFER_COMPILE_NV = PipelineCreateFlagBits :: DEFER_COMPILE_NV . 0 ; const CAPTURE_STATISTICS_KHR = PipelineCreateFlagBits :: CAPTURE_STATISTICS_KHR . 0 ; const CAPTURE_INTERNAL_REPRESENTATIONS_KHR = PipelineCreateFlagBits :: CAPTURE_INTERNAL_REPRESENTATIONS_KHR . 0 ; const INDIRECT_BINDABLE_NV = PipelineCreateFlagBits :: INDIRECT_BINDABLE_NV . 0 ; const LIBRARY_KHR = PipelineCreateFlagBits :: LIBRARY_KHR . 0 ; const FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT = PipelineCreateFlagBits :: FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT . 0 ; const EARLY_RETURN_ON_FAILURE_EXT = PipelineCreateFlagBits :: EARLY_RETURN_ON_FAILURE_EXT . 0 ; const RAY_TRACING_ALLOW_MOTION_NV = PipelineCreateFlagBits :: RAY_TRACING_ALLOW_MOTION_NV . 0 ; # [allow (deprecated)] # [deprecated] const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR = PipelineCreateFlagBits :: PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR . 0 ; # [allow (deprecated)] # [deprecated] const PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT = PipelineCreateFlagBits :: PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT . 0 ; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR = PipelineCreateFlagBits :: VIEW_INDEX_FROM_DEVICE_INDEX_KHR . 0 ; const DISPATCH_BASE_KHR = PipelineCreateFlagBits :: DISPATCH_BASE_KHR . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCreateFlagBits.html) · Bits enum of [`PipelineCreateFlags`]"]
 #[doc(alias = "VkPipelineCreateFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -2651,8 +2611,8 @@ impl std::fmt::Debug for PipelineCreateFlagBits {
             &Self::DERIVATIVE => "DERIVATIVE",
             &Self::VIEW_INDEX_FROM_DEVICE_INDEX => "VIEW_INDEX_FROM_DEVICE_INDEX",
             &Self::DISPATCH_BASE => "DISPATCH_BASE",
-            &Self::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
-            &Self::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT => "PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT",
+            &Self::RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => "RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR",
+            &Self::RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT => "RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT",
             &Self::RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR => "RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR",
             &Self::RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR => "RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR",
             &Self::RAY_TRACING_NO_NULL_MISS_SHADERS_KHR => "RAY_TRACING_NO_NULL_MISS_SHADERS_KHR",
@@ -2835,7 +2795,7 @@ impl std::fmt::Debug for QueryType {
             &Self::ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR => "ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR",
             &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV => "ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV",
             &Self::PERFORMANCE_QUERY_INTEL => "PERFORMANCE_QUERY_INTEL",
-            &Self::VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR => "VIDEO_ENCODESTREAM_BUFFER_RANGE_KHR",
+            &Self::VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR => "VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -3044,7 +3004,7 @@ impl std::fmt::Debug for SparseMemoryBindFlagBits {
 impl crate::vk1_0::SparseMemoryBindFlagBits {
     pub const METADATA: Self = Self(1);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlags.html) · Bitmask of [`StencilFaceFlagBits`]"] # [doc (alias = "VkStencilFaceFlags")] # [derive (Default)] # [repr (transparent)] pub struct StencilFaceFlags : u32 { const FRONT = StencilFaceFlagBits :: FRONT . 0 ; const BACK = StencilFaceFlagBits :: BACK . 0 ; const FRONT_AND_BACK = StencilFaceFlagBits :: FRONT_AND_BACK . 0 ; const STENCIL_FRONT_AND_BACK = StencilFaceFlagBits :: STENCIL_FRONT_AND_BACK . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlags.html) · Bitmask of [`StencilFaceFlagBits`]"] # [doc (alias = "VkStencilFaceFlags")] # [derive (Default)] # [repr (transparent)] pub struct StencilFaceFlags : u32 { const FRONT = StencilFaceFlagBits :: FRONT . 0 ; const BACK = StencilFaceFlagBits :: BACK . 0 ; const FRONT_AND_BACK = StencilFaceFlagBits :: FRONT_AND_BACK . 0 ; # [allow (deprecated)] # [deprecated] const STENCIL_FRONT_AND_BACK = StencilFaceFlagBits :: STENCIL_FRONT_AND_BACK . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilFaceFlagBits.html) · Bits enum of [`StencilFaceFlags`]"]
 #[doc(alias = "VkStencilFaceFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -3072,6 +3032,7 @@ impl crate::vk1_0::StencilFaceFlagBits {
     pub const FRONT: Self = Self(1);
     pub const BACK: Self = Self(2);
     pub const FRONT_AND_BACK: Self = Self(3);
+    #[deprecated]
     pub const STENCIL_FRONT_AND_BACK: Self = Self::FRONT_AND_BACK;
 }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkStencilOp.html) · Enum"]
@@ -3678,6 +3639,7 @@ impl std::fmt::Debug for StructureType {
             &Self::BUFFER_IMAGE_COPY_2_KHR => "BUFFER_IMAGE_COPY_2_KHR",
             &Self::IMAGE_RESOLVE_2_KHR => "IMAGE_RESOLVE_2_KHR",
             &Self::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => "PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT",
+            &Self::PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM => "PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM",
             &Self::PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT => "PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT",
             &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => "DIRECTFB_SURFACE_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE",
@@ -3686,6 +3648,8 @@ impl std::fmt::Debug for StructureType {
             &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => "VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT",
             &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => "VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT",
             &Self::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT => "PHYSICAL_DEVICE_DRM_PROPERTIES_EXT",
+            &Self::PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT => "PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT",
+            &Self::PIPELINE_VIEWPORT_DEPTH_CLIP_CONTROL_CREATE_INFO_EXT => "PIPELINE_VIEWPORT_DEPTH_CLIP_CONTROL_CREATE_INFO_EXT",
             &Self::PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT => "PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT",
             &Self::FORMAT_PROPERTIES_3_KHR => "FORMAT_PROPERTIES_3_KHR",
             &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => "IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA",
@@ -4226,7 +4190,7 @@ impl std::fmt::Debug for EventCreateFlagBits {
         })
     }
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`]"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlags.html) · Bitmask of [`SubpassDescriptionFlagBits`]"] # [doc (alias = "VkSubpassDescriptionFlags")] # [derive (Default)] # [repr (transparent)] pub struct SubpassDescriptionFlags : u32 { const PER_VIEW_ATTRIBUTES_NVX = SubpassDescriptionFlagBits :: PER_VIEW_ATTRIBUTES_NVX . 0 ; const PER_VIEW_POSITION_X_ONLY_NVX = SubpassDescriptionFlagBits :: PER_VIEW_POSITION_X_ONLY_NVX . 0 ; const FRAGMENT_REGION_QCOM = SubpassDescriptionFlagBits :: FRAGMENT_REGION_QCOM . 0 ; const SHADER_RESOLVE_QCOM = SubpassDescriptionFlagBits :: SHADER_RESOLVE_QCOM . 0 ; const RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM = SubpassDescriptionFlagBits :: RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM . 0 ; const RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM = SubpassDescriptionFlagBits :: RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM . 0 ; const RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM = SubpassDescriptionFlagBits :: RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassDescriptionFlagBits.html) · Bits enum of [`SubpassDescriptionFlags`]"]
 #[doc(alias = "VkSubpassDescriptionFlagBits")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -4246,6 +4210,52 @@ impl std::fmt::Debug for SubpassDescriptionFlagBits {
             &Self::PER_VIEW_POSITION_X_ONLY_NVX => "PER_VIEW_POSITION_X_ONLY_NVX",
             &Self::FRAGMENT_REGION_QCOM => "FRAGMENT_REGION_QCOM",
             &Self::SHADER_RESOLVE_QCOM => "SHADER_RESOLVE_QCOM",
+            &Self::RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM => "RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM",
+            &Self::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM => "RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM",
+            &Self::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM => "RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM",
+            _ => "(unknown variant)",
+        })
+    }
+}
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateFlags.html) · Bitmask of [`PipelineDepthStencilStateCreateFlagBits`]"] # [doc (alias = "VkPipelineDepthStencilStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineDepthStencilStateCreateFlags : u32 { const RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM = PipelineDepthStencilStateCreateFlagBits :: RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM . 0 ; const RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM = PipelineDepthStencilStateCreateFlagBits :: RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineDepthStencilStateCreateFlagBits.html) · Bits enum of [`PipelineDepthStencilStateCreateFlags`]"]
+#[doc(alias = "VkPipelineDepthStencilStateCreateFlagBits")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct PipelineDepthStencilStateCreateFlagBits(pub u32);
+impl PipelineDepthStencilStateCreateFlagBits {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> PipelineDepthStencilStateCreateFlags {
+        PipelineDepthStencilStateCreateFlags::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for PipelineDepthStencilStateCreateFlagBits {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM => "RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM",
+            &Self::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM => "RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM",
+            _ => "(unknown variant)",
+        })
+    }
+}
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateFlags.html) · Bitmask of [`PipelineColorBlendStateCreateFlagBits`]"] # [doc (alias = "VkPipelineColorBlendStateCreateFlags")] # [derive (Default)] # [repr (transparent)] pub struct PipelineColorBlendStateCreateFlags : u32 { const RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM = PipelineColorBlendStateCreateFlagBits :: RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendStateCreateFlagBits.html) · Bits enum of [`PipelineColorBlendStateCreateFlags`]"]
+#[doc(alias = "VkPipelineColorBlendStateCreateFlagBits")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct PipelineColorBlendStateCreateFlagBits(pub u32);
+impl PipelineColorBlendStateCreateFlagBits {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> PipelineColorBlendStateCreateFlags {
+        PipelineColorBlendStateCreateFlags::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for PipelineColorBlendStateCreateFlagBits {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM => "RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM",
             _ => "(unknown variant)",
         })
     }
@@ -15506,10 +15516,10 @@ pub const API_VERSION_1_1: u32 = make_api_version(0, 1, 1, 0);
 pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 199u32;
+pub const HEADER_VERSION: u32 = 200u32;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define"]
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 199u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 2u32, 200u32);
 #[doc = "Provided by [`crate::vk1_0`]"]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

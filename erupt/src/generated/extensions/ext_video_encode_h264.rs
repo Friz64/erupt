@@ -21,12 +21,14 @@ impl crate::vk1_0::StructureType {
     pub const VIDEO_ENCODE_H264_NALU_SLICE_EXT: Self = Self(1000038006);
     pub const VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT: Self = Self(1000038007);
     pub const VIDEO_ENCODE_H264_PROFILE_EXT: Self = Self(1000038008);
+    pub const VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT: Self = Self(1000038009);
+    pub const VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT: Self = Self(1000038010);
 }
 #[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
     pub const ENCODE_H264_EXT: Self = Self(65536);
 }
-bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilityFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CapabilityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CapabilityFlagsEXT : u32 { const CABAC_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CABAC_EXT . 0 ; const CAVLC_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CAVLC_EXT . 0 ; const WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; const TRANSFORM_8X8_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: TRANSFORM_8X8_EXT . 0 ; const CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CHROMA_QP_OFFSET_EXT . 0 ; const SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: SECOND_CHROMA_QP_OFFSET_EXT . 0 ; const DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_DISABLED_EXT . 0 ; const DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_ENABLED_EXT . 0 ; const DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; const MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; } }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilityFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264CapabilityFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264CapabilityFlagsEXT : u32 { const CABAC_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CABAC_EXT . 0 ; const CAVLC_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CAVLC_EXT . 0 ; const WEIGHTED_BI_PRED_IMPLICIT_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: WEIGHTED_BI_PRED_IMPLICIT_EXT . 0 ; const TRANSFORM_8X8_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: TRANSFORM_8X8_EXT . 0 ; const CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: CHROMA_QP_OFFSET_EXT . 0 ; const SECOND_CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: SECOND_CHROMA_QP_OFFSET_EXT . 0 ; const DEBLOCKING_FILTER_DISABLED_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_DISABLED_EXT . 0 ; const DEBLOCKING_FILTER_ENABLED_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_ENABLED_EXT . 0 ; const DEBLOCKING_FILTER_PARTIAL_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: DEBLOCKING_FILTER_PARTIAL_EXT . 0 ; const MULTIPLE_SLICE_PER_FRAME_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: MULTIPLE_SLICE_PER_FRAME_EXT . 0 ; const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: EVENLY_DISTRIBUTED_SLICE_SIZE_EXT . 0 ; const OPTIONAL_RC_EXTENSION_STRUCT_EXT = VideoEncodeH264CapabilityFlagBitsEXT :: OPTIONAL_RC_EXTENSION_STRUCT_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilityFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CapabilityFlagsEXT`]"]
 #[doc(alias = "VkVideoEncodeH264CapabilityFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
@@ -53,6 +55,7 @@ impl std::fmt::Debug for VideoEncodeH264CapabilityFlagBitsEXT {
             &Self::DEBLOCKING_FILTER_PARTIAL_EXT => "DEBLOCKING_FILTER_PARTIAL_EXT",
             &Self::MULTIPLE_SLICE_PER_FRAME_EXT => "MULTIPLE_SLICE_PER_FRAME_EXT",
             &Self::EVENLY_DISTRIBUTED_SLICE_SIZE_EXT => "EVENLY_DISTRIBUTED_SLICE_SIZE_EXT",
+            &Self::OPTIONAL_RC_EXTENSION_STRUCT_EXT => "OPTIONAL_RC_EXTENSION_STRUCT_EXT",
             _ => "(unknown variant)",
         })
     }
@@ -70,6 +73,7 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagBits
     pub const DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(256);
     pub const MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(512);
     pub const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT: Self = Self(1024);
+    pub const OPTIONAL_RC_EXTENSION_STRUCT_EXT: Self = Self(2048);
 }
 bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH264InputModeFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264InputModeFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264InputModeFlagsEXT : u32 { const FRAME_EXT = VideoEncodeH264InputModeFlagBitsEXT :: FRAME_EXT . 0 ; const SLICE_EXT = VideoEncodeH264InputModeFlagBitsEXT :: SLICE_EXT . 0 ; const NON_VCL_EXT = VideoEncodeH264InputModeFlagBitsEXT :: NON_VCL_EXT . 0 ; } }
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264InputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264InputModeFlagsEXT`]"]
@@ -156,6 +160,35 @@ impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CreateFlagBitsEXT 
     pub const DEFAULT_EXT: Self = Self(0);
     pub const RESERVED_0_EXT: Self = Self(1);
 }
+bitflags::bitflags! { # [doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264RateControlStructureFlagsEXT.html) · Bitmask of [`VideoEncodeH264RateControlStructureFlagBitsEXT`]"] # [doc (alias = "VkVideoEncodeH264RateControlStructureFlagsEXT")] # [derive (Default)] # [repr (transparent)] pub struct VideoEncodeH264RateControlStructureFlagsEXT : u32 { const UNKNOWN_EXT = VideoEncodeH264RateControlStructureFlagBitsEXT :: UNKNOWN_EXT . 0 ; const FLAT_EXT = VideoEncodeH264RateControlStructureFlagBitsEXT :: FLAT_EXT . 0 ; const DYADIC_EXT = VideoEncodeH264RateControlStructureFlagBitsEXT :: DYADIC_EXT . 0 ; } }
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264RateControlStructureFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264RateControlStructureFlagsEXT`]"]
+#[doc(alias = "VkVideoEncodeH264RateControlStructureFlagBitsEXT")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct VideoEncodeH264RateControlStructureFlagBitsEXT(pub u32);
+impl VideoEncodeH264RateControlStructureFlagBitsEXT {
+    #[inline]
+    #[doc = "Converts this enum variant to the corresponding bitmask"]
+    pub const fn bitmask(&self) -> VideoEncodeH264RateControlStructureFlagsEXT {
+        VideoEncodeH264RateControlStructureFlagsEXT::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for VideoEncodeH264RateControlStructureFlagBitsEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(match self {
+            &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
+            &Self::FLAT_EXT => "FLAT_EXT",
+            &Self::DYADIC_EXT => "DYADIC_EXT",
+            _ => "(unknown variant)",
+        })
+    }
+}
+#[doc = "Provided by [`crate::extensions::ext_video_encode_h264`]"]
+impl crate::extensions::ext_video_encode_h264::VideoEncodeH264RateControlStructureFlagBitsEXT {
+    pub const UNKNOWN_EXT: Self = Self(0);
+    pub const FLAT_EXT: Self = Self(1);
+    pub const DYADIC_EXT: Self = Self(2);
+}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>> for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT> for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
@@ -180,6 +213,10 @@ impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264VclFrameInfoEXT> for crate::ex
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264VclFrameInfoEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264EmitPictureParametersEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264EmitPictureParametersEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264RateControlInfoEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeRateControlInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264RateControlInfoEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeRateControlInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264RateControlLayerInfoEXT> for crate::extensions::khr_video_encode_queue::VideoEncodeRateControlLayerInfoKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264RateControlLayerInfoEXTBuilder<'_>> for crate::extensions::khr_video_encode_queue::VideoEncodeRateControlLayerInfoKHRBuilder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264CapabilitiesEXT.html) · Structure"]
 #[doc(alias = "VkVideoEncodeH264CapabilitiesEXT")]
 #[derive(Copy, Clone)]
@@ -891,21 +928,18 @@ pub struct VideoEncodeH264NaluSliceEXT {
     pub p_ref_final_list0_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
     pub ref_final_list1_entry_count: u8,
     pub p_ref_final_list1_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
-    pub preceding_nalu_bytes: u32,
-    pub min_qp: u8,
-    pub max_qp: u8,
 }
 impl VideoEncodeH264NaluSliceEXT {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H264_NALU_SLICE_EXT;
 }
 impl Default for VideoEncodeH264NaluSliceEXT {
     fn default() -> Self {
-        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_slice_header_std: std::ptr::null(), mb_count: Default::default(), ref_final_list0_entry_count: Default::default(), p_ref_final_list0_entries: std::ptr::null(), ref_final_list1_entry_count: Default::default(), p_ref_final_list1_entries: std::ptr::null(), preceding_nalu_bytes: Default::default(), min_qp: Default::default(), max_qp: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), p_slice_header_std: std::ptr::null(), mb_count: Default::default(), ref_final_list0_entry_count: Default::default(), p_ref_final_list0_entries: std::ptr::null(), ref_final_list1_entry_count: Default::default(), p_ref_final_list1_entries: std::ptr::null() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264NaluSliceEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("VideoEncodeH264NaluSliceEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_slice_header_std", &self.p_slice_header_std).field("mb_count", &self.mb_count).field("ref_final_list0_entry_count", &self.ref_final_list0_entry_count).field("p_ref_final_list0_entries", &self.p_ref_final_list0_entries).field("ref_final_list1_entry_count", &self.ref_final_list1_entry_count).field("p_ref_final_list1_entries", &self.p_ref_final_list1_entries).field("preceding_nalu_bytes", &self.preceding_nalu_bytes).field("min_qp", &self.min_qp).field("max_qp", &self.max_qp).finish()
+        f.debug_struct("VideoEncodeH264NaluSliceEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("p_slice_header_std", &self.p_slice_header_std).field("mb_count", &self.mb_count).field("ref_final_list0_entry_count", &self.ref_final_list0_entry_count).field("p_ref_final_list0_entries", &self.p_ref_final_list0_entries).field("ref_final_list1_entry_count", &self.ref_final_list1_entry_count).field("p_ref_final_list1_entries", &self.p_ref_final_list1_entries).finish()
     }
 }
 impl VideoEncodeH264NaluSliceEXT {
@@ -946,21 +980,6 @@ impl<'a> VideoEncodeH264NaluSliceEXTBuilder<'a> {
         self
     }
     #[inline]
-    pub fn preceding_nalu_bytes(mut self, preceding_nalu_bytes: u32) -> Self {
-        self.0.preceding_nalu_bytes = preceding_nalu_bytes as _;
-        self
-    }
-    #[inline]
-    pub fn min_qp(mut self, min_qp: u8) -> Self {
-        self.0.min_qp = min_qp as _;
-        self
-    }
-    #[inline]
-    pub fn max_qp(mut self, max_qp: u8) -> Self {
-        self.0.max_qp = max_qp as _;
-        self
-    }
-    #[inline]
     #[doc = r" Discards all lifetime information."]
     #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
     pub fn build_dangling(self) -> VideoEncodeH264NaluSliceEXT {
@@ -984,6 +1003,366 @@ impl<'a> std::ops::Deref for VideoEncodeH264NaluSliceEXTBuilder<'a> {
     }
 }
 impl<'a> std::ops::DerefMut for VideoEncodeH264NaluSliceEXTBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264RateControlInfoEXT.html) · Structure"]
+#[doc(alias = "VkVideoEncodeH264RateControlInfoEXT")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct VideoEncodeH264RateControlInfoEXT {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const std::ffi::c_void,
+    pub gop_frame_count: u32,
+    pub idr_period: u32,
+    pub consecutive_b_frame_count: u32,
+    pub rate_control_structure: crate::extensions::ext_video_encode_h264::VideoEncodeH264RateControlStructureFlagBitsEXT,
+}
+impl VideoEncodeH264RateControlInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT;
+}
+impl Default for VideoEncodeH264RateControlInfoEXT {
+    fn default() -> Self {
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), gop_frame_count: Default::default(), idr_period: Default::default(), consecutive_b_frame_count: Default::default(), rate_control_structure: Default::default() }
+    }
+}
+impl std::fmt::Debug for VideoEncodeH264RateControlInfoEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VideoEncodeH264RateControlInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("gop_frame_count", &self.gop_frame_count).field("idr_period", &self.idr_period).field("consecutive_b_frame_count", &self.consecutive_b_frame_count).field("rate_control_structure", &self.rate_control_structure).finish()
+    }
+}
+impl VideoEncodeH264RateControlInfoEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+        VideoEncodeH264RateControlInfoEXTBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264RateControlInfoEXT.html) · Builder of [`VideoEncodeH264RateControlInfoEXT`]"]
+#[repr(transparent)]
+pub struct VideoEncodeH264RateControlInfoEXTBuilder<'a>(VideoEncodeH264RateControlInfoEXT, std::marker::PhantomData<&'a ()>);
+impl<'a> VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+    #[inline]
+    pub fn new() -> VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+        VideoEncodeH264RateControlInfoEXTBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn gop_frame_count(mut self, gop_frame_count: u32) -> Self {
+        self.0.gop_frame_count = gop_frame_count as _;
+        self
+    }
+    #[inline]
+    pub fn idr_period(mut self, idr_period: u32) -> Self {
+        self.0.idr_period = idr_period as _;
+        self
+    }
+    #[inline]
+    pub fn consecutive_b_frame_count(mut self, consecutive_b_frame_count: u32) -> Self {
+        self.0.consecutive_b_frame_count = consecutive_b_frame_count as _;
+        self
+    }
+    #[inline]
+    pub fn rate_control_structure(mut self, rate_control_structure: crate::extensions::ext_video_encode_h264::VideoEncodeH264RateControlStructureFlagBitsEXT) -> Self {
+        self.0.rate_control_structure = rate_control_structure as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build_dangling(self) -> VideoEncodeH264RateControlInfoEXT {
+        self.0
+    }
+}
+impl<'a> std::default::Default for VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+    fn default() -> VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+    type Target = VideoEncodeH264RateControlInfoEXT;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for VideoEncodeH264RateControlInfoEXTBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264QpEXT.html) · Structure"]
+#[doc(alias = "VkVideoEncodeH264QpEXT")]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct VideoEncodeH264QpEXT {
+    pub qp_i: i32,
+    pub qp_p: i32,
+    pub qp_b: i32,
+}
+impl Default for VideoEncodeH264QpEXT {
+    fn default() -> Self {
+        Self { qp_i: Default::default(), qp_p: Default::default(), qp_b: Default::default() }
+    }
+}
+impl std::fmt::Debug for VideoEncodeH264QpEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VideoEncodeH264QpEXT").field("qp_i", &self.qp_i).field("qp_p", &self.qp_p).field("qp_b", &self.qp_b).finish()
+    }
+}
+impl VideoEncodeH264QpEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VideoEncodeH264QpEXTBuilder<'a> {
+        VideoEncodeH264QpEXTBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264QpEXT.html) · Builder of [`VideoEncodeH264QpEXT`]"]
+#[repr(transparent)]
+pub struct VideoEncodeH264QpEXTBuilder<'a>(VideoEncodeH264QpEXT, std::marker::PhantomData<&'a ()>);
+impl<'a> VideoEncodeH264QpEXTBuilder<'a> {
+    #[inline]
+    pub fn new() -> VideoEncodeH264QpEXTBuilder<'a> {
+        VideoEncodeH264QpEXTBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn qp_i(mut self, qp_i: i32) -> Self {
+        self.0.qp_i = qp_i as _;
+        self
+    }
+    #[inline]
+    pub fn qp_p(mut self, qp_p: i32) -> Self {
+        self.0.qp_p = qp_p as _;
+        self
+    }
+    #[inline]
+    pub fn qp_b(mut self, qp_b: i32) -> Self {
+        self.0.qp_b = qp_b as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build_dangling(self) -> VideoEncodeH264QpEXT {
+        self.0
+    }
+}
+impl<'a> std::default::Default for VideoEncodeH264QpEXTBuilder<'a> {
+    fn default() -> VideoEncodeH264QpEXTBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for VideoEncodeH264QpEXTBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for VideoEncodeH264QpEXTBuilder<'a> {
+    type Target = VideoEncodeH264QpEXT;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for VideoEncodeH264QpEXTBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264FrameSizeEXT.html) · Structure"]
+#[doc(alias = "VkVideoEncodeH264FrameSizeEXT")]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
+#[repr(C)]
+pub struct VideoEncodeH264FrameSizeEXT {
+    pub frame_i_size: u32,
+    pub frame_p_size: u32,
+    pub frame_b_size: u32,
+}
+impl Default for VideoEncodeH264FrameSizeEXT {
+    fn default() -> Self {
+        Self { frame_i_size: Default::default(), frame_p_size: Default::default(), frame_b_size: Default::default() }
+    }
+}
+impl std::fmt::Debug for VideoEncodeH264FrameSizeEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VideoEncodeH264FrameSizeEXT").field("frame_i_size", &self.frame_i_size).field("frame_p_size", &self.frame_p_size).field("frame_b_size", &self.frame_b_size).finish()
+    }
+}
+impl VideoEncodeH264FrameSizeEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VideoEncodeH264FrameSizeEXTBuilder<'a> {
+        VideoEncodeH264FrameSizeEXTBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264FrameSizeEXT.html) · Builder of [`VideoEncodeH264FrameSizeEXT`]"]
+#[repr(transparent)]
+pub struct VideoEncodeH264FrameSizeEXTBuilder<'a>(VideoEncodeH264FrameSizeEXT, std::marker::PhantomData<&'a ()>);
+impl<'a> VideoEncodeH264FrameSizeEXTBuilder<'a> {
+    #[inline]
+    pub fn new() -> VideoEncodeH264FrameSizeEXTBuilder<'a> {
+        VideoEncodeH264FrameSizeEXTBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn frame_i_size(mut self, frame_i_size: u32) -> Self {
+        self.0.frame_i_size = frame_i_size as _;
+        self
+    }
+    #[inline]
+    pub fn frame_p_size(mut self, frame_p_size: u32) -> Self {
+        self.0.frame_p_size = frame_p_size as _;
+        self
+    }
+    #[inline]
+    pub fn frame_b_size(mut self, frame_b_size: u32) -> Self {
+        self.0.frame_b_size = frame_b_size as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build_dangling(self) -> VideoEncodeH264FrameSizeEXT {
+        self.0
+    }
+}
+impl<'a> std::default::Default for VideoEncodeH264FrameSizeEXTBuilder<'a> {
+    fn default() -> VideoEncodeH264FrameSizeEXTBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for VideoEncodeH264FrameSizeEXTBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for VideoEncodeH264FrameSizeEXTBuilder<'a> {
+    type Target = VideoEncodeH264FrameSizeEXT;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for VideoEncodeH264FrameSizeEXTBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264RateControlLayerInfoEXT.html) · Structure"]
+#[doc(alias = "VkVideoEncodeH264RateControlLayerInfoEXT")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct VideoEncodeH264RateControlLayerInfoEXT {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const std::ffi::c_void,
+    pub temporal_layer_id: u8,
+    pub use_initial_rc_qp: crate::vk1_0::Bool32,
+    pub initial_rc_qp: crate::extensions::ext_video_encode_h264::VideoEncodeH264QpEXT,
+    pub use_min_qp: crate::vk1_0::Bool32,
+    pub min_qp: crate::extensions::ext_video_encode_h264::VideoEncodeH264QpEXT,
+    pub use_max_qp: crate::vk1_0::Bool32,
+    pub max_qp: crate::extensions::ext_video_encode_h264::VideoEncodeH264QpEXT,
+    pub use_max_frame_size: crate::vk1_0::Bool32,
+    pub max_frame_size: crate::extensions::ext_video_encode_h264::VideoEncodeH264FrameSizeEXT,
+}
+impl VideoEncodeH264RateControlLayerInfoEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT;
+}
+impl Default for VideoEncodeH264RateControlLayerInfoEXT {
+    fn default() -> Self {
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), temporal_layer_id: Default::default(), use_initial_rc_qp: Default::default(), initial_rc_qp: Default::default(), use_min_qp: Default::default(), min_qp: Default::default(), use_max_qp: Default::default(), max_qp: Default::default(), use_max_frame_size: Default::default(), max_frame_size: Default::default() }
+    }
+}
+impl std::fmt::Debug for VideoEncodeH264RateControlLayerInfoEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VideoEncodeH264RateControlLayerInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("temporal_layer_id", &self.temporal_layer_id).field("use_initial_rc_qp", &(self.use_initial_rc_qp != 0)).field("initial_rc_qp", &self.initial_rc_qp).field("use_min_qp", &(self.use_min_qp != 0)).field("min_qp", &self.min_qp).field("use_max_qp", &(self.use_max_qp != 0)).field("max_qp", &self.max_qp).field("use_max_frame_size", &(self.use_max_frame_size != 0)).field("max_frame_size", &self.max_frame_size).finish()
+    }
+}
+impl VideoEncodeH264RateControlLayerInfoEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
+        VideoEncodeH264RateControlLayerInfoEXTBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH264RateControlLayerInfoEXT.html) · Builder of [`VideoEncodeH264RateControlLayerInfoEXT`]"]
+#[repr(transparent)]
+pub struct VideoEncodeH264RateControlLayerInfoEXTBuilder<'a>(VideoEncodeH264RateControlLayerInfoEXT, std::marker::PhantomData<&'a ()>);
+impl<'a> VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
+    #[inline]
+    pub fn new() -> VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
+        VideoEncodeH264RateControlLayerInfoEXTBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn temporal_layer_id(mut self, temporal_layer_id: u8) -> Self {
+        self.0.temporal_layer_id = temporal_layer_id as _;
+        self
+    }
+    #[inline]
+    pub fn use_initial_rc_qp(mut self, use_initial_rc_qp: bool) -> Self {
+        self.0.use_initial_rc_qp = use_initial_rc_qp as _;
+        self
+    }
+    #[inline]
+    pub fn initial_rc_qp(mut self, initial_rc_qp: crate::extensions::ext_video_encode_h264::VideoEncodeH264QpEXT) -> Self {
+        self.0.initial_rc_qp = initial_rc_qp as _;
+        self
+    }
+    #[inline]
+    pub fn use_min_qp(mut self, use_min_qp: bool) -> Self {
+        self.0.use_min_qp = use_min_qp as _;
+        self
+    }
+    #[inline]
+    pub fn min_qp(mut self, min_qp: crate::extensions::ext_video_encode_h264::VideoEncodeH264QpEXT) -> Self {
+        self.0.min_qp = min_qp as _;
+        self
+    }
+    #[inline]
+    pub fn use_max_qp(mut self, use_max_qp: bool) -> Self {
+        self.0.use_max_qp = use_max_qp as _;
+        self
+    }
+    #[inline]
+    pub fn max_qp(mut self, max_qp: crate::extensions::ext_video_encode_h264::VideoEncodeH264QpEXT) -> Self {
+        self.0.max_qp = max_qp as _;
+        self
+    }
+    #[inline]
+    pub fn use_max_frame_size(mut self, use_max_frame_size: bool) -> Self {
+        self.0.use_max_frame_size = use_max_frame_size as _;
+        self
+    }
+    #[inline]
+    pub fn max_frame_size(mut self, max_frame_size: crate::extensions::ext_video_encode_h264::VideoEncodeH264FrameSizeEXT) -> Self {
+        self.0.max_frame_size = max_frame_size as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build_dangling(self) -> VideoEncodeH264RateControlLayerInfoEXT {
+        self.0
+    }
+}
+impl<'a> std::default::Default for VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
+    fn default() -> VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
+    type Target = VideoEncodeH264RateControlLayerInfoEXT;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for VideoEncodeH264RateControlLayerInfoEXTBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }

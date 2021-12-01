@@ -23,6 +23,10 @@ impl crate::vk1_0::PipelineDepthStencilStateCreateFlagBits {
 impl crate::vk1_0::PipelineColorBlendStateCreateFlagBits {
     pub const RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM: Self = Self(1);
 }
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARMBuilder<'_>> for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARMBuilder<'_>> for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM.html) · Structure"]
 #[doc(alias = "VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM")]
 #[derive(Copy, Clone)]

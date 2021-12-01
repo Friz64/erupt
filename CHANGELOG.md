@@ -9,11 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 200
+- Update Vulkan Headers to version 201
 - Rename `.build()` to `.build_dangling()` to make it look less innocent
 - Optimize construction of larger pointer chains
 - Simplify function definitions containing handles
 - Deprecate several invalid enum variants
+- Improved clarity of `cstr!` macro implementation
+  ([!9](https://gitlab.com/Friz64/erupt/-/merge_requests/9))
 
 ### Fixed
 

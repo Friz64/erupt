@@ -166,7 +166,6 @@ pub fn generate(source: &Source) {
         codemap.extend(handle.tokens(&comment_gen));
     }
 
-    dbg!(&source.deprecated_variants);
     for en in source.enums.iter().filter(|v| v.origin.is_some()) {
         codemap.extend(en.tokens(&comment_gen, &source.deprecated_variants));
     }

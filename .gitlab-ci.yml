@@ -1,0 +1,7 @@
+image: rust:latest
+
+test:
+    stage: test
+    script:
+        - rustc --version
+        - cargo test --verbose

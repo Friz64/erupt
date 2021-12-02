@@ -153,7 +153,8 @@ fn main() {
                 let format = match formats
                     .iter()
                     .find(|surface_format| {
-                        surface_format.format == vk::Format::B8G8R8A8_SRGB
+                        (surface_format.format == vk::Format::B8G8R8A8_SRGB
+                            || surface_format.format == vk::Format::R8G8B8A8_SRGB)
                             && surface_format.color_space == vk::ColorSpaceKHR::SRGB_NONLINEAR_KHR
                     })
                     .or_else(|| formats.get(0))

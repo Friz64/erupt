@@ -25,7 +25,7 @@ pub unsafe fn create_surface(instance: &InstanceLoader, window_handle: &impl Has
         RawWindowHandle::Xlib(handle) => {
             use crate::extensions::khr_xlib_surface;
 
-            let create_info = khr_xlib_surface::XlibSurfaceCreateInfoKHR { dpy: handle.display as *mut _, window: handle.window, ..Default::default() };
+            let create_info = khr_xlib_surface::XlibSurfaceCreateInfoKHR { dpy: handle.display as *mut _, window: handle.window as _, ..Default::default() };
 
             instance.create_xlib_surface_khr(&create_info, allocation_callbacks)
         }

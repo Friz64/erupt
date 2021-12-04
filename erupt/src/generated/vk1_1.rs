@@ -6198,7 +6198,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceQueueFamilyProperties2")]
-    pub unsafe fn get_physical_device_queue_family_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>, queue_family_properties_callback: Option<impl FnMut(&mut crate::SmallVec<crate::vk1_1::QueueFamilyProperties2>) -> ()>) -> crate::SmallVec<crate::vk1_1::QueueFamilyProperties2> {
+    pub unsafe fn get_physical_device_queue_family_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, queue_family_property_count: Option<u32>, queue_family_properties_callback: impl FnMut(&mut crate::SmallVec<crate::vk1_1::QueueFamilyProperties2>) -> ()) -> crate::SmallVec<crate::vk1_1::QueueFamilyProperties2> {
         let _function = self.get_physical_device_queue_family_properties2.expect(crate::NOT_LOADED_MESSAGE);
         let mut queue_family_property_count = match queue_family_property_count {
             Some(v) => v,
@@ -6209,9 +6209,8 @@ impl crate::InstanceLoader {
             }
         };
         let mut queue_family_properties = crate::SmallVec::from_elem(Default::default(), queue_family_property_count as _);
-        if let Some(mut _callback) = queue_family_properties_callback {
-            _callback(&mut queue_family_properties);
-        }
+        let mut _callback = queue_family_properties_callback;
+        _callback(&mut queue_family_properties);
         let _return = _function(physical_device as _, &mut queue_family_property_count, queue_family_properties.as_mut_ptr());
         queue_family_properties
     }
@@ -6232,7 +6231,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSparseImageFormatProperties2.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSparseImageFormatProperties2")]
-    pub unsafe fn get_physical_device_sparse_image_format_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>, properties_callback: Option<impl FnMut(&mut crate::SmallVec<crate::vk1_1::SparseImageFormatProperties2>) -> ()>) -> crate::SmallVec<crate::vk1_1::SparseImageFormatProperties2> {
+    pub unsafe fn get_physical_device_sparse_image_format_properties2(&self, physical_device: crate::vk1_0::PhysicalDevice, format_info: &crate::vk1_1::PhysicalDeviceSparseImageFormatInfo2, property_count: Option<u32>, properties_callback: impl FnMut(&mut crate::SmallVec<crate::vk1_1::SparseImageFormatProperties2>) -> ()) -> crate::SmallVec<crate::vk1_1::SparseImageFormatProperties2> {
         let _function = self.get_physical_device_sparse_image_format_properties2.expect(crate::NOT_LOADED_MESSAGE);
         let mut property_count = match property_count {
             Some(v) => v,
@@ -6243,9 +6242,8 @@ impl crate::InstanceLoader {
             }
         };
         let mut properties = crate::SmallVec::from_elem(Default::default(), property_count as _);
-        if let Some(mut _callback) = properties_callback {
-            _callback(&mut properties);
-        }
+        let mut _callback = properties_callback;
+        _callback(&mut properties);
         let _return = _function(physical_device as _, format_info as _, &mut property_count, properties.as_mut_ptr());
         properties
     }
@@ -6292,7 +6290,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroups.html) · Function"]
     #[doc(alias = "vkEnumeratePhysicalDeviceGroups")]
-    pub unsafe fn enumerate_physical_device_groups(&self, physical_device_group_count: Option<u32>, physical_device_group_properties_callback: Option<impl FnMut(&mut crate::SmallVec<crate::vk1_1::PhysicalDeviceGroupProperties>) -> ()>) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
+    pub unsafe fn enumerate_physical_device_groups(&self, physical_device_group_count: Option<u32>, physical_device_group_properties_callback: impl FnMut(&mut crate::SmallVec<crate::vk1_1::PhysicalDeviceGroupProperties>) -> ()) -> crate::utils::VulkanResult<crate::SmallVec<crate::vk1_1::PhysicalDeviceGroupProperties>> {
         let _function = self.enumerate_physical_device_groups.expect(crate::NOT_LOADED_MESSAGE);
         let mut physical_device_group_count = match physical_device_group_count {
             Some(v) => v,
@@ -6303,9 +6301,8 @@ impl crate::InstanceLoader {
             }
         };
         let mut physical_device_group_properties = crate::SmallVec::from_elem(Default::default(), physical_device_group_count as _);
-        if let Some(mut _callback) = physical_device_group_properties_callback {
-            _callback(&mut physical_device_group_properties);
-        }
+        let mut _callback = physical_device_group_properties_callback;
+        _callback(&mut physical_device_group_properties);
         let _return = _function(self.handle, &mut physical_device_group_count, physical_device_group_properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, physical_device_group_properties)
     }
@@ -6442,7 +6439,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageSparseMemoryRequirements2.html) · Function"]
     #[doc(alias = "vkGetImageSparseMemoryRequirements2")]
-    pub unsafe fn get_image_sparse_memory_requirements2(&self, info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2, sparse_memory_requirement_count: Option<u32>, sparse_memory_requirements_callback: Option<impl FnMut(&mut crate::SmallVec<crate::vk1_1::SparseImageMemoryRequirements2>) -> ()>) -> crate::SmallVec<crate::vk1_1::SparseImageMemoryRequirements2> {
+    pub unsafe fn get_image_sparse_memory_requirements2(&self, info: &crate::vk1_1::ImageSparseMemoryRequirementsInfo2, sparse_memory_requirement_count: Option<u32>, sparse_memory_requirements_callback: impl FnMut(&mut crate::SmallVec<crate::vk1_1::SparseImageMemoryRequirements2>) -> ()) -> crate::SmallVec<crate::vk1_1::SparseImageMemoryRequirements2> {
         let _function = self.get_image_sparse_memory_requirements2.expect(crate::NOT_LOADED_MESSAGE);
         let mut sparse_memory_requirement_count = match sparse_memory_requirement_count {
             Some(v) => v,
@@ -6453,9 +6450,8 @@ impl crate::DeviceLoader {
             }
         };
         let mut sparse_memory_requirements = crate::SmallVec::from_elem(Default::default(), sparse_memory_requirement_count as _);
-        if let Some(mut _callback) = sparse_memory_requirements_callback {
-            _callback(&mut sparse_memory_requirements);
-        }
+        let mut _callback = sparse_memory_requirements_callback;
+        _callback(&mut sparse_memory_requirements);
         let _return = _function(self.handle, info as _, &mut sparse_memory_requirement_count, sparse_memory_requirements.as_mut_ptr());
         sparse_memory_requirements
     }

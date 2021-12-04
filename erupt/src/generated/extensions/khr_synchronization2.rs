@@ -1280,7 +1280,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointData2NV.html) · Function"]
     #[doc(alias = "vkGetQueueCheckpointData2NV")]
-    pub unsafe fn get_queue_checkpoint_data2_nv(&self, queue: crate::vk1_0::Queue, checkpoint_data_count: Option<u32>, checkpoint_data_callback: Option<impl FnMut(&mut crate::SmallVec<crate::extensions::khr_synchronization2::CheckpointData2NV>) -> ()>) -> crate::SmallVec<crate::extensions::khr_synchronization2::CheckpointData2NV> {
+    pub unsafe fn get_queue_checkpoint_data2_nv(&self, queue: crate::vk1_0::Queue, checkpoint_data_count: Option<u32>, checkpoint_data_callback: impl FnMut(&mut crate::SmallVec<crate::extensions::khr_synchronization2::CheckpointData2NV>) -> ()) -> crate::SmallVec<crate::extensions::khr_synchronization2::CheckpointData2NV> {
         let _function = self.get_queue_checkpoint_data2_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut checkpoint_data_count = match checkpoint_data_count {
             Some(v) => v,
@@ -1291,9 +1291,8 @@ impl crate::DeviceLoader {
             }
         };
         let mut checkpoint_data = crate::SmallVec::from_elem(Default::default(), checkpoint_data_count as _);
-        if let Some(mut _callback) = checkpoint_data_callback {
-            _callback(&mut checkpoint_data);
-        }
+        let mut _callback = checkpoint_data_callback;
+        _callback(&mut checkpoint_data);
         let _return = _function(queue as _, &mut checkpoint_data_count, checkpoint_data.as_mut_ptr());
         checkpoint_data
     }

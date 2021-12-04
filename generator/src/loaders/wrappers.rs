@@ -313,14 +313,14 @@ impl Function {
                             {
                                 let callback_declaration = Declaration {
                                     name: Some(format!("{}_callback", param.name_lossy())),
-                                    ty: Type::Option(Box::new(Type::FnMut {
+                                    ty: Type::FnMut {
                                         args: vec![Type::Reference {
                                             to: Box::new(vec.ty.clone()),
                                             kind: Mutability::Mut,
                                             lifetime: None,
                                         }],
                                         return_ty: Box::new(Type::Unit),
-                                    })),
+                                    },
                                     metadata: DeclarationMetadata::empty(),
                                     bitwidth: BitWidth::Full,
                                 };
@@ -328,9 +328,8 @@ impl Function {
                                 let callback_ident = callback_declaration.cleaned_ident();
                                 user_params.push(callback_declaration);
                                 return_init.extend(quote! {
-                                    if let Some(mut _callback) = #callback_ident {
-                                        _callback(&mut #cleaned_ident);
-                                    }
+                                    let mut _callback = #callback_ident;
+                                    _callback(&mut #cleaned_ident);
                                 });
                             }
                         }

@@ -150,7 +150,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceToolPropertiesEXT.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceToolPropertiesEXT")]
-    pub unsafe fn get_physical_device_tool_properties_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, tool_count: Option<u32>, tool_properties_callback: Option<impl FnMut(&mut crate::SmallVec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>) -> ()>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>> {
+    pub unsafe fn get_physical_device_tool_properties_ext(&self, physical_device: crate::vk1_0::PhysicalDevice, tool_count: Option<u32>, tool_properties_callback: impl FnMut(&mut crate::SmallVec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>) -> ()) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::ext_tooling_info::PhysicalDeviceToolPropertiesEXT>> {
         let _function = self.get_physical_device_tool_properties_ext.expect(crate::NOT_LOADED_MESSAGE);
         let mut tool_count = match tool_count {
             Some(v) => v,
@@ -161,9 +161,8 @@ impl crate::InstanceLoader {
             }
         };
         let mut tool_properties = crate::SmallVec::from_elem(Default::default(), tool_count as _);
-        if let Some(mut _callback) = tool_properties_callback {
-            _callback(&mut tool_properties);
-        }
+        let mut _callback = tool_properties_callback;
+        _callback(&mut tool_properties);
         let _return = _function(physical_device as _, &mut tool_count, tool_properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, tool_properties)
     }

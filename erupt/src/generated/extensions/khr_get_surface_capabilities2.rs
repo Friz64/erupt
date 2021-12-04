@@ -249,7 +249,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSurfaceFormats2KHR")]
-    pub unsafe fn get_physical_device_surface_formats2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, surface_format_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>> {
+    pub unsafe fn get_physical_device_surface_formats2_khr(&self, physical_device: crate::vk1_0::PhysicalDevice, surface_info: &crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR, surface_format_count: Option<u32>, surface_formats_callback: Option<impl FnMut(&mut crate::SmallVec<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>) -> ()>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR>> {
         let _function = self.get_physical_device_surface_formats2_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut surface_format_count = match surface_format_count {
             Some(v) => v,
@@ -260,6 +260,9 @@ impl crate::InstanceLoader {
             }
         };
         let mut surface_formats = crate::SmallVec::from_elem(Default::default(), surface_format_count as _);
+        if let Some(mut _callback) = surface_formats_callback {
+            _callback(&mut surface_formats);
+        }
         let _return = _function(physical_device as _, surface_info as _, &mut surface_format_count, surface_formats.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, surface_formats)
     }

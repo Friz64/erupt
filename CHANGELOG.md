@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add callback to wrappers returning a vector of extendable structs
+
 ### Changed
 
 - Update Vulkan Headers to version 201

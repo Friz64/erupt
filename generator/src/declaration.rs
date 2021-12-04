@@ -81,6 +81,10 @@ pub enum Type {
         kind: Mutability,
         lifetime: Option<Lifetime>,
     },
+    FnMut {
+        args: Vec<Type>,
+        return_ty: Box<Type>,
+    },
 }
 
 impl Type {
@@ -219,6 +223,11 @@ impl Type {
                     Mutability::Mut => quote! { &#lifetime mut [#of] },
                 }
             }
+            Type::FnMut { args, return_ty } => {
+                let args = args.iter().map(|arg| arg.rust_type(source));
+                let return_ty = return_ty.rust_type(source);
+                quote! { impl FnMut(#(#args),*) -> #return_ty }
+            }
         }
     }
 
@@ -292,6 +301,9 @@ impl Type {
             Type::Option(ty) => ty.has_types(types),
             Type::SmallVec(ty) => ty.has_types(types),
             Type::Slice { of, .. } => of.has_types(types),
+            Type::FnMut { args, return_ty } => {
+                return_ty.has_types(types) || args.iter().any(|arg| arg.has_types(types))
+            }
             ty if types.contains(ty) => true,
             _ => false,
         }
@@ -345,6 +357,7 @@ impl Type {
             Type::Option(of) => of.supports_hash_eq(source),
             Type::SmallVec(of) => of.supports_hash_eq(source),
             Type::Slice { of, .. } => of.supports_hash_eq(source),
+            Type::FnMut { .. } => false,
         }
     }
 }

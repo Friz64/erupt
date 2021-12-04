@@ -1,7 +1,8 @@
 use super::{value::Value, CommandLevel};
 use crate::{
     comment_gen::DocCommentGen,
-    declaration::{self, Declaration, Mutability, Optional, Type},
+    declaration::{self, Declaration, DeclarationMetadata, Mutability, Optional, Type},
+    header::BitWidth,
     items::{enums::EnumKind, functions::Function},
     name::{Name, TypeName},
     source::Source,
@@ -293,17 +294,47 @@ impl Function {
                     quote! { &mut #cleaned_ident }
                 }
                 ParameterKind::ArrayWrittenTo { inner, length } => {
-                    let mut inner_declaration = param;
+                    let mut inner_declaration = param.clone();
                     inner_declaration.ty = inner.clone();
                     let default = inner_declaration.default_impl(source);
 
                     let len_path = declaration::len_path(&length);
 
-                    let vec = Value::vec_cloning(inner, default, quote! { #len_path as _ });
+                    let vec = Value::vec_cloning(inner.clone(), default, quote! { #len_path as _ });
                     let vec_expr = vec.expr;
                     return_init.extend(quote! {
                         let mut #cleaned_ident = #vec_expr;
                     });
+
+                    if let Type::Named(Name::Type(name)) = &inner {
+                        if let Some(structure) = source.find_structure(&name) {
+                            if structure.has_p_next(Mutability::Const)
+                                || structure.has_p_next(Mutability::Mut)
+                            {
+                                let callback_declaration = Declaration {
+                                    name: Some(format!("{}_callback", param.name_lossy())),
+                                    ty: Type::Option(Box::new(Type::FnMut {
+                                        args: vec![Type::Reference {
+                                            to: Box::new(vec.ty.clone()),
+                                            kind: Mutability::Mut,
+                                            lifetime: None,
+                                        }],
+                                        return_ty: Box::new(Type::Unit),
+                                    })),
+                                    metadata: DeclarationMetadata::empty(),
+                                    bitwidth: BitWidth::Full,
+                                };
+
+                                let callback_ident = callback_declaration.cleaned_ident();
+                                user_params.push(callback_declaration);
+                                return_init.extend(quote! {
+                                    if let Some(mut _callback) = #callback_ident {
+                                        _callback(&mut #cleaned_ident);
+                                    }
+                                });
+                            }
+                        }
+                    }
 
                     return_values.push(Value::new(quote! { #cleaned_ident }, vec.ty).map_bool());
 

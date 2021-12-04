@@ -300,7 +300,7 @@ impl crate::InstanceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV.html) · Function"]
     #[doc(alias = "vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV")]
-    pub unsafe fn get_physical_device_supported_framebuffer_mixed_samples_combinations_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, combination_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>> {
+    pub unsafe fn get_physical_device_supported_framebuffer_mixed_samples_combinations_nv(&self, physical_device: crate::vk1_0::PhysicalDevice, combination_count: Option<u32>, combinations_callback: Option<impl FnMut(&mut crate::SmallVec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>) -> ()>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::nv_coverage_reduction_mode::FramebufferMixedSamplesCombinationNV>> {
         let _function = self.get_physical_device_supported_framebuffer_mixed_samples_combinations_nv.expect(crate::NOT_LOADED_MESSAGE);
         let mut combination_count = match combination_count {
             Some(v) => v,
@@ -311,6 +311,9 @@ impl crate::InstanceLoader {
             }
         };
         let mut combinations = crate::SmallVec::from_elem(Default::default(), combination_count as _);
+        if let Some(mut _callback) = combinations_callback {
+            _callback(&mut combinations);
+        }
         let _return = _function(physical_device as _, &mut combination_count, combinations.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, combinations)
     }

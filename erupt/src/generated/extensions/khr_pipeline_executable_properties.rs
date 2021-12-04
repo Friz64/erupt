@@ -572,7 +572,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutablePropertiesKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutablePropertiesKHR")]
-    pub unsafe fn get_pipeline_executable_properties_khr(&self, pipeline_info: &crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR, executable_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>> {
+    pub unsafe fn get_pipeline_executable_properties_khr(&self, pipeline_info: &crate::extensions::khr_pipeline_executable_properties::PipelineInfoKHR, executable_count: Option<u32>, properties_callback: Option<impl FnMut(&mut crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>) -> ()>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutablePropertiesKHR>> {
         let _function = self.get_pipeline_executable_properties_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut executable_count = match executable_count {
             Some(v) => v,
@@ -583,6 +583,9 @@ impl crate::DeviceLoader {
             }
         };
         let mut properties = crate::SmallVec::from_elem(Default::default(), executable_count as _);
+        if let Some(mut _callback) = properties_callback {
+            _callback(&mut properties);
+        }
         let _return = _function(self.handle, pipeline_info as _, &mut executable_count, properties.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, properties)
     }
@@ -590,7 +593,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableStatisticsKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutableStatisticsKHR")]
-    pub unsafe fn get_pipeline_executable_statistics_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, statistic_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>> {
+    pub unsafe fn get_pipeline_executable_statistics_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, statistic_count: Option<u32>, statistics_callback: Option<impl FnMut(&mut crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>) -> ()>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticKHR>> {
         let _function = self.get_pipeline_executable_statistics_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut statistic_count = match statistic_count {
             Some(v) => v,
@@ -601,6 +604,9 @@ impl crate::DeviceLoader {
             }
         };
         let mut statistics = crate::SmallVec::from_elem(Default::default(), statistic_count as _);
+        if let Some(mut _callback) = statistics_callback {
+            _callback(&mut statistics);
+        }
         let _return = _function(self.handle, executable_info as _, &mut statistic_count, statistics.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, statistics)
     }
@@ -608,7 +614,7 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPipelineExecutableInternalRepresentationsKHR.html) · Function"]
     #[doc(alias = "vkGetPipelineExecutableInternalRepresentationsKHR")]
-    pub unsafe fn get_pipeline_executable_internal_representations_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, internal_representation_count: Option<u32>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>> {
+    pub unsafe fn get_pipeline_executable_internal_representations_khr(&self, executable_info: &crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInfoKHR, internal_representation_count: Option<u32>, internal_representations_callback: Option<impl FnMut(&mut crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>) -> ()>) -> crate::utils::VulkanResult<crate::SmallVec<crate::extensions::khr_pipeline_executable_properties::PipelineExecutableInternalRepresentationKHR>> {
         let _function = self.get_pipeline_executable_internal_representations_khr.expect(crate::NOT_LOADED_MESSAGE);
         let mut internal_representation_count = match internal_representation_count {
             Some(v) => v,
@@ -619,6 +625,9 @@ impl crate::DeviceLoader {
             }
         };
         let mut internal_representations = crate::SmallVec::from_elem(Default::default(), internal_representation_count as _);
+        if let Some(mut _callback) = internal_representations_callback {
+            _callback(&mut internal_representations);
+        }
         let _return = _function(self.handle, executable_info as _, &mut internal_representation_count, internal_representations.as_mut_ptr());
         crate::utils::VulkanResult::new(_return, internal_representations)
     }

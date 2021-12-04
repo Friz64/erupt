@@ -21,11 +21,11 @@ rust-version = "1.48"
 bitflags = "1"
 smallvec = "1"
 libloading = { version = "0.7", optional = true }
-raw-window-handle = { version = "0.3", optional = true }
+raw-window-handle = { version = "0.4", optional = true }
 bytemuck = { version = "1", optional = true }
 
 [target.'cfg(any(target_os = "macos", target_os = "ios"))'.dependencies]
-raw-window-metal = { version = "0.1", optional = true }
+raw-window-metal = { version = "0.2", optional = true }
 
 [features]
 default = ["loading", "surface"]

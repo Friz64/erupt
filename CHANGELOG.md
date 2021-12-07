@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 201
+- Update Vulkan Headers to version 202
 - Update `raw-window-handle` to 0.4
 - Rename `.build()` to `.build_dangling()` to make it look less innocent
 - Optimize construction of larger pointer chains

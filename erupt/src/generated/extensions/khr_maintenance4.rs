@@ -11,6 +11,10 @@ pub const FN_GET_DEVICE_IMAGE_MEMORY_REQUIREMENTS_KHR: *const std::os::raw::c_ch
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 pub const FN_GET_DEVICE_IMAGE_SPARSE_MEMORY_REQUIREMENTS_KHR: *const std::os::raw::c_char = crate::cstr!("vkGetDeviceImageSparseMemoryRequirementsKHR");
 #[doc = "Provided by [`crate::extensions::khr_maintenance4`]"]
+impl crate::vk1_0::ImageAspectFlagBits {
+    pub const NONE_KHR: Self = Self(0);
+}
+#[doc = "Provided by [`crate::extensions::khr_maintenance4`]"]
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES_KHR: Self = Self(1000413000);
     pub const PHYSICAL_DEVICE_MAINTENANCE_4_PROPERTIES_KHR: Self = Self(1000413001);

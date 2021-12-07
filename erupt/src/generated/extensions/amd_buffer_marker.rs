@@ -15,9 +15,18 @@ impl crate::DeviceLoader {
     #[track_caller]
     #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function"]
     #[doc(alias = "vkCmdWriteBufferMarkerAMD")]
-    pub unsafe fn cmd_write_buffer_marker_amd(&self, command_buffer: crate::vk1_0::CommandBuffer, pipeline_stage: crate::vk1_0::PipelineStageFlagBits, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, marker: u32) -> () {
+    pub unsafe fn cmd_write_buffer_marker_amd(&self, command_buffer: crate::vk1_0::CommandBuffer, pipeline_stage: Option<crate::vk1_0::PipelineStageFlagBits>, dst_buffer: crate::vk1_0::Buffer, dst_offset: crate::vk1_0::DeviceSize, marker: u32) -> () {
         let _function = self.cmd_write_buffer_marker_amd.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(command_buffer as _, pipeline_stage as _, dst_buffer as _, dst_offset as _, marker as _);
+        let _return = _function(
+            command_buffer as _,
+            match pipeline_stage {
+                Some(v) => v,
+                None => Default::default(),
+            },
+            dst_buffer as _,
+            dst_offset as _,
+            marker as _,
+        );
         ()
     }
 }

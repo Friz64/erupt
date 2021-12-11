@@ -1,7 +1,7 @@
-//! Load functions using [`libloading`](https://crates.io/crates/libloading)
+//! Load functions using [`libloading`](https://crates.io/crates/libloading).
 //!
-//! Enabled using the `loading` cargo feature
-use crate::{CustomEntryLoader, EntryEnabled, LoaderError};
+//! Enabled using the `loading` cargo feature.
+use crate::{CustomEntryLoader, LoaderError};
 use libloading::Library;
 use std::{
     error::Error,
@@ -21,13 +21,13 @@ const LIB_PATH: &str = "libvulkan.dylib";
 #[cfg(windows)]
 const LIB_PATH: &str = "vulkan-1.dll";
 
-/// The default entry loader library, used in [`EntryLoader`]
+/// The default entry loader library, used in [`EntryLoader`].
 pub type DefaultEntryLoaderLibrary = Library;
 
-/// The default [`EntryLoader`], providing `EntryLoader::new`
+/// The default [`EntryLoader`], providing `EntryLoader::new`.
 pub type EntryLoader = CustomEntryLoader<DefaultEntryLoaderLibrary>;
 
-/// An error that can occur while loading a library
+/// An error that can occur while loading a library.
 #[derive(Debug)]
 pub struct LibraryError(libloading::Error);
 
@@ -43,12 +43,12 @@ impl Error for LibraryError {
     }
 }
 
-/// An error that can occur while initializing a [`EntryLoader`]
+/// An error that can occur while initializing a [`EntryLoader`].
 #[derive(Debug)]
 pub enum EntryLoaderError {
-    /// The library failed to load
+    /// The library failed to load.
     Library(LibraryError),
-    /// The entry loader failed to initialize
+    /// The entry loader failed to initialize.
     EntryLoad(LoaderError),
 }
 
@@ -71,19 +71,22 @@ impl Error for EntryLoaderError {
 }
 
 impl EntryLoader {
-    /// Load functions using [`libloading`](https://crates.io/crates/libloading)
+    /// Load functions using [`libloading`](https://crates.io/crates/libloading).
     ///
-    /// Enabled using the `loading` cargo feature
+    /// Enabled using the `loading` cargo feature.
+    ///
+    /// For more advanced use cases, take a look at
+    /// [`EntryLoader::with_lib_path`] and [`EntryLoader::with_library`].
     pub fn new() -> Result<EntryLoader, EntryLoaderError> {
         EntryLoader::with_lib_path(LIB_PATH)
     }
 
     /// Load functions using [`libloading`](https://crates.io/crates/libloading)
-    /// providing a custom library path
+    /// providing a custom library path.
     ///
-    /// Enabled using the `loading` cargo feature
+    /// Enabled using the `loading` cargo feature.
     pub fn with_lib_path<P: AsRef<OsStr>>(lib_path: P) -> Result<EntryLoader, EntryLoaderError> {
-        let mut library = unsafe { Library::new(lib_path).map_err(|err| EntryLoaderError::Library(LibraryError(err)))? };
+        let library = unsafe { Library::new(lib_path).map_err(|err| EntryLoaderError::Library(LibraryError(err)))? };
 
         let symbol = |library: &mut Library, name| unsafe {
             let cstr = CStr::from_ptr(name);
@@ -91,6 +94,6 @@ impl EntryLoader {
             library.get(bytes).ok().map(|symbol| *symbol)
         };
 
-        Ok(unsafe { EntryEnabled::new(&mut library, symbol).and_then(|entry_enabled| EntryLoader::custom(library, symbol, entry_enabled)).map_err(EntryLoaderError::EntryLoad)? })
+        unsafe { CustomEntryLoader::with_library(library, symbol).map_err(EntryLoaderError::EntryLoad) }
     }
 }

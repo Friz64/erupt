@@ -1,6 +1,6 @@
-//! Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
+//! Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`]).
 //!
-//! Enabled using the `loading` cargo feature
+//! Enabled using the `loading` cargo feature.
 //!
 //! [`SurfaceKHR`]: ../extensions/khr_surface/struct.SurfaceKHR.html
 //! [`RawWindowHandle`]: https://docs.rs/raw-window-handle/*/raw_window_handle/enum.RawWindowHandle.html

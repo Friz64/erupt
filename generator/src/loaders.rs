@@ -360,7 +360,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl EntryEnabled {
-            pub unsafe fn new<T>(
+            pub(crate) unsafe fn new<T>(
                 loader: &mut T,
                 mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char)
                     -> Option<crate::vk1_0::PFN_vkVoidFunction>,
@@ -387,16 +387,16 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         ///
         /// To create a new loader, call [`EntryLoader::new`](CustomEntryLoader::new).
         pub struct CustomEntryLoader<T> {
-            arc: std::sync::Arc<()>,
+            pub(crate) arc: std::sync::Arc<()>,
             pub loader: T,
-            enabled: EntryEnabled,
+            pub(crate) enabled: EntryEnabled,
             pub get_instance_proc_addr: crate::vk1_0::PFN_vkGetInstanceProcAddr,
             #(pub #entry_loader_idents: #entry_loader_types,)*
         }
 
         impl<T> CustomEntryLoader<T> {
             #[allow(unused_parens)]
-            pub unsafe fn custom(
+            pub(crate) unsafe fn custom(
                 mut loader: T,
                 mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char)
                     -> Option<crate::vk1_0::PFN_vkVoidFunction>,
@@ -414,22 +414,6 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     enabled: entry_enabled,
                 })
             }
-
-            pub fn enabled(&self) -> &EntryEnabled {
-                &self.enabled
-            }
-
-            pub fn instance_version(&self) -> u32 {
-                self.enabled.instance_version
-            }
-        }
-
-        impl<T> Drop for CustomEntryLoader<T> {
-            fn drop(&mut self) {
-                if std::sync::Arc::weak_count(&self.arc) != 0 {
-                    panic!("Attempting to drop a entry loader with active references to it");
-                }
-            }
         }
 
         /// A list of requirements enabled in the instance loader.
@@ -439,7 +423,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl InstanceEnabled {
-            pub unsafe fn new(
+            pub(crate) unsafe fn new(
                 instance_version: u32,
                 enabled_extensions: &[&std::ffi::CStr],
                 available_device_extensions: &[&std::ffi::CStr],
@@ -465,16 +449,16 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         pub struct InstanceLoader {
             #[allow(dead_code)]
             parent: std::sync::Weak<()>,
-            arc: std::sync::Arc<()>,
+            pub(crate) arc: std::sync::Arc<()>,
             pub handle: crate::vk1_0::Instance,
-            enabled: InstanceEnabled,
+            pub(crate) enabled: InstanceEnabled,
             pub get_device_proc_addr: crate::vk1_0::PFN_vkGetDeviceProcAddr,
             #(pub #instance_loader_idents: #instance_loader_types,)*
         }
 
         impl InstanceLoader {
             #[allow(unused_parens)]
-            pub unsafe fn custom<T>(
+            pub(crate) unsafe fn custom<T>(
                 entry_loader: &CustomEntryLoader<T>,
                 instance: crate::vk1_0::Instance,
                 instance_enabled: InstanceEnabled,
@@ -493,18 +477,6 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     enabled: instance_enabled,
                 })
             }
-
-            pub fn enabled(&self) -> &InstanceEnabled {
-                &self.enabled
-            }
-        }
-
-        impl Drop for InstanceLoader {
-            fn drop(&mut self) {
-                if std::sync::Arc::weak_count(&self.arc) != 0 {
-                    panic!("Attempting to drop a instance loader with active references to it");
-                }
-            }
         }
 
         /// A list of requirements enabled in the device loader.
@@ -514,7 +486,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
         }
 
         impl DeviceEnabled {
-            pub unsafe fn new(enabled_extensions: &[&std::ffi::CStr]) -> DeviceEnabled {
+            pub(crate) unsafe fn new(enabled_extensions: &[&std::ffi::CStr]) -> DeviceEnabled {
                 let enabled_extension = |extension|
                     enabled_extensions.contains(&std::ffi::CStr::from_ptr(extension));
 
@@ -534,13 +506,13 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             #[allow(dead_code)]
             parent: std::sync::Weak<()>,
             pub handle: crate::vk1_0::Device,
-            enabled: DeviceEnabled,
+            pub(crate) enabled: DeviceEnabled,
             #(pub #device_loader_idents: #device_loader_types,)*
         }
 
         impl DeviceLoader {
             #[allow(unused_parens)]
-            pub unsafe fn custom(
+            pub(crate) unsafe fn custom(
                 instance_loader: &InstanceLoader,
                 device: crate::vk1_0::Device,
                 device_enabled: DeviceEnabled,
@@ -555,10 +527,6 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
                     #(#device_loader_idents: #device_loader_loading,)*
                     enabled: device_enabled,
                 })
-            }
-
-            pub fn enabled(&self) -> &DeviceEnabled {
-                &self.enabled
             }
         }
     };

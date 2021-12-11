@@ -124,6 +124,7 @@ use std::{
     ffi::CStr,
     fmt::{self, Display},
     mem, ptr,
+    sync::Arc,
 };
 #[cfg(feature = "loading")]
 pub use utils::loading::EntryLoader;
@@ -324,20 +325,72 @@ impl Error for LoaderError {
     }
 }
 
+impl<T> CustomEntryLoader<T> {
+    /// Creates a entry loader with a custom library used for loading.
+    pub unsafe fn with_library(mut library: T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Result<Self, LoaderError> {
+        Ok(EntryEnabled::new(&mut library, &mut symbol).and_then(|entry_enabled| CustomEntryLoader::custom(library, &mut symbol, entry_enabled))?)
+    }
+
+    /// Access enabled requirements of this entry loader.
+    pub fn enabled(&self) -> &EntryEnabled {
+        &self.enabled
+    }
+
+    /// This will be the result of `vkEnumerateInstanceVersion` if available, otherwise `0.1.0.0`.
+    pub fn instance_version(&self) -> u32 {
+        self.enabled.instance_version
+    }
+}
+
+impl<T> Drop for CustomEntryLoader<T> {
+    fn drop(&mut self) {
+        if Arc::weak_count(&self.arc) != 0 {
+            panic!("attempting to drop a entry loader with active references to it");
+        }
+    }
+}
+
 impl<T> Debug for CustomEntryLoader<T> {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(f, "Entry")
     }
 }
 
-impl InstanceLoader {
-    /// Creates a new instance loader.
-    ///
-    /// The instance object is created using the supplied `create_instance` function.
+/// Builder for an instance loader.
+pub struct InstanceLoaderBuilder<'a> {
+    create_instance_fn: Option<Box<dyn FnOnce(&vk1_0::InstanceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Instance>>>,
+    symbol_fn: Option<&'a mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
+    allocation_callbacks: Option<&'a vk1_0::AllocationCallbacks>,
+}
+
+impl<'a> InstanceLoaderBuilder<'a> {
+    pub fn new() -> Self {
+        InstanceLoaderBuilder { create_instance_fn: None, symbol_fn: None, allocation_callbacks: None }
+    }
+
     /// This may be useful when creating the instance using e.g. OpenXR.
-    #[inline]
-    pub unsafe fn with_creation_fn<T>(entry_loader: &CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo, create_instance: impl FnOnce() -> Result<vk1_0::Instance, vk1_0::Result>) -> Result<InstanceLoader, LoaderError> {
-        let instance = create_instance().map_err(LoaderError::VulkanError)?;
+    pub fn create_instance_fn(mut self, create_instance: Box<dyn FnOnce(&vk1_0::InstanceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Instance>>) -> Self {
+        self.create_instance_fn = Some(create_instance);
+        self
+    }
+
+    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
+        self.symbol_fn = Some(symbol);
+        self
+    }
+
+    pub fn allocation_callbacks(mut self, allocator: &'a vk1_0::AllocationCallbacks) -> Self {
+        self.allocation_callbacks = Some(allocator);
+        self
+    }
+
+    pub unsafe fn build<T>(self, entry_loader: &'a CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo) -> Result<InstanceLoader, LoaderError> {
+        let instance = match self.create_instance_fn {
+            Some(create_instance) => create_instance(create_info, self.allocation_callbacks),
+            None => entry_loader.create_instance(create_info, self.allocation_callbacks),
+        };
+
+        let instance = instance.result().map_err(LoaderError::VulkanError)?;
 
         let mut version = vk1_0::make_api_version(0, 1, 0, 0);
         if !create_info.p_application_info.is_null() {
@@ -350,20 +403,37 @@ impl InstanceLoader {
         let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
         let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
 
-        let symbol = |name| (entry_loader.get_instance_proc_addr)(instance, name);
-        let all_physical_device_extension_properties = all_physical_device_extension_properties(symbol, instance)?;
+        let mut default_symbol = move |name| (entry_loader.get_instance_proc_addr)(instance, name);
+        let mut symbol = self.symbol_fn.unwrap_or(&mut default_symbol);
+
+        let all_physical_device_extension_properties = all_physical_device_extension_properties(&mut symbol, instance)?;
         let available_device_extensions: Vec<_> = all_physical_device_extension_properties.iter().map(|properties| CStr::from_ptr(properties.extension_name.as_ptr())).collect();
 
         let instance_enabled = InstanceEnabled::new(version, &enabled_extensions, &available_device_extensions)?;
         InstanceLoader::custom(entry_loader, instance, instance_enabled, symbol)
     }
+}
 
+impl InstanceLoader {
     /// Creates a new instance loader.
     ///
-    /// The instance object is created for you. If this is not desired, use [`InstanceLoader::with_creation_fn`].
+    /// For more advanced use cases, take a look at [`InstanceLoaderBuilder`].
     #[inline]
-    pub unsafe fn new<T>(entry_loader: &CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo, allocator: Option<&vk1_0::AllocationCallbacks>) -> Result<InstanceLoader, LoaderError> {
-        InstanceLoader::with_creation_fn(entry_loader, create_info, || entry_loader.create_instance(create_info, allocator).result())
+    pub unsafe fn new<T>(entry_loader: &CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo) -> Result<InstanceLoader, LoaderError> {
+        InstanceLoaderBuilder::new().build(entry_loader, create_info)
+    }
+
+    /// Access enabled requirements of this instance loader.
+    pub fn enabled(&self) -> &InstanceEnabled {
+        &self.enabled
+    }
+}
+
+impl Drop for InstanceLoader {
+    fn drop(&mut self) {
+        if Arc::weak_count(&self.arc) != 0 {
+            panic!("attempting to drop a instance loader with active references to it");
+        }
     }
 }
 
@@ -372,7 +442,7 @@ impl InstanceLoader {
 // Vulkan spec: An "available device extension" is a device extension supported
 // by any physical device enumerated by instance.
 // https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetInstanceProcAddr.html#_description
-unsafe fn all_physical_device_extension_properties(mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>, instance: vk1_0::Instance) -> Result<Vec<vk1_0::ExtensionProperties>, LoaderError> {
+unsafe fn all_physical_device_extension_properties(symbol: &mut impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>, instance: vk1_0::Instance) -> Result<Vec<vk1_0::ExtensionProperties>, LoaderError> {
     let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(symbol(vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES).ok_or(LoaderError::SymbolNotAvailable)?);
     let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties = mem::transmute(symbol(vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES).ok_or(LoaderError::SymbolNotAvailable)?);
 
@@ -414,29 +484,67 @@ impl Debug for InstanceLoader {
     }
 }
 
-impl DeviceLoader {
-    /// Creates a new device loader.
-    ///
-    /// The device object is created using the supplied `create_device` function.
+/// Builder for an device loader.
+pub struct DeviceLoaderBuilder<'a> {
+    create_device_fn: Option<Box<dyn FnOnce(vk1_0::PhysicalDevice, &vk1_0::DeviceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Device>>>,
+    symbol_fn: Option<&'a mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
+    allocation_callbacks: Option<&'a vk1_0::AllocationCallbacks>,
+}
+
+impl<'a> DeviceLoaderBuilder<'a> {
+    pub fn new() -> Self {
+        DeviceLoaderBuilder { create_device_fn: None, symbol_fn: None, allocation_callbacks: None }
+    }
+
     /// This may be useful when creating the device using e.g. OpenXR.
-    #[inline]
-    pub unsafe fn with_creation_fn(instance_loader: &InstanceLoader, create_info: &vk1_0::DeviceCreateInfo, create_device: impl FnOnce() -> Result<vk1_0::Device, vk1_0::Result>) -> Result<DeviceLoader, LoaderError> {
-        let device = create_device().map_err(LoaderError::VulkanError)?;
+    pub fn create_device_fn(mut self, create_device: Box<dyn FnOnce(vk1_0::PhysicalDevice, &vk1_0::DeviceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Device>>) -> Self {
+        self.create_device_fn = Some(create_device);
+        self
+    }
+
+    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
+        self.symbol_fn = Some(symbol);
+        self
+    }
+
+    pub fn allocation_callbacks(mut self, allocator: &'a vk1_0::AllocationCallbacks) -> Self {
+        self.allocation_callbacks = Some(allocator);
+        self
+    }
+
+    pub unsafe fn build(self, instance_loader: &'a InstanceLoader, physical_device: vk1_0::PhysicalDevice, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
+        let device = match self.create_device_fn {
+            Some(create_device) => create_device(physical_device, create_info, self.allocation_callbacks),
+            None => instance_loader.create_device(physical_device, create_info, self.allocation_callbacks),
+        };
+
+        let device = device.result().map_err(LoaderError::VulkanError)?;
+
         let device_enabled = {
             let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
             let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
             DeviceEnabled::new(&enabled_extensions)
         };
 
-        DeviceLoader::custom(instance_loader, device, device_enabled, |name| (instance_loader.get_device_proc_addr)(device, name))
-    }
+        let mut default_symbol = move |name| (instance_loader.get_device_proc_addr)(device, name);
+        let symbol = self.symbol_fn.unwrap_or(&mut default_symbol);
 
+        DeviceLoader::custom(instance_loader, device, device_enabled, symbol)
+    }
+}
+
+impl DeviceLoader {
     /// Creates a new device loader.
     ///
-    /// The device object is created for you. If this is not desired, use [`DeviceLoader::with_creation_fn`].
+    /// For more advanced use cases, take a look at [`DeviceLoaderBuilder`].
     #[inline]
-    pub unsafe fn new(instance_loader: &InstanceLoader, physical_device: vk1_0::PhysicalDevice, create_info: &vk1_0::DeviceCreateInfo, allocator: Option<&vk1_0::AllocationCallbacks>) -> Result<DeviceLoader, LoaderError> {
-        DeviceLoader::with_creation_fn(instance_loader, create_info, || instance_loader.create_device(physical_device, create_info, allocator).result())
+    pub unsafe fn new(instance_loader: &InstanceLoader, physical_device: vk1_0::PhysicalDevice, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
+        DeviceLoaderBuilder::new().build(instance_loader, physical_device, create_info)
+    }
+
+    /// Access enabled requirements of this device loader.
+    pub fn enabled(&self) -> &DeviceEnabled {
+        &self.enabled
     }
 }
 

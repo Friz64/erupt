@@ -40,6 +40,10 @@ There are three stages of Vulkan functions
 - Device level functions, stored in `DeviceLoader`, internally loaded using the
   `vkGetDeviceProcAddr` function obtained in the previous step.
 
+The `*Enabled` structs associated with each loader are an
+implementation detail used while creating the loader and can be accessed through
+the `.enabled()` method on every loader.
+
 ### Usual setup
 
 ```rust
@@ -91,10 +95,14 @@ struct ExampleVulkanState {
 
 ### Advanced loader creation
 
-The `*Enabled` structs associated with each loader are an
-implementation detail used while creating the loader.
+For special use cases, there is
 
-<sup>TODO: document `::with_creation_fn` and `::custom` (with examples)</sup>
+- `EntryLoader::with_lib_path`: Allows custom Vulkan system library paths.
+- `EntryLoader::with_library`: Allows custom library backend.
+- `InstanceLoaderBuilder`: Allows setting a custom create function, symbol
+  function and custom allocation callbacks for instance creation.
+- `DeviceLoaderBuilder`: Allows setting a custom create function, symbol
+  function and custom allocation callbacks for device creation.
 
 ## Pointer chains
 

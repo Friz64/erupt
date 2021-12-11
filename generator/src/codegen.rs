@@ -49,11 +49,11 @@ impl CodeMap {
 
         let root_code = self.map.get(&Origin::Root);
         let mut root_mod = quote! {
-            /// Provides Vulkan extension items
+            /// Provides Vulkan extension items.
             pub mod extensions;
-            /// Provides external library items
+            /// Provides external library items.
             pub mod external;
-            /// Re-exports **every** Vulkan item
+            /// Re-exports **every** Vulkan item.
             pub mod vk;
 
             #root_code
@@ -80,7 +80,7 @@ impl CodeMap {
             match origin {
                 Origin::Root => (),
                 Origin::Feature { .. } => root_mod.extend(quote! {
-                    /// Provides Vulkan feature items
+                    /// Provides Vulkan feature items.
                     pub mod #name;
                 }),
                 Origin::Extension { full } => {

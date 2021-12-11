@@ -15,7 +15,7 @@ fn main() {
 
     let info = vk::ApplicationInfoBuilder::new().api_version(vk::make_api_version(0, 1, 1, 0));
     let instance_info = vk::InstanceCreateInfoBuilder::new().application_info(&info);
-    let instance = unsafe { InstanceLoader::new(&entry, &instance_info, None) }.unwrap();
+    let instance = unsafe { InstanceLoader::new(&entry, &instance_info) }.unwrap();
 
     let physical_devices = unsafe { instance.enumerate_physical_devices(None) }.unwrap();
     for physical_device in physical_devices {

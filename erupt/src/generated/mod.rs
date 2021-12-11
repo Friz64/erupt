@@ -1,8 +1,8 @@
-#[doc = r" Provides Vulkan extension items"]
+#[doc = r" Provides Vulkan extension items."]
 pub mod extensions;
-#[doc = r" Provides external library items"]
+#[doc = r" Provides external library items."]
 pub mod external;
-#[doc = r" Re-exports **every** Vulkan item"]
+#[doc = r" Re-exports **every** Vulkan item."]
 pub mod vk;
 #[doc = r" A list of requirements enabled in the entry loader."]
 #[derive(Debug)]
@@ -12,7 +12,7 @@ pub struct EntryEnabled {
     pub vk1_2: bool,
 }
 impl EntryEnabled {
-    pub unsafe fn new<T>(loader: &mut T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<EntryEnabled, crate::LoaderError> {
+    pub(crate) unsafe fn new<T>(loader: &mut T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<EntryEnabled, crate::LoaderError> {
         let mut version = crate::vk1_0::make_api_version(0, 1, 0, 0);
         if let Some(function) = symbol(loader, crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION) {
             let function: crate::vk1_1::PFN_vkEnumerateInstanceVersion = std::mem::transmute(function);
@@ -28,9 +28,9 @@ impl EntryEnabled {
 #[doc = r""]
 #[doc = r" To create a new loader, call [`EntryLoader::new`](CustomEntryLoader::new)."]
 pub struct CustomEntryLoader<T> {
-    arc: std::sync::Arc<()>,
+    pub(crate) arc: std::sync::Arc<()>,
     pub loader: T,
-    enabled: EntryEnabled,
+    pub(crate) enabled: EntryEnabled,
     pub get_instance_proc_addr: crate::vk1_0::PFN_vkGetInstanceProcAddr,
     pub create_instance: Option<vk1_0::PFN_vkCreateInstance>,
     pub enumerate_instance_version: Option<vk1_1::PFN_vkEnumerateInstanceVersion>,
@@ -39,23 +39,10 @@ pub struct CustomEntryLoader<T> {
 }
 impl<T> CustomEntryLoader<T> {
     #[allow(unused_parens)]
-    pub unsafe fn custom(mut loader: T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>, entry_enabled: EntryEnabled) -> Result<CustomEntryLoader<T>, crate::LoaderError> {
+    pub(crate) unsafe fn custom(mut loader: T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>, entry_enabled: EntryEnabled) -> Result<CustomEntryLoader<T>, crate::LoaderError> {
         let mut symbol = |name| symbol(&mut loader, name);
         let get_instance_proc_addr = symbol(crate::vk1_0::FN_GET_INSTANCE_PROC_ADDR).ok_or(crate::LoaderError::SymbolNotAvailable)?;
         Ok(CustomEntryLoader { arc: std::sync::Arc::new(()), get_instance_proc_addr: std::mem::transmute(get_instance_proc_addr), create_instance: std::mem::transmute(symbol(crate::vk1_0::FN_CREATE_INSTANCE)), enumerate_instance_version: if entry_enabled.vk1_1 { std::mem::transmute(symbol(crate::vk1_1::FN_ENUMERATE_INSTANCE_VERSION)) } else { None }, enumerate_instance_layer_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_LAYER_PROPERTIES)), enumerate_instance_extension_properties: std::mem::transmute(symbol(crate::vk1_0::FN_ENUMERATE_INSTANCE_EXTENSION_PROPERTIES)), loader, enabled: entry_enabled })
-    }
-    pub fn enabled(&self) -> &EntryEnabled {
-        &self.enabled
-    }
-    pub fn instance_version(&self) -> u32 {
-        self.enabled.instance_version
-    }
-}
-impl<T> Drop for CustomEntryLoader<T> {
-    fn drop(&mut self) {
-        if std::sync::Arc::weak_count(&self.arc) != 0 {
-            panic!("Attempting to drop a entry loader with active references to it");
-        }
     }
 }
 #[doc = r" A list of requirements enabled in the instance loader."]
@@ -107,7 +94,7 @@ pub struct InstanceEnabled {
     pub khr_device_group_creation: bool,
 }
 impl InstanceEnabled {
-    pub unsafe fn new(instance_version: u32, enabled_extensions: &[&std::ffi::CStr], available_device_extensions: &[&std::ffi::CStr]) -> Result<InstanceEnabled, crate::LoaderError> {
+    pub(crate) unsafe fn new(instance_version: u32, enabled_extensions: &[&std::ffi::CStr], available_device_extensions: &[&std::ffi::CStr]) -> Result<InstanceEnabled, crate::LoaderError> {
         let version = instance_version;
         let enabled_extension = |extension| enabled_extensions.contains(&std::ffi::CStr::from_ptr(extension));
         let available_device_extension = |extension| available_device_extensions.contains(&std::ffi::CStr::from_ptr(extension));
@@ -168,9 +155,9 @@ impl InstanceEnabled {
 pub struct InstanceLoader {
     #[allow(dead_code)]
     parent: std::sync::Weak<()>,
-    arc: std::sync::Arc<()>,
+    pub(crate) arc: std::sync::Arc<()>,
     pub handle: crate::vk1_0::Instance,
-    enabled: InstanceEnabled,
+    pub(crate) enabled: InstanceEnabled,
     pub get_device_proc_addr: crate::vk1_0::PFN_vkGetDeviceProcAddr,
     pub destroy_instance: Option<vk1_0::PFN_vkDestroyInstance>,
     pub enumerate_physical_devices: Option<vk1_0::PFN_vkEnumeratePhysicalDevices>,
@@ -275,7 +262,7 @@ pub struct InstanceLoader {
 }
 impl InstanceLoader {
     #[allow(unused_parens)]
-    pub unsafe fn custom<T>(entry_loader: &CustomEntryLoader<T>, instance: crate::vk1_0::Instance, instance_enabled: InstanceEnabled, mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<InstanceLoader, crate::LoaderError> {
+    pub(crate) unsafe fn custom<T>(entry_loader: &CustomEntryLoader<T>, instance: crate::vk1_0::Instance, instance_enabled: InstanceEnabled, mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<InstanceLoader, crate::LoaderError> {
         let get_device_proc_addr = symbol(crate::vk1_0::FN_GET_DEVICE_PROC_ADDR).ok_or(crate::LoaderError::SymbolNotAvailable)?;
         Ok(InstanceLoader {
             parent: std::sync::Arc::downgrade(&entry_loader.arc),
@@ -385,16 +372,6 @@ impl InstanceLoader {
             enabled: instance_enabled,
         })
     }
-    pub fn enabled(&self) -> &InstanceEnabled {
-        &self.enabled
-    }
-}
-impl Drop for InstanceLoader {
-    fn drop(&mut self) {
-        if std::sync::Arc::weak_count(&self.arc) != 0 {
-            panic!("Attempting to drop a instance loader with active references to it");
-        }
-    }
 }
 #[doc = r" A list of requirements enabled in the device loader."]
 #[derive(Debug)]
@@ -486,7 +463,7 @@ pub struct DeviceEnabled {
     pub ext_buffer_device_address: bool,
 }
 impl DeviceEnabled {
-    pub unsafe fn new(enabled_extensions: &[&std::ffi::CStr]) -> DeviceEnabled {
+    pub(crate) unsafe fn new(enabled_extensions: &[&std::ffi::CStr]) -> DeviceEnabled {
         let enabled_extension = |extension| enabled_extensions.contains(&std::ffi::CStr::from_ptr(extension));
         DeviceEnabled {
             huawei_subpass_shading: enabled_extension(crate::extensions::huawei_subpass_shading::HUAWEI_SUBPASS_SHADING_EXTENSION_NAME),
@@ -587,7 +564,7 @@ pub struct DeviceLoader {
     #[allow(dead_code)]
     parent: std::sync::Weak<()>,
     pub handle: crate::vk1_0::Device,
-    enabled: DeviceEnabled,
+    pub(crate) enabled: DeviceEnabled,
     pub get_device_proc_addr: Option<vk1_0::PFN_vkGetDeviceProcAddr>,
     pub destroy_device: Option<vk1_0::PFN_vkDestroyDevice>,
     pub get_device_queue: Option<vk1_0::PFN_vkGetDeviceQueue>,
@@ -993,7 +970,7 @@ pub struct DeviceLoader {
 }
 impl DeviceLoader {
     #[allow(unused_parens)]
-    pub unsafe fn custom(instance_loader: &InstanceLoader, device: crate::vk1_0::Device, device_enabled: DeviceEnabled, mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<DeviceLoader, crate::LoaderError> {
+    pub(crate) unsafe fn custom(instance_loader: &InstanceLoader, device: crate::vk1_0::Device, device_enabled: DeviceEnabled, mut symbol: impl FnMut(*const std::os::raw::c_char) -> Option<crate::vk1_0::PFN_vkVoidFunction>) -> Result<DeviceLoader, crate::LoaderError> {
         let instance_enabled = &instance_loader.enabled;
         Ok(DeviceLoader {
             parent: std::sync::Arc::downgrade(&instance_loader.arc),
@@ -1403,13 +1380,10 @@ impl DeviceLoader {
             enabled: device_enabled,
         })
     }
-    pub fn enabled(&self) -> &DeviceEnabled {
-        &self.enabled
-    }
 }
-#[doc = r" Provides Vulkan feature items"]
+#[doc = r" Provides Vulkan feature items."]
 pub mod vk1_0;
-#[doc = r" Provides Vulkan feature items"]
+#[doc = r" Provides Vulkan feature items."]
 pub mod vk1_1;
-#[doc = r" Provides Vulkan feature items"]
+#[doc = r" Provides Vulkan feature items."]
 pub mod vk1_2;

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.21.0+202] - 2021-12-11
+
 ### Added
 
 - Add callback to wrappers returning a vector of extendable structs

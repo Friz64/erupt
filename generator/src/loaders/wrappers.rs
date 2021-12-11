@@ -307,7 +307,7 @@ impl Function {
                     });
 
                     if let Type::Named(Name::Type(name)) = &inner {
-                        if let Some(structure) = source.find_structure(&name) {
+                        if let Some(structure) = source.find_structure(name) {
                             if structure.has_p_next(Mutability::Const)
                                 || structure.has_p_next(Mutability::Mut)
                             {

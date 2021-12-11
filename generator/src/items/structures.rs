@@ -100,7 +100,7 @@ impl From<XmlNode<'_, '_>> for StructureMetadata {
     fn from(node: XmlNode) -> Self {
         let extends = node
             .attribute("structextends")
-            .map(|values| values.split(',').map(|s| TypeName::new(s)).collect())
+            .map(|values| values.split(',').map(TypeName::new).collect())
             .unwrap_or_default();
 
         StructureMetadata { extends }

@@ -419,7 +419,7 @@ pub fn cleaned_declaration_ident(name: &str) -> Option<Ident> {
 }
 
 pub fn len_path(length: &str) -> TokenStream {
-    let idents = length.split("->").map(|s| cleaned_declaration_ident(s));
+    let idents = length.split("->").map(cleaned_declaration_ident);
     quote! { #(#idents).* }
 }
 

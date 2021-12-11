@@ -328,7 +328,7 @@ impl EnumVariantName {
 //                                ^ - last underscore
 fn trim_trailing_bit_part(trimmed: &mut String) {
     if let Some((last_bit_idx, bit_str)) = trimmed.match_indices("_BIT").last() {
-        let (last_underscore_idx, _) = trimmed.match_indices("_").last().unwrap();
+        let (last_underscore_idx, _) = trimmed.match_indices('_').last().unwrap();
         let bit_str_len = bit_str.len();
         if last_bit_idx + bit_str_len >= last_underscore_idx {
             trimmed.replace_range(last_bit_idx..last_bit_idx + bit_str_len, "");

@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add callback to wrappers returning a vector of extendable structs
+- Add Builders for Instance and Device loaders to cover more advanced use cases
+- Add `custom_loaders` example, showcasing usage of the new advanced loader APIs
 
 ### Changed
 

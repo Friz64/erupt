@@ -9,3 +9,4 @@ erupt = { path = "../erupt" }
 winit = "0.26"
 structopt = "0.3"
 bytemuck = "1.5"
+libloading = "0.7"

@@ -1,10 +1,10 @@
 use erupt::{vk, EntryLoader, ExtendableFrom, InstanceLoader};
-use std::ffi::CStr;
+use std::{ffi::CStr, sync::Arc};
 
 const TITLE: &str = "erupt_examples: pointer_chain";
 
 fn main() {
-    let entry = EntryLoader::new().unwrap();
+    let entry = Arc::new(EntryLoader::new().unwrap());
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,
@@ -15,7 +15,7 @@ fn main() {
 
     let info = vk::ApplicationInfoBuilder::new().api_version(vk::make_api_version(0, 1, 1, 0));
     let instance_info = vk::InstanceCreateInfoBuilder::new().application_info(&info);
-    let instance = unsafe { InstanceLoader::new(&entry, &instance_info) }.unwrap();
+    let instance = Arc::new(unsafe { InstanceLoader::new(&entry, &instance_info) }.unwrap());
 
     let physical_devices = unsafe { instance.enumerate_physical_devices(None) }.unwrap();
     for physical_device in physical_devices {

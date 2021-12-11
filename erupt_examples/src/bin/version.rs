@@ -1,9 +1,10 @@
 use erupt::{vk, EntryLoader};
+use std::sync::Arc;
 
 const TITLE: &str = "erupt_examples: version";
 
 fn main() {
-    let entry = EntryLoader::new().unwrap();
+    let entry = Arc::new(EntryLoader::new().unwrap());
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,

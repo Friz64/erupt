@@ -33,7 +33,7 @@ let app_info = vk::ApplicationInfoBuilder::new()
     .api_version(vk::API_VERSION_1_1);
 let instance_info = vk::InstanceCreateInfoBuilder::new()
     .application_info(&app_info);
-let instance = InstanceLoader::new(&entry, &instance_info, None)?;
+let instance = InstanceLoader::new(&entry, &instance_info)?;
 
 // ...
 
@@ -43,8 +43,9 @@ instance.destroy_instance(None);
 ## Additional examples
 
 - [triangle](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/triangle.rs)
-- [pointer-chain](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/pointer_chain.rs)
+- [pointer_chain](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/pointer_chain.rs)
 - [version](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/version.rs)
+- [custom_loaders](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/custom_loaders.rs)
 
 ## Cargo Features
 
@@ -308,9 +309,9 @@ pub enum LoaderError {
 impl Display for LoaderError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            LoaderError::VulkanError(_) => write!(f, "A Vulkan function returned a negative `Result` value"),
+            LoaderError::VulkanError(_) => write!(f, "a Vulkan function returned a negative `Result` value"),
             LoaderError::SymbolNotAvailable => {
-                write!(f, "A symbol was not available while it should have been")
+                write!(f, "a symbol was not available while it should have been")
             }
         }
     }

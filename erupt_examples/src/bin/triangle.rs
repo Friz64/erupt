@@ -8,6 +8,7 @@ use erupt::{
 use std::{
     ffi::{c_void, CStr, CString},
     os::raw::c_char,
+    sync::Arc,
 };
 use structopt::StructOpt;
 use winit::{
@@ -55,7 +56,7 @@ fn main() {
         .build(&event_loop)
         .unwrap();
 
-    let entry = EntryLoader::new().unwrap();
+    let entry = Arc::new(EntryLoader::new().unwrap());
     println!(
         "{} - Vulkan Instance {}.{}.{}",
         TITLE,
@@ -96,7 +97,7 @@ fn main() {
         .enabled_extension_names(&instance_extensions)
         .enabled_layer_names(&instance_layers);
 
-    let instance = unsafe { InstanceLoader::new(&entry, &instance_info) }.unwrap();
+    let instance = Arc::new(unsafe { InstanceLoader::new(&entry, &instance_info) }.unwrap());
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Setup/Validation_layers
     let messenger = if opt.validation_layers {
@@ -218,7 +219,8 @@ fn main() {
         .enabled_extension_names(&device_extensions)
         .enabled_layer_names(&device_layers);
 
-    let device = unsafe { DeviceLoader::new(&instance, physical_device, &device_info) }.unwrap();
+    let device =
+        Arc::new(unsafe { DeviceLoader::new(&instance, physical_device, &device_info) }.unwrap());
     let queue = unsafe { device.get_device_queue(queue_family, 0) };
 
     // https://vulkan-tutorial.com/Drawing_a_triangle/Presentation/Swap_chain

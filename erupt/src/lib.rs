@@ -359,7 +359,7 @@ impl<T> Debug for CustomEntryLoader<T> {
 /// Builder for an instance loader.
 pub struct InstanceLoaderBuilder<'a> {
     create_instance_fn: Option<Box<dyn FnOnce(&vk1_0::InstanceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Instance>>>,
-    symbol_fn: Option<&'a mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
+    symbol_fn: Option<&'a mut dyn FnMut(vk1_0::Instance, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
     allocation_callbacks: Option<&'a vk1_0::AllocationCallbacks>,
 }
 
@@ -374,7 +374,7 @@ impl<'a> InstanceLoaderBuilder<'a> {
         self
     }
 
-    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
+    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(vk1_0::Instance, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
         self.symbol_fn = Some(symbol);
         self
     }
@@ -404,7 +404,12 @@ impl<'a> InstanceLoaderBuilder<'a> {
         let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
 
         let mut default_symbol = move |name| (entry_loader.get_instance_proc_addr)(instance, name);
-        let mut symbol = self.symbol_fn.unwrap_or(&mut default_symbol);
+        let mut symbol: &mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction> = &mut default_symbol;
+        let mut user_symbol;
+        if let Some(internal_symbol) = self.symbol_fn {
+            user_symbol = move |name| internal_symbol(instance, name);
+            symbol = &mut user_symbol;
+        }
 
         let all_physical_device_extension_properties = all_physical_device_extension_properties(&mut symbol, instance)?;
         let available_device_extensions: Vec<_> = all_physical_device_extension_properties.iter().map(|properties| CStr::from_ptr(properties.extension_name.as_ptr())).collect();
@@ -487,7 +492,7 @@ impl Debug for InstanceLoader {
 /// Builder for an device loader.
 pub struct DeviceLoaderBuilder<'a> {
     create_device_fn: Option<Box<dyn FnOnce(vk1_0::PhysicalDevice, &vk1_0::DeviceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Device>>>,
-    symbol_fn: Option<&'a mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
+    symbol_fn: Option<&'a mut dyn FnMut(vk1_0::Device, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
     allocation_callbacks: Option<&'a vk1_0::AllocationCallbacks>,
 }
 
@@ -502,7 +507,7 @@ impl<'a> DeviceLoaderBuilder<'a> {
         self
     }
 
-    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
+    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(vk1_0::Device, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
         self.symbol_fn = Some(symbol);
         self
     }
@@ -527,7 +532,12 @@ impl<'a> DeviceLoaderBuilder<'a> {
         };
 
         let mut default_symbol = move |name| (instance_loader.get_device_proc_addr)(device, name);
-        let symbol = self.symbol_fn.unwrap_or(&mut default_symbol);
+        let mut symbol: &mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction> = &mut default_symbol;
+        let mut user_symbol;
+        if let Some(internal_symbol) = self.symbol_fn {
+            user_symbol = move |name| internal_symbol(device, name);
+            symbol = &mut user_symbol;
+        }
 
         DeviceLoader::custom(instance_loader, device, device_enabled, symbol)
     }

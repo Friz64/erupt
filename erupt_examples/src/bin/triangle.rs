@@ -12,6 +12,7 @@ use std::{
 };
 use structopt::StructOpt;
 use winit::{
+    dpi::PhysicalSize,
     event::{
         DeviceEvent, ElementState, Event, KeyboardInput, StartCause, VirtualKeyCode, WindowEvent,
     },
@@ -232,12 +233,24 @@ fn main() {
         image_count = surface_caps.max_image_count;
     }
 
+    // https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html#_description
+    let swapchain_image_extent = match surface_caps.current_extent {
+        vk::Extent2D {
+            width: u32::MAX,
+            height: u32::MAX,
+        } => {
+            let PhysicalSize { width, height } = window.inner_size();
+            vk::Extent2D { width, height }
+        }
+        normal => normal,
+    };
+
     let swapchain_info = vk::SwapchainCreateInfoKHRBuilder::new()
         .surface(surface)
         .min_image_count(image_count)
         .image_format(format.format)
         .image_color_space(format.color_space)
-        .image_extent(surface_caps.current_extent)
+        .image_extent(swapchain_image_extent)
         .image_array_layers(1)
         .image_usage(vk::ImageUsageFlags::COLOR_ATTACHMENT)
         .image_sharing_mode(vk::SharingMode::EXCLUSIVE)

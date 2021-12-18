@@ -322,13 +322,13 @@ fn main() {
     let viewports = vec![vk::ViewportBuilder::new()
         .x(0.0)
         .y(0.0)
-        .width(surface_caps.current_extent.width as f32)
-        .height(surface_caps.current_extent.height as f32)
+        .width(swapchain_image_extent.width as f32)
+        .height(swapchain_image_extent.height as f32)
         .min_depth(0.0)
         .max_depth(1.0)];
     let scissors = vec![vk::Rect2DBuilder::new()
         .offset(vk::Offset2D { x: 0, y: 0 })
-        .extent(surface_caps.current_extent)];
+        .extent(swapchain_image_extent)];
     let viewport_state = vk::PipelineViewportStateCreateInfoBuilder::new()
         .viewports(&viewports)
         .scissors(&scissors);
@@ -418,8 +418,8 @@ fn main() {
             let framebuffer_info = vk::FramebufferCreateInfoBuilder::new()
                 .render_pass(render_pass)
                 .attachments(&attachments)
-                .width(surface_caps.current_extent.width)
-                .height(surface_caps.current_extent.height)
+                .width(swapchain_image_extent.width)
+                .height(swapchain_image_extent.height)
                 .layers(1);
 
             unsafe { device.create_framebuffer(&framebuffer_info, None) }.unwrap()
@@ -451,7 +451,7 @@ fn main() {
             .framebuffer(framebuffer)
             .render_area(vk::Rect2D {
                 offset: vk::Offset2D { x: 0, y: 0 },
-                extent: surface_caps.current_extent,
+                extent: swapchain_image_extent,
             })
             .clear_values(&clear_values);
 

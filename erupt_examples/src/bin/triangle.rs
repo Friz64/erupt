@@ -49,6 +49,7 @@ unsafe extern "system" fn debug_callback(
 
 fn main() {
     let opt = Opt::from_args();
+    println!("Use validation layers: {}", opt.validation_layers);
 
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new()

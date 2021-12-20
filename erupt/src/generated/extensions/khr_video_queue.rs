@@ -102,6 +102,7 @@ impl crate::vk1_0::StructureType {
     pub const VIDEO_PROFILES_KHR: Self = Self(1000023013);
     pub const PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR: Self = Self(1000023014);
     pub const VIDEO_FORMAT_PROPERTIES_KHR: Self = Self(1000023015);
+    pub const QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_2_KHR: Self = Self(1000023016);
 }
 #[doc = "Provided by [`crate::extensions::khr_video_queue`]"]
 impl crate::vk1_0::ObjectType {
@@ -388,6 +389,8 @@ impl<'a> crate::ExtendableFrom<'a, VideoProfileKHR> for crate::vk1_1::FormatProp
 impl<'a> crate::ExtendableFrom<'a, VideoProfileKHRBuilder<'_>> for crate::vk1_1::FormatProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoQueueFamilyProperties2KHR> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoQueueFamilyProperties2KHRBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueueFamilyQueryResultStatusProperties2KHR> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, QueueFamilyQueryResultStatusProperties2KHRBuilder<'_>> for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoQueueFamilyProperties2KHR.html) · Structure"]
 #[doc(alias = "VkVideoQueueFamilyProperties2KHR")]
 #[derive(Copy, Clone)]
@@ -454,6 +457,76 @@ impl<'a> std::ops::Deref for VideoQueueFamilyProperties2KHRBuilder<'a> {
     }
 }
 impl<'a> std::ops::DerefMut for VideoQueueFamilyProperties2KHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyQueryResultStatusProperties2KHR.html) · Structure"]
+#[doc(alias = "VkQueueFamilyQueryResultStatusProperties2KHR")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct QueueFamilyQueryResultStatusProperties2KHR {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *mut std::ffi::c_void,
+    pub supported: crate::vk1_0::Bool32,
+}
+impl QueueFamilyQueryResultStatusProperties2KHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_2_KHR;
+}
+impl Default for QueueFamilyQueryResultStatusProperties2KHR {
+    fn default() -> Self {
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null_mut(), supported: Default::default() }
+    }
+}
+impl std::fmt::Debug for QueueFamilyQueryResultStatusProperties2KHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("QueueFamilyQueryResultStatusProperties2KHR").field("s_type", &self.s_type).field("p_next", &self.p_next).field("supported", &(self.supported != 0)).finish()
+    }
+}
+impl QueueFamilyQueryResultStatusProperties2KHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
+        QueueFamilyQueryResultStatusProperties2KHRBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyQueryResultStatusProperties2KHR.html) · Builder of [`QueueFamilyQueryResultStatusProperties2KHR`]"]
+#[repr(transparent)]
+pub struct QueueFamilyQueryResultStatusProperties2KHRBuilder<'a>(QueueFamilyQueryResultStatusProperties2KHR, std::marker::PhantomData<&'a ()>);
+impl<'a> QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
+        QueueFamilyQueryResultStatusProperties2KHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    pub fn supported(mut self, supported: bool) -> Self {
+        self.0.supported = supported as _;
+        self
+    }
+    #[inline]
+    #[doc = r" Discards all lifetime information."]
+    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
+    pub fn build_dangling(self) -> QueueFamilyQueryResultStatusProperties2KHR {
+        self.0
+    }
+}
+impl<'a> std::default::Default for QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
+    fn default() -> QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
+    type Target = QueueFamilyQueryResultStatusProperties2KHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }

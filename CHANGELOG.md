@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update Vulkan Headers to version 203
+
 ## [0.21.0+202] - 2021-12-11
 
 ### Added
@@ -345,7 +349,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 _Initial Development_
 
-[Unreleased]: https://gitlab.com/Friz64/erupt/-/compare/v0.20.0+190...main
+[Unreleased]: https://gitlab.com/Friz64/erupt/-/compare/v0.21.0+202...main
+[0.20.0+190]: https://gitlab.com/Friz64/erupt/-/compare/v0.20.0+190...v0.21.0+202
 [0.20.0+190]: https://gitlab.com/Friz64/erupt/-/compare/v0.19.0+182...v0.20.0+190
 [0.19.0+182]: https://gitlab.com/Friz64/erupt/-/compare/v0.18.0+174...v0.19.0+182
 [0.18.0+174]: https://gitlab.com/Friz64/erupt/-/compare/v0.17.1+169...v0.18.0+174

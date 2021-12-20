@@ -6,7 +6,7 @@
 //! before final release of a non-provisional version of this extension.
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION")]
-pub const EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 2;
+pub const EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 3;
 #[doc = "<s>Vulkan Manual Page</s> · Constant"]
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H265_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!("VK_EXT_video_encode_h265");
@@ -870,18 +870,19 @@ pub struct VideoEncodeH265RateControlInfoEXT {
     pub idr_period: u32,
     pub consecutive_b_frame_count: u32,
     pub rate_control_structure: crate::extensions::ext_video_encode_h265::VideoEncodeH265RateControlStructureFlagBitsEXT,
+    pub sub_layer_count: u8,
 }
 impl VideoEncodeH265RateControlInfoEXT {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H265_RATE_CONTROL_INFO_EXT;
 }
 impl Default for VideoEncodeH265RateControlInfoEXT {
     fn default() -> Self {
-        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), gop_frame_count: Default::default(), idr_period: Default::default(), consecutive_b_frame_count: Default::default(), rate_control_structure: Default::default() }
+        Self { s_type: Self::STRUCTURE_TYPE, p_next: std::ptr::null(), gop_frame_count: Default::default(), idr_period: Default::default(), consecutive_b_frame_count: Default::default(), rate_control_structure: Default::default(), sub_layer_count: Default::default() }
     }
 }
 impl std::fmt::Debug for VideoEncodeH265RateControlInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("VideoEncodeH265RateControlInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("gop_frame_count", &self.gop_frame_count).field("idr_period", &self.idr_period).field("consecutive_b_frame_count", &self.consecutive_b_frame_count).field("rate_control_structure", &self.rate_control_structure).finish()
+        f.debug_struct("VideoEncodeH265RateControlInfoEXT").field("s_type", &self.s_type).field("p_next", &self.p_next).field("gop_frame_count", &self.gop_frame_count).field("idr_period", &self.idr_period).field("consecutive_b_frame_count", &self.consecutive_b_frame_count).field("rate_control_structure", &self.rate_control_structure).field("sub_layer_count", &self.sub_layer_count).finish()
     }
 }
 impl VideoEncodeH265RateControlInfoEXT {
@@ -917,6 +918,11 @@ impl<'a> VideoEncodeH265RateControlInfoEXTBuilder<'a> {
     #[inline]
     pub fn rate_control_structure(mut self, rate_control_structure: crate::extensions::ext_video_encode_h265::VideoEncodeH265RateControlStructureFlagBitsEXT) -> Self {
         self.0.rate_control_structure = rate_control_structure as _;
+        self
+    }
+    #[inline]
+    pub fn sub_layer_count(mut self, sub_layer_count: u8) -> Self {
+        self.0.sub_layer_count = sub_layer_count as _;
         self
     }
     #[inline]

@@ -245,6 +245,8 @@ pub use crate::extensions::google_display_timing::*;
 #[doc(no_inline)]
 pub use crate::extensions::google_hlsl_functionality1::*;
 #[doc(no_inline)]
+pub use crate::extensions::google_surfaceless_query::*;
+#[doc(no_inline)]
 pub use crate::extensions::google_user_type::*;
 #[doc(no_inline)]
 pub use crate::extensions::huawei_invocation_mask::*;
@@ -491,6 +493,8 @@ pub use crate::extensions::nv_glsl_shader::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_inherited_viewport_scissor::*;
 #[doc(no_inline)]
+pub use crate::extensions::nv_linear_color_attachment::*;
+#[doc(no_inline)]
 pub use crate::extensions::nv_mesh_shader::*;
 #[doc(no_inline)]
 pub use crate::extensions::nv_ray_tracing::*;
@@ -522,6 +526,8 @@ pub use crate::extensions::nvx_binary_import::*;
 pub use crate::extensions::nvx_image_view_handle::*;
 #[doc(no_inline)]
 pub use crate::extensions::nvx_multiview_per_view_attributes::*;
+#[doc(no_inline)]
+pub use crate::extensions::qcom_fragment_density_map_offset::*;
 #[doc(no_inline)]
 pub use crate::extensions::qcom_render_pass_shader_resolve::*;
 #[doc(no_inline)]

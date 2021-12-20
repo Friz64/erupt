@@ -244,6 +244,8 @@ pub mod google_decorate_string;
 pub mod google_display_timing;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_GOOGLE_hlsl_functionality1.html) · Vulkan extension"]
 pub mod google_hlsl_functionality1;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_GOOGLE_surfaceless_query.html) · Vulkan extension"]
+pub mod google_surfaceless_query;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_GOOGLE_user_type.html) · Vulkan extension"]
 pub mod google_user_type;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_HUAWEI_invocation_mask.html) · Vulkan extension"]
@@ -490,6 +492,8 @@ pub mod nv_geometry_shader_passthrough;
 pub mod nv_glsl_shader;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_inherited_viewport_scissor.html) · Vulkan extension"]
 pub mod nv_inherited_viewport_scissor;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_linear_color_attachment.html) · Vulkan extension"]
+pub mod nv_linear_color_attachment;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_mesh_shader.html) · Vulkan extension"]
 pub mod nv_mesh_shader;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NV_ray_tracing.html) · Vulkan extension"]
@@ -522,6 +526,8 @@ pub mod nvx_binary_import;
 pub mod nvx_image_view_handle;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_NVX_multiview_per_view_attributes.html) · Vulkan extension"]
 pub mod nvx_multiview_per_view_attributes;
+#[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QCOM_fragment_density_map_offset.html) · Vulkan extension"]
+pub mod qcom_fragment_density_map_offset;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QCOM_render_pass_shader_resolve.html) · Vulkan extension"]
 pub mod qcom_render_pass_shader_resolve;
 #[doc = "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VK_QCOM_render_pass_store_ops.html) · Vulkan extension"]

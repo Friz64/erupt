@@ -305,26 +305,31 @@ impl<'a> RayTracingShaderGroupCreateInfoNVBuilder<'a> {
         RayTracingShaderGroupCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn general_shader(mut self, general_shader: u32) -> Self {
         self.0.general_shader = general_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn closest_hit_shader(mut self, closest_hit_shader: u32) -> Self {
         self.0.closest_hit_shader = closest_hit_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn any_hit_shader(mut self, any_hit_shader: u32) -> Self {
         self.0.any_hit_shader = any_hit_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn intersection_shader(mut self, intersection_shader: u32) -> Self {
         self.0.intersection_shader = intersection_shader as _;
         self
@@ -403,38 +408,45 @@ impl<'a> RayTracingPipelineCreateInfoNVBuilder<'a> {
         RayTracingPipelineCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn groups(mut self, groups: &'a [crate::extensions::nv_ray_tracing::RayTracingShaderGroupCreateInfoNVBuilder]) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_recursion_depth(mut self, max_recursion_depth: u32) -> Self {
         self.0.max_recursion_depth = max_recursion_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layout(mut self, layout: crate::vk1_0::PipelineLayout) -> Self {
         self.0.layout = layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_handle(mut self, base_pipeline_handle: crate::vk1_0::Pipeline) -> Self {
         self.0.base_pipeline_handle = base_pipeline_handle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_index(mut self, base_pipeline_index: i32) -> Self {
         self.0.base_pipeline_index = base_pipeline_index as _;
         self
@@ -515,56 +527,67 @@ impl<'a> GeometryTrianglesNVBuilder<'a> {
         GeometryTrianglesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vertex_data(mut self, vertex_data: crate::vk1_0::Buffer) -> Self {
         self.0.vertex_data = vertex_data as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_offset(mut self, vertex_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.vertex_offset = vertex_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_count(mut self, vertex_count: u32) -> Self {
         self.0.vertex_count = vertex_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_stride(mut self, vertex_stride: crate::vk1_0::DeviceSize) -> Self {
         self.0.vertex_stride = vertex_stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_format(mut self, vertex_format: crate::vk1_0::Format) -> Self {
         self.0.vertex_format = vertex_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_data(mut self, index_data: crate::vk1_0::Buffer) -> Self {
         self.0.index_data = index_data as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_offset(mut self, index_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.index_offset = index_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_count(mut self, index_count: u32) -> Self {
         self.0.index_count = index_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_type(mut self, index_type: crate::vk1_0::IndexType) -> Self {
         self.0.index_type = index_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_data(mut self, transform_data: crate::vk1_0::Buffer) -> Self {
         self.0.transform_data = transform_data as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_offset(mut self, transform_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.transform_offset = transform_offset as _;
         self
@@ -638,21 +661,25 @@ impl<'a> GeometryAABBNVBuilder<'a> {
         GeometryAABBNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aabb_data(mut self, aabb_data: crate::vk1_0::Buffer) -> Self {
         self.0.aabb_data = aabb_data as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_aab_bs(mut self, num_aab_bs: u32) -> Self {
         self.0.num_aab_bs = num_aab_bs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stride(mut self, stride: u32) -> Self {
         self.0.stride = stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
@@ -719,11 +746,13 @@ impl<'a> GeometryDataNVBuilder<'a> {
         GeometryDataNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn triangles(mut self, triangles: crate::extensions::nv_ray_tracing::GeometryTrianglesNV) -> Self {
         self.0.triangles = triangles as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn aabbs(mut self, aabbs: crate::extensions::nv_ray_tracing::GeometryAABBNV) -> Self {
         self.0.aabbs = aabbs as _;
         self
@@ -796,16 +825,19 @@ impl<'a> GeometryNVBuilder<'a> {
         GeometryNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn geometry_type(mut self, geometry_type: crate::extensions::khr_acceleration_structure::GeometryTypeKHR) -> Self {
         self.0.geometry_type = geometry_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn geometry(mut self, geometry: crate::extensions::nv_ray_tracing::GeometryDataNV) -> Self {
         self.0.geometry = geometry as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::GeometryFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
@@ -880,21 +912,25 @@ impl<'a> AccelerationStructureInfoNVBuilder<'a> {
         AccelerationStructureInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::nv_ray_tracing::AccelerationStructureTypeNV) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_ray_tracing::BuildAccelerationStructureFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn instance_count(mut self, instance_count: u32) -> Self {
         self.0.instance_count = instance_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn geometries(mut self, geometries: &'a [crate::extensions::nv_ray_tracing::GeometryNVBuilder]) -> Self {
         self.0.p_geometries = geometries.as_ptr() as _;
         self.0.geometry_count = geometries.len() as _;
@@ -967,11 +1003,13 @@ impl<'a> AccelerationStructureCreateInfoNVBuilder<'a> {
         AccelerationStructureCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn compacted_size(mut self, compacted_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.compacted_size = compacted_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn info(mut self, info: crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV) -> Self {
         self.0.info = info as _;
         self
@@ -1046,21 +1084,25 @@ impl<'a> BindAccelerationStructureMemoryInfoNVBuilder<'a> {
         BindAccelerationStructureMemoryInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn acceleration_structure(mut self, acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV) -> Self {
         self.0.acceleration_structure = acceleration_structure as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_offset(mut self, memory_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.memory_offset = memory_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_indices(mut self, device_indices: &'a [u32]) -> Self {
         self.0.p_device_indices = device_indices.as_ptr() as _;
         self.0.device_index_count = device_indices.len() as _;
@@ -1133,6 +1175,7 @@ impl<'a> WriteDescriptorSetAccelerationStructureNVBuilder<'a> {
         WriteDescriptorSetAccelerationStructureNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn acceleration_structures(mut self, acceleration_structures: &'a [crate::extensions::nv_ray_tracing::AccelerationStructureNV]) -> Self {
         self.0.p_acceleration_structures = acceleration_structures.as_ptr() as _;
         self.0.acceleration_structure_count = acceleration_structures.len() as _;
@@ -1205,11 +1248,13 @@ impl<'a> AccelerationStructureMemoryRequirementsInfoNVBuilder<'a> {
         AccelerationStructureMemoryRequirementsInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsTypeNV) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn acceleration_structure(mut self, acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV) -> Self {
         self.0.acceleration_structure = acceleration_structure as _;
         self
@@ -1287,41 +1332,49 @@ impl<'a> PhysicalDeviceRayTracingPropertiesNVBuilder<'a> {
         PhysicalDeviceRayTracingPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_group_handle_size(mut self, shader_group_handle_size: u32) -> Self {
         self.0.shader_group_handle_size = shader_group_handle_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_recursion_depth(mut self, max_recursion_depth: u32) -> Self {
         self.0.max_recursion_depth = max_recursion_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_shader_group_stride(mut self, max_shader_group_stride: u32) -> Self {
         self.0.max_shader_group_stride = max_shader_group_stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_group_base_alignment(mut self, shader_group_base_alignment: u32) -> Self {
         self.0.shader_group_base_alignment = shader_group_base_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_geometry_count(mut self, max_geometry_count: u64) -> Self {
         self.0.max_geometry_count = max_geometry_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_instance_count(mut self, max_instance_count: u64) -> Self {
         self.0.max_instance_count = max_instance_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_triangle_count(mut self, max_triangle_count: u64) -> Self {
         self.0.max_triangle_count = max_triangle_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_acceleration_structures(mut self, max_descriptor_set_acceleration_structures: u32) -> Self {
         self.0.max_descriptor_set_acceleration_structures = max_descriptor_set_acceleration_structures as _;
         self

@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a> {
         PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_integer_functions2(mut self, shader_integer_functions2: bool) -> Self {
         self.0.shader_integer_functions2 = shader_integer_functions2 as _;
         self

@@ -55,6 +55,7 @@ impl<'a> PhysicalDevicePageableDeviceLocalMemoryFeaturesEXTBuilder<'a> {
         PhysicalDevicePageableDeviceLocalMemoryFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pageable_device_local_memory(mut self, pageable_device_local_memory: bool) -> Self {
         self.0.pageable_device_local_memory = pageable_device_local_memory as _;
         self

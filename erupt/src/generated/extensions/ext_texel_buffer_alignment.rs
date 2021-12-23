@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder<'a> {
         PhysicalDeviceTexelBufferAlignmentFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn texel_buffer_alignment(mut self, texel_buffer_alignment: bool) -> Self {
         self.0.texel_buffer_alignment = texel_buffer_alignment as _;
         self
@@ -126,21 +127,25 @@ impl<'a> PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder<'a> {
         PhysicalDeviceTexelBufferAlignmentPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn storage_texel_buffer_offset_alignment_bytes(mut self, storage_texel_buffer_offset_alignment_bytes: crate::vk1_0::DeviceSize) -> Self {
         self.0.storage_texel_buffer_offset_alignment_bytes = storage_texel_buffer_offset_alignment_bytes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn storage_texel_buffer_offset_single_texel_alignment(mut self, storage_texel_buffer_offset_single_texel_alignment: bool) -> Self {
         self.0.storage_texel_buffer_offset_single_texel_alignment = storage_texel_buffer_offset_single_texel_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn uniform_texel_buffer_offset_alignment_bytes(mut self, uniform_texel_buffer_offset_alignment_bytes: crate::vk1_0::DeviceSize) -> Self {
         self.0.uniform_texel_buffer_offset_alignment_bytes = uniform_texel_buffer_offset_alignment_bytes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn uniform_texel_buffer_offset_single_texel_alignment(mut self, uniform_texel_buffer_offset_single_texel_alignment: bool) -> Self {
         self.0.uniform_texel_buffer_offset_single_texel_alignment = uniform_texel_buffer_offset_single_texel_alignment as _;
         self

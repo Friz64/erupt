@@ -57,16 +57,19 @@ impl<'a> DisplayPresentInfoKHRBuilder<'a> {
         DisplayPresentInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_rect(mut self, src_rect: crate::vk1_0::Rect2D) -> Self {
         self.0.src_rect = src_rect as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_rect(mut self, dst_rect: crate::vk1_0::Rect2D) -> Self {
         self.0.dst_rect = dst_rect as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn persistent(mut self, persistent: bool) -> Self {
         self.0.persistent = persistent as _;
         self

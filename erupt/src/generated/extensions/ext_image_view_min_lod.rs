@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceImageViewMinLodFeaturesEXTBuilder<'a> {
         PhysicalDeviceImageViewMinLodFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_lod(mut self, min_lod: bool) -> Self {
         self.0.min_lod = min_lod as _;
         self
@@ -123,6 +124,7 @@ impl<'a> ImageViewMinLodCreateInfoEXTBuilder<'a> {
         ImageViewMinLodCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_lod(mut self, min_lod: std::os::raw::c_float) -> Self {
         self.0.min_lod = min_lod as _;
         self

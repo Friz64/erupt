@@ -69,6 +69,7 @@ impl<'a> DeviceMemoryOverallocationCreateInfoAMDBuilder<'a> {
         DeviceMemoryOverallocationCreateInfoAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn overallocation_behavior(mut self, overallocation_behavior: crate::extensions::amd_memory_overallocation_behavior::MemoryOverallocationBehaviorAMD) -> Self {
         self.0.overallocation_behavior = overallocation_behavior as _;
         self

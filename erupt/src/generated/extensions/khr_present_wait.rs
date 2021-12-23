@@ -55,6 +55,7 @@ impl<'a> PhysicalDevicePresentWaitFeaturesKHRBuilder<'a> {
         PhysicalDevicePresentWaitFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn present_wait(mut self, present_wait: bool) -> Self {
         self.0.present_wait = present_wait as _;
         self

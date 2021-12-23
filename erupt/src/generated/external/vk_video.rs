@@ -486,81 +486,97 @@ impl<'a> StdVideoH264SpsFlagsBuilder<'a> {
         StdVideoH264SpsFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn constraint_set0_flag(mut self, constraint_set0_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set0_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn constraint_set1_flag(mut self, constraint_set1_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set1_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn constraint_set2_flag(mut self, constraint_set2_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set2_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn constraint_set3_flag(mut self, constraint_set3_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set3_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn constraint_set4_flag(mut self, constraint_set4_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set4_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn constraint_set5_flag(mut self, constraint_set5_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, constraint_set5_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn direct_8x8_inference_flag(mut self, direct_8x8_inference_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, direct_8x8_inference_flag, 6usize, 6usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn mb_adaptive_frame_field_flag(mut self, mb_adaptive_frame_field_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, mb_adaptive_frame_field_flag, 7usize, 7usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_mbs_only_flag(mut self, frame_mbs_only_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, frame_mbs_only_flag, 8usize, 8usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_pic_order_always_zero_flag(mut self, delta_pic_order_always_zero_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, delta_pic_order_always_zero_flag, 9usize, 9usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn separate_colour_plane_flag(mut self, separate_colour_plane_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, separate_colour_plane_flag, 10usize, 10usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn gaps_in_frame_num_value_allowed_flag(mut self, gaps_in_frame_num_value_allowed_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, gaps_in_frame_num_value_allowed_flag, 11usize, 11usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn qpprime_y_zero_transform_bypass_flag(mut self, qpprime_y_zero_transform_bypass_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, qpprime_y_zero_transform_bypass_flag, 12usize, 12usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_cropping_flag(mut self, frame_cropping_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, frame_cropping_flag, 13usize, 13usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn seq_scaling_matrix_present_flag(mut self, seq_scaling_matrix_present_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, seq_scaling_matrix_present_flag, 14usize, 14usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_parameters_present_flag(mut self, vui_parameters_present_flag: u32) -> Self {
         self.0.constraint_set0_flag_and_more_bitfield = crate::bits_copy!(self.0.constraint_set0_flag_and_more_bitfield, vui_parameters_present_flag, 15usize, 15usize);
         self
@@ -628,21 +644,25 @@ impl<'a> StdVideoH264ScalingListsBuilder<'a> {
         StdVideoH264ScalingListsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list_present_mask(mut self, scaling_list_present_mask: u8) -> Self {
         self.0.scaling_list_present_mask = scaling_list_present_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn use_default_scaling_matrix_mask(mut self, use_default_scaling_matrix_mask: u8) -> Self {
         self.0.use_default_scaling_matrix_mask = use_default_scaling_matrix_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list4x4(mut self, scaling_list4x4: [[u8; 16]; 6]) -> Self {
         self.0.scaling_list4x4 = scaling_list4x4 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list8x8(mut self, scaling_list8x8: [[u8; 64]; 2]) -> Self {
         self.0.scaling_list8x8 = scaling_list8x8 as _;
         self
@@ -719,66 +739,79 @@ impl<'a> StdVideoH264SequenceParameterSetVuiBuilder<'a> {
         StdVideoH264SequenceParameterSetVuiBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_ratio_idc(mut self, aspect_ratio_idc: crate::external::vk_video::StdVideoH264AspectRatioIdc) -> Self {
         self.0.aspect_ratio_idc = aspect_ratio_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sar_width(mut self, sar_width: u16) -> Self {
         self.0.sar_width = sar_width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sar_height(mut self, sar_height: u16) -> Self {
         self.0.sar_height = sar_height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_format(mut self, video_format: u8) -> Self {
         self.0.video_format = video_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_primaries(mut self, color_primaries: u8) -> Self {
         self.0.color_primaries = color_primaries as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transfer_characteristics(mut self, transfer_characteristics: u8) -> Self {
         self.0.transfer_characteristics = transfer_characteristics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn matrix_coefficients(mut self, matrix_coefficients: u8) -> Self {
         self.0.matrix_coefficients = matrix_coefficients as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_units_in_tick(mut self, num_units_in_tick: u32) -> Self {
         self.0.num_units_in_tick = num_units_in_tick as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn time_scale(mut self, time_scale: u32) -> Self {
         self.0.time_scale = time_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn hrd_parameters(mut self, hrd_parameters: &'a mut crate::external::vk_video::StdVideoH264HrdParameters) -> Self {
         self.0.p_hrd_parameters = hrd_parameters as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_reorder_frames(mut self, max_num_reorder_frames: u8) -> Self {
         self.0.max_num_reorder_frames = max_num_reorder_frames as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_dec_frame_buffering(mut self, max_dec_frame_buffering: u8) -> Self {
         self.0.max_dec_frame_buffering = max_dec_frame_buffering as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH264SpsVuiFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -852,51 +885,61 @@ impl<'a> StdVideoH264HrdParametersBuilder<'a> {
         StdVideoH264HrdParametersBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn cpb_cnt_minus1(mut self, cpb_cnt_minus1: u8) -> Self {
         self.0.cpb_cnt_minus1 = cpb_cnt_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_rate_scale(mut self, bit_rate_scale: u8) -> Self {
         self.0.bit_rate_scale = bit_rate_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_size_scale(mut self, cpb_size_scale: u8) -> Self {
         self.0.cpb_size_scale = cpb_size_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_rate_value_minus1(mut self, bit_rate_value_minus1: [u32; 32]) -> Self {
         self.0.bit_rate_value_minus1 = bit_rate_value_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_size_value_minus1(mut self, cpb_size_value_minus1: [u32; 32]) -> Self {
         self.0.cpb_size_value_minus1 = cpb_size_value_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cbr_flag(mut self, cbr_flag: [u8; 32]) -> Self {
         self.0.cbr_flag = cbr_flag as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_cpb_removal_delay_length_minus1(mut self, initial_cpb_removal_delay_length_minus1: u32) -> Self {
         self.0.initial_cpb_removal_delay_length_minus1 = initial_cpb_removal_delay_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_removal_delay_length_minus1(mut self, cpb_removal_delay_length_minus1: u32) -> Self {
         self.0.cpb_removal_delay_length_minus1 = cpb_removal_delay_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dpb_output_delay_length_minus1(mut self, dpb_output_delay_length_minus1: u32) -> Self {
         self.0.dpb_output_delay_length_minus1 = dpb_output_delay_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn time_offset_length(mut self, time_offset_length: u32) -> Self {
         self.0.time_offset_length = time_offset_length as _;
         self
@@ -961,61 +1004,73 @@ impl<'a> StdVideoH264SpsVuiFlagsBuilder<'a> {
         StdVideoH264SpsVuiFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_ratio_info_present_flag(mut self, aspect_ratio_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, aspect_ratio_info_present_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn overscan_info_present_flag(mut self, overscan_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_info_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn overscan_appropriate_flag(mut self, overscan_appropriate_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_appropriate_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_signal_type_present_flag(mut self, video_signal_type_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_signal_type_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_full_range_flag(mut self, video_full_range_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_full_range_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_description_present_flag(mut self, color_description_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, color_description_present_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_loc_info_present_flag(mut self, chroma_loc_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, chroma_loc_info_present_flag, 6usize, 6usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn timing_info_present_flag(mut self, timing_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, timing_info_present_flag, 7usize, 7usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn fixed_frame_rate_flag(mut self, fixed_frame_rate_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, fixed_frame_rate_flag, 8usize, 8usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn bitstream_restriction_flag(mut self, bitstream_restriction_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, bitstream_restriction_flag, 9usize, 9usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn nal_hrd_parameters_present_flag(mut self, nal_hrd_parameters_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, nal_hrd_parameters_present_flag, 10usize, 10usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vcl_hrd_parameters_present_flag(mut self, vcl_hrd_parameters_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vcl_hrd_parameters_present_flag, 11usize, 11usize);
         self
@@ -1080,46 +1135,55 @@ impl<'a> StdVideoH264PpsFlagsBuilder<'a> {
         StdVideoH264PpsFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn transform_8x8_mode_flag(mut self, transform_8x8_mode_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, transform_8x8_mode_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn redundant_pic_cnt_present_flag(mut self, redundant_pic_cnt_present_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, redundant_pic_cnt_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn constrained_intra_pred_flag(mut self, constrained_intra_pred_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, constrained_intra_pred_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn deblocking_filter_control_present_flag(mut self, deblocking_filter_control_present_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, deblocking_filter_control_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn weighted_bipred_idc_flag(mut self, weighted_bipred_idc_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, weighted_bipred_idc_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn weighted_pred_flag(mut self, weighted_pred_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, weighted_pred_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_present_flag(mut self, pic_order_present_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, pic_order_present_flag, 6usize, 6usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn entropy_coding_mode_flag(mut self, entropy_coding_mode_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, entropy_coding_mode_flag, 7usize, 7usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_scaling_matrix_present_flag(mut self, pic_scaling_matrix_present_flag: u32) -> Self {
         self.0.transform_8x8_mode_flag_and_more_bitfield = crate::bits_copy!(self.0.transform_8x8_mode_flag_and_more_bitfield, pic_scaling_matrix_present_flag, 8usize, 8usize);
         self
@@ -1190,36 +1254,43 @@ impl<'a> StdVideoDecodeH264PictureInfoBuilder<'a> {
         StdVideoDecodeH264PictureInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn seq_parameter_set_id(mut self, seq_parameter_set_id: u8) -> Self {
         self.0.seq_parameter_set_id = seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_parameter_set_id(mut self, pic_parameter_set_id: u8) -> Self {
         self.0.pic_parameter_set_id = pic_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reserved(mut self, reserved: u16) -> Self {
         self.0.reserved = reserved as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_num(mut self, frame_num: u16) -> Self {
         self.0.frame_num = frame_num as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn idr_pic_id(mut self, idr_pic_id: u16) -> Self {
         self.0.idr_pic_id = idr_pic_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_cnt(mut self, pic_order_cnt: [i32; 2]) -> Self {
         self.0.pic_order_cnt = pic_order_cnt as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoDecodeH264PictureInfoFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -1287,21 +1358,25 @@ impl<'a> StdVideoDecodeH264ReferenceInfoBuilder<'a> {
         StdVideoDecodeH264ReferenceInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn frame_num(mut self, frame_num: u16) -> Self {
         self.0.frame_num = frame_num as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reserved(mut self, reserved: u16) -> Self {
         self.0.reserved = reserved as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_cnt(mut self, pic_order_cnt: [i32; 2]) -> Self {
         self.0.pic_order_cnt = pic_order_cnt as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoDecodeH264ReferenceInfoFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -1368,16 +1443,19 @@ impl<'a> StdVideoDecodeH264MvcBuilder<'a> {
         StdVideoDecodeH264MvcBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn view_id0(mut self, view_id0: u32) -> Self {
         self.0.view_id0 = view_id0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mvc_element_count(mut self, mvc_element_count: u32) -> Self {
         self.0.mvc_element_count = mvc_element_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mvc_elements(mut self, mvc_elements: &'a mut crate::external::vk_video::StdVideoDecodeH264MvcElement) -> Self {
         self.0.p_mvc_elements = mvc_elements as _;
         self
@@ -1442,31 +1520,37 @@ impl<'a> StdVideoDecodeH264PictureInfoFlagsBuilder<'a> {
         StdVideoDecodeH264PictureInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn field_pic_flag(mut self, field_pic_flag: u32) -> Self {
         self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, field_pic_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_intra(mut self, is_intra: u32) -> Self {
         self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, is_intra, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn idr_pic_flag(mut self, idr_pic_flag: u32) -> Self {
         self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, idr_pic_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn bottom_field_flag(mut self, bottom_field_flag: u32) -> Self {
         self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, bottom_field_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_reference(mut self, is_reference: u32) -> Self {
         self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, is_reference, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn complementary_field_pair(mut self, complementary_field_pair: u32) -> Self {
         self.0.field_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.field_pic_flag_and_more_bitfield, complementary_field_pair, 5usize, 5usize);
         self
@@ -1531,21 +1615,25 @@ impl<'a> StdVideoDecodeH264ReferenceInfoFlagsBuilder<'a> {
         StdVideoDecodeH264ReferenceInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn top_field_flag(mut self, top_field_flag: u32) -> Self {
         self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, top_field_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn bottom_field_flag(mut self, bottom_field_flag: u32) -> Self {
         self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, bottom_field_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_long_term(mut self, is_long_term: u32) -> Self {
         self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, is_long_term, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_non_existing(mut self, is_non_existing: u32) -> Self {
         self.0.top_field_flag_and_more_bitfield = crate::bits_copy!(self.0.top_field_flag_and_more_bitfield, is_non_existing, 3usize, 3usize);
         self
@@ -1622,66 +1710,79 @@ impl<'a> StdVideoDecodeH264MvcElementBuilder<'a> {
         StdVideoDecodeH264MvcElementBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoDecodeH264MvcElementFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_order_index(mut self, view_order_index: u16) -> Self {
         self.0.view_order_index = view_order_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_id(mut self, view_id: u16) -> Self {
         self.0.view_id = view_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn temporal_id(mut self, temporal_id: u16) -> Self {
         self.0.temporal_id = temporal_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn priority_id(mut self, priority_id: u16) -> Self {
         self.0.priority_id = priority_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_of_anchor_refs_in_l0(mut self, num_of_anchor_refs_in_l0: u16) -> Self {
         self.0.num_of_anchor_refs_in_l0 = num_of_anchor_refs_in_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_id_of_anchor_refs_in_l0(mut self, view_id_of_anchor_refs_in_l0: [u16; 15]) -> Self {
         self.0.view_id_of_anchor_refs_in_l0 = view_id_of_anchor_refs_in_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_of_anchor_refs_in_l1(mut self, num_of_anchor_refs_in_l1: u16) -> Self {
         self.0.num_of_anchor_refs_in_l1 = num_of_anchor_refs_in_l1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_id_of_anchor_refs_in_l1(mut self, view_id_of_anchor_refs_in_l1: [u16; 15]) -> Self {
         self.0.view_id_of_anchor_refs_in_l1 = view_id_of_anchor_refs_in_l1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_of_non_anchor_refs_in_l0(mut self, num_of_non_anchor_refs_in_l0: u16) -> Self {
         self.0.num_of_non_anchor_refs_in_l0 = num_of_non_anchor_refs_in_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_id_of_non_anchor_refs_in_l0(mut self, view_id_of_non_anchor_refs_in_l0: [u16; 15]) -> Self {
         self.0.view_id_of_non_anchor_refs_in_l0 = view_id_of_non_anchor_refs_in_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_of_non_anchor_refs_in_l1(mut self, num_of_non_anchor_refs_in_l1: u16) -> Self {
         self.0.num_of_non_anchor_refs_in_l1 = num_of_non_anchor_refs_in_l1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_id_of_non_anchor_refs_in_l1(mut self, view_id_of_non_anchor_refs_in_l1: [u16; 15]) -> Self {
         self.0.view_id_of_non_anchor_refs_in_l1 = view_id_of_non_anchor_refs_in_l1 as _;
         self
@@ -1746,16 +1847,19 @@ impl<'a> StdVideoDecodeH264MvcElementFlagsBuilder<'a> {
         StdVideoDecodeH264MvcElementFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn non_idr(mut self, non_idr: u32) -> Self {
         self.0.non_idr_and_more_bitfield = crate::bits_copy!(self.0.non_idr_and_more_bitfield, non_idr, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn anchor_pic(mut self, anchor_pic: u32) -> Self {
         self.0.non_idr_and_more_bitfield = crate::bits_copy!(self.0.non_idr_and_more_bitfield, anchor_pic, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn inter_view(mut self, inter_view: u32) -> Self {
         self.0.non_idr_and_more_bitfield = crate::bits_copy!(self.0.non_idr_and_more_bitfield, inter_view, 2usize, 2usize);
         self
@@ -1842,117 +1946,140 @@ impl<'a> StdVideoH264SequenceParameterSetBuilder<'a> {
         StdVideoH264SequenceParameterSetBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn profile_idc(mut self, profile_idc: crate::external::vk_video::StdVideoH264ProfileIdc) -> Self {
         self.0.profile_idc = profile_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn level_idc(mut self, level_idc: crate::external::vk_video::StdVideoH264Level) -> Self {
         self.0.level_idc = level_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn seq_parameter_set_id(mut self, seq_parameter_set_id: u8) -> Self {
         self.0.seq_parameter_set_id = seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_format_idc(mut self, chroma_format_idc: crate::external::vk_video::StdVideoH264ChromaFormatIdc) -> Self {
         self.0.chroma_format_idc = chroma_format_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_depth_luma_minus8(mut self, bit_depth_luma_minus8: u8) -> Self {
         self.0.bit_depth_luma_minus8 = bit_depth_luma_minus8 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_depth_chroma_minus8(mut self, bit_depth_chroma_minus8: u8) -> Self {
         self.0.bit_depth_chroma_minus8 = bit_depth_chroma_minus8 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_max_frame_num_minus4(mut self, log2_max_frame_num_minus4: u8) -> Self {
         self.0.log2_max_frame_num_minus4 = log2_max_frame_num_minus4 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_cnt_type(mut self, pic_order_cnt_type: crate::external::vk_video::StdVideoH264PocType) -> Self {
         self.0.pic_order_cnt_type = pic_order_cnt_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_max_pic_order_cnt_lsb_minus4(mut self, log2_max_pic_order_cnt_lsb_minus4: u8) -> Self {
         self.0.log2_max_pic_order_cnt_lsb_minus4 = log2_max_pic_order_cnt_lsb_minus4 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset_for_non_ref_pic(mut self, offset_for_non_ref_pic: i32) -> Self {
         self.0.offset_for_non_ref_pic = offset_for_non_ref_pic as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset_for_top_to_bottom_field(mut self, offset_for_top_to_bottom_field: i32) -> Self {
         self.0.offset_for_top_to_bottom_field = offset_for_top_to_bottom_field as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_frames_in_pic_order_cnt_cycle(mut self, num_ref_frames_in_pic_order_cnt_cycle: u8) -> Self {
         self.0.num_ref_frames_in_pic_order_cnt_cycle = num_ref_frames_in_pic_order_cnt_cycle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_ref_frames(mut self, max_num_ref_frames: u8) -> Self {
         self.0.max_num_ref_frames = max_num_ref_frames as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_width_in_mbs_minus1(mut self, pic_width_in_mbs_minus1: u32) -> Self {
         self.0.pic_width_in_mbs_minus1 = pic_width_in_mbs_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_height_in_map_units_minus1(mut self, pic_height_in_map_units_minus1: u32) -> Self {
         self.0.pic_height_in_map_units_minus1 = pic_height_in_map_units_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_crop_left_offset(mut self, frame_crop_left_offset: u32) -> Self {
         self.0.frame_crop_left_offset = frame_crop_left_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_crop_right_offset(mut self, frame_crop_right_offset: u32) -> Self {
         self.0.frame_crop_right_offset = frame_crop_right_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_crop_top_offset(mut self, frame_crop_top_offset: u32) -> Self {
         self.0.frame_crop_top_offset = frame_crop_top_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_crop_bottom_offset(mut self, frame_crop_bottom_offset: u32) -> Self {
         self.0.frame_crop_bottom_offset = frame_crop_bottom_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH264SpsFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset_for_ref_frame(mut self, offset_for_ref_frame: &'a mut [i32]) -> Self {
         self.0.p_offset_for_ref_frame = offset_for_ref_frame.as_ptr() as _;
         self.0.num_ref_frames_in_pic_order_cnt_cycle = offset_for_ref_frame.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_lists(mut self, scaling_lists: &'a mut crate::external::vk_video::StdVideoH264ScalingLists) -> Self {
         self.0.p_scaling_lists = scaling_lists as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sequence_parameter_set_vui(mut self, sequence_parameter_set_vui: &'a mut crate::external::vk_video::StdVideoH264SequenceParameterSetVui) -> Self {
         self.0.p_sequence_parameter_set_vui = sequence_parameter_set_vui as _;
         self
@@ -2027,56 +2154,67 @@ impl<'a> StdVideoH264PictureParameterSetBuilder<'a> {
         StdVideoH264PictureParameterSetBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn seq_parameter_set_id(mut self, seq_parameter_set_id: u8) -> Self {
         self.0.seq_parameter_set_id = seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_parameter_set_id(mut self, pic_parameter_set_id: u8) -> Self {
         self.0.pic_parameter_set_id = pic_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l0_default_active_minus1(mut self, num_ref_idx_l0_default_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l0_default_active_minus1 = num_ref_idx_l0_default_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l1_default_active_minus1(mut self, num_ref_idx_l1_default_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l1_default_active_minus1 = num_ref_idx_l1_default_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn weighted_bipred_idc(mut self, weighted_bipred_idc: crate::external::vk_video::StdVideoH264WeightedBipredIdc) -> Self {
         self.0.weighted_bipred_idc = weighted_bipred_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_init_qp_minus26(mut self, pic_init_qp_minus26: i8) -> Self {
         self.0.pic_init_qp_minus26 = pic_init_qp_minus26 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_init_qs_minus26(mut self, pic_init_qs_minus26: i8) -> Self {
         self.0.pic_init_qs_minus26 = pic_init_qs_minus26 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_qp_index_offset(mut self, chroma_qp_index_offset: i8) -> Self {
         self.0.chroma_qp_index_offset = chroma_qp_index_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn second_chroma_qp_index_offset(mut self, second_chroma_qp_index_offset: i8) -> Self {
         self.0.second_chroma_qp_index_offset = second_chroma_qp_index_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH264PpsFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_lists(mut self, scaling_lists: &'a mut crate::external::vk_video::StdVideoH264ScalingLists) -> Self {
         self.0.p_scaling_lists = scaling_lists as _;
         self
@@ -2148,41 +2286,49 @@ impl<'a> StdVideoH265VideoParameterSetBuilder<'a> {
         StdVideoH265VideoParameterSetBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vps_video_parameter_set_id(mut self, vps_video_parameter_set_id: u8) -> Self {
         self.0.vps_video_parameter_set_id = vps_video_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vps_max_sub_layers_minus1(mut self, vps_max_sub_layers_minus1: u8) -> Self {
         self.0.vps_max_sub_layers_minus1 = vps_max_sub_layers_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vps_num_units_in_tick(mut self, vps_num_units_in_tick: u32) -> Self {
         self.0.vps_num_units_in_tick = vps_num_units_in_tick as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vps_time_scale(mut self, vps_time_scale: u32) -> Self {
         self.0.vps_time_scale = vps_time_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vps_num_ticks_poc_diff_one_minus1(mut self, vps_num_ticks_poc_diff_one_minus1: u32) -> Self {
         self.0.vps_num_ticks_poc_diff_one_minus1 = vps_num_ticks_poc_diff_one_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dec_pic_buf_mgr(mut self, dec_pic_buf_mgr: &'a mut crate::external::vk_video::StdVideoH265DecPicBufMgr) -> Self {
         self.0.p_dec_pic_buf_mgr = dec_pic_buf_mgr as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn hrd_parameters(mut self, hrd_parameters: &'a mut crate::external::vk_video::StdVideoH265HrdParameters) -> Self {
         self.0.p_hrd_parameters = hrd_parameters as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH265VpsFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -2321,186 +2467,223 @@ impl<'a> StdVideoH265SequenceParameterSetBuilder<'a> {
         StdVideoH265SequenceParameterSetBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn profile_idc(mut self, profile_idc: crate::external::vk_video::StdVideoH265ProfileIdc) -> Self {
         self.0.profile_idc = profile_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn level_idc(mut self, level_idc: crate::external::vk_video::StdVideoH265Level) -> Self {
         self.0.level_idc = level_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_width_in_luma_samples(mut self, pic_width_in_luma_samples: u32) -> Self {
         self.0.pic_width_in_luma_samples = pic_width_in_luma_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_height_in_luma_samples(mut self, pic_height_in_luma_samples: u32) -> Self {
         self.0.pic_height_in_luma_samples = pic_height_in_luma_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_video_parameter_set_id(mut self, sps_video_parameter_set_id: u8) -> Self {
         self.0.sps_video_parameter_set_id = sps_video_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_max_sub_layers_minus1(mut self, sps_max_sub_layers_minus1: u8) -> Self {
         self.0.sps_max_sub_layers_minus1 = sps_max_sub_layers_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_seq_parameter_set_id(mut self, sps_seq_parameter_set_id: u8) -> Self {
         self.0.sps_seq_parameter_set_id = sps_seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_format_idc(mut self, chroma_format_idc: u8) -> Self {
         self.0.chroma_format_idc = chroma_format_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_depth_luma_minus8(mut self, bit_depth_luma_minus8: u8) -> Self {
         self.0.bit_depth_luma_minus8 = bit_depth_luma_minus8 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_depth_chroma_minus8(mut self, bit_depth_chroma_minus8: u8) -> Self {
         self.0.bit_depth_chroma_minus8 = bit_depth_chroma_minus8 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_max_pic_order_cnt_lsb_minus4(mut self, log2_max_pic_order_cnt_lsb_minus4: u8) -> Self {
         self.0.log2_max_pic_order_cnt_lsb_minus4 = log2_max_pic_order_cnt_lsb_minus4 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_max_dec_pic_buffering_minus1(mut self, sps_max_dec_pic_buffering_minus1: u8) -> Self {
         self.0.sps_max_dec_pic_buffering_minus1 = sps_max_dec_pic_buffering_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_min_luma_coding_block_size_minus3(mut self, log2_min_luma_coding_block_size_minus3: u8) -> Self {
         self.0.log2_min_luma_coding_block_size_minus3 = log2_min_luma_coding_block_size_minus3 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_diff_max_min_luma_coding_block_size(mut self, log2_diff_max_min_luma_coding_block_size: u8) -> Self {
         self.0.log2_diff_max_min_luma_coding_block_size = log2_diff_max_min_luma_coding_block_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_min_luma_transform_block_size_minus2(mut self, log2_min_luma_transform_block_size_minus2: u8) -> Self {
         self.0.log2_min_luma_transform_block_size_minus2 = log2_min_luma_transform_block_size_minus2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_diff_max_min_luma_transform_block_size(mut self, log2_diff_max_min_luma_transform_block_size: u8) -> Self {
         self.0.log2_diff_max_min_luma_transform_block_size = log2_diff_max_min_luma_transform_block_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_hierarchy_depth_inter(mut self, max_transform_hierarchy_depth_inter: u8) -> Self {
         self.0.max_transform_hierarchy_depth_inter = max_transform_hierarchy_depth_inter as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_hierarchy_depth_intra(mut self, max_transform_hierarchy_depth_intra: u8) -> Self {
         self.0.max_transform_hierarchy_depth_intra = max_transform_hierarchy_depth_intra as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_short_term_ref_pic_sets(mut self, num_short_term_ref_pic_sets: u8) -> Self {
         self.0.num_short_term_ref_pic_sets = num_short_term_ref_pic_sets as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_long_term_ref_pics_sps(mut self, num_long_term_ref_pics_sps: u8) -> Self {
         self.0.num_long_term_ref_pics_sps = num_long_term_ref_pics_sps as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pcm_sample_bit_depth_luma_minus1(mut self, pcm_sample_bit_depth_luma_minus1: u8) -> Self {
         self.0.pcm_sample_bit_depth_luma_minus1 = pcm_sample_bit_depth_luma_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pcm_sample_bit_depth_chroma_minus1(mut self, pcm_sample_bit_depth_chroma_minus1: u8) -> Self {
         self.0.pcm_sample_bit_depth_chroma_minus1 = pcm_sample_bit_depth_chroma_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_min_pcm_luma_coding_block_size_minus3(mut self, log2_min_pcm_luma_coding_block_size_minus3: u8) -> Self {
         self.0.log2_min_pcm_luma_coding_block_size_minus3 = log2_min_pcm_luma_coding_block_size_minus3 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_diff_max_min_pcm_luma_coding_block_size(mut self, log2_diff_max_min_pcm_luma_coding_block_size: u8) -> Self {
         self.0.log2_diff_max_min_pcm_luma_coding_block_size = log2_diff_max_min_pcm_luma_coding_block_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn conf_win_left_offset(mut self, conf_win_left_offset: u32) -> Self {
         self.0.conf_win_left_offset = conf_win_left_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn conf_win_right_offset(mut self, conf_win_right_offset: u32) -> Self {
         self.0.conf_win_right_offset = conf_win_right_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn conf_win_top_offset(mut self, conf_win_top_offset: u32) -> Self {
         self.0.conf_win_top_offset = conf_win_top_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn conf_win_bottom_offset(mut self, conf_win_bottom_offset: u32) -> Self {
         self.0.conf_win_bottom_offset = conf_win_bottom_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dec_pic_buf_mgr(mut self, dec_pic_buf_mgr: &'a mut crate::external::vk_video::StdVideoH265DecPicBufMgr) -> Self {
         self.0.p_dec_pic_buf_mgr = dec_pic_buf_mgr as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH265SpsFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_lists(mut self, scaling_lists: &'a mut crate::external::vk_video::StdVideoH265ScalingLists) -> Self {
         self.0.p_scaling_lists = scaling_lists as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sequence_parameter_set_vui(mut self, sequence_parameter_set_vui: &'a mut crate::external::vk_video::StdVideoH265SequenceParameterSetVui) -> Self {
         self.0.p_sequence_parameter_set_vui = sequence_parameter_set_vui as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn palette_max_size(mut self, palette_max_size: u8) -> Self {
         self.0.palette_max_size = palette_max_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_palette_max_predictor_size(mut self, delta_palette_max_predictor_size: u8) -> Self {
         self.0.delta_palette_max_predictor_size = delta_palette_max_predictor_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn motion_vector_resolution_control_idc(mut self, motion_vector_resolution_control_idc: u8) -> Self {
         self.0.motion_vector_resolution_control_idc = motion_vector_resolution_control_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_num_palette_predictor_initializer_minus1(mut self, sps_num_palette_predictor_initializer_minus1: u8) -> Self {
         self.0.sps_num_palette_predictor_initializer_minus1 = sps_num_palette_predictor_initializer_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn predictor_palette_entries(mut self, predictor_palette_entries: &'a mut crate::external::vk_video::StdVideoH265PredictorPaletteEntries) -> Self {
         self.0.p_predictor_palette_entries = predictor_palette_entries as _;
         self
@@ -2596,161 +2779,193 @@ impl<'a> StdVideoH265PictureParameterSetBuilder<'a> {
         StdVideoH265PictureParameterSetBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pps_pic_parameter_set_id(mut self, pps_pic_parameter_set_id: u8) -> Self {
         self.0.pps_pic_parameter_set_id = pps_pic_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_seq_parameter_set_id(mut self, pps_seq_parameter_set_id: u8) -> Self {
         self.0.pps_seq_parameter_set_id = pps_seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_extra_slice_header_bits(mut self, num_extra_slice_header_bits: u8) -> Self {
         self.0.num_extra_slice_header_bits = num_extra_slice_header_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l0_default_active_minus1(mut self, num_ref_idx_l0_default_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l0_default_active_minus1 = num_ref_idx_l0_default_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l1_default_active_minus1(mut self, num_ref_idx_l1_default_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l1_default_active_minus1 = num_ref_idx_l1_default_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn init_qp_minus26(mut self, init_qp_minus26: i8) -> Self {
         self.0.init_qp_minus26 = init_qp_minus26 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn diff_cu_qp_delta_depth(mut self, diff_cu_qp_delta_depth: u8) -> Self {
         self.0.diff_cu_qp_delta_depth = diff_cu_qp_delta_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_cb_qp_offset(mut self, pps_cb_qp_offset: i8) -> Self {
         self.0.pps_cb_qp_offset = pps_cb_qp_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_cr_qp_offset(mut self, pps_cr_qp_offset: i8) -> Self {
         self.0.pps_cr_qp_offset = pps_cr_qp_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_tile_columns_minus1(mut self, num_tile_columns_minus1: u8) -> Self {
         self.0.num_tile_columns_minus1 = num_tile_columns_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_tile_rows_minus1(mut self, num_tile_rows_minus1: u8) -> Self {
         self.0.num_tile_rows_minus1 = num_tile_rows_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn column_width_minus1(mut self, column_width_minus1: [u16; 19]) -> Self {
         self.0.column_width_minus1 = column_width_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn row_height_minus1(mut self, row_height_minus1: [u16; 21]) -> Self {
         self.0.row_height_minus1 = row_height_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_beta_offset_div2(mut self, pps_beta_offset_div2: i8) -> Self {
         self.0.pps_beta_offset_div2 = pps_beta_offset_div2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_tc_offset_div2(mut self, pps_tc_offset_div2: i8) -> Self {
         self.0.pps_tc_offset_div2 = pps_tc_offset_div2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_parallel_merge_level_minus2(mut self, log2_parallel_merge_level_minus2: u8) -> Self {
         self.0.log2_parallel_merge_level_minus2 = log2_parallel_merge_level_minus2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH265PpsFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_lists(mut self, scaling_lists: &'a mut crate::external::vk_video::StdVideoH265ScalingLists) -> Self {
         self.0.p_scaling_lists = scaling_lists as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_max_transform_skip_block_size_minus2(mut self, log2_max_transform_skip_block_size_minus2: u8) -> Self {
         self.0.log2_max_transform_skip_block_size_minus2 = log2_max_transform_skip_block_size_minus2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn diff_cu_chroma_qp_offset_depth(mut self, diff_cu_chroma_qp_offset_depth: u8) -> Self {
         self.0.diff_cu_chroma_qp_offset_depth = diff_cu_chroma_qp_offset_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_qp_offset_list_len_minus1(mut self, chroma_qp_offset_list_len_minus1: u8) -> Self {
         self.0.chroma_qp_offset_list_len_minus1 = chroma_qp_offset_list_len_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cb_qp_offset_list(mut self, cb_qp_offset_list: [i8; 6]) -> Self {
         self.0.cb_qp_offset_list = cb_qp_offset_list as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cr_qp_offset_list(mut self, cr_qp_offset_list: [i8; 6]) -> Self {
         self.0.cr_qp_offset_list = cr_qp_offset_list as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_sao_offset_scale_luma(mut self, log2_sao_offset_scale_luma: u8) -> Self {
         self.0.log2_sao_offset_scale_luma = log2_sao_offset_scale_luma as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_sao_offset_scale_chroma(mut self, log2_sao_offset_scale_chroma: u8) -> Self {
         self.0.log2_sao_offset_scale_chroma = log2_sao_offset_scale_chroma as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_act_y_qp_offset_plus5(mut self, pps_act_y_qp_offset_plus5: i8) -> Self {
         self.0.pps_act_y_qp_offset_plus5 = pps_act_y_qp_offset_plus5 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_act_cb_qp_offset_plus5(mut self, pps_act_cb_qp_offset_plus5: i8) -> Self {
         self.0.pps_act_cb_qp_offset_plus5 = pps_act_cb_qp_offset_plus5 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_act_cr_qp_offset_plus5(mut self, pps_act_cr_qp_offset_plus5: i8) -> Self {
         self.0.pps_act_cr_qp_offset_plus5 = pps_act_cr_qp_offset_plus5 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_num_palette_predictor_initializer(mut self, pps_num_palette_predictor_initializer: u8) -> Self {
         self.0.pps_num_palette_predictor_initializer = pps_num_palette_predictor_initializer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn luma_bit_depth_entry_minus8(mut self, luma_bit_depth_entry_minus8: u8) -> Self {
         self.0.luma_bit_depth_entry_minus8 = luma_bit_depth_entry_minus8 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_bit_depth_entry_minus8(mut self, chroma_bit_depth_entry_minus8: u8) -> Self {
         self.0.chroma_bit_depth_entry_minus8 = chroma_bit_depth_entry_minus8 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn predictor_palette_entries(mut self, predictor_palette_entries: &'a mut crate::external::vk_video::StdVideoH265PredictorPaletteEntries) -> Self {
         self.0.p_predictor_palette_entries = predictor_palette_entries as _;
         self
@@ -2817,16 +3032,19 @@ impl<'a> StdVideoH265DecPicBufMgrBuilder<'a> {
         StdVideoH265DecPicBufMgrBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_latency_increase_plus1(mut self, max_latency_increase_plus1: [u32; 7]) -> Self {
         self.0.max_latency_increase_plus1 = max_latency_increase_plus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_dec_pic_buffering_minus1(mut self, max_dec_pic_buffering_minus1: [u8; 7]) -> Self {
         self.0.max_dec_pic_buffering_minus1 = max_dec_pic_buffering_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_reorder_pics(mut self, max_num_reorder_pics: [u8; 7]) -> Self {
         self.0.max_num_reorder_pics = max_num_reorder_pics as _;
         self
@@ -2904,71 +3122,85 @@ impl<'a> StdVideoH265HrdParametersBuilder<'a> {
         StdVideoH265HrdParametersBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn tick_divisor_minus2(mut self, tick_divisor_minus2: u8) -> Self {
         self.0.tick_divisor_minus2 = tick_divisor_minus2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn du_cpb_removal_delay_increment_length_minus1(mut self, du_cpb_removal_delay_increment_length_minus1: u8) -> Self {
         self.0.du_cpb_removal_delay_increment_length_minus1 = du_cpb_removal_delay_increment_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dpb_output_delay_du_length_minus1(mut self, dpb_output_delay_du_length_minus1: u8) -> Self {
         self.0.dpb_output_delay_du_length_minus1 = dpb_output_delay_du_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_rate_scale(mut self, bit_rate_scale: u8) -> Self {
         self.0.bit_rate_scale = bit_rate_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_size_scale(mut self, cpb_size_scale: u8) -> Self {
         self.0.cpb_size_scale = cpb_size_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_size_du_scale(mut self, cpb_size_du_scale: u8) -> Self {
         self.0.cpb_size_du_scale = cpb_size_du_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_cpb_removal_delay_length_minus1(mut self, initial_cpb_removal_delay_length_minus1: u8) -> Self {
         self.0.initial_cpb_removal_delay_length_minus1 = initial_cpb_removal_delay_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn au_cpb_removal_delay_length_minus1(mut self, au_cpb_removal_delay_length_minus1: u8) -> Self {
         self.0.au_cpb_removal_delay_length_minus1 = au_cpb_removal_delay_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dpb_output_delay_length_minus1(mut self, dpb_output_delay_length_minus1: u8) -> Self {
         self.0.dpb_output_delay_length_minus1 = dpb_output_delay_length_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_cnt_minus1(mut self, cpb_cnt_minus1: [u8; 7]) -> Self {
         self.0.cpb_cnt_minus1 = cpb_cnt_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn elemental_duration_in_tc_minus1(mut self, elemental_duration_in_tc_minus1: [u16; 7]) -> Self {
         self.0.elemental_duration_in_tc_minus1 = elemental_duration_in_tc_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_layer_hrd_parameters_nal(mut self, sub_layer_hrd_parameters_nal: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7]) -> Self {
         self.0.p_sub_layer_hrd_parameters_nal = sub_layer_hrd_parameters_nal as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_layer_hrd_parameters_vcl(mut self, sub_layer_hrd_parameters_vcl: [*mut crate::external::vk_video::StdVideoH265SubLayerHrdParameters; 7]) -> Self {
         self.0.p_sub_layer_hrd_parameters_vcl = sub_layer_hrd_parameters_vcl as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH265HrdFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -3033,21 +3265,25 @@ impl<'a> StdVideoH265VpsFlagsBuilder<'a> {
         StdVideoH265VpsFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vps_temporal_id_nesting_flag(mut self, vps_temporal_id_nesting_flag: u32) -> Self {
         self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_temporal_id_nesting_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vps_sub_layer_ordering_info_present_flag(mut self, vps_sub_layer_ordering_info_present_flag: u32) -> Self {
         self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_sub_layer_ordering_info_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vps_timing_info_present_flag(mut self, vps_timing_info_present_flag: u32) -> Self {
         self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_timing_info_present_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vps_poc_proportional_to_timing_flag(mut self, vps_poc_proportional_to_timing_flag: u32) -> Self {
         self.0.vps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.vps_temporal_id_nesting_flag_and_more_bitfield, vps_poc_proportional_to_timing_flag, 3usize, 3usize);
         self
@@ -3112,136 +3348,163 @@ impl<'a> StdVideoH265SpsFlagsBuilder<'a> {
         StdVideoH265SpsFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sps_temporal_id_nesting_flag(mut self, sps_temporal_id_nesting_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_temporal_id_nesting_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn separate_colour_plane_flag(mut self, separate_colour_plane_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, separate_colour_plane_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list_enabled_flag(mut self, scaling_list_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, scaling_list_enabled_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_scaling_list_data_present_flag(mut self, sps_scaling_list_data_present_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_scaling_list_data_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn amp_enabled_flag(mut self, amp_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, amp_enabled_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_adaptive_offset_enabled_flag(mut self, sample_adaptive_offset_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sample_adaptive_offset_enabled_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pcm_enabled_flag(mut self, pcm_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, pcm_enabled_flag, 6usize, 6usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pcm_loop_filter_disabled_flag(mut self, pcm_loop_filter_disabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, pcm_loop_filter_disabled_flag, 7usize, 7usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_ref_pics_present_flag(mut self, long_term_ref_pics_present_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, long_term_ref_pics_present_flag, 8usize, 8usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_temporal_mvp_enabled_flag(mut self, sps_temporal_mvp_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_temporal_mvp_enabled_flag, 9usize, 9usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn strong_intra_smoothing_enabled_flag(mut self, strong_intra_smoothing_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, strong_intra_smoothing_enabled_flag, 10usize, 10usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_parameters_present_flag(mut self, vui_parameters_present_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, vui_parameters_present_flag, 11usize, 11usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_extension_present_flag(mut self, sps_extension_present_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_extension_present_flag, 12usize, 12usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_range_extension_flag(mut self, sps_range_extension_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_range_extension_flag, 13usize, 13usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_skip_rotation_enabled_flag(mut self, transform_skip_rotation_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, transform_skip_rotation_enabled_flag, 14usize, 14usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_skip_context_enabled_flag(mut self, transform_skip_context_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, transform_skip_context_enabled_flag, 15usize, 15usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn implicit_rdpcm_enabled_flag(mut self, implicit_rdpcm_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, implicit_rdpcm_enabled_flag, 16usize, 16usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn explicit_rdpcm_enabled_flag(mut self, explicit_rdpcm_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, explicit_rdpcm_enabled_flag, 17usize, 17usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn extended_precision_processing_flag(mut self, extended_precision_processing_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, extended_precision_processing_flag, 18usize, 18usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn intra_smoothing_disabled_flag(mut self, intra_smoothing_disabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, intra_smoothing_disabled_flag, 19usize, 19usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn high_precision_offsets_enabled_flag(mut self, high_precision_offsets_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, high_precision_offsets_enabled_flag, 20usize, 20usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn persistent_rice_adaptation_enabled_flag(mut self, persistent_rice_adaptation_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, persistent_rice_adaptation_enabled_flag, 21usize, 21usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn cabac_bypass_alignment_enabled_flag(mut self, cabac_bypass_alignment_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, cabac_bypass_alignment_enabled_flag, 22usize, 22usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_curr_pic_ref_enabled_flag(mut self, sps_curr_pic_ref_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_curr_pic_ref_enabled_flag, 23usize, 23usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn palette_mode_enabled_flag(mut self, palette_mode_enabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, palette_mode_enabled_flag, 24usize, 24usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_palette_predictor_initializer_present_flag(mut self, sps_palette_predictor_initializer_present_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, sps_palette_predictor_initializer_present_flag, 25usize, 25usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn intra_boundary_filtering_disabled_flag(mut self, intra_boundary_filtering_disabled_flag: u32) -> Self {
         self.0.sps_temporal_id_nesting_flag_and_more_bitfield = crate::bits_copy!(self.0.sps_temporal_id_nesting_flag_and_more_bitfield, intra_boundary_filtering_disabled_flag, 26usize, 26usize);
         self
@@ -3311,31 +3574,37 @@ impl<'a> StdVideoH265ScalingListsBuilder<'a> {
         StdVideoH265ScalingListsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list4x4(mut self, scaling_list4x4: [[u8; 16]; 6]) -> Self {
         self.0.scaling_list4x4 = scaling_list4x4 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list8x8(mut self, scaling_list8x8: [[u8; 64]; 6]) -> Self {
         self.0.scaling_list8x8 = scaling_list8x8 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list16x16(mut self, scaling_list16x16: [[u8; 64]; 6]) -> Self {
         self.0.scaling_list16x16 = scaling_list16x16 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list32x32(mut self, scaling_list32x32: [[u8; 64]; 2]) -> Self {
         self.0.scaling_list32x32 = scaling_list32x32 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list_dc_coef16x16(mut self, scaling_list_dc_coef16x16: [u8; 6]) -> Self {
         self.0.scaling_list_dc_coef16x16 = scaling_list_dc_coef16x16 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scaling_list_dc_coef32x32(mut self, scaling_list_dc_coef32x32: [u8; 2]) -> Self {
         self.0.scaling_list_dc_coef32x32 = scaling_list_dc_coef32x32 as _;
         self
@@ -3422,116 +3691,139 @@ impl<'a> StdVideoH265SequenceParameterSetVuiBuilder<'a> {
         StdVideoH265SequenceParameterSetVuiBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_ratio_idc(mut self, aspect_ratio_idc: u8) -> Self {
         self.0.aspect_ratio_idc = aspect_ratio_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sar_width(mut self, sar_width: u16) -> Self {
         self.0.sar_width = sar_width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sar_height(mut self, sar_height: u16) -> Self {
         self.0.sar_height = sar_height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_format(mut self, video_format: u8) -> Self {
         self.0.video_format = video_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn colour_primaries(mut self, colour_primaries: u8) -> Self {
         self.0.colour_primaries = colour_primaries as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transfer_characteristics(mut self, transfer_characteristics: u8) -> Self {
         self.0.transfer_characteristics = transfer_characteristics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn matrix_coeffs(mut self, matrix_coeffs: u8) -> Self {
         self.0.matrix_coeffs = matrix_coeffs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_sample_loc_type_top_field(mut self, chroma_sample_loc_type_top_field: u8) -> Self {
         self.0.chroma_sample_loc_type_top_field = chroma_sample_loc_type_top_field as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_sample_loc_type_bottom_field(mut self, chroma_sample_loc_type_bottom_field: u8) -> Self {
         self.0.chroma_sample_loc_type_bottom_field = chroma_sample_loc_type_bottom_field as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn def_disp_win_left_offset(mut self, def_disp_win_left_offset: u16) -> Self {
         self.0.def_disp_win_left_offset = def_disp_win_left_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn def_disp_win_right_offset(mut self, def_disp_win_right_offset: u16) -> Self {
         self.0.def_disp_win_right_offset = def_disp_win_right_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn def_disp_win_top_offset(mut self, def_disp_win_top_offset: u16) -> Self {
         self.0.def_disp_win_top_offset = def_disp_win_top_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn def_disp_win_bottom_offset(mut self, def_disp_win_bottom_offset: u16) -> Self {
         self.0.def_disp_win_bottom_offset = def_disp_win_bottom_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_num_units_in_tick(mut self, vui_num_units_in_tick: u32) -> Self {
         self.0.vui_num_units_in_tick = vui_num_units_in_tick as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_time_scale(mut self, vui_time_scale: u32) -> Self {
         self.0.vui_time_scale = vui_time_scale as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_num_ticks_poc_diff_one_minus1(mut self, vui_num_ticks_poc_diff_one_minus1: u32) -> Self {
         self.0.vui_num_ticks_poc_diff_one_minus1 = vui_num_ticks_poc_diff_one_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn hrd_parameters(mut self, hrd_parameters: &'a mut crate::external::vk_video::StdVideoH265HrdParameters) -> Self {
         self.0.p_hrd_parameters = hrd_parameters as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_spatial_segmentation_idc(mut self, min_spatial_segmentation_idc: u16) -> Self {
         self.0.min_spatial_segmentation_idc = min_spatial_segmentation_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_bytes_per_pic_denom(mut self, max_bytes_per_pic_denom: u8) -> Self {
         self.0.max_bytes_per_pic_denom = max_bytes_per_pic_denom as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_bits_per_min_cu_denom(mut self, max_bits_per_min_cu_denom: u8) -> Self {
         self.0.max_bits_per_min_cu_denom = max_bits_per_min_cu_denom as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_max_mv_length_horizontal(mut self, log2_max_mv_length_horizontal: u8) -> Self {
         self.0.log2_max_mv_length_horizontal = log2_max_mv_length_horizontal as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn log2_max_mv_length_vertical(mut self, log2_max_mv_length_vertical: u8) -> Self {
         self.0.log2_max_mv_length_vertical = log2_max_mv_length_vertical as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoH265SpsVuiFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -3596,6 +3888,7 @@ impl<'a> StdVideoH265PredictorPaletteEntriesBuilder<'a> {
         StdVideoH265PredictorPaletteEntriesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn predictor_palette_entries(mut self, predictor_palette_entries: [[u16; 128]; 3]) -> Self {
         self.0.predictor_palette_entries = predictor_palette_entries as _;
         self
@@ -3660,156 +3953,187 @@ impl<'a> StdVideoH265PpsFlagsBuilder<'a> {
         StdVideoH265PpsFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dependent_slice_segments_enabled_flag(mut self, dependent_slice_segments_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, dependent_slice_segments_enabled_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn output_flag_present_flag(mut self, output_flag_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, output_flag_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sign_data_hiding_enabled_flag(mut self, sign_data_hiding_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, sign_data_hiding_enabled_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn cabac_init_present_flag(mut self, cabac_init_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, cabac_init_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn constrained_intra_pred_flag(mut self, constrained_intra_pred_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, constrained_intra_pred_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_skip_enabled_flag(mut self, transform_skip_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, transform_skip_enabled_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn cu_qp_delta_enabled_flag(mut self, cu_qp_delta_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, cu_qp_delta_enabled_flag, 6usize, 6usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_slice_chroma_qp_offsets_present_flag(mut self, pps_slice_chroma_qp_offsets_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_slice_chroma_qp_offsets_present_flag, 7usize, 7usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn weighted_pred_flag(mut self, weighted_pred_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, weighted_pred_flag, 8usize, 8usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn weighted_bipred_flag(mut self, weighted_bipred_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, weighted_bipred_flag, 9usize, 9usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn transquant_bypass_enabled_flag(mut self, transquant_bypass_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, transquant_bypass_enabled_flag, 10usize, 10usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn tiles_enabled_flag(mut self, tiles_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, tiles_enabled_flag, 11usize, 11usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn entropy_coding_sync_enabled_flag(mut self, entropy_coding_sync_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, entropy_coding_sync_enabled_flag, 12usize, 12usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn uniform_spacing_flag(mut self, uniform_spacing_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, uniform_spacing_flag, 13usize, 13usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn loop_filter_across_tiles_enabled_flag(mut self, loop_filter_across_tiles_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, loop_filter_across_tiles_enabled_flag, 14usize, 14usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_loop_filter_across_slices_enabled_flag(mut self, pps_loop_filter_across_slices_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_loop_filter_across_slices_enabled_flag, 15usize, 15usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn deblocking_filter_control_present_flag(mut self, deblocking_filter_control_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, deblocking_filter_control_present_flag, 16usize, 16usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn deblocking_filter_override_enabled_flag(mut self, deblocking_filter_override_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, deblocking_filter_override_enabled_flag, 17usize, 17usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_deblocking_filter_disabled_flag(mut self, pps_deblocking_filter_disabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_deblocking_filter_disabled_flag, 18usize, 18usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_scaling_list_data_present_flag(mut self, pps_scaling_list_data_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_scaling_list_data_present_flag, 19usize, 19usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn lists_modification_present_flag(mut self, lists_modification_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, lists_modification_present_flag, 20usize, 20usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_segment_header_extension_present_flag(mut self, slice_segment_header_extension_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, slice_segment_header_extension_present_flag, 21usize, 21usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_extension_present_flag(mut self, pps_extension_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_extension_present_flag, 22usize, 22usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn cross_component_prediction_enabled_flag(mut self, cross_component_prediction_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, cross_component_prediction_enabled_flag, 23usize, 23usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_qp_offset_list_enabled_flag(mut self, chroma_qp_offset_list_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, chroma_qp_offset_list_enabled_flag, 24usize, 24usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_curr_pic_ref_enabled_flag(mut self, pps_curr_pic_ref_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_curr_pic_ref_enabled_flag, 25usize, 25usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn residual_adaptive_colour_transform_enabled_flag(mut self, residual_adaptive_colour_transform_enabled_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, residual_adaptive_colour_transform_enabled_flag, 26usize, 26usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_slice_act_qp_offsets_present_flag(mut self, pps_slice_act_qp_offsets_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_slice_act_qp_offsets_present_flag, 27usize, 27usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_palette_predictor_initializer_present_flag(mut self, pps_palette_predictor_initializer_present_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_palette_predictor_initializer_present_flag, 28usize, 28usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn monochrome_palette_flag(mut self, monochrome_palette_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, monochrome_palette_flag, 29usize, 29usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_range_extension_flag(mut self, pps_range_extension_flag: u32) -> Self {
         self.0.dependent_slice_segments_enabled_flag_and_more_bitfield = crate::bits_copy!(self.0.dependent_slice_segments_enabled_flag_and_more_bitfield, pps_range_extension_flag, 30usize, 30usize);
         self
@@ -3878,26 +4202,31 @@ impl<'a> StdVideoH265SubLayerHrdParametersBuilder<'a> {
         StdVideoH265SubLayerHrdParametersBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn bit_rate_value_minus1(mut self, bit_rate_value_minus1: [u32; 32]) -> Self {
         self.0.bit_rate_value_minus1 = bit_rate_value_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_size_value_minus1(mut self, cpb_size_value_minus1: [u32; 32]) -> Self {
         self.0.cpb_size_value_minus1 = cpb_size_value_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cpb_size_du_value_minus1(mut self, cpb_size_du_value_minus1: [u32; 32]) -> Self {
         self.0.cpb_size_du_value_minus1 = cpb_size_du_value_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bit_rate_du_value_minus1(mut self, bit_rate_du_value_minus1: [u32; 32]) -> Self {
         self.0.bit_rate_du_value_minus1 = bit_rate_du_value_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cbr_flag(mut self, cbr_flag: u32) -> Self {
         self.0.cbr_flag = cbr_flag as _;
         self
@@ -3962,36 +4291,43 @@ impl<'a> StdVideoH265HrdFlagsBuilder<'a> {
         StdVideoH265HrdFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn nal_hrd_parameters_present_flag(mut self, nal_hrd_parameters_present_flag: u32) -> Self {
         self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, nal_hrd_parameters_present_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vcl_hrd_parameters_present_flag(mut self, vcl_hrd_parameters_present_flag: u32) -> Self {
         self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, vcl_hrd_parameters_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_pic_hrd_params_present_flag(mut self, sub_pic_hrd_params_present_flag: u32) -> Self {
         self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, sub_pic_hrd_params_present_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_pic_cpb_params_in_pic_timing_sei_flag(mut self, sub_pic_cpb_params_in_pic_timing_sei_flag: u32) -> Self {
         self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, sub_pic_cpb_params_in_pic_timing_sei_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn fixed_pic_rate_general_flag(mut self, fixed_pic_rate_general_flag: u32) -> Self {
         self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, fixed_pic_rate_general_flag, 4usize, 11usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn fixed_pic_rate_within_cvs_flag(mut self, fixed_pic_rate_within_cvs_flag: u32) -> Self {
         self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, fixed_pic_rate_within_cvs_flag, 12usize, 19usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn low_delay_hrd_flag(mut self, low_delay_hrd_flag: u32) -> Self {
         self.0.nal_hrd_parameters_present_flag_and_more_bitfield = crate::bits_copy!(self.0.nal_hrd_parameters_present_flag_and_more_bitfield, low_delay_hrd_flag, 20usize, 27usize);
         self
@@ -4056,91 +4392,109 @@ impl<'a> StdVideoH265SpsVuiFlagsBuilder<'a> {
         StdVideoH265SpsVuiFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_ratio_info_present_flag(mut self, aspect_ratio_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, aspect_ratio_info_present_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn overscan_info_present_flag(mut self, overscan_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_info_present_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn overscan_appropriate_flag(mut self, overscan_appropriate_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, overscan_appropriate_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_signal_type_present_flag(mut self, video_signal_type_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_signal_type_present_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_full_range_flag(mut self, video_full_range_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, video_full_range_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn colour_description_present_flag(mut self, colour_description_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, colour_description_present_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_loc_info_present_flag(mut self, chroma_loc_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, chroma_loc_info_present_flag, 6usize, 6usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn neutral_chroma_indication_flag(mut self, neutral_chroma_indication_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, neutral_chroma_indication_flag, 7usize, 7usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn field_seq_flag(mut self, field_seq_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, field_seq_flag, 8usize, 8usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_field_info_present_flag(mut self, frame_field_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, frame_field_info_present_flag, 9usize, 9usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn default_display_window_flag(mut self, default_display_window_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, default_display_window_flag, 10usize, 10usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_timing_info_present_flag(mut self, vui_timing_info_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vui_timing_info_present_flag, 11usize, 11usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_poc_proportional_to_timing_flag(mut self, vui_poc_proportional_to_timing_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vui_poc_proportional_to_timing_flag, 12usize, 12usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn vui_hrd_parameters_present_flag(mut self, vui_hrd_parameters_present_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, vui_hrd_parameters_present_flag, 13usize, 13usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn bitstream_restriction_flag(mut self, bitstream_restriction_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, bitstream_restriction_flag, 14usize, 14usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn tiles_fixed_structure_flag(mut self, tiles_fixed_structure_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, tiles_fixed_structure_flag, 15usize, 15usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn motion_vectors_over_pic_boundaries_flag(mut self, motion_vectors_over_pic_boundaries_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, motion_vectors_over_pic_boundaries_flag, 16usize, 16usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn restricted_ref_pic_lists_flag(mut self, restricted_ref_pic_lists_flag: u32) -> Self {
         self.0.aspect_ratio_info_present_flag_and_more_bitfield = crate::bits_copy!(self.0.aspect_ratio_info_present_flag_and_more_bitfield, restricted_ref_pic_lists_flag, 17usize, 17usize);
         self
@@ -4215,56 +4569,67 @@ impl<'a> StdVideoDecodeH265PictureInfoBuilder<'a> {
         StdVideoDecodeH265PictureInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vps_video_parameter_set_id(mut self, vps_video_parameter_set_id: u8) -> Self {
         self.0.vps_video_parameter_set_id = vps_video_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_seq_parameter_set_id(mut self, sps_seq_parameter_set_id: u8) -> Self {
         self.0.sps_seq_parameter_set_id = sps_seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_pic_parameter_set_id(mut self, pps_pic_parameter_set_id: u8) -> Self {
         self.0.pps_pic_parameter_set_id = pps_pic_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_short_term_ref_pic_sets(mut self, num_short_term_ref_pic_sets: u8) -> Self {
         self.0.num_short_term_ref_pic_sets = num_short_term_ref_pic_sets as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_cnt_val(mut self, pic_order_cnt_val: i32) -> Self {
         self.0.pic_order_cnt_val = pic_order_cnt_val as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_bits_for_st_ref_pic_set_in_slice(mut self, num_bits_for_st_ref_pic_set_in_slice: u16) -> Self {
         self.0.num_bits_for_st_ref_pic_set_in_slice = num_bits_for_st_ref_pic_set_in_slice as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_delta_pocs_of_ref_rps_idx(mut self, num_delta_pocs_of_ref_rps_idx: u8) -> Self {
         self.0.num_delta_pocs_of_ref_rps_idx = num_delta_pocs_of_ref_rps_idx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_set_st_curr_before(mut self, ref_pic_set_st_curr_before: [u8; 8]) -> Self {
         self.0.ref_pic_set_st_curr_before = ref_pic_set_st_curr_before as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_set_st_curr_after(mut self, ref_pic_set_st_curr_after: [u8; 8]) -> Self {
         self.0.ref_pic_set_st_curr_after = ref_pic_set_st_curr_after as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_set_lt_curr(mut self, ref_pic_set_lt_curr: [u8; 8]) -> Self {
         self.0.ref_pic_set_lt_curr = ref_pic_set_lt_curr as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoDecodeH265PictureInfoFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -4330,11 +4695,13 @@ impl<'a> StdVideoDecodeH265ReferenceInfoBuilder<'a> {
         StdVideoDecodeH265ReferenceInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_cnt_val(mut self, pic_order_cnt_val: i32) -> Self {
         self.0.pic_order_cnt_val = pic_order_cnt_val as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoDecodeH265ReferenceInfoFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -4399,21 +4766,25 @@ impl<'a> StdVideoDecodeH265PictureInfoFlagsBuilder<'a> {
         StdVideoDecodeH265PictureInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn irap_pic_flag(mut self, irap_pic_flag: u32) -> Self {
         self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, irap_pic_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn idr_pic_flag(mut self, idr_pic_flag: u32) -> Self {
         self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, idr_pic_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_reference(mut self, is_reference: u32) -> Self {
         self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, is_reference, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn short_term_ref_pic_set_sps_flag(mut self, short_term_ref_pic_set_sps_flag: u32) -> Self {
         self.0.irap_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.irap_pic_flag_and_more_bitfield, short_term_ref_pic_set_sps_flag, 3usize, 3usize);
         self
@@ -4478,11 +4849,13 @@ impl<'a> StdVideoDecodeH265ReferenceInfoFlagsBuilder<'a> {
         StdVideoDecodeH265ReferenceInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn is_long_term(mut self, is_long_term: u32) -> Self {
         self.0.is_long_term_and_is_non_existing = crate::bits_copy!(self.0.is_long_term_and_is_non_existing, is_long_term, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_non_existing(mut self, is_non_existing: u32) -> Self {
         self.0.is_long_term_and_is_non_existing = crate::bits_copy!(self.0.is_long_term_and_is_non_existing, is_non_existing, 1usize, 1usize);
         self
@@ -4558,61 +4931,73 @@ impl<'a> StdVideoEncodeH264SliceHeaderBuilder<'a> {
         StdVideoEncodeH264SliceHeaderBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH264SliceHeaderFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_type(mut self, slice_type: crate::external::vk_video::StdVideoH264SliceType) -> Self {
         self.0.slice_type = slice_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn seq_parameter_set_id(mut self, seq_parameter_set_id: u8) -> Self {
         self.0.seq_parameter_set_id = seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_parameter_set_id(mut self, pic_parameter_set_id: u8) -> Self {
         self.0.pic_parameter_set_id = pic_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn idr_pic_id(mut self, idr_pic_id: u16) -> Self {
         self.0.idr_pic_id = idr_pic_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l0_active_minus1(mut self, num_ref_idx_l0_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l0_active_minus1 = num_ref_idx_l0_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l1_active_minus1(mut self, num_ref_idx_l1_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l1_active_minus1 = num_ref_idx_l1_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cabac_init_idc(mut self, cabac_init_idc: crate::external::vk_video::StdVideoH264CabacInitIdc) -> Self {
         self.0.cabac_init_idc = cabac_init_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn disable_deblocking_filter_idc(mut self, disable_deblocking_filter_idc: crate::external::vk_video::StdVideoH264DisableDeblockingFilterIdc) -> Self {
         self.0.disable_deblocking_filter_idc = disable_deblocking_filter_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_alpha_c0_offset_div2(mut self, slice_alpha_c0_offset_div2: i8) -> Self {
         self.0.slice_alpha_c0_offset_div2 = slice_alpha_c0_offset_div2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_beta_offset_div2(mut self, slice_beta_offset_div2: i8) -> Self {
         self.0.slice_beta_offset_div2 = slice_beta_offset_div2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mem_mgmt_ctrl_operations(mut self, mem_mgmt_ctrl_operations: &'a mut crate::external::vk_video::StdVideoEncodeH264RefMemMgmtCtrlOperations) -> Self {
         self.0.p_mem_mgmt_ctrl_operations = mem_mgmt_ctrl_operations as _;
         self
@@ -4682,31 +5067,37 @@ impl<'a> StdVideoEncodeH264PictureInfoBuilder<'a> {
         StdVideoEncodeH264PictureInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH264PictureInfoFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn picture_type(mut self, picture_type: crate::external::vk_video::StdVideoH264PictureType) -> Self {
         self.0.picture_type = picture_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_num(mut self, frame_num: u32) -> Self {
         self.0.frame_num = frame_num as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn picture_order_count(mut self, picture_order_count: u32) -> Self {
         self.0.picture_order_count = picture_order_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_pic_num(mut self, long_term_pic_num: u16) -> Self {
         self.0.long_term_pic_num = long_term_pic_num as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_frame_idx(mut self, long_term_frame_idx: u16) -> Self {
         self.0.long_term_frame_idx = long_term_frame_idx as _;
         self
@@ -4771,36 +5162,43 @@ impl<'a> StdVideoEncodeH264SliceHeaderFlagsBuilder<'a> {
         StdVideoEncodeH264SliceHeaderFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn idr_flag(mut self, idr_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, idr_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_reference_flag(mut self, is_reference_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, is_reference_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_active_override_flag(mut self, num_ref_idx_active_override_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, num_ref_idx_active_override_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn no_output_of_prior_pics_flag(mut self, no_output_of_prior_pics_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, no_output_of_prior_pics_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_reference_flag(mut self, long_term_reference_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, long_term_reference_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn adaptive_ref_pic_marking_mode_flag(mut self, adaptive_ref_pic_marking_mode_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, adaptive_ref_pic_marking_mode_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn no_prior_references_available_flag(mut self, no_prior_references_available_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, no_prior_references_available_flag, 6usize, 6usize);
         self
@@ -4871,36 +5269,43 @@ impl<'a> StdVideoEncodeH264RefMemMgmtCtrlOperationsBuilder<'a> {
         StdVideoEncodeH264RefMemMgmtCtrlOperationsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH264RefMgmtFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_list0_mod_op_count(mut self, ref_list0_mod_op_count: u8) -> Self {
         self.0.ref_list0_mod_op_count = ref_list0_mod_op_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_list0_mod_operations(mut self, ref_list0_mod_operations: &'a mut crate::external::vk_video::StdVideoEncodeH264RefListModEntry) -> Self {
         self.0.p_ref_list0_mod_operations = ref_list0_mod_operations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_list1_mod_op_count(mut self, ref_list1_mod_op_count: u8) -> Self {
         self.0.ref_list1_mod_op_count = ref_list1_mod_op_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_list1_mod_operations(mut self, ref_list1_mod_operations: &'a mut crate::external::vk_video::StdVideoEncodeH264RefListModEntry) -> Self {
         self.0.p_ref_list1_mod_operations = ref_list1_mod_operations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_marking_op_count(mut self, ref_pic_marking_op_count: u8) -> Self {
         self.0.ref_pic_marking_op_count = ref_pic_marking_op_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_marking_operations(mut self, ref_pic_marking_operations: &'a mut crate::external::vk_video::StdVideoEncodeH264RefPicMarkingEntry) -> Self {
         self.0.p_ref_pic_marking_operations = ref_pic_marking_operations as _;
         self
@@ -4965,16 +5370,19 @@ impl<'a> StdVideoEncodeH264PictureInfoFlagsBuilder<'a> {
         StdVideoEncodeH264PictureInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn idr_flag(mut self, idr_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, idr_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_reference_flag(mut self, is_reference_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, is_reference_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_reference_flag(mut self, long_term_reference_flag: u32) -> Self {
         self.0.idr_flag_and_more_bitfield = crate::bits_copy!(self.0.idr_flag_and_more_bitfield, long_term_reference_flag, 2usize, 2usize);
         self
@@ -5039,11 +5447,13 @@ impl<'a> StdVideoEncodeH264RefMgmtFlagsBuilder<'a> {
         StdVideoEncodeH264RefMgmtFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_list_modification_l0_flag(mut self, ref_pic_list_modification_l0_flag: u32) -> Self {
         self.0.ref_pic_list_modification_l0_flag_and_ref_pic_list_modification_l1_flag = crate::bits_copy!(self.0.ref_pic_list_modification_l0_flag_and_ref_pic_list_modification_l1_flag, ref_pic_list_modification_l0_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_list_modification_l1_flag(mut self, ref_pic_list_modification_l1_flag: u32) -> Self {
         self.0.ref_pic_list_modification_l0_flag_and_ref_pic_list_modification_l1_flag = crate::bits_copy!(self.0.ref_pic_list_modification_l0_flag_and_ref_pic_list_modification_l1_flag, ref_pic_list_modification_l1_flag, 1usize, 1usize);
         self
@@ -5110,16 +5520,19 @@ impl<'a> StdVideoEncodeH264RefListModEntryBuilder<'a> {
         StdVideoEncodeH264RefListModEntryBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn modification_of_pic_nums_idc(mut self, modification_of_pic_nums_idc: crate::external::vk_video::StdVideoH264ModificationOfPicNumsIdc) -> Self {
         self.0.modification_of_pic_nums_idc = modification_of_pic_nums_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn abs_diff_pic_num_minus1(mut self, abs_diff_pic_num_minus1: u16) -> Self {
         self.0.abs_diff_pic_num_minus1 = abs_diff_pic_num_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_pic_num(mut self, long_term_pic_num: u16) -> Self {
         self.0.long_term_pic_num = long_term_pic_num as _;
         self
@@ -5188,26 +5601,31 @@ impl<'a> StdVideoEncodeH264RefPicMarkingEntryBuilder<'a> {
         StdVideoEncodeH264RefPicMarkingEntryBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn operation(mut self, operation: crate::external::vk_video::StdVideoH264MemMgmtControlOp) -> Self {
         self.0.operation = operation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn difference_of_pic_nums_minus1(mut self, difference_of_pic_nums_minus1: u16) -> Self {
         self.0.difference_of_pic_nums_minus1 = difference_of_pic_nums_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_pic_num(mut self, long_term_pic_num: u16) -> Self {
         self.0.long_term_pic_num = long_term_pic_num as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_frame_idx(mut self, long_term_frame_idx: u16) -> Self {
         self.0.long_term_frame_idx = long_term_frame_idx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_long_term_frame_idx_plus1(mut self, max_long_term_frame_idx_plus1: u16) -> Self {
         self.0.max_long_term_frame_idx_plus1 = max_long_term_frame_idx_plus1 as _;
         self
@@ -5272,16 +5690,19 @@ impl<'a> StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
         StdVideoEncodeH265PictureInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn is_reference_flag(mut self, is_reference_flag: u32) -> Self {
         self.0.is_reference_flag_and_more_bitfield = crate::bits_copy!(self.0.is_reference_flag_and_more_bitfield, is_reference_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn irap_pic_flag(mut self, irap_pic_flag: u32) -> Self {
         self.0.is_reference_flag_and_more_bitfield = crate::bits_copy!(self.0.is_reference_flag_and_more_bitfield, irap_pic_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn long_term_flag(mut self, long_term_flag: u32) -> Self {
         self.0.is_reference_flag_and_more_bitfield = crate::bits_copy!(self.0.is_reference_flag_and_more_bitfield, long_term_flag, 2usize, 2usize);
         self
@@ -5351,31 +5772,37 @@ impl<'a> StdVideoEncodeH265PictureInfoBuilder<'a> {
         StdVideoEncodeH265PictureInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn picture_type(mut self, picture_type: crate::external::vk_video::StdVideoH265PictureType) -> Self {
         self.0.picture_type = picture_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_video_parameter_set_id(mut self, sps_video_parameter_set_id: u8) -> Self {
         self.0.sps_video_parameter_set_id = sps_video_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_seq_parameter_set_id(mut self, pps_seq_parameter_set_id: u8) -> Self {
         self.0.pps_seq_parameter_set_id = pps_seq_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_cnt_val(mut self, pic_order_cnt_val: i32) -> Self {
         self.0.pic_order_cnt_val = pic_order_cnt_val as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn temporal_id(mut self, temporal_id: u8) -> Self {
         self.0.temporal_id = temporal_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265PictureInfoFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -5469,151 +5896,181 @@ impl<'a> StdVideoEncodeH265SliceHeaderBuilder<'a> {
         StdVideoEncodeH265SliceHeaderBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn slice_type(mut self, slice_type: crate::external::vk_video::StdVideoH265SliceType) -> Self {
         self.0.slice_type = slice_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_pic_parameter_set_id(mut self, slice_pic_parameter_set_id: u8) -> Self {
         self.0.slice_pic_parameter_set_id = slice_pic_parameter_set_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_short_term_ref_pic_sets(mut self, num_short_term_ref_pic_sets: u8) -> Self {
         self.0.num_short_term_ref_pic_sets = num_short_term_ref_pic_sets as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_segment_address(mut self, slice_segment_address: u32) -> Self {
         self.0.slice_segment_address = slice_segment_address as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn short_term_ref_pic_set_idx(mut self, short_term_ref_pic_set_idx: u8) -> Self {
         self.0.short_term_ref_pic_set_idx = short_term_ref_pic_set_idx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_long_term_sps(mut self, num_long_term_sps: u8) -> Self {
         self.0.num_long_term_sps = num_long_term_sps as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_long_term_pics(mut self, num_long_term_pics: u8) -> Self {
         self.0.num_long_term_pics = num_long_term_pics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn collocated_ref_idx(mut self, collocated_ref_idx: u8) -> Self {
         self.0.collocated_ref_idx = collocated_ref_idx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l0_active_minus1(mut self, num_ref_idx_l0_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l0_active_minus1 = num_ref_idx_l0_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_l1_active_minus1(mut self, num_ref_idx_l1_active_minus1: u8) -> Self {
         self.0.num_ref_idx_l1_active_minus1 = num_ref_idx_l1_active_minus1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn luma_log2_weight_denom(mut self, luma_log2_weight_denom: u8) -> Self {
         self.0.luma_log2_weight_denom = luma_log2_weight_denom as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_chroma_log2_weight_denom(mut self, delta_chroma_log2_weight_denom: i8) -> Self {
         self.0.delta_chroma_log2_weight_denom = delta_chroma_log2_weight_denom as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_luma_weight_l0(mut self, delta_luma_weight_l0: [i8; 15]) -> Self {
         self.0.delta_luma_weight_l0 = delta_luma_weight_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn luma_offset_l0(mut self, luma_offset_l0: [i8; 15]) -> Self {
         self.0.luma_offset_l0 = luma_offset_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_chroma_weight_l0(mut self, delta_chroma_weight_l0: [[i8; 2]; 15]) -> Self {
         self.0.delta_chroma_weight_l0 = delta_chroma_weight_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_chroma_offset_l0(mut self, delta_chroma_offset_l0: [[i8; 2]; 15]) -> Self {
         self.0.delta_chroma_offset_l0 = delta_chroma_offset_l0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_luma_weight_l1(mut self, delta_luma_weight_l1: [i8; 15]) -> Self {
         self.0.delta_luma_weight_l1 = delta_luma_weight_l1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn luma_offset_l1(mut self, luma_offset_l1: [i8; 15]) -> Self {
         self.0.luma_offset_l1 = luma_offset_l1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_chroma_weight_l1(mut self, delta_chroma_weight_l1: [[i8; 2]; 15]) -> Self {
         self.0.delta_chroma_weight_l1 = delta_chroma_weight_l1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn delta_chroma_offset_l1(mut self, delta_chroma_offset_l1: [[i8; 2]; 15]) -> Self {
         self.0.delta_chroma_offset_l1 = delta_chroma_offset_l1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_merge_cand(mut self, max_num_merge_cand: u8) -> Self {
         self.0.max_num_merge_cand = max_num_merge_cand as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_qp_delta(mut self, slice_qp_delta: i8) -> Self {
         self.0.slice_qp_delta = slice_qp_delta as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_cb_qp_offset(mut self, slice_cb_qp_offset: i8) -> Self {
         self.0.slice_cb_qp_offset = slice_cb_qp_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_cr_qp_offset(mut self, slice_cr_qp_offset: i8) -> Self {
         self.0.slice_cr_qp_offset = slice_cr_qp_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_beta_offset_div2(mut self, slice_beta_offset_div2: i8) -> Self {
         self.0.slice_beta_offset_div2 = slice_beta_offset_div2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_tc_offset_div2(mut self, slice_tc_offset_div2: i8) -> Self {
         self.0.slice_tc_offset_div2 = slice_tc_offset_div2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_act_y_qp_offset(mut self, slice_act_y_qp_offset: i8) -> Self {
         self.0.slice_act_y_qp_offset = slice_act_y_qp_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_act_cb_qp_offset(mut self, slice_act_cb_qp_offset: i8) -> Self {
         self.0.slice_act_cb_qp_offset = slice_act_cb_qp_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_act_cr_qp_offset(mut self, slice_act_cr_qp_offset: i8) -> Self {
         self.0.slice_act_cr_qp_offset = slice_act_cr_qp_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265SliceHeaderFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -5680,16 +6137,19 @@ impl<'a> StdVideoEncodeH265ReferenceInfoBuilder<'a> {
         StdVideoEncodeH265ReferenceInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pic_order_cnt_val(mut self, pic_order_cnt_val: i32) -> Self {
         self.0.pic_order_cnt_val = pic_order_cnt_val as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn temporal_id(mut self, temporal_id: u8) -> Self {
         self.0.temporal_id = temporal_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265ReferenceInfoFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -5758,26 +6218,31 @@ impl<'a> StdVideoEncodeH265ReferenceModificationsBuilder<'a> {
         StdVideoEncodeH265ReferenceModificationsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::external::vk_video::StdVideoEncodeH265ReferenceModificationFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_list0_modifications_count(mut self, reference_list0_modifications_count: u8) -> Self {
         self.0.reference_list0_modifications_count = reference_list0_modifications_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_list0_modifications(mut self, reference_list0_modifications: &'a mut u8) -> Self {
         self.0.p_reference_list0_modifications = reference_list0_modifications as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_list1_modifications_count(mut self, reference_list1_modifications_count: u8) -> Self {
         self.0.reference_list1_modifications_count = reference_list1_modifications_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_list1_modifications(mut self, reference_list1_modifications: &'a mut u8) -> Self {
         self.0.p_reference_list1_modifications = reference_list1_modifications as _;
         self
@@ -5846,96 +6311,115 @@ impl<'a> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
         StdVideoEncodeH265SliceHeaderFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn first_slice_segment_in_pic_flag(mut self, first_slice_segment_in_pic_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, first_slice_segment_in_pic_flag, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn no_output_of_prior_pics_flag(mut self, no_output_of_prior_pics_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, no_output_of_prior_pics_flag, 1usize, 1usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn dependent_slice_segment_flag(mut self, dependent_slice_segment_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, dependent_slice_segment_flag, 2usize, 2usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn short_term_ref_pic_set_sps_flag(mut self, short_term_ref_pic_set_sps_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, short_term_ref_pic_set_sps_flag, 3usize, 3usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_temporal_mvp_enable_flag(mut self, slice_temporal_mvp_enable_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_temporal_mvp_enable_flag, 4usize, 4usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_sao_luma_flag(mut self, slice_sao_luma_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_sao_luma_flag, 5usize, 5usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_sao_chroma_flag(mut self, slice_sao_chroma_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_sao_chroma_flag, 6usize, 6usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_ref_idx_active_override_flag(mut self, num_ref_idx_active_override_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, num_ref_idx_active_override_flag, 7usize, 7usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn mvd_l1_zero_flag(mut self, mvd_l1_zero_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, mvd_l1_zero_flag, 8usize, 8usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn cabac_init_flag(mut self, cabac_init_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, cabac_init_flag, 9usize, 9usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_deblocking_filter_disable_flag(mut self, slice_deblocking_filter_disable_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_deblocking_filter_disable_flag, 10usize, 10usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn collocated_from_l0_flag(mut self, collocated_from_l0_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, collocated_from_l0_flag, 11usize, 11usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_loop_filter_across_slices_enabled_flag(mut self, slice_loop_filter_across_slices_enabled_flag: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, slice_loop_filter_across_slices_enabled_flag, 12usize, 12usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn b_last_slice_in_pic(mut self, b_last_slice_in_pic: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, b_last_slice_in_pic, 13usize, 13usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn reserved_bits(mut self, reserved_bits: u32) -> Self {
         self.0.first_slice_segment_in_pic_flag_and_more_bitfield = crate::bits_copy!(self.0.first_slice_segment_in_pic_flag_and_more_bitfield, reserved_bits, 14usize, 31usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn luma_weight_l0_flag(mut self, luma_weight_l0_flag: u16) -> Self {
         self.0.luma_weight_l0_flag = luma_weight_l0_flag as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_weight_l0_flag(mut self, chroma_weight_l0_flag: u16) -> Self {
         self.0.chroma_weight_l0_flag = chroma_weight_l0_flag as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn luma_weight_l1_flag(mut self, luma_weight_l1_flag: u16) -> Self {
         self.0.luma_weight_l1_flag = luma_weight_l1_flag as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_weight_l1_flag(mut self, chroma_weight_l1_flag: u16) -> Self {
         self.0.chroma_weight_l1_flag = chroma_weight_l1_flag as _;
         self
@@ -6000,11 +6484,13 @@ impl<'a> StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
         StdVideoEncodeH265ReferenceInfoFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn is_long_term(mut self, is_long_term: u32) -> Self {
         self.0.is_long_term_and_is_used_flag = crate::bits_copy!(self.0.is_long_term_and_is_used_flag, is_long_term, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_used_flag(mut self, is_used_flag: u32) -> Self {
         self.0.is_long_term_and_is_used_flag = crate::bits_copy!(self.0.is_long_term_and_is_used_flag, is_used_flag, 1usize, 1usize);
         self
@@ -6069,11 +6555,13 @@ impl<'a> StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
         StdVideoEncodeH265ReferenceModificationFlagsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_list_modification_flag_l0(mut self, ref_pic_list_modification_flag_l0: u32) -> Self {
         self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1 = crate::bits_copy!(self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1, ref_pic_list_modification_flag_l0, 0usize, 0usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn ref_pic_list_modification_flag_l1(mut self, ref_pic_list_modification_flag_l1: u32) -> Self {
         self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1 = crate::bits_copy!(self.0.ref_pic_list_modification_flag_l0_and_ref_pic_list_modification_flag_l1, ref_pic_list_modification_flag_l1, 1usize, 1usize);
         self

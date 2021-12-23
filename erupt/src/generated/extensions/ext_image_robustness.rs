@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceImageRobustnessFeaturesEXTBuilder<'a> {
         PhysicalDeviceImageRobustnessFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn robust_image_access(mut self, robust_image_access: bool) -> Self {
         self.0.robust_image_access = robust_image_access as _;
         self

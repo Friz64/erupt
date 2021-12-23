@@ -47,11 +47,13 @@ impl<'a> XYColorEXTBuilder<'a> {
         XYColorEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn x(mut self, x: std::os::raw::c_float) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y(mut self, y: std::os::raw::c_float) -> Self {
         self.0.y = y as _;
         self
@@ -129,41 +131,49 @@ impl<'a> HdrMetadataEXTBuilder<'a> {
         HdrMetadataEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn display_primary_red(mut self, display_primary_red: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.display_primary_red = display_primary_red as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn display_primary_green(mut self, display_primary_green: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.display_primary_green = display_primary_green as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn display_primary_blue(mut self, display_primary_blue: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.display_primary_blue = display_primary_blue as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn white_point(mut self, white_point: crate::extensions::ext_hdr_metadata::XYColorEXT) -> Self {
         self.0.white_point = white_point as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_luminance(mut self, max_luminance: std::os::raw::c_float) -> Self {
         self.0.max_luminance = max_luminance as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_luminance(mut self, min_luminance: std::os::raw::c_float) -> Self {
         self.0.min_luminance = min_luminance as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_content_light_level(mut self, max_content_light_level: std::os::raw::c_float) -> Self {
         self.0.max_content_light_level = max_content_light_level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_frame_average_light_level(mut self, max_frame_average_light_level: std::os::raw::c_float) -> Self {
         self.0.max_frame_average_light_level = max_frame_average_light_level as _;
         self

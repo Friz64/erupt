@@ -225,11 +225,13 @@ impl<'a> PhysicalDevicePerformanceQueryFeaturesKHRBuilder<'a> {
         PhysicalDevicePerformanceQueryFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn performance_counter_query_pools(mut self, performance_counter_query_pools: bool) -> Self {
         self.0.performance_counter_query_pools = performance_counter_query_pools as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn performance_counter_multiple_query_pools(mut self, performance_counter_multiple_query_pools: bool) -> Self {
         self.0.performance_counter_multiple_query_pools = performance_counter_multiple_query_pools as _;
         self
@@ -300,6 +302,7 @@ impl<'a> PhysicalDevicePerformanceQueryPropertiesKHRBuilder<'a> {
         PhysicalDevicePerformanceQueryPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn allow_command_buffer_query_copies(mut self, allow_command_buffer_query_copies: bool) -> Self {
         self.0.allow_command_buffer_query_copies = allow_command_buffer_query_copies as _;
         self
@@ -373,21 +376,25 @@ impl<'a> PerformanceCounterKHRBuilder<'a> {
         PerformanceCounterKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn unit(mut self, unit: crate::extensions::khr_performance_query::PerformanceCounterUnitKHR) -> Self {
         self.0.unit = unit as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scope(mut self, scope: crate::extensions::khr_performance_query::PerformanceCounterScopeKHR) -> Self {
         self.0.scope = scope as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn storage(mut self, storage: crate::extensions::khr_performance_query::PerformanceCounterStorageKHR) -> Self {
         self.0.storage = storage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn uuid(mut self, uuid: [u8; 16]) -> Self {
         self.0.uuid = uuid as _;
         self
@@ -461,21 +468,25 @@ impl<'a> PerformanceCounterDescriptionKHRBuilder<'a> {
         PerformanceCounterDescriptionKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_performance_query::PerformanceCounterDescriptionFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: [std::os::raw::c_char; 256]) -> Self {
         self.0.name = name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn category(mut self, category: [std::os::raw::c_char; 256]) -> Self {
         self.0.category = category as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn description(mut self, description: [std::os::raw::c_char; 256]) -> Self {
         self.0.description = description as _;
         self
@@ -548,11 +559,13 @@ impl<'a> QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
         QueryPoolPerformanceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_index(mut self, queue_family_index: u32) -> Self {
         self.0.queue_family_index = queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn counter_indices(mut self, counter_indices: &'a [u32]) -> Self {
         self.0.p_counter_indices = counter_indices.as_ptr() as _;
         self.0.counter_index_count = counter_indices.len() as _;
@@ -647,11 +660,13 @@ impl<'a> AcquireProfilingLockInfoKHRBuilder<'a> {
         AcquireProfilingLockInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_performance_query::AcquireProfilingLockFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn timeout(mut self, timeout: u64) -> Self {
         self.0.timeout = timeout as _;
         self
@@ -722,6 +737,7 @@ impl<'a> PerformanceQuerySubmitInfoKHRBuilder<'a> {
         PerformanceQuerySubmitInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn counter_pass_index(mut self, counter_pass_index: u32) -> Self {
         self.0.counter_pass_index = counter_pass_index as _;
         self

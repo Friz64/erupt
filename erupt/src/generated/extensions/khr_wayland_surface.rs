@@ -78,16 +78,19 @@ impl<'a> WaylandSurfaceCreateInfoKHRBuilder<'a> {
         WaylandSurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_wayland_surface::WaylandSurfaceCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn display(mut self, display: *mut std::ffi::c_void) -> Self {
         self.0.display = display;
         self
     }
     #[inline]
+    #[must_use]
     pub fn surface(mut self, surface: *mut std::ffi::c_void) -> Self {
         self.0.surface = surface;
         self

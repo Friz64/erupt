@@ -67,16 +67,19 @@ impl<'a> PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARMBuilder<'a> 
         PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_order_color_attachment_access(mut self, rasterization_order_color_attachment_access: bool) -> Self {
         self.0.rasterization_order_color_attachment_access = rasterization_order_color_attachment_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_order_depth_attachment_access(mut self, rasterization_order_depth_attachment_access: bool) -> Self {
         self.0.rasterization_order_depth_attachment_access = rasterization_order_depth_attachment_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_order_stencil_attachment_access(mut self, rasterization_order_stencil_attachment_access: bool) -> Self {
         self.0.rasterization_order_stencil_attachment_access = rasterization_order_stencil_attachment_access as _;
         self

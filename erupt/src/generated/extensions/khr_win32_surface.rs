@@ -78,16 +78,19 @@ impl<'a> Win32SurfaceCreateInfoKHRBuilder<'a> {
         Win32SurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_win32_surface::Win32SurfaceCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn hinstance(mut self, hinstance: *mut std::ffi::c_void) -> Self {
         self.0.hinstance = hinstance;
         self
     }
     #[inline]
+    #[must_use]
     pub fn hwnd(mut self, hwnd: *mut std::ffi::c_void) -> Self {
         self.0.hwnd = hwnd;
         self

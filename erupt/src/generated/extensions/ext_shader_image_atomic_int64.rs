@@ -51,11 +51,13 @@ impl<'a> PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a> {
         PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_image_int64_atomics(mut self, shader_image_int64_atomics: bool) -> Self {
         self.0.shader_image_int64_atomics = shader_image_int64_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_image_int64_atomics(mut self, sparse_image_int64_atomics: bool) -> Self {
         self.0.sparse_image_int64_atomics = sparse_image_int64_atomics as _;
         self

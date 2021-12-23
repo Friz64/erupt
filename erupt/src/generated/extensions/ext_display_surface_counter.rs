@@ -88,56 +88,67 @@ impl<'a> SurfaceCapabilities2EXTBuilder<'a> {
         SurfaceCapabilities2EXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_image_count(mut self, min_image_count: u32) -> Self {
         self.0.min_image_count = min_image_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_image_count(mut self, max_image_count: u32) -> Self {
         self.0.max_image_count = max_image_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn current_extent(mut self, current_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.current_extent = current_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_image_extent(mut self, min_image_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.min_image_extent = min_image_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_image_extent(mut self, max_image_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.max_image_extent = max_image_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_image_array_layers(mut self, max_image_array_layers: u32) -> Self {
         self.0.max_image_array_layers = max_image_array_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supported_transforms(mut self, supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR) -> Self {
         self.0.supported_transforms = supported_transforms as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn current_transform(mut self, current_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.current_transform = current_transform as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supported_composite_alpha(mut self, supported_composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagsKHR) -> Self {
         self.0.supported_composite_alpha = supported_composite_alpha as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supported_usage_flags(mut self, supported_usage_flags: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.supported_usage_flags = supported_usage_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supported_surface_counters(mut self, supported_surface_counters: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT) -> Self {
         self.0.supported_surface_counters = supported_surface_counters as _;
         self

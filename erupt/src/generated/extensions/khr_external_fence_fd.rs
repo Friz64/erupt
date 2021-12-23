@@ -60,21 +60,25 @@ impl<'a> ImportFenceFdInfoKHRBuilder<'a> {
         ImportFenceFdInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fence(mut self, fence: crate::vk1_0::Fence) -> Self {
         self.0.fence = fence as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_1::FenceImportFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fd(mut self, fd: std::os::raw::c_int) -> Self {
         self.0.fd = fd as _;
         self
@@ -146,11 +150,13 @@ impl<'a> FenceGetFdInfoKHRBuilder<'a> {
         FenceGetFdInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fence(mut self, fence: crate::vk1_0::Fence) -> Self {
         self.0.fence = fence as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

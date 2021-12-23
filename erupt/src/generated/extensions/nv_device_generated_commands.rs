@@ -190,6 +190,7 @@ impl<'a> PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
         PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_generated_commands(mut self, device_generated_commands: bool) -> Self {
         self.0.device_generated_commands = device_generated_commands as _;
         self
@@ -268,46 +269,55 @@ impl<'a> PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a> {
         PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_graphics_shader_group_count(mut self, max_graphics_shader_group_count: u32) -> Self {
         self.0.max_graphics_shader_group_count = max_graphics_shader_group_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_indirect_sequence_count(mut self, max_indirect_sequence_count: u32) -> Self {
         self.0.max_indirect_sequence_count = max_indirect_sequence_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_indirect_commands_token_count(mut self, max_indirect_commands_token_count: u32) -> Self {
         self.0.max_indirect_commands_token_count = max_indirect_commands_token_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_indirect_commands_stream_count(mut self, max_indirect_commands_stream_count: u32) -> Self {
         self.0.max_indirect_commands_stream_count = max_indirect_commands_stream_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_indirect_commands_token_offset(mut self, max_indirect_commands_token_offset: u32) -> Self {
         self.0.max_indirect_commands_token_offset = max_indirect_commands_token_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_indirect_commands_stream_stride(mut self, max_indirect_commands_stream_stride: u32) -> Self {
         self.0.max_indirect_commands_stream_stride = max_indirect_commands_stream_stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_sequences_count_buffer_offset_alignment(mut self, min_sequences_count_buffer_offset_alignment: u32) -> Self {
         self.0.min_sequences_count_buffer_offset_alignment = min_sequences_count_buffer_offset_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_sequences_index_buffer_offset_alignment(mut self, min_sequences_index_buffer_offset_alignment: u32) -> Self {
         self.0.min_sequences_index_buffer_offset_alignment = min_sequences_index_buffer_offset_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_indirect_commands_buffer_offset_alignment(mut self, min_indirect_commands_buffer_offset_alignment: u32) -> Self {
         self.0.min_indirect_commands_buffer_offset_alignment = min_indirect_commands_buffer_offset_alignment as _;
         self
@@ -381,17 +391,20 @@ impl<'a> GraphicsShaderGroupCreateInfoNVBuilder<'a> {
         GraphicsShaderGroupCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_input_state(mut self, vertex_input_state: &'a crate::vk1_0::PipelineVertexInputStateCreateInfo) -> Self {
         self.0.p_vertex_input_state = vertex_input_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tessellation_state(mut self, tessellation_state: &'a crate::vk1_0::PipelineTessellationStateCreateInfo) -> Self {
         self.0.p_tessellation_state = tessellation_state as _;
         self
@@ -465,12 +478,14 @@ impl<'a> GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'a> {
         GraphicsPipelineShaderGroupsCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn groups(mut self, groups: &'a [crate::extensions::nv_device_generated_commands::GraphicsShaderGroupCreateInfoNVBuilder]) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipelines(mut self, pipelines: &'a [crate::vk1_0::Pipeline]) -> Self {
         self.0.p_pipelines = pipelines.as_ptr() as _;
         self.0.pipeline_count = pipelines.len() as _;
@@ -537,6 +552,7 @@ impl<'a> BindShaderGroupIndirectCommandNVBuilder<'a> {
         BindShaderGroupIndirectCommandNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn group_index(mut self, group_index: u32) -> Self {
         self.0.group_index = group_index as _;
         self
@@ -604,16 +620,19 @@ impl<'a> BindIndexBufferIndirectCommandNVBuilder<'a> {
         BindIndexBufferIndirectCommandNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer_address(mut self, buffer_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.buffer_address = buffer_address as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: u32) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_type(mut self, index_type: crate::vk1_0::IndexType) -> Self {
         self.0.index_type = index_type as _;
         self
@@ -681,16 +700,19 @@ impl<'a> BindVertexBufferIndirectCommandNVBuilder<'a> {
         BindVertexBufferIndirectCommandNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer_address(mut self, buffer_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.buffer_address = buffer_address as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: u32) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stride(mut self, stride: u32) -> Self {
         self.0.stride = stride as _;
         self
@@ -756,6 +778,7 @@ impl<'a> SetStateFlagsIndirectCommandNVBuilder<'a> {
         SetStateFlagsIndirectCommandNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn data(mut self, data: u32) -> Self {
         self.0.data = data as _;
         self
@@ -822,11 +845,13 @@ impl<'a> IndirectCommandsStreamNVBuilder<'a> {
         IndirectCommandsStreamNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
@@ -909,62 +934,74 @@ impl<'a> IndirectCommandsLayoutTokenNVBuilder<'a> {
         IndirectCommandsLayoutTokenNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn token_type(mut self, token_type: crate::extensions::nv_device_generated_commands::IndirectCommandsTokenTypeNV) -> Self {
         self.0.token_type = token_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stream(mut self, stream: u32) -> Self {
         self.0.stream = stream as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: u32) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_binding_unit(mut self, vertex_binding_unit: u32) -> Self {
         self.0.vertex_binding_unit = vertex_binding_unit as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_dynamic_stride(mut self, vertex_dynamic_stride: bool) -> Self {
         self.0.vertex_dynamic_stride = vertex_dynamic_stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pushconstant_pipeline_layout(mut self, pushconstant_pipeline_layout: crate::vk1_0::PipelineLayout) -> Self {
         self.0.pushconstant_pipeline_layout = pushconstant_pipeline_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pushconstant_shader_stage_flags(mut self, pushconstant_shader_stage_flags: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.pushconstant_shader_stage_flags = pushconstant_shader_stage_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pushconstant_offset(mut self, pushconstant_offset: u32) -> Self {
         self.0.pushconstant_offset = pushconstant_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pushconstant_size(mut self, pushconstant_size: u32) -> Self {
         self.0.pushconstant_size = pushconstant_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn indirect_state_flags(mut self, indirect_state_flags: crate::extensions::nv_device_generated_commands::IndirectStateFlagsNV) -> Self {
         self.0.indirect_state_flags = indirect_state_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_types(mut self, index_types: &'a [crate::vk1_0::IndexType]) -> Self {
         self.0.p_index_types = index_types.as_ptr() as _;
         self.0.index_type_count = index_types.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_type_values(mut self, index_type_values: &'a [u32]) -> Self {
         self.0.p_index_type_values = index_type_values.as_ptr() as _;
         self.0.index_type_count = index_type_values.len() as _;
@@ -1041,22 +1078,26 @@ impl<'a> IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
         IndirectCommandsLayoutCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutUsageFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_bind_point(mut self, pipeline_bind_point: crate::vk1_0::PipelineBindPoint) -> Self {
         self.0.pipeline_bind_point = pipeline_bind_point as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tokens(mut self, tokens: &'a [crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutTokenNVBuilder]) -> Self {
         self.0.p_tokens = tokens.as_ptr() as _;
         self.0.token_count = tokens.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stream_strides(mut self, stream_strides: &'a [u32]) -> Self {
         self.0.p_stream_strides = stream_strides.as_ptr() as _;
         self.0.stream_count = stream_strides.len() as _;
@@ -1140,62 +1181,74 @@ impl<'a> GeneratedCommandsInfoNVBuilder<'a> {
         GeneratedCommandsInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_bind_point(mut self, pipeline_bind_point: crate::vk1_0::PipelineBindPoint) -> Self {
         self.0.pipeline_bind_point = pipeline_bind_point as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline(mut self, pipeline: crate::vk1_0::Pipeline) -> Self {
         self.0.pipeline = pipeline as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn indirect_commands_layout(mut self, indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV) -> Self {
         self.0.indirect_commands_layout = indirect_commands_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn streams(mut self, streams: &'a [crate::extensions::nv_device_generated_commands::IndirectCommandsStreamNVBuilder]) -> Self {
         self.0.p_streams = streams.as_ptr() as _;
         self.0.stream_count = streams.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sequences_count(mut self, sequences_count: u32) -> Self {
         self.0.sequences_count = sequences_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn preprocess_buffer(mut self, preprocess_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.preprocess_buffer = preprocess_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn preprocess_offset(mut self, preprocess_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.preprocess_offset = preprocess_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn preprocess_size(mut self, preprocess_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.preprocess_size = preprocess_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sequences_count_buffer(mut self, sequences_count_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.sequences_count_buffer = sequences_count_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sequences_count_offset(mut self, sequences_count_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.sequences_count_offset = sequences_count_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sequences_index_buffer(mut self, sequences_index_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.sequences_index_buffer = sequences_index_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sequences_index_offset(mut self, sequences_index_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.sequences_index_offset = sequences_index_offset as _;
         self
@@ -1269,21 +1322,25 @@ impl<'a> GeneratedCommandsMemoryRequirementsInfoNVBuilder<'a> {
         GeneratedCommandsMemoryRequirementsInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_bind_point(mut self, pipeline_bind_point: crate::vk1_0::PipelineBindPoint) -> Self {
         self.0.pipeline_bind_point = pipeline_bind_point as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline(mut self, pipeline: crate::vk1_0::Pipeline) -> Self {
         self.0.pipeline = pipeline as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn indirect_commands_layout(mut self, indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV) -> Self {
         self.0.indirect_commands_layout = indirect_commands_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sequences_count(mut self, max_sequences_count: u32) -> Self {
         self.0.max_sequences_count = max_sequences_count as _;
         self

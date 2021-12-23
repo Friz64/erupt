@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a> {
         PhysicalDeviceMemoryPriorityFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_priority(mut self, memory_priority: bool) -> Self {
         self.0.memory_priority = memory_priority as _;
         self
@@ -123,6 +124,7 @@ impl<'a> MemoryPriorityAllocateInfoEXTBuilder<'a> {
         MemoryPriorityAllocateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn priority(mut self, priority: std::os::raw::c_float) -> Self {
         self.0.priority = priority as _;
         self

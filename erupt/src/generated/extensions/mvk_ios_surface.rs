@@ -72,11 +72,13 @@ impl<'a> IOSSurfaceCreateInfoMVKBuilder<'a> {
         IOSSurfaceCreateInfoMVKBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::mvk_ios_surface::IOSSurfaceCreateFlagsMVK) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view(mut self, view: *const std::ffi::c_void) -> Self {
         self.0.p_view = view;
         self

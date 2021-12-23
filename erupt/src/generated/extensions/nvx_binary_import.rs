@@ -86,11 +86,13 @@ impl<'a> CuModuleCreateInfoNVXBuilder<'a> {
         CuModuleCreateInfoNVXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn data_size(mut self, data_size: usize) -> Self {
         self.0.data_size = data_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data(mut self, data: *const std::ffi::c_void) -> Self {
         self.0.p_data = data;
         self
@@ -162,11 +164,13 @@ impl<'a> CuFunctionCreateInfoNVXBuilder<'a> {
         CuFunctionCreateInfoNVXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn module(mut self, module: crate::extensions::nvx_binary_import::CuModuleNVX) -> Self {
         self.0.module = module as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: &'a std::ffi::CStr) -> Self {
         self.0.p_name = name.as_ptr();
         self
@@ -248,61 +252,73 @@ impl<'a> CuLaunchInfoNVXBuilder<'a> {
         CuLaunchInfoNVXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn function(mut self, function: crate::extensions::nvx_binary_import::CuFunctionNVX) -> Self {
         self.0.function = function as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn grid_dim_x(mut self, grid_dim_x: u32) -> Self {
         self.0.grid_dim_x = grid_dim_x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn grid_dim_y(mut self, grid_dim_y: u32) -> Self {
         self.0.grid_dim_y = grid_dim_y as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn grid_dim_z(mut self, grid_dim_z: u32) -> Self {
         self.0.grid_dim_z = grid_dim_z as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn block_dim_x(mut self, block_dim_x: u32) -> Self {
         self.0.block_dim_x = block_dim_x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn block_dim_y(mut self, block_dim_y: u32) -> Self {
         self.0.block_dim_y = block_dim_y as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn block_dim_z(mut self, block_dim_z: u32) -> Self {
         self.0.block_dim_z = block_dim_z as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shared_mem_bytes(mut self, shared_mem_bytes: u32) -> Self {
         self.0.shared_mem_bytes = shared_mem_bytes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn param_count(mut self, param_count: usize) -> Self {
         self.0.param_count = param_count;
         self
     }
     #[inline]
+    #[must_use]
     pub fn params(mut self, params: *const *const std::ffi::c_void) -> Self {
         self.0.p_params = params;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extra_count(mut self, extra_count: usize) -> Self {
         self.0.extra_count = extra_count;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extras(mut self, extras: *const *const std::ffi::c_void) -> Self {
         self.0.p_extras = extras;
         self

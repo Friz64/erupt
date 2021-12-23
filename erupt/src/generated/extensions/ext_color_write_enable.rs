@@ -62,6 +62,7 @@ impl<'a> PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'a> {
         PhysicalDeviceColorWriteEnableFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn color_write_enable(mut self, color_write_enable: bool) -> Self {
         self.0.color_write_enable = color_write_enable as _;
         self
@@ -133,6 +134,7 @@ impl<'a> PipelineColorWriteCreateInfoEXTBuilder<'a> {
         PipelineColorWriteCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn color_write_enables(mut self, color_write_enables: &'a [crate::vk1_0::Bool32]) -> Self {
         self.0.p_color_write_enables = color_write_enables.as_ptr() as _;
         self.0.attachment_count = color_write_enables.len() as _;

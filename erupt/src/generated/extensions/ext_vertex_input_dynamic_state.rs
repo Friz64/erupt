@@ -61,6 +61,7 @@ impl<'a> PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'a> {
         PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vertex_input_dynamic_state(mut self, vertex_input_dynamic_state: bool) -> Self {
         self.0.vertex_input_dynamic_state = vertex_input_dynamic_state as _;
         self
@@ -134,21 +135,25 @@ impl<'a> VertexInputBindingDescription2EXTBuilder<'a> {
         VertexInputBindingDescription2EXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn binding(mut self, binding: u32) -> Self {
         self.0.binding = binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stride(mut self, stride: u32) -> Self {
         self.0.stride = stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn input_rate(mut self, input_rate: crate::vk1_0::VertexInputRate) -> Self {
         self.0.input_rate = input_rate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn divisor(mut self, divisor: u32) -> Self {
         self.0.divisor = divisor as _;
         self
@@ -222,21 +227,25 @@ impl<'a> VertexInputAttributeDescription2EXTBuilder<'a> {
         VertexInputAttributeDescription2EXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn location(mut self, location: u32) -> Self {
         self.0.location = location as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn binding(mut self, binding: u32) -> Self {
         self.0.binding = binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: u32) -> Self {
         self.0.offset = offset as _;
         self

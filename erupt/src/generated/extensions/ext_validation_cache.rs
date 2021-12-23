@@ -113,16 +113,19 @@ impl<'a> ValidationCacheCreateInfoEXTBuilder<'a> {
         ValidationCacheCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_validation_cache::ValidationCacheCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_data_size(mut self, initial_data_size: usize) -> Self {
         self.0.initial_data_size = initial_data_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_data(mut self, initial_data: *const std::ffi::c_void) -> Self {
         self.0.p_initial_data = initial_data;
         self
@@ -193,6 +196,7 @@ impl<'a> ShaderModuleValidationCacheCreateInfoEXTBuilder<'a> {
         ShaderModuleValidationCacheCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn validation_cache(mut self, validation_cache: crate::extensions::ext_validation_cache::ValidationCacheEXT) -> Self {
         self.0.validation_cache = validation_cache as _;
         self

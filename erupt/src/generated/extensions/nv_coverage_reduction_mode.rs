@@ -98,6 +98,7 @@ impl<'a> PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a> {
         PhysicalDeviceCoverageReductionModeFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn coverage_reduction_mode(mut self, coverage_reduction_mode: bool) -> Self {
         self.0.coverage_reduction_mode = coverage_reduction_mode as _;
         self
@@ -169,11 +170,13 @@ impl<'a> PipelineCoverageReductionStateCreateInfoNVBuilder<'a> {
         PipelineCoverageReductionStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_coverage_reduction_mode::PipelineCoverageReductionStateCreateFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coverage_reduction_mode(mut self, coverage_reduction_mode: crate::extensions::nv_coverage_reduction_mode::CoverageReductionModeNV) -> Self {
         self.0.coverage_reduction_mode = coverage_reduction_mode as _;
         self
@@ -247,21 +250,25 @@ impl<'a> FramebufferMixedSamplesCombinationNVBuilder<'a> {
         FramebufferMixedSamplesCombinationNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn coverage_reduction_mode(mut self, coverage_reduction_mode: crate::extensions::nv_coverage_reduction_mode::CoverageReductionModeNV) -> Self {
         self.0.coverage_reduction_mode = coverage_reduction_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_samples(mut self, rasterization_samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.rasterization_samples = rasterization_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_stencil_samples(mut self, depth_stencil_samples: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.depth_stencil_samples = depth_stencil_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_samples(mut self, color_samples: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.color_samples = color_samples as _;
         self

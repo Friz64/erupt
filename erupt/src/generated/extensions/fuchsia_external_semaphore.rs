@@ -64,21 +64,25 @@ impl<'a> ImportSemaphoreZirconHandleInfoFUCHSIABuilder<'a> {
         ImportSemaphoreZirconHandleInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_1::SemaphoreImportFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn zircon_handle(mut self, zircon_handle: *mut std::ffi::c_void) -> Self {
         self.0.zircon_handle = zircon_handle;
         self
@@ -150,11 +154,13 @@ impl<'a> SemaphoreGetZirconHandleInfoFUCHSIABuilder<'a> {
         SemaphoreGetZirconHandleInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

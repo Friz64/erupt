@@ -67,26 +67,31 @@ impl<'a> ShaderResourceUsageAMDBuilder<'a> {
         ShaderResourceUsageAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn num_used_vgprs(mut self, num_used_vgprs: u32) -> Self {
         self.0.num_used_vgprs = num_used_vgprs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_used_sgprs(mut self, num_used_sgprs: u32) -> Self {
         self.0.num_used_sgprs = num_used_sgprs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn lds_size_per_local_work_group(mut self, lds_size_per_local_work_group: u32) -> Self {
         self.0.lds_size_per_local_work_group = lds_size_per_local_work_group as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn lds_usage_size_in_bytes(mut self, lds_usage_size_in_bytes: usize) -> Self {
         self.0.lds_usage_size_in_bytes = lds_usage_size_in_bytes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scratch_mem_usage_in_bytes(mut self, scratch_mem_usage_in_bytes: usize) -> Self {
         self.0.scratch_mem_usage_in_bytes = scratch_mem_usage_in_bytes as _;
         self
@@ -158,36 +163,43 @@ impl<'a> ShaderStatisticsInfoAMDBuilder<'a> {
         ShaderStatisticsInfoAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_stage_mask(mut self, shader_stage_mask: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.shader_stage_mask = shader_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn resource_usage(mut self, resource_usage: crate::extensions::amd_shader_info::ShaderResourceUsageAMD) -> Self {
         self.0.resource_usage = resource_usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_physical_vgprs(mut self, num_physical_vgprs: u32) -> Self {
         self.0.num_physical_vgprs = num_physical_vgprs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_physical_sgprs(mut self, num_physical_sgprs: u32) -> Self {
         self.0.num_physical_sgprs = num_physical_sgprs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_available_vgprs(mut self, num_available_vgprs: u32) -> Self {
         self.0.num_available_vgprs = num_available_vgprs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn num_available_sgprs(mut self, num_available_sgprs: u32) -> Self {
         self.0.num_available_sgprs = num_available_sgprs as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compute_work_group_size(mut self, compute_work_group_size: [u32; 3]) -> Self {
         self.0.compute_work_group_size = compute_work_group_size as _;
         self

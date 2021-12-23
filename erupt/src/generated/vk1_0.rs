@@ -4762,6 +4762,7 @@ impl<'a> BaseOutStructureBuilder<'a> {
         BaseOutStructureBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn next(mut self, next: &'a mut crate::vk1_0::BaseOutStructure) -> Self {
         self.0.p_next = next as _;
         self
@@ -4828,6 +4829,7 @@ impl<'a> BaseInStructureBuilder<'a> {
         BaseInStructureBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn next(mut self, next: &'a crate::vk1_0::BaseInStructure) -> Self {
         self.0.p_next = next as _;
         self
@@ -4894,11 +4896,13 @@ impl<'a> Offset2DBuilder<'a> {
         Offset2DBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn x(mut self, x: i32) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y(mut self, y: i32) -> Self {
         self.0.y = y as _;
         self
@@ -4966,16 +4970,19 @@ impl<'a> Offset3DBuilder<'a> {
         Offset3DBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn x(mut self, x: i32) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y(mut self, y: i32) -> Self {
         self.0.y = y as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn z(mut self, z: i32) -> Self {
         self.0.z = z as _;
         self
@@ -5042,11 +5049,13 @@ impl<'a> Extent2DBuilder<'a> {
         Extent2DBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn width(mut self, width: u32) -> Self {
         self.0.width = width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn height(mut self, height: u32) -> Self {
         self.0.height = height as _;
         self
@@ -5114,16 +5123,19 @@ impl<'a> Extent3DBuilder<'a> {
         Extent3DBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn width(mut self, width: u32) -> Self {
         self.0.width = width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn height(mut self, height: u32) -> Self {
         self.0.height = height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth(mut self, depth: u32) -> Self {
         self.0.depth = depth as _;
         self
@@ -5194,31 +5206,37 @@ impl<'a> ViewportBuilder<'a> {
         ViewportBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn x(mut self, x: std::os::raw::c_float) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y(mut self, y: std::os::raw::c_float) -> Self {
         self.0.y = y as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn width(mut self, width: std::os::raw::c_float) -> Self {
         self.0.width = width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn height(mut self, height: std::os::raw::c_float) -> Self {
         self.0.height = height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_depth(mut self, min_depth: std::os::raw::c_float) -> Self {
         self.0.min_depth = min_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_depth(mut self, max_depth: std::os::raw::c_float) -> Self {
         self.0.max_depth = max_depth as _;
         self
@@ -5285,11 +5303,13 @@ impl<'a> Rect2DBuilder<'a> {
         Rect2DBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::Offset2D) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent2D) -> Self {
         self.0.extent = extent as _;
         self
@@ -5357,16 +5377,19 @@ impl<'a> ClearRectBuilder<'a> {
         ClearRectBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn rect(mut self, rect: crate::vk1_0::Rect2D) -> Self {
         self.0.rect = rect as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_array_layer(mut self, base_array_layer: u32) -> Self {
         self.0.base_array_layer = base_array_layer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer_count(mut self, layer_count: u32) -> Self {
         self.0.layer_count = layer_count as _;
         self
@@ -5435,21 +5458,25 @@ impl<'a> ComponentMappingBuilder<'a> {
         ComponentMappingBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn r(mut self, r: crate::vk1_0::ComponentSwizzle) -> Self {
         self.0.r = r as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn g(mut self, g: crate::vk1_0::ComponentSwizzle) -> Self {
         self.0.g = g as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn b(mut self, b: crate::vk1_0::ComponentSwizzle) -> Self {
         self.0.b = b as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn a(mut self, a: crate::vk1_0::ComponentSwizzle) -> Self {
         self.0.a = a as _;
         self
@@ -5523,46 +5550,55 @@ impl<'a> PhysicalDevicePropertiesBuilder<'a> {
         PhysicalDevicePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn api_version(mut self, api_version: u32) -> Self {
         self.0.api_version = api_version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn driver_version(mut self, driver_version: u32) -> Self {
         self.0.driver_version = driver_version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vendor_id(mut self, vendor_id: u32) -> Self {
         self.0.vendor_id = vendor_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_id(mut self, device_id: u32) -> Self {
         self.0.device_id = device_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_type(mut self, device_type: crate::vk1_0::PhysicalDeviceType) -> Self {
         self.0.device_type = device_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_name(mut self, device_name: [std::os::raw::c_char; 256]) -> Self {
         self.0.device_name = device_name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_cache_uuid(mut self, pipeline_cache_uuid: [u8; 16]) -> Self {
         self.0.pipeline_cache_uuid = pipeline_cache_uuid as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn limits(mut self, limits: crate::vk1_0::PhysicalDeviceLimits) -> Self {
         self.0.limits = limits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_properties(mut self, sparse_properties: crate::vk1_0::PhysicalDeviceSparseProperties) -> Self {
         self.0.sparse_properties = sparse_properties as _;
         self
@@ -5629,11 +5665,13 @@ impl<'a> ExtensionPropertiesBuilder<'a> {
         ExtensionPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn extension_name(mut self, extension_name: [std::os::raw::c_char; 256]) -> Self {
         self.0.extension_name = extension_name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn spec_version(mut self, spec_version: u32) -> Self {
         self.0.spec_version = spec_version as _;
         self
@@ -5702,21 +5740,25 @@ impl<'a> LayerPropertiesBuilder<'a> {
         LayerPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn layer_name(mut self, layer_name: [std::os::raw::c_char; 256]) -> Self {
         self.0.layer_name = layer_name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn spec_version(mut self, spec_version: u32) -> Self {
         self.0.spec_version = spec_version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn implementation_version(mut self, implementation_version: u32) -> Self {
         self.0.implementation_version = implementation_version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn description(mut self, description: [std::os::raw::c_char; 256]) -> Self {
         self.0.description = description as _;
         self
@@ -5791,26 +5833,31 @@ impl<'a> ApplicationInfoBuilder<'a> {
         ApplicationInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn application_name(mut self, application_name: &'a std::ffi::CStr) -> Self {
         self.0.p_application_name = application_name.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn application_version(mut self, application_version: u32) -> Self {
         self.0.application_version = application_version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn engine_name(mut self, engine_name: &'a std::ffi::CStr) -> Self {
         self.0.p_engine_name = engine_name.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn engine_version(mut self, engine_version: u32) -> Self {
         self.0.engine_version = engine_version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn api_version(mut self, api_version: u32) -> Self {
         self.0.api_version = api_version as _;
         self
@@ -5881,31 +5928,37 @@ impl<'a> AllocationCallbacksBuilder<'a> {
         AllocationCallbacksBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn user_data(mut self, user_data: *mut std::ffi::c_void) -> Self {
         self.0.p_user_data = user_data;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_allocation(mut self, pfn_allocation: Option<crate::vk1_0::PFN_vkAllocationFunction>) -> Self {
         self.0.pfn_allocation = pfn_allocation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_reallocation(mut self, pfn_reallocation: Option<crate::vk1_0::PFN_vkReallocationFunction>) -> Self {
         self.0.pfn_reallocation = pfn_reallocation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_free(mut self, pfn_free: Option<crate::vk1_0::PFN_vkFreeFunction>) -> Self {
         self.0.pfn_free = pfn_free as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_internal_allocation(mut self, pfn_internal_allocation: Option<crate::vk1_0::PFN_vkInternalAllocationNotification>) -> Self {
         self.0.pfn_internal_allocation = pfn_internal_allocation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_internal_free(mut self, pfn_internal_free: Option<crate::vk1_0::PFN_vkInternalFreeNotification>) -> Self {
         self.0.pfn_internal_free = pfn_internal_free as _;
         self
@@ -5979,16 +6032,19 @@ impl<'a> DeviceQueueCreateInfoBuilder<'a> {
         DeviceQueueCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::DeviceQueueCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_index(mut self, queue_family_index: u32) -> Self {
         self.0.queue_family_index = queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_priorities(mut self, queue_priorities: &'a [std::os::raw::c_float]) -> Self {
         self.0.p_queue_priorities = queue_priorities.as_ptr() as _;
         self.0.queue_count = queue_priorities.len() as _;
@@ -6067,29 +6123,34 @@ impl<'a> DeviceCreateInfoBuilder<'a> {
         DeviceCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::DeviceCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_create_infos(mut self, queue_create_infos: &'a [crate::vk1_0::DeviceQueueCreateInfoBuilder]) -> Self {
         self.0.p_queue_create_infos = queue_create_infos.as_ptr() as _;
         self.0.queue_create_info_count = queue_create_infos.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn enabled_layer_names(mut self, enabled_layer_names: &'a [*const std::os::raw::c_char]) -> Self {
         self.0.pp_enabled_layer_names = enabled_layer_names.as_ptr() as _;
         self.0.enabled_layer_count = enabled_layer_names.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn enabled_extension_names(mut self, enabled_extension_names: &'a [*const std::os::raw::c_char]) -> Self {
         self.0.pp_enabled_extension_names = enabled_extension_names.as_ptr() as _;
         self.0.enabled_extension_count = enabled_extension_names.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn enabled_features(mut self, enabled_features: &'a crate::vk1_0::PhysicalDeviceFeatures) -> Self {
         self.0.p_enabled_features = enabled_features as _;
         self
@@ -6165,22 +6226,26 @@ impl<'a> InstanceCreateInfoBuilder<'a> {
         InstanceCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::InstanceCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn application_info(mut self, application_info: &'a crate::vk1_0::ApplicationInfo) -> Self {
         self.0.p_application_info = application_info as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn enabled_layer_names(mut self, enabled_layer_names: &'a [*const std::os::raw::c_char]) -> Self {
         self.0.pp_enabled_layer_names = enabled_layer_names.as_ptr() as _;
         self.0.enabled_layer_count = enabled_layer_names.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn enabled_extension_names(mut self, enabled_extension_names: &'a [*const std::os::raw::c_char]) -> Self {
         self.0.pp_enabled_extension_names = enabled_extension_names.as_ptr() as _;
         self.0.enabled_extension_count = enabled_extension_names.len() as _;
@@ -6250,21 +6315,25 @@ impl<'a> QueueFamilyPropertiesBuilder<'a> {
         QueueFamilyPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn queue_flags(mut self, queue_flags: crate::vk1_0::QueueFlags) -> Self {
         self.0.queue_flags = queue_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_count(mut self, queue_count: u32) -> Self {
         self.0.queue_count = queue_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn timestamp_valid_bits(mut self, timestamp_valid_bits: u32) -> Self {
         self.0.timestamp_valid_bits = timestamp_valid_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_image_transfer_granularity(mut self, min_image_transfer_granularity: crate::vk1_0::Extent3D) -> Self {
         self.0.min_image_transfer_granularity = min_image_transfer_granularity as _;
         self
@@ -6333,21 +6402,25 @@ impl<'a> PhysicalDeviceMemoryPropertiesBuilder<'a> {
         PhysicalDeviceMemoryPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_count(mut self, memory_type_count: u32) -> Self {
         self.0.memory_type_count = memory_type_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_types(mut self, memory_types: [crate::vk1_0::MemoryType; 32]) -> Self {
         self.0.memory_types = memory_types as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_heap_count(mut self, memory_heap_count: u32) -> Self {
         self.0.memory_heap_count = memory_heap_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_heaps(mut self, memory_heaps: [crate::vk1_0::MemoryHeap; 16]) -> Self {
         self.0.memory_heaps = memory_heaps as _;
         self
@@ -6419,11 +6492,13 @@ impl<'a> MemoryAllocateInfoBuilder<'a> {
         MemoryAllocateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn allocation_size(mut self, allocation_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.allocation_size = allocation_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_index(mut self, memory_type_index: u32) -> Self {
         self.0.memory_type_index = memory_type_index as _;
         self
@@ -6491,16 +6566,19 @@ impl<'a> MemoryRequirementsBuilder<'a> {
         MemoryRequirementsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn alignment(mut self, alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.alignment = alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_bits(mut self, memory_type_bits: u32) -> Self {
         self.0.memory_type_bits = memory_type_bits as _;
         self
@@ -6568,16 +6646,19 @@ impl<'a> SparseImageFormatPropertiesBuilder<'a> {
         SparseImageFormatPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_mask(mut self, aspect_mask: crate::vk1_0::ImageAspectFlags) -> Self {
         self.0.aspect_mask = aspect_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_granularity(mut self, image_granularity: crate::vk1_0::Extent3D) -> Self {
         self.0.image_granularity = image_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::SparseImageFormatFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -6647,26 +6728,31 @@ impl<'a> SparseImageMemoryRequirementsBuilder<'a> {
         SparseImageMemoryRequirementsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format_properties(mut self, format_properties: crate::vk1_0::SparseImageFormatProperties) -> Self {
         self.0.format_properties = format_properties as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_mip_tail_first_lod(mut self, image_mip_tail_first_lod: u32) -> Self {
         self.0.image_mip_tail_first_lod = image_mip_tail_first_lod as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_mip_tail_size(mut self, image_mip_tail_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.image_mip_tail_size = image_mip_tail_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_mip_tail_offset(mut self, image_mip_tail_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.image_mip_tail_offset = image_mip_tail_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_mip_tail_stride(mut self, image_mip_tail_stride: crate::vk1_0::DeviceSize) -> Self {
         self.0.image_mip_tail_stride = image_mip_tail_stride as _;
         self
@@ -6733,11 +6819,13 @@ impl<'a> MemoryTypeBuilder<'a> {
         MemoryTypeBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn property_flags(mut self, property_flags: crate::vk1_0::MemoryPropertyFlags) -> Self {
         self.0.property_flags = property_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn heap_index(mut self, heap_index: u32) -> Self {
         self.0.heap_index = heap_index as _;
         self
@@ -6804,11 +6892,13 @@ impl<'a> MemoryHeapBuilder<'a> {
         MemoryHeapBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::MemoryHeapFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -6881,16 +6971,19 @@ impl<'a> MappedMemoryRangeBuilder<'a> {
         MappedMemoryRangeBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
@@ -6958,16 +7051,19 @@ impl<'a> FormatPropertiesBuilder<'a> {
         FormatPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn linear_tiling_features(mut self, linear_tiling_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.linear_tiling_features = linear_tiling_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn optimal_tiling_features(mut self, optimal_tiling_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.optimal_tiling_features = optimal_tiling_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_features(mut self, buffer_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.buffer_features = buffer_features as _;
         self
@@ -7037,26 +7133,31 @@ impl<'a> ImageFormatPropertiesBuilder<'a> {
         ImageFormatPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_extent(mut self, max_extent: crate::vk1_0::Extent3D) -> Self {
         self.0.max_extent = max_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_mip_levels(mut self, max_mip_levels: u32) -> Self {
         self.0.max_mip_levels = max_mip_levels as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_array_layers(mut self, max_array_layers: u32) -> Self {
         self.0.max_array_layers = max_array_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_counts(mut self, sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sample_counts = sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_resource_size(mut self, max_resource_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.max_resource_size = max_resource_size as _;
         self
@@ -7124,16 +7225,19 @@ impl<'a> DescriptorBufferInfoBuilder<'a> {
         DescriptorBufferInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn range(mut self, range: crate::vk1_0::DeviceSize) -> Self {
         self.0.range = range as _;
         self
@@ -7201,16 +7305,19 @@ impl<'a> DescriptorImageInfoBuilder<'a> {
         DescriptorImageInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sampler(mut self, sampler: crate::vk1_0::Sampler) -> Self {
         self.0.sampler = sampler as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_view(mut self, image_view: crate::vk1_0::ImageView) -> Self {
         self.0.image_view = image_view as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_layout(mut self, image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.image_layout = image_layout as _;
         self
@@ -7288,38 +7395,45 @@ impl<'a> WriteDescriptorSetBuilder<'a> {
         WriteDescriptorSetBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dst_set(mut self, dst_set: crate::vk1_0::DescriptorSet) -> Self {
         self.0.dst_set = dst_set as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_binding(mut self, dst_binding: u32) -> Self {
         self.0.dst_binding = dst_binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_array_element(mut self, dst_array_element: u32) -> Self {
         self.0.dst_array_element = dst_array_element as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_type(mut self, descriptor_type: crate::vk1_0::DescriptorType) -> Self {
         self.0.descriptor_type = descriptor_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_info(mut self, image_info: &'a [crate::vk1_0::DescriptorImageInfoBuilder]) -> Self {
         self.0.p_image_info = image_info.as_ptr() as _;
         self.0.descriptor_count = image_info.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_info(mut self, buffer_info: &'a [crate::vk1_0::DescriptorBufferInfoBuilder]) -> Self {
         self.0.p_buffer_info = buffer_info.as_ptr() as _;
         self.0.descriptor_count = buffer_info.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn texel_buffer_view(mut self, texel_buffer_view: &'a [crate::vk1_0::BufferView]) -> Self {
         self.0.p_texel_buffer_view = texel_buffer_view.as_ptr() as _;
         self.0.descriptor_count = texel_buffer_view.len() as _;
@@ -7397,36 +7511,43 @@ impl<'a> CopyDescriptorSetBuilder<'a> {
         CopyDescriptorSetBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_set(mut self, src_set: crate::vk1_0::DescriptorSet) -> Self {
         self.0.src_set = src_set as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_binding(mut self, src_binding: u32) -> Self {
         self.0.src_binding = src_binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_array_element(mut self, src_array_element: u32) -> Self {
         self.0.src_array_element = src_array_element as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_set(mut self, dst_set: crate::vk1_0::DescriptorSet) -> Self {
         self.0.dst_set = dst_set as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_binding(mut self, dst_binding: u32) -> Self {
         self.0.dst_binding = dst_binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_array_element(mut self, dst_array_element: u32) -> Self {
         self.0.dst_array_element = dst_array_element as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_count(mut self, descriptor_count: u32) -> Self {
         self.0.descriptor_count = descriptor_count as _;
         self
@@ -7502,26 +7623,31 @@ impl<'a> BufferCreateInfoBuilder<'a> {
         BufferCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::BufferCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn usage(mut self, usage: crate::vk1_0::BufferUsageFlags) -> Self {
         self.0.usage = usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sharing_mode(mut self, sharing_mode: crate::vk1_0::SharingMode) -> Self {
         self.0.sharing_mode = sharing_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_indices(mut self, queue_family_indices: &'a [u32]) -> Self {
         self.0.p_queue_family_indices = queue_family_indices.as_ptr() as _;
         self.0.queue_family_index_count = queue_family_indices.len() as _;
@@ -7597,26 +7723,31 @@ impl<'a> BufferViewCreateInfoBuilder<'a> {
         BufferViewCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::BufferViewCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn range(mut self, range: crate::vk1_0::DeviceSize) -> Self {
         self.0.range = range as _;
         self
@@ -7684,16 +7815,19 @@ impl<'a> ImageSubresourceBuilder<'a> {
         ImageSubresourceBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_mask(mut self, aspect_mask: crate::vk1_0::ImageAspectFlags) -> Self {
         self.0.aspect_mask = aspect_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mip_level(mut self, mip_level: u32) -> Self {
         self.0.mip_level = mip_level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn array_layer(mut self, array_layer: u32) -> Self {
         self.0.array_layer = array_layer as _;
         self
@@ -7762,21 +7896,25 @@ impl<'a> ImageSubresourceLayersBuilder<'a> {
         ImageSubresourceLayersBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_mask(mut self, aspect_mask: crate::vk1_0::ImageAspectFlags) -> Self {
         self.0.aspect_mask = aspect_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mip_level(mut self, mip_level: u32) -> Self {
         self.0.mip_level = mip_level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_array_layer(mut self, base_array_layer: u32) -> Self {
         self.0.base_array_layer = base_array_layer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer_count(mut self, layer_count: u32) -> Self {
         self.0.layer_count = layer_count as _;
         self
@@ -7846,26 +7984,31 @@ impl<'a> ImageSubresourceRangeBuilder<'a> {
         ImageSubresourceRangeBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_mask(mut self, aspect_mask: crate::vk1_0::ImageAspectFlags) -> Self {
         self.0.aspect_mask = aspect_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_mip_level(mut self, base_mip_level: u32) -> Self {
         self.0.base_mip_level = base_mip_level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn level_count(mut self, level_count: u32) -> Self {
         self.0.level_count = level_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_array_layer(mut self, base_array_layer: u32) -> Self {
         self.0.base_array_layer = base_array_layer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer_count(mut self, layer_count: u32) -> Self {
         self.0.layer_count = layer_count as _;
         self
@@ -7937,11 +8080,13 @@ impl<'a> MemoryBarrierBuilder<'a> {
         MemoryBarrierBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_access_mask(mut self, src_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_access_mask(mut self, dst_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
@@ -8018,36 +8163,43 @@ impl<'a> BufferMemoryBarrierBuilder<'a> {
         BufferMemoryBarrierBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_access_mask(mut self, src_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_access_mask(mut self, dst_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_queue_family_index(mut self, src_queue_family_index: u32) -> Self {
         self.0.src_queue_family_index = src_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_queue_family_index(mut self, dst_queue_family_index: u32) -> Self {
         self.0.dst_queue_family_index = dst_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
@@ -8125,41 +8277,49 @@ impl<'a> ImageMemoryBarrierBuilder<'a> {
         ImageMemoryBarrierBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_access_mask(mut self, src_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_access_mask(mut self, dst_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn old_layout(mut self, old_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.old_layout = old_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn new_layout(mut self, new_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.new_layout = new_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_queue_family_index(mut self, src_queue_family_index: u32) -> Self {
         self.0.src_queue_family_index = src_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_queue_family_index(mut self, dst_queue_family_index: u32) -> Self {
         self.0.dst_queue_family_index = dst_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subresource_range(mut self, subresource_range: crate::vk1_0::ImageSubresourceRange) -> Self {
         self.0.subresource_range = subresource_range as _;
         self
@@ -8242,62 +8402,74 @@ impl<'a> ImageCreateInfoBuilder<'a> {
         ImageCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::ImageCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_type(mut self, image_type: crate::vk1_0::ImageType) -> Self {
         self.0.image_type = image_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent3D) -> Self {
         self.0.extent = extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mip_levels(mut self, mip_levels: u32) -> Self {
         self.0.mip_levels = mip_levels as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn array_layers(mut self, array_layers: u32) -> Self {
         self.0.array_layers = array_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn samples(mut self, samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.samples = samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tiling(mut self, tiling: crate::vk1_0::ImageTiling) -> Self {
         self.0.tiling = tiling as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn usage(mut self, usage: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.usage = usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sharing_mode(mut self, sharing_mode: crate::vk1_0::SharingMode) -> Self {
         self.0.sharing_mode = sharing_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_indices(mut self, queue_family_indices: &'a [u32]) -> Self {
         self.0.p_queue_family_indices = queue_family_indices.as_ptr() as _;
         self.0.queue_family_index_count = queue_family_indices.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_layout(mut self, initial_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.initial_layout = initial_layout as _;
         self
@@ -8367,26 +8539,31 @@ impl<'a> SubresourceLayoutBuilder<'a> {
         SubresourceLayoutBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn row_pitch(mut self, row_pitch: crate::vk1_0::DeviceSize) -> Self {
         self.0.row_pitch = row_pitch as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn array_pitch(mut self, array_pitch: crate::vk1_0::DeviceSize) -> Self {
         self.0.array_pitch = array_pitch as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_pitch(mut self, depth_pitch: crate::vk1_0::DeviceSize) -> Self {
         self.0.depth_pitch = depth_pitch as _;
         self
@@ -8462,31 +8639,37 @@ impl<'a> ImageViewCreateInfoBuilder<'a> {
         ImageViewCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::ImageViewCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_type(mut self, view_type: crate::vk1_0::ImageViewType) -> Self {
         self.0.view_type = view_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn components(mut self, components: crate::vk1_0::ComponentMapping) -> Self {
         self.0.components = components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subresource_range(mut self, subresource_range: crate::vk1_0::ImageSubresourceRange) -> Self {
         self.0.subresource_range = subresource_range as _;
         self
@@ -8554,16 +8737,19 @@ impl<'a> BufferCopyBuilder<'a> {
         BufferCopyBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_offset(mut self, src_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.src_offset = src_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offset(mut self, dst_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.dst_offset = dst_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
@@ -8633,26 +8819,31 @@ impl<'a> SparseMemoryBindBuilder<'a> {
         SparseMemoryBindBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn resource_offset(mut self, resource_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.resource_offset = resource_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_offset(mut self, memory_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.memory_offset = memory_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::SparseMemoryBindFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -8723,31 +8914,37 @@ impl<'a> SparseImageMemoryBindBuilder<'a> {
         SparseImageMemoryBindBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn subresource(mut self, subresource: crate::vk1_0::ImageSubresource) -> Self {
         self.0.subresource = subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::Offset3D) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent3D) -> Self {
         self.0.extent = extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_offset(mut self, memory_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.memory_offset = memory_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::SparseMemoryBindFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -8815,11 +9012,13 @@ impl<'a> SparseBufferMemoryBindInfoBuilder<'a> {
         SparseBufferMemoryBindInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn binds(mut self, binds: &'a [crate::vk1_0::SparseMemoryBindBuilder]) -> Self {
         self.0.p_binds = binds.as_ptr() as _;
         self.0.bind_count = binds.len() as _;
@@ -8888,11 +9087,13 @@ impl<'a> SparseImageOpaqueMemoryBindInfoBuilder<'a> {
         SparseImageOpaqueMemoryBindInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn binds(mut self, binds: &'a [crate::vk1_0::SparseMemoryBindBuilder]) -> Self {
         self.0.p_binds = binds.as_ptr() as _;
         self.0.bind_count = binds.len() as _;
@@ -8961,11 +9162,13 @@ impl<'a> SparseImageMemoryBindInfoBuilder<'a> {
         SparseImageMemoryBindInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn binds(mut self, binds: &'a [crate::vk1_0::SparseImageMemoryBindBuilder]) -> Self {
         self.0.p_binds = binds.as_ptr() as _;
         self.0.bind_count = binds.len() as _;
@@ -9046,30 +9249,35 @@ impl<'a> BindSparseInfoBuilder<'a> {
         BindSparseInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn wait_semaphores(mut self, wait_semaphores: &'a [crate::vk1_0::Semaphore]) -> Self {
         self.0.p_wait_semaphores = wait_semaphores.as_ptr() as _;
         self.0.wait_semaphore_count = wait_semaphores.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_binds(mut self, buffer_binds: &'a [crate::vk1_0::SparseBufferMemoryBindInfoBuilder]) -> Self {
         self.0.p_buffer_binds = buffer_binds.as_ptr() as _;
         self.0.buffer_bind_count = buffer_binds.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_opaque_binds(mut self, image_opaque_binds: &'a [crate::vk1_0::SparseImageOpaqueMemoryBindInfoBuilder]) -> Self {
         self.0.p_image_opaque_binds = image_opaque_binds.as_ptr() as _;
         self.0.image_opaque_bind_count = image_opaque_binds.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_binds(mut self, image_binds: &'a [crate::vk1_0::SparseImageMemoryBindInfoBuilder]) -> Self {
         self.0.p_image_binds = image_binds.as_ptr() as _;
         self.0.image_bind_count = image_binds.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn signal_semaphores(mut self, signal_semaphores: &'a [crate::vk1_0::Semaphore]) -> Self {
         self.0.p_signal_semaphores = signal_semaphores.as_ptr() as _;
         self.0.signal_semaphore_count = signal_semaphores.len() as _;
@@ -9140,26 +9348,31 @@ impl<'a> ImageCopyBuilder<'a> {
         ImageCopyBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_subresource(mut self, src_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.src_subresource = src_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_offset(mut self, src_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.src_offset = src_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_subresource(mut self, dst_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.dst_subresource = dst_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offset(mut self, dst_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.dst_offset = dst_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent3D) -> Self {
         self.0.extent = extent as _;
         self
@@ -9228,21 +9441,25 @@ impl<'a> ImageBlitBuilder<'a> {
         ImageBlitBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_subresource(mut self, src_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.src_subresource = src_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_offsets(mut self, src_offsets: [crate::vk1_0::Offset3D; 2]) -> Self {
         self.0.src_offsets = src_offsets as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_subresource(mut self, dst_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.dst_subresource = dst_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offsets(mut self, dst_offsets: [crate::vk1_0::Offset3D; 2]) -> Self {
         self.0.dst_offsets = dst_offsets as _;
         self
@@ -9313,31 +9530,37 @@ impl<'a> BufferImageCopyBuilder<'a> {
         BufferImageCopyBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer_offset(mut self, buffer_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.buffer_offset = buffer_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_row_length(mut self, buffer_row_length: u32) -> Self {
         self.0.buffer_row_length = buffer_row_length as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_image_height(mut self, buffer_image_height: u32) -> Self {
         self.0.buffer_image_height = buffer_image_height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_subresource(mut self, image_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.image_subresource = image_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_offset(mut self, image_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.image_offset = image_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_extent(mut self, image_extent: crate::vk1_0::Extent3D) -> Self {
         self.0.image_extent = image_extent as _;
         self
@@ -9407,26 +9630,31 @@ impl<'a> ImageResolveBuilder<'a> {
         ImageResolveBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_subresource(mut self, src_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.src_subresource = src_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_offset(mut self, src_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.src_offset = src_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_subresource(mut self, dst_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.dst_subresource = dst_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offset(mut self, dst_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.dst_offset = dst_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent3D) -> Self {
         self.0.extent = extent as _;
         self
@@ -9499,11 +9727,13 @@ impl<'a> ShaderModuleCreateInfoBuilder<'a> {
         ShaderModuleCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::ShaderModuleCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn code(mut self, code: &'a [u32]) -> Self {
         self.0.p_code = code.as_ptr() as _;
         self.0.code_size = code.len() * 4;
@@ -9574,26 +9804,31 @@ impl<'a> DescriptorSetLayoutBindingBuilder<'a> {
         DescriptorSetLayoutBindingBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn binding(mut self, binding: u32) -> Self {
         self.0.binding = binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_type(mut self, descriptor_type: crate::vk1_0::DescriptorType) -> Self {
         self.0.descriptor_type = descriptor_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_count(mut self, descriptor_count: u32) -> Self {
         self.0.descriptor_count = descriptor_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stage_flags(mut self, stage_flags: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.stage_flags = stage_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn immutable_samplers(mut self, immutable_samplers: &'a [crate::vk1_0::Sampler]) -> Self {
         self.0.p_immutable_samplers = immutable_samplers.as_ptr() as _;
         self.0.descriptor_count = immutable_samplers.len() as _;
@@ -9667,11 +9902,13 @@ impl<'a> DescriptorSetLayoutCreateInfoBuilder<'a> {
         DescriptorSetLayoutCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::DescriptorSetLayoutCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bindings(mut self, bindings: &'a [crate::vk1_0::DescriptorSetLayoutBindingBuilder]) -> Self {
         self.0.p_bindings = bindings.as_ptr() as _;
         self.0.binding_count = bindings.len() as _;
@@ -9739,11 +9976,13 @@ impl<'a> DescriptorPoolSizeBuilder<'a> {
         DescriptorPoolSizeBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::vk1_0::DescriptorType) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_count(mut self, descriptor_count: u32) -> Self {
         self.0.descriptor_count = descriptor_count as _;
         self
@@ -9817,16 +10056,19 @@ impl<'a> DescriptorPoolCreateInfoBuilder<'a> {
         DescriptorPoolCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::DescriptorPoolCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sets(mut self, max_sets: u32) -> Self {
         self.0.max_sets = max_sets as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pool_sizes(mut self, pool_sizes: &'a [crate::vk1_0::DescriptorPoolSizeBuilder]) -> Self {
         self.0.p_pool_sizes = pool_sizes.as_ptr() as _;
         self.0.pool_size_count = pool_sizes.len() as _;
@@ -9900,11 +10142,13 @@ impl<'a> DescriptorSetAllocateInfoBuilder<'a> {
         DescriptorSetAllocateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_pool(mut self, descriptor_pool: crate::vk1_0::DescriptorPool) -> Self {
         self.0.descriptor_pool = descriptor_pool as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn set_layouts(mut self, set_layouts: &'a [crate::vk1_0::DescriptorSetLayout]) -> Self {
         self.0.p_set_layouts = set_layouts.as_ptr() as _;
         self.0.descriptor_set_count = set_layouts.len() as _;
@@ -9973,16 +10217,19 @@ impl<'a> SpecializationMapEntryBuilder<'a> {
         SpecializationMapEntryBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn constant_id(mut self, constant_id: u32) -> Self {
         self.0.constant_id = constant_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: u32) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: usize) -> Self {
         self.0.size = size as _;
         self
@@ -10051,17 +10298,20 @@ impl<'a> SpecializationInfoBuilder<'a> {
         SpecializationInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn map_entries(mut self, map_entries: &'a [crate::vk1_0::SpecializationMapEntryBuilder]) -> Self {
         self.0.p_map_entries = map_entries.as_ptr() as _;
         self.0.map_entry_count = map_entries.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data_size(mut self, data_size: usize) -> Self {
         self.0.data_size = data_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data(mut self, data: *const std::ffi::c_void) -> Self {
         self.0.p_data = data;
         self
@@ -10136,26 +10386,31 @@ impl<'a> PipelineShaderStageCreateInfoBuilder<'a> {
         PipelineShaderStageCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineShaderStageCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stage(mut self, stage: crate::vk1_0::ShaderStageFlagBits) -> Self {
         self.0.stage = stage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn module(mut self, module: crate::vk1_0::ShaderModule) -> Self {
         self.0.module = module as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: &'a std::ffi::CStr) -> Self {
         self.0.p_name = name.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn specialization_info(mut self, specialization_info: &'a crate::vk1_0::SpecializationInfo) -> Self {
         self.0.p_specialization_info = specialization_info as _;
         self
@@ -10230,26 +10485,31 @@ impl<'a> ComputePipelineCreateInfoBuilder<'a> {
         ComputePipelineCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stage(mut self, stage: crate::vk1_0::PipelineShaderStageCreateInfo) -> Self {
         self.0.stage = stage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layout(mut self, layout: crate::vk1_0::PipelineLayout) -> Self {
         self.0.layout = layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_handle(mut self, base_pipeline_handle: crate::vk1_0::Pipeline) -> Self {
         self.0.base_pipeline_handle = base_pipeline_handle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_index(mut self, base_pipeline_index: i32) -> Self {
         self.0.base_pipeline_index = base_pipeline_index as _;
         self
@@ -10317,16 +10577,19 @@ impl<'a> VertexInputBindingDescriptionBuilder<'a> {
         VertexInputBindingDescriptionBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn binding(mut self, binding: u32) -> Self {
         self.0.binding = binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stride(mut self, stride: u32) -> Self {
         self.0.stride = stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn input_rate(mut self, input_rate: crate::vk1_0::VertexInputRate) -> Self {
         self.0.input_rate = input_rate as _;
         self
@@ -10395,21 +10658,25 @@ impl<'a> VertexInputAttributeDescriptionBuilder<'a> {
         VertexInputAttributeDescriptionBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn location(mut self, location: u32) -> Self {
         self.0.location = location as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn binding(mut self, binding: u32) -> Self {
         self.0.binding = binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: u32) -> Self {
         self.0.offset = offset as _;
         self
@@ -10484,17 +10751,20 @@ impl<'a> PipelineVertexInputStateCreateInfoBuilder<'a> {
         PipelineVertexInputStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineVertexInputStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_binding_descriptions(mut self, vertex_binding_descriptions: &'a [crate::vk1_0::VertexInputBindingDescriptionBuilder]) -> Self {
         self.0.p_vertex_binding_descriptions = vertex_binding_descriptions.as_ptr() as _;
         self.0.vertex_binding_description_count = vertex_binding_descriptions.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_attribute_descriptions(mut self, vertex_attribute_descriptions: &'a [crate::vk1_0::VertexInputAttributeDescriptionBuilder]) -> Self {
         self.0.p_vertex_attribute_descriptions = vertex_attribute_descriptions.as_ptr() as _;
         self.0.vertex_attribute_description_count = vertex_attribute_descriptions.len() as _;
@@ -10568,16 +10838,19 @@ impl<'a> PipelineInputAssemblyStateCreateInfoBuilder<'a> {
         PipelineInputAssemblyStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineInputAssemblyStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn topology(mut self, topology: crate::vk1_0::PrimitiveTopology) -> Self {
         self.0.topology = topology as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn primitive_restart_enable(mut self, primitive_restart_enable: bool) -> Self {
         self.0.primitive_restart_enable = primitive_restart_enable as _;
         self
@@ -10649,11 +10922,13 @@ impl<'a> PipelineTessellationStateCreateInfoBuilder<'a> {
         PipelineTessellationStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineTessellationStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn patch_control_points(mut self, patch_control_points: u32) -> Self {
         self.0.patch_control_points = patch_control_points as _;
         self
@@ -10728,27 +11003,32 @@ impl<'a> PipelineViewportStateCreateInfoBuilder<'a> {
         PipelineViewportStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineViewportStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_count(mut self, viewport_count: u32) -> Self {
         self.0.viewport_count = viewport_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewports(mut self, viewports: &'a [crate::vk1_0::ViewportBuilder]) -> Self {
         self.0.p_viewports = viewports.as_ptr() as _;
         self.0.viewport_count = viewports.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scissor_count(mut self, scissor_count: u32) -> Self {
         self.0.scissor_count = scissor_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scissors(mut self, scissors: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_scissors = scissors.as_ptr() as _;
         self.0.scissor_count = scissors.len() as _;
@@ -10830,56 +11110,67 @@ impl<'a> PipelineRasterizationStateCreateInfoBuilder<'a> {
         PipelineRasterizationStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineRasterizationStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_clamp_enable(mut self, depth_clamp_enable: bool) -> Self {
         self.0.depth_clamp_enable = depth_clamp_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterizer_discard_enable(mut self, rasterizer_discard_enable: bool) -> Self {
         self.0.rasterizer_discard_enable = rasterizer_discard_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn polygon_mode(mut self, polygon_mode: crate::vk1_0::PolygonMode) -> Self {
         self.0.polygon_mode = polygon_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cull_mode(mut self, cull_mode: crate::vk1_0::CullModeFlags) -> Self {
         self.0.cull_mode = cull_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn front_face(mut self, front_face: crate::vk1_0::FrontFace) -> Self {
         self.0.front_face = front_face as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_bias_enable(mut self, depth_bias_enable: bool) -> Self {
         self.0.depth_bias_enable = depth_bias_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_bias_constant_factor(mut self, depth_bias_constant_factor: std::os::raw::c_float) -> Self {
         self.0.depth_bias_constant_factor = depth_bias_constant_factor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_bias_clamp(mut self, depth_bias_clamp: std::os::raw::c_float) -> Self {
         self.0.depth_bias_clamp = depth_bias_clamp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_bias_slope_factor(mut self, depth_bias_slope_factor: std::os::raw::c_float) -> Self {
         self.0.depth_bias_slope_factor = depth_bias_slope_factor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn line_width(mut self, line_width: std::os::raw::c_float) -> Self {
         self.0.line_width = line_width as _;
         self
@@ -10956,36 +11247,43 @@ impl<'a> PipelineMultisampleStateCreateInfoBuilder<'a> {
         PipelineMultisampleStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineMultisampleStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_samples(mut self, rasterization_samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.rasterization_samples = rasterization_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_shading_enable(mut self, sample_shading_enable: bool) -> Self {
         self.0.sample_shading_enable = sample_shading_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_sample_shading(mut self, min_sample_shading: std::os::raw::c_float) -> Self {
         self.0.min_sample_shading = min_sample_shading as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_mask(mut self, sample_mask: &'a [crate::vk1_0::SampleMask]) -> Self {
         self.0.p_sample_mask = if sample_mask.is_empty() { std::ptr::null() } else { sample_mask.as_ptr() as _ };
         self
     }
     #[inline]
+    #[must_use]
     pub fn alpha_to_coverage_enable(mut self, alpha_to_coverage_enable: bool) -> Self {
         self.0.alpha_to_coverage_enable = alpha_to_coverage_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn alpha_to_one_enable(mut self, alpha_to_one_enable: bool) -> Self {
         self.0.alpha_to_one_enable = alpha_to_one_enable as _;
         self
@@ -11058,41 +11356,49 @@ impl<'a> PipelineColorBlendAttachmentStateBuilder<'a> {
         PipelineColorBlendAttachmentStateBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn blend_enable(mut self, blend_enable: bool) -> Self {
         self.0.blend_enable = blend_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_color_blend_factor(mut self, src_color_blend_factor: crate::vk1_0::BlendFactor) -> Self {
         self.0.src_color_blend_factor = src_color_blend_factor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_color_blend_factor(mut self, dst_color_blend_factor: crate::vk1_0::BlendFactor) -> Self {
         self.0.dst_color_blend_factor = dst_color_blend_factor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_blend_op(mut self, color_blend_op: crate::vk1_0::BlendOp) -> Self {
         self.0.color_blend_op = color_blend_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_alpha_blend_factor(mut self, src_alpha_blend_factor: crate::vk1_0::BlendFactor) -> Self {
         self.0.src_alpha_blend_factor = src_alpha_blend_factor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_alpha_blend_factor(mut self, dst_alpha_blend_factor: crate::vk1_0::BlendFactor) -> Self {
         self.0.dst_alpha_blend_factor = dst_alpha_blend_factor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn alpha_blend_op(mut self, alpha_blend_op: crate::vk1_0::BlendOp) -> Self {
         self.0.alpha_blend_op = alpha_blend_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_write_mask(mut self, color_write_mask: crate::vk1_0::ColorComponentFlags) -> Self {
         self.0.color_write_mask = color_write_mask as _;
         self
@@ -11168,27 +11474,32 @@ impl<'a> PipelineColorBlendStateCreateInfoBuilder<'a> {
         PipelineColorBlendStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineColorBlendStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn logic_op_enable(mut self, logic_op_enable: bool) -> Self {
         self.0.logic_op_enable = logic_op_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn logic_op(mut self, logic_op: crate::vk1_0::LogicOp) -> Self {
         self.0.logic_op = logic_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn attachments(mut self, attachments: &'a [crate::vk1_0::PipelineColorBlendAttachmentStateBuilder]) -> Self {
         self.0.p_attachments = attachments.as_ptr() as _;
         self.0.attachment_count = attachments.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn blend_constants(mut self, blend_constants: [std::os::raw::c_float; 4]) -> Self {
         self.0.blend_constants = blend_constants as _;
         self
@@ -11261,11 +11572,13 @@ impl<'a> PipelineDynamicStateCreateInfoBuilder<'a> {
         PipelineDynamicStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineDynamicStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dynamic_states(mut self, dynamic_states: &'a [crate::vk1_0::DynamicState]) -> Self {
         self.0.p_dynamic_states = dynamic_states.as_ptr() as _;
         self.0.dynamic_state_count = dynamic_states.len() as _;
@@ -11338,36 +11651,43 @@ impl<'a> StencilOpStateBuilder<'a> {
         StencilOpStateBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fail_op(mut self, fail_op: crate::vk1_0::StencilOp) -> Self {
         self.0.fail_op = fail_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pass_op(mut self, pass_op: crate::vk1_0::StencilOp) -> Self {
         self.0.pass_op = pass_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_fail_op(mut self, depth_fail_op: crate::vk1_0::StencilOp) -> Self {
         self.0.depth_fail_op = depth_fail_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compare_op(mut self, compare_op: crate::vk1_0::CompareOp) -> Self {
         self.0.compare_op = compare_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compare_mask(mut self, compare_mask: u32) -> Self {
         self.0.compare_mask = compare_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn write_mask(mut self, write_mask: u32) -> Self {
         self.0.write_mask = write_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference(mut self, reference: u32) -> Self {
         self.0.reference = reference as _;
         self
@@ -11447,51 +11767,61 @@ impl<'a> PipelineDepthStencilStateCreateInfoBuilder<'a> {
         PipelineDepthStencilStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineDepthStencilStateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_test_enable(mut self, depth_test_enable: bool) -> Self {
         self.0.depth_test_enable = depth_test_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_write_enable(mut self, depth_write_enable: bool) -> Self {
         self.0.depth_write_enable = depth_write_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_compare_op(mut self, depth_compare_op: crate::vk1_0::CompareOp) -> Self {
         self.0.depth_compare_op = depth_compare_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_bounds_test_enable(mut self, depth_bounds_test_enable: bool) -> Self {
         self.0.depth_bounds_test_enable = depth_bounds_test_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stencil_test_enable(mut self, stencil_test_enable: bool) -> Self {
         self.0.stencil_test_enable = stencil_test_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn front(mut self, front: crate::vk1_0::StencilOpState) -> Self {
         self.0.front = front as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn back(mut self, back: crate::vk1_0::StencilOpState) -> Self {
         self.0.back = back as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_depth_bounds(mut self, min_depth_bounds: std::os::raw::c_float) -> Self {
         self.0.min_depth_bounds = min_depth_bounds as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_depth_bounds(mut self, max_depth_bounds: std::os::raw::c_float) -> Self {
         self.0.max_depth_bounds = max_depth_bounds as _;
         self
@@ -11578,82 +11908,98 @@ impl<'a> GraphicsPipelineCreateInfoBuilder<'a> {
         GraphicsPipelineCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_input_state(mut self, vertex_input_state: &'a crate::vk1_0::PipelineVertexInputStateCreateInfo) -> Self {
         self.0.p_vertex_input_state = vertex_input_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn input_assembly_state(mut self, input_assembly_state: &'a crate::vk1_0::PipelineInputAssemblyStateCreateInfo) -> Self {
         self.0.p_input_assembly_state = input_assembly_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tessellation_state(mut self, tessellation_state: &'a crate::vk1_0::PipelineTessellationStateCreateInfo) -> Self {
         self.0.p_tessellation_state = tessellation_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_state(mut self, viewport_state: &'a crate::vk1_0::PipelineViewportStateCreateInfo) -> Self {
         self.0.p_viewport_state = viewport_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_state(mut self, rasterization_state: &'a crate::vk1_0::PipelineRasterizationStateCreateInfo) -> Self {
         self.0.p_rasterization_state = rasterization_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn multisample_state(mut self, multisample_state: &'a crate::vk1_0::PipelineMultisampleStateCreateInfo) -> Self {
         self.0.p_multisample_state = multisample_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_stencil_state(mut self, depth_stencil_state: &'a crate::vk1_0::PipelineDepthStencilStateCreateInfo) -> Self {
         self.0.p_depth_stencil_state = depth_stencil_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_blend_state(mut self, color_blend_state: &'a crate::vk1_0::PipelineColorBlendStateCreateInfo) -> Self {
         self.0.p_color_blend_state = color_blend_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dynamic_state(mut self, dynamic_state: &'a crate::vk1_0::PipelineDynamicStateCreateInfo) -> Self {
         self.0.p_dynamic_state = dynamic_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layout(mut self, layout: crate::vk1_0::PipelineLayout) -> Self {
         self.0.layout = layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn render_pass(mut self, render_pass: crate::vk1_0::RenderPass) -> Self {
         self.0.render_pass = render_pass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subpass(mut self, subpass: u32) -> Self {
         self.0.subpass = subpass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_handle(mut self, base_pipeline_handle: crate::vk1_0::Pipeline) -> Self {
         self.0.base_pipeline_handle = base_pipeline_handle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_index(mut self, base_pipeline_index: i32) -> Self {
         self.0.base_pipeline_index = base_pipeline_index as _;
         self
@@ -11726,16 +12072,19 @@ impl<'a> PipelineCacheCreateInfoBuilder<'a> {
         PipelineCacheCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineCacheCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_data_size(mut self, initial_data_size: usize) -> Self {
         self.0.initial_data_size = initial_data_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_data(mut self, initial_data: *const std::ffi::c_void) -> Self {
         self.0.p_initial_data = initial_data;
         self
@@ -11805,26 +12154,31 @@ impl<'a> PipelineCacheHeaderVersionOneBuilder<'a> {
         PipelineCacheHeaderVersionOneBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn header_size(mut self, header_size: u32) -> Self {
         self.0.header_size = header_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn header_version(mut self, header_version: crate::vk1_0::PipelineCacheHeaderVersion) -> Self {
         self.0.header_version = header_version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vendor_id(mut self, vendor_id: u32) -> Self {
         self.0.vendor_id = vendor_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_id(mut self, device_id: u32) -> Self {
         self.0.device_id = device_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_cache_uuid(mut self, pipeline_cache_uuid: [u8; 16]) -> Self {
         self.0.pipeline_cache_uuid = pipeline_cache_uuid as _;
         self
@@ -11892,16 +12246,19 @@ impl<'a> PushConstantRangeBuilder<'a> {
         PushConstantRangeBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn stage_flags(mut self, stage_flags: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.stage_flags = stage_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: u32) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: u32) -> Self {
         self.0.size = size as _;
         self
@@ -11976,17 +12333,20 @@ impl<'a> PipelineLayoutCreateInfoBuilder<'a> {
         PipelineLayoutCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineLayoutCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn set_layouts(mut self, set_layouts: &'a [crate::vk1_0::DescriptorSetLayout]) -> Self {
         self.0.p_set_layouts = set_layouts.as_ptr() as _;
         self.0.set_layout_count = set_layouts.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn push_constant_ranges(mut self, push_constant_ranges: &'a [crate::vk1_0::PushConstantRangeBuilder]) -> Self {
         self.0.p_push_constant_ranges = push_constant_ranges.as_ptr() as _;
         self.0.push_constant_range_count = push_constant_ranges.len() as _;
@@ -12073,81 +12433,97 @@ impl<'a> SamplerCreateInfoBuilder<'a> {
         SamplerCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::SamplerCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mag_filter(mut self, mag_filter: crate::vk1_0::Filter) -> Self {
         self.0.mag_filter = mag_filter as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_filter(mut self, min_filter: crate::vk1_0::Filter) -> Self {
         self.0.min_filter = min_filter as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mipmap_mode(mut self, mipmap_mode: crate::vk1_0::SamplerMipmapMode) -> Self {
         self.0.mipmap_mode = mipmap_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn address_mode_u(mut self, address_mode_u: crate::vk1_0::SamplerAddressMode) -> Self {
         self.0.address_mode_u = address_mode_u as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn address_mode_v(mut self, address_mode_v: crate::vk1_0::SamplerAddressMode) -> Self {
         self.0.address_mode_v = address_mode_v as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn address_mode_w(mut self, address_mode_w: crate::vk1_0::SamplerAddressMode) -> Self {
         self.0.address_mode_w = address_mode_w as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mip_lod_bias(mut self, mip_lod_bias: std::os::raw::c_float) -> Self {
         self.0.mip_lod_bias = mip_lod_bias as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn anisotropy_enable(mut self, anisotropy_enable: bool) -> Self {
         self.0.anisotropy_enable = anisotropy_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_anisotropy(mut self, max_anisotropy: std::os::raw::c_float) -> Self {
         self.0.max_anisotropy = max_anisotropy as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compare_enable(mut self, compare_enable: bool) -> Self {
         self.0.compare_enable = compare_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compare_op(mut self, compare_op: crate::vk1_0::CompareOp) -> Self {
         self.0.compare_op = compare_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_lod(mut self, min_lod: std::os::raw::c_float) -> Self {
         self.0.min_lod = min_lod as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_lod(mut self, max_lod: std::os::raw::c_float) -> Self {
         self.0.max_lod = max_lod as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn border_color(mut self, border_color: crate::vk1_0::BorderColor) -> Self {
         self.0.border_color = border_color as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn unnormalized_coordinates(mut self, unnormalized_coordinates: bool) -> Self {
         self.0.unnormalized_coordinates = unnormalized_coordinates as _;
         self
@@ -12219,11 +12595,13 @@ impl<'a> CommandPoolCreateInfoBuilder<'a> {
         CommandPoolCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::CommandPoolCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_index(mut self, queue_family_index: u32) -> Self {
         self.0.queue_family_index = queue_family_index as _;
         self
@@ -12296,16 +12674,19 @@ impl<'a> CommandBufferAllocateInfoBuilder<'a> {
         CommandBufferAllocateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn command_pool(mut self, command_pool: crate::vk1_0::CommandPool) -> Self {
         self.0.command_pool = command_pool as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn level(mut self, level: crate::vk1_0::CommandBufferLevel) -> Self {
         self.0.level = level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn command_buffer_count(mut self, command_buffer_count: u32) -> Self {
         self.0.command_buffer_count = command_buffer_count as _;
         self
@@ -12381,31 +12762,37 @@ impl<'a> CommandBufferInheritanceInfoBuilder<'a> {
         CommandBufferInheritanceInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn render_pass(mut self, render_pass: crate::vk1_0::RenderPass) -> Self {
         self.0.render_pass = render_pass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subpass(mut self, subpass: u32) -> Self {
         self.0.subpass = subpass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn framebuffer(mut self, framebuffer: crate::vk1_0::Framebuffer) -> Self {
         self.0.framebuffer = framebuffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn occlusion_query_enable(mut self, occlusion_query_enable: bool) -> Self {
         self.0.occlusion_query_enable = occlusion_query_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn query_flags(mut self, query_flags: crate::vk1_0::QueryControlFlags) -> Self {
         self.0.query_flags = query_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_statistics(mut self, pipeline_statistics: crate::vk1_0::QueryPipelineStatisticFlags) -> Self {
         self.0.pipeline_statistics = pipeline_statistics as _;
         self
@@ -12477,11 +12864,13 @@ impl<'a> CommandBufferBeginInfoBuilder<'a> {
         CommandBufferBeginInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::CommandBufferUsageFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn inheritance_info(mut self, inheritance_info: &'a crate::vk1_0::CommandBufferInheritanceInfo) -> Self {
         self.0.p_inheritance_info = inheritance_info as _;
         self
@@ -12556,21 +12945,25 @@ impl<'a> RenderPassBeginInfoBuilder<'a> {
         RenderPassBeginInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn render_pass(mut self, render_pass: crate::vk1_0::RenderPass) -> Self {
         self.0.render_pass = render_pass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn framebuffer(mut self, framebuffer: crate::vk1_0::Framebuffer) -> Self {
         self.0.framebuffer = framebuffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn render_area(mut self, render_area: crate::vk1_0::Rect2D) -> Self {
         self.0.render_area = render_area as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn clear_values(mut self, clear_values: &'a [crate::vk1_0::ClearValue]) -> Self {
         self.0.p_clear_values = clear_values.as_ptr() as _;
         self.0.clear_value_count = clear_values.len() as _;
@@ -12657,11 +13050,13 @@ impl<'a> ClearDepthStencilValueBuilder<'a> {
         ClearDepthStencilValueBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn depth(mut self, depth: std::os::raw::c_float) -> Self {
         self.0.depth = depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stencil(mut self, stencil: u32) -> Self {
         self.0.stencil = stencil as _;
         self
@@ -12747,16 +13142,19 @@ impl<'a> ClearAttachmentBuilder<'a> {
         ClearAttachmentBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_mask(mut self, aspect_mask: crate::vk1_0::ImageAspectFlags) -> Self {
         self.0.aspect_mask = aspect_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_attachment(mut self, color_attachment: u32) -> Self {
         self.0.color_attachment = color_attachment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn clear_value(mut self, clear_value: crate::vk1_0::ClearValue) -> Self {
         self.0.clear_value = clear_value as _;
         self
@@ -12830,46 +13228,55 @@ impl<'a> AttachmentDescriptionBuilder<'a> {
         AttachmentDescriptionBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::AttachmentDescriptionFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn samples(mut self, samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.samples = samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn load_op(mut self, load_op: crate::vk1_0::AttachmentLoadOp) -> Self {
         self.0.load_op = load_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn store_op(mut self, store_op: crate::vk1_0::AttachmentStoreOp) -> Self {
         self.0.store_op = store_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stencil_load_op(mut self, stencil_load_op: crate::vk1_0::AttachmentLoadOp) -> Self {
         self.0.stencil_load_op = stencil_load_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stencil_store_op(mut self, stencil_store_op: crate::vk1_0::AttachmentStoreOp) -> Self {
         self.0.stencil_store_op = stencil_store_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_layout(mut self, initial_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.initial_layout = initial_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn final_layout(mut self, final_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.final_layout = final_layout as _;
         self
@@ -12936,11 +13343,13 @@ impl<'a> AttachmentReferenceBuilder<'a> {
         AttachmentReferenceBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn attachment(mut self, attachment: u32) -> Self {
         self.0.attachment = attachment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layout(mut self, layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.layout = layout as _;
         self
@@ -13015,39 +13424,46 @@ impl<'a> SubpassDescriptionBuilder<'a> {
         SubpassDescriptionBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::SubpassDescriptionFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_bind_point(mut self, pipeline_bind_point: crate::vk1_0::PipelineBindPoint) -> Self {
         self.0.pipeline_bind_point = pipeline_bind_point as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn input_attachments(mut self, input_attachments: &'a [crate::vk1_0::AttachmentReferenceBuilder]) -> Self {
         self.0.p_input_attachments = input_attachments.as_ptr() as _;
         self.0.input_attachment_count = input_attachments.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_attachments(mut self, color_attachments: &'a [crate::vk1_0::AttachmentReferenceBuilder]) -> Self {
         self.0.p_color_attachments = color_attachments.as_ptr() as _;
         self.0.color_attachment_count = color_attachments.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn resolve_attachments(mut self, resolve_attachments: &'a [crate::vk1_0::AttachmentReferenceBuilder]) -> Self {
         self.0.p_resolve_attachments = resolve_attachments.as_ptr() as _;
         self.0.color_attachment_count = resolve_attachments.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_stencil_attachment(mut self, depth_stencil_attachment: &'a crate::vk1_0::AttachmentReference) -> Self {
         self.0.p_depth_stencil_attachment = depth_stencil_attachment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn preserve_attachments(mut self, preserve_attachments: &'a [u32]) -> Self {
         self.0.p_preserve_attachments = preserve_attachments.as_ptr() as _;
         self.0.preserve_attachment_count = preserve_attachments.len() as _;
@@ -13120,36 +13536,43 @@ impl<'a> SubpassDependencyBuilder<'a> {
         SubpassDependencyBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_subpass(mut self, src_subpass: u32) -> Self {
         self.0.src_subpass = src_subpass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_subpass(mut self, dst_subpass: u32) -> Self {
         self.0.dst_subpass = dst_subpass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_stage_mask(mut self, src_stage_mask: crate::vk1_0::PipelineStageFlags) -> Self {
         self.0.src_stage_mask = src_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_stage_mask(mut self, dst_stage_mask: crate::vk1_0::PipelineStageFlags) -> Self {
         self.0.dst_stage_mask = dst_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_access_mask(mut self, src_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_access_mask(mut self, dst_access_mask: crate::vk1_0::AccessFlags) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dependency_flags(mut self, dependency_flags: crate::vk1_0::DependencyFlags) -> Self {
         self.0.dependency_flags = dependency_flags as _;
         self
@@ -13226,23 +13649,27 @@ impl<'a> RenderPassCreateInfoBuilder<'a> {
         RenderPassCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::RenderPassCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn attachments(mut self, attachments: &'a [crate::vk1_0::AttachmentDescriptionBuilder]) -> Self {
         self.0.p_attachments = attachments.as_ptr() as _;
         self.0.attachment_count = attachments.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subpasses(mut self, subpasses: &'a [crate::vk1_0::SubpassDescriptionBuilder]) -> Self {
         self.0.p_subpasses = subpasses.as_ptr() as _;
         self.0.subpass_count = subpasses.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dependencies(mut self, dependencies: &'a [crate::vk1_0::SubpassDependencyBuilder]) -> Self {
         self.0.p_dependencies = dependencies.as_ptr() as _;
         self.0.dependency_count = dependencies.len() as _;
@@ -13314,6 +13741,7 @@ impl<'a> EventCreateInfoBuilder<'a> {
         EventCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::EventCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -13384,6 +13812,7 @@ impl<'a> FenceCreateInfoBuilder<'a> {
         FenceCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::FenceCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -13559,276 +13988,331 @@ impl<'a> PhysicalDeviceFeaturesBuilder<'a> {
         PhysicalDeviceFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn robust_buffer_access(mut self, robust_buffer_access: bool) -> Self {
         self.0.robust_buffer_access = robust_buffer_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn full_draw_index_uint32(mut self, full_draw_index_uint32: bool) -> Self {
         self.0.full_draw_index_uint32 = full_draw_index_uint32 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_cube_array(mut self, image_cube_array: bool) -> Self {
         self.0.image_cube_array = image_cube_array as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn independent_blend(mut self, independent_blend: bool) -> Self {
         self.0.independent_blend = independent_blend as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn geometry_shader(mut self, geometry_shader: bool) -> Self {
         self.0.geometry_shader = geometry_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tessellation_shader(mut self, tessellation_shader: bool) -> Self {
         self.0.tessellation_shader = tessellation_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_rate_shading(mut self, sample_rate_shading: bool) -> Self {
         self.0.sample_rate_shading = sample_rate_shading as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dual_src_blend(mut self, dual_src_blend: bool) -> Self {
         self.0.dual_src_blend = dual_src_blend as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn logic_op(mut self, logic_op: bool) -> Self {
         self.0.logic_op = logic_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn multi_draw_indirect(mut self, multi_draw_indirect: bool) -> Self {
         self.0.multi_draw_indirect = multi_draw_indirect as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn draw_indirect_first_instance(mut self, draw_indirect_first_instance: bool) -> Self {
         self.0.draw_indirect_first_instance = draw_indirect_first_instance as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_clamp(mut self, depth_clamp: bool) -> Self {
         self.0.depth_clamp = depth_clamp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_bias_clamp(mut self, depth_bias_clamp: bool) -> Self {
         self.0.depth_bias_clamp = depth_bias_clamp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fill_mode_non_solid(mut self, fill_mode_non_solid: bool) -> Self {
         self.0.fill_mode_non_solid = fill_mode_non_solid as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_bounds(mut self, depth_bounds: bool) -> Self {
         self.0.depth_bounds = depth_bounds as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn wide_lines(mut self, wide_lines: bool) -> Self {
         self.0.wide_lines = wide_lines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn large_points(mut self, large_points: bool) -> Self {
         self.0.large_points = large_points as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn alpha_to_one(mut self, alpha_to_one: bool) -> Self {
         self.0.alpha_to_one = alpha_to_one as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn multi_viewport(mut self, multi_viewport: bool) -> Self {
         self.0.multi_viewport = multi_viewport as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampler_anisotropy(mut self, sampler_anisotropy: bool) -> Self {
         self.0.sampler_anisotropy = sampler_anisotropy as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn texture_compression_etc2(mut self, texture_compression_etc2: bool) -> Self {
         self.0.texture_compression_etc2 = texture_compression_etc2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn texture_compression_astc_ldr(mut self, texture_compression_astc_ldr: bool) -> Self {
         self.0.texture_compression_astc_ldr = texture_compression_astc_ldr as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn texture_compression_bc(mut self, texture_compression_bc: bool) -> Self {
         self.0.texture_compression_bc = texture_compression_bc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn occlusion_query_precise(mut self, occlusion_query_precise: bool) -> Self {
         self.0.occlusion_query_precise = occlusion_query_precise as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_statistics_query(mut self, pipeline_statistics_query: bool) -> Self {
         self.0.pipeline_statistics_query = pipeline_statistics_query as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_pipeline_stores_and_atomics(mut self, vertex_pipeline_stores_and_atomics: bool) -> Self {
         self.0.vertex_pipeline_stores_and_atomics = vertex_pipeline_stores_and_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_stores_and_atomics(mut self, fragment_stores_and_atomics: bool) -> Self {
         self.0.fragment_stores_and_atomics = fragment_stores_and_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_tessellation_and_geometry_point_size(mut self, shader_tessellation_and_geometry_point_size: bool) -> Self {
         self.0.shader_tessellation_and_geometry_point_size = shader_tessellation_and_geometry_point_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_image_gather_extended(mut self, shader_image_gather_extended: bool) -> Self {
         self.0.shader_image_gather_extended = shader_image_gather_extended as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_storage_image_extended_formats(mut self, shader_storage_image_extended_formats: bool) -> Self {
         self.0.shader_storage_image_extended_formats = shader_storage_image_extended_formats as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_storage_image_multisample(mut self, shader_storage_image_multisample: bool) -> Self {
         self.0.shader_storage_image_multisample = shader_storage_image_multisample as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_storage_image_read_without_format(mut self, shader_storage_image_read_without_format: bool) -> Self {
         self.0.shader_storage_image_read_without_format = shader_storage_image_read_without_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_storage_image_write_without_format(mut self, shader_storage_image_write_without_format: bool) -> Self {
         self.0.shader_storage_image_write_without_format = shader_storage_image_write_without_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_uniform_buffer_array_dynamic_indexing(mut self, shader_uniform_buffer_array_dynamic_indexing: bool) -> Self {
         self.0.shader_uniform_buffer_array_dynamic_indexing = shader_uniform_buffer_array_dynamic_indexing as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_sampled_image_array_dynamic_indexing(mut self, shader_sampled_image_array_dynamic_indexing: bool) -> Self {
         self.0.shader_sampled_image_array_dynamic_indexing = shader_sampled_image_array_dynamic_indexing as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_storage_buffer_array_dynamic_indexing(mut self, shader_storage_buffer_array_dynamic_indexing: bool) -> Self {
         self.0.shader_storage_buffer_array_dynamic_indexing = shader_storage_buffer_array_dynamic_indexing as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_storage_image_array_dynamic_indexing(mut self, shader_storage_image_array_dynamic_indexing: bool) -> Self {
         self.0.shader_storage_image_array_dynamic_indexing = shader_storage_image_array_dynamic_indexing as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_clip_distance(mut self, shader_clip_distance: bool) -> Self {
         self.0.shader_clip_distance = shader_clip_distance as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_cull_distance(mut self, shader_cull_distance: bool) -> Self {
         self.0.shader_cull_distance = shader_cull_distance as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_float64(mut self, shader_float64: bool) -> Self {
         self.0.shader_float64 = shader_float64 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_int64(mut self, shader_int64: bool) -> Self {
         self.0.shader_int64 = shader_int64 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_int16(mut self, shader_int16: bool) -> Self {
         self.0.shader_int16 = shader_int16 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_resource_residency(mut self, shader_resource_residency: bool) -> Self {
         self.0.shader_resource_residency = shader_resource_residency as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_resource_min_lod(mut self, shader_resource_min_lod: bool) -> Self {
         self.0.shader_resource_min_lod = shader_resource_min_lod as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_binding(mut self, sparse_binding: bool) -> Self {
         self.0.sparse_binding = sparse_binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency_buffer(mut self, sparse_residency_buffer: bool) -> Self {
         self.0.sparse_residency_buffer = sparse_residency_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency_image2_d(mut self, sparse_residency_image2_d: bool) -> Self {
         self.0.sparse_residency_image2_d = sparse_residency_image2_d as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency_image3_d(mut self, sparse_residency_image3_d: bool) -> Self {
         self.0.sparse_residency_image3_d = sparse_residency_image3_d as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency2_samples(mut self, sparse_residency2_samples: bool) -> Self {
         self.0.sparse_residency2_samples = sparse_residency2_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency4_samples(mut self, sparse_residency4_samples: bool) -> Self {
         self.0.sparse_residency4_samples = sparse_residency4_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency8_samples(mut self, sparse_residency8_samples: bool) -> Self {
         self.0.sparse_residency8_samples = sparse_residency8_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency16_samples(mut self, sparse_residency16_samples: bool) -> Self {
         self.0.sparse_residency16_samples = sparse_residency16_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_residency_aliased(mut self, sparse_residency_aliased: bool) -> Self {
         self.0.sparse_residency_aliased = sparse_residency_aliased as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn variable_multisample_rate(mut self, variable_multisample_rate: bool) -> Self {
         self.0.variable_multisample_rate = variable_multisample_rate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn inherited_queries(mut self, inherited_queries: bool) -> Self {
         self.0.inherited_queries = inherited_queries as _;
         self
@@ -13898,26 +14382,31 @@ impl<'a> PhysicalDeviceSparsePropertiesBuilder<'a> {
         PhysicalDeviceSparsePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn residency_standard2_d_block_shape(mut self, residency_standard2_d_block_shape: bool) -> Self {
         self.0.residency_standard2_d_block_shape = residency_standard2_d_block_shape as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn residency_standard2_d_multisample_block_shape(mut self, residency_standard2_d_multisample_block_shape: bool) -> Self {
         self.0.residency_standard2_d_multisample_block_shape = residency_standard2_d_multisample_block_shape as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn residency_standard3_d_block_shape(mut self, residency_standard3_d_block_shape: bool) -> Self {
         self.0.residency_standard3_d_block_shape = residency_standard3_d_block_shape as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn residency_aligned_mip_size(mut self, residency_aligned_mip_size: bool) -> Self {
         self.0.residency_aligned_mip_size = residency_aligned_mip_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn residency_non_resident_strict(mut self, residency_non_resident_strict: bool) -> Self {
         self.0.residency_non_resident_strict = residency_non_resident_strict as _;
         self
@@ -14302,531 +14791,637 @@ impl<'a> PhysicalDeviceLimitsBuilder<'a> {
         PhysicalDeviceLimitsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_image_dimension1_d(mut self, max_image_dimension1_d: u32) -> Self {
         self.0.max_image_dimension1_d = max_image_dimension1_d as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_image_dimension2_d(mut self, max_image_dimension2_d: u32) -> Self {
         self.0.max_image_dimension2_d = max_image_dimension2_d as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_image_dimension3_d(mut self, max_image_dimension3_d: u32) -> Self {
         self.0.max_image_dimension3_d = max_image_dimension3_d as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_image_dimension_cube(mut self, max_image_dimension_cube: u32) -> Self {
         self.0.max_image_dimension_cube = max_image_dimension_cube as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_image_array_layers(mut self, max_image_array_layers: u32) -> Self {
         self.0.max_image_array_layers = max_image_array_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_texel_buffer_elements(mut self, max_texel_buffer_elements: u32) -> Self {
         self.0.max_texel_buffer_elements = max_texel_buffer_elements as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_uniform_buffer_range(mut self, max_uniform_buffer_range: u32) -> Self {
         self.0.max_uniform_buffer_range = max_uniform_buffer_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_storage_buffer_range(mut self, max_storage_buffer_range: u32) -> Self {
         self.0.max_storage_buffer_range = max_storage_buffer_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_push_constants_size(mut self, max_push_constants_size: u32) -> Self {
         self.0.max_push_constants_size = max_push_constants_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_memory_allocation_count(mut self, max_memory_allocation_count: u32) -> Self {
         self.0.max_memory_allocation_count = max_memory_allocation_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sampler_allocation_count(mut self, max_sampler_allocation_count: u32) -> Self {
         self.0.max_sampler_allocation_count = max_sampler_allocation_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_image_granularity(mut self, buffer_image_granularity: crate::vk1_0::DeviceSize) -> Self {
         self.0.buffer_image_granularity = buffer_image_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_address_space_size(mut self, sparse_address_space_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.sparse_address_space_size = sparse_address_space_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_bound_descriptor_sets(mut self, max_bound_descriptor_sets: u32) -> Self {
         self.0.max_bound_descriptor_sets = max_bound_descriptor_sets as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_samplers(mut self, max_per_stage_descriptor_samplers: u32) -> Self {
         self.0.max_per_stage_descriptor_samplers = max_per_stage_descriptor_samplers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_uniform_buffers(mut self, max_per_stage_descriptor_uniform_buffers: u32) -> Self {
         self.0.max_per_stage_descriptor_uniform_buffers = max_per_stage_descriptor_uniform_buffers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_storage_buffers(mut self, max_per_stage_descriptor_storage_buffers: u32) -> Self {
         self.0.max_per_stage_descriptor_storage_buffers = max_per_stage_descriptor_storage_buffers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_sampled_images(mut self, max_per_stage_descriptor_sampled_images: u32) -> Self {
         self.0.max_per_stage_descriptor_sampled_images = max_per_stage_descriptor_sampled_images as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_storage_images(mut self, max_per_stage_descriptor_storage_images: u32) -> Self {
         self.0.max_per_stage_descriptor_storage_images = max_per_stage_descriptor_storage_images as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_input_attachments(mut self, max_per_stage_descriptor_input_attachments: u32) -> Self {
         self.0.max_per_stage_descriptor_input_attachments = max_per_stage_descriptor_input_attachments as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_resources(mut self, max_per_stage_resources: u32) -> Self {
         self.0.max_per_stage_resources = max_per_stage_resources as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_samplers(mut self, max_descriptor_set_samplers: u32) -> Self {
         self.0.max_descriptor_set_samplers = max_descriptor_set_samplers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_uniform_buffers(mut self, max_descriptor_set_uniform_buffers: u32) -> Self {
         self.0.max_descriptor_set_uniform_buffers = max_descriptor_set_uniform_buffers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_uniform_buffers_dynamic(mut self, max_descriptor_set_uniform_buffers_dynamic: u32) -> Self {
         self.0.max_descriptor_set_uniform_buffers_dynamic = max_descriptor_set_uniform_buffers_dynamic as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_storage_buffers(mut self, max_descriptor_set_storage_buffers: u32) -> Self {
         self.0.max_descriptor_set_storage_buffers = max_descriptor_set_storage_buffers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_storage_buffers_dynamic(mut self, max_descriptor_set_storage_buffers_dynamic: u32) -> Self {
         self.0.max_descriptor_set_storage_buffers_dynamic = max_descriptor_set_storage_buffers_dynamic as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_sampled_images(mut self, max_descriptor_set_sampled_images: u32) -> Self {
         self.0.max_descriptor_set_sampled_images = max_descriptor_set_sampled_images as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_storage_images(mut self, max_descriptor_set_storage_images: u32) -> Self {
         self.0.max_descriptor_set_storage_images = max_descriptor_set_storage_images as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_input_attachments(mut self, max_descriptor_set_input_attachments: u32) -> Self {
         self.0.max_descriptor_set_input_attachments = max_descriptor_set_input_attachments as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_vertex_input_attributes(mut self, max_vertex_input_attributes: u32) -> Self {
         self.0.max_vertex_input_attributes = max_vertex_input_attributes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_vertex_input_bindings(mut self, max_vertex_input_bindings: u32) -> Self {
         self.0.max_vertex_input_bindings = max_vertex_input_bindings as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_vertex_input_attribute_offset(mut self, max_vertex_input_attribute_offset: u32) -> Self {
         self.0.max_vertex_input_attribute_offset = max_vertex_input_attribute_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_vertex_input_binding_stride(mut self, max_vertex_input_binding_stride: u32) -> Self {
         self.0.max_vertex_input_binding_stride = max_vertex_input_binding_stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_vertex_output_components(mut self, max_vertex_output_components: u32) -> Self {
         self.0.max_vertex_output_components = max_vertex_output_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_generation_level(mut self, max_tessellation_generation_level: u32) -> Self {
         self.0.max_tessellation_generation_level = max_tessellation_generation_level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_patch_size(mut self, max_tessellation_patch_size: u32) -> Self {
         self.0.max_tessellation_patch_size = max_tessellation_patch_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_control_per_vertex_input_components(mut self, max_tessellation_control_per_vertex_input_components: u32) -> Self {
         self.0.max_tessellation_control_per_vertex_input_components = max_tessellation_control_per_vertex_input_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_control_per_vertex_output_components(mut self, max_tessellation_control_per_vertex_output_components: u32) -> Self {
         self.0.max_tessellation_control_per_vertex_output_components = max_tessellation_control_per_vertex_output_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_control_per_patch_output_components(mut self, max_tessellation_control_per_patch_output_components: u32) -> Self {
         self.0.max_tessellation_control_per_patch_output_components = max_tessellation_control_per_patch_output_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_control_total_output_components(mut self, max_tessellation_control_total_output_components: u32) -> Self {
         self.0.max_tessellation_control_total_output_components = max_tessellation_control_total_output_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_evaluation_input_components(mut self, max_tessellation_evaluation_input_components: u32) -> Self {
         self.0.max_tessellation_evaluation_input_components = max_tessellation_evaluation_input_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_tessellation_evaluation_output_components(mut self, max_tessellation_evaluation_output_components: u32) -> Self {
         self.0.max_tessellation_evaluation_output_components = max_tessellation_evaluation_output_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_geometry_shader_invocations(mut self, max_geometry_shader_invocations: u32) -> Self {
         self.0.max_geometry_shader_invocations = max_geometry_shader_invocations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_geometry_input_components(mut self, max_geometry_input_components: u32) -> Self {
         self.0.max_geometry_input_components = max_geometry_input_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_geometry_output_components(mut self, max_geometry_output_components: u32) -> Self {
         self.0.max_geometry_output_components = max_geometry_output_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_geometry_output_vertices(mut self, max_geometry_output_vertices: u32) -> Self {
         self.0.max_geometry_output_vertices = max_geometry_output_vertices as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_geometry_total_output_components(mut self, max_geometry_total_output_components: u32) -> Self {
         self.0.max_geometry_total_output_components = max_geometry_total_output_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_input_components(mut self, max_fragment_input_components: u32) -> Self {
         self.0.max_fragment_input_components = max_fragment_input_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_output_attachments(mut self, max_fragment_output_attachments: u32) -> Self {
         self.0.max_fragment_output_attachments = max_fragment_output_attachments as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_dual_src_attachments(mut self, max_fragment_dual_src_attachments: u32) -> Self {
         self.0.max_fragment_dual_src_attachments = max_fragment_dual_src_attachments as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_combined_output_resources(mut self, max_fragment_combined_output_resources: u32) -> Self {
         self.0.max_fragment_combined_output_resources = max_fragment_combined_output_resources as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_compute_shared_memory_size(mut self, max_compute_shared_memory_size: u32) -> Self {
         self.0.max_compute_shared_memory_size = max_compute_shared_memory_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_compute_work_group_count(mut self, max_compute_work_group_count: [u32; 3]) -> Self {
         self.0.max_compute_work_group_count = max_compute_work_group_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_compute_work_group_invocations(mut self, max_compute_work_group_invocations: u32) -> Self {
         self.0.max_compute_work_group_invocations = max_compute_work_group_invocations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_compute_work_group_size(mut self, max_compute_work_group_size: [u32; 3]) -> Self {
         self.0.max_compute_work_group_size = max_compute_work_group_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_pixel_precision_bits(mut self, sub_pixel_precision_bits: u32) -> Self {
         self.0.sub_pixel_precision_bits = sub_pixel_precision_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_texel_precision_bits(mut self, sub_texel_precision_bits: u32) -> Self {
         self.0.sub_texel_precision_bits = sub_texel_precision_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mipmap_precision_bits(mut self, mipmap_precision_bits: u32) -> Self {
         self.0.mipmap_precision_bits = mipmap_precision_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_draw_indexed_index_value(mut self, max_draw_indexed_index_value: u32) -> Self {
         self.0.max_draw_indexed_index_value = max_draw_indexed_index_value as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_draw_indirect_count(mut self, max_draw_indirect_count: u32) -> Self {
         self.0.max_draw_indirect_count = max_draw_indirect_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sampler_lod_bias(mut self, max_sampler_lod_bias: std::os::raw::c_float) -> Self {
         self.0.max_sampler_lod_bias = max_sampler_lod_bias as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sampler_anisotropy(mut self, max_sampler_anisotropy: std::os::raw::c_float) -> Self {
         self.0.max_sampler_anisotropy = max_sampler_anisotropy as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_viewports(mut self, max_viewports: u32) -> Self {
         self.0.max_viewports = max_viewports as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_viewport_dimensions(mut self, max_viewport_dimensions: [u32; 2]) -> Self {
         self.0.max_viewport_dimensions = max_viewport_dimensions as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_bounds_range(mut self, viewport_bounds_range: [std::os::raw::c_float; 2]) -> Self {
         self.0.viewport_bounds_range = viewport_bounds_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_sub_pixel_bits(mut self, viewport_sub_pixel_bits: u32) -> Self {
         self.0.viewport_sub_pixel_bits = viewport_sub_pixel_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_memory_map_alignment(mut self, min_memory_map_alignment: usize) -> Self {
         self.0.min_memory_map_alignment = min_memory_map_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_texel_buffer_offset_alignment(mut self, min_texel_buffer_offset_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.min_texel_buffer_offset_alignment = min_texel_buffer_offset_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_uniform_buffer_offset_alignment(mut self, min_uniform_buffer_offset_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.min_uniform_buffer_offset_alignment = min_uniform_buffer_offset_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_storage_buffer_offset_alignment(mut self, min_storage_buffer_offset_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.min_storage_buffer_offset_alignment = min_storage_buffer_offset_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_texel_offset(mut self, min_texel_offset: i32) -> Self {
         self.0.min_texel_offset = min_texel_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_texel_offset(mut self, max_texel_offset: u32) -> Self {
         self.0.max_texel_offset = max_texel_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_texel_gather_offset(mut self, min_texel_gather_offset: i32) -> Self {
         self.0.min_texel_gather_offset = min_texel_gather_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_texel_gather_offset(mut self, max_texel_gather_offset: u32) -> Self {
         self.0.max_texel_gather_offset = max_texel_gather_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_interpolation_offset(mut self, min_interpolation_offset: std::os::raw::c_float) -> Self {
         self.0.min_interpolation_offset = min_interpolation_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_interpolation_offset(mut self, max_interpolation_offset: std::os::raw::c_float) -> Self {
         self.0.max_interpolation_offset = max_interpolation_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_pixel_interpolation_offset_bits(mut self, sub_pixel_interpolation_offset_bits: u32) -> Self {
         self.0.sub_pixel_interpolation_offset_bits = sub_pixel_interpolation_offset_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_framebuffer_width(mut self, max_framebuffer_width: u32) -> Self {
         self.0.max_framebuffer_width = max_framebuffer_width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_framebuffer_height(mut self, max_framebuffer_height: u32) -> Self {
         self.0.max_framebuffer_height = max_framebuffer_height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_framebuffer_layers(mut self, max_framebuffer_layers: u32) -> Self {
         self.0.max_framebuffer_layers = max_framebuffer_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn framebuffer_color_sample_counts(mut self, framebuffer_color_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.framebuffer_color_sample_counts = framebuffer_color_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn framebuffer_depth_sample_counts(mut self, framebuffer_depth_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.framebuffer_depth_sample_counts = framebuffer_depth_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn framebuffer_stencil_sample_counts(mut self, framebuffer_stencil_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.framebuffer_stencil_sample_counts = framebuffer_stencil_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn framebuffer_no_attachments_sample_counts(mut self, framebuffer_no_attachments_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.framebuffer_no_attachments_sample_counts = framebuffer_no_attachments_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_color_attachments(mut self, max_color_attachments: u32) -> Self {
         self.0.max_color_attachments = max_color_attachments as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampled_image_color_sample_counts(mut self, sampled_image_color_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sampled_image_color_sample_counts = sampled_image_color_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampled_image_integer_sample_counts(mut self, sampled_image_integer_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sampled_image_integer_sample_counts = sampled_image_integer_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampled_image_depth_sample_counts(mut self, sampled_image_depth_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sampled_image_depth_sample_counts = sampled_image_depth_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampled_image_stencil_sample_counts(mut self, sampled_image_stencil_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sampled_image_stencil_sample_counts = sampled_image_stencil_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn storage_image_sample_counts(mut self, storage_image_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.storage_image_sample_counts = storage_image_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sample_mask_words(mut self, max_sample_mask_words: u32) -> Self {
         self.0.max_sample_mask_words = max_sample_mask_words as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn timestamp_compute_and_graphics(mut self, timestamp_compute_and_graphics: bool) -> Self {
         self.0.timestamp_compute_and_graphics = timestamp_compute_and_graphics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn timestamp_period(mut self, timestamp_period: std::os::raw::c_float) -> Self {
         self.0.timestamp_period = timestamp_period as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_clip_distances(mut self, max_clip_distances: u32) -> Self {
         self.0.max_clip_distances = max_clip_distances as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_cull_distances(mut self, max_cull_distances: u32) -> Self {
         self.0.max_cull_distances = max_cull_distances as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_combined_clip_and_cull_distances(mut self, max_combined_clip_and_cull_distances: u32) -> Self {
         self.0.max_combined_clip_and_cull_distances = max_combined_clip_and_cull_distances as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn discrete_queue_priorities(mut self, discrete_queue_priorities: u32) -> Self {
         self.0.discrete_queue_priorities = discrete_queue_priorities as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn point_size_range(mut self, point_size_range: [std::os::raw::c_float; 2]) -> Self {
         self.0.point_size_range = point_size_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn line_width_range(mut self, line_width_range: [std::os::raw::c_float; 2]) -> Self {
         self.0.line_width_range = line_width_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn point_size_granularity(mut self, point_size_granularity: std::os::raw::c_float) -> Self {
         self.0.point_size_granularity = point_size_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn line_width_granularity(mut self, line_width_granularity: std::os::raw::c_float) -> Self {
         self.0.line_width_granularity = line_width_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn strict_lines(mut self, strict_lines: bool) -> Self {
         self.0.strict_lines = strict_lines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn standard_sample_locations(mut self, standard_sample_locations: bool) -> Self {
         self.0.standard_sample_locations = standard_sample_locations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn optimal_buffer_copy_offset_alignment(mut self, optimal_buffer_copy_offset_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.optimal_buffer_copy_offset_alignment = optimal_buffer_copy_offset_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn optimal_buffer_copy_row_pitch_alignment(mut self, optimal_buffer_copy_row_pitch_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.optimal_buffer_copy_row_pitch_alignment = optimal_buffer_copy_row_pitch_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn non_coherent_atom_size(mut self, non_coherent_atom_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.non_coherent_atom_size = non_coherent_atom_size as _;
         self
@@ -14897,6 +15492,7 @@ impl<'a> SemaphoreCreateInfoBuilder<'a> {
         SemaphoreCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::SemaphoreCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -14970,21 +15566,25 @@ impl<'a> QueryPoolCreateInfoBuilder<'a> {
         QueryPoolCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::QueryPoolCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn query_type(mut self, query_type: crate::vk1_0::QueryType) -> Self {
         self.0.query_type = query_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn query_count(mut self, query_count: u32) -> Self {
         self.0.query_count = query_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_statistics(mut self, pipeline_statistics: crate::vk1_0::QueryPipelineStatisticFlags) -> Self {
         self.0.pipeline_statistics = pipeline_statistics as _;
         self
@@ -15061,37 +15661,44 @@ impl<'a> FramebufferCreateInfoBuilder<'a> {
         FramebufferCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::FramebufferCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn render_pass(mut self, render_pass: crate::vk1_0::RenderPass) -> Self {
         self.0.render_pass = render_pass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn attachment_count(mut self, attachment_count: u32) -> Self {
         self.0.attachment_count = attachment_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn attachments(mut self, attachments: &'a [crate::vk1_0::ImageView]) -> Self {
         self.0.p_attachments = attachments.as_ptr() as _;
         self.0.attachment_count = attachments.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn width(mut self, width: u32) -> Self {
         self.0.width = width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn height(mut self, height: u32) -> Self {
         self.0.height = height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layers(mut self, layers: u32) -> Self {
         self.0.layers = layers as _;
         self
@@ -15160,21 +15767,25 @@ impl<'a> DrawIndirectCommandBuilder<'a> {
         DrawIndirectCommandBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vertex_count(mut self, vertex_count: u32) -> Self {
         self.0.vertex_count = vertex_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn instance_count(mut self, instance_count: u32) -> Self {
         self.0.instance_count = instance_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn first_vertex(mut self, first_vertex: u32) -> Self {
         self.0.first_vertex = first_vertex as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn first_instance(mut self, first_instance: u32) -> Self {
         self.0.first_instance = first_instance as _;
         self
@@ -15244,26 +15855,31 @@ impl<'a> DrawIndexedIndirectCommandBuilder<'a> {
         DrawIndexedIndirectCommandBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn index_count(mut self, index_count: u32) -> Self {
         self.0.index_count = index_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn instance_count(mut self, instance_count: u32) -> Self {
         self.0.instance_count = instance_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn first_index(mut self, first_index: u32) -> Self {
         self.0.first_index = first_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_offset(mut self, vertex_offset: i32) -> Self {
         self.0.vertex_offset = vertex_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn first_instance(mut self, first_instance: u32) -> Self {
         self.0.first_instance = first_instance as _;
         self
@@ -15331,16 +15947,19 @@ impl<'a> DispatchIndirectCommandBuilder<'a> {
         DispatchIndirectCommandBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn x(mut self, x: u32) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y(mut self, y: u32) -> Self {
         self.0.y = y as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn z(mut self, z: u32) -> Self {
         self.0.z = z as _;
         self
@@ -15417,24 +16036,28 @@ impl<'a> SubmitInfoBuilder<'a> {
         SubmitInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn wait_semaphores(mut self, wait_semaphores: &'a [crate::vk1_0::Semaphore]) -> Self {
         self.0.p_wait_semaphores = wait_semaphores.as_ptr() as _;
         self.0.wait_semaphore_count = wait_semaphores.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn wait_dst_stage_mask(mut self, wait_dst_stage_mask: &'a [crate::vk1_0::PipelineStageFlags]) -> Self {
         self.0.p_wait_dst_stage_mask = wait_dst_stage_mask.as_ptr() as _;
         self.0.wait_semaphore_count = wait_dst_stage_mask.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn command_buffers(mut self, command_buffers: &'a [crate::vk1_0::CommandBuffer]) -> Self {
         self.0.p_command_buffers = command_buffers.as_ptr() as _;
         self.0.command_buffer_count = command_buffers.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn signal_semaphores(mut self, signal_semaphores: &'a [crate::vk1_0::Semaphore]) -> Self {
         self.0.p_signal_semaphores = signal_semaphores.as_ptr() as _;
         self.0.signal_semaphore_count = signal_semaphores.len() as _;

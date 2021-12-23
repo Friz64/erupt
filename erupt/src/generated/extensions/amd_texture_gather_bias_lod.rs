@@ -48,6 +48,7 @@ impl<'a> TextureLODGatherFormatPropertiesAMDBuilder<'a> {
         TextureLODGatherFormatPropertiesAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn supports_texture_gather_lod_bias_amd(mut self, supports_texture_gather_lod_bias_amd: bool) -> Self {
         self.0.supports_texture_gather_lod_bias_amd = supports_texture_gather_lod_bias_amd as _;
         self

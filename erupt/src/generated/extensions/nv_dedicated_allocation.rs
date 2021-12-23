@@ -54,6 +54,7 @@ impl<'a> DedicatedAllocationImageCreateInfoNVBuilder<'a> {
         DedicatedAllocationImageCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dedicated_allocation(mut self, dedicated_allocation: bool) -> Self {
         self.0.dedicated_allocation = dedicated_allocation as _;
         self
@@ -124,6 +125,7 @@ impl<'a> DedicatedAllocationBufferCreateInfoNVBuilder<'a> {
         DedicatedAllocationBufferCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dedicated_allocation(mut self, dedicated_allocation: bool) -> Self {
         self.0.dedicated_allocation = dedicated_allocation as _;
         self
@@ -195,11 +197,13 @@ impl<'a> DedicatedAllocationMemoryAllocateInfoNVBuilder<'a> {
         DedicatedAllocationMemoryAllocateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self

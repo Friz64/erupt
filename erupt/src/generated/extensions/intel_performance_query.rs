@@ -231,11 +231,13 @@ impl<'a> PerformanceValueINTELBuilder<'a> {
         PerformanceValueINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::intel_performance_query::PerformanceValueTypeINTEL) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data(mut self, data: crate::extensions::intel_performance_query::PerformanceValueDataINTEL) -> Self {
         self.0.data = data as _;
         self
@@ -306,6 +308,7 @@ impl<'a> InitializePerformanceApiInfoINTELBuilder<'a> {
         InitializePerformanceApiInfoINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn user_data(mut self, user_data: *mut std::ffi::c_void) -> Self {
         self.0.p_user_data = user_data;
         self
@@ -376,6 +379,7 @@ impl<'a> QueryPoolPerformanceQueryCreateInfoINTELBuilder<'a> {
         QueryPoolPerformanceQueryCreateInfoINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn performance_counters_sampling(mut self, performance_counters_sampling: crate::extensions::intel_performance_query::QueryPoolSamplingModeINTEL) -> Self {
         self.0.performance_counters_sampling = performance_counters_sampling as _;
         self
@@ -446,6 +450,7 @@ impl<'a> PerformanceMarkerInfoINTELBuilder<'a> {
         PerformanceMarkerInfoINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn marker(mut self, marker: u64) -> Self {
         self.0.marker = marker as _;
         self
@@ -516,6 +521,7 @@ impl<'a> PerformanceStreamMarkerInfoINTELBuilder<'a> {
         PerformanceStreamMarkerInfoINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn marker(mut self, marker: u32) -> Self {
         self.0.marker = marker as _;
         self
@@ -588,16 +594,19 @@ impl<'a> PerformanceOverrideInfoINTELBuilder<'a> {
         PerformanceOverrideInfoINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::intel_performance_query::PerformanceOverrideTypeINTEL) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn enable(mut self, enable: bool) -> Self {
         self.0.enable = enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn parameter(mut self, parameter: u64) -> Self {
         self.0.parameter = parameter as _;
         self
@@ -668,6 +677,7 @@ impl<'a> PerformanceConfigurationAcquireInfoINTELBuilder<'a> {
         PerformanceConfigurationAcquireInfoINTELBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::intel_performance_query::PerformanceConfigurationTypeINTEL) -> Self {
         self.0._type = _type as _;
         self

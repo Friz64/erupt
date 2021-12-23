@@ -64,26 +64,31 @@ impl<'a> ImportFenceWin32HandleInfoKHRBuilder<'a> {
         ImportFenceWin32HandleInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fence(mut self, fence: crate::vk1_0::Fence) -> Self {
         self.0.fence = fence as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_1::FenceImportFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle(mut self, handle: *mut std::ffi::c_void) -> Self {
         self.0.handle = handle;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: &'a u16) -> Self {
         self.0.name = name as _;
         self
@@ -156,16 +161,19 @@ impl<'a> ExportFenceWin32HandleInfoKHRBuilder<'a> {
         ExportFenceWin32HandleInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn attributes(mut self, attributes: *const std::ffi::c_void) -> Self {
         self.0.p_attributes = attributes;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dw_access(mut self, dw_access: u32) -> Self {
         self.0.dw_access = dw_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: &'a u16) -> Self {
         self.0.name = name as _;
         self
@@ -237,11 +245,13 @@ impl<'a> FenceGetWin32HandleInfoKHRBuilder<'a> {
         FenceGetWin32HandleInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fence(mut self, fence: crate::vk1_0::Fence) -> Self {
         self.0.fence = fence as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

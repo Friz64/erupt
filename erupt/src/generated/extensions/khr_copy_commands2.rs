@@ -88,16 +88,19 @@ impl<'a> BufferCopy2KHRBuilder<'a> {
         BufferCopy2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_offset(mut self, src_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.src_offset = src_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offset(mut self, dst_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.dst_offset = dst_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
@@ -172,26 +175,31 @@ impl<'a> ImageCopy2KHRBuilder<'a> {
         ImageCopy2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_subresource(mut self, src_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.src_subresource = src_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_offset(mut self, src_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.src_offset = src_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_subresource(mut self, dst_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.dst_subresource = dst_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offset(mut self, dst_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.dst_offset = dst_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent3D) -> Self {
         self.0.extent = extent as _;
         self
@@ -265,21 +273,25 @@ impl<'a> ImageBlit2KHRBuilder<'a> {
         ImageBlit2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_subresource(mut self, src_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.src_subresource = src_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_offsets(mut self, src_offsets: [crate::vk1_0::Offset3D; 2]) -> Self {
         self.0.src_offsets = src_offsets as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_subresource(mut self, dst_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.dst_subresource = dst_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offsets(mut self, dst_offsets: [crate::vk1_0::Offset3D; 2]) -> Self {
         self.0.dst_offsets = dst_offsets as _;
         self
@@ -355,31 +367,37 @@ impl<'a> BufferImageCopy2KHRBuilder<'a> {
         BufferImageCopy2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer_offset(mut self, buffer_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.buffer_offset = buffer_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_row_length(mut self, buffer_row_length: u32) -> Self {
         self.0.buffer_row_length = buffer_row_length as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_image_height(mut self, buffer_image_height: u32) -> Self {
         self.0.buffer_image_height = buffer_image_height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_subresource(mut self, image_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.image_subresource = image_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_offset(mut self, image_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.image_offset = image_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_extent(mut self, image_extent: crate::vk1_0::Extent3D) -> Self {
         self.0.image_extent = image_extent as _;
         self
@@ -454,26 +472,31 @@ impl<'a> ImageResolve2KHRBuilder<'a> {
         ImageResolve2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_subresource(mut self, src_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.src_subresource = src_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_offset(mut self, src_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.src_offset = src_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_subresource(mut self, dst_subresource: crate::vk1_0::ImageSubresourceLayers) -> Self {
         self.0.dst_subresource = dst_subresource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_offset(mut self, dst_offset: crate::vk1_0::Offset3D) -> Self {
         self.0.dst_offset = dst_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent3D) -> Self {
         self.0.extent = extent as _;
         self
@@ -547,16 +570,19 @@ impl<'a> CopyBufferInfo2KHRBuilder<'a> {
         CopyBufferInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_buffer(mut self, src_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.src_buffer = src_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_buffer(mut self, dst_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.dst_buffer = dst_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::BufferCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
@@ -633,26 +659,31 @@ impl<'a> CopyImageInfo2KHRBuilder<'a> {
         CopyImageInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_image(mut self, src_image: crate::vk1_0::Image) -> Self {
         self.0.src_image = src_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_image_layout(mut self, src_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.src_image_layout = src_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image(mut self, dst_image: crate::vk1_0::Image) -> Self {
         self.0.dst_image = dst_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image_layout(mut self, dst_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.dst_image_layout = dst_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::ImageCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
@@ -730,32 +761,38 @@ impl<'a> BlitImageInfo2KHRBuilder<'a> {
         BlitImageInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_image(mut self, src_image: crate::vk1_0::Image) -> Self {
         self.0.src_image = src_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_image_layout(mut self, src_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.src_image_layout = src_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image(mut self, dst_image: crate::vk1_0::Image) -> Self {
         self.0.dst_image = dst_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image_layout(mut self, dst_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.dst_image_layout = dst_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn filter(mut self, filter: crate::vk1_0::Filter) -> Self {
         self.0.filter = filter as _;
         self
@@ -830,21 +867,25 @@ impl<'a> CopyBufferToImageInfo2KHRBuilder<'a> {
         CopyBufferToImageInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_buffer(mut self, src_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.src_buffer = src_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image(mut self, dst_image: crate::vk1_0::Image) -> Self {
         self.0.dst_image = dst_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image_layout(mut self, dst_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.dst_image_layout = dst_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
@@ -920,21 +961,25 @@ impl<'a> CopyImageToBufferInfo2KHRBuilder<'a> {
         CopyImageToBufferInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_image(mut self, src_image: crate::vk1_0::Image) -> Self {
         self.0.src_image = src_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_image_layout(mut self, src_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.src_image_layout = src_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_buffer(mut self, dst_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.dst_buffer = dst_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;
@@ -1011,26 +1056,31 @@ impl<'a> ResolveImageInfo2KHRBuilder<'a> {
         ResolveImageInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_image(mut self, src_image: crate::vk1_0::Image) -> Self {
         self.0.src_image = src_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_image_layout(mut self, src_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.src_image_layout = src_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image(mut self, dst_image: crate::vk1_0::Image) -> Self {
         self.0.dst_image = dst_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_image_layout(mut self, dst_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.dst_image_layout = dst_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn regions(mut self, regions: &'a [crate::extensions::khr_copy_commands2::ImageResolve2KHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.region_count = regions.len() as _;

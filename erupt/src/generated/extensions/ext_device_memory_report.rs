@@ -102,6 +102,7 @@ impl<'a> PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'a> {
         PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_memory_report(mut self, device_memory_report: bool) -> Self {
         self.0.device_memory_report = device_memory_report as _;
         self
@@ -174,16 +175,19 @@ impl<'a> DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a> {
         DeviceDeviceMemoryReportCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_device_memory_report::DeviceMemoryReportFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_user_callback(mut self, pfn_user_callback: Option<crate::extensions::ext_device_memory_report::PFN_vkDeviceMemoryReportCallbackEXT>) -> Self {
         self.0.pfn_user_callback = pfn_user_callback as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn user_data(mut self, user_data: *mut std::ffi::c_void) -> Self {
         self.0.p_user_data = user_data;
         self
@@ -260,36 +264,43 @@ impl<'a> DeviceMemoryReportCallbackDataEXTBuilder<'a> {
         DeviceMemoryReportCallbackDataEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_device_memory_report::DeviceMemoryReportFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::ext_device_memory_report::DeviceMemoryReportEventTypeEXT) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_object_id(mut self, memory_object_id: u64) -> Self {
         self.0.memory_object_id = memory_object_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object_type(mut self, object_type: crate::vk1_0::ObjectType) -> Self {
         self.0.object_type = object_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object_handle(mut self, object_handle: u64) -> Self {
         self.0.object_handle = object_handle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn heap_index(mut self, heap_index: u32) -> Self {
         self.0.heap_index = heap_index as _;
         self

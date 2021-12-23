@@ -62,6 +62,7 @@ impl<'a> SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
         SharedPresentSurfaceCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shared_present_supported_usage_flags(mut self, shared_present_supported_usage_flags: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.shared_present_supported_usage_flags = shared_present_supported_usage_flags as _;
         self

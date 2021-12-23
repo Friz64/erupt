@@ -67,26 +67,31 @@ impl<'a> ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
         ImportSemaphoreWin32HandleInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_1::SemaphoreImportFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle(mut self, handle: *mut std::ffi::c_void) -> Self {
         self.0.handle = handle;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: &'a u16) -> Self {
         self.0.name = name as _;
         self
@@ -159,16 +164,19 @@ impl<'a> ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
         ExportSemaphoreWin32HandleInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn attributes(mut self, attributes: *const std::ffi::c_void) -> Self {
         self.0.p_attributes = attributes;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dw_access(mut self, dw_access: u32) -> Self {
         self.0.dw_access = dw_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: &'a u16) -> Self {
         self.0.name = name as _;
         self
@@ -242,12 +250,14 @@ impl<'a> D3D12FenceSubmitInfoKHRBuilder<'a> {
         D3D12FenceSubmitInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn wait_semaphore_values(mut self, wait_semaphore_values: &'a [u64]) -> Self {
         self.0.p_wait_semaphore_values = wait_semaphore_values.as_ptr() as _;
         self.0.wait_semaphore_values_count = wait_semaphore_values.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn signal_semaphore_values(mut self, signal_semaphore_values: &'a [u64]) -> Self {
         self.0.p_signal_semaphore_values = signal_semaphore_values.as_ptr() as _;
         self.0.signal_semaphore_values_count = signal_semaphore_values.len() as _;
@@ -320,11 +330,13 @@ impl<'a> SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
         SemaphoreGetWin32HandleInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

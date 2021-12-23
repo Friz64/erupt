@@ -100,46 +100,55 @@ impl<'a> PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'a> {
         PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn primitive_overestimation_size(mut self, primitive_overestimation_size: std::os::raw::c_float) -> Self {
         self.0.primitive_overestimation_size = primitive_overestimation_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_extra_primitive_overestimation_size(mut self, max_extra_primitive_overestimation_size: std::os::raw::c_float) -> Self {
         self.0.max_extra_primitive_overestimation_size = max_extra_primitive_overestimation_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extra_primitive_overestimation_size_granularity(mut self, extra_primitive_overestimation_size_granularity: std::os::raw::c_float) -> Self {
         self.0.extra_primitive_overestimation_size_granularity = extra_primitive_overestimation_size_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn primitive_underestimation(mut self, primitive_underestimation: bool) -> Self {
         self.0.primitive_underestimation = primitive_underestimation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn conservative_point_and_line_rasterization(mut self, conservative_point_and_line_rasterization: bool) -> Self {
         self.0.conservative_point_and_line_rasterization = conservative_point_and_line_rasterization as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn degenerate_triangles_rasterized(mut self, degenerate_triangles_rasterized: bool) -> Self {
         self.0.degenerate_triangles_rasterized = degenerate_triangles_rasterized as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn degenerate_lines_rasterized(mut self, degenerate_lines_rasterized: bool) -> Self {
         self.0.degenerate_lines_rasterized = degenerate_lines_rasterized as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fully_covered_fragment_shader_input_variable(mut self, fully_covered_fragment_shader_input_variable: bool) -> Self {
         self.0.fully_covered_fragment_shader_input_variable = fully_covered_fragment_shader_input_variable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn conservative_rasterization_post_depth_coverage(mut self, conservative_rasterization_post_depth_coverage: bool) -> Self {
         self.0.conservative_rasterization_post_depth_coverage = conservative_rasterization_post_depth_coverage as _;
         self
@@ -212,16 +221,19 @@ impl<'a> PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'a> {
         PipelineRasterizationConservativeStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_conservative_rasterization::PipelineRasterizationConservativeStateCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn conservative_rasterization_mode(mut self, conservative_rasterization_mode: crate::extensions::ext_conservative_rasterization::ConservativeRasterizationModeEXT) -> Self {
         self.0.conservative_rasterization_mode = conservative_rasterization_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extra_primitive_overestimation_size(mut self, extra_primitive_overestimation_size: std::os::raw::c_float) -> Self {
         self.0.extra_primitive_overestimation_size = extra_primitive_overestimation_size as _;
         self

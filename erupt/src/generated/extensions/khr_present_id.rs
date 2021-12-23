@@ -53,6 +53,7 @@ impl<'a> PhysicalDevicePresentIdFeaturesKHRBuilder<'a> {
         PhysicalDevicePresentIdFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn present_id(mut self, present_id: bool) -> Self {
         self.0.present_id = present_id as _;
         self
@@ -124,6 +125,7 @@ impl<'a> PresentIdKHRBuilder<'a> {
         PresentIdKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn present_ids(mut self, present_ids: &'a [u64]) -> Self {
         self.0.p_present_ids = present_ids.as_ptr() as _;
         self.0.swapchain_count = present_ids.len() as _;

@@ -82,6 +82,7 @@ impl<'a> PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'a> {
         PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn diagnostics_config(mut self, diagnostics_config: bool) -> Self {
         self.0.diagnostics_config = diagnostics_config as _;
         self
@@ -152,6 +153,7 @@ impl<'a> DeviceDiagnosticsConfigCreateInfoNVBuilder<'a> {
         DeviceDiagnosticsConfigCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_device_diagnostics_config::DeviceDiagnosticsConfigFlagsNV) -> Self {
         self.0.flags = flags as _;
         self

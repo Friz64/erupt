@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a> {
         PhysicalDeviceShaderImageFootprintFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_footprint(mut self, image_footprint: bool) -> Self {
         self.0.image_footprint = image_footprint as _;
         self

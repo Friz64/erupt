@@ -76,6 +76,7 @@ impl<'a> ImportAndroidHardwareBufferInfoANDROIDBuilder<'a> {
         ImportAndroidHardwareBufferInfoANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: &'a mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer) -> Self {
         self.0.buffer = buffer as _;
         self
@@ -146,6 +147,7 @@ impl<'a> AndroidHardwareBufferUsageANDROIDBuilder<'a> {
         AndroidHardwareBufferUsageANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn android_hardware_buffer_usage(mut self, android_hardware_buffer_usage: u64) -> Self {
         self.0.android_hardware_buffer_usage = android_hardware_buffer_usage as _;
         self
@@ -221,11 +223,13 @@ impl<'a> AndroidHardwareBufferPropertiesANDROIDBuilder<'a> {
         AndroidHardwareBufferPropertiesANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn allocation_size(mut self, allocation_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.allocation_size = allocation_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_bits(mut self, memory_type_bits: u32) -> Self {
         self.0.memory_type_bits = memory_type_bits as _;
         self
@@ -296,6 +300,7 @@ impl<'a> MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a> {
         MemoryGetAndroidHardwareBufferInfoANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
@@ -373,41 +378,49 @@ impl<'a> AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a> {
         AndroidHardwareBufferFormatPropertiesANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn external_format(mut self, external_format: u64) -> Self {
         self.0.external_format = external_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format_features(mut self, format_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.format_features = format_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampler_ycbcr_conversion_components(mut self, sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping) -> Self {
         self.0.sampler_ycbcr_conversion_components = sampler_ycbcr_conversion_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_ycbcr_model(mut self, suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion) -> Self {
         self.0.suggested_ycbcr_model = suggested_ycbcr_model as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_ycbcr_range(mut self, suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange) -> Self {
         self.0.suggested_ycbcr_range = suggested_ycbcr_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_x_chroma_offset(mut self, suggested_x_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_x_chroma_offset = suggested_x_chroma_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_y_chroma_offset(mut self, suggested_y_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_y_chroma_offset = suggested_y_chroma_offset as _;
         self
@@ -478,6 +491,7 @@ impl<'a> ExternalFormatANDROIDBuilder<'a> {
         ExternalFormatANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn external_format(mut self, external_format: u64) -> Self {
         self.0.external_format = external_format as _;
         self
@@ -555,41 +569,49 @@ impl<'a> AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
         AndroidHardwareBufferFormatProperties2ANDROIDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn external_format(mut self, external_format: u64) -> Self {
         self.0.external_format = external_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format_features(mut self, format_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR) -> Self {
         self.0.format_features = format_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampler_ycbcr_conversion_components(mut self, sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping) -> Self {
         self.0.sampler_ycbcr_conversion_components = sampler_ycbcr_conversion_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_ycbcr_model(mut self, suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion) -> Self {
         self.0.suggested_ycbcr_model = suggested_ycbcr_model as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_ycbcr_range(mut self, suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange) -> Self {
         self.0.suggested_ycbcr_range = suggested_ycbcr_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_x_chroma_offset(mut self, suggested_x_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_x_chroma_offset = suggested_x_chroma_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_y_chroma_offset(mut self, suggested_y_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_y_chroma_offset = suggested_y_chroma_offset as _;
         self

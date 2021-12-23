@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder<'a> {
         PhysicalDeviceDedicatedAllocationImageAliasingFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dedicated_allocation_image_aliasing(mut self, dedicated_allocation_image_aliasing: bool) -> Self {
         self.0.dedicated_allocation_image_aliasing = dedicated_allocation_image_aliasing as _;
         self

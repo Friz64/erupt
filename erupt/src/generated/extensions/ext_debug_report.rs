@@ -204,16 +204,19 @@ impl<'a> DebugReportCallbackCreateInfoEXTBuilder<'a> {
         DebugReportCallbackCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_debug_report::DebugReportFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_callback(mut self, pfn_callback: Option<crate::extensions::ext_debug_report::PFN_vkDebugReportCallbackEXT>) -> Self {
         self.0.pfn_callback = pfn_callback as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn user_data(mut self, user_data: *mut std::ffi::c_void) -> Self {
         self.0.p_user_data = user_data;
         self

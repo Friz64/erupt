@@ -62,11 +62,13 @@ impl<'a> SamplerCustomBorderColorCreateInfoEXTBuilder<'a> {
         SamplerCustomBorderColorCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn custom_border_color(mut self, custom_border_color: crate::vk1_0::ClearColorValue) -> Self {
         self.0.custom_border_color = custom_border_color as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
@@ -137,6 +139,7 @@ impl<'a> PhysicalDeviceCustomBorderColorPropertiesEXTBuilder<'a> {
         PhysicalDeviceCustomBorderColorPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_custom_border_color_samplers(mut self, max_custom_border_color_samplers: u32) -> Self {
         self.0.max_custom_border_color_samplers = max_custom_border_color_samplers as _;
         self
@@ -208,11 +211,13 @@ impl<'a> PhysicalDeviceCustomBorderColorFeaturesEXTBuilder<'a> {
         PhysicalDeviceCustomBorderColorFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn custom_border_colors(mut self, custom_border_colors: bool) -> Self {
         self.0.custom_border_colors = custom_border_colors as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn custom_border_color_without_format(mut self, custom_border_color_without_format: bool) -> Self {
         self.0.custom_border_color_without_format = custom_border_color_without_format as _;
         self

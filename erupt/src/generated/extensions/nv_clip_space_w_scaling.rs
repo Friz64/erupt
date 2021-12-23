@@ -53,11 +53,13 @@ impl<'a> ViewportWScalingNVBuilder<'a> {
         ViewportWScalingNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn xcoeff(mut self, xcoeff: std::os::raw::c_float) -> Self {
         self.0.xcoeff = xcoeff as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ycoeff(mut self, ycoeff: std::os::raw::c_float) -> Self {
         self.0.ycoeff = ycoeff as _;
         self
@@ -130,11 +132,13 @@ impl<'a> PipelineViewportWScalingStateCreateInfoNVBuilder<'a> {
         PipelineViewportWScalingStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn viewport_w_scaling_enable(mut self, viewport_w_scaling_enable: bool) -> Self {
         self.0.viewport_w_scaling_enable = viewport_w_scaling_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_w_scalings(mut self, viewport_w_scalings: &'a [crate::extensions::nv_clip_space_w_scaling::ViewportWScalingNVBuilder]) -> Self {
         self.0.p_viewport_w_scalings = viewport_w_scalings.as_ptr() as _;
         self.0.viewport_count = viewport_w_scalings.len() as _;

@@ -55,6 +55,7 @@ impl<'a> PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'a> {
         PhysicalDeviceCoherentMemoryFeaturesAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_coherent_memory(mut self, device_coherent_memory: bool) -> Self {
         self.0.device_coherent_memory = device_coherent_memory as _;
         self

@@ -67,6 +67,7 @@ impl<'a> PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
         PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn mutable_descriptor_type(mut self, mutable_descriptor_type: bool) -> Self {
         self.0.mutable_descriptor_type = mutable_descriptor_type as _;
         self
@@ -133,6 +134,7 @@ impl<'a> MutableDescriptorTypeListVALVEBuilder<'a> {
         MutableDescriptorTypeListVALVEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_types(mut self, descriptor_types: &'a [crate::vk1_0::DescriptorType]) -> Self {
         self.0.p_descriptor_types = descriptor_types.as_ptr() as _;
         self.0.descriptor_type_count = descriptor_types.len() as _;
@@ -205,6 +207,7 @@ impl<'a> MutableDescriptorTypeCreateInfoVALVEBuilder<'a> {
         MutableDescriptorTypeCreateInfoVALVEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn mutable_descriptor_type_lists(mut self, mutable_descriptor_type_lists: &'a [crate::extensions::valve_mutable_descriptor_type::MutableDescriptorTypeListVALVEBuilder]) -> Self {
         self.0.p_mutable_descriptor_type_lists = mutable_descriptor_type_lists.as_ptr() as _;
         self.0.mutable_descriptor_type_list_count = mutable_descriptor_type_lists.len() as _;

@@ -64,6 +64,7 @@ impl<'a> PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder<'a> {
         PhysicalDevicePipelineCreationCacheControlFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_creation_cache_control(mut self, pipeline_creation_cache_control: bool) -> Self {
         self.0.pipeline_creation_cache_control = pipeline_creation_cache_control as _;
         self

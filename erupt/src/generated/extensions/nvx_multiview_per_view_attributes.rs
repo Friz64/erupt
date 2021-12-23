@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder<'a> {
         PhysicalDeviceMultiviewPerViewAttributesPropertiesNVXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn per_view_position_all_components(mut self, per_view_position_all_components: bool) -> Self {
         self.0.per_view_position_all_components = per_view_position_all_components as _;
         self

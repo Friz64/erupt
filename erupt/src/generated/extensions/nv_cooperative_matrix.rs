@@ -120,11 +120,13 @@ impl<'a> PhysicalDeviceCooperativeMatrixFeaturesNVBuilder<'a> {
         PhysicalDeviceCooperativeMatrixFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn cooperative_matrix(mut self, cooperative_matrix: bool) -> Self {
         self.0.cooperative_matrix = cooperative_matrix as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cooperative_matrix_robust_buffer_access(mut self, cooperative_matrix_robust_buffer_access: bool) -> Self {
         self.0.cooperative_matrix_robust_buffer_access = cooperative_matrix_robust_buffer_access as _;
         self
@@ -195,6 +197,7 @@ impl<'a> PhysicalDeviceCooperativeMatrixPropertiesNVBuilder<'a> {
         PhysicalDeviceCooperativeMatrixPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn cooperative_matrix_supported_stages(mut self, cooperative_matrix_supported_stages: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.cooperative_matrix_supported_stages = cooperative_matrix_supported_stages as _;
         self
@@ -272,41 +275,49 @@ impl<'a> CooperativeMatrixPropertiesNVBuilder<'a> {
         CooperativeMatrixPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn m_size(mut self, m_size: u32) -> Self {
         self.0.m_size = m_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn n_size(mut self, n_size: u32) -> Self {
         self.0.n_size = n_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn k_size(mut self, k_size: u32) -> Self {
         self.0.k_size = k_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn a_type(mut self, a_type: crate::extensions::nv_cooperative_matrix::ComponentTypeNV) -> Self {
         self.0.a_type = a_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn b_type(mut self, b_type: crate::extensions::nv_cooperative_matrix::ComponentTypeNV) -> Self {
         self.0.b_type = b_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn c_type(mut self, c_type: crate::extensions::nv_cooperative_matrix::ComponentTypeNV) -> Self {
         self.0.c_type = c_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn d_type(mut self, d_type: crate::extensions::nv_cooperative_matrix::ComponentTypeNV) -> Self {
         self.0.d_type = d_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn scope(mut self, scope: crate::extensions::nv_cooperative_matrix::ScopeNV) -> Self {
         self.0.scope = scope as _;
         self

@@ -79,11 +79,13 @@ impl<'a> PipelineCreationFeedbackEXTBuilder<'a> {
         PipelineCreationFeedbackEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn duration(mut self, duration: u64) -> Self {
         self.0.duration = duration as _;
         self
@@ -156,11 +158,13 @@ impl<'a> PipelineCreationFeedbackCreateInfoEXTBuilder<'a> {
         PipelineCreationFeedbackCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_creation_feedback(mut self, pipeline_creation_feedback: &'a mut crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXT) -> Self {
         self.0.p_pipeline_creation_feedback = pipeline_creation_feedback as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_stage_creation_feedbacks(mut self, pipeline_stage_creation_feedbacks: &'a mut [crate::extensions::ext_pipeline_creation_feedback::PipelineCreationFeedbackEXTBuilder]) -> Self {
         self.0.p_pipeline_stage_creation_feedbacks = pipeline_stage_creation_feedbacks.as_ptr() as _;
         self.0.pipeline_stage_creation_feedback_count = pipeline_stage_creation_feedbacks.len() as _;

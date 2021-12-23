@@ -107,12 +107,14 @@ impl<'a> ValidationFeaturesEXTBuilder<'a> {
         ValidationFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn enabled_validation_features(mut self, enabled_validation_features: &'a [crate::extensions::ext_validation_features::ValidationFeatureEnableEXT]) -> Self {
         self.0.p_enabled_validation_features = enabled_validation_features.as_ptr() as _;
         self.0.enabled_validation_feature_count = enabled_validation_features.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn disabled_validation_features(mut self, disabled_validation_features: &'a [crate::extensions::ext_validation_features::ValidationFeatureDisableEXT]) -> Self {
         self.0.p_disabled_validation_features = disabled_validation_features.as_ptr() as _;
         self.0.disabled_validation_feature_count = disabled_validation_features.len() as _;

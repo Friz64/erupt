@@ -61,11 +61,13 @@ impl<'a> ImportMemoryFdInfoKHRBuilder<'a> {
         ImportMemoryFdInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fd(mut self, fd: std::os::raw::c_int) -> Self {
         self.0.fd = fd as _;
         self
@@ -136,6 +138,7 @@ impl<'a> MemoryFdPropertiesKHRBuilder<'a> {
         MemoryFdPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_bits(mut self, memory_type_bits: u32) -> Self {
         self.0.memory_type_bits = memory_type_bits as _;
         self
@@ -207,11 +210,13 @@ impl<'a> MemoryGetFdInfoKHRBuilder<'a> {
         MemoryGetFdInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

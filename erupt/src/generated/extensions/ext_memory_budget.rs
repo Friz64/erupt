@@ -49,11 +49,13 @@ impl<'a> PhysicalDeviceMemoryBudgetPropertiesEXTBuilder<'a> {
         PhysicalDeviceMemoryBudgetPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn heap_budget(mut self, heap_budget: [crate::vk1_0::DeviceSize; 16]) -> Self {
         self.0.heap_budget = heap_budget as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn heap_usage(mut self, heap_usage: [crate::vk1_0::DeviceSize; 16]) -> Self {
         self.0.heap_usage = heap_usage as _;
         self

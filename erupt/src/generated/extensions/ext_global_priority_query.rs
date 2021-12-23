@@ -56,6 +56,7 @@ impl<'a> PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
         PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn global_priority_query(mut self, global_priority_query: bool) -> Self {
         self.0.global_priority_query = global_priority_query as _;
         self
@@ -127,6 +128,7 @@ impl<'a> QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
         QueueFamilyGlobalPriorityPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn priorities(mut self, priorities: &'a [crate::extensions::ext_global_priority::QueueGlobalPriorityEXT]) -> Self {
         let mut priorities_array = [Default::default(); 16];
         let truncated_len = priorities.len().min(priorities_array.len());

@@ -49,6 +49,7 @@ impl<'a> PresentRegionsKHRBuilder<'a> {
         PresentRegionsKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn regions(mut self, regions: &'a [crate::extensions::khr_incremental_present::PresentRegionKHRBuilder]) -> Self {
         self.0.p_regions = regions.as_ptr() as _;
         self.0.swapchain_count = regions.len() as _;
@@ -116,6 +117,7 @@ impl<'a> PresentRegionKHRBuilder<'a> {
         PresentRegionKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn rectangles(mut self, rectangles: &'a [crate::extensions::khr_incremental_present::RectLayerKHRBuilder]) -> Self {
         self.0.p_rectangles = rectangles.as_ptr() as _;
         self.0.rectangle_count = rectangles.len() as _;
@@ -184,16 +186,19 @@ impl<'a> RectLayerKHRBuilder<'a> {
         RectLayerKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::Offset2D) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extent(mut self, extent: crate::vk1_0::Extent2D) -> Self {
         self.0.extent = extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer(mut self, layer: u32) -> Self {
         self.0.layer = layer as _;
         self

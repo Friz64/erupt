@@ -51,6 +51,7 @@ impl<'a> PipelineLibraryCreateInfoKHRBuilder<'a> {
         PipelineLibraryCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn libraries(mut self, libraries: &'a [crate::vk1_0::Pipeline]) -> Self {
         self.0.p_libraries = libraries.as_ptr() as _;
         self.0.library_count = libraries.len() as _;

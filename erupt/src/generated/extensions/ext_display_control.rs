@@ -126,6 +126,7 @@ impl<'a> DisplayPowerInfoEXTBuilder<'a> {
         DisplayPowerInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn power_state(mut self, power_state: crate::extensions::ext_display_control::DisplayPowerStateEXT) -> Self {
         self.0.power_state = power_state as _;
         self
@@ -196,6 +197,7 @@ impl<'a> DeviceEventInfoEXTBuilder<'a> {
         DeviceEventInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_event(mut self, device_event: crate::extensions::ext_display_control::DeviceEventTypeEXT) -> Self {
         self.0.device_event = device_event as _;
         self
@@ -266,6 +268,7 @@ impl<'a> DisplayEventInfoEXTBuilder<'a> {
         DisplayEventInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn display_event(mut self, display_event: crate::extensions::ext_display_control::DisplayEventTypeEXT) -> Self {
         self.0.display_event = display_event as _;
         self
@@ -336,6 +339,7 @@ impl<'a> SwapchainCounterCreateInfoEXTBuilder<'a> {
         SwapchainCounterCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn surface_counters(mut self, surface_counters: crate::extensions::ext_display_surface_counter::SurfaceCounterFlagsEXT) -> Self {
         self.0.surface_counters = surface_counters as _;
         self

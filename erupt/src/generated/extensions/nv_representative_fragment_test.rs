@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
         PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn representative_fragment_test(mut self, representative_fragment_test: bool) -> Self {
         self.0.representative_fragment_test = representative_fragment_test as _;
         self
@@ -123,6 +124,7 @@ impl<'a> PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder<'a> {
         PipelineRepresentativeFragmentTestStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn representative_fragment_test_enable(mut self, representative_fragment_test_enable: bool) -> Self {
         self.0.representative_fragment_test_enable = representative_fragment_test_enable as _;
         self

@@ -59,6 +59,7 @@ impl<'a> QueueFamilyCheckpointPropertiesNVBuilder<'a> {
         QueueFamilyCheckpointPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn checkpoint_execution_stage_mask(mut self, checkpoint_execution_stage_mask: crate::vk1_0::PipelineStageFlags) -> Self {
         self.0.checkpoint_execution_stage_mask = checkpoint_execution_stage_mask as _;
         self
@@ -130,11 +131,13 @@ impl<'a> CheckpointDataNVBuilder<'a> {
         CheckpointDataNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn stage(mut self, stage: crate::vk1_0::PipelineStageFlagBits) -> Self {
         self.0.stage = stage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn checkpoint_marker(mut self, checkpoint_marker: *mut std::ffi::c_void) -> Self {
         self.0.p_checkpoint_marker = checkpoint_marker;
         self

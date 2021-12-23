@@ -57,6 +57,7 @@ impl<'a> PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'a> {
         PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ycbcr2plane444_formats(mut self, ycbcr2plane444_formats: bool) -> Self {
         self.0.ycbcr2plane444_formats = ycbcr2plane444_formats as _;
         self

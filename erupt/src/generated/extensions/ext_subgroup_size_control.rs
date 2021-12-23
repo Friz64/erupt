@@ -62,11 +62,13 @@ impl<'a> PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder<'a> {
         PhysicalDeviceSubgroupSizeControlFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn subgroup_size_control(mut self, subgroup_size_control: bool) -> Self {
         self.0.subgroup_size_control = subgroup_size_control as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compute_full_subgroups(mut self, compute_full_subgroups: bool) -> Self {
         self.0.compute_full_subgroups = compute_full_subgroups as _;
         self
@@ -140,21 +142,25 @@ impl<'a> PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder<'a> {
         PhysicalDeviceSubgroupSizeControlPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_subgroup_size(mut self, min_subgroup_size: u32) -> Self {
         self.0.min_subgroup_size = min_subgroup_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_subgroup_size(mut self, max_subgroup_size: u32) -> Self {
         self.0.max_subgroup_size = max_subgroup_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_compute_workgroup_subgroups(mut self, max_compute_workgroup_subgroups: u32) -> Self {
         self.0.max_compute_workgroup_subgroups = max_compute_workgroup_subgroups as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn required_subgroup_size_stages(mut self, required_subgroup_size_stages: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.required_subgroup_size_stages = required_subgroup_size_stages as _;
         self
@@ -225,6 +231,7 @@ impl<'a> PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder<'a> {
         PipelineShaderStageRequiredSubgroupSizeCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn required_subgroup_size(mut self, required_subgroup_size: u32) -> Self {
         self.0.required_subgroup_size = required_subgroup_size as _;
         self

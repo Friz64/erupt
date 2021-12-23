@@ -65,11 +65,13 @@ impl<'a> ImportMemoryZirconHandleInfoFUCHSIABuilder<'a> {
         ImportMemoryZirconHandleInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle(mut self, handle: *mut std::ffi::c_void) -> Self {
         self.0.handle = handle;
         self
@@ -140,6 +142,7 @@ impl<'a> MemoryZirconHandlePropertiesFUCHSIABuilder<'a> {
         MemoryZirconHandlePropertiesFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_bits(mut self, memory_type_bits: u32) -> Self {
         self.0.memory_type_bits = memory_type_bits as _;
         self
@@ -211,11 +214,13 @@ impl<'a> MemoryGetZirconHandleInfoFUCHSIABuilder<'a> {
         MemoryGetZirconHandleInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

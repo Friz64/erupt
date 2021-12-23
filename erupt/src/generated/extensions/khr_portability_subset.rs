@@ -73,76 +73,91 @@ impl<'a> PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a> {
         PhysicalDevicePortabilitySubsetFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn constant_alpha_color_blend_factors(mut self, constant_alpha_color_blend_factors: bool) -> Self {
         self.0.constant_alpha_color_blend_factors = constant_alpha_color_blend_factors as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn events(mut self, events: bool) -> Self {
         self.0.events = events as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_view_format_reinterpretation(mut self, image_view_format_reinterpretation: bool) -> Self {
         self.0.image_view_format_reinterpretation = image_view_format_reinterpretation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_view_format_swizzle(mut self, image_view_format_swizzle: bool) -> Self {
         self.0.image_view_format_swizzle = image_view_format_swizzle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_view2_d_on3_d_image(mut self, image_view2_d_on3_d_image: bool) -> Self {
         self.0.image_view2_d_on3_d_image = image_view2_d_on3_d_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn multisample_array_image(mut self, multisample_array_image: bool) -> Self {
         self.0.multisample_array_image = multisample_array_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mutable_comparison_samplers(mut self, mutable_comparison_samplers: bool) -> Self {
         self.0.mutable_comparison_samplers = mutable_comparison_samplers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn point_polygons(mut self, point_polygons: bool) -> Self {
         self.0.point_polygons = point_polygons as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampler_mip_lod_bias(mut self, sampler_mip_lod_bias: bool) -> Self {
         self.0.sampler_mip_lod_bias = sampler_mip_lod_bias as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn separate_stencil_mask_ref(mut self, separate_stencil_mask_ref: bool) -> Self {
         self.0.separate_stencil_mask_ref = separate_stencil_mask_ref as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_sample_rate_interpolation_functions(mut self, shader_sample_rate_interpolation_functions: bool) -> Self {
         self.0.shader_sample_rate_interpolation_functions = shader_sample_rate_interpolation_functions as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tessellation_isolines(mut self, tessellation_isolines: bool) -> Self {
         self.0.tessellation_isolines = tessellation_isolines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tessellation_point_mode(mut self, tessellation_point_mode: bool) -> Self {
         self.0.tessellation_point_mode = tessellation_point_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn triangle_fans(mut self, triangle_fans: bool) -> Self {
         self.0.triangle_fans = triangle_fans as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_attribute_access_beyond_stride(mut self, vertex_attribute_access_beyond_stride: bool) -> Self {
         self.0.vertex_attribute_access_beyond_stride = vertex_attribute_access_beyond_stride as _;
         self
@@ -213,6 +228,7 @@ impl<'a> PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a> {
         PhysicalDevicePortabilitySubsetPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_vertex_input_binding_stride_alignment(mut self, min_vertex_input_binding_stride_alignment: u32) -> Self {
         self.0.min_vertex_input_binding_stride_alignment = min_vertex_input_binding_stride_alignment as _;
         self

@@ -70,6 +70,7 @@ impl<'a> DisplayProperties2KHRBuilder<'a> {
         DisplayProperties2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn display_properties(mut self, display_properties: crate::extensions::khr_display::DisplayPropertiesKHR) -> Self {
         self.0.display_properties = display_properties as _;
         self
@@ -140,6 +141,7 @@ impl<'a> DisplayPlaneProperties2KHRBuilder<'a> {
         DisplayPlaneProperties2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn display_plane_properties(mut self, display_plane_properties: crate::extensions::khr_display::DisplayPlanePropertiesKHR) -> Self {
         self.0.display_plane_properties = display_plane_properties as _;
         self
@@ -210,6 +212,7 @@ impl<'a> DisplayModeProperties2KHRBuilder<'a> {
         DisplayModeProperties2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn display_mode_properties(mut self, display_mode_properties: crate::extensions::khr_display::DisplayModePropertiesKHR) -> Self {
         self.0.display_mode_properties = display_mode_properties as _;
         self
@@ -281,11 +284,13 @@ impl<'a> DisplayPlaneInfo2KHRBuilder<'a> {
         DisplayPlaneInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn mode(mut self, mode: crate::extensions::khr_display::DisplayModeKHR) -> Self {
         self.0.mode = mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn plane_index(mut self, plane_index: u32) -> Self {
         self.0.plane_index = plane_index as _;
         self
@@ -356,6 +361,7 @@ impl<'a> DisplayPlaneCapabilities2KHRBuilder<'a> {
         DisplayPlaneCapabilities2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn capabilities(mut self, capabilities: crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR) -> Self {
         self.0.capabilities = capabilities as _;
         self

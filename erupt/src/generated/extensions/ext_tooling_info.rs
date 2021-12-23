@@ -92,26 +92,31 @@ impl<'a> PhysicalDeviceToolPropertiesEXTBuilder<'a> {
         PhysicalDeviceToolPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: [std::os::raw::c_char; 256]) -> Self {
         self.0.name = name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn version(mut self, version: [std::os::raw::c_char; 256]) -> Self {
         self.0.version = version as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn purposes(mut self, purposes: crate::extensions::ext_tooling_info::ToolPurposeFlagsEXT) -> Self {
         self.0.purposes = purposes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn description(mut self, description: [std::os::raw::c_char; 256]) -> Self {
         self.0.description = description as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer(mut self, layer: [std::os::raw::c_char; 256]) -> Self {
         self.0.layer = layer as _;
         self

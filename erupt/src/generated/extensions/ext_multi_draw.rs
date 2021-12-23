@@ -55,11 +55,13 @@ impl<'a> MultiDrawInfoEXTBuilder<'a> {
         MultiDrawInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn first_vertex(mut self, first_vertex: u32) -> Self {
         self.0.first_vertex = first_vertex as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_count(mut self, vertex_count: u32) -> Self {
         self.0.vertex_count = vertex_count as _;
         self
@@ -127,16 +129,19 @@ impl<'a> MultiDrawIndexedInfoEXTBuilder<'a> {
         MultiDrawIndexedInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn first_index(mut self, first_index: u32) -> Self {
         self.0.first_index = first_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index_count(mut self, index_count: u32) -> Self {
         self.0.index_count = index_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_offset(mut self, vertex_offset: i32) -> Self {
         self.0.vertex_offset = vertex_offset as _;
         self
@@ -207,6 +212,7 @@ impl<'a> PhysicalDeviceMultiDrawPropertiesEXTBuilder<'a> {
         PhysicalDeviceMultiDrawPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_multi_draw_count(mut self, max_multi_draw_count: u32) -> Self {
         self.0.max_multi_draw_count = max_multi_draw_count as _;
         self
@@ -281,6 +287,7 @@ impl<'a> PhysicalDeviceMultiDrawFeaturesEXTBuilder<'a> {
         PhysicalDeviceMultiDrawFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn multi_draw(mut self, multi_draw: bool) -> Self {
         self.0.multi_draw = multi_draw as _;
         self

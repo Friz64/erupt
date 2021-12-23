@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'a> {
         PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn inherited_viewport_scissor2_d(mut self, inherited_viewport_scissor2_d: bool) -> Self {
         self.0.inherited_viewport_scissor2_d = inherited_viewport_scissor2_d as _;
         self
@@ -125,16 +126,19 @@ impl<'a> CommandBufferInheritanceViewportScissorInfoNVBuilder<'a> {
         CommandBufferInheritanceViewportScissorInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn viewport_scissor2_d(mut self, viewport_scissor2_d: bool) -> Self {
         self.0.viewport_scissor2_d = viewport_scissor2_d as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_depth_count(mut self, viewport_depth_count: u32) -> Self {
         self.0.viewport_depth_count = viewport_depth_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_depths(mut self, viewport_depths: &'a crate::vk1_0::Viewport) -> Self {
         self.0.p_viewport_depths = viewport_depths as _;
         self

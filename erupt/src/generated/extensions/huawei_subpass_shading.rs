@@ -79,11 +79,13 @@ impl<'a> SubpassShadingPipelineCreateInfoHUAWEIBuilder<'a> {
         SubpassShadingPipelineCreateInfoHUAWEIBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn render_pass(mut self, render_pass: crate::vk1_0::RenderPass) -> Self {
         self.0.render_pass = render_pass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subpass(mut self, subpass: u32) -> Self {
         self.0.subpass = subpass as _;
         self
@@ -154,6 +156,7 @@ impl<'a> PhysicalDeviceSubpassShadingPropertiesHUAWEIBuilder<'a> {
         PhysicalDeviceSubpassShadingPropertiesHUAWEIBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_subpass_shading_workgroup_size_aspect_ratio(mut self, max_subpass_shading_workgroup_size_aspect_ratio: u32) -> Self {
         self.0.max_subpass_shading_workgroup_size_aspect_ratio = max_subpass_shading_workgroup_size_aspect_ratio as _;
         self
@@ -224,6 +227,7 @@ impl<'a> PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'a> {
         PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn subpass_shading(mut self, subpass_shading: bool) -> Self {
         self.0.subpass_shading = subpass_shading as _;
         self

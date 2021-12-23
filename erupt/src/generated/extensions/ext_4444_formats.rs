@@ -56,11 +56,13 @@ impl<'a> PhysicalDevice4444FormatsFeaturesEXTBuilder<'a> {
         PhysicalDevice4444FormatsFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format_a4r4g4b4(mut self, format_a4r4g4b4: bool) -> Self {
         self.0.format_a4r4g4b4 = format_a4r4g4b4 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format_a4b4g4r4(mut self, format_a4b4g4r4: bool) -> Self {
         self.0.format_a4b4g4r4 = format_a4b4g4r4 as _;
         self

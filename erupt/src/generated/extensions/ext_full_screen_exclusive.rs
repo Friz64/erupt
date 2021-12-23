@@ -105,6 +105,7 @@ impl<'a> SurfaceFullScreenExclusiveInfoEXTBuilder<'a> {
         SurfaceFullScreenExclusiveInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn full_screen_exclusive(mut self, full_screen_exclusive: crate::extensions::ext_full_screen_exclusive::FullScreenExclusiveEXT) -> Self {
         self.0.full_screen_exclusive = full_screen_exclusive as _;
         self
@@ -175,6 +176,7 @@ impl<'a> SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a> {
         SurfaceFullScreenExclusiveWin32InfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn hmonitor(mut self, hmonitor: *mut std::ffi::c_void) -> Self {
         self.0.hmonitor = hmonitor;
         self
@@ -245,6 +247,7 @@ impl<'a> SurfaceCapabilitiesFullScreenExclusiveEXTBuilder<'a> {
         SurfaceCapabilitiesFullScreenExclusiveEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn full_screen_exclusive_supported(mut self, full_screen_exclusive_supported: bool) -> Self {
         self.0.full_screen_exclusive_supported = full_screen_exclusive_supported as _;
         self

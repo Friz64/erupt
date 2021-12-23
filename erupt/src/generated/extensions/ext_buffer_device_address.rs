@@ -90,16 +90,19 @@ impl<'a> PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'a> {
         PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer_device_address(mut self, buffer_device_address: bool) -> Self {
         self.0.buffer_device_address = buffer_device_address as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_device_address_capture_replay(mut self, buffer_device_address_capture_replay: bool) -> Self {
         self.0.buffer_device_address_capture_replay = buffer_device_address_capture_replay as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_device_address_multi_device(mut self, buffer_device_address_multi_device: bool) -> Self {
         self.0.buffer_device_address_multi_device = buffer_device_address_multi_device as _;
         self
@@ -170,6 +173,7 @@ impl<'a> BufferDeviceAddressCreateInfoEXTBuilder<'a> {
         BufferDeviceAddressCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_address(mut self, device_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.device_address = device_address as _;
         self

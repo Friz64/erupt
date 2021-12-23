@@ -131,11 +131,13 @@ impl<'a> VideoDecodeH264ProfileEXTBuilder<'a> {
         VideoDecodeH264ProfileEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn std_profile_idc(mut self, std_profile_idc: crate::external::vk_video::StdVideoH264ProfileIdc) -> Self {
         self.0.std_profile_idc = std_profile_idc as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn picture_layout(mut self, picture_layout: crate::extensions::ext_video_decode_h264::VideoDecodeH264PictureLayoutFlagsEXT) -> Self {
         self.0.picture_layout = picture_layout as _;
         self
@@ -208,16 +210,19 @@ impl<'a> VideoDecodeH264CapabilitiesEXTBuilder<'a> {
         VideoDecodeH264CapabilitiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_level(mut self, max_level: u32) -> Self {
         self.0.max_level = max_level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn field_offset_granularity(mut self, field_offset_granularity: crate::vk1_0::Offset2D) -> Self {
         self.0.field_offset_granularity = field_offset_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn std_extension_version(mut self, std_extension_version: crate::vk1_0::ExtensionProperties) -> Self {
         self.0.std_extension_version = std_extension_version as _;
         self
@@ -289,11 +294,13 @@ impl<'a> VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
         VideoDecodeH264SessionCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_video_decode_h264::VideoDecodeH264CreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn std_extension_version(mut self, std_extension_version: &'a crate::vk1_0::ExtensionProperties) -> Self {
         self.0.p_std_extension_version = std_extension_version as _;
         self
@@ -367,12 +374,14 @@ impl<'a> VideoDecodeH264SessionParametersAddInfoEXTBuilder<'a> {
         VideoDecodeH264SessionParametersAddInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sps_std(mut self, sps_std: &'a [crate::external::vk_video::StdVideoH264SequenceParameterSetBuilder]) -> Self {
         self.0.p_sps_std = sps_std.as_ptr() as _;
         self.0.sps_std_count = sps_std.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_std(mut self, pps_std: &'a [crate::external::vk_video::StdVideoH264PictureParameterSetBuilder]) -> Self {
         self.0.p_pps_std = pps_std.as_ptr() as _;
         self.0.pps_std_count = pps_std.len() as _;
@@ -446,16 +455,19 @@ impl<'a> VideoDecodeH264SessionParametersCreateInfoEXTBuilder<'a> {
         VideoDecodeH264SessionParametersCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_sps_std_count(mut self, max_sps_std_count: u32) -> Self {
         self.0.max_sps_std_count = max_sps_std_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_pps_std_count(mut self, max_pps_std_count: u32) -> Self {
         self.0.max_pps_std_count = max_pps_std_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn parameters_add_info(mut self, parameters_add_info: &'a crate::extensions::ext_video_decode_h264::VideoDecodeH264SessionParametersAddInfoEXT) -> Self {
         self.0.p_parameters_add_info = parameters_add_info as _;
         self
@@ -530,11 +542,13 @@ impl<'a> VideoDecodeH264PictureInfoEXTBuilder<'a> {
         VideoDecodeH264PictureInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn std_picture_info(mut self, std_picture_info: &'a crate::external::vk_video::StdVideoDecodeH264PictureInfo) -> Self {
         self.0.p_std_picture_info = std_picture_info as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slices_data_offsets(mut self, slices_data_offsets: &'a [u32]) -> Self {
         self.0.p_slices_data_offsets = slices_data_offsets.as_ptr() as _;
         self.0.slices_count = slices_data_offsets.len() as _;
@@ -606,6 +620,7 @@ impl<'a> VideoDecodeH264DpbSlotInfoEXTBuilder<'a> {
         VideoDecodeH264DpbSlotInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn std_reference_info(mut self, std_reference_info: &'a crate::external::vk_video::StdVideoDecodeH264ReferenceInfo) -> Self {
         self.0.p_std_reference_info = std_reference_info as _;
         self
@@ -676,6 +691,7 @@ impl<'a> VideoDecodeH264MvcEXTBuilder<'a> {
         VideoDecodeH264MvcEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn std_mvc(mut self, std_mvc: &'a crate::external::vk_video::StdVideoDecodeH264Mvc) -> Self {
         self.0.p_std_mvc = std_mvc as _;
         self

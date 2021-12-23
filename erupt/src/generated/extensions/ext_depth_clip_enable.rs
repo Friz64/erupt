@@ -73,6 +73,7 @@ impl<'a> PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<'a> {
         PhysicalDeviceDepthClipEnableFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn depth_clip_enable(mut self, depth_clip_enable: bool) -> Self {
         self.0.depth_clip_enable = depth_clip_enable as _;
         self
@@ -144,11 +145,13 @@ impl<'a> PipelineRasterizationDepthClipStateCreateInfoEXTBuilder<'a> {
         PipelineRasterizationDepthClipStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_depth_clip_enable::PipelineRasterizationDepthClipStateCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_clip_enable(mut self, depth_clip_enable: bool) -> Self {
         self.0.depth_clip_enable = depth_clip_enable as _;
         self

@@ -70,16 +70,19 @@ impl<'a> PipelineCoverageToColorStateCreateInfoNVBuilder<'a> {
         PipelineCoverageToColorStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_fragment_coverage_to_color::PipelineCoverageToColorStateCreateFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coverage_to_color_enable(mut self, coverage_to_color_enable: bool) -> Self {
         self.0.coverage_to_color_enable = coverage_to_color_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coverage_to_color_location(mut self, coverage_to_color_location: u32) -> Self {
         self.0.coverage_to_color_location = coverage_to_color_location as _;
         self

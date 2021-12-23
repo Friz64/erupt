@@ -97,16 +97,19 @@ impl<'a> PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder<'a> {
         PhysicalDeviceFragmentDensityMapFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_map(mut self, fragment_density_map: bool) -> Self {
         self.0.fragment_density_map = fragment_density_map as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_map_dynamic(mut self, fragment_density_map_dynamic: bool) -> Self {
         self.0.fragment_density_map_dynamic = fragment_density_map_dynamic as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_map_non_subsampled_images(mut self, fragment_density_map_non_subsampled_images: bool) -> Self {
         self.0.fragment_density_map_non_subsampled_images = fragment_density_map_non_subsampled_images as _;
         self
@@ -179,16 +182,19 @@ impl<'a> PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
         PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_fragment_density_texel_size(mut self, min_fragment_density_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.min_fragment_density_texel_size = min_fragment_density_texel_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_density_texel_size(mut self, max_fragment_density_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_fragment_density_texel_size = max_fragment_density_texel_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_invocations(mut self, fragment_density_invocations: bool) -> Self {
         self.0.fragment_density_invocations = fragment_density_invocations as _;
         self
@@ -259,6 +265,7 @@ impl<'a> RenderPassFragmentDensityMapCreateInfoEXTBuilder<'a> {
         RenderPassFragmentDensityMapCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_map_attachment(mut self, fragment_density_map_attachment: crate::vk1_0::AttachmentReference) -> Self {
         self.0.fragment_density_map_attachment = fragment_density_map_attachment as _;
         self

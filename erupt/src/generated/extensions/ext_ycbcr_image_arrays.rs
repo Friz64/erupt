@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a> {
         PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ycbcr_image_arrays(mut self, ycbcr_image_arrays: bool) -> Self {
         self.0.ycbcr_image_arrays = ycbcr_image_arrays as _;
         self

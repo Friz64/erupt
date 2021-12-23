@@ -72,11 +72,13 @@ impl<'a> ImagePipeSurfaceCreateInfoFUCHSIABuilder<'a> {
         ImagePipeSurfaceCreateInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::fuchsia_imagepipe_surface::ImagePipeSurfaceCreateFlagsFUCHSIA) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_pipe_handle(mut self, image_pipe_handle: *mut std::ffi::c_void) -> Self {
         self.0.image_pipe_handle = image_pipe_handle;
         self

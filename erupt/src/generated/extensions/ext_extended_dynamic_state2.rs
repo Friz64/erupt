@@ -85,16 +85,19 @@ impl<'a> PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'a> {
         PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn extended_dynamic_state2(mut self, extended_dynamic_state2: bool) -> Self {
         self.0.extended_dynamic_state2 = extended_dynamic_state2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extended_dynamic_state2_logic_op(mut self, extended_dynamic_state2_logic_op: bool) -> Self {
         self.0.extended_dynamic_state2_logic_op = extended_dynamic_state2_logic_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn extended_dynamic_state2_patch_control_points(mut self, extended_dynamic_state2_patch_control_points: bool) -> Self {
         self.0.extended_dynamic_state2_patch_control_points = extended_dynamic_state2_patch_control_points as _;
         self

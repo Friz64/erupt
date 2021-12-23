@@ -69,11 +69,13 @@ impl<'a> PhysicalDeviceShaderCoreProperties2AMDBuilder<'a> {
         PhysicalDeviceShaderCoreProperties2AMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_core_features(mut self, shader_core_features: crate::extensions::amd_shader_core_properties2::ShaderCorePropertiesFlagsAMD) -> Self {
         self.0.shader_core_features = shader_core_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn active_compute_unit_count(mut self, active_compute_unit_count: u32) -> Self {
         self.0.active_compute_unit_count = active_compute_unit_count as _;
         self

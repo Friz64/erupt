@@ -130,11 +130,13 @@ impl<'a> PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'a> {
         PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ray_tracing_motion_blur(mut self, ray_tracing_motion_blur: bool) -> Self {
         self.0.ray_tracing_motion_blur = ray_tracing_motion_blur as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ray_tracing_motion_blur_pipeline_trace_rays_indirect(mut self, ray_tracing_motion_blur_pipeline_trace_rays_indirect: bool) -> Self {
         self.0.ray_tracing_motion_blur_pipeline_trace_rays_indirect = ray_tracing_motion_blur_pipeline_trace_rays_indirect as _;
         self
@@ -205,6 +207,7 @@ impl<'a> AccelerationStructureGeometryMotionTrianglesDataNVBuilder<'a> {
         AccelerationStructureGeometryMotionTrianglesDataNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vertex_data(mut self, vertex_data: crate::extensions::khr_acceleration_structure::DeviceOrHostAddressConstKHR) -> Self {
         self.0.vertex_data = vertex_data as _;
         self
@@ -276,11 +279,13 @@ impl<'a> AccelerationStructureMotionInfoNVBuilder<'a> {
         AccelerationStructureMotionInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_instances(mut self, max_instances: u32) -> Self {
         self.0.max_instances = max_instances as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionInfoFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
@@ -361,81 +366,97 @@ impl<'a> SRTDataNVBuilder<'a> {
         SRTDataNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sx(mut self, sx: std::os::raw::c_float) -> Self {
         self.0.sx = sx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn a(mut self, a: std::os::raw::c_float) -> Self {
         self.0.a = a as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn b(mut self, b: std::os::raw::c_float) -> Self {
         self.0.b = b as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pvx(mut self, pvx: std::os::raw::c_float) -> Self {
         self.0.pvx = pvx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sy(mut self, sy: std::os::raw::c_float) -> Self {
         self.0.sy = sy as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn c(mut self, c: std::os::raw::c_float) -> Self {
         self.0.c = c as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pvy(mut self, pvy: std::os::raw::c_float) -> Self {
         self.0.pvy = pvy as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sz(mut self, sz: std::os::raw::c_float) -> Self {
         self.0.sz = sz as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pvz(mut self, pvz: std::os::raw::c_float) -> Self {
         self.0.pvz = pvz as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn qx(mut self, qx: std::os::raw::c_float) -> Self {
         self.0.qx = qx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn qy(mut self, qy: std::os::raw::c_float) -> Self {
         self.0.qy = qy as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn qz(mut self, qz: std::os::raw::c_float) -> Self {
         self.0.qz = qz as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn qw(mut self, qw: std::os::raw::c_float) -> Self {
         self.0.qw = qw as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tx(mut self, tx: std::os::raw::c_float) -> Self {
         self.0.tx = tx as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ty(mut self, ty: std::os::raw::c_float) -> Self {
         self.0.ty = ty as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tz(mut self, tz: std::os::raw::c_float) -> Self {
         self.0.tz = tz as _;
         self
@@ -505,36 +526,43 @@ impl<'a> AccelerationStructureSRTMotionInstanceNVBuilder<'a> {
         AccelerationStructureSRTMotionInstanceNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn transform_t0(mut self, transform_t0: crate::extensions::nv_ray_tracing_motion_blur::SRTDataNV) -> Self {
         self.0.transform_t0 = transform_t0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_t1(mut self, transform_t1: crate::extensions::nv_ray_tracing_motion_blur::SRTDataNV) -> Self {
         self.0.transform_t1 = transform_t1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn instance_custom_index(mut self, instance_custom_index: u32) -> Self {
         self.0.instance_custom_index_and_mask = crate::bits_copy!(self.0.instance_custom_index_and_mask, instance_custom_index, 0usize, 23usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn mask(mut self, mask: u32) -> Self {
         self.0.instance_custom_index_and_mask = crate::bits_copy!(self.0.instance_custom_index_and_mask, mask, 24usize, 31usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn instance_shader_binding_table_record_offset(mut self, instance_shader_binding_table_record_offset: u32) -> Self {
         self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(self.0.instance_shader_binding_table_record_offset_and_flags, instance_shader_binding_table_record_offset, 0usize, 23usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR) -> Self {
         self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(self.0.instance_shader_binding_table_record_offset_and_flags, flags.bits(), 24usize, 31usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn acceleration_structure_reference(mut self, acceleration_structure_reference: u64) -> Self {
         self.0.acceleration_structure_reference = acceleration_structure_reference as _;
         self
@@ -604,36 +632,43 @@ impl<'a> AccelerationStructureMatrixMotionInstanceNVBuilder<'a> {
         AccelerationStructureMatrixMotionInstanceNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn transform_t0(mut self, transform_t0: crate::extensions::khr_acceleration_structure::TransformMatrixKHR) -> Self {
         self.0.transform_t0 = transform_t0 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_t1(mut self, transform_t1: crate::extensions::khr_acceleration_structure::TransformMatrixKHR) -> Self {
         self.0.transform_t1 = transform_t1 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn instance_custom_index(mut self, instance_custom_index: u32) -> Self {
         self.0.instance_custom_index_and_mask = crate::bits_copy!(self.0.instance_custom_index_and_mask, instance_custom_index, 0usize, 23usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn mask(mut self, mask: u32) -> Self {
         self.0.instance_custom_index_and_mask = crate::bits_copy!(self.0.instance_custom_index_and_mask, mask, 24usize, 31usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn instance_shader_binding_table_record_offset(mut self, instance_shader_binding_table_record_offset: u32) -> Self {
         self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(self.0.instance_shader_binding_table_record_offset_and_flags, instance_shader_binding_table_record_offset, 0usize, 23usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR) -> Self {
         self.0.instance_shader_binding_table_record_offset_and_flags = crate::bits_copy!(self.0.instance_shader_binding_table_record_offset_and_flags, flags.bits(), 24usize, 31usize);
         self
     }
     #[inline]
+    #[must_use]
     pub fn acceleration_structure_reference(mut self, acceleration_structure_reference: u64) -> Self {
         self.0.acceleration_structure_reference = acceleration_structure_reference as _;
         self
@@ -720,16 +755,19 @@ impl<'a> AccelerationStructureMotionInstanceNVBuilder<'a> {
         AccelerationStructureMotionInstanceNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionInstanceTypeNV) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionInstanceFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data(mut self, data: crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionInstanceDataNV) -> Self {
         self.0.data = data as _;
         self

@@ -62,6 +62,7 @@ impl<'a> PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a> {
         PhysicalDeviceExclusiveScissorFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn exclusive_scissor(mut self, exclusive_scissor: bool) -> Self {
         self.0.exclusive_scissor = exclusive_scissor as _;
         self
@@ -133,6 +134,7 @@ impl<'a> PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
         PipelineViewportExclusiveScissorStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn exclusive_scissors(mut self, exclusive_scissors: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_exclusive_scissors = exclusive_scissors.as_ptr() as _;
         self.0.exclusive_scissor_count = exclusive_scissors.len() as _;

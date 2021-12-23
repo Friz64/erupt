@@ -190,77 +190,92 @@ impl<'a> SwapchainCreateInfoKHRBuilder<'a> {
         SwapchainCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_swapchain::SwapchainCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn surface(mut self, surface: crate::extensions::khr_surface::SurfaceKHR) -> Self {
         self.0.surface = surface as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_image_count(mut self, min_image_count: u32) -> Self {
         self.0.min_image_count = min_image_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_format(mut self, image_format: crate::vk1_0::Format) -> Self {
         self.0.image_format = image_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_color_space(mut self, image_color_space: crate::extensions::khr_surface::ColorSpaceKHR) -> Self {
         self.0.image_color_space = image_color_space as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_extent(mut self, image_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.image_extent = image_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_array_layers(mut self, image_array_layers: u32) -> Self {
         self.0.image_array_layers = image_array_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_usage(mut self, image_usage: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.image_usage = image_usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_sharing_mode(mut self, image_sharing_mode: crate::vk1_0::SharingMode) -> Self {
         self.0.image_sharing_mode = image_sharing_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_indices(mut self, queue_family_indices: &'a [u32]) -> Self {
         self.0.p_queue_family_indices = queue_family_indices.as_ptr() as _;
         self.0.queue_family_index_count = queue_family_indices.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pre_transform(mut self, pre_transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.pre_transform = pre_transform as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn composite_alpha(mut self, composite_alpha: crate::extensions::khr_surface::CompositeAlphaFlagBitsKHR) -> Self {
         self.0.composite_alpha = composite_alpha as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn present_mode(mut self, present_mode: crate::extensions::khr_surface::PresentModeKHR) -> Self {
         self.0.present_mode = present_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn clipped(mut self, clipped: bool) -> Self {
         self.0.clipped = clipped as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn old_swapchain(mut self, old_swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> Self {
         self.0.old_swapchain = old_swapchain as _;
         self
@@ -338,24 +353,28 @@ impl<'a> PresentInfoKHRBuilder<'a> {
         PresentInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn wait_semaphores(mut self, wait_semaphores: &'a [crate::vk1_0::Semaphore]) -> Self {
         self.0.p_wait_semaphores = wait_semaphores.as_ptr() as _;
         self.0.wait_semaphore_count = wait_semaphores.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn swapchains(mut self, swapchains: &'a [crate::extensions::khr_swapchain::SwapchainKHR]) -> Self {
         self.0.p_swapchains = swapchains.as_ptr() as _;
         self.0.swapchain_count = swapchains.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_indices(mut self, image_indices: &'a [u32]) -> Self {
         self.0.p_image_indices = image_indices.as_ptr() as _;
         self.0.swapchain_count = image_indices.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn results(mut self, results: &'a mut [crate::vk1_0::Result]) -> Self {
         self.0.p_results = results.as_ptr() as _;
         self.0.swapchain_count = results.len() as _;
@@ -430,11 +449,13 @@ impl<'a> DeviceGroupPresentCapabilitiesKHRBuilder<'a> {
         DeviceGroupPresentCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn present_mask(mut self, present_mask: [u32; 32]) -> Self {
         self.0.present_mask = present_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn modes(mut self, modes: crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> Self {
         self.0.modes = modes as _;
         self
@@ -505,6 +526,7 @@ impl<'a> ImageSwapchainCreateInfoKHRBuilder<'a> {
         ImageSwapchainCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn swapchain(mut self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> Self {
         self.0.swapchain = swapchain as _;
         self
@@ -576,11 +598,13 @@ impl<'a> BindImageMemorySwapchainInfoKHRBuilder<'a> {
         BindImageMemorySwapchainInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn swapchain(mut self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> Self {
         self.0.swapchain = swapchain as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_index(mut self, image_index: u32) -> Self {
         self.0.image_index = image_index as _;
         self
@@ -655,26 +679,31 @@ impl<'a> AcquireNextImageInfoKHRBuilder<'a> {
         AcquireNextImageInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn swapchain(mut self, swapchain: crate::extensions::khr_swapchain::SwapchainKHR) -> Self {
         self.0.swapchain = swapchain as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn timeout(mut self, timeout: u64) -> Self {
         self.0.timeout = timeout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fence(mut self, fence: crate::vk1_0::Fence) -> Self {
         self.0.fence = fence as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_mask(mut self, device_mask: u32) -> Self {
         self.0.device_mask = device_mask as _;
         self
@@ -747,12 +776,14 @@ impl<'a> DeviceGroupPresentInfoKHRBuilder<'a> {
         DeviceGroupPresentInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_masks(mut self, device_masks: &'a [u32]) -> Self {
         self.0.p_device_masks = device_masks.as_ptr() as _;
         self.0.swapchain_count = device_masks.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mode(mut self, mode: crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagBitsKHR) -> Self {
         self.0.mode = mode as _;
         self
@@ -823,6 +854,7 @@ impl<'a> DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {
         DeviceGroupSwapchainCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn modes(mut self, modes: crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR) -> Self {
         self.0.modes = modes as _;
         self

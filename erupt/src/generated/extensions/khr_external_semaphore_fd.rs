@@ -60,21 +60,25 @@ impl<'a> ImportSemaphoreFdInfoKHRBuilder<'a> {
         ImportSemaphoreFdInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_1::SemaphoreImportFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fd(mut self, fd: std::os::raw::c_int) -> Self {
         self.0.fd = fd as _;
         self
@@ -146,11 +150,13 @@ impl<'a> SemaphoreGetFdInfoKHRBuilder<'a> {
         SemaphoreGetFdInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

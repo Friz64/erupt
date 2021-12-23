@@ -67,6 +67,7 @@ impl<'a> PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder<'a> {
         PhysicalDeviceTextureCompressionASTCHDRFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn texture_compression_astc_hdr(mut self, texture_compression_astc_hdr: bool) -> Self {
         self.0.texture_compression_astc_hdr = texture_compression_astc_hdr as _;
         self

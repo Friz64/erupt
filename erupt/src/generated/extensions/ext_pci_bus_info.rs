@@ -51,21 +51,25 @@ impl<'a> PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'a> {
         PhysicalDevicePCIBusInfoPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pci_domain(mut self, pci_domain: u32) -> Self {
         self.0.pci_domain = pci_domain as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pci_bus(mut self, pci_bus: u32) -> Self {
         self.0.pci_bus = pci_bus as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pci_device(mut self, pci_device: u32) -> Self {
         self.0.pci_device = pci_device as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pci_function(mut self, pci_function: u32) -> Self {
         self.0.pci_function = pci_function as _;
         self

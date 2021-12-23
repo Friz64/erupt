@@ -133,46 +133,55 @@ impl<'a> VideoDecodeInfoKHRBuilder<'a> {
         VideoDecodeInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_video_decode_queue::VideoDecodeFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coded_offset(mut self, coded_offset: crate::vk1_0::Offset2D) -> Self {
         self.0.coded_offset = coded_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coded_extent(mut self, coded_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.coded_extent = coded_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_buffer(mut self, src_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.src_buffer = src_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_buffer_offset(mut self, src_buffer_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.src_buffer_offset = src_buffer_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_buffer_range(mut self, src_buffer_range: crate::vk1_0::DeviceSize) -> Self {
         self.0.src_buffer_range = src_buffer_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_picture_resource(mut self, dst_picture_resource: crate::extensions::khr_video_queue::VideoPictureResourceKHR) -> Self {
         self.0.dst_picture_resource = dst_picture_resource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn setup_reference_slot(mut self, setup_reference_slot: &'a crate::extensions::khr_video_queue::VideoReferenceSlotKHR) -> Self {
         self.0.p_setup_reference_slot = setup_reference_slot as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_slots(mut self, reference_slots: &'a [crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder]) -> Self {
         self.0.p_reference_slots = reference_slots.as_ptr() as _;
         self.0.reference_slot_count = reference_slots.len() as _;

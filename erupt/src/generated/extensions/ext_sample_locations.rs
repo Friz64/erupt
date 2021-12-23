@@ -72,11 +72,13 @@ impl<'a> SampleLocationEXTBuilder<'a> {
         SampleLocationEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn x(mut self, x: std::os::raw::c_float) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y(mut self, y: std::os::raw::c_float) -> Self {
         self.0.y = y as _;
         self
@@ -150,16 +152,19 @@ impl<'a> SampleLocationsInfoEXTBuilder<'a> {
         SampleLocationsInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sample_locations_per_pixel(mut self, sample_locations_per_pixel: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.sample_locations_per_pixel = sample_locations_per_pixel as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_location_grid_size(mut self, sample_location_grid_size: crate::vk1_0::Extent2D) -> Self {
         self.0.sample_location_grid_size = sample_location_grid_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_locations(mut self, sample_locations: &'a [crate::extensions::ext_sample_locations::SampleLocationEXTBuilder]) -> Self {
         self.0.p_sample_locations = sample_locations.as_ptr() as _;
         self.0.sample_locations_count = sample_locations.len() as _;
@@ -227,11 +232,13 @@ impl<'a> AttachmentSampleLocationsEXTBuilder<'a> {
         AttachmentSampleLocationsEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn attachment_index(mut self, attachment_index: u32) -> Self {
         self.0.attachment_index = attachment_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_locations_info(mut self, sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> Self {
         self.0.sample_locations_info = sample_locations_info as _;
         self
@@ -298,11 +305,13 @@ impl<'a> SubpassSampleLocationsEXTBuilder<'a> {
         SubpassSampleLocationsEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn subpass_index(mut self, subpass_index: u32) -> Self {
         self.0.subpass_index = subpass_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_locations_info(mut self, sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> Self {
         self.0.sample_locations_info = sample_locations_info as _;
         self
@@ -376,12 +385,14 @@ impl<'a> RenderPassSampleLocationsBeginInfoEXTBuilder<'a> {
         RenderPassSampleLocationsBeginInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn attachment_initial_sample_locations(mut self, attachment_initial_sample_locations: &'a [crate::extensions::ext_sample_locations::AttachmentSampleLocationsEXTBuilder]) -> Self {
         self.0.p_attachment_initial_sample_locations = attachment_initial_sample_locations.as_ptr() as _;
         self.0.attachment_initial_sample_locations_count = attachment_initial_sample_locations.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn post_subpass_sample_locations(mut self, post_subpass_sample_locations: &'a [crate::extensions::ext_sample_locations::SubpassSampleLocationsEXTBuilder]) -> Self {
         self.0.p_post_subpass_sample_locations = post_subpass_sample_locations.as_ptr() as _;
         self.0.post_subpass_sample_locations_count = post_subpass_sample_locations.len() as _;
@@ -454,11 +465,13 @@ impl<'a> PipelineSampleLocationsStateCreateInfoEXTBuilder<'a> {
         PipelineSampleLocationsStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sample_locations_enable(mut self, sample_locations_enable: bool) -> Self {
         self.0.sample_locations_enable = sample_locations_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_locations_info(mut self, sample_locations_info: crate::extensions::ext_sample_locations::SampleLocationsInfoEXT) -> Self {
         self.0.sample_locations_info = sample_locations_info as _;
         self
@@ -533,26 +546,31 @@ impl<'a> PhysicalDeviceSampleLocationsPropertiesEXTBuilder<'a> {
         PhysicalDeviceSampleLocationsPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sample_location_sample_counts(mut self, sample_location_sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sample_location_sample_counts = sample_location_sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sample_location_grid_size(mut self, max_sample_location_grid_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_sample_location_grid_size = max_sample_location_grid_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_location_coordinate_range(mut self, sample_location_coordinate_range: [std::os::raw::c_float; 2]) -> Self {
         self.0.sample_location_coordinate_range = sample_location_coordinate_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_location_sub_pixel_bits(mut self, sample_location_sub_pixel_bits: u32) -> Self {
         self.0.sample_location_sub_pixel_bits = sample_location_sub_pixel_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn variable_sample_locations(mut self, variable_sample_locations: bool) -> Self {
         self.0.variable_sample_locations = variable_sample_locations as _;
         self
@@ -623,6 +641,7 @@ impl<'a> MultisamplePropertiesEXTBuilder<'a> {
         MultisamplePropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_sample_location_grid_size(mut self, max_sample_location_grid_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_sample_location_grid_size = max_sample_location_grid_size as _;
         self

@@ -67,6 +67,7 @@ impl<'a> PhysicalDeviceInvocationMaskFeaturesHUAWEIBuilder<'a> {
         PhysicalDeviceInvocationMaskFeaturesHUAWEIBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn invocation_mask(mut self, invocation_mask: bool) -> Self {
         self.0.invocation_mask = invocation_mask as _;
         self

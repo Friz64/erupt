@@ -67,6 +67,7 @@ impl<'a> PipelineRasterizationStateRasterizationOrderAMDBuilder<'a> {
         PipelineRasterizationStateRasterizationOrderAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_order(mut self, rasterization_order: crate::extensions::amd_rasterization_order::RasterizationOrderAMD) -> Self {
         self.0.rasterization_order = rasterization_order as _;
         self

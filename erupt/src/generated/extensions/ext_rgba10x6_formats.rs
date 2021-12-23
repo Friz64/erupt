@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceRGBA10X6FormatsFeaturesEXTBuilder<'a> {
         PhysicalDeviceRGBA10X6FormatsFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format_rgba10x6_without_y_cb_cr_sampler(mut self, format_rgba10x6_without_y_cb_cr_sampler: bool) -> Self {
         self.0.format_rgba10x6_without_y_cb_cr_sampler = format_rgba10x6_without_y_cb_cr_sampler as _;
         self

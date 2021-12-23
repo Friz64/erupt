@@ -57,6 +57,7 @@ impl<'a> PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder<'a> {
         PhysicalDeviceFragmentDensityMap2FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_map_deferred(mut self, fragment_density_map_deferred: bool) -> Self {
         self.0.fragment_density_map_deferred = fragment_density_map_deferred as _;
         self
@@ -130,21 +131,25 @@ impl<'a> PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder<'a> {
         PhysicalDeviceFragmentDensityMap2PropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn subsampled_loads(mut self, subsampled_loads: bool) -> Self {
         self.0.subsampled_loads = subsampled_loads as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subsampled_coarse_reconstruction_early_access(mut self, subsampled_coarse_reconstruction_early_access: bool) -> Self {
         self.0.subsampled_coarse_reconstruction_early_access = subsampled_coarse_reconstruction_early_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_subsampled_array_layers(mut self, max_subsampled_array_layers: u32) -> Self {
         self.0.max_subsampled_array_layers = max_subsampled_array_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_subsampled_samplers(mut self, max_descriptor_set_subsampled_samplers: u32) -> Self {
         self.0.max_descriptor_set_subsampled_samplers = max_descriptor_set_subsampled_samplers as _;
         self

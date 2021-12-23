@@ -950,6 +950,7 @@ impl<'a> PhysicalDeviceFeatures2Builder<'a> {
         PhysicalDeviceFeatures2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn features(mut self, features: crate::vk1_0::PhysicalDeviceFeatures) -> Self {
         self.0.features = features as _;
         self
@@ -1032,6 +1033,7 @@ impl<'a> PhysicalDeviceProperties2Builder<'a> {
         PhysicalDeviceProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn properties(mut self, properties: crate::vk1_0::PhysicalDeviceProperties) -> Self {
         self.0.properties = properties as _;
         self
@@ -1102,6 +1104,7 @@ impl<'a> FormatProperties2Builder<'a> {
         FormatProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format_properties(mut self, format_properties: crate::vk1_0::FormatProperties) -> Self {
         self.0.format_properties = format_properties as _;
         self
@@ -1176,6 +1179,7 @@ impl<'a> ImageFormatProperties2Builder<'a> {
         ImageFormatProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_format_properties(mut self, image_format_properties: crate::vk1_0::ImageFormatProperties) -> Self {
         self.0.image_format_properties = image_format_properties as _;
         self
@@ -1252,26 +1256,31 @@ impl<'a> PhysicalDeviceImageFormatInfo2Builder<'a> {
         PhysicalDeviceImageFormatInfo2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::vk1_0::ImageType) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tiling(mut self, tiling: crate::vk1_0::ImageTiling) -> Self {
         self.0.tiling = tiling as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn usage(mut self, usage: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.usage = usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::ImageCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
@@ -1342,6 +1351,7 @@ impl<'a> QueueFamilyProperties2Builder<'a> {
         QueueFamilyProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_properties(mut self, queue_family_properties: crate::vk1_0::QueueFamilyProperties) -> Self {
         self.0.queue_family_properties = queue_family_properties as _;
         self
@@ -1412,6 +1422,7 @@ impl<'a> PhysicalDeviceMemoryProperties2Builder<'a> {
         PhysicalDeviceMemoryProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_properties(mut self, memory_properties: crate::vk1_0::PhysicalDeviceMemoryProperties) -> Self {
         self.0.memory_properties = memory_properties as _;
         self
@@ -1482,6 +1493,7 @@ impl<'a> SparseImageFormatProperties2Builder<'a> {
         SparseImageFormatProperties2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn properties(mut self, properties: crate::vk1_0::SparseImageFormatProperties) -> Self {
         self.0.properties = properties as _;
         self
@@ -1556,26 +1568,31 @@ impl<'a> PhysicalDeviceSparseImageFormatInfo2Builder<'a> {
         PhysicalDeviceSparseImageFormatInfo2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::vk1_0::ImageType) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn samples(mut self, samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.samples = samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn usage(mut self, usage: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.usage = usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tiling(mut self, tiling: crate::vk1_0::ImageTiling) -> Self {
         self.0.tiling = tiling as _;
         self
@@ -1647,11 +1664,13 @@ impl<'a> PhysicalDeviceVariablePointersFeaturesBuilder<'a> {
         PhysicalDeviceVariablePointersFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn variable_pointers_storage_buffer(mut self, variable_pointers_storage_buffer: bool) -> Self {
         self.0.variable_pointers_storage_buffer = variable_pointers_storage_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn variable_pointers(mut self, variable_pointers: bool) -> Self {
         self.0.variable_pointers = variable_pointers as _;
         self
@@ -1719,16 +1738,19 @@ impl<'a> ExternalMemoryPropertiesBuilder<'a> {
         ExternalMemoryPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn external_memory_features(mut self, external_memory_features: crate::vk1_1::ExternalMemoryFeatureFlags) -> Self {
         self.0.external_memory_features = external_memory_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compatible_handle_types(mut self, compatible_handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self
@@ -1799,6 +1821,7 @@ impl<'a> PhysicalDeviceExternalImageFormatInfoBuilder<'a> {
         PhysicalDeviceExternalImageFormatInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
@@ -1869,6 +1892,7 @@ impl<'a> ExternalImageFormatPropertiesBuilder<'a> {
         ExternalImageFormatPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn external_memory_properties(mut self, external_memory_properties: crate::vk1_1::ExternalMemoryProperties) -> Self {
         self.0.external_memory_properties = external_memory_properties as _;
         self
@@ -1941,16 +1965,19 @@ impl<'a> PhysicalDeviceExternalBufferInfoBuilder<'a> {
         PhysicalDeviceExternalBufferInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::BufferCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn usage(mut self, usage: crate::vk1_0::BufferUsageFlags) -> Self {
         self.0.usage = usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
@@ -2021,6 +2048,7 @@ impl<'a> ExternalBufferPropertiesBuilder<'a> {
         ExternalBufferPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn external_memory_properties(mut self, external_memory_properties: crate::vk1_1::ExternalMemoryProperties) -> Self {
         self.0.external_memory_properties = external_memory_properties as _;
         self
@@ -2095,26 +2123,31 @@ impl<'a> PhysicalDeviceIDPropertiesBuilder<'a> {
         PhysicalDeviceIDPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_uuid(mut self, device_uuid: [u8; 16]) -> Self {
         self.0.device_uuid = device_uuid as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn driver_uuid(mut self, driver_uuid: [u8; 16]) -> Self {
         self.0.driver_uuid = driver_uuid as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_luid(mut self, device_luid: [u8; 8]) -> Self {
         self.0.device_luid = device_luid as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_node_mask(mut self, device_node_mask: u32) -> Self {
         self.0.device_node_mask = device_node_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_luid_valid(mut self, device_luid_valid: bool) -> Self {
         self.0.device_luid_valid = device_luid_valid as _;
         self
@@ -2185,6 +2218,7 @@ impl<'a> ExternalMemoryImageCreateInfoBuilder<'a> {
         ExternalMemoryImageCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
@@ -2255,6 +2289,7 @@ impl<'a> ExternalMemoryBufferCreateInfoBuilder<'a> {
         ExternalMemoryBufferCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
@@ -2325,6 +2360,7 @@ impl<'a> ExportMemoryAllocateInfoBuilder<'a> {
         ExportMemoryAllocateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalMemoryHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
@@ -2395,6 +2431,7 @@ impl<'a> PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {
         PhysicalDeviceExternalSemaphoreInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
@@ -2467,16 +2504,19 @@ impl<'a> ExternalSemaphorePropertiesBuilder<'a> {
         ExternalSemaphorePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compatible_handle_types(mut self, compatible_handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn external_semaphore_features(mut self, external_semaphore_features: crate::vk1_1::ExternalSemaphoreFeatureFlags) -> Self {
         self.0.external_semaphore_features = external_semaphore_features as _;
         self
@@ -2547,6 +2587,7 @@ impl<'a> ExportSemaphoreCreateInfoBuilder<'a> {
         ExportSemaphoreCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalSemaphoreHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
@@ -2617,6 +2658,7 @@ impl<'a> PhysicalDeviceExternalFenceInfoBuilder<'a> {
         PhysicalDeviceExternalFenceInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalFenceHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
@@ -2689,16 +2731,19 @@ impl<'a> ExternalFencePropertiesBuilder<'a> {
         ExternalFencePropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compatible_handle_types(mut self, compatible_handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn external_fence_features(mut self, external_fence_features: crate::vk1_1::ExternalFenceFeatureFlags) -> Self {
         self.0.external_fence_features = external_fence_features as _;
         self
@@ -2769,6 +2814,7 @@ impl<'a> ExportFenceCreateInfoBuilder<'a> {
         ExportFenceCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_types(mut self, handle_types: crate::vk1_1::ExternalFenceHandleTypeFlags) -> Self {
         self.0.handle_types = handle_types as _;
         self
@@ -2841,16 +2887,19 @@ impl<'a> PhysicalDeviceMultiviewFeaturesBuilder<'a> {
         PhysicalDeviceMultiviewFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn multiview(mut self, multiview: bool) -> Self {
         self.0.multiview = multiview as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn multiview_geometry_shader(mut self, multiview_geometry_shader: bool) -> Self {
         self.0.multiview_geometry_shader = multiview_geometry_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn multiview_tessellation_shader(mut self, multiview_tessellation_shader: bool) -> Self {
         self.0.multiview_tessellation_shader = multiview_tessellation_shader as _;
         self
@@ -2922,11 +2971,13 @@ impl<'a> PhysicalDeviceMultiviewPropertiesBuilder<'a> {
         PhysicalDeviceMultiviewPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_multiview_view_count(mut self, max_multiview_view_count: u32) -> Self {
         self.0.max_multiview_view_count = max_multiview_view_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_multiview_instance_index(mut self, max_multiview_instance_index: u32) -> Self {
         self.0.max_multiview_instance_index = max_multiview_instance_index as _;
         self
@@ -3002,18 +3053,21 @@ impl<'a> RenderPassMultiviewCreateInfoBuilder<'a> {
         RenderPassMultiviewCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn view_masks(mut self, view_masks: &'a [u32]) -> Self {
         self.0.p_view_masks = view_masks.as_ptr() as _;
         self.0.subpass_count = view_masks.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_offsets(mut self, view_offsets: &'a [i32]) -> Self {
         self.0.p_view_offsets = view_offsets.as_ptr() as _;
         self.0.dependency_count = view_offsets.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn correlation_masks(mut self, correlation_masks: &'a [u32]) -> Self {
         self.0.p_correlation_masks = correlation_masks.as_ptr() as _;
         self.0.correlation_mask_count = correlation_masks.len() as _;
@@ -3087,16 +3141,19 @@ impl<'a> PhysicalDeviceGroupPropertiesBuilder<'a> {
         PhysicalDeviceGroupPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn physical_device_count(mut self, physical_device_count: u32) -> Self {
         self.0.physical_device_count = physical_device_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn physical_devices(mut self, physical_devices: [crate::vk1_0::PhysicalDevice; 32]) -> Self {
         self.0.physical_devices = physical_devices as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subset_allocation(mut self, subset_allocation: bool) -> Self {
         self.0.subset_allocation = subset_allocation as _;
         self
@@ -3168,11 +3225,13 @@ impl<'a> MemoryAllocateFlagsInfoBuilder<'a> {
         MemoryAllocateFlagsInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_1::MemoryAllocateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_mask(mut self, device_mask: u32) -> Self {
         self.0.device_mask = device_mask as _;
         self
@@ -3247,16 +3306,19 @@ impl<'a> BindBufferMemoryInfoBuilder<'a> {
         BindBufferMemoryInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_offset(mut self, memory_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.memory_offset = memory_offset as _;
         self
@@ -3328,6 +3390,7 @@ impl<'a> BindBufferMemoryDeviceGroupInfoBuilder<'a> {
         BindBufferMemoryDeviceGroupInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_indices(mut self, device_indices: &'a [u32]) -> Self {
         self.0.p_device_indices = device_indices.as_ptr() as _;
         self.0.device_index_count = device_indices.len() as _;
@@ -3405,16 +3468,19 @@ impl<'a> BindImageMemoryInfoBuilder<'a> {
         BindImageMemoryInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_offset(mut self, memory_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.memory_offset = memory_offset as _;
         self
@@ -3488,12 +3554,14 @@ impl<'a> BindImageMemoryDeviceGroupInfoBuilder<'a> {
         BindImageMemoryDeviceGroupInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_indices(mut self, device_indices: &'a [u32]) -> Self {
         self.0.p_device_indices = device_indices.as_ptr() as _;
         self.0.device_index_count = device_indices.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn split_instance_bind_regions(mut self, split_instance_bind_regions: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_split_instance_bind_regions = split_instance_bind_regions.as_ptr() as _;
         self.0.split_instance_bind_region_count = split_instance_bind_regions.len() as _;
@@ -3567,11 +3635,13 @@ impl<'a> DeviceGroupRenderPassBeginInfoBuilder<'a> {
         DeviceGroupRenderPassBeginInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_mask(mut self, device_mask: u32) -> Self {
         self.0.device_mask = device_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_render_areas(mut self, device_render_areas: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_device_render_areas = device_render_areas.as_ptr() as _;
         self.0.device_render_area_count = device_render_areas.len() as _;
@@ -3643,6 +3713,7 @@ impl<'a> DeviceGroupCommandBufferBeginInfoBuilder<'a> {
         DeviceGroupCommandBufferBeginInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_mask(mut self, device_mask: u32) -> Self {
         self.0.device_mask = device_mask as _;
         self
@@ -3718,18 +3789,21 @@ impl<'a> DeviceGroupSubmitInfoBuilder<'a> {
         DeviceGroupSubmitInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn wait_semaphore_device_indices(mut self, wait_semaphore_device_indices: &'a [u32]) -> Self {
         self.0.p_wait_semaphore_device_indices = wait_semaphore_device_indices.as_ptr() as _;
         self.0.wait_semaphore_count = wait_semaphore_device_indices.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn command_buffer_device_masks(mut self, command_buffer_device_masks: &'a [u32]) -> Self {
         self.0.p_command_buffer_device_masks = command_buffer_device_masks.as_ptr() as _;
         self.0.command_buffer_count = command_buffer_device_masks.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn signal_semaphore_device_indices(mut self, signal_semaphore_device_indices: &'a [u32]) -> Self {
         self.0.p_signal_semaphore_device_indices = signal_semaphore_device_indices.as_ptr() as _;
         self.0.signal_semaphore_count = signal_semaphore_device_indices.len() as _;
@@ -3802,11 +3876,13 @@ impl<'a> DeviceGroupBindSparseInfoBuilder<'a> {
         DeviceGroupBindSparseInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn resource_device_index(mut self, resource_device_index: u32) -> Self {
         self.0.resource_device_index = resource_device_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_device_index(mut self, memory_device_index: u32) -> Self {
         self.0.memory_device_index = memory_device_index as _;
         self
@@ -3878,6 +3954,7 @@ impl<'a> DeviceGroupDeviceCreateInfoBuilder<'a> {
         DeviceGroupDeviceCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn physical_devices(mut self, physical_devices: &'a [crate::vk1_0::PhysicalDevice]) -> Self {
         self.0.p_physical_devices = physical_devices.as_ptr() as _;
         self.0.physical_device_count = physical_devices.len() as _;
@@ -3949,31 +4026,37 @@ impl<'a> DescriptorUpdateTemplateEntryBuilder<'a> {
         DescriptorUpdateTemplateEntryBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dst_binding(mut self, dst_binding: u32) -> Self {
         self.0.dst_binding = dst_binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_array_element(mut self, dst_array_element: u32) -> Self {
         self.0.dst_array_element = dst_array_element as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_count(mut self, descriptor_count: u32) -> Self {
         self.0.descriptor_count = descriptor_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_type(mut self, descriptor_type: crate::vk1_0::DescriptorType) -> Self {
         self.0.descriptor_type = descriptor_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: usize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stride(mut self, stride: usize) -> Self {
         self.0.stride = stride as _;
         self
@@ -4051,37 +4134,44 @@ impl<'a> DescriptorUpdateTemplateCreateInfoBuilder<'a> {
         DescriptorUpdateTemplateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_1::DescriptorUpdateTemplateCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_update_entries(mut self, descriptor_update_entries: &'a [crate::vk1_1::DescriptorUpdateTemplateEntryBuilder]) -> Self {
         self.0.p_descriptor_update_entries = descriptor_update_entries.as_ptr() as _;
         self.0.descriptor_update_entry_count = descriptor_update_entries.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn template_type(mut self, template_type: crate::vk1_1::DescriptorUpdateTemplateType) -> Self {
         self.0.template_type = template_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_set_layout(mut self, descriptor_set_layout: crate::vk1_0::DescriptorSetLayout) -> Self {
         self.0.descriptor_set_layout = descriptor_set_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_bind_point(mut self, pipeline_bind_point: crate::vk1_0::PipelineBindPoint) -> Self {
         self.0.pipeline_bind_point = pipeline_bind_point as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_layout(mut self, pipeline_layout: crate::vk1_0::PipelineLayout) -> Self {
         self.0.pipeline_layout = pipeline_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn set(mut self, set: u32) -> Self {
         self.0.set = set as _;
         self
@@ -4149,16 +4239,19 @@ impl<'a> InputAttachmentAspectReferenceBuilder<'a> {
         InputAttachmentAspectReferenceBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn subpass(mut self, subpass: u32) -> Self {
         self.0.subpass = subpass as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn input_attachment_index(mut self, input_attachment_index: u32) -> Self {
         self.0.input_attachment_index = input_attachment_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn aspect_mask(mut self, aspect_mask: crate::vk1_0::ImageAspectFlags) -> Self {
         self.0.aspect_mask = aspect_mask as _;
         self
@@ -4230,6 +4323,7 @@ impl<'a> RenderPassInputAttachmentAspectCreateInfoBuilder<'a> {
         RenderPassInputAttachmentAspectCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn aspect_references(mut self, aspect_references: &'a [crate::vk1_1::InputAttachmentAspectReferenceBuilder]) -> Self {
         self.0.p_aspect_references = aspect_references.as_ptr() as _;
         self.0.aspect_reference_count = aspect_references.len() as _;
@@ -4304,21 +4398,25 @@ impl<'a> PhysicalDevice16BitStorageFeaturesBuilder<'a> {
         PhysicalDevice16BitStorageFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn storage_buffer16_bit_access(mut self, storage_buffer16_bit_access: bool) -> Self {
         self.0.storage_buffer16_bit_access = storage_buffer16_bit_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn uniform_and_storage_buffer16_bit_access(mut self, uniform_and_storage_buffer16_bit_access: bool) -> Self {
         self.0.uniform_and_storage_buffer16_bit_access = uniform_and_storage_buffer16_bit_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn storage_push_constant16(mut self, storage_push_constant16: bool) -> Self {
         self.0.storage_push_constant16 = storage_push_constant16 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn storage_input_output16(mut self, storage_input_output16: bool) -> Self {
         self.0.storage_input_output16 = storage_input_output16 as _;
         self
@@ -4392,21 +4490,25 @@ impl<'a> PhysicalDeviceSubgroupPropertiesBuilder<'a> {
         PhysicalDeviceSubgroupPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn subgroup_size(mut self, subgroup_size: u32) -> Self {
         self.0.subgroup_size = subgroup_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supported_stages(mut self, supported_stages: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.supported_stages = supported_stages as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supported_operations(mut self, supported_operations: crate::vk1_1::SubgroupFeatureFlags) -> Self {
         self.0.supported_operations = supported_operations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn quad_operations_in_all_stages(mut self, quad_operations_in_all_stages: bool) -> Self {
         self.0.quad_operations_in_all_stages = quad_operations_in_all_stages as _;
         self
@@ -4477,6 +4579,7 @@ impl<'a> BufferMemoryRequirementsInfo2Builder<'a> {
         BufferMemoryRequirementsInfo2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
@@ -4549,6 +4652,7 @@ impl<'a> ImageMemoryRequirementsInfo2Builder<'a> {
         ImageMemoryRequirementsInfo2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
@@ -4619,6 +4723,7 @@ impl<'a> ImageSparseMemoryRequirementsInfo2Builder<'a> {
         ImageSparseMemoryRequirementsInfo2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
@@ -4691,6 +4796,7 @@ impl<'a> MemoryRequirements2Builder<'a> {
         MemoryRequirements2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_requirements(mut self, memory_requirements: crate::vk1_0::MemoryRequirements) -> Self {
         self.0.memory_requirements = memory_requirements as _;
         self
@@ -4761,6 +4867,7 @@ impl<'a> SparseImageMemoryRequirements2Builder<'a> {
         SparseImageMemoryRequirements2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_requirements(mut self, memory_requirements: crate::vk1_0::SparseImageMemoryRequirements) -> Self {
         self.0.memory_requirements = memory_requirements as _;
         self
@@ -4831,6 +4938,7 @@ impl<'a> PhysicalDevicePointClippingPropertiesBuilder<'a> {
         PhysicalDevicePointClippingPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn point_clipping_behavior(mut self, point_clipping_behavior: crate::vk1_1::PointClippingBehavior) -> Self {
         self.0.point_clipping_behavior = point_clipping_behavior as _;
         self
@@ -4902,11 +5010,13 @@ impl<'a> MemoryDedicatedRequirementsBuilder<'a> {
         MemoryDedicatedRequirementsBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn prefers_dedicated_allocation(mut self, prefers_dedicated_allocation: bool) -> Self {
         self.0.prefers_dedicated_allocation = prefers_dedicated_allocation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn requires_dedicated_allocation(mut self, requires_dedicated_allocation: bool) -> Self {
         self.0.requires_dedicated_allocation = requires_dedicated_allocation as _;
         self
@@ -4978,11 +5088,13 @@ impl<'a> MemoryDedicatedAllocateInfoBuilder<'a> {
         MemoryDedicatedAllocateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
@@ -5053,6 +5165,7 @@ impl<'a> ImageViewUsageCreateInfoBuilder<'a> {
         ImageViewUsageCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn usage(mut self, usage: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.usage = usage as _;
         self
@@ -5123,6 +5236,7 @@ impl<'a> PipelineTessellationDomainOriginStateCreateInfoBuilder<'a> {
         PipelineTessellationDomainOriginStateCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn domain_origin(mut self, domain_origin: crate::vk1_1::TessellationDomainOrigin) -> Self {
         self.0.domain_origin = domain_origin as _;
         self
@@ -5193,6 +5307,7 @@ impl<'a> SamplerYcbcrConversionInfoBuilder<'a> {
         SamplerYcbcrConversionInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn conversion(mut self, conversion: crate::vk1_1::SamplerYcbcrConversion) -> Self {
         self.0.conversion = conversion as _;
         self
@@ -5270,41 +5385,49 @@ impl<'a> SamplerYcbcrConversionCreateInfoBuilder<'a> {
         SamplerYcbcrConversionCreateInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ycbcr_model(mut self, ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion) -> Self {
         self.0.ycbcr_model = ycbcr_model as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ycbcr_range(mut self, ycbcr_range: crate::vk1_1::SamplerYcbcrRange) -> Self {
         self.0.ycbcr_range = ycbcr_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn components(mut self, components: crate::vk1_0::ComponentMapping) -> Self {
         self.0.components = components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn x_chroma_offset(mut self, x_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.x_chroma_offset = x_chroma_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y_chroma_offset(mut self, y_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.y_chroma_offset = y_chroma_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_filter(mut self, chroma_filter: crate::vk1_0::Filter) -> Self {
         self.0.chroma_filter = chroma_filter as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn force_explicit_reconstruction(mut self, force_explicit_reconstruction: bool) -> Self {
         self.0.force_explicit_reconstruction = force_explicit_reconstruction as _;
         self
@@ -5375,6 +5498,7 @@ impl<'a> BindImagePlaneMemoryInfoBuilder<'a> {
         BindImagePlaneMemoryInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn plane_aspect(mut self, plane_aspect: crate::vk1_0::ImageAspectFlagBits) -> Self {
         self.0.plane_aspect = plane_aspect as _;
         self
@@ -5445,6 +5569,7 @@ impl<'a> ImagePlaneMemoryRequirementsInfoBuilder<'a> {
         ImagePlaneMemoryRequirementsInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn plane_aspect(mut self, plane_aspect: crate::vk1_0::ImageAspectFlagBits) -> Self {
         self.0.plane_aspect = plane_aspect as _;
         self
@@ -5515,6 +5640,7 @@ impl<'a> PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<'a> {
         PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sampler_ycbcr_conversion(mut self, sampler_ycbcr_conversion: bool) -> Self {
         self.0.sampler_ycbcr_conversion = sampler_ycbcr_conversion as _;
         self
@@ -5585,6 +5711,7 @@ impl<'a> SamplerYcbcrConversionImageFormatPropertiesBuilder<'a> {
         SamplerYcbcrConversionImageFormatPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn combined_image_sampler_descriptor_count(mut self, combined_image_sampler_descriptor_count: u32) -> Self {
         self.0.combined_image_sampler_descriptor_count = combined_image_sampler_descriptor_count as _;
         self
@@ -5655,6 +5782,7 @@ impl<'a> ProtectedSubmitInfoBuilder<'a> {
         ProtectedSubmitInfoBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn protected_submit(mut self, protected_submit: bool) -> Self {
         self.0.protected_submit = protected_submit as _;
         self
@@ -5725,6 +5853,7 @@ impl<'a> PhysicalDeviceProtectedMemoryFeaturesBuilder<'a> {
         PhysicalDeviceProtectedMemoryFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn protected_memory(mut self, protected_memory: bool) -> Self {
         self.0.protected_memory = protected_memory as _;
         self
@@ -5795,6 +5924,7 @@ impl<'a> PhysicalDeviceProtectedMemoryPropertiesBuilder<'a> {
         PhysicalDeviceProtectedMemoryPropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn protected_no_fault(mut self, protected_no_fault: bool) -> Self {
         self.0.protected_no_fault = protected_no_fault as _;
         self
@@ -5867,16 +5997,19 @@ impl<'a> DeviceQueueInfo2Builder<'a> {
         DeviceQueueInfo2Builder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::DeviceQueueCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_index(mut self, queue_family_index: u32) -> Self {
         self.0.queue_family_index = queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_index(mut self, queue_index: u32) -> Self {
         self.0.queue_index = queue_index as _;
         self
@@ -5948,11 +6081,13 @@ impl<'a> PhysicalDeviceMaintenance3PropertiesBuilder<'a> {
         PhysicalDeviceMaintenance3PropertiesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_per_set_descriptors(mut self, max_per_set_descriptors: u32) -> Self {
         self.0.max_per_set_descriptors = max_per_set_descriptors as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_memory_allocation_size(mut self, max_memory_allocation_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.max_memory_allocation_size = max_memory_allocation_size as _;
         self
@@ -6023,6 +6158,7 @@ impl<'a> DescriptorSetLayoutSupportBuilder<'a> {
         DescriptorSetLayoutSupportBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn supported(mut self, supported: bool) -> Self {
         self.0.supported = supported as _;
         self
@@ -6093,6 +6229,7 @@ impl<'a> PhysicalDeviceShaderDrawParametersFeaturesBuilder<'a> {
         PhysicalDeviceShaderDrawParametersFeaturesBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_draw_parameters(mut self, shader_draw_parameters: bool) -> Self {
         self.0.shader_draw_parameters = shader_draw_parameters as _;
         self

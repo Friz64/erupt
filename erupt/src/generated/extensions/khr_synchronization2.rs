@@ -352,21 +352,25 @@ impl<'a> MemoryBarrier2KHRBuilder<'a> {
         MemoryBarrier2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_stage_mask(mut self, src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.src_stage_mask = src_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_access_mask(mut self, src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_stage_mask(mut self, dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.dst_stage_mask = dst_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_access_mask(mut self, dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
@@ -446,51 +450,61 @@ impl<'a> ImageMemoryBarrier2KHRBuilder<'a> {
         ImageMemoryBarrier2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_stage_mask(mut self, src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.src_stage_mask = src_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_access_mask(mut self, src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_stage_mask(mut self, dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.dst_stage_mask = dst_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_access_mask(mut self, dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn old_layout(mut self, old_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.old_layout = old_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn new_layout(mut self, new_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.new_layout = new_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_queue_family_index(mut self, src_queue_family_index: u32) -> Self {
         self.0.src_queue_family_index = src_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_queue_family_index(mut self, dst_queue_family_index: u32) -> Self {
         self.0.dst_queue_family_index = dst_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image(mut self, image: crate::vk1_0::Image) -> Self {
         self.0.image = image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subresource_range(mut self, subresource_range: crate::vk1_0::ImageSubresourceRange) -> Self {
         self.0.subresource_range = subresource_range as _;
         self
@@ -569,46 +583,55 @@ impl<'a> BufferMemoryBarrier2KHRBuilder<'a> {
         BufferMemoryBarrier2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_stage_mask(mut self, src_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.src_stage_mask = src_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_access_mask(mut self, src_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.src_access_mask = src_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_stage_mask(mut self, dst_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.dst_stage_mask = dst_stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_access_mask(mut self, dst_access_mask: crate::extensions::khr_synchronization2::AccessFlags2KHR) -> Self {
         self.0.dst_access_mask = dst_access_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_queue_family_index(mut self, src_queue_family_index: u32) -> Self {
         self.0.src_queue_family_index = src_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_queue_family_index(mut self, dst_queue_family_index: u32) -> Self {
         self.0.dst_queue_family_index = dst_queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
@@ -685,23 +708,27 @@ impl<'a> DependencyInfoKHRBuilder<'a> {
         DependencyInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dependency_flags(mut self, dependency_flags: crate::vk1_0::DependencyFlags) -> Self {
         self.0.dependency_flags = dependency_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_barriers(mut self, memory_barriers: &'a [crate::extensions::khr_synchronization2::MemoryBarrier2KHRBuilder]) -> Self {
         self.0.p_memory_barriers = memory_barriers.as_ptr() as _;
         self.0.memory_barrier_count = memory_barriers.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_memory_barriers(mut self, buffer_memory_barriers: &'a [crate::extensions::khr_synchronization2::BufferMemoryBarrier2KHRBuilder]) -> Self {
         self.0.p_buffer_memory_barriers = buffer_memory_barriers.as_ptr() as _;
         self.0.buffer_memory_barrier_count = buffer_memory_barriers.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_memory_barriers(mut self, image_memory_barriers: &'a [crate::extensions::khr_synchronization2::ImageMemoryBarrier2KHRBuilder]) -> Self {
         self.0.p_image_memory_barriers = image_memory_barriers.as_ptr() as _;
         self.0.image_memory_barrier_count = image_memory_barriers.len() as _;
@@ -776,21 +803,25 @@ impl<'a> SemaphoreSubmitInfoKHRBuilder<'a> {
         SemaphoreSubmitInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn semaphore(mut self, semaphore: crate::vk1_0::Semaphore) -> Self {
         self.0.semaphore = semaphore as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn value(mut self, value: u64) -> Self {
         self.0.value = value as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stage_mask(mut self, stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.stage_mask = stage_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_index(mut self, device_index: u32) -> Self {
         self.0.device_index = device_index as _;
         self
@@ -862,11 +893,13 @@ impl<'a> CommandBufferSubmitInfoKHRBuilder<'a> {
         CommandBufferSubmitInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn command_buffer(mut self, command_buffer: crate::vk1_0::CommandBuffer) -> Self {
         self.0.command_buffer = command_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn device_mask(mut self, device_mask: u32) -> Self {
         self.0.device_mask = device_mask as _;
         self
@@ -943,23 +976,27 @@ impl<'a> SubmitInfo2KHRBuilder<'a> {
         SubmitInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_synchronization2::SubmitFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn wait_semaphore_infos(mut self, wait_semaphore_infos: &'a [crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHRBuilder]) -> Self {
         self.0.p_wait_semaphore_infos = wait_semaphore_infos.as_ptr() as _;
         self.0.wait_semaphore_info_count = wait_semaphore_infos.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn command_buffer_infos(mut self, command_buffer_infos: &'a [crate::extensions::khr_synchronization2::CommandBufferSubmitInfoKHRBuilder]) -> Self {
         self.0.p_command_buffer_infos = command_buffer_infos.as_ptr() as _;
         self.0.command_buffer_info_count = command_buffer_infos.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn signal_semaphore_infos(mut self, signal_semaphore_infos: &'a [crate::extensions::khr_synchronization2::SemaphoreSubmitInfoKHRBuilder]) -> Self {
         self.0.p_signal_semaphore_infos = signal_semaphore_infos.as_ptr() as _;
         self.0.signal_semaphore_info_count = signal_semaphore_infos.len() as _;
@@ -1031,6 +1068,7 @@ impl<'a> QueueFamilyCheckpointProperties2NVBuilder<'a> {
         QueueFamilyCheckpointProperties2NVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn checkpoint_execution_stage_mask(mut self, checkpoint_execution_stage_mask: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.checkpoint_execution_stage_mask = checkpoint_execution_stage_mask as _;
         self
@@ -1102,11 +1140,13 @@ impl<'a> CheckpointData2NVBuilder<'a> {
         CheckpointData2NVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn stage(mut self, stage: crate::extensions::khr_synchronization2::PipelineStageFlags2KHR) -> Self {
         self.0.stage = stage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn checkpoint_marker(mut self, checkpoint_marker: *mut std::ffi::c_void) -> Self {
         self.0.p_checkpoint_marker = checkpoint_marker;
         self
@@ -1177,6 +1217,7 @@ impl<'a> PhysicalDeviceSynchronization2FeaturesKHRBuilder<'a> {
         PhysicalDeviceSynchronization2FeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn synchronization2(mut self, synchronization2: bool) -> Self {
         self.0.synchronization2 = synchronization2 as _;
         self

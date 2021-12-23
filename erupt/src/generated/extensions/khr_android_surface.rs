@@ -74,11 +74,13 @@ impl<'a> AndroidSurfaceCreateInfoKHRBuilder<'a> {
         AndroidSurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_android_surface::AndroidSurfaceCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn window(mut self, window: &'a mut crate::extensions::khr_android_surface::ANativeWindow) -> Self {
         self.0.window = window as _;
         self

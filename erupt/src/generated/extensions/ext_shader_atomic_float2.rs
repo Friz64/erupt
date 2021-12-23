@@ -61,61 +61,73 @@ impl<'a> PhysicalDeviceShaderAtomicFloat2FeaturesEXTBuilder<'a> {
         PhysicalDeviceShaderAtomicFloat2FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float16_atomics(mut self, shader_buffer_float16_atomics: bool) -> Self {
         self.0.shader_buffer_float16_atomics = shader_buffer_float16_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float16_atomic_add(mut self, shader_buffer_float16_atomic_add: bool) -> Self {
         self.0.shader_buffer_float16_atomic_add = shader_buffer_float16_atomic_add as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float16_atomic_min_max(mut self, shader_buffer_float16_atomic_min_max: bool) -> Self {
         self.0.shader_buffer_float16_atomic_min_max = shader_buffer_float16_atomic_min_max as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float32_atomic_min_max(mut self, shader_buffer_float32_atomic_min_max: bool) -> Self {
         self.0.shader_buffer_float32_atomic_min_max = shader_buffer_float32_atomic_min_max as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float64_atomic_min_max(mut self, shader_buffer_float64_atomic_min_max: bool) -> Self {
         self.0.shader_buffer_float64_atomic_min_max = shader_buffer_float64_atomic_min_max as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float16_atomics(mut self, shader_shared_float16_atomics: bool) -> Self {
         self.0.shader_shared_float16_atomics = shader_shared_float16_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float16_atomic_add(mut self, shader_shared_float16_atomic_add: bool) -> Self {
         self.0.shader_shared_float16_atomic_add = shader_shared_float16_atomic_add as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float16_atomic_min_max(mut self, shader_shared_float16_atomic_min_max: bool) -> Self {
         self.0.shader_shared_float16_atomic_min_max = shader_shared_float16_atomic_min_max as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float32_atomic_min_max(mut self, shader_shared_float32_atomic_min_max: bool) -> Self {
         self.0.shader_shared_float32_atomic_min_max = shader_shared_float32_atomic_min_max as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float64_atomic_min_max(mut self, shader_shared_float64_atomic_min_max: bool) -> Self {
         self.0.shader_shared_float64_atomic_min_max = shader_shared_float64_atomic_min_max as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_image_float32_atomic_min_max(mut self, shader_image_float32_atomic_min_max: bool) -> Self {
         self.0.shader_image_float32_atomic_min_max = shader_image_float32_atomic_min_max as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_image_float32_atomic_min_max(mut self, sparse_image_float32_atomic_min_max: bool) -> Self {
         self.0.sparse_image_float32_atomic_min_max = sparse_image_float32_atomic_min_max as _;
         self

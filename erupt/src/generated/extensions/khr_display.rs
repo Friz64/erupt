@@ -161,36 +161,43 @@ impl<'a> DisplayPropertiesKHRBuilder<'a> {
         DisplayPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn display(mut self, display: crate::extensions::khr_display::DisplayKHR) -> Self {
         self.0.display = display as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn display_name(mut self, display_name: &'a std::ffi::CStr) -> Self {
         self.0.display_name = display_name.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn physical_dimensions(mut self, physical_dimensions: crate::vk1_0::Extent2D) -> Self {
         self.0.physical_dimensions = physical_dimensions as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn physical_resolution(mut self, physical_resolution: crate::vk1_0::Extent2D) -> Self {
         self.0.physical_resolution = physical_resolution as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supported_transforms(mut self, supported_transforms: crate::extensions::khr_surface::SurfaceTransformFlagsKHR) -> Self {
         self.0.supported_transforms = supported_transforms as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn plane_reorder_possible(mut self, plane_reorder_possible: bool) -> Self {
         self.0.plane_reorder_possible = plane_reorder_possible as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn persistent_content(mut self, persistent_content: bool) -> Self {
         self.0.persistent_content = persistent_content as _;
         self
@@ -257,11 +264,13 @@ impl<'a> DisplayPlanePropertiesKHRBuilder<'a> {
         DisplayPlanePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn current_display(mut self, current_display: crate::extensions::khr_display::DisplayKHR) -> Self {
         self.0.current_display = current_display as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn current_stack_index(mut self, current_stack_index: u32) -> Self {
         self.0.current_stack_index = current_stack_index as _;
         self
@@ -328,11 +337,13 @@ impl<'a> DisplayModeParametersKHRBuilder<'a> {
         DisplayModeParametersKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn visible_region(mut self, visible_region: crate::vk1_0::Extent2D) -> Self {
         self.0.visible_region = visible_region as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn refresh_rate(mut self, refresh_rate: u32) -> Self {
         self.0.refresh_rate = refresh_rate as _;
         self
@@ -399,11 +410,13 @@ impl<'a> DisplayModePropertiesKHRBuilder<'a> {
         DisplayModePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn display_mode(mut self, display_mode: crate::extensions::khr_display::DisplayModeKHR) -> Self {
         self.0.display_mode = display_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn parameters(mut self, parameters: crate::extensions::khr_display::DisplayModeParametersKHR) -> Self {
         self.0.parameters = parameters as _;
         self
@@ -475,11 +488,13 @@ impl<'a> DisplayModeCreateInfoKHRBuilder<'a> {
         DisplayModeCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_display::DisplayModeCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn parameters(mut self, parameters: crate::extensions::khr_display::DisplayModeParametersKHR) -> Self {
         self.0.parameters = parameters as _;
         self
@@ -553,46 +568,55 @@ impl<'a> DisplayPlaneCapabilitiesKHRBuilder<'a> {
         DisplayPlaneCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn supported_alpha(mut self, supported_alpha: crate::extensions::khr_display::DisplayPlaneAlphaFlagsKHR) -> Self {
         self.0.supported_alpha = supported_alpha as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_src_position(mut self, min_src_position: crate::vk1_0::Offset2D) -> Self {
         self.0.min_src_position = min_src_position as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_src_position(mut self, max_src_position: crate::vk1_0::Offset2D) -> Self {
         self.0.max_src_position = max_src_position as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_src_extent(mut self, min_src_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.min_src_extent = min_src_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_src_extent(mut self, max_src_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.max_src_extent = max_src_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_dst_position(mut self, min_dst_position: crate::vk1_0::Offset2D) -> Self {
         self.0.min_dst_position = min_dst_position as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_dst_position(mut self, max_dst_position: crate::vk1_0::Offset2D) -> Self {
         self.0.max_dst_position = max_dst_position as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_dst_extent(mut self, min_dst_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.min_dst_extent = min_dst_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_dst_extent(mut self, max_dst_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.max_dst_extent = max_dst_extent as _;
         self
@@ -670,41 +694,49 @@ impl<'a> DisplaySurfaceCreateInfoKHRBuilder<'a> {
         DisplaySurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_display::DisplaySurfaceCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn display_mode(mut self, display_mode: crate::extensions::khr_display::DisplayModeKHR) -> Self {
         self.0.display_mode = display_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn plane_index(mut self, plane_index: u32) -> Self {
         self.0.plane_index = plane_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn plane_stack_index(mut self, plane_stack_index: u32) -> Self {
         self.0.plane_stack_index = plane_stack_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform(mut self, transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.transform = transform as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn global_alpha(mut self, global_alpha: std::os::raw::c_float) -> Self {
         self.0.global_alpha = global_alpha as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn alpha_mode(mut self, alpha_mode: crate::extensions::khr_display::DisplayPlaneAlphaFlagBitsKHR) -> Self {
         self.0.alpha_mode = alpha_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_extent(mut self, image_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.image_extent = image_extent as _;
         self

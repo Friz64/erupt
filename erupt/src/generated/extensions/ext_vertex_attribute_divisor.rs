@@ -52,11 +52,13 @@ impl<'a> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
         VertexInputBindingDivisorDescriptionEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn binding(mut self, binding: u32) -> Self {
         self.0.binding = binding as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn divisor(mut self, divisor: u32) -> Self {
         self.0.divisor = divisor as _;
         self
@@ -128,6 +130,7 @@ impl<'a> PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a> {
         PipelineVertexInputDivisorStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vertex_binding_divisors(mut self, vertex_binding_divisors: &'a [crate::extensions::ext_vertex_attribute_divisor::VertexInputBindingDivisorDescriptionEXTBuilder]) -> Self {
         self.0.p_vertex_binding_divisors = vertex_binding_divisors.as_ptr() as _;
         self.0.vertex_binding_divisor_count = vertex_binding_divisors.len() as _;
@@ -199,6 +202,7 @@ impl<'a> PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
         PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_vertex_attrib_divisor(mut self, max_vertex_attrib_divisor: u32) -> Self {
         self.0.max_vertex_attrib_divisor = max_vertex_attrib_divisor as _;
         self
@@ -270,11 +274,13 @@ impl<'a> PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a> {
         PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vertex_attribute_instance_rate_divisor(mut self, vertex_attribute_instance_rate_divisor: bool) -> Self {
         self.0.vertex_attribute_instance_rate_divisor = vertex_attribute_instance_rate_divisor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn vertex_attribute_instance_rate_zero_divisor(mut self, vertex_attribute_instance_rate_zero_divisor: bool) -> Self {
         self.0.vertex_attribute_instance_rate_zero_divisor = vertex_attribute_instance_rate_zero_divisor as _;
         self

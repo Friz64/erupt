@@ -52,16 +52,19 @@ impl<'a> PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder<'a> {
         PhysicalDeviceFragmentShaderInterlockFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shader_sample_interlock(mut self, fragment_shader_sample_interlock: bool) -> Self {
         self.0.fragment_shader_sample_interlock = fragment_shader_sample_interlock as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shader_pixel_interlock(mut self, fragment_shader_pixel_interlock: bool) -> Self {
         self.0.fragment_shader_pixel_interlock = fragment_shader_pixel_interlock as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shader_shading_rate_interlock(mut self, fragment_shader_shading_rate_interlock: bool) -> Self {
         self.0.fragment_shader_shading_rate_interlock = fragment_shader_shading_rate_interlock as _;
         self

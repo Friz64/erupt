@@ -126,11 +126,13 @@ impl<'a> PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a> {
         PhysicalDeviceTransformFeedbackFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn transform_feedback(mut self, transform_feedback: bool) -> Self {
         self.0.transform_feedback = transform_feedback as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn geometry_streams(mut self, geometry_streams: bool) -> Self {
         self.0.geometry_streams = geometry_streams as _;
         self
@@ -210,51 +212,61 @@ impl<'a> PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a> {
         PhysicalDeviceTransformFeedbackPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_feedback_streams(mut self, max_transform_feedback_streams: u32) -> Self {
         self.0.max_transform_feedback_streams = max_transform_feedback_streams as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_feedback_buffers(mut self, max_transform_feedback_buffers: u32) -> Self {
         self.0.max_transform_feedback_buffers = max_transform_feedback_buffers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_feedback_buffer_size(mut self, max_transform_feedback_buffer_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.max_transform_feedback_buffer_size = max_transform_feedback_buffer_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_feedback_stream_data_size(mut self, max_transform_feedback_stream_data_size: u32) -> Self {
         self.0.max_transform_feedback_stream_data_size = max_transform_feedback_stream_data_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_feedback_buffer_data_size(mut self, max_transform_feedback_buffer_data_size: u32) -> Self {
         self.0.max_transform_feedback_buffer_data_size = max_transform_feedback_buffer_data_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_transform_feedback_buffer_data_stride(mut self, max_transform_feedback_buffer_data_stride: u32) -> Self {
         self.0.max_transform_feedback_buffer_data_stride = max_transform_feedback_buffer_data_stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_feedback_queries(mut self, transform_feedback_queries: bool) -> Self {
         self.0.transform_feedback_queries = transform_feedback_queries as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_feedback_streams_lines_triangles(mut self, transform_feedback_streams_lines_triangles: bool) -> Self {
         self.0.transform_feedback_streams_lines_triangles = transform_feedback_streams_lines_triangles as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_feedback_rasterization_stream_select(mut self, transform_feedback_rasterization_stream_select: bool) -> Self {
         self.0.transform_feedback_rasterization_stream_select = transform_feedback_rasterization_stream_select as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_feedback_draw(mut self, transform_feedback_draw: bool) -> Self {
         self.0.transform_feedback_draw = transform_feedback_draw as _;
         self
@@ -326,11 +338,13 @@ impl<'a> PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a> {
         PipelineRasterizationStateStreamCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_transform_feedback::PipelineRasterizationStateStreamCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_stream(mut self, rasterization_stream: u32) -> Self {
         self.0.rasterization_stream = rasterization_stream as _;
         self

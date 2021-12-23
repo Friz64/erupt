@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceShaderIntegerDotProductFeaturesKHRBuilder<'a> {
         PhysicalDeviceShaderIntegerDotProductFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_integer_dot_product(mut self, shader_integer_dot_product: bool) -> Self {
         self.0.shader_integer_dot_product = shader_integer_dot_product as _;
         self
@@ -185,151 +186,181 @@ impl<'a> PhysicalDeviceShaderIntegerDotProductPropertiesKHRBuilder<'a> {
         PhysicalDeviceShaderIntegerDotProductPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product8_bit_unsigned_accelerated(mut self, integer_dot_product8_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product8_bit_unsigned_accelerated = integer_dot_product8_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product8_bit_signed_accelerated(mut self, integer_dot_product8_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product8_bit_signed_accelerated = integer_dot_product8_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product8_bit_mixed_signedness_accelerated(mut self, integer_dot_product8_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product8_bit_mixed_signedness_accelerated = integer_dot_product8_bit_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product4x8_bit_packed_unsigned_accelerated(mut self, integer_dot_product4x8_bit_packed_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product4x8_bit_packed_unsigned_accelerated = integer_dot_product4x8_bit_packed_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product4x8_bit_packed_signed_accelerated(mut self, integer_dot_product4x8_bit_packed_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product4x8_bit_packed_signed_accelerated = integer_dot_product4x8_bit_packed_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product4x8_bit_packed_mixed_signedness_accelerated(mut self, integer_dot_product4x8_bit_packed_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product4x8_bit_packed_mixed_signedness_accelerated = integer_dot_product4x8_bit_packed_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product16_bit_unsigned_accelerated(mut self, integer_dot_product16_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product16_bit_unsigned_accelerated = integer_dot_product16_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product16_bit_signed_accelerated(mut self, integer_dot_product16_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product16_bit_signed_accelerated = integer_dot_product16_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product16_bit_mixed_signedness_accelerated(mut self, integer_dot_product16_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product16_bit_mixed_signedness_accelerated = integer_dot_product16_bit_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product32_bit_unsigned_accelerated(mut self, integer_dot_product32_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product32_bit_unsigned_accelerated = integer_dot_product32_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product32_bit_signed_accelerated(mut self, integer_dot_product32_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product32_bit_signed_accelerated = integer_dot_product32_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product32_bit_mixed_signedness_accelerated(mut self, integer_dot_product32_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product32_bit_mixed_signedness_accelerated = integer_dot_product32_bit_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product64_bit_unsigned_accelerated(mut self, integer_dot_product64_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product64_bit_unsigned_accelerated = integer_dot_product64_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product64_bit_signed_accelerated(mut self, integer_dot_product64_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product64_bit_signed_accelerated = integer_dot_product64_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product64_bit_mixed_signedness_accelerated(mut self, integer_dot_product64_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product64_bit_mixed_signedness_accelerated = integer_dot_product64_bit_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating8_bit_unsigned_accelerated(mut self, integer_dot_product_accumulating_saturating8_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating8_bit_unsigned_accelerated = integer_dot_product_accumulating_saturating8_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating8_bit_signed_accelerated(mut self, integer_dot_product_accumulating_saturating8_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating8_bit_signed_accelerated = integer_dot_product_accumulating_saturating8_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating8_bit_mixed_signedness_accelerated(mut self, integer_dot_product_accumulating_saturating8_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating8_bit_mixed_signedness_accelerated = integer_dot_product_accumulating_saturating8_bit_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating4x8_bit_packed_unsigned_accelerated(mut self, integer_dot_product_accumulating_saturating4x8_bit_packed_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating4x8_bit_packed_unsigned_accelerated = integer_dot_product_accumulating_saturating4x8_bit_packed_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating4x8_bit_packed_signed_accelerated(mut self, integer_dot_product_accumulating_saturating4x8_bit_packed_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating4x8_bit_packed_signed_accelerated = integer_dot_product_accumulating_saturating4x8_bit_packed_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating4x8_bit_packed_mixed_signedness_accelerated(mut self, integer_dot_product_accumulating_saturating4x8_bit_packed_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating4x8_bit_packed_mixed_signedness_accelerated = integer_dot_product_accumulating_saturating4x8_bit_packed_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating16_bit_unsigned_accelerated(mut self, integer_dot_product_accumulating_saturating16_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating16_bit_unsigned_accelerated = integer_dot_product_accumulating_saturating16_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating16_bit_signed_accelerated(mut self, integer_dot_product_accumulating_saturating16_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating16_bit_signed_accelerated = integer_dot_product_accumulating_saturating16_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating16_bit_mixed_signedness_accelerated(mut self, integer_dot_product_accumulating_saturating16_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating16_bit_mixed_signedness_accelerated = integer_dot_product_accumulating_saturating16_bit_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating32_bit_unsigned_accelerated(mut self, integer_dot_product_accumulating_saturating32_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating32_bit_unsigned_accelerated = integer_dot_product_accumulating_saturating32_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating32_bit_signed_accelerated(mut self, integer_dot_product_accumulating_saturating32_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating32_bit_signed_accelerated = integer_dot_product_accumulating_saturating32_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating32_bit_mixed_signedness_accelerated(mut self, integer_dot_product_accumulating_saturating32_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating32_bit_mixed_signedness_accelerated = integer_dot_product_accumulating_saturating32_bit_mixed_signedness_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating64_bit_unsigned_accelerated(mut self, integer_dot_product_accumulating_saturating64_bit_unsigned_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating64_bit_unsigned_accelerated = integer_dot_product_accumulating_saturating64_bit_unsigned_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating64_bit_signed_accelerated(mut self, integer_dot_product_accumulating_saturating64_bit_signed_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating64_bit_signed_accelerated = integer_dot_product_accumulating_saturating64_bit_signed_accelerated as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn integer_dot_product_accumulating_saturating64_bit_mixed_signedness_accelerated(mut self, integer_dot_product_accumulating_saturating64_bit_mixed_signedness_accelerated: bool) -> Self {
         self.0.integer_dot_product_accumulating_saturating64_bit_mixed_signedness_accelerated = integer_dot_product_accumulating_saturating64_bit_mixed_signedness_accelerated as _;
         self

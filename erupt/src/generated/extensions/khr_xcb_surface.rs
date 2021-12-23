@@ -78,16 +78,19 @@ impl<'a> XcbSurfaceCreateInfoKHRBuilder<'a> {
         XcbSurfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_xcb_surface::XcbSurfaceCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn connection(mut self, connection: *mut std::ffi::c_void) -> Self {
         self.0.connection = connection;
         self
     }
     #[inline]
+    #[must_use]
     pub fn window(mut self, window: u32) -> Self {
         self.0.window = window as _;
         self

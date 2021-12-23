@@ -78,16 +78,19 @@ impl<'a> DirectFBSurfaceCreateInfoEXTBuilder<'a> {
         DirectFBSurfaceCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_directfb_surface::DirectFBSurfaceCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dfb(mut self, dfb: *mut std::ffi::c_void) -> Self {
         self.0.dfb = dfb;
         self
     }
     #[inline]
+    #[must_use]
     pub fn surface(mut self, surface: *mut std::ffi::c_void) -> Self {
         self.0.surface = surface;
         self

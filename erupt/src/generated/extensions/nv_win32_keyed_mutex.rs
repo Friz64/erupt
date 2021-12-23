@@ -54,30 +54,35 @@ impl<'a> Win32KeyedMutexAcquireReleaseInfoNVBuilder<'a> {
         Win32KeyedMutexAcquireReleaseInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn acquire_syncs(mut self, acquire_syncs: &'a [crate::vk1_0::DeviceMemory]) -> Self {
         self.0.p_acquire_syncs = acquire_syncs.as_ptr() as _;
         self.0.acquire_count = acquire_syncs.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn acquire_keys(mut self, acquire_keys: &'a [u64]) -> Self {
         self.0.p_acquire_keys = acquire_keys.as_ptr() as _;
         self.0.acquire_count = acquire_keys.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn acquire_timeout_milliseconds(mut self, acquire_timeout_milliseconds: &'a [u32]) -> Self {
         self.0.p_acquire_timeout_milliseconds = acquire_timeout_milliseconds.as_ptr() as _;
         self.0.acquire_count = acquire_timeout_milliseconds.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn release_syncs(mut self, release_syncs: &'a [crate::vk1_0::DeviceMemory]) -> Self {
         self.0.p_release_syncs = release_syncs.as_ptr() as _;
         self.0.release_count = release_syncs.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn release_keys(mut self, release_keys: &'a [u64]) -> Self {
         self.0.p_release_keys = release_keys.as_ptr() as _;
         self.0.release_count = release_keys.len() as _;

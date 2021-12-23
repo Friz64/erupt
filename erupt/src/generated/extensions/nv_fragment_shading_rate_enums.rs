@@ -121,16 +121,19 @@ impl<'a> PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'a> {
         PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_enums(mut self, fragment_shading_rate_enums: bool) -> Self {
         self.0.fragment_shading_rate_enums = fragment_shading_rate_enums as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn supersample_fragment_shading_rates(mut self, supersample_fragment_shading_rates: bool) -> Self {
         self.0.supersample_fragment_shading_rates = supersample_fragment_shading_rates as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn no_invocation_fragment_shading_rates(mut self, no_invocation_fragment_shading_rates: bool) -> Self {
         self.0.no_invocation_fragment_shading_rates = no_invocation_fragment_shading_rates as _;
         self
@@ -201,6 +204,7 @@ impl<'a> PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'a> {
         PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_shading_rate_invocation_count(mut self, max_fragment_shading_rate_invocation_count: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.max_fragment_shading_rate_invocation_count = max_fragment_shading_rate_invocation_count as _;
         self
@@ -273,16 +277,19 @@ impl<'a> PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'a> {
         PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_type(mut self, shading_rate_type: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateTypeNV) -> Self {
         self.0.shading_rate_type = shading_rate_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate(mut self, shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV) -> Self {
         self.0.shading_rate = shading_rate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn combiner_ops(mut self, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> Self {
         self.0.combiner_ops = combiner_ops as _;
         self

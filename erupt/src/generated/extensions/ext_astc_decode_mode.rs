@@ -53,6 +53,7 @@ impl<'a> ImageViewASTCDecodeModeEXTBuilder<'a> {
         ImageViewASTCDecodeModeEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn decode_mode(mut self, decode_mode: crate::vk1_0::Format) -> Self {
         self.0.decode_mode = decode_mode as _;
         self
@@ -123,6 +124,7 @@ impl<'a> PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a> {
         PhysicalDeviceASTCDecodeFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn decode_mode_shared_exponent(mut self, decode_mode_shared_exponent: bool) -> Self {
         self.0.decode_mode_shared_exponent = decode_mode_shared_exponent as _;
         self

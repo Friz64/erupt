@@ -153,6 +153,7 @@ impl<'a> ShadingRatePaletteNVBuilder<'a> {
         ShadingRatePaletteNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_palette_entries(mut self, shading_rate_palette_entries: &'a [crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV]) -> Self {
         self.0.p_shading_rate_palette_entries = shading_rate_palette_entries.as_ptr() as _;
         self.0.shading_rate_palette_entry_count = shading_rate_palette_entries.len() as _;
@@ -226,11 +227,13 @@ impl<'a> PipelineViewportShadingRateImageStateCreateInfoNVBuilder<'a> {
         PipelineViewportShadingRateImageStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_image_enable(mut self, shading_rate_image_enable: bool) -> Self {
         self.0.shading_rate_image_enable = shading_rate_image_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_palettes(mut self, shading_rate_palettes: &'a [crate::extensions::nv_shading_rate_image::ShadingRatePaletteNVBuilder]) -> Self {
         self.0.p_shading_rate_palettes = shading_rate_palettes.as_ptr() as _;
         self.0.viewport_count = shading_rate_palettes.len() as _;
@@ -303,11 +306,13 @@ impl<'a> PhysicalDeviceShadingRateImageFeaturesNVBuilder<'a> {
         PhysicalDeviceShadingRateImageFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_image(mut self, shading_rate_image: bool) -> Self {
         self.0.shading_rate_image = shading_rate_image as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_coarse_sample_order(mut self, shading_rate_coarse_sample_order: bool) -> Self {
         self.0.shading_rate_coarse_sample_order = shading_rate_coarse_sample_order as _;
         self
@@ -380,16 +385,19 @@ impl<'a> PhysicalDeviceShadingRateImagePropertiesNVBuilder<'a> {
         PhysicalDeviceShadingRateImagePropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_texel_size(mut self, shading_rate_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.shading_rate_texel_size = shading_rate_texel_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_palette_size(mut self, shading_rate_palette_size: u32) -> Self {
         self.0.shading_rate_palette_size = shading_rate_palette_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_max_coarse_samples(mut self, shading_rate_max_coarse_samples: u32) -> Self {
         self.0.shading_rate_max_coarse_samples = shading_rate_max_coarse_samples as _;
         self
@@ -457,16 +465,19 @@ impl<'a> CoarseSampleLocationNVBuilder<'a> {
         CoarseSampleLocationNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pixel_x(mut self, pixel_x: u32) -> Self {
         self.0.pixel_x = pixel_x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pixel_y(mut self, pixel_y: u32) -> Self {
         self.0.pixel_y = pixel_y as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample(mut self, sample: u32) -> Self {
         self.0.sample = sample as _;
         self
@@ -535,16 +546,19 @@ impl<'a> CoarseSampleOrderCustomNVBuilder<'a> {
         CoarseSampleOrderCustomNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate(mut self, shading_rate: crate::extensions::nv_shading_rate_image::ShadingRatePaletteEntryNV) -> Self {
         self.0.shading_rate = shading_rate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_count(mut self, sample_count: u32) -> Self {
         self.0.sample_count = sample_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sample_locations(mut self, sample_locations: &'a [crate::extensions::nv_shading_rate_image::CoarseSampleLocationNVBuilder]) -> Self {
         self.0.p_sample_locations = sample_locations.as_ptr() as _;
         self.0.sample_location_count = sample_locations.len() as _;
@@ -618,11 +632,13 @@ impl<'a> PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder<'a> {
         PipelineViewportCoarseSampleOrderStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sample_order_type(mut self, sample_order_type: crate::extensions::nv_shading_rate_image::CoarseSampleOrderTypeNV) -> Self {
         self.0.sample_order_type = sample_order_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn custom_sample_orders(mut self, custom_sample_orders: &'a [crate::extensions::nv_shading_rate_image::CoarseSampleOrderCustomNVBuilder]) -> Self {
         self.0.p_custom_sample_orders = custom_sample_orders.as_ptr() as _;
         self.0.custom_sample_order_count = custom_sample_orders.len() as _;

@@ -59,6 +59,7 @@ impl<'a> PhysicalDeviceImageViewImageFormatInfoEXTBuilder<'a> {
         PhysicalDeviceImageViewImageFormatInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_view_type(mut self, image_view_type: crate::vk1_0::ImageViewType) -> Self {
         self.0.image_view_type = image_view_type as _;
         self
@@ -130,11 +131,13 @@ impl<'a> FilterCubicImageViewImageFormatPropertiesEXTBuilder<'a> {
         FilterCubicImageViewImageFormatPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn filter_cubic(mut self, filter_cubic: bool) -> Self {
         self.0.filter_cubic = filter_cubic as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn filter_cubic_minmax(mut self, filter_cubic_minmax: bool) -> Self {
         self.0.filter_cubic_minmax = filter_cubic_minmax as _;
         self

@@ -74,6 +74,7 @@ impl<'a> DeviceBufferMemoryRequirementsKHRBuilder<'a> {
         DeviceBufferMemoryRequirementsKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn create_info(mut self, create_info: &'a crate::vk1_0::BufferCreateInfo) -> Self {
         self.0.p_create_info = create_info as _;
         self
@@ -145,11 +146,13 @@ impl<'a> DeviceImageMemoryRequirementsKHRBuilder<'a> {
         DeviceImageMemoryRequirementsKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn create_info(mut self, create_info: &'a crate::vk1_0::ImageCreateInfo) -> Self {
         self.0.p_create_info = create_info as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn plane_aspect(mut self, plane_aspect: crate::vk1_0::ImageAspectFlagBits) -> Self {
         self.0.plane_aspect = plane_aspect as _;
         self
@@ -220,6 +223,7 @@ impl<'a> PhysicalDeviceMaintenance4FeaturesKHRBuilder<'a> {
         PhysicalDeviceMaintenance4FeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn maintenance4(mut self, maintenance4: bool) -> Self {
         self.0.maintenance4 = maintenance4 as _;
         self
@@ -290,6 +294,7 @@ impl<'a> PhysicalDeviceMaintenance4PropertiesKHRBuilder<'a> {
         PhysicalDeviceMaintenance4PropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_buffer_size(mut self, max_buffer_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.max_buffer_size = max_buffer_size as _;
         self

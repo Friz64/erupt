@@ -200,52 +200,62 @@ impl<'a> VideoEncodeInfoKHRBuilder<'a> {
         VideoEncodeInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_video_encode_queue::VideoEncodeFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn quality_level(mut self, quality_level: u32) -> Self {
         self.0.quality_level = quality_level as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coded_extent(mut self, coded_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.coded_extent = coded_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_bitstream_buffer(mut self, dst_bitstream_buffer: crate::vk1_0::Buffer) -> Self {
         self.0.dst_bitstream_buffer = dst_bitstream_buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_bitstream_buffer_offset(mut self, dst_bitstream_buffer_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.dst_bitstream_buffer_offset = dst_bitstream_buffer_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_bitstream_buffer_max_range(mut self, dst_bitstream_buffer_max_range: crate::vk1_0::DeviceSize) -> Self {
         self.0.dst_bitstream_buffer_max_range = dst_bitstream_buffer_max_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn src_picture_resource(mut self, src_picture_resource: crate::extensions::khr_video_queue::VideoPictureResourceKHR) -> Self {
         self.0.src_picture_resource = src_picture_resource as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn setup_reference_slot(mut self, setup_reference_slot: &'a crate::extensions::khr_video_queue::VideoReferenceSlotKHR) -> Self {
         self.0.p_setup_reference_slot = setup_reference_slot as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_slots(mut self, reference_slots: &'a [crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder]) -> Self {
         self.0.p_reference_slots = reference_slots.as_ptr() as _;
         self.0.reference_slot_count = reference_slots.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn preceding_externally_encoded_bytes(mut self, preceding_externally_encoded_bytes: u32) -> Self {
         self.0.preceding_externally_encoded_bytes = preceding_externally_encoded_bytes as _;
         self
@@ -319,16 +329,19 @@ impl<'a> VideoEncodeRateControlInfoKHRBuilder<'a> {
         VideoEncodeRateControlInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_video_encode_queue::VideoEncodeRateControlFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rate_control_mode(mut self, rate_control_mode: crate::extensions::khr_video_encode_queue::VideoEncodeRateControlModeFlagBitsKHR) -> Self {
         self.0.rate_control_mode = rate_control_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer_configs(mut self, layer_configs: &'a [crate::extensions::khr_video_encode_queue::VideoEncodeRateControlLayerInfoKHRBuilder]) -> Self {
         self.0.p_layer_configs = layer_configs.as_ptr() as _;
         self.0.layer_count = layer_configs.len() as _;
@@ -405,31 +418,37 @@ impl<'a> VideoEncodeRateControlLayerInfoKHRBuilder<'a> {
         VideoEncodeRateControlLayerInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn average_bitrate(mut self, average_bitrate: u32) -> Self {
         self.0.average_bitrate = average_bitrate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_bitrate(mut self, max_bitrate: u32) -> Self {
         self.0.max_bitrate = max_bitrate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_rate_numerator(mut self, frame_rate_numerator: u32) -> Self {
         self.0.frame_rate_numerator = frame_rate_numerator as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_rate_denominator(mut self, frame_rate_denominator: u32) -> Self {
         self.0.frame_rate_denominator = frame_rate_denominator as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn virtual_buffer_size_in_ms(mut self, virtual_buffer_size_in_ms: u32) -> Self {
         self.0.virtual_buffer_size_in_ms = virtual_buffer_size_in_ms as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_virtual_buffer_size_in_ms(mut self, initial_virtual_buffer_size_in_ms: u32) -> Self {
         self.0.initial_virtual_buffer_size_in_ms = initial_virtual_buffer_size_in_ms as _;
         self

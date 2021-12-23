@@ -217,16 +217,19 @@ impl<'a> DebugUtilsObjectNameInfoEXTBuilder<'a> {
         DebugUtilsObjectNameInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn object_type(mut self, object_type: crate::vk1_0::ObjectType) -> Self {
         self.0.object_type = object_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object_handle(mut self, object_handle: u64) -> Self {
         self.0.object_handle = object_handle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object_name(mut self, object_name: &'a std::ffi::CStr) -> Self {
         self.0.p_object_name = object_name.as_ptr();
         self
@@ -301,26 +304,31 @@ impl<'a> DebugUtilsObjectTagInfoEXTBuilder<'a> {
         DebugUtilsObjectTagInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn object_type(mut self, object_type: crate::vk1_0::ObjectType) -> Self {
         self.0.object_type = object_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object_handle(mut self, object_handle: u64) -> Self {
         self.0.object_handle = object_handle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tag_name(mut self, tag_name: u64) -> Self {
         self.0.tag_name = tag_name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tag_size(mut self, tag_size: usize) -> Self {
         self.0.tag_size = tag_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tag(mut self, tag: *const std::ffi::c_void) -> Self {
         self.0.p_tag = tag;
         self
@@ -392,11 +400,13 @@ impl<'a> DebugUtilsLabelEXTBuilder<'a> {
         DebugUtilsLabelEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn label_name(mut self, label_name: &'a std::ffi::CStr) -> Self {
         self.0.p_label_name = label_name.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn color(mut self, color: [std::os::raw::c_float; 4]) -> Self {
         self.0.color = color as _;
         self
@@ -471,26 +481,31 @@ impl<'a> DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
         DebugUtilsMessengerCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_debug_utils::DebugUtilsMessengerCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn message_severity(mut self, message_severity: crate::extensions::ext_debug_utils::DebugUtilsMessageSeverityFlagsEXT) -> Self {
         self.0.message_severity = message_severity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn message_type(mut self, message_type: crate::extensions::ext_debug_utils::DebugUtilsMessageTypeFlagsEXT) -> Self {
         self.0.message_type = message_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pfn_user_callback(mut self, pfn_user_callback: Option<crate::extensions::ext_debug_utils::PFN_vkDebugUtilsMessengerCallbackEXT>) -> Self {
         self.0.pfn_user_callback = pfn_user_callback as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn user_data(mut self, user_data: *mut std::ffi::c_void) -> Self {
         self.0.p_user_data = user_data;
         self
@@ -570,38 +585,45 @@ impl<'a> DebugUtilsMessengerCallbackDataEXTBuilder<'a> {
         DebugUtilsMessengerCallbackDataEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_debug_utils::DebugUtilsMessengerCallbackDataFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn message_id_name(mut self, message_id_name: &'a std::ffi::CStr) -> Self {
         self.0.p_message_id_name = message_id_name.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn message_id_number(mut self, message_id_number: i32) -> Self {
         self.0.message_id_number = message_id_number as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn message(mut self, message: &'a std::ffi::CStr) -> Self {
         self.0.p_message = message.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn queue_labels(mut self, queue_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder]) -> Self {
         self.0.p_queue_labels = queue_labels.as_ptr() as _;
         self.0.queue_label_count = queue_labels.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn cmd_buf_labels(mut self, cmd_buf_labels: &'a [crate::extensions::ext_debug_utils::DebugUtilsLabelEXTBuilder]) -> Self {
         self.0.p_cmd_buf_labels = cmd_buf_labels.as_ptr() as _;
         self.0.cmd_buf_label_count = cmd_buf_labels.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn objects(mut self, objects: &'a [crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder]) -> Self {
         self.0.p_objects = objects.as_ptr() as _;
         self.0.object_count = objects.len() as _;

@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceRayQueryFeaturesKHRBuilder<'a> {
         PhysicalDeviceRayQueryFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ray_query(mut self, ray_query: bool) -> Self {
         self.0.ray_query = ray_query as _;
         self

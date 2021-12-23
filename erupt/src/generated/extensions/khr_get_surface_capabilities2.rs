@@ -58,6 +58,7 @@ impl<'a> PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
         PhysicalDeviceSurfaceInfo2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn surface(mut self, surface: crate::extensions::khr_surface::SurfaceKHR) -> Self {
         self.0.surface = surface as _;
         self
@@ -128,6 +129,7 @@ impl<'a> SurfaceCapabilities2KHRBuilder<'a> {
         SurfaceCapabilities2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn surface_capabilities(mut self, surface_capabilities: crate::extensions::khr_surface::SurfaceCapabilitiesKHR) -> Self {
         self.0.surface_capabilities = surface_capabilities as _;
         self
@@ -198,6 +200,7 @@ impl<'a> SurfaceFormat2KHRBuilder<'a> {
         SurfaceFormat2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn surface_format(mut self, surface_format: crate::extensions::khr_surface::SurfaceFormatKHR) -> Self {
         self.0.surface_format = surface_format as _;
         self

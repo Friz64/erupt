@@ -51,11 +51,13 @@ impl<'a> PhysicalDeviceShaderClockFeaturesKHRBuilder<'a> {
         PhysicalDeviceShaderClockFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_subgroup_clock(mut self, shader_subgroup_clock: bool) -> Self {
         self.0.shader_subgroup_clock = shader_subgroup_clock as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_device_clock(mut self, shader_device_clock: bool) -> Self {
         self.0.shader_device_clock = shader_device_clock as _;
         self

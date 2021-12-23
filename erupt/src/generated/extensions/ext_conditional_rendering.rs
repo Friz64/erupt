@@ -103,16 +103,19 @@ impl<'a> ConditionalRenderingBeginInfoEXTBuilder<'a> {
         ConditionalRenderingBeginInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn buffer(mut self, buffer: crate::vk1_0::Buffer) -> Self {
         self.0.buffer = buffer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn offset(mut self, offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.offset = offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_conditional_rendering::ConditionalRenderingFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
@@ -183,6 +186,7 @@ impl<'a> CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'a> {
         CommandBufferInheritanceConditionalRenderingInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn conditional_rendering_enable(mut self, conditional_rendering_enable: bool) -> Self {
         self.0.conditional_rendering_enable = conditional_rendering_enable as _;
         self
@@ -254,11 +258,13 @@ impl<'a> PhysicalDeviceConditionalRenderingFeaturesEXTBuilder<'a> {
         PhysicalDeviceConditionalRenderingFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn conditional_rendering(mut self, conditional_rendering: bool) -> Self {
         self.0.conditional_rendering = conditional_rendering as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn inherited_conditional_rendering(mut self, inherited_conditional_rendering: bool) -> Self {
         self.0.inherited_conditional_rendering = inherited_conditional_rendering as _;
         self

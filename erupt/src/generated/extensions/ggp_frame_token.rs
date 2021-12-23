@@ -48,6 +48,7 @@ impl<'a> PresentFrameTokenGGPBuilder<'a> {
         PresentFrameTokenGGPBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn frame_token(mut self, frame_token: u64) -> Self {
         self.0.frame_token = frame_token as _;
         self

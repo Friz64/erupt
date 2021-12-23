@@ -93,31 +93,37 @@ impl<'a> PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a> {
         PhysicalDeviceLineRasterizationFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn rectangular_lines(mut self, rectangular_lines: bool) -> Self {
         self.0.rectangular_lines = rectangular_lines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn bresenham_lines(mut self, bresenham_lines: bool) -> Self {
         self.0.bresenham_lines = bresenham_lines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn smooth_lines(mut self, smooth_lines: bool) -> Self {
         self.0.smooth_lines = smooth_lines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stippled_rectangular_lines(mut self, stippled_rectangular_lines: bool) -> Self {
         self.0.stippled_rectangular_lines = stippled_rectangular_lines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stippled_bresenham_lines(mut self, stippled_bresenham_lines: bool) -> Self {
         self.0.stippled_bresenham_lines = stippled_bresenham_lines as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stippled_smooth_lines(mut self, stippled_smooth_lines: bool) -> Self {
         self.0.stippled_smooth_lines = stippled_smooth_lines as _;
         self
@@ -188,6 +194,7 @@ impl<'a> PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a> {
         PhysicalDeviceLineRasterizationPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn line_sub_pixel_precision_bits(mut self, line_sub_pixel_precision_bits: u32) -> Self {
         self.0.line_sub_pixel_precision_bits = line_sub_pixel_precision_bits as _;
         self
@@ -261,21 +268,25 @@ impl<'a> PipelineRasterizationLineStateCreateInfoEXTBuilder<'a> {
         PipelineRasterizationLineStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn line_rasterization_mode(mut self, line_rasterization_mode: crate::extensions::ext_line_rasterization::LineRasterizationModeEXT) -> Self {
         self.0.line_rasterization_mode = line_rasterization_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stippled_line_enable(mut self, stippled_line_enable: bool) -> Self {
         self.0.stippled_line_enable = stippled_line_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn line_stipple_factor(mut self, line_stipple_factor: u32) -> Self {
         self.0.line_stipple_factor = line_stipple_factor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn line_stipple_pattern(mut self, line_stipple_pattern: u16) -> Self {
         self.0.line_stipple_pattern = line_stipple_pattern as _;
         self

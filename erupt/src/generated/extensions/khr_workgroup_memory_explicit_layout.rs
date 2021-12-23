@@ -53,21 +53,25 @@ impl<'a> PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'a> {
         PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn workgroup_memory_explicit_layout(mut self, workgroup_memory_explicit_layout: bool) -> Self {
         self.0.workgroup_memory_explicit_layout = workgroup_memory_explicit_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn workgroup_memory_explicit_layout_scalar_block_layout(mut self, workgroup_memory_explicit_layout_scalar_block_layout: bool) -> Self {
         self.0.workgroup_memory_explicit_layout_scalar_block_layout = workgroup_memory_explicit_layout_scalar_block_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn workgroup_memory_explicit_layout8_bit_access(mut self, workgroup_memory_explicit_layout8_bit_access: bool) -> Self {
         self.0.workgroup_memory_explicit_layout8_bit_access = workgroup_memory_explicit_layout8_bit_access as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn workgroup_memory_explicit_layout16_bit_access(mut self, workgroup_memory_explicit_layout16_bit_access: bool) -> Self {
         self.0.workgroup_memory_explicit_layout16_bit_access = workgroup_memory_explicit_layout16_bit_access as _;
         self

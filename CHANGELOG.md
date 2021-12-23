@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+###
+
+- Add `#[must_use]` attribute to builder methods
+
 ### Changed
 
 - Update Vulkan Headers to version 203

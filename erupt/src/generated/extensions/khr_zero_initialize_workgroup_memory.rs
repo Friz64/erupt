@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder<'a> {
         PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_zero_initialize_workgroup_memory(mut self, shader_zero_initialize_workgroup_memory: bool) -> Self {
         self.0.shader_zero_initialize_workgroup_memory = shader_zero_initialize_workgroup_memory as _;
         self

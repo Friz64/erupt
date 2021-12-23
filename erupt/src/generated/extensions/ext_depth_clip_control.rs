@@ -53,6 +53,7 @@ impl<'a> PhysicalDeviceDepthClipControlFeaturesEXTBuilder<'a> {
         PhysicalDeviceDepthClipControlFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn depth_clip_control(mut self, depth_clip_control: bool) -> Self {
         self.0.depth_clip_control = depth_clip_control as _;
         self
@@ -123,6 +124,7 @@ impl<'a> PipelineViewportDepthClipControlCreateInfoEXTBuilder<'a> {
         PipelineViewportDepthClipControlCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn negative_one_to_one(mut self, negative_one_to_one: bool) -> Self {
         self.0.negative_one_to_one = negative_one_to_one as _;
         self

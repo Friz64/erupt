@@ -64,11 +64,13 @@ impl<'a> PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder<'a> {
         PhysicalDeviceInlineUniformBlockFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn inline_uniform_block(mut self, inline_uniform_block: bool) -> Self {
         self.0.inline_uniform_block = inline_uniform_block as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_binding_inline_uniform_block_update_after_bind(mut self, descriptor_binding_inline_uniform_block_update_after_bind: bool) -> Self {
         self.0.descriptor_binding_inline_uniform_block_update_after_bind = descriptor_binding_inline_uniform_block_update_after_bind as _;
         self
@@ -143,26 +145,31 @@ impl<'a> PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder<'a> {
         PhysicalDeviceInlineUniformBlockPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_inline_uniform_block_size(mut self, max_inline_uniform_block_size: u32) -> Self {
         self.0.max_inline_uniform_block_size = max_inline_uniform_block_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_inline_uniform_blocks(mut self, max_per_stage_descriptor_inline_uniform_blocks: u32) -> Self {
         self.0.max_per_stage_descriptor_inline_uniform_blocks = max_per_stage_descriptor_inline_uniform_blocks as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_per_stage_descriptor_update_after_bind_inline_uniform_blocks(mut self, max_per_stage_descriptor_update_after_bind_inline_uniform_blocks: u32) -> Self {
         self.0.max_per_stage_descriptor_update_after_bind_inline_uniform_blocks = max_per_stage_descriptor_update_after_bind_inline_uniform_blocks as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_inline_uniform_blocks(mut self, max_descriptor_set_inline_uniform_blocks: u32) -> Self {
         self.0.max_descriptor_set_inline_uniform_blocks = max_descriptor_set_inline_uniform_blocks as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_descriptor_set_update_after_bind_inline_uniform_blocks(mut self, max_descriptor_set_update_after_bind_inline_uniform_blocks: u32) -> Self {
         self.0.max_descriptor_set_update_after_bind_inline_uniform_blocks = max_descriptor_set_update_after_bind_inline_uniform_blocks as _;
         self
@@ -234,11 +241,13 @@ impl<'a> WriteDescriptorSetInlineUniformBlockEXTBuilder<'a> {
         WriteDescriptorSetInlineUniformBlockEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn data_size(mut self, data_size: u32) -> Self {
         self.0.data_size = data_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data(mut self, data: *const std::ffi::c_void) -> Self {
         self.0.p_data = data;
         self
@@ -309,6 +318,7 @@ impl<'a> DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder<'a> {
         DescriptorPoolInlineUniformBlockCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_inline_uniform_block_bindings(mut self, max_inline_uniform_block_bindings: u32) -> Self {
         self.0.max_inline_uniform_block_bindings = max_inline_uniform_block_bindings as _;
         self

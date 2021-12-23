@@ -58,6 +58,7 @@ impl<'a> DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a> {
         DisplayNativeHdrSurfaceCapabilitiesAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn local_dimming_support(mut self, local_dimming_support: bool) -> Self {
         self.0.local_dimming_support = local_dimming_support as _;
         self
@@ -128,6 +129,7 @@ impl<'a> SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a> {
         SwapchainDisplayNativeHdrCreateInfoAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn local_dimming_enable(mut self, local_dimming_enable: bool) -> Self {
         self.0.local_dimming_enable = local_dimming_enable as _;
         self

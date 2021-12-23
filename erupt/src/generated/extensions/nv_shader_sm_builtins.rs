@@ -54,11 +54,13 @@ impl<'a> PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a> {
         PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_sm_count(mut self, shader_sm_count: u32) -> Self {
         self.0.shader_sm_count = shader_sm_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_warps_per_sm(mut self, shader_warps_per_sm: u32) -> Self {
         self.0.shader_warps_per_sm = shader_warps_per_sm as _;
         self
@@ -129,6 +131,7 @@ impl<'a> PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a> {
         PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_sm_builtins(mut self, shader_sm_builtins: bool) -> Self {
         self.0.shader_sm_builtins = shader_sm_builtins as _;
         self

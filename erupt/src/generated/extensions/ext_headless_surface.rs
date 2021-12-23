@@ -71,6 +71,7 @@ impl<'a> HeadlessSurfaceCreateInfoEXTBuilder<'a> {
         HeadlessSurfaceCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_headless_surface::HeadlessSurfaceCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self

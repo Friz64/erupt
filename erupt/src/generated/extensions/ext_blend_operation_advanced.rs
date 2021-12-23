@@ -130,6 +130,7 @@ impl<'a> PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
         PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn advanced_blend_coherent_operations(mut self, advanced_blend_coherent_operations: bool) -> Self {
         self.0.advanced_blend_coherent_operations = advanced_blend_coherent_operations as _;
         self
@@ -205,31 +206,37 @@ impl<'a> PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
         PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn advanced_blend_max_color_attachments(mut self, advanced_blend_max_color_attachments: u32) -> Self {
         self.0.advanced_blend_max_color_attachments = advanced_blend_max_color_attachments as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn advanced_blend_independent_blend(mut self, advanced_blend_independent_blend: bool) -> Self {
         self.0.advanced_blend_independent_blend = advanced_blend_independent_blend as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn advanced_blend_non_premultiplied_src_color(mut self, advanced_blend_non_premultiplied_src_color: bool) -> Self {
         self.0.advanced_blend_non_premultiplied_src_color = advanced_blend_non_premultiplied_src_color as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn advanced_blend_non_premultiplied_dst_color(mut self, advanced_blend_non_premultiplied_dst_color: bool) -> Self {
         self.0.advanced_blend_non_premultiplied_dst_color = advanced_blend_non_premultiplied_dst_color as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn advanced_blend_correlated_overlap(mut self, advanced_blend_correlated_overlap: bool) -> Self {
         self.0.advanced_blend_correlated_overlap = advanced_blend_correlated_overlap as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn advanced_blend_all_operations(mut self, advanced_blend_all_operations: bool) -> Self {
         self.0.advanced_blend_all_operations = advanced_blend_all_operations as _;
         self
@@ -302,16 +309,19 @@ impl<'a> PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a> {
         PipelineColorBlendAdvancedStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn src_premultiplied(mut self, src_premultiplied: bool) -> Self {
         self.0.src_premultiplied = src_premultiplied as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dst_premultiplied(mut self, dst_premultiplied: bool) -> Self {
         self.0.dst_premultiplied = dst_premultiplied as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn blend_overlap(mut self, blend_overlap: crate::extensions::ext_blend_operation_advanced::BlendOverlapEXT) -> Self {
         self.0.blend_overlap = blend_overlap as _;
         self

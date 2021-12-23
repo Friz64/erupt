@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHRBuilder<'a> {
         PhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_subgroup_uniform_control_flow(mut self, shader_subgroup_uniform_control_flow: bool) -> Self {
         self.0.shader_subgroup_uniform_control_flow = shader_subgroup_uniform_control_flow as _;
         self

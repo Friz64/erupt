@@ -124,11 +124,13 @@ impl<'a> FragmentShadingRateAttachmentInfoKHRBuilder<'a> {
         FragmentShadingRateAttachmentInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_attachment(mut self, fragment_shading_rate_attachment: &'a crate::vk1_2::AttachmentReference2) -> Self {
         self.0.p_fragment_shading_rate_attachment = fragment_shading_rate_attachment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_attachment_texel_size(mut self, shading_rate_attachment_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.shading_rate_attachment_texel_size = shading_rate_attachment_texel_size as _;
         self
@@ -200,11 +202,13 @@ impl<'a> PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'a> {
         PipelineFragmentShadingRateStateCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_size(mut self, fragment_size: crate::vk1_0::Extent2D) -> Self {
         self.0.fragment_size = fragment_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn combiner_ops(mut self, combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2]) -> Self {
         self.0.combiner_ops = combiner_ops as _;
         self
@@ -277,16 +281,19 @@ impl<'a> PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder<'a> {
         PhysicalDeviceFragmentShadingRateFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_fragment_shading_rate(mut self, pipeline_fragment_shading_rate: bool) -> Self {
         self.0.pipeline_fragment_shading_rate = pipeline_fragment_shading_rate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn primitive_fragment_shading_rate(mut self, primitive_fragment_shading_rate: bool) -> Self {
         self.0.primitive_fragment_shading_rate = primitive_fragment_shading_rate as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn attachment_fragment_shading_rate(mut self, attachment_fragment_shading_rate: bool) -> Self {
         self.0.attachment_fragment_shading_rate = attachment_fragment_shading_rate as _;
         self
@@ -373,86 +380,103 @@ impl<'a> PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'a> {
         PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_fragment_shading_rate_attachment_texel_size(mut self, min_fragment_shading_rate_attachment_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.min_fragment_shading_rate_attachment_texel_size = min_fragment_shading_rate_attachment_texel_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_shading_rate_attachment_texel_size(mut self, max_fragment_shading_rate_attachment_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_fragment_shading_rate_attachment_texel_size = max_fragment_shading_rate_attachment_texel_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_shading_rate_attachment_texel_size_aspect_ratio(mut self, max_fragment_shading_rate_attachment_texel_size_aspect_ratio: u32) -> Self {
         self.0.max_fragment_shading_rate_attachment_texel_size_aspect_ratio = max_fragment_shading_rate_attachment_texel_size_aspect_ratio as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn primitive_fragment_shading_rate_with_multiple_viewports(mut self, primitive_fragment_shading_rate_with_multiple_viewports: bool) -> Self {
         self.0.primitive_fragment_shading_rate_with_multiple_viewports = primitive_fragment_shading_rate_with_multiple_viewports as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layered_shading_rate_attachments(mut self, layered_shading_rate_attachments: bool) -> Self {
         self.0.layered_shading_rate_attachments = layered_shading_rate_attachments as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_non_trivial_combiner_ops(mut self, fragment_shading_rate_non_trivial_combiner_ops: bool) -> Self {
         self.0.fragment_shading_rate_non_trivial_combiner_ops = fragment_shading_rate_non_trivial_combiner_ops as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_size(mut self, max_fragment_size: crate::vk1_0::Extent2D) -> Self {
         self.0.max_fragment_size = max_fragment_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_size_aspect_ratio(mut self, max_fragment_size_aspect_ratio: u32) -> Self {
         self.0.max_fragment_size_aspect_ratio = max_fragment_size_aspect_ratio as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_shading_rate_coverage_samples(mut self, max_fragment_shading_rate_coverage_samples: u32) -> Self {
         self.0.max_fragment_shading_rate_coverage_samples = max_fragment_shading_rate_coverage_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_fragment_shading_rate_rasterization_samples(mut self, max_fragment_shading_rate_rasterization_samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.max_fragment_shading_rate_rasterization_samples = max_fragment_shading_rate_rasterization_samples as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_with_shader_depth_stencil_writes(mut self, fragment_shading_rate_with_shader_depth_stencil_writes: bool) -> Self {
         self.0.fragment_shading_rate_with_shader_depth_stencil_writes = fragment_shading_rate_with_shader_depth_stencil_writes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_with_sample_mask(mut self, fragment_shading_rate_with_sample_mask: bool) -> Self {
         self.0.fragment_shading_rate_with_sample_mask = fragment_shading_rate_with_sample_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_with_shader_sample_mask(mut self, fragment_shading_rate_with_shader_sample_mask: bool) -> Self {
         self.0.fragment_shading_rate_with_shader_sample_mask = fragment_shading_rate_with_shader_sample_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_with_conservative_rasterization(mut self, fragment_shading_rate_with_conservative_rasterization: bool) -> Self {
         self.0.fragment_shading_rate_with_conservative_rasterization = fragment_shading_rate_with_conservative_rasterization as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_with_fragment_shader_interlock(mut self, fragment_shading_rate_with_fragment_shader_interlock: bool) -> Self {
         self.0.fragment_shading_rate_with_fragment_shader_interlock = fragment_shading_rate_with_fragment_shader_interlock as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_with_custom_sample_locations(mut self, fragment_shading_rate_with_custom_sample_locations: bool) -> Self {
         self.0.fragment_shading_rate_with_custom_sample_locations = fragment_shading_rate_with_custom_sample_locations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shading_rate_strict_multiply_combiner(mut self, fragment_shading_rate_strict_multiply_combiner: bool) -> Self {
         self.0.fragment_shading_rate_strict_multiply_combiner = fragment_shading_rate_strict_multiply_combiner as _;
         self
@@ -524,11 +548,13 @@ impl<'a> PhysicalDeviceFragmentShadingRateKHRBuilder<'a> {
         PhysicalDeviceFragmentShadingRateKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn sample_counts(mut self, sample_counts: crate::vk1_0::SampleCountFlags) -> Self {
         self.0.sample_counts = sample_counts as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn fragment_size(mut self, fragment_size: crate::vk1_0::Extent2D) -> Self {
         self.0.fragment_size = fragment_size as _;
         self

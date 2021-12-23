@@ -135,16 +135,19 @@ impl<'a> FormatProperties3KHRBuilder<'a> {
         FormatProperties3KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn linear_tiling_features(mut self, linear_tiling_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR) -> Self {
         self.0.linear_tiling_features = linear_tiling_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn optimal_tiling_features(mut self, optimal_tiling_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR) -> Self {
         self.0.optimal_tiling_features = optimal_tiling_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_features(mut self, buffer_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR) -> Self {
         self.0.buffer_features = buffer_features as _;
         self

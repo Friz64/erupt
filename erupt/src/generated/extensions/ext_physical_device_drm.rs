@@ -53,31 +53,37 @@ impl<'a> PhysicalDeviceDrmPropertiesEXTBuilder<'a> {
         PhysicalDeviceDrmPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn has_primary(mut self, has_primary: bool) -> Self {
         self.0.has_primary = has_primary as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn has_render(mut self, has_render: bool) -> Self {
         self.0.has_render = has_render as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn primary_major(mut self, primary_major: i64) -> Self {
         self.0.primary_major = primary_major as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn primary_minor(mut self, primary_minor: i64) -> Self {
         self.0.primary_minor = primary_minor as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn render_major(mut self, render_major: i64) -> Self {
         self.0.render_major = render_major as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn render_minor(mut self, render_minor: i64) -> Self {
         self.0.render_minor = render_minor as _;
         self

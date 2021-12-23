@@ -46,6 +46,7 @@ impl<'a> CopyCommandTransformInfoQCOMBuilder<'a> {
         CopyCommandTransformInfoQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn transform(mut self, transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.transform = transform as _;
         self

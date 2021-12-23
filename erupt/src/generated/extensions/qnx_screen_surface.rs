@@ -78,16 +78,19 @@ impl<'a> ScreenSurfaceCreateInfoQNXBuilder<'a> {
         ScreenSurfaceCreateInfoQNXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::qnx_screen_surface::ScreenSurfaceCreateFlagsQNX) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn context(mut self, context: *mut std::ffi::c_void) -> Self {
         self.0.context = context;
         self
     }
     #[inline]
+    #[must_use]
     pub fn window(mut self, window: *mut std::ffi::c_void) -> Self {
         self.0.window = window;
         self

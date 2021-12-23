@@ -60,6 +60,7 @@ impl<'a> PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOMBuilder<'a> {
         PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_map_offset(mut self, fragment_density_map_offset: bool) -> Self {
         self.0.fragment_density_map_offset = fragment_density_map_offset as _;
         self
@@ -130,6 +131,7 @@ impl<'a> PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOMBuilder<'a> {
         PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_offset_granularity(mut self, fragment_density_offset_granularity: crate::vk1_0::Extent2D) -> Self {
         self.0.fragment_density_offset_granularity = fragment_density_offset_granularity as _;
         self
@@ -201,6 +203,7 @@ impl<'a> SubpassFragmentDensityMapOffsetEndInfoQCOMBuilder<'a> {
         SubpassFragmentDensityMapOffsetEndInfoQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_density_offsets(mut self, fragment_density_offsets: &'a [crate::vk1_0::Offset2DBuilder]) -> Self {
         self.0.p_fragment_density_offsets = fragment_density_offsets.as_ptr() as _;
         self.0.fragment_density_offset_count = fragment_density_offsets.len() as _;

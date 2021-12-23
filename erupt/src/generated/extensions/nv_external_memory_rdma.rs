@@ -67,6 +67,7 @@ impl<'a> PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'a> {
         PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn external_memory_rdma(mut self, external_memory_rdma: bool) -> Self {
         self.0.external_memory_rdma = external_memory_rdma as _;
         self
@@ -138,11 +139,13 @@ impl<'a> MemoryGetRemoteAddressInfoNVBuilder<'a> {
         MemoryGetRemoteAddressInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self

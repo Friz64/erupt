@@ -51,11 +51,13 @@ impl<'a> PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a> {
         PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn compute_derivative_group_quads(mut self, compute_derivative_group_quads: bool) -> Self {
         self.0.compute_derivative_group_quads = compute_derivative_group_quads as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compute_derivative_group_linear(mut self, compute_derivative_group_linear: bool) -> Self {
         self.0.compute_derivative_group_linear = compute_derivative_group_linear as _;
         self

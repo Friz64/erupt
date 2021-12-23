@@ -75,16 +75,19 @@ impl<'a> DebugMarkerObjectNameInfoEXTBuilder<'a> {
         DebugMarkerObjectNameInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn object_type(mut self, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT) -> Self {
         self.0.object_type = object_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object(mut self, object: u64) -> Self {
         self.0.object = object as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object_name(mut self, object_name: &'a std::ffi::CStr) -> Self {
         self.0.p_object_name = object_name.as_ptr();
         self
@@ -159,26 +162,31 @@ impl<'a> DebugMarkerObjectTagInfoEXTBuilder<'a> {
         DebugMarkerObjectTagInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn object_type(mut self, object_type: crate::extensions::ext_debug_report::DebugReportObjectTypeEXT) -> Self {
         self.0.object_type = object_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn object(mut self, object: u64) -> Self {
         self.0.object = object as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tag_name(mut self, tag_name: u64) -> Self {
         self.0.tag_name = tag_name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tag_size(mut self, tag_size: usize) -> Self {
         self.0.tag_size = tag_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn tag(mut self, tag: *const std::ffi::c_void) -> Self {
         self.0.p_tag = tag;
         self
@@ -250,11 +258,13 @@ impl<'a> DebugMarkerMarkerInfoEXTBuilder<'a> {
         DebugMarkerMarkerInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn marker_name(mut self, marker_name: &'a std::ffi::CStr) -> Self {
         self.0.p_marker_name = marker_name.as_ptr();
         self
     }
     #[inline]
+    #[must_use]
     pub fn color(mut self, color: [std::os::raw::c_float; 4]) -> Self {
         self.0.color = color as _;
         self

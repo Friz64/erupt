@@ -55,6 +55,7 @@ impl<'a> RenderPassTransformBeginInfoQCOMBuilder<'a> {
         RenderPassTransformBeginInfoQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn transform(mut self, transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.transform = transform as _;
         self
@@ -126,11 +127,13 @@ impl<'a> CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder<'a> {
         CommandBufferInheritanceRenderPassTransformInfoQCOMBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn transform(mut self, transform: crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR) -> Self {
         self.0.transform = transform as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn render_area(mut self, render_area: crate::vk1_0::Rect2D) -> Self {
         self.0.render_area = render_area as _;
         self

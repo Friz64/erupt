@@ -415,6 +415,7 @@ impl Structure {
                 let ty = ty.rust_type(source);
                 quote! {
                     #[inline]
+                    #[must_use]
                     pub fn #ident(mut self, #ident: #ty) -> Self {
                         #body
                         self

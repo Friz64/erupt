@@ -76,11 +76,13 @@ impl<'a> PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'a> {
         PhysicalDeviceProvokingVertexFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn provoking_vertex_last(mut self, provoking_vertex_last: bool) -> Self {
         self.0.provoking_vertex_last = provoking_vertex_last as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_feedback_preserves_provoking_vertex(mut self, transform_feedback_preserves_provoking_vertex: bool) -> Self {
         self.0.transform_feedback_preserves_provoking_vertex = transform_feedback_preserves_provoking_vertex as _;
         self
@@ -152,11 +154,13 @@ impl<'a> PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'a> {
         PhysicalDeviceProvokingVertexPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn provoking_vertex_mode_per_pipeline(mut self, provoking_vertex_mode_per_pipeline: bool) -> Self {
         self.0.provoking_vertex_mode_per_pipeline = provoking_vertex_mode_per_pipeline as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn transform_feedback_preserves_triangle_fan_provoking_vertex(mut self, transform_feedback_preserves_triangle_fan_provoking_vertex: bool) -> Self {
         self.0.transform_feedback_preserves_triangle_fan_provoking_vertex = transform_feedback_preserves_triangle_fan_provoking_vertex as _;
         self
@@ -227,6 +231,7 @@ impl<'a> PipelineRasterizationProvokingVertexStateCreateInfoEXTBuilder<'a> {
         PipelineRasterizationProvokingVertexStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn provoking_vertex_mode(mut self, provoking_vertex_mode: crate::extensions::ext_provoking_vertex::ProvokingVertexModeEXT) -> Self {
         self.0.provoking_vertex_mode = provoking_vertex_mode as _;
         self

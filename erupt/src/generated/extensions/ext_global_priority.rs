@@ -75,6 +75,7 @@ impl<'a> DeviceQueueGlobalPriorityCreateInfoEXTBuilder<'a> {
         DeviceQueueGlobalPriorityCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn global_priority(mut self, global_priority: crate::extensions::ext_global_priority::QueueGlobalPriorityEXT) -> Self {
         self.0.global_priority = global_priority as _;
         self

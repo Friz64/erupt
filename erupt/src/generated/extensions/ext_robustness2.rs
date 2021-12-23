@@ -55,16 +55,19 @@ impl<'a> PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> {
         PhysicalDeviceRobustness2FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn robust_buffer_access2(mut self, robust_buffer_access2: bool) -> Self {
         self.0.robust_buffer_access2 = robust_buffer_access2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn robust_image_access2(mut self, robust_image_access2: bool) -> Self {
         self.0.robust_image_access2 = robust_image_access2 as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn null_descriptor(mut self, null_descriptor: bool) -> Self {
         self.0.null_descriptor = null_descriptor as _;
         self
@@ -136,11 +139,13 @@ impl<'a> PhysicalDeviceRobustness2PropertiesEXTBuilder<'a> {
         PhysicalDeviceRobustness2PropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn robust_storage_buffer_access_size_alignment(mut self, robust_storage_buffer_access_size_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.robust_storage_buffer_access_size_alignment = robust_storage_buffer_access_size_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn robust_uniform_buffer_access_size_alignment(mut self, robust_uniform_buffer_access_size_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.robust_uniform_buffer_access_size_alignment = robust_uniform_buffer_access_size_alignment as _;
         self

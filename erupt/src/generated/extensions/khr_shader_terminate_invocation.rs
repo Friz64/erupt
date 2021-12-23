@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder<'a> {
         PhysicalDeviceShaderTerminateInvocationFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_terminate_invocation(mut self, shader_terminate_invocation: bool) -> Self {
         self.0.shader_terminate_invocation = shader_terminate_invocation as _;
         self

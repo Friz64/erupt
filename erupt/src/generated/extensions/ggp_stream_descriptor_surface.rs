@@ -72,11 +72,13 @@ impl<'a> StreamDescriptorSurfaceCreateInfoGGPBuilder<'a> {
         StreamDescriptorSurfaceCreateInfoGGPBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ggp_stream_descriptor_surface::StreamDescriptorSurfaceCreateFlagsGGP) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stream_descriptor(mut self, stream_descriptor: u32) -> Self {
         self.0.stream_descriptor = stream_descriptor as _;
         self

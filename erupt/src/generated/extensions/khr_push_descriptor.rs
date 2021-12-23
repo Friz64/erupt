@@ -66,6 +66,7 @@ impl<'a> PhysicalDevicePushDescriptorPropertiesKHRBuilder<'a> {
         PhysicalDevicePushDescriptorPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_push_descriptors(mut self, max_push_descriptors: u32) -> Self {
         self.0.max_push_descriptors = max_push_descriptors as _;
         self

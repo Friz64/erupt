@@ -178,31 +178,37 @@ impl<'a> RayTracingShaderGroupCreateInfoKHRBuilder<'a> {
         RayTracingShaderGroupCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn _type(mut self, _type: crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR) -> Self {
         self.0._type = _type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn general_shader(mut self, general_shader: u32) -> Self {
         self.0.general_shader = general_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn closest_hit_shader(mut self, closest_hit_shader: u32) -> Self {
         self.0.closest_hit_shader = closest_hit_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn any_hit_shader(mut self, any_hit_shader: u32) -> Self {
         self.0.any_hit_shader = any_hit_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn intersection_shader(mut self, intersection_shader: u32) -> Self {
         self.0.intersection_shader = intersection_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_group_capture_replay_handle(mut self, shader_group_capture_replay_handle: *const std::ffi::c_void) -> Self {
         self.0.p_shader_group_capture_replay_handle = shader_group_capture_replay_handle;
         self
@@ -284,53 +290,63 @@ impl<'a> RayTracingPipelineCreateInfoKHRBuilder<'a> {
         RayTracingPipelineCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::vk1_0::PipelineCreateFlags) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stages(mut self, stages: &'a [crate::vk1_0::PipelineShaderStageCreateInfoBuilder]) -> Self {
         self.0.p_stages = stages.as_ptr() as _;
         self.0.stage_count = stages.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn groups(mut self, groups: &'a [crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupCreateInfoKHRBuilder]) -> Self {
         self.0.p_groups = groups.as_ptr() as _;
         self.0.group_count = groups.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_pipeline_ray_recursion_depth(mut self, max_pipeline_ray_recursion_depth: u32) -> Self {
         self.0.max_pipeline_ray_recursion_depth = max_pipeline_ray_recursion_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn library_info(mut self, library_info: &'a crate::extensions::khr_pipeline_library::PipelineLibraryCreateInfoKHR) -> Self {
         self.0.p_library_info = library_info as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn library_interface(mut self, library_interface: &'a crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineInterfaceCreateInfoKHR) -> Self {
         self.0.p_library_interface = library_interface as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn dynamic_state(mut self, dynamic_state: &'a crate::vk1_0::PipelineDynamicStateCreateInfo) -> Self {
         self.0.p_dynamic_state = dynamic_state as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layout(mut self, layout: crate::vk1_0::PipelineLayout) -> Self {
         self.0.layout = layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_handle(mut self, base_pipeline_handle: crate::vk1_0::Pipeline) -> Self {
         self.0.base_pipeline_handle = base_pipeline_handle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_pipeline_index(mut self, base_pipeline_index: i32) -> Self {
         self.0.base_pipeline_index = base_pipeline_index as _;
         self
@@ -405,26 +421,31 @@ impl<'a> PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder<'a> {
         PhysicalDeviceRayTracingPipelineFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ray_tracing_pipeline(mut self, ray_tracing_pipeline: bool) -> Self {
         self.0.ray_tracing_pipeline = ray_tracing_pipeline as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ray_tracing_pipeline_shader_group_handle_capture_replay(mut self, ray_tracing_pipeline_shader_group_handle_capture_replay: bool) -> Self {
         self.0.ray_tracing_pipeline_shader_group_handle_capture_replay = ray_tracing_pipeline_shader_group_handle_capture_replay as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ray_tracing_pipeline_shader_group_handle_capture_replay_mixed(mut self, ray_tracing_pipeline_shader_group_handle_capture_replay_mixed: bool) -> Self {
         self.0.ray_tracing_pipeline_shader_group_handle_capture_replay_mixed = ray_tracing_pipeline_shader_group_handle_capture_replay_mixed as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ray_tracing_pipeline_trace_rays_indirect(mut self, ray_tracing_pipeline_trace_rays_indirect: bool) -> Self {
         self.0.ray_tracing_pipeline_trace_rays_indirect = ray_tracing_pipeline_trace_rays_indirect as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ray_traversal_primitive_culling(mut self, ray_traversal_primitive_culling: bool) -> Self {
         self.0.ray_traversal_primitive_culling = ray_traversal_primitive_culling as _;
         self
@@ -502,41 +523,49 @@ impl<'a> PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'a> {
         PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_group_handle_size(mut self, shader_group_handle_size: u32) -> Self {
         self.0.shader_group_handle_size = shader_group_handle_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_ray_recursion_depth(mut self, max_ray_recursion_depth: u32) -> Self {
         self.0.max_ray_recursion_depth = max_ray_recursion_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_shader_group_stride(mut self, max_shader_group_stride: u32) -> Self {
         self.0.max_shader_group_stride = max_shader_group_stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_group_base_alignment(mut self, shader_group_base_alignment: u32) -> Self {
         self.0.shader_group_base_alignment = shader_group_base_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_group_handle_capture_replay_size(mut self, shader_group_handle_capture_replay_size: u32) -> Self {
         self.0.shader_group_handle_capture_replay_size = shader_group_handle_capture_replay_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_ray_dispatch_invocation_count(mut self, max_ray_dispatch_invocation_count: u32) -> Self {
         self.0.max_ray_dispatch_invocation_count = max_ray_dispatch_invocation_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_group_handle_alignment(mut self, shader_group_handle_alignment: u32) -> Self {
         self.0.shader_group_handle_alignment = shader_group_handle_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_ray_hit_attribute_size(mut self, max_ray_hit_attribute_size: u32) -> Self {
         self.0.max_ray_hit_attribute_size = max_ray_hit_attribute_size as _;
         self
@@ -604,16 +633,19 @@ impl<'a> StridedDeviceAddressRegionKHRBuilder<'a> {
         StridedDeviceAddressRegionKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_address(mut self, device_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.device_address = device_address as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stride(mut self, stride: crate::vk1_0::DeviceSize) -> Self {
         self.0.stride = stride as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self
@@ -681,16 +713,19 @@ impl<'a> TraceRaysIndirectCommandKHRBuilder<'a> {
         TraceRaysIndirectCommandKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn width(mut self, width: u32) -> Self {
         self.0.width = width as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn height(mut self, height: u32) -> Self {
         self.0.height = height as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth(mut self, depth: u32) -> Self {
         self.0.depth = depth as _;
         self
@@ -762,11 +797,13 @@ impl<'a> RayTracingPipelineInterfaceCreateInfoKHRBuilder<'a> {
         RayTracingPipelineInterfaceCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_pipeline_ray_payload_size(mut self, max_pipeline_ray_payload_size: u32) -> Self {
         self.0.max_pipeline_ray_payload_size = max_pipeline_ray_payload_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_pipeline_ray_hit_attribute_size(mut self, max_pipeline_ray_hit_attribute_size: u32) -> Self {
         self.0.max_pipeline_ray_hit_attribute_size = max_pipeline_ray_hit_attribute_size as _;
         self

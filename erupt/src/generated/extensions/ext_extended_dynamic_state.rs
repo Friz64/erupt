@@ -125,6 +125,7 @@ impl<'a> PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder<'a> {
         PhysicalDeviceExtendedDynamicStateFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn extended_dynamic_state(mut self, extended_dynamic_state: bool) -> Self {
         self.0.extended_dynamic_state = extended_dynamic_state as _;
         self

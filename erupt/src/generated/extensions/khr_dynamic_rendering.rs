@@ -135,22 +135,26 @@ impl<'a> PipelineRenderingCreateInfoKHRBuilder<'a> {
         PipelineRenderingCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn view_mask(mut self, view_mask: u32) -> Self {
         self.0.view_mask = view_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_attachment_formats(mut self, color_attachment_formats: &'a [crate::vk1_0::Format]) -> Self {
         self.0.p_color_attachment_formats = color_attachment_formats.as_ptr() as _;
         self.0.color_attachment_count = color_attachment_formats.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_attachment_format(mut self, depth_attachment_format: crate::vk1_0::Format) -> Self {
         self.0.depth_attachment_format = depth_attachment_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stencil_attachment_format(mut self, stencil_attachment_format: crate::vk1_0::Format) -> Self {
         self.0.stencil_attachment_format = stencil_attachment_format as _;
         self
@@ -234,37 +238,44 @@ impl<'a> RenderingInfoKHRBuilder<'a> {
         RenderingInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_dynamic_rendering::RenderingFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn render_area(mut self, render_area: crate::vk1_0::Rect2D) -> Self {
         self.0.render_area = render_area as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer_count(mut self, layer_count: u32) -> Self {
         self.0.layer_count = layer_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_mask(mut self, view_mask: u32) -> Self {
         self.0.view_mask = view_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_attachments(mut self, color_attachments: &'a [crate::extensions::khr_dynamic_rendering::RenderingAttachmentInfoKHRBuilder]) -> Self {
         self.0.p_color_attachments = color_attachments.as_ptr() as _;
         self.0.color_attachment_count = color_attachments.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_attachment(mut self, depth_attachment: &'a crate::extensions::khr_dynamic_rendering::RenderingAttachmentInfoKHR) -> Self {
         self.0.p_depth_attachment = depth_attachment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stencil_attachment(mut self, stencil_attachment: &'a crate::extensions::khr_dynamic_rendering::RenderingAttachmentInfoKHR) -> Self {
         self.0.p_stencil_attachment = stencil_attachment as _;
         self
@@ -342,41 +353,49 @@ impl<'a> RenderingAttachmentInfoKHRBuilder<'a> {
         RenderingAttachmentInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_view(mut self, image_view: crate::vk1_0::ImageView) -> Self {
         self.0.image_view = image_view as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_layout(mut self, image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.image_layout = image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn resolve_mode(mut self, resolve_mode: crate::vk1_2::ResolveModeFlagBits) -> Self {
         self.0.resolve_mode = resolve_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn resolve_image_view(mut self, resolve_image_view: crate::vk1_0::ImageView) -> Self {
         self.0.resolve_image_view = resolve_image_view as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn resolve_image_layout(mut self, resolve_image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.resolve_image_layout = resolve_image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn load_op(mut self, load_op: crate::vk1_0::AttachmentLoadOp) -> Self {
         self.0.load_op = load_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn store_op(mut self, store_op: crate::vk1_0::AttachmentStoreOp) -> Self {
         self.0.store_op = store_op as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn clear_value(mut self, clear_value: crate::vk1_0::ClearValue) -> Self {
         self.0.clear_value = clear_value as _;
         self
@@ -449,16 +468,19 @@ impl<'a> RenderingFragmentShadingRateAttachmentInfoKHRBuilder<'a> {
         RenderingFragmentShadingRateAttachmentInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_view(mut self, image_view: crate::vk1_0::ImageView) -> Self {
         self.0.image_view = image_view as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_layout(mut self, image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.image_layout = image_layout as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shading_rate_attachment_texel_size(mut self, shading_rate_attachment_texel_size: crate::vk1_0::Extent2D) -> Self {
         self.0.shading_rate_attachment_texel_size = shading_rate_attachment_texel_size as _;
         self
@@ -530,11 +552,13 @@ impl<'a> RenderingFragmentDensityMapAttachmentInfoEXTBuilder<'a> {
         RenderingFragmentDensityMapAttachmentInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_view(mut self, image_view: crate::vk1_0::ImageView) -> Self {
         self.0.image_view = image_view as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_layout(mut self, image_layout: crate::vk1_0::ImageLayout) -> Self {
         self.0.image_layout = image_layout as _;
         self
@@ -605,6 +629,7 @@ impl<'a> PhysicalDeviceDynamicRenderingFeaturesKHRBuilder<'a> {
         PhysicalDeviceDynamicRenderingFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn dynamic_rendering(mut self, dynamic_rendering: bool) -> Self {
         self.0.dynamic_rendering = dynamic_rendering as _;
         self
@@ -681,32 +706,38 @@ impl<'a> CommandBufferInheritanceRenderingInfoKHRBuilder<'a> {
         CommandBufferInheritanceRenderingInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_dynamic_rendering::RenderingFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view_mask(mut self, view_mask: u32) -> Self {
         self.0.view_mask = view_mask as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_attachment_formats(mut self, color_attachment_formats: &'a [crate::vk1_0::Format]) -> Self {
         self.0.p_color_attachment_formats = color_attachment_formats.as_ptr() as _;
         self.0.color_attachment_count = color_attachment_formats.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_attachment_format(mut self, depth_attachment_format: crate::vk1_0::Format) -> Self {
         self.0.depth_attachment_format = depth_attachment_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn stencil_attachment_format(mut self, stencil_attachment_format: crate::vk1_0::Format) -> Self {
         self.0.stencil_attachment_format = stencil_attachment_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rasterization_samples(mut self, rasterization_samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.rasterization_samples = rasterization_samples as _;
         self
@@ -779,12 +810,14 @@ impl<'a> AttachmentSampleCountInfoAMDBuilder<'a> {
         AttachmentSampleCountInfoAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn color_attachment_samples(mut self, color_attachment_samples: &'a [crate::vk1_0::SampleCountFlagBits]) -> Self {
         self.0.p_color_attachment_samples = color_attachment_samples.as_ptr() as _;
         self.0.color_attachment_count = color_attachment_samples.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn depth_stencil_attachment_samples(mut self, depth_stencil_attachment_samples: crate::vk1_0::SampleCountFlagBits) -> Self {
         self.0.depth_stencil_attachment_samples = depth_stencil_attachment_samples as _;
         self
@@ -856,11 +889,13 @@ impl<'a> MultiviewPerViewAttributesInfoNVXBuilder<'a> {
         MultiviewPerViewAttributesInfoNVXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn per_view_attributes(mut self, per_view_attributes: bool) -> Self {
         self.0.per_view_attributes = per_view_attributes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn per_view_attributes_position_x_only(mut self, per_view_attributes_position_x_only: bool) -> Self {
         self.0.per_view_attributes_position_x_only = per_view_attributes_position_x_only as _;
         self

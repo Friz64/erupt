@@ -54,6 +54,7 @@ impl<'a> PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'a> {
         PhysicalDeviceCornerSampledImageFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn corner_sampled_image(mut self, corner_sampled_image: bool) -> Self {
         self.0.corner_sampled_image = corner_sampled_image as _;
         self

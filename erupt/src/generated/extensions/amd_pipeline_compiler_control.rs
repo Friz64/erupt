@@ -70,6 +70,7 @@ impl<'a> PipelineCompilerControlCreateInfoAMDBuilder<'a> {
         PipelineCompilerControlCreateInfoAMDBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn compiler_control_flags(mut self, compiler_control_flags: crate::extensions::amd_pipeline_compiler_control::PipelineCompilerControlFlagsAMD) -> Self {
         self.0.compiler_control_flags = compiler_control_flags as _;
         self

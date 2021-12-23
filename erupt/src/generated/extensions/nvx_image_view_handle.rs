@@ -59,16 +59,19 @@ impl<'a> ImageViewHandleInfoNVXBuilder<'a> {
         ImageViewHandleInfoNVXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_view(mut self, image_view: crate::vk1_0::ImageView) -> Self {
         self.0.image_view = image_view as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn descriptor_type(mut self, descriptor_type: crate::vk1_0::DescriptorType) -> Self {
         self.0.descriptor_type = descriptor_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampler(mut self, sampler: crate::vk1_0::Sampler) -> Self {
         self.0.sampler = sampler as _;
         self
@@ -140,11 +143,13 @@ impl<'a> ImageViewAddressPropertiesNVXBuilder<'a> {
         ImageViewAddressPropertiesNVXBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn device_address(mut self, device_address: crate::vk1_0::DeviceAddress) -> Self {
         self.0.device_address = device_address as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn size(mut self, size: crate::vk1_0::DeviceSize) -> Self {
         self.0.size = size as _;
         self

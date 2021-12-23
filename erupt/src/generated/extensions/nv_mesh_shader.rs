@@ -79,11 +79,13 @@ impl<'a> PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
         PhysicalDeviceMeshShaderFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn task_shader(mut self, task_shader: bool) -> Self {
         self.0.task_shader = task_shader as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mesh_shader(mut self, mesh_shader: bool) -> Self {
         self.0.mesh_shader = mesh_shader as _;
         self
@@ -166,66 +168,79 @@ impl<'a> PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> {
         PhysicalDeviceMeshShaderPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_draw_mesh_tasks_count(mut self, max_draw_mesh_tasks_count: u32) -> Self {
         self.0.max_draw_mesh_tasks_count = max_draw_mesh_tasks_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_task_work_group_invocations(mut self, max_task_work_group_invocations: u32) -> Self {
         self.0.max_task_work_group_invocations = max_task_work_group_invocations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_task_work_group_size(mut self, max_task_work_group_size: [u32; 3]) -> Self {
         self.0.max_task_work_group_size = max_task_work_group_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_task_total_memory_size(mut self, max_task_total_memory_size: u32) -> Self {
         self.0.max_task_total_memory_size = max_task_total_memory_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_task_output_count(mut self, max_task_output_count: u32) -> Self {
         self.0.max_task_output_count = max_task_output_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_mesh_work_group_invocations(mut self, max_mesh_work_group_invocations: u32) -> Self {
         self.0.max_mesh_work_group_invocations = max_mesh_work_group_invocations as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_mesh_work_group_size(mut self, max_mesh_work_group_size: [u32; 3]) -> Self {
         self.0.max_mesh_work_group_size = max_mesh_work_group_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_mesh_total_memory_size(mut self, max_mesh_total_memory_size: u32) -> Self {
         self.0.max_mesh_total_memory_size = max_mesh_total_memory_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_mesh_output_vertices(mut self, max_mesh_output_vertices: u32) -> Self {
         self.0.max_mesh_output_vertices = max_mesh_output_vertices as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_mesh_output_primitives(mut self, max_mesh_output_primitives: u32) -> Self {
         self.0.max_mesh_output_primitives = max_mesh_output_primitives as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_mesh_multiview_view_count(mut self, max_mesh_multiview_view_count: u32) -> Self {
         self.0.max_mesh_multiview_view_count = max_mesh_multiview_view_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mesh_output_per_vertex_granularity(mut self, mesh_output_per_vertex_granularity: u32) -> Self {
         self.0.mesh_output_per_vertex_granularity = mesh_output_per_vertex_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn mesh_output_per_primitive_granularity(mut self, mesh_output_per_primitive_granularity: u32) -> Self {
         self.0.mesh_output_per_primitive_granularity = mesh_output_per_primitive_granularity as _;
         self
@@ -292,11 +307,13 @@ impl<'a> DrawMeshTasksIndirectCommandNVBuilder<'a> {
         DrawMeshTasksIndirectCommandNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn task_count(mut self, task_count: u32) -> Self {
         self.0.task_count = task_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn first_task(mut self, first_task: u32) -> Self {
         self.0.first_task = first_task as _;
         self

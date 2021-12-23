@@ -72,11 +72,13 @@ impl<'a> MacOSSurfaceCreateInfoMVKBuilder<'a> {
         MacOSSurfaceCreateInfoMVKBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::mvk_macos_surface::MacOSSurfaceCreateFlagsMVK) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn view(mut self, view: *const std::ffi::c_void) -> Self {
         self.0.p_view = view;
         self

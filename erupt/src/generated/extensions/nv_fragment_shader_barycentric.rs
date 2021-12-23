@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a> {
         PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn fragment_shader_barycentric(mut self, fragment_shader_barycentric: bool) -> Self {
         self.0.fragment_shader_barycentric = fragment_shader_barycentric as _;
         self

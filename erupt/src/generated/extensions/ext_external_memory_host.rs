@@ -63,11 +63,13 @@ impl<'a> ImportMemoryHostPointerInfoEXTBuilder<'a> {
         ImportMemoryHostPointerInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_type(mut self, handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits) -> Self {
         self.0.handle_type = handle_type as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn host_pointer(mut self, host_pointer: *mut std::ffi::c_void) -> Self {
         self.0.p_host_pointer = host_pointer;
         self
@@ -138,6 +140,7 @@ impl<'a> MemoryHostPointerPropertiesEXTBuilder<'a> {
         MemoryHostPointerPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_bits(mut self, memory_type_bits: u32) -> Self {
         self.0.memory_type_bits = memory_type_bits as _;
         self
@@ -208,6 +211,7 @@ impl<'a> PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a> {
         PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_imported_host_pointer_alignment(mut self, min_imported_host_pointer_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.min_imported_host_pointer_alignment = min_imported_host_pointer_alignment as _;
         self

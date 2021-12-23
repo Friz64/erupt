@@ -429,6 +429,7 @@ impl<'a> VideoQueueFamilyProperties2KHRBuilder<'a> {
         VideoQueueFamilyProperties2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn video_codec_operations(mut self, video_codec_operations: crate::extensions::khr_video_queue::VideoCodecOperationFlagsKHR) -> Self {
         self.0.video_codec_operations = video_codec_operations as _;
         self
@@ -499,6 +500,7 @@ impl<'a> QueueFamilyQueryResultStatusProperties2KHRBuilder<'a> {
         QueueFamilyQueryResultStatusProperties2KHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn supported(mut self, supported: bool) -> Self {
         self.0.supported = supported as _;
         self
@@ -570,11 +572,13 @@ impl<'a> VideoProfilesKHRBuilder<'a> {
         VideoProfilesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn profile_count(mut self, profile_count: u32) -> Self {
         self.0.profile_count = profile_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn profiles(mut self, profiles: &'a crate::extensions::khr_video_queue::VideoProfileKHR) -> Self {
         self.0.p_profiles = profiles as _;
         self
@@ -646,11 +650,13 @@ impl<'a> PhysicalDeviceVideoFormatInfoKHRBuilder<'a> {
         PhysicalDeviceVideoFormatInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_usage(mut self, image_usage: crate::vk1_0::ImageUsageFlags) -> Self {
         self.0.image_usage = image_usage as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_profiles(mut self, video_profiles: &'a crate::extensions::khr_video_queue::VideoProfilesKHR) -> Self {
         self.0.p_video_profiles = video_profiles as _;
         self
@@ -721,6 +727,7 @@ impl<'a> VideoFormatPropertiesKHRBuilder<'a> {
         VideoFormatPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::vk1_0::Format) -> Self {
         self.0.format = format as _;
         self
@@ -794,21 +801,25 @@ impl<'a> VideoProfileKHRBuilder<'a> {
         VideoProfileKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn video_codec_operation(mut self, video_codec_operation: crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR) -> Self {
         self.0.video_codec_operation = video_codec_operation as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_subsampling(mut self, chroma_subsampling: crate::extensions::khr_video_queue::VideoChromaSubsamplingFlagsKHR) -> Self {
         self.0.chroma_subsampling = chroma_subsampling as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn luma_bit_depth(mut self, luma_bit_depth: crate::extensions::khr_video_queue::VideoComponentBitDepthFlagsKHR) -> Self {
         self.0.luma_bit_depth = luma_bit_depth as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn chroma_bit_depth(mut self, chroma_bit_depth: crate::extensions::khr_video_queue::VideoComponentBitDepthFlagsKHR) -> Self {
         self.0.chroma_bit_depth = chroma_bit_depth as _;
         self
@@ -886,41 +897,49 @@ impl<'a> VideoCapabilitiesKHRBuilder<'a> {
         VideoCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn capability_flags(mut self, capability_flags: crate::extensions::khr_video_queue::VideoCapabilityFlagsKHR) -> Self {
         self.0.capability_flags = capability_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_bitstream_buffer_offset_alignment(mut self, min_bitstream_buffer_offset_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.min_bitstream_buffer_offset_alignment = min_bitstream_buffer_offset_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_bitstream_buffer_size_alignment(mut self, min_bitstream_buffer_size_alignment: crate::vk1_0::DeviceSize) -> Self {
         self.0.min_bitstream_buffer_size_alignment = min_bitstream_buffer_size_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_picture_extent_granularity(mut self, video_picture_extent_granularity: crate::vk1_0::Extent2D) -> Self {
         self.0.video_picture_extent_granularity = video_picture_extent_granularity as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_extent(mut self, min_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.min_extent = min_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_extent(mut self, max_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.max_extent = max_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_reference_pictures_slots_count(mut self, max_reference_pictures_slots_count: u32) -> Self {
         self.0.max_reference_pictures_slots_count = max_reference_pictures_slots_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_reference_pictures_active_count(mut self, max_reference_pictures_active_count: u32) -> Self {
         self.0.max_reference_pictures_active_count = max_reference_pictures_active_count as _;
         self
@@ -992,11 +1011,13 @@ impl<'a> VideoGetMemoryPropertiesKHRBuilder<'a> {
         VideoGetMemoryPropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_bind_index(mut self, memory_bind_index: u32) -> Self {
         self.0.memory_bind_index = memory_bind_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_requirements(mut self, memory_requirements: &'a mut crate::vk1_1::MemoryRequirements2) -> Self {
         self.0.p_memory_requirements = memory_requirements as _;
         self
@@ -1070,21 +1091,25 @@ impl<'a> VideoBindMemoryKHRBuilder<'a> {
         VideoBindMemoryKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_bind_index(mut self, memory_bind_index: u32) -> Self {
         self.0.memory_bind_index = memory_bind_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory(mut self, memory: crate::vk1_0::DeviceMemory) -> Self {
         self.0.memory = memory as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_offset(mut self, memory_offset: crate::vk1_0::DeviceSize) -> Self {
         self.0.memory_offset = memory_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn memory_size(mut self, memory_size: crate::vk1_0::DeviceSize) -> Self {
         self.0.memory_size = memory_size as _;
         self
@@ -1158,21 +1183,25 @@ impl<'a> VideoPictureResourceKHRBuilder<'a> {
         VideoPictureResourceKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn coded_offset(mut self, coded_offset: crate::vk1_0::Offset2D) -> Self {
         self.0.coded_offset = coded_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coded_extent(mut self, coded_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.coded_extent = coded_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn base_array_layer(mut self, base_array_layer: u32) -> Self {
         self.0.base_array_layer = base_array_layer as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn image_view_binding(mut self, image_view_binding: crate::vk1_0::ImageView) -> Self {
         self.0.image_view_binding = image_view_binding as _;
         self
@@ -1244,11 +1273,13 @@ impl<'a> VideoReferenceSlotKHRBuilder<'a> {
         VideoReferenceSlotKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn slot_index(mut self, slot_index: i8) -> Self {
         self.0.slot_index = slot_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn picture_resource(mut self, picture_resource: &'a crate::extensions::khr_video_queue::VideoPictureResourceKHR) -> Self {
         self.0.p_picture_resource = picture_resource as _;
         self
@@ -1326,41 +1357,49 @@ impl<'a> VideoSessionCreateInfoKHRBuilder<'a> {
         VideoSessionCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn queue_family_index(mut self, queue_family_index: u32) -> Self {
         self.0.queue_family_index = queue_family_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_video_queue::VideoSessionCreateFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_profile(mut self, video_profile: &'a crate::extensions::khr_video_queue::VideoProfileKHR) -> Self {
         self.0.p_video_profile = video_profile as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn picture_format(mut self, picture_format: crate::vk1_0::Format) -> Self {
         self.0.picture_format = picture_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_coded_extent(mut self, max_coded_extent: crate::vk1_0::Extent2D) -> Self {
         self.0.max_coded_extent = max_coded_extent as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_pictures_format(mut self, reference_pictures_format: crate::vk1_0::Format) -> Self {
         self.0.reference_pictures_format = reference_pictures_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_reference_pictures_slots_count(mut self, max_reference_pictures_slots_count: u32) -> Self {
         self.0.max_reference_pictures_slots_count = max_reference_pictures_slots_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_reference_pictures_active_count(mut self, max_reference_pictures_active_count: u32) -> Self {
         self.0.max_reference_pictures_active_count = max_reference_pictures_active_count as _;
         self
@@ -1432,11 +1471,13 @@ impl<'a> VideoSessionParametersCreateInfoKHRBuilder<'a> {
         VideoSessionParametersCreateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn video_session_parameters_template(mut self, video_session_parameters_template: crate::extensions::khr_video_queue::VideoSessionParametersKHR) -> Self {
         self.0.video_session_parameters_template = video_session_parameters_template as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_session(mut self, video_session: crate::extensions::khr_video_queue::VideoSessionKHR) -> Self {
         self.0.video_session = video_session as _;
         self
@@ -1507,6 +1548,7 @@ impl<'a> VideoSessionParametersUpdateInfoKHRBuilder<'a> {
         VideoSessionParametersUpdateInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn update_sequence_count(mut self, update_sequence_count: u32) -> Self {
         self.0.update_sequence_count = update_sequence_count as _;
         self
@@ -1582,26 +1624,31 @@ impl<'a> VideoBeginCodingInfoKHRBuilder<'a> {
         VideoBeginCodingInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_video_queue::VideoBeginCodingFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn codec_quality_preset(mut self, codec_quality_preset: crate::extensions::khr_video_queue::VideoCodingQualityPresetFlagsKHR) -> Self {
         self.0.codec_quality_preset = codec_quality_preset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_session(mut self, video_session: crate::extensions::khr_video_queue::VideoSessionKHR) -> Self {
         self.0.video_session = video_session as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn video_session_parameters(mut self, video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR) -> Self {
         self.0.video_session_parameters = video_session_parameters as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_slots(mut self, reference_slots: &'a [crate::extensions::khr_video_queue::VideoReferenceSlotKHRBuilder]) -> Self {
         self.0.p_reference_slots = reference_slots.as_ptr() as _;
         self.0.reference_slot_count = reference_slots.len() as _;
@@ -1673,6 +1720,7 @@ impl<'a> VideoEndCodingInfoKHRBuilder<'a> {
         VideoEndCodingInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_video_queue::VideoEndCodingFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self
@@ -1743,6 +1791,7 @@ impl<'a> VideoCodingControlInfoKHRBuilder<'a> {
         VideoCodingControlInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::khr_video_queue::VideoCodingControlFlagsKHR) -> Self {
         self.0.flags = flags as _;
         self

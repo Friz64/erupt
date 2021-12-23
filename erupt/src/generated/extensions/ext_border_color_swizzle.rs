@@ -54,11 +54,13 @@ impl<'a> SamplerBorderColorComponentMappingCreateInfoEXTBuilder<'a> {
         SamplerBorderColorComponentMappingCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn components(mut self, components: crate::vk1_0::ComponentMapping) -> Self {
         self.0.components = components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn srgb(mut self, srgb: bool) -> Self {
         self.0.srgb = srgb as _;
         self
@@ -130,11 +132,13 @@ impl<'a> PhysicalDeviceBorderColorSwizzleFeaturesEXTBuilder<'a> {
         PhysicalDeviceBorderColorSwizzleFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn border_color_swizzle(mut self, border_color_swizzle: bool) -> Self {
         self.0.border_color_swizzle = border_color_swizzle as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn border_color_swizzle_from_image(mut self, border_color_swizzle_from_image: bool) -> Self {
         self.0.border_color_swizzle_from_image = border_color_swizzle_from_image as _;
         self

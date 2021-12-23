@@ -61,61 +61,73 @@ impl<'a> PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder<'a> {
         PhysicalDeviceShaderAtomicFloatFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float32_atomics(mut self, shader_buffer_float32_atomics: bool) -> Self {
         self.0.shader_buffer_float32_atomics = shader_buffer_float32_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float32_atomic_add(mut self, shader_buffer_float32_atomic_add: bool) -> Self {
         self.0.shader_buffer_float32_atomic_add = shader_buffer_float32_atomic_add as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float64_atomics(mut self, shader_buffer_float64_atomics: bool) -> Self {
         self.0.shader_buffer_float64_atomics = shader_buffer_float64_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_buffer_float64_atomic_add(mut self, shader_buffer_float64_atomic_add: bool) -> Self {
         self.0.shader_buffer_float64_atomic_add = shader_buffer_float64_atomic_add as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float32_atomics(mut self, shader_shared_float32_atomics: bool) -> Self {
         self.0.shader_shared_float32_atomics = shader_shared_float32_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float32_atomic_add(mut self, shader_shared_float32_atomic_add: bool) -> Self {
         self.0.shader_shared_float32_atomic_add = shader_shared_float32_atomic_add as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float64_atomics(mut self, shader_shared_float64_atomics: bool) -> Self {
         self.0.shader_shared_float64_atomics = shader_shared_float64_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_shared_float64_atomic_add(mut self, shader_shared_float64_atomic_add: bool) -> Self {
         self.0.shader_shared_float64_atomic_add = shader_shared_float64_atomic_add as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_image_float32_atomics(mut self, shader_image_float32_atomics: bool) -> Self {
         self.0.shader_image_float32_atomics = shader_image_float32_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn shader_image_float32_atomic_add(mut self, shader_image_float32_atomic_add: bool) -> Self {
         self.0.shader_image_float32_atomic_add = shader_image_float32_atomic_add as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_image_float32_atomics(mut self, sparse_image_float32_atomics: bool) -> Self {
         self.0.sparse_image_float32_atomics = sparse_image_float32_atomics as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sparse_image_float32_atomic_add(mut self, sparse_image_float32_atomic_add: bool) -> Self {
         self.0.sparse_image_float32_atomic_add = sparse_image_float32_atomic_add as _;
         self

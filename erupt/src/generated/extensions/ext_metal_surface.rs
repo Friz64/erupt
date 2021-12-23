@@ -74,11 +74,13 @@ impl<'a> MetalSurfaceCreateInfoEXTBuilder<'a> {
         MetalSurfaceCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_metal_surface::MetalSurfaceCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn layer(mut self, layer: &'a crate::extensions::ext_metal_surface::CAMetalLayer) -> Self {
         self.0.p_layer = layer as _;
         self

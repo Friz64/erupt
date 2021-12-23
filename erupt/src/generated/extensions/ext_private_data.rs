@@ -97,6 +97,7 @@ impl<'a> DevicePrivateDataCreateInfoEXTBuilder<'a> {
         DevicePrivateDataCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn private_data_slot_request_count(mut self, private_data_slot_request_count: u32) -> Self {
         self.0.private_data_slot_request_count = private_data_slot_request_count as _;
         self
@@ -167,6 +168,7 @@ impl<'a> PrivateDataSlotCreateInfoEXTBuilder<'a> {
         PrivateDataSlotCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_private_data::PrivateDataSlotCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
@@ -237,6 +239,7 @@ impl<'a> PhysicalDevicePrivateDataFeaturesEXTBuilder<'a> {
         PhysicalDevicePrivateDataFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn private_data(mut self, private_data: bool) -> Self {
         self.0.private_data = private_data as _;
         self

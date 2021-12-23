@@ -97,21 +97,25 @@ impl<'a> ViewportSwizzleNVBuilder<'a> {
         ViewportSwizzleNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn x(mut self, x: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.x = x as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn y(mut self, y: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.y = y as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn z(mut self, z: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.z = z as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn w(mut self, w: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV) -> Self {
         self.0.w = w as _;
         self
@@ -184,11 +188,13 @@ impl<'a> PipelineViewportSwizzleStateCreateInfoNVBuilder<'a> {
         PipelineViewportSwizzleStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_viewport_swizzle::PipelineViewportSwizzleStateCreateFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn viewport_swizzles(mut self, viewport_swizzles: &'a [crate::extensions::nv_viewport_swizzle::ViewportSwizzleNVBuilder]) -> Self {
         self.0.p_viewport_swizzles = viewport_swizzles.as_ptr() as _;
         self.0.viewport_count = viewport_swizzles.len() as _;

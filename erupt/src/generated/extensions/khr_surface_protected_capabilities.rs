@@ -48,6 +48,7 @@ impl<'a> SurfaceProtectedCapabilitiesKHRBuilder<'a> {
         SurfaceProtectedCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn supports_protected(mut self, supports_protected: bool) -> Self {
         self.0.supports_protected = supports_protected as _;
         self

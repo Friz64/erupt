@@ -105,21 +105,25 @@ impl<'a> ExternalImageFormatPropertiesNVBuilder<'a> {
         ExternalImageFormatPropertiesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_format_properties(mut self, image_format_properties: crate::vk1_0::ImageFormatProperties) -> Self {
         self.0.image_format_properties = image_format_properties as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn external_memory_features(mut self, external_memory_features: crate::extensions::nv_external_memory_capabilities::ExternalMemoryFeatureFlagsNV) -> Self {
         self.0.external_memory_features = external_memory_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn export_from_imported_handle_types(mut self, export_from_imported_handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.export_from_imported_handle_types = export_from_imported_handle_types as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn compatible_handle_types(mut self, compatible_handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.compatible_handle_types = compatible_handle_types as _;
         self

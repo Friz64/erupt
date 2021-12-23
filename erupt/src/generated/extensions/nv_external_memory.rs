@@ -51,6 +51,7 @@ impl<'a> ExternalMemoryImageCreateInfoNVBuilder<'a> {
         ExternalMemoryImageCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_types(mut self, handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.handle_types = handle_types as _;
         self
@@ -121,6 +122,7 @@ impl<'a> ExportMemoryAllocateInfoNVBuilder<'a> {
         ExportMemoryAllocateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn handle_types(mut self, handle_types: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV) -> Self {
         self.0.handle_types = handle_types as _;
         self

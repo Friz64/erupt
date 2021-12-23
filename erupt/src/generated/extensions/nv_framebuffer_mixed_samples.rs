@@ -95,21 +95,25 @@ impl<'a> PipelineCoverageModulationStateCreateInfoNVBuilder<'a> {
         PipelineCoverageModulationStateCreateInfoNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::nv_framebuffer_mixed_samples::PipelineCoverageModulationStateCreateFlagsNV) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coverage_modulation_mode(mut self, coverage_modulation_mode: crate::extensions::nv_framebuffer_mixed_samples::CoverageModulationModeNV) -> Self {
         self.0.coverage_modulation_mode = coverage_modulation_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coverage_modulation_table_enable(mut self, coverage_modulation_table_enable: bool) -> Self {
         self.0.coverage_modulation_table_enable = coverage_modulation_table_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn coverage_modulation_table(mut self, coverage_modulation_table: &'a [std::os::raw::c_float]) -> Self {
         self.0.p_coverage_modulation_table = coverage_modulation_table.as_ptr() as _;
         self.0.coverage_modulation_table_count = coverage_modulation_table.len() as _;

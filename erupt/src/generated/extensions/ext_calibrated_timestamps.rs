@@ -79,6 +79,7 @@ impl<'a> CalibratedTimestampInfoEXTBuilder<'a> {
         CalibratedTimestampInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn time_domain(mut self, time_domain: crate::extensions::ext_calibrated_timestamps::TimeDomainEXT) -> Self {
         self.0.time_domain = time_domain as _;
         self

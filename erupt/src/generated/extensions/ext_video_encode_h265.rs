@@ -263,56 +263,67 @@ impl<'a> VideoEncodeH265CapabilitiesEXTBuilder<'a> {
         VideoEncodeH265CapabilitiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_video_encode_h265::VideoEncodeH265CapabilityFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn input_mode_flags(mut self, input_mode_flags: crate::extensions::ext_video_encode_h265::VideoEncodeH265InputModeFlagsEXT) -> Self {
         self.0.input_mode_flags = input_mode_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn output_mode_flags(mut self, output_mode_flags: crate::extensions::ext_video_encode_h265::VideoEncodeH265OutputModeFlagsEXT) -> Self {
         self.0.output_mode_flags = output_mode_flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn ctb_sizes(mut self, ctb_sizes: crate::extensions::ext_video_encode_h265::VideoEncodeH265CtbSizeFlagsEXT) -> Self {
         self.0.ctb_sizes = ctb_sizes as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn input_image_data_alignment(mut self, input_image_data_alignment: crate::vk1_0::Extent2D) -> Self {
         self.0.input_image_data_alignment = input_image_data_alignment as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_l0_reference_for_p(mut self, max_num_l0_reference_for_p: u8) -> Self {
         self.0.max_num_l0_reference_for_p = max_num_l0_reference_for_p as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_l0_reference_for_b(mut self, max_num_l0_reference_for_b: u8) -> Self {
         self.0.max_num_l0_reference_for_b = max_num_l0_reference_for_b as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_l1_reference(mut self, max_num_l1_reference: u8) -> Self {
         self.0.max_num_l1_reference = max_num_l1_reference as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_num_sub_layers(mut self, max_num_sub_layers: u8) -> Self {
         self.0.max_num_sub_layers = max_num_sub_layers as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn quality_level_count(mut self, quality_level_count: u8) -> Self {
         self.0.quality_level_count = quality_level_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn std_extension_version(mut self, std_extension_version: crate::vk1_0::ExtensionProperties) -> Self {
         self.0.std_extension_version = std_extension_version as _;
         self
@@ -384,11 +395,13 @@ impl<'a> VideoEncodeH265SessionCreateInfoEXTBuilder<'a> {
         VideoEncodeH265SessionCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_video_encode_h265::VideoEncodeH265CreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn std_extension_version(mut self, std_extension_version: &'a crate::vk1_0::ExtensionProperties) -> Self {
         self.0.p_std_extension_version = std_extension_version as _;
         self
@@ -464,18 +477,21 @@ impl<'a> VideoEncodeH265SessionParametersAddInfoEXTBuilder<'a> {
         VideoEncodeH265SessionParametersAddInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vps_std(mut self, vps_std: &'a [crate::external::vk_video::StdVideoH265VideoParameterSetBuilder]) -> Self {
         self.0.p_vps_std = vps_std.as_ptr() as _;
         self.0.vps_std_count = vps_std.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_std(mut self, sps_std: &'a [crate::external::vk_video::StdVideoH265SequenceParameterSetBuilder]) -> Self {
         self.0.p_sps_std = sps_std.as_ptr() as _;
         self.0.sps_std_count = sps_std.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_std(mut self, pps_std: &'a [crate::external::vk_video::StdVideoH265PictureParameterSetBuilder]) -> Self {
         self.0.p_pps_std = pps_std.as_ptr() as _;
         self.0.pps_std_count = pps_std.len() as _;
@@ -550,21 +566,25 @@ impl<'a> VideoEncodeH265SessionParametersCreateInfoEXTBuilder<'a> {
         VideoEncodeH265SessionParametersCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_vps_std_count(mut self, max_vps_std_count: u32) -> Self {
         self.0.max_vps_std_count = max_vps_std_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_sps_std_count(mut self, max_sps_std_count: u32) -> Self {
         self.0.max_sps_std_count = max_sps_std_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_pps_std_count(mut self, max_pps_std_count: u32) -> Self {
         self.0.max_pps_std_count = max_pps_std_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn parameters_add_info(mut self, parameters_add_info: &'a crate::extensions::ext_video_encode_h265::VideoEncodeH265SessionParametersAddInfoEXT) -> Self {
         self.0.p_parameters_add_info = parameters_add_info as _;
         self
@@ -638,17 +658,20 @@ impl<'a> VideoEncodeH265VclFrameInfoEXTBuilder<'a> {
         VideoEncodeH265VclFrameInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn reference_final_lists(mut self, reference_final_lists: &'a crate::extensions::ext_video_encode_h265::VideoEncodeH265ReferenceListsEXT) -> Self {
         self.0.p_reference_final_lists = reference_final_lists as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn nalu_slice_entries(mut self, nalu_slice_entries: &'a [crate::extensions::ext_video_encode_h265::VideoEncodeH265NaluSliceEXTBuilder]) -> Self {
         self.0.p_nalu_slice_entries = nalu_slice_entries.as_ptr() as _;
         self.0.nalu_slice_entry_count = nalu_slice_entries.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn current_picture_info(mut self, current_picture_info: &'a crate::external::vk_video::StdVideoEncodeH265PictureInfo) -> Self {
         self.0.p_current_picture_info = current_picture_info as _;
         self
@@ -724,26 +747,31 @@ impl<'a> VideoEncodeH265EmitPictureParametersEXTBuilder<'a> {
         VideoEncodeH265EmitPictureParametersEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn vps_id(mut self, vps_id: u8) -> Self {
         self.0.vps_id = vps_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sps_id(mut self, sps_id: u8) -> Self {
         self.0.sps_id = sps_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn emit_vps_enable(mut self, emit_vps_enable: bool) -> Self {
         self.0.emit_vps_enable = emit_vps_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn emit_sps_enable(mut self, emit_sps_enable: bool) -> Self {
         self.0.emit_sps_enable = emit_sps_enable as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn pps_id_entries(mut self, pps_id_entries: &'a [u8]) -> Self {
         self.0.pps_id_entries = pps_id_entries.as_ptr() as _;
         self.0.pps_id_entry_count = pps_id_entries.len() as _;
@@ -817,16 +845,19 @@ impl<'a> VideoEncodeH265NaluSliceEXTBuilder<'a> {
         VideoEncodeH265NaluSliceEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn ctb_count(mut self, ctb_count: u32) -> Self {
         self.0.ctb_count = ctb_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_final_lists(mut self, reference_final_lists: &'a crate::extensions::ext_video_encode_h265::VideoEncodeH265ReferenceListsEXT) -> Self {
         self.0.p_reference_final_lists = reference_final_lists as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn slice_header_std(mut self, slice_header_std: &'a crate::external::vk_video::StdVideoEncodeH265SliceHeader) -> Self {
         self.0.p_slice_header_std = slice_header_std as _;
         self
@@ -901,26 +932,31 @@ impl<'a> VideoEncodeH265RateControlInfoEXTBuilder<'a> {
         VideoEncodeH265RateControlInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn gop_frame_count(mut self, gop_frame_count: u32) -> Self {
         self.0.gop_frame_count = gop_frame_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn idr_period(mut self, idr_period: u32) -> Self {
         self.0.idr_period = idr_period as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn consecutive_b_frame_count(mut self, consecutive_b_frame_count: u32) -> Self {
         self.0.consecutive_b_frame_count = consecutive_b_frame_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn rate_control_structure(mut self, rate_control_structure: crate::extensions::ext_video_encode_h265::VideoEncodeH265RateControlStructureFlagBitsEXT) -> Self {
         self.0.rate_control_structure = rate_control_structure as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sub_layer_count(mut self, sub_layer_count: u8) -> Self {
         self.0.sub_layer_count = sub_layer_count as _;
         self
@@ -988,16 +1024,19 @@ impl<'a> VideoEncodeH265QpEXTBuilder<'a> {
         VideoEncodeH265QpEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn qp_i(mut self, qp_i: i32) -> Self {
         self.0.qp_i = qp_i as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn qp_p(mut self, qp_p: i32) -> Self {
         self.0.qp_p = qp_p as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn qp_b(mut self, qp_b: i32) -> Self {
         self.0.qp_b = qp_b as _;
         self
@@ -1065,16 +1104,19 @@ impl<'a> VideoEncodeH265FrameSizeEXTBuilder<'a> {
         VideoEncodeH265FrameSizeEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn frame_i_size(mut self, frame_i_size: u32) -> Self {
         self.0.frame_i_size = frame_i_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_p_size(mut self, frame_p_size: u32) -> Self {
         self.0.frame_p_size = frame_p_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn frame_b_size(mut self, frame_b_size: u32) -> Self {
         self.0.frame_b_size = frame_b_size as _;
         self
@@ -1153,46 +1195,55 @@ impl<'a> VideoEncodeH265RateControlLayerInfoEXTBuilder<'a> {
         VideoEncodeH265RateControlLayerInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn temporal_id(mut self, temporal_id: u8) -> Self {
         self.0.temporal_id = temporal_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn use_initial_rc_qp(mut self, use_initial_rc_qp: bool) -> Self {
         self.0.use_initial_rc_qp = use_initial_rc_qp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn initial_rc_qp(mut self, initial_rc_qp: crate::extensions::ext_video_encode_h265::VideoEncodeH265QpEXT) -> Self {
         self.0.initial_rc_qp = initial_rc_qp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn use_min_qp(mut self, use_min_qp: bool) -> Self {
         self.0.use_min_qp = use_min_qp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_qp(mut self, min_qp: crate::extensions::ext_video_encode_h265::VideoEncodeH265QpEXT) -> Self {
         self.0.min_qp = min_qp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn use_max_qp(mut self, use_max_qp: bool) -> Self {
         self.0.use_max_qp = use_max_qp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_qp(mut self, max_qp: crate::extensions::ext_video_encode_h265::VideoEncodeH265QpEXT) -> Self {
         self.0.max_qp = max_qp as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn use_max_frame_size(mut self, use_max_frame_size: bool) -> Self {
         self.0.use_max_frame_size = use_max_frame_size as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_frame_size(mut self, max_frame_size: crate::extensions::ext_video_encode_h265::VideoEncodeH265FrameSizeEXT) -> Self {
         self.0.max_frame_size = max_frame_size as _;
         self
@@ -1263,6 +1314,7 @@ impl<'a> VideoEncodeH265ProfileEXTBuilder<'a> {
         VideoEncodeH265ProfileEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn std_profile_idc(mut self, std_profile_idc: crate::external::vk_video::StdVideoH265ProfileIdc) -> Self {
         self.0.std_profile_idc = std_profile_idc as _;
         self
@@ -1334,11 +1386,13 @@ impl<'a> VideoEncodeH265DpbSlotInfoEXTBuilder<'a> {
         VideoEncodeH265DpbSlotInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn slot_index(mut self, slot_index: i8) -> Self {
         self.0.slot_index = slot_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn std_reference_info(mut self, std_reference_info: &'a crate::external::vk_video::StdVideoEncodeH265ReferenceInfo) -> Self {
         self.0.p_std_reference_info = std_reference_info as _;
         self
@@ -1413,18 +1467,21 @@ impl<'a> VideoEncodeH265ReferenceListsEXTBuilder<'a> {
         VideoEncodeH265ReferenceListsEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn reference_list0_entries(mut self, reference_list0_entries: &'a [crate::extensions::ext_video_encode_h265::VideoEncodeH265DpbSlotInfoEXTBuilder]) -> Self {
         self.0.p_reference_list0_entries = reference_list0_entries.as_ptr() as _;
         self.0.reference_list0_entry_count = reference_list0_entries.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_list1_entries(mut self, reference_list1_entries: &'a [crate::extensions::ext_video_encode_h265::VideoEncodeH265DpbSlotInfoEXTBuilder]) -> Self {
         self.0.p_reference_list1_entries = reference_list1_entries.as_ptr() as _;
         self.0.reference_list1_entry_count = reference_list1_entries.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn reference_modifications(mut self, reference_modifications: &'a crate::external::vk_video::StdVideoEncodeH265ReferenceModifications) -> Self {
         self.0.p_reference_modifications = reference_modifications as _;
         self

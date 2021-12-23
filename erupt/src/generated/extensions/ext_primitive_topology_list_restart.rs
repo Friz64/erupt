@@ -51,11 +51,13 @@ impl<'a> PhysicalDevicePrimitiveTopologyListRestartFeaturesEXTBuilder<'a> {
         PhysicalDevicePrimitiveTopologyListRestartFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn primitive_topology_list_restart(mut self, primitive_topology_list_restart: bool) -> Self {
         self.0.primitive_topology_list_restart = primitive_topology_list_restart as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn primitive_topology_patch_list_restart(mut self, primitive_topology_patch_list_restart: bool) -> Self {
         self.0.primitive_topology_patch_list_restart = primitive_topology_patch_list_restart as _;
         self

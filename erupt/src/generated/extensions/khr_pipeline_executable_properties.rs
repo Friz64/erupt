@@ -98,6 +98,7 @@ impl<'a> PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'a> {
         PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline_executable_info(mut self, pipeline_executable_info: bool) -> Self {
         self.0.pipeline_executable_info = pipeline_executable_info as _;
         self
@@ -168,6 +169,7 @@ impl<'a> PipelineInfoKHRBuilder<'a> {
         PipelineInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline(mut self, pipeline: crate::vk1_0::Pipeline) -> Self {
         self.0.pipeline = pipeline as _;
         self
@@ -241,21 +243,25 @@ impl<'a> PipelineExecutablePropertiesKHRBuilder<'a> {
         PipelineExecutablePropertiesKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn stages(mut self, stages: crate::vk1_0::ShaderStageFlags) -> Self {
         self.0.stages = stages as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: [std::os::raw::c_char; 256]) -> Self {
         self.0.name = name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn description(mut self, description: [std::os::raw::c_char; 256]) -> Self {
         self.0.description = description as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn subgroup_size(mut self, subgroup_size: u32) -> Self {
         self.0.subgroup_size = subgroup_size as _;
         self
@@ -327,11 +333,13 @@ impl<'a> PipelineExecutableInfoKHRBuilder<'a> {
         PipelineExecutableInfoKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn pipeline(mut self, pipeline: crate::vk1_0::Pipeline) -> Self {
         self.0.pipeline = pipeline as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn executable_index(mut self, executable_index: u32) -> Self {
         self.0.executable_index = executable_index as _;
         self
@@ -425,21 +433,25 @@ impl<'a> PipelineExecutableStatisticKHRBuilder<'a> {
         PipelineExecutableStatisticKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: [std::os::raw::c_char; 256]) -> Self {
         self.0.name = name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn description(mut self, description: [std::os::raw::c_char; 256]) -> Self {
         self.0.description = description as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format(mut self, format: crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticFormatKHR) -> Self {
         self.0.format = format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn value(mut self, value: crate::extensions::khr_pipeline_executable_properties::PipelineExecutableStatisticValueKHR) -> Self {
         self.0.value = value as _;
         self
@@ -514,26 +526,31 @@ impl<'a> PipelineExecutableInternalRepresentationKHRBuilder<'a> {
         PipelineExecutableInternalRepresentationKHRBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn name(mut self, name: [std::os::raw::c_char; 256]) -> Self {
         self.0.name = name as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn description(mut self, description: [std::os::raw::c_char; 256]) -> Self {
         self.0.description = description as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn is_text(mut self, is_text: bool) -> Self {
         self.0.is_text = is_text as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data_size(mut self, data_size: usize) -> Self {
         self.0.data_size = data_size;
         self
     }
     #[inline]
+    #[must_use]
     pub fn data(mut self, data: *mut std::ffi::c_void) -> Self {
         self.0.p_data = data;
         self

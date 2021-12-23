@@ -50,6 +50,7 @@ impl<'a> PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder<'a> {
         PhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn shader_demote_to_helper_invocation(mut self, shader_demote_to_helper_invocation: bool) -> Self {
         self.0.shader_demote_to_helper_invocation = shader_demote_to_helper_invocation as _;
         self

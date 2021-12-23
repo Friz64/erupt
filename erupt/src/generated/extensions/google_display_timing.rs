@@ -53,6 +53,7 @@ impl<'a> RefreshCycleDurationGOOGLEBuilder<'a> {
         RefreshCycleDurationGOOGLEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn refresh_duration(mut self, refresh_duration: u64) -> Self {
         self.0.refresh_duration = refresh_duration as _;
         self
@@ -122,26 +123,31 @@ impl<'a> PastPresentationTimingGOOGLEBuilder<'a> {
         PastPresentationTimingGOOGLEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn present_id(mut self, present_id: u32) -> Self {
         self.0.present_id = present_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn desired_present_time(mut self, desired_present_time: u64) -> Self {
         self.0.desired_present_time = desired_present_time as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn actual_present_time(mut self, actual_present_time: u64) -> Self {
         self.0.actual_present_time = actual_present_time as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn earliest_present_time(mut self, earliest_present_time: u64) -> Self {
         self.0.earliest_present_time = earliest_present_time as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn present_margin(mut self, present_margin: u64) -> Self {
         self.0.present_margin = present_margin as _;
         self
@@ -213,6 +219,7 @@ impl<'a> PresentTimesInfoGOOGLEBuilder<'a> {
         PresentTimesInfoGOOGLEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn times(mut self, times: &'a [crate::extensions::google_display_timing::PresentTimeGOOGLEBuilder]) -> Self {
         self.0.p_times = times.as_ptr() as _;
         self.0.swapchain_count = times.len() as _;
@@ -280,11 +287,13 @@ impl<'a> PresentTimeGOOGLEBuilder<'a> {
         PresentTimeGOOGLEBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn present_id(mut self, present_id: u32) -> Self {
         self.0.present_id = present_id as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn desired_present_time(mut self, desired_present_time: u64) -> Self {
         self.0.desired_present_time = desired_present_time as _;
         self

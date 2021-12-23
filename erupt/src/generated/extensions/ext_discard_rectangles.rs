@@ -99,6 +99,7 @@ impl<'a> PhysicalDeviceDiscardRectanglePropertiesEXTBuilder<'a> {
         PhysicalDeviceDiscardRectanglePropertiesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn max_discard_rectangles(mut self, max_discard_rectangles: u32) -> Self {
         self.0.max_discard_rectangles = max_discard_rectangles as _;
         self
@@ -172,16 +173,19 @@ impl<'a> PipelineDiscardRectangleStateCreateInfoEXTBuilder<'a> {
         PipelineDiscardRectangleStateCreateInfoEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::ext_discard_rectangles::PipelineDiscardRectangleStateCreateFlagsEXT) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn discard_rectangle_mode(mut self, discard_rectangle_mode: crate::extensions::ext_discard_rectangles::DiscardRectangleModeEXT) -> Self {
         self.0.discard_rectangle_mode = discard_rectangle_mode as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn discard_rectangles(mut self, discard_rectangles: &'a [crate::vk1_0::Rect2DBuilder]) -> Self {
         self.0.p_discard_rectangles = discard_rectangles.as_ptr() as _;
         self.0.discard_rectangle_count = discard_rectangles.len() as _;

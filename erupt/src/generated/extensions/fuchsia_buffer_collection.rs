@@ -149,11 +149,13 @@ impl<'a> ImportMemoryBufferCollectionFUCHSIABuilder<'a> {
         ImportMemoryBufferCollectionFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn collection(mut self, collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA) -> Self {
         self.0.collection = collection as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index(mut self, index: u32) -> Self {
         self.0.index = index as _;
         self
@@ -225,11 +227,13 @@ impl<'a> BufferCollectionImageCreateInfoFUCHSIABuilder<'a> {
         BufferCollectionImageCreateInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn collection(mut self, collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA) -> Self {
         self.0.collection = collection as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index(mut self, index: u32) -> Self {
         self.0.index = index as _;
         self
@@ -301,11 +305,13 @@ impl<'a> BufferCollectionBufferCreateInfoFUCHSIABuilder<'a> {
         BufferCollectionBufferCreateInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn collection(mut self, collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA) -> Self {
         self.0.collection = collection as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn index(mut self, index: u32) -> Self {
         self.0.index = index as _;
         self
@@ -376,6 +382,7 @@ impl<'a> BufferCollectionCreateInfoFUCHSIABuilder<'a> {
         BufferCollectionCreateInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn collection_token(mut self, collection_token: *mut std::ffi::c_void) -> Self {
         self.0.collection_token = collection_token;
         self
@@ -456,56 +463,67 @@ impl<'a> BufferCollectionPropertiesFUCHSIABuilder<'a> {
         BufferCollectionPropertiesFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn memory_type_bits(mut self, memory_type_bits: u32) -> Self {
         self.0.memory_type_bits = memory_type_bits as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_count(mut self, buffer_count: u32) -> Self {
         self.0.buffer_count = buffer_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn create_info_index(mut self, create_info_index: u32) -> Self {
         self.0.create_info_index = create_info_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sysmem_pixel_format(mut self, sysmem_pixel_format: u64) -> Self {
         self.0.sysmem_pixel_format = sysmem_pixel_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn format_features(mut self, format_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.format_features = format_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sysmem_color_space_index(mut self, sysmem_color_space_index: crate::extensions::fuchsia_buffer_collection::SysmemColorSpaceFUCHSIA) -> Self {
         self.0.sysmem_color_space_index = sysmem_color_space_index as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sampler_ycbcr_conversion_components(mut self, sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping) -> Self {
         self.0.sampler_ycbcr_conversion_components = sampler_ycbcr_conversion_components as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_ycbcr_model(mut self, suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion) -> Self {
         self.0.suggested_ycbcr_model = suggested_ycbcr_model as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_ycbcr_range(mut self, suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange) -> Self {
         self.0.suggested_ycbcr_range = suggested_ycbcr_range as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_x_chroma_offset(mut self, suggested_x_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_x_chroma_offset = suggested_x_chroma_offset as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn suggested_y_chroma_offset(mut self, suggested_y_chroma_offset: crate::vk1_1::ChromaLocation) -> Self {
         self.0.suggested_y_chroma_offset = suggested_y_chroma_offset as _;
         self
@@ -578,16 +596,19 @@ impl<'a> BufferConstraintsInfoFUCHSIABuilder<'a> {
         BufferConstraintsInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn create_info(mut self, create_info: crate::vk1_0::BufferCreateInfo) -> Self {
         self.0.create_info = create_info as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn required_format_features(mut self, required_format_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.required_format_features = required_format_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_collection_constraints(mut self, buffer_collection_constraints: crate::extensions::fuchsia_buffer_collection::BufferCollectionConstraintsInfoFUCHSIA) -> Self {
         self.0.buffer_collection_constraints = buffer_collection_constraints as _;
         self
@@ -658,6 +679,7 @@ impl<'a> SysmemColorSpaceFUCHSIABuilder<'a> {
         SysmemColorSpaceFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn color_space(mut self, color_space: u32) -> Self {
         self.0.color_space = color_space as _;
         self
@@ -733,31 +755,37 @@ impl<'a> ImageFormatConstraintsInfoFUCHSIABuilder<'a> {
         ImageFormatConstraintsInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn image_create_info(mut self, image_create_info: crate::vk1_0::ImageCreateInfo) -> Self {
         self.0.image_create_info = image_create_info as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn required_format_features(mut self, required_format_features: crate::vk1_0::FormatFeatureFlags) -> Self {
         self.0.required_format_features = required_format_features as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::fuchsia_buffer_collection::ImageFormatConstraintsFlagsFUCHSIA) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn sysmem_pixel_format(mut self, sysmem_pixel_format: u64) -> Self {
         self.0.sysmem_pixel_format = sysmem_pixel_format as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_space_count(mut self, color_space_count: u32) -> Self {
         self.0.color_space_count = color_space_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn color_spaces(mut self, color_spaces: &'a crate::extensions::fuchsia_buffer_collection::SysmemColorSpaceFUCHSIA) -> Self {
         self.0.p_color_spaces = color_spaces as _;
         self
@@ -831,17 +859,20 @@ impl<'a> ImageConstraintsInfoFUCHSIABuilder<'a> {
         ImageConstraintsInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn format_constraints(mut self, format_constraints: &'a [crate::extensions::fuchsia_buffer_collection::ImageFormatConstraintsInfoFUCHSIABuilder]) -> Self {
         self.0.p_format_constraints = format_constraints.as_ptr() as _;
         self.0.format_constraints_count = format_constraints.len() as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn buffer_collection_constraints(mut self, buffer_collection_constraints: crate::extensions::fuchsia_buffer_collection::BufferCollectionConstraintsInfoFUCHSIA) -> Self {
         self.0.buffer_collection_constraints = buffer_collection_constraints as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn flags(mut self, flags: crate::extensions::fuchsia_buffer_collection::ImageConstraintsInfoFlagsFUCHSIA) -> Self {
         self.0.flags = flags as _;
         self
@@ -916,26 +947,31 @@ impl<'a> BufferCollectionConstraintsInfoFUCHSIABuilder<'a> {
         BufferCollectionConstraintsInfoFUCHSIABuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn min_buffer_count(mut self, min_buffer_count: u32) -> Self {
         self.0.min_buffer_count = min_buffer_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn max_buffer_count(mut self, max_buffer_count: u32) -> Self {
         self.0.max_buffer_count = max_buffer_count as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_buffer_count_for_camping(mut self, min_buffer_count_for_camping: u32) -> Self {
         self.0.min_buffer_count_for_camping = min_buffer_count_for_camping as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_buffer_count_for_dedicated_slack(mut self, min_buffer_count_for_dedicated_slack: u32) -> Self {
         self.0.min_buffer_count_for_dedicated_slack = min_buffer_count_for_dedicated_slack as _;
         self
     }
     #[inline]
+    #[must_use]
     pub fn min_buffer_count_for_shared_slack(mut self, min_buffer_count_for_shared_slack: u32) -> Self {
         self.0.min_buffer_count_for_shared_slack = min_buffer_count_for_shared_slack as _;
         self

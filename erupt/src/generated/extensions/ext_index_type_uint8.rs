@@ -54,6 +54,7 @@ impl<'a> PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a> {
         PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn index_type_uint8(mut self, index_type_uint8: bool) -> Self {
         self.0.index_type_uint8 = index_type_uint8 as _;
         self

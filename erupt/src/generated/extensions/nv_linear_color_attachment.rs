@@ -54,6 +54,7 @@ impl<'a> PhysicalDeviceLinearColorAttachmentFeaturesNVBuilder<'a> {
         PhysicalDeviceLinearColorAttachmentFeaturesNVBuilder(Default::default(), std::marker::PhantomData)
     }
     #[inline]
+    #[must_use]
     pub fn linear_color_attachment(mut self, linear_color_attachment: bool) -> Self {
         self.0.linear_color_attachment = linear_color_attachment as _;
         self

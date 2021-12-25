@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Vulkan Headers to version 203
 
+### Fixed
+
+- Support alternate formatting rules in VulkanResult
+
 ## [0.21.0+202] - 2021-12-11
 
 ### Added

@@ -142,7 +142,10 @@ where
     #[inline]
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         match &self.value {
-            Some(value) => write!(fmt, "{:?}: {:?}", self.raw, value),
+            Some(value) => {
+                write!(fmt, "{:?}: ", self.raw)?;
+                Debug::fmt(value, fmt)
+            }
             None => write!(fmt, "{:?}: (no value)", self.raw),
         }
     }
@@ -155,7 +158,10 @@ where
     #[inline]
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
         match &self.value {
-            Some(value) => write!(fmt, "{:?}: {}", self.raw, value),
+            Some(value) => {
+                write!(fmt, "{:?}: ", self.raw)?;
+                Display::fmt(value, fmt)
+            }
             None => write!(fmt, "{:?}: (no value)", self.raw),
         }
     }

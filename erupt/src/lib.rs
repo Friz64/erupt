@@ -365,26 +365,34 @@ pub struct InstanceLoaderBuilder<'a> {
 }
 
 impl<'a> InstanceLoaderBuilder<'a> {
+    /// Create a new instance loader builder.
     pub fn new() -> Self {
         InstanceLoaderBuilder { create_instance_fn: None, symbol_fn: None, allocation_callbacks: None }
     }
 
+    /// Specify a custom instance creation function, to use in place of the
+    /// default.
+    ///
     /// This may be useful when creating the instance using e.g. OpenXR.
     pub fn create_instance_fn(mut self, create_instance: Box<dyn FnOnce(&vk1_0::InstanceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Instance>>) -> Self {
         self.create_instance_fn = Some(create_instance);
         self
     }
 
+    /// Specify a custom symbol function, called to get instance function
+    /// pointers, to use in place of the default.
     pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(vk1_0::Instance, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
         self.symbol_fn = Some(symbol);
         self
     }
 
+    /// Specify custom allocation callback functions.
     pub fn allocation_callbacks(mut self, allocator: &'a vk1_0::AllocationCallbacks) -> Self {
         self.allocation_callbacks = Some(allocator);
         self
     }
 
+    /// Create an instance loader.
     pub unsafe fn build<T>(self, entry_loader: &'a CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo) -> Result<InstanceLoader, LoaderError> {
         let instance = match self.create_instance_fn {
             Some(create_instance) => create_instance(create_info, self.allocation_callbacks),
@@ -498,34 +506,36 @@ pub struct DeviceLoaderBuilder<'a> {
 }
 
 impl<'a> DeviceLoaderBuilder<'a> {
+    /// Create a new instance loader builder.
     pub fn new() -> Self {
         DeviceLoaderBuilder { create_device_fn: None, symbol_fn: None, allocation_callbacks: None }
     }
 
+    /// Specify a custom device creation function, to use in place of the
+    /// default.
+    ///
     /// This may be useful when creating the device using e.g. OpenXR.
     pub fn create_device_fn(mut self, create_device: Box<dyn FnOnce(vk1_0::PhysicalDevice, &vk1_0::DeviceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Device>>) -> Self {
         self.create_device_fn = Some(create_device);
         self
     }
 
+    /// Specify a custom symbol function, called to get device function
+    /// pointers, to use in place of the default.
     pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(vk1_0::Device, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
         self.symbol_fn = Some(symbol);
         self
     }
 
+    /// Specify custom allocation callback functions.
     pub fn allocation_callbacks(mut self, allocator: &'a vk1_0::AllocationCallbacks) -> Self {
         self.allocation_callbacks = Some(allocator);
         self
     }
 
-    pub unsafe fn build(self, instance_loader: &'a InstanceLoader, physical_device: vk1_0::PhysicalDevice, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
-        let device = match self.create_device_fn {
-            Some(create_device) => create_device(physical_device, create_info, self.allocation_callbacks),
-            None => instance_loader.create_device(physical_device, create_info, self.allocation_callbacks),
-        };
-
-        let device = device.result().map_err(LoaderError::VulkanError)?;
-
+    /// Build the device loader. Ensure `create_info` is the same as used in the
+    /// creation of `device`.
+    pub unsafe fn build_with_existing_device(self, instance_loader: &'a InstanceLoader, device: vk1_0::Device, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
         let device_enabled = {
             let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
             let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
@@ -541,6 +551,18 @@ impl<'a> DeviceLoaderBuilder<'a> {
         }
 
         DeviceLoader::custom(instance_loader, device, device_enabled, symbol)
+    }
+
+    /// Build the device loader. If you want to entirely create the device
+    /// yourself, use [`DeviceLoaderBuilder::build_with_existing_device`].
+    pub unsafe fn build(mut self, instance_loader: &'a InstanceLoader, physical_device: vk1_0::PhysicalDevice, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
+        let device = match self.create_device_fn.take() {
+            Some(create_device) => create_device(physical_device, create_info, self.allocation_callbacks),
+            None => instance_loader.create_device(physical_device, create_info, self.allocation_callbacks),
+        };
+
+        let device = device.result().map_err(LoaderError::VulkanError)?;
+        self.build_with_existing_device(instance_loader, device, create_info)
     }
 }
 

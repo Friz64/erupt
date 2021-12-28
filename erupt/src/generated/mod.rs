@@ -24,6 +24,7 @@ impl EntryEnabled {
         Ok(EntryEnabled { instance_version: version, vk1_1: version >= crate::vk1_0::make_api_version(0, 1, 1, 0), vk1_2: version >= crate::vk1_0::make_api_version(0, 1, 2, 0) })
     }
 }
+#[allow(rustdoc::broken_intra_doc_links)]
 #[doc = r" Loader for entry commands."]
 #[doc = r""]
 #[doc = r" To create a new loader, call [`EntryLoader::new`](CustomEntryLoader::new)."]

@@ -383,6 +383,7 @@ pub(super) fn tokens(comment_gen: &DocCommentGen, source: &Source) -> HashMap<Or
             }
         }
 
+        #[allow(rustdoc::broken_intra_doc_links)]
         /// Loader for entry commands.
         ///
         /// To create a new loader, call [`EntryLoader::new`](CustomEntryLoader::new).

@@ -1756,9 +1756,7 @@ impl<'a> ExternalMemoryPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ExternalMemoryProperties {
+    pub fn build(self) -> ExternalMemoryProperties {
         self.0
     }
 }
@@ -4062,9 +4060,7 @@ impl<'a> DescriptorUpdateTemplateEntryBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DescriptorUpdateTemplateEntry {
+    pub fn build(self) -> DescriptorUpdateTemplateEntry {
         self.0
     }
 }
@@ -4257,9 +4253,7 @@ impl<'a> InputAttachmentAspectReferenceBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> InputAttachmentAspectReference {
+    pub fn build(self) -> InputAttachmentAspectReference {
         self.0
     }
 }

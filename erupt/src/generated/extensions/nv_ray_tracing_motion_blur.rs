@@ -462,9 +462,7 @@ impl<'a> SRTDataNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SRTDataNV {
+    pub fn build(self) -> SRTDataNV {
         self.0
     }
 }
@@ -568,9 +566,7 @@ impl<'a> AccelerationStructureSRTMotionInstanceNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AccelerationStructureSRTMotionInstanceNV {
+    pub fn build(self) -> AccelerationStructureSRTMotionInstanceNV {
         self.0
     }
 }
@@ -674,9 +670,7 @@ impl<'a> AccelerationStructureMatrixMotionInstanceNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AccelerationStructureMatrixMotionInstanceNV {
+    pub fn build(self) -> AccelerationStructureMatrixMotionInstanceNV {
         self.0
     }
 }
@@ -773,9 +767,7 @@ impl<'a> AccelerationStructureMotionInstanceNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AccelerationStructureMotionInstanceNV {
+    pub fn build(self) -> AccelerationStructureMotionInstanceNV {
         self.0
     }
 }

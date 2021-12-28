@@ -91,9 +91,7 @@ impl<'a> PipelineCreationFeedbackEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PipelineCreationFeedbackEXT {
+    pub fn build(self) -> PipelineCreationFeedbackEXT {
         self.0
     }
 }

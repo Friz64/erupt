@@ -198,7 +198,7 @@ impl FieldKind {
                     continue;
                 }
 
-                let is_passthrough = field.ty.has_types(&[Type::Void]);
+                let is_passthrough = field.ty.any(|ty| ty == &Type::Void);
                 match group {
                     // Apply `BitField` kind
                     0 => {
@@ -473,6 +473,24 @@ impl Structure {
                 });
         }
 
+        let build_fn = if self.directly_has_any_pointers() {
+            quote! {
+                #[inline]
+                /// Discards all lifetime information.
+                /// Use the `Deref` and `DerefMut` implementations if possible.
+                pub fn build_dangling(self) -> #inner_ident {
+                    self.0
+                }
+            }
+        } else {
+            quote! {
+                #[inline]
+                pub fn build(self) -> #inner_ident {
+                    self.0
+                }
+            }
+        };
+
         tokens.get_mut(origin).unwrap().extend(quote! {
             #[derive(Copy, Clone)]
             #[doc = #doc]
@@ -487,12 +505,7 @@ impl Structure {
 
                 #(#field_builders)*
 
-                #[inline]
-                /// Discards all lifetime information.
-                /// Use the `Deref` and `DerefMut` implementations if possible.
-                pub fn build_dangling(self) -> #inner_ident {
-                    self.0
-                }
+                #build_fn
             }
 
             impl<'a> std::default::Default for #ident<'a> {

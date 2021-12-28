@@ -582,9 +582,7 @@ impl<'a> StdVideoH264SpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH264SpsFlags {
+    pub fn build(self) -> StdVideoH264SpsFlags {
         self.0
     }
 }
@@ -668,9 +666,7 @@ impl<'a> StdVideoH264ScalingListsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH264ScalingLists {
+    pub fn build(self) -> StdVideoH264ScalingLists {
         self.0
     }
 }
@@ -945,9 +941,7 @@ impl<'a> StdVideoH264HrdParametersBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH264HrdParameters {
+    pub fn build(self) -> StdVideoH264HrdParameters {
         self.0
     }
 }
@@ -1076,9 +1070,7 @@ impl<'a> StdVideoH264SpsVuiFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH264SpsVuiFlags {
+    pub fn build(self) -> StdVideoH264SpsVuiFlags {
         self.0
     }
 }
@@ -1189,9 +1181,7 @@ impl<'a> StdVideoH264PpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH264PpsFlags {
+    pub fn build(self) -> StdVideoH264PpsFlags {
         self.0
     }
 }
@@ -1296,9 +1286,7 @@ impl<'a> StdVideoDecodeH264PictureInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH264PictureInfo {
+    pub fn build(self) -> StdVideoDecodeH264PictureInfo {
         self.0
     }
 }
@@ -1382,9 +1370,7 @@ impl<'a> StdVideoDecodeH264ReferenceInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH264ReferenceInfo {
+    pub fn build(self) -> StdVideoDecodeH264ReferenceInfo {
         self.0
     }
 }
@@ -1556,9 +1542,7 @@ impl<'a> StdVideoDecodeH264PictureInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH264PictureInfoFlags {
+    pub fn build(self) -> StdVideoDecodeH264PictureInfoFlags {
         self.0
     }
 }
@@ -1639,9 +1623,7 @@ impl<'a> StdVideoDecodeH264ReferenceInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH264ReferenceInfoFlags {
+    pub fn build(self) -> StdVideoDecodeH264ReferenceInfoFlags {
         self.0
     }
 }
@@ -1788,9 +1770,7 @@ impl<'a> StdVideoDecodeH264MvcElementBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH264MvcElement {
+    pub fn build(self) -> StdVideoDecodeH264MvcElement {
         self.0
     }
 }
@@ -1865,9 +1845,7 @@ impl<'a> StdVideoDecodeH264MvcElementFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH264MvcElementFlags {
+    pub fn build(self) -> StdVideoDecodeH264MvcElementFlags {
         self.0
     }
 }
@@ -3050,9 +3028,7 @@ impl<'a> StdVideoH265DecPicBufMgrBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265DecPicBufMgr {
+    pub fn build(self) -> StdVideoH265DecPicBufMgr {
         self.0
     }
 }
@@ -3289,9 +3265,7 @@ impl<'a> StdVideoH265VpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265VpsFlags {
+    pub fn build(self) -> StdVideoH265VpsFlags {
         self.0
     }
 }
@@ -3510,9 +3484,7 @@ impl<'a> StdVideoH265SpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265SpsFlags {
+    pub fn build(self) -> StdVideoH265SpsFlags {
         self.0
     }
 }
@@ -3610,9 +3582,7 @@ impl<'a> StdVideoH265ScalingListsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265ScalingLists {
+    pub fn build(self) -> StdVideoH265ScalingLists {
         self.0
     }
 }
@@ -3894,9 +3864,7 @@ impl<'a> StdVideoH265PredictorPaletteEntriesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265PredictorPaletteEntries {
+    pub fn build(self) -> StdVideoH265PredictorPaletteEntries {
         self.0
     }
 }
@@ -4139,9 +4107,7 @@ impl<'a> StdVideoH265PpsFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265PpsFlags {
+    pub fn build(self) -> StdVideoH265PpsFlags {
         self.0
     }
 }
@@ -4232,9 +4198,7 @@ impl<'a> StdVideoH265SubLayerHrdParametersBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265SubLayerHrdParameters {
+    pub fn build(self) -> StdVideoH265SubLayerHrdParameters {
         self.0
     }
 }
@@ -4333,9 +4297,7 @@ impl<'a> StdVideoH265HrdFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265HrdFlags {
+    pub fn build(self) -> StdVideoH265HrdFlags {
         self.0
     }
 }
@@ -4500,9 +4462,7 @@ impl<'a> StdVideoH265SpsVuiFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoH265SpsVuiFlags {
+    pub fn build(self) -> StdVideoH265SpsVuiFlags {
         self.0
     }
 }
@@ -4635,9 +4595,7 @@ impl<'a> StdVideoDecodeH265PictureInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH265PictureInfo {
+    pub fn build(self) -> StdVideoDecodeH265PictureInfo {
         self.0
     }
 }
@@ -4707,9 +4665,7 @@ impl<'a> StdVideoDecodeH265ReferenceInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH265ReferenceInfo {
+    pub fn build(self) -> StdVideoDecodeH265ReferenceInfo {
         self.0
     }
 }
@@ -4790,9 +4746,7 @@ impl<'a> StdVideoDecodeH265PictureInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH265PictureInfoFlags {
+    pub fn build(self) -> StdVideoDecodeH265PictureInfoFlags {
         self.0
     }
 }
@@ -4861,9 +4815,7 @@ impl<'a> StdVideoDecodeH265ReferenceInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoDecodeH265ReferenceInfoFlags {
+    pub fn build(self) -> StdVideoDecodeH265ReferenceInfoFlags {
         self.0
     }
 }
@@ -5103,9 +5055,7 @@ impl<'a> StdVideoEncodeH264PictureInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH264PictureInfo {
+    pub fn build(self) -> StdVideoEncodeH264PictureInfo {
         self.0
     }
 }
@@ -5204,9 +5154,7 @@ impl<'a> StdVideoEncodeH264SliceHeaderFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH264SliceHeaderFlags {
+    pub fn build(self) -> StdVideoEncodeH264SliceHeaderFlags {
         self.0
     }
 }
@@ -5388,9 +5336,7 @@ impl<'a> StdVideoEncodeH264PictureInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH264PictureInfoFlags {
+    pub fn build(self) -> StdVideoEncodeH264PictureInfoFlags {
         self.0
     }
 }
@@ -5459,9 +5405,7 @@ impl<'a> StdVideoEncodeH264RefMgmtFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH264RefMgmtFlags {
+    pub fn build(self) -> StdVideoEncodeH264RefMgmtFlags {
         self.0
     }
 }
@@ -5538,9 +5482,7 @@ impl<'a> StdVideoEncodeH264RefListModEntryBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH264RefListModEntry {
+    pub fn build(self) -> StdVideoEncodeH264RefListModEntry {
         self.0
     }
 }
@@ -5631,9 +5573,7 @@ impl<'a> StdVideoEncodeH264RefPicMarkingEntryBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH264RefPicMarkingEntry {
+    pub fn build(self) -> StdVideoEncodeH264RefPicMarkingEntry {
         self.0
     }
 }
@@ -5708,9 +5648,7 @@ impl<'a> StdVideoEncodeH265PictureInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH265PictureInfoFlags {
+    pub fn build(self) -> StdVideoEncodeH265PictureInfoFlags {
         self.0
     }
 }
@@ -5808,9 +5746,7 @@ impl<'a> StdVideoEncodeH265PictureInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH265PictureInfo {
+    pub fn build(self) -> StdVideoEncodeH265PictureInfo {
         self.0
     }
 }
@@ -6076,9 +6012,7 @@ impl<'a> StdVideoEncodeH265SliceHeaderBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH265SliceHeader {
+    pub fn build(self) -> StdVideoEncodeH265SliceHeader {
         self.0
     }
 }
@@ -6155,9 +6089,7 @@ impl<'a> StdVideoEncodeH265ReferenceInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH265ReferenceInfo {
+    pub fn build(self) -> StdVideoEncodeH265ReferenceInfo {
         self.0
     }
 }
@@ -6425,9 +6357,7 @@ impl<'a> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH265SliceHeaderFlags {
+    pub fn build(self) -> StdVideoEncodeH265SliceHeaderFlags {
         self.0
     }
 }
@@ -6496,9 +6426,7 @@ impl<'a> StdVideoEncodeH265ReferenceInfoFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH265ReferenceInfoFlags {
+    pub fn build(self) -> StdVideoEncodeH265ReferenceInfoFlags {
         self.0
     }
 }
@@ -6567,9 +6495,7 @@ impl<'a> StdVideoEncodeH265ReferenceModificationFlagsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StdVideoEncodeH265ReferenceModificationFlags {
+    pub fn build(self) -> StdVideoEncodeH265ReferenceModificationFlags {
         self.0
     }
 }

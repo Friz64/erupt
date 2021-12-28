@@ -292,19 +292,19 @@ impl Type {
         }
     }
 
-    pub fn has_types(&self, types: &[Type]) -> bool {
+    pub fn any(&self, cmp: fn(&Type) -> bool) -> bool {
         match self {
-            Type::Pointer { to, .. } => to.has_types(types),
-            Type::Reference { to, .. } => to.has_types(types),
-            Type::Array { of, .. } => of.has_types(types),
-            Type::Tuple(types) => types.iter().any(|ty| ty.has_types(types)),
-            Type::Option(ty) => ty.has_types(types),
-            Type::SmallVec(ty) => ty.has_types(types),
-            Type::Slice { of, .. } => of.has_types(types),
+            ty if cmp(ty) => true,
+            Type::Pointer { to, .. } => to.any(cmp),
+            Type::Reference { to, .. } => to.any(cmp),
+            Type::Array { of, .. } => of.any(cmp),
+            Type::Tuple(types) => types.iter().any(|ty| ty.any(cmp)),
+            Type::Option(ty) => ty.any(cmp),
+            Type::SmallVec(ty) => ty.any(cmp),
+            Type::Slice { of, .. } => of.any(cmp),
             Type::FnMut { args, return_ty } => {
-                return_ty.has_types(types) || args.iter().any(|arg| arg.has_types(types))
+                return_ty.any(cmp) || args.iter().any(|arg| arg.any(cmp))
             }
-            ty if types.contains(ty) => true,
             _ => false,
         }
     }

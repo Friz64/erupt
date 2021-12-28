@@ -204,9 +204,7 @@ impl<'a> RectLayerKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> RectLayerKHR {
+    pub fn build(self) -> RectLayerKHR {
         self.0
     }
 }

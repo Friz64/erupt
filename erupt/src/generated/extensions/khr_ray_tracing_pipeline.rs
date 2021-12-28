@@ -651,9 +651,7 @@ impl<'a> StridedDeviceAddressRegionKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StridedDeviceAddressRegionKHR {
+    pub fn build(self) -> StridedDeviceAddressRegionKHR {
         self.0
     }
 }
@@ -731,9 +729,7 @@ impl<'a> TraceRaysIndirectCommandKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> TraceRaysIndirectCommandKHR {
+    pub fn build(self) -> TraceRaysIndirectCommandKHR {
         self.0
     }
 }

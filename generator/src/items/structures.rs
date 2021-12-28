@@ -337,6 +337,14 @@ impl Structure {
         }
     }
 
+    pub fn directly_has_any_pointers(&self) -> bool {
+        let cmp = |ty: &Type| matches!(ty, Type::Pointer { .. });
+        self.fields.iter().any(|field| match field {
+            StructureField::Normal(field) => field.ty.any(cmp),
+            StructureField::Bitfield(fields) => fields.iter().any(|field| field.ty.any(cmp)),
+        })
+    }
+
     pub fn supports_hash_eq(&self, source: &Source) -> bool {
         *(self.supports_hash_eq.borrow_mut().get_or_insert_with(|| {
             self.kind == StructureKind::Struct

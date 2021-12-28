@@ -243,9 +243,7 @@ impl<'a> PerformanceValueINTELBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PerformanceValueINTEL {
+    pub fn build(self) -> PerformanceValueINTEL {
         self.0
     }
 }

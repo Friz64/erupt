@@ -4908,9 +4908,7 @@ impl<'a> Offset2DBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> Offset2D {
+    pub fn build(self) -> Offset2D {
         self.0
     }
 }
@@ -4988,9 +4986,7 @@ impl<'a> Offset3DBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> Offset3D {
+    pub fn build(self) -> Offset3D {
         self.0
     }
 }
@@ -5061,9 +5057,7 @@ impl<'a> Extent2DBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> Extent2D {
+    pub fn build(self) -> Extent2D {
         self.0
     }
 }
@@ -5141,9 +5135,7 @@ impl<'a> Extent3DBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> Extent3D {
+    pub fn build(self) -> Extent3D {
         self.0
     }
 }
@@ -5242,9 +5234,7 @@ impl<'a> ViewportBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> Viewport {
+    pub fn build(self) -> Viewport {
         self.0
     }
 }
@@ -5315,9 +5305,7 @@ impl<'a> Rect2DBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> Rect2D {
+    pub fn build(self) -> Rect2D {
         self.0
     }
 }
@@ -5395,9 +5383,7 @@ impl<'a> ClearRectBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ClearRect {
+    pub fn build(self) -> ClearRect {
         self.0
     }
 }
@@ -5482,9 +5468,7 @@ impl<'a> ComponentMappingBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ComponentMapping {
+    pub fn build(self) -> ComponentMapping {
         self.0
     }
 }
@@ -5604,9 +5588,7 @@ impl<'a> PhysicalDevicePropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PhysicalDeviceProperties {
+    pub fn build(self) -> PhysicalDeviceProperties {
         self.0
     }
 }
@@ -5677,9 +5659,7 @@ impl<'a> ExtensionPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ExtensionProperties {
+    pub fn build(self) -> ExtensionProperties {
         self.0
     }
 }
@@ -5764,9 +5744,7 @@ impl<'a> LayerPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> LayerProperties {
+    pub fn build(self) -> LayerProperties {
         self.0
     }
 }
@@ -6339,9 +6317,7 @@ impl<'a> QueueFamilyPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> QueueFamilyProperties {
+    pub fn build(self) -> QueueFamilyProperties {
         self.0
     }
 }
@@ -6426,9 +6402,7 @@ impl<'a> PhysicalDeviceMemoryPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PhysicalDeviceMemoryProperties {
+    pub fn build(self) -> PhysicalDeviceMemoryProperties {
         self.0
     }
 }
@@ -6584,9 +6558,7 @@ impl<'a> MemoryRequirementsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> MemoryRequirements {
+    pub fn build(self) -> MemoryRequirements {
         self.0
     }
 }
@@ -6664,9 +6636,7 @@ impl<'a> SparseImageFormatPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SparseImageFormatProperties {
+    pub fn build(self) -> SparseImageFormatProperties {
         self.0
     }
 }
@@ -6758,9 +6728,7 @@ impl<'a> SparseImageMemoryRequirementsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SparseImageMemoryRequirements {
+    pub fn build(self) -> SparseImageMemoryRequirements {
         self.0
     }
 }
@@ -6831,9 +6799,7 @@ impl<'a> MemoryTypeBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> MemoryType {
+    pub fn build(self) -> MemoryType {
         self.0
     }
 }
@@ -6904,9 +6870,7 @@ impl<'a> MemoryHeapBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> MemoryHeap {
+    pub fn build(self) -> MemoryHeap {
         self.0
     }
 }
@@ -7069,9 +7033,7 @@ impl<'a> FormatPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> FormatProperties {
+    pub fn build(self) -> FormatProperties {
         self.0
     }
 }
@@ -7163,9 +7125,7 @@ impl<'a> ImageFormatPropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ImageFormatProperties {
+    pub fn build(self) -> ImageFormatProperties {
         self.0
     }
 }
@@ -7243,9 +7203,7 @@ impl<'a> DescriptorBufferInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DescriptorBufferInfo {
+    pub fn build(self) -> DescriptorBufferInfo {
         self.0
     }
 }
@@ -7323,9 +7281,7 @@ impl<'a> DescriptorImageInfoBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DescriptorImageInfo {
+    pub fn build(self) -> DescriptorImageInfo {
         self.0
     }
 }
@@ -7833,9 +7789,7 @@ impl<'a> ImageSubresourceBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ImageSubresource {
+    pub fn build(self) -> ImageSubresource {
         self.0
     }
 }
@@ -7920,9 +7874,7 @@ impl<'a> ImageSubresourceLayersBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ImageSubresourceLayers {
+    pub fn build(self) -> ImageSubresourceLayers {
         self.0
     }
 }
@@ -8014,9 +7966,7 @@ impl<'a> ImageSubresourceRangeBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ImageSubresourceRange {
+    pub fn build(self) -> ImageSubresourceRange {
         self.0
     }
 }
@@ -8569,9 +8519,7 @@ impl<'a> SubresourceLayoutBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SubresourceLayout {
+    pub fn build(self) -> SubresourceLayout {
         self.0
     }
 }
@@ -8755,9 +8703,7 @@ impl<'a> BufferCopyBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> BufferCopy {
+    pub fn build(self) -> BufferCopy {
         self.0
     }
 }
@@ -8849,9 +8795,7 @@ impl<'a> SparseMemoryBindBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SparseMemoryBind {
+    pub fn build(self) -> SparseMemoryBind {
         self.0
     }
 }
@@ -8950,9 +8894,7 @@ impl<'a> SparseImageMemoryBindBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SparseImageMemoryBind {
+    pub fn build(self) -> SparseImageMemoryBind {
         self.0
     }
 }
@@ -9378,9 +9320,7 @@ impl<'a> ImageCopyBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ImageCopy {
+    pub fn build(self) -> ImageCopy {
         self.0
     }
 }
@@ -9465,9 +9405,7 @@ impl<'a> ImageBlitBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ImageBlit {
+    pub fn build(self) -> ImageBlit {
         self.0
     }
 }
@@ -9566,9 +9504,7 @@ impl<'a> BufferImageCopyBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> BufferImageCopy {
+    pub fn build(self) -> BufferImageCopy {
         self.0
     }
 }
@@ -9660,9 +9596,7 @@ impl<'a> ImageResolveBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ImageResolve {
+    pub fn build(self) -> ImageResolve {
         self.0
     }
 }
@@ -9988,9 +9922,7 @@ impl<'a> DescriptorPoolSizeBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DescriptorPoolSize {
+    pub fn build(self) -> DescriptorPoolSize {
         self.0
     }
 }
@@ -10235,9 +10167,7 @@ impl<'a> SpecializationMapEntryBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SpecializationMapEntry {
+    pub fn build(self) -> SpecializationMapEntry {
         self.0
     }
 }
@@ -10595,9 +10525,7 @@ impl<'a> VertexInputBindingDescriptionBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> VertexInputBindingDescription {
+    pub fn build(self) -> VertexInputBindingDescription {
         self.0
     }
 }
@@ -10682,9 +10610,7 @@ impl<'a> VertexInputAttributeDescriptionBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> VertexInputAttributeDescription {
+    pub fn build(self) -> VertexInputAttributeDescription {
         self.0
     }
 }
@@ -11404,9 +11330,7 @@ impl<'a> PipelineColorBlendAttachmentStateBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PipelineColorBlendAttachmentState {
+    pub fn build(self) -> PipelineColorBlendAttachmentState {
         self.0
     }
 }
@@ -11693,9 +11617,7 @@ impl<'a> StencilOpStateBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> StencilOpState {
+    pub fn build(self) -> StencilOpState {
         self.0
     }
 }
@@ -12184,9 +12106,7 @@ impl<'a> PipelineCacheHeaderVersionOneBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PipelineCacheHeaderVersionOne {
+    pub fn build(self) -> PipelineCacheHeaderVersionOne {
         self.0
     }
 }
@@ -12264,9 +12184,7 @@ impl<'a> PushConstantRangeBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PushConstantRange {
+    pub fn build(self) -> PushConstantRange {
         self.0
     }
 }
@@ -13062,9 +12980,7 @@ impl<'a> ClearDepthStencilValueBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ClearDepthStencilValue {
+    pub fn build(self) -> ClearDepthStencilValue {
         self.0
     }
 }
@@ -13160,9 +13076,7 @@ impl<'a> ClearAttachmentBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> ClearAttachment {
+    pub fn build(self) -> ClearAttachment {
         self.0
     }
 }
@@ -13282,9 +13196,7 @@ impl<'a> AttachmentDescriptionBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AttachmentDescription {
+    pub fn build(self) -> AttachmentDescription {
         self.0
     }
 }
@@ -13355,9 +13267,7 @@ impl<'a> AttachmentReferenceBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AttachmentReference {
+    pub fn build(self) -> AttachmentReference {
         self.0
     }
 }
@@ -13578,9 +13488,7 @@ impl<'a> SubpassDependencyBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SubpassDependency {
+    pub fn build(self) -> SubpassDependency {
         self.0
     }
 }
@@ -14318,9 +14226,7 @@ impl<'a> PhysicalDeviceFeaturesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PhysicalDeviceFeatures {
+    pub fn build(self) -> PhysicalDeviceFeatures {
         self.0
     }
 }
@@ -14412,9 +14318,7 @@ impl<'a> PhysicalDeviceSparsePropertiesBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PhysicalDeviceSparseProperties {
+    pub fn build(self) -> PhysicalDeviceSparseProperties {
         self.0
     }
 }
@@ -15427,9 +15331,7 @@ impl<'a> PhysicalDeviceLimitsBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PhysicalDeviceLimits {
+    pub fn build(self) -> PhysicalDeviceLimits {
         self.0
     }
 }
@@ -15791,9 +15693,7 @@ impl<'a> DrawIndirectCommandBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DrawIndirectCommand {
+    pub fn build(self) -> DrawIndirectCommand {
         self.0
     }
 }
@@ -15885,9 +15785,7 @@ impl<'a> DrawIndexedIndirectCommandBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DrawIndexedIndirectCommand {
+    pub fn build(self) -> DrawIndexedIndirectCommand {
         self.0
     }
 }
@@ -15965,9 +15863,7 @@ impl<'a> DispatchIndirectCommandBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DispatchIndirectCommand {
+    pub fn build(self) -> DispatchIndirectCommand {
         self.0
     }
 }

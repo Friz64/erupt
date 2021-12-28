@@ -1190,9 +1190,7 @@ impl<'a> VideoEncodeH264QpEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> VideoEncodeH264QpEXT {
+    pub fn build(self) -> VideoEncodeH264QpEXT {
         self.0
     }
 }
@@ -1270,9 +1268,7 @@ impl<'a> VideoEncodeH264FrameSizeEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> VideoEncodeH264FrameSizeEXT {
+    pub fn build(self) -> VideoEncodeH264FrameSizeEXT {
         self.0
     }
 }

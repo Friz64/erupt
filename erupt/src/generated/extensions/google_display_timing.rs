@@ -59,9 +59,7 @@ impl<'a> RefreshCycleDurationGOOGLEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> RefreshCycleDurationGOOGLE {
+    pub fn build(self) -> RefreshCycleDurationGOOGLE {
         self.0
     }
 }
@@ -153,9 +151,7 @@ impl<'a> PastPresentationTimingGOOGLEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PastPresentationTimingGOOGLE {
+    pub fn build(self) -> PastPresentationTimingGOOGLE {
         self.0
     }
 }
@@ -299,9 +295,7 @@ impl<'a> PresentTimeGOOGLEBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> PresentTimeGOOGLE {
+    pub fn build(self) -> PresentTimeGOOGLE {
         self.0
     }
 }

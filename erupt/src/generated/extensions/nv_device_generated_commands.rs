@@ -558,9 +558,7 @@ impl<'a> BindShaderGroupIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> BindShaderGroupIndirectCommandNV {
+    pub fn build(self) -> BindShaderGroupIndirectCommandNV {
         self.0
     }
 }
@@ -638,9 +636,7 @@ impl<'a> BindIndexBufferIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> BindIndexBufferIndirectCommandNV {
+    pub fn build(self) -> BindIndexBufferIndirectCommandNV {
         self.0
     }
 }
@@ -718,9 +714,7 @@ impl<'a> BindVertexBufferIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> BindVertexBufferIndirectCommandNV {
+    pub fn build(self) -> BindVertexBufferIndirectCommandNV {
         self.0
     }
 }
@@ -784,9 +778,7 @@ impl<'a> SetStateFlagsIndirectCommandNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SetStateFlagsIndirectCommandNV {
+    pub fn build(self) -> SetStateFlagsIndirectCommandNV {
         self.0
     }
 }
@@ -857,9 +849,7 @@ impl<'a> IndirectCommandsStreamNVBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> IndirectCommandsStreamNV {
+    pub fn build(self) -> IndirectCommandsStreamNV {
         self.0
     }
 }

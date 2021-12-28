@@ -64,9 +64,7 @@ impl<'a> VertexInputBindingDivisorDescriptionEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> VertexInputBindingDivisorDescriptionEXT {
+    pub fn build(self) -> VertexInputBindingDivisorDescriptionEXT {
         self.0
     }
 }

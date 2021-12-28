@@ -1274,9 +1274,7 @@ impl<'a> AccelerationStructureBuildRangeInfoKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AccelerationStructureBuildRangeInfoKHR {
+    pub fn build(self) -> AccelerationStructureBuildRangeInfoKHR {
         self.0
     }
 }
@@ -1481,9 +1479,7 @@ impl<'a> AabbPositionsKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AabbPositionsKHR {
+    pub fn build(self) -> AabbPositionsKHR {
         self.0
     }
 }
@@ -1547,9 +1543,7 @@ impl<'a> TransformMatrixKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> TransformMatrixKHR {
+    pub fn build(self) -> TransformMatrixKHR {
         self.0
     }
 }
@@ -1646,9 +1640,7 @@ impl<'a> AccelerationStructureInstanceKHRBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AccelerationStructureInstanceKHR {
+    pub fn build(self) -> AccelerationStructureInstanceKHR {
         self.0
     }
 }

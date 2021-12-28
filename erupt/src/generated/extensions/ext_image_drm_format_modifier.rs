@@ -169,9 +169,7 @@ impl<'a> DrmFormatModifierPropertiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DrmFormatModifierPropertiesEXT {
+    pub fn build(self) -> DrmFormatModifierPropertiesEXT {
         self.0
     }
 }
@@ -633,9 +631,7 @@ impl<'a> DrmFormatModifierProperties2EXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> DrmFormatModifierProperties2EXT {
+    pub fn build(self) -> DrmFormatModifierProperties2EXT {
         self.0
     }
 }

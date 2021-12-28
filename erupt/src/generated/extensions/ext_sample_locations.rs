@@ -84,9 +84,7 @@ impl<'a> SampleLocationEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SampleLocationEXT {
+    pub fn build(self) -> SampleLocationEXT {
         self.0
     }
 }
@@ -244,9 +242,7 @@ impl<'a> AttachmentSampleLocationsEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> AttachmentSampleLocationsEXT {
+    pub fn build(self) -> AttachmentSampleLocationsEXT {
         self.0
     }
 }
@@ -317,9 +313,7 @@ impl<'a> SubpassSampleLocationsEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[doc = r" Discards all lifetime information."]
-    #[doc = r" Use the `Deref` and `DerefMut` implementations if possible."]
-    pub fn build_dangling(self) -> SubpassSampleLocationsEXT {
+    pub fn build(self) -> SubpassSampleLocationsEXT {
         self.0
     }
 }

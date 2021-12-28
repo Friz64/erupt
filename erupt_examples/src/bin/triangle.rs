@@ -285,7 +285,7 @@ fn main() {
                         .level_count(1)
                         .base_array_layer(0)
                         .layer_count(1)
-                        .build_dangling(),
+                        .build(),
                 );
             unsafe { device.create_image_view(&image_view_info, None) }.unwrap()
         })

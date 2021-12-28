@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Only use `build_dangling` for structs which directly have pointers
 - Update Vulkan Headers to version 203
 
 ### Fixed

@@ -107,14 +107,13 @@ For special use cases, there is
 ## Pointer chains
 
 The Vulkan API uses the concept of pointer chains to allow future extensibility
-of structs. `erupt` provides the `ExtendableFromConst` and `ExtendableFromMut`
-traits, which provide type and memory safe pointer chain support through the
-`extend_from` methods.
+of structs. `erupt` provides the `ExtendableFrom` trait, which provides type and
+memory safe pointer chain support through the `extend_from` method.
 
-### `ExtendableFromConst`
+### Examples
 
 ```rust
-let debug_utils_messenger_info = vk::DebugUtilsMessengerCreateInfoEXTBuilder::new()
+let mut debug_utils_messenger_info = vk::DebugUtilsMessengerCreateInfoEXTBuilder::new()
     .message_severity(/* ... */)
     .message_type(/* ... */)
     .pfn_user_callback(Some(debug_utils_messenger_callback));
@@ -123,12 +122,10 @@ let instance_info = vk::InstanceCreateInfoBuilder::new()
     .enabled_layer_names(/* ... */)
     .enabled_extension_names(/* ... */)
     // instance creation now has the ability to send debug messages
-    .extend_from(&debug_utils_messenger_info);
+    .extend_from(&mut debug_utils_messenger_info);
 
 let instance = InstanceLoader::new(&entry, &instance_info, None)?;
 ```
-
-### `ExtenableFromMut`
 
 ```rust
 let mut line_rasterization_features = vk::PhysicalDeviceLineRasterizationFeaturesEXT::default();

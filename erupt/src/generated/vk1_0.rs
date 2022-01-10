@@ -2115,7 +2115,7 @@ impl std::fmt::Debug for ImageCreateFlagBits {
             &Self::CUBE_COMPATIBLE => "CUBE_COMPATIBLE",
             &Self::ALIAS => "ALIAS",
             &Self::SPLIT_INSTANCE_BIND_REGIONS => "SPLIT_INSTANCE_BIND_REGIONS",
-            &Self::_2D_ARRAY_COMPATIBLE => "_2D_ARRAY_COMPATIBLE",
+            &Self::_2D_ARRAY_COMPATIBLE => "2D_ARRAY_COMPATIBLE",
             &Self::BLOCK_TEXEL_VIEW_COMPATIBLE => "BLOCK_TEXEL_VIEW_COMPATIBLE",
             &Self::EXTENDED_USAGE => "EXTENDED_USAGE",
             &Self::PROTECTED => "PROTECTED",
@@ -2215,9 +2215,9 @@ pub struct ImageType(pub i32);
 impl std::fmt::Debug for ImageType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::_1D => "_1D",
-            &Self::_2D => "_2D",
-            &Self::_3D => "_3D",
+            &Self::_1D => "1D",
+            &Self::_2D => "2D",
+            &Self::_3D => "3D",
             _ => "(unknown variant)",
         })
     }
@@ -2306,12 +2306,12 @@ pub struct ImageViewType(pub i32);
 impl std::fmt::Debug for ImageViewType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::_1D => "_1D",
-            &Self::_2D => "_2D",
-            &Self::_3D => "_3D",
+            &Self::_1D => "1D",
+            &Self::_2D => "2D",
+            &Self::_3D => "3D",
             &Self::CUBE => "CUBE",
-            &Self::_1D_ARRAY => "_1D_ARRAY",
-            &Self::_2D_ARRAY => "_2D_ARRAY",
+            &Self::_1D_ARRAY => "1D_ARRAY",
+            &Self::_2D_ARRAY => "2D_ARRAY",
             &Self::CUBE_ARRAY => "CUBE_ARRAY",
             _ => "(unknown variant)",
         })
@@ -2763,7 +2763,7 @@ impl QueryResultFlagBits {
 impl std::fmt::Debug for QueryResultFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::_64 => "_64",
+            &Self::_64 => "64",
             &Self::WAIT => "WAIT",
             &Self::WITH_AVAILABILITY => "WITH_AVAILABILITY",
             &Self::PARTIAL => "PARTIAL",
@@ -3994,13 +3994,13 @@ impl SampleCountFlagBits {
 impl std::fmt::Debug for SampleCountFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::_1 => "_1",
-            &Self::_2 => "_2",
-            &Self::_4 => "_4",
-            &Self::_8 => "_8",
-            &Self::_16 => "_16",
-            &Self::_32 => "_32",
-            &Self::_64 => "_64",
+            &Self::_1 => "1",
+            &Self::_2 => "2",
+            &Self::_4 => "4",
+            &Self::_8 => "8",
+            &Self::_16 => "16",
+            &Self::_32 => "32",
+            &Self::_64 => "64",
             _ => "(unknown variant)",
         })
     }

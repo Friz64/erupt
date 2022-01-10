@@ -143,10 +143,10 @@ impl VideoEncodeH265CtbSizeFlagBitsEXT {
 impl std::fmt::Debug for VideoEncodeH265CtbSizeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::_8_EXT => "_8_EXT",
-            &Self::_16_EXT => "_16_EXT",
-            &Self::_32_EXT => "_32_EXT",
-            &Self::_64_EXT => "_64_EXT",
+            &Self::_8_EXT => "8_EXT",
+            &Self::_16_EXT => "16_EXT",
+            &Self::_32_EXT => "32_EXT",
+            &Self::_64_EXT => "64_EXT",
             _ => "(unknown variant)",
         })
     }

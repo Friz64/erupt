@@ -156,9 +156,9 @@ impl std::fmt::Debug for VideoChromaSubsamplingFlagBitsKHR {
         f.write_str(match self {
             &Self::INVALID_KHR => "INVALID_KHR",
             &Self::MONOCHROME_KHR => "MONOCHROME_KHR",
-            &Self::_420_KHR => "_420_KHR",
-            &Self::_422_KHR => "_422_KHR",
-            &Self::_444_KHR => "_444_KHR",
+            &Self::_420_KHR => "420_KHR",
+            &Self::_422_KHR => "422_KHR",
+            &Self::_444_KHR => "444_KHR",
             _ => "(unknown variant)",
         })
     }
@@ -188,9 +188,9 @@ impl std::fmt::Debug for VideoComponentBitDepthFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
             &Self::INVALID_KHR => "INVALID_KHR",
-            &Self::_8_KHR => "_8_KHR",
-            &Self::_10_KHR => "_10_KHR",
-            &Self::_12_KHR => "_12_KHR",
+            &Self::_8_KHR => "8_KHR",
+            &Self::_10_KHR => "10_KHR",
+            &Self::_12_KHR => "12_KHR",
             _ => "(unknown variant)",
         })
     }

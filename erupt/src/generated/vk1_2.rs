@@ -265,7 +265,7 @@ pub struct ShaderFloatControlsIndependence(pub i32);
 impl std::fmt::Debug for ShaderFloatControlsIndependence {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(match self {
-            &Self::_32_ONLY => "_32_ONLY",
+            &Self::_32_ONLY => "32_ONLY",
             &Self::ALL => "ALL",
             &Self::NONE => "NONE",
             _ => "(unknown variant)",

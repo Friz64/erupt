@@ -460,13 +460,13 @@ impl Enum {
             .filter(|variant| matches!(variant.kind, EnumVariantKind::Value(_)))
             .collect();
         let variant_idents = variants.iter().map(|variant| variant.name.ident());
-        let variant_names = variants.iter().map(|variant| &variant.name.variant);
+        let variants_unsanitized = variants.iter().map(|variant| &variant.name.unsanitized);
 
         quote! {
             impl std::fmt::Debug for #enum_ident {
                 fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
                     f.write_str(match self {
-                        #(&Self::#variant_idents => #variant_names,)*
+                        #(&Self::#variant_idents => #variants_unsanitized,)*
                         _ => "(unknown variant)",
                     })
                 }

@@ -244,6 +244,8 @@ pub struct EnumVariantName {
     /// `original`, with trimmed VK_ prefix and removed BIT part
     pub trimmed: Box<str>,
     /// Just the enum variant, without the variant's enum type name
+    pub unsanitized: Box<str>,
+    /// Just the enum variant, sanitized to be a valid Rust identifier
     pub variant: Box<str>,
     /// True if the enum variant properly contains the enum type
     pub prefix_compliant: bool,
@@ -277,16 +279,17 @@ impl EnumVariantName {
             warn!("{:?} (from {:?}) is not prefix compliant", src, enum_type);
         }
 
-        let mut variant = trimmed
+        let unsanitized = trimmed
             .trim_start_matches(&enum_type_prefix)
             .trim_start_matches('_')
             .to_uppercase();
+        assert_ne!(unsanitized.len(), 0);
 
-        if variant.contains("MAX_ENUM") || variant.contains("FLAGS_MAX_ENUM") {
+        if unsanitized.contains("MAX_ENUM") || unsanitized.contains("FLAGS_MAX_ENUM") {
             return Err(NotApplicable);
         }
 
-        assert_ne!(variant.len(), 0);
+        let mut variant = unsanitized.clone();
         if variant.chars().next().unwrap().is_ascii_digit() {
             variant.insert(0, '_');
         }
@@ -295,6 +298,7 @@ impl EnumVariantName {
             enum_type: enum_type.clone(),
             original: src.into(),
             trimmed: trimmed.into(),
+            unsanitized: unsanitized.into(),
             variant: variant.into(),
             prefix_compliant,
         })

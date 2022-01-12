@@ -309,7 +309,9 @@ pub enum LoaderError {
 impl Display for LoaderError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            LoaderError::VulkanError(_) => write!(f, "a Vulkan function returned a negative `Result` value"),
+            LoaderError::VulkanError(_) => {
+                write!(f, "a Vulkan function returned a negative `Result` value")
+            }
             LoaderError::SymbolNotAvailable => {
                 write!(f, "a symbol was not available while it should have been")
             }
@@ -328,8 +330,15 @@ impl Error for LoaderError {
 
 impl<T> CustomEntryLoader<T> {
     /// Creates a entry loader with a custom library used for loading.
-    pub unsafe fn with_library(mut library: T, mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Result<Self, LoaderError> {
-        Ok(EntryEnabled::new(&mut library, &mut symbol).and_then(|entry_enabled| CustomEntryLoader::custom(library, &mut symbol, entry_enabled))?)
+    pub unsafe fn with_library(
+        mut library: T,
+        mut symbol: impl FnMut(&mut T, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>,
+    ) -> Result<Self, LoaderError> {
+        Ok(
+            EntryEnabled::new(&mut library, &mut symbol).and_then(|entry_enabled| {
+                CustomEntryLoader::custom(library, &mut symbol, entry_enabled)
+            })?,
+        )
     }
 
     /// Access enabled requirements of this entry loader.
@@ -359,29 +368,59 @@ impl<T> Debug for CustomEntryLoader<T> {
 
 /// Builder for an instance loader.
 pub struct InstanceLoaderBuilder<'a> {
-    create_instance_fn: Option<Box<dyn FnOnce(&vk1_0::InstanceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Instance>>>,
-    symbol_fn: Option<&'a mut dyn FnMut(vk1_0::Instance, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
+    create_instance_fn: Option<
+        Box<
+            dyn FnOnce(
+                &vk1_0::InstanceCreateInfo,
+                Option<&vk1_0::AllocationCallbacks>,
+            ) -> utils::VulkanResult<vk1_0::Instance>,
+        >,
+    >,
+    symbol_fn: Option<
+        &'a mut dyn FnMut(
+            vk1_0::Instance,
+            *const std::os::raw::c_char,
+        ) -> Option<vk1_0::PFN_vkVoidFunction>,
+    >,
     allocation_callbacks: Option<&'a vk1_0::AllocationCallbacks>,
 }
 
 impl<'a> InstanceLoaderBuilder<'a> {
     /// Create a new instance loader builder.
     pub fn new() -> Self {
-        InstanceLoaderBuilder { create_instance_fn: None, symbol_fn: None, allocation_callbacks: None }
+        InstanceLoaderBuilder {
+            create_instance_fn: None,
+            symbol_fn: None,
+            allocation_callbacks: None,
+        }
     }
 
     /// Specify a custom instance creation function, to use in place of the
     /// default.
     ///
     /// This may be useful when creating the instance using e.g. OpenXR.
-    pub fn create_instance_fn(mut self, create_instance: Box<dyn FnOnce(&vk1_0::InstanceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Instance>>) -> Self {
+    pub fn create_instance_fn(
+        mut self,
+        create_instance: Box<
+            dyn FnOnce(
+                &vk1_0::InstanceCreateInfo,
+                Option<&vk1_0::AllocationCallbacks>,
+            ) -> utils::VulkanResult<vk1_0::Instance>,
+        >,
+    ) -> Self {
         self.create_instance_fn = Some(create_instance);
         self
     }
 
     /// Specify a custom symbol function, called to get instance function
     /// pointers, to use in place of the default.
-    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(vk1_0::Instance, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
+    pub fn symbol_fn(
+        mut self,
+        symbol: &'a mut impl FnMut(
+            vk1_0::Instance,
+            *const std::os::raw::c_char,
+        ) -> Option<vk1_0::PFN_vkVoidFunction>,
+    ) -> Self {
         self.symbol_fn = Some(symbol);
         self
     }
@@ -393,7 +432,11 @@ impl<'a> InstanceLoaderBuilder<'a> {
     }
 
     /// Create an instance loader.
-    pub unsafe fn build<T>(self, entry_loader: &'a CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo) -> Result<InstanceLoader, LoaderError> {
+    pub unsafe fn build<T>(
+        self,
+        entry_loader: &'a CustomEntryLoader<T>,
+        create_info: &vk1_0::InstanceCreateInfo,
+    ) -> Result<InstanceLoader, LoaderError> {
         let instance = match self.create_instance_fn {
             Some(create_instance) => create_instance(create_info, self.allocation_callbacks),
             None => entry_loader.create_instance(create_info, self.allocation_callbacks),
@@ -409,21 +452,34 @@ impl<'a> InstanceLoaderBuilder<'a> {
             }
         }
 
-        let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
-        let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
+        let enabled_extensions = std::slice::from_raw_parts(
+            create_info.pp_enabled_extension_names,
+            create_info.enabled_extension_count as _,
+        );
+        let enabled_extensions: Vec<_> = enabled_extensions
+            .iter()
+            .map(|&ptr| CStr::from_ptr(ptr))
+            .collect();
 
         let mut default_symbol = move |name| (entry_loader.get_instance_proc_addr)(instance, name);
-        let mut symbol: &mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction> = &mut default_symbol;
+        let mut symbol: &mut dyn FnMut(
+            *const std::os::raw::c_char,
+        ) -> Option<vk1_0::PFN_vkVoidFunction> = &mut default_symbol;
         let mut user_symbol;
         if let Some(internal_symbol) = self.symbol_fn {
             user_symbol = move |name| internal_symbol(instance, name);
             symbol = &mut user_symbol;
         }
 
-        let all_physical_device_extension_properties = all_physical_device_extension_properties(&mut symbol, instance)?;
-        let available_device_extensions: Vec<_> = all_physical_device_extension_properties.iter().map(|properties| CStr::from_ptr(properties.extension_name.as_ptr())).collect();
+        let all_physical_device_extension_properties =
+            all_physical_device_extension_properties(&mut symbol, instance)?;
+        let available_device_extensions: Vec<_> = all_physical_device_extension_properties
+            .iter()
+            .map(|properties| CStr::from_ptr(properties.extension_name.as_ptr()))
+            .collect();
 
-        let instance_enabled = InstanceEnabled::new(version, &enabled_extensions, &available_device_extensions)?;
+        let instance_enabled =
+            InstanceEnabled::new(version, &enabled_extensions, &available_device_extensions)?;
         InstanceLoader::custom(entry_loader, instance, instance_enabled, symbol)
     }
 }
@@ -433,7 +489,10 @@ impl InstanceLoader {
     ///
     /// For more advanced use cases, take a look at [`InstanceLoaderBuilder`].
     #[inline]
-    pub unsafe fn new<T>(entry_loader: &CustomEntryLoader<T>, create_info: &vk1_0::InstanceCreateInfo) -> Result<InstanceLoader, LoaderError> {
+    pub unsafe fn new<T>(
+        entry_loader: &CustomEntryLoader<T>,
+        create_info: &vk1_0::InstanceCreateInfo,
+    ) -> Result<InstanceLoader, LoaderError> {
         InstanceLoaderBuilder::new().build(entry_loader, create_info)
     }
 
@@ -456,9 +515,18 @@ impl Drop for InstanceLoader {
 // Vulkan spec: An "available device extension" is a device extension supported
 // by any physical device enumerated by instance.
 // https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetInstanceProcAddr.html#_description
-unsafe fn all_physical_device_extension_properties(symbol: &mut impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>, instance: vk1_0::Instance) -> Result<Vec<vk1_0::ExtensionProperties>, LoaderError> {
-    let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(symbol(vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES).ok_or(LoaderError::SymbolNotAvailable)?);
-    let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties = mem::transmute(symbol(vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES).ok_or(LoaderError::SymbolNotAvailable)?);
+unsafe fn all_physical_device_extension_properties(
+    symbol: &mut impl FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>,
+    instance: vk1_0::Instance,
+) -> Result<Vec<vk1_0::ExtensionProperties>, LoaderError> {
+    let enumerate_physical_devices: vk1_0::PFN_vkEnumeratePhysicalDevices = mem::transmute(
+        symbol(vk1_0::FN_ENUMERATE_PHYSICAL_DEVICES).ok_or(LoaderError::SymbolNotAvailable)?,
+    );
+    let enumerate_device_extension_properties: vk1_0::PFN_vkEnumerateDeviceExtensionProperties =
+        mem::transmute(
+            symbol(vk1_0::FN_ENUMERATE_DEVICE_EXTENSION_PROPERTIES)
+                .ok_or(LoaderError::SymbolNotAvailable)?,
+        );
 
     let mut physical_device_count = 0;
     let result = enumerate_physical_devices(instance, &mut physical_device_count, ptr::null_mut());
@@ -467,7 +535,11 @@ unsafe fn all_physical_device_extension_properties(symbol: &mut impl FnMut(*cons
     }
 
     let mut physical_devices = vec![Default::default(); physical_device_count as usize];
-    let result = enumerate_physical_devices(instance, &mut physical_device_count, physical_devices.as_mut_ptr());
+    let result = enumerate_physical_devices(
+        instance,
+        &mut physical_device_count,
+        physical_devices.as_mut_ptr(),
+    );
     if result.0 < 0 {
         return Err(LoaderError::VulkanError(result));
     }
@@ -475,13 +547,23 @@ unsafe fn all_physical_device_extension_properties(symbol: &mut impl FnMut(*cons
     let mut all_physical_device_extension_properties = Vec::new();
     for physical_device in physical_devices {
         let mut property_count = 0;
-        let result = enumerate_device_extension_properties(physical_device, ptr::null(), &mut property_count, ptr::null_mut());
+        let result = enumerate_device_extension_properties(
+            physical_device,
+            ptr::null(),
+            &mut property_count,
+            ptr::null_mut(),
+        );
         if result.0 < 0 {
             return Err(LoaderError::VulkanError(result));
         }
 
         let mut properties = vec![Default::default(); property_count as usize];
-        let result = enumerate_device_extension_properties(physical_device, ptr::null(), &mut property_count, properties.as_mut_ptr());
+        let result = enumerate_device_extension_properties(
+            physical_device,
+            ptr::null(),
+            &mut property_count,
+            properties.as_mut_ptr(),
+        );
         if result.0 < 0 {
             return Err(LoaderError::VulkanError(result));
         }
@@ -500,29 +582,61 @@ impl Debug for InstanceLoader {
 
 /// Builder for an device loader.
 pub struct DeviceLoaderBuilder<'a> {
-    create_device_fn: Option<Box<dyn FnOnce(vk1_0::PhysicalDevice, &vk1_0::DeviceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Device>>>,
-    symbol_fn: Option<&'a mut dyn FnMut(vk1_0::Device, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>>,
+    create_device_fn: Option<
+        Box<
+            dyn FnOnce(
+                vk1_0::PhysicalDevice,
+                &vk1_0::DeviceCreateInfo,
+                Option<&vk1_0::AllocationCallbacks>,
+            ) -> utils::VulkanResult<vk1_0::Device>,
+        >,
+    >,
+    symbol_fn: Option<
+        &'a mut dyn FnMut(
+            vk1_0::Device,
+            *const std::os::raw::c_char,
+        ) -> Option<vk1_0::PFN_vkVoidFunction>,
+    >,
     allocation_callbacks: Option<&'a vk1_0::AllocationCallbacks>,
 }
 
 impl<'a> DeviceLoaderBuilder<'a> {
     /// Create a new instance loader builder.
     pub fn new() -> Self {
-        DeviceLoaderBuilder { create_device_fn: None, symbol_fn: None, allocation_callbacks: None }
+        DeviceLoaderBuilder {
+            create_device_fn: None,
+            symbol_fn: None,
+            allocation_callbacks: None,
+        }
     }
 
     /// Specify a custom device creation function, to use in place of the
     /// default.
     ///
     /// This may be useful when creating the device using e.g. OpenXR.
-    pub fn create_device_fn(mut self, create_device: Box<dyn FnOnce(vk1_0::PhysicalDevice, &vk1_0::DeviceCreateInfo, Option<&vk1_0::AllocationCallbacks>) -> utils::VulkanResult<vk1_0::Device>>) -> Self {
+    pub fn create_device_fn(
+        mut self,
+        create_device: Box<
+            dyn FnOnce(
+                vk1_0::PhysicalDevice,
+                &vk1_0::DeviceCreateInfo,
+                Option<&vk1_0::AllocationCallbacks>,
+            ) -> utils::VulkanResult<vk1_0::Device>,
+        >,
+    ) -> Self {
         self.create_device_fn = Some(create_device);
         self
     }
 
     /// Specify a custom symbol function, called to get device function
     /// pointers, to use in place of the default.
-    pub fn symbol_fn(mut self, symbol: &'a mut impl FnMut(vk1_0::Device, *const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction>) -> Self {
+    pub fn symbol_fn(
+        mut self,
+        symbol: &'a mut impl FnMut(
+            vk1_0::Device,
+            *const std::os::raw::c_char,
+        ) -> Option<vk1_0::PFN_vkVoidFunction>,
+    ) -> Self {
         self.symbol_fn = Some(symbol);
         self
     }
@@ -535,15 +649,28 @@ impl<'a> DeviceLoaderBuilder<'a> {
 
     /// Build the device loader. Ensure `create_info` is the same as used in the
     /// creation of `device`.
-    pub unsafe fn build_with_existing_device(self, instance_loader: &'a InstanceLoader, device: vk1_0::Device, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
+    pub unsafe fn build_with_existing_device(
+        self,
+        instance_loader: &'a InstanceLoader,
+        device: vk1_0::Device,
+        create_info: &vk1_0::DeviceCreateInfo,
+    ) -> Result<DeviceLoader, LoaderError> {
         let device_enabled = {
-            let enabled_extensions = std::slice::from_raw_parts(create_info.pp_enabled_extension_names, create_info.enabled_extension_count as _);
-            let enabled_extensions: Vec<_> = enabled_extensions.iter().map(|&ptr| CStr::from_ptr(ptr)).collect();
+            let enabled_extensions = std::slice::from_raw_parts(
+                create_info.pp_enabled_extension_names,
+                create_info.enabled_extension_count as _,
+            );
+            let enabled_extensions: Vec<_> = enabled_extensions
+                .iter()
+                .map(|&ptr| CStr::from_ptr(ptr))
+                .collect();
             DeviceEnabled::new(&enabled_extensions)
         };
 
         let mut default_symbol = move |name| (instance_loader.get_device_proc_addr)(device, name);
-        let mut symbol: &mut dyn FnMut(*const std::os::raw::c_char) -> Option<vk1_0::PFN_vkVoidFunction> = &mut default_symbol;
+        let mut symbol: &mut dyn FnMut(
+            *const std::os::raw::c_char,
+        ) -> Option<vk1_0::PFN_vkVoidFunction> = &mut default_symbol;
         let mut user_symbol;
         if let Some(internal_symbol) = self.symbol_fn {
             user_symbol = move |name| internal_symbol(device, name);
@@ -555,10 +682,21 @@ impl<'a> DeviceLoaderBuilder<'a> {
 
     /// Build the device loader. If you want to entirely create the device
     /// yourself, use [`DeviceLoaderBuilder::build_with_existing_device`].
-    pub unsafe fn build(mut self, instance_loader: &'a InstanceLoader, physical_device: vk1_0::PhysicalDevice, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
+    pub unsafe fn build(
+        mut self,
+        instance_loader: &'a InstanceLoader,
+        physical_device: vk1_0::PhysicalDevice,
+        create_info: &vk1_0::DeviceCreateInfo,
+    ) -> Result<DeviceLoader, LoaderError> {
         let device = match self.create_device_fn.take() {
-            Some(create_device) => create_device(physical_device, create_info, self.allocation_callbacks),
-            None => instance_loader.create_device(physical_device, create_info, self.allocation_callbacks),
+            Some(create_device) => {
+                create_device(physical_device, create_info, self.allocation_callbacks)
+            }
+            None => instance_loader.create_device(
+                physical_device,
+                create_info,
+                self.allocation_callbacks,
+            ),
         };
 
         let device = device.result().map_err(LoaderError::VulkanError)?;
@@ -571,7 +709,11 @@ impl DeviceLoader {
     ///
     /// For more advanced use cases, take a look at [`DeviceLoaderBuilder`].
     #[inline]
-    pub unsafe fn new(instance_loader: &InstanceLoader, physical_device: vk1_0::PhysicalDevice, create_info: &vk1_0::DeviceCreateInfo) -> Result<DeviceLoader, LoaderError> {
+    pub unsafe fn new(
+        instance_loader: &InstanceLoader,
+        physical_device: vk1_0::PhysicalDevice,
+        create_info: &vk1_0::DeviceCreateInfo,
+    ) -> Result<DeviceLoader, LoaderError> {
         DeviceLoaderBuilder::new().build(instance_loader, physical_device, create_info)
     }
 
@@ -623,7 +765,10 @@ pub trait ExtendableFrom<'a, T> {
 
 // safety: assumes all pointers in the pointer chain are valid
 #[inline]
-unsafe fn insert_ptr_chain(mut host: *mut vk1_0::BaseOutStructure, mut addition: *mut vk1_0::BaseOutStructure) {
+unsafe fn insert_ptr_chain(
+    mut host: *mut vk1_0::BaseOutStructure,
+    mut addition: *mut vk1_0::BaseOutStructure,
+) {
     let addition_head = addition;
     let addition_end = loop {
         let p_next = (*addition).p_next;
@@ -645,7 +790,9 @@ mod tests {
     use std::{iter, ptr};
 
     // safety: assumes all pointers in the pointer chain are valid
-    unsafe fn iterate_ptr_chain(mut item: *mut vk::BaseOutStructure) -> impl Iterator<Item = *mut vk::BaseOutStructure> {
+    unsafe fn iterate_ptr_chain(
+        mut item: *mut vk::BaseOutStructure,
+    ) -> impl Iterator<Item = *mut vk::BaseOutStructure> {
         iter::from_fn(move || unsafe {
             if item.is_null() {
                 None
@@ -660,11 +807,20 @@ mod tests {
     #[test]
     fn ptr_chain_simple() {
         // s1 -> s2 -> s3 -> (null)
-        let mut s1 = vk::BaseOutStructure { s_type: vk::StructureType(1), p_next: ptr::null_mut() };
+        let mut s1 = vk::BaseOutStructure {
+            s_type: vk::StructureType(1),
+            p_next: ptr::null_mut(),
+        };
         let s1 = ptr::addr_of_mut!(s1);
-        let mut s2 = vk::BaseOutStructure { s_type: vk::StructureType(2), p_next: ptr::null_mut() };
+        let mut s2 = vk::BaseOutStructure {
+            s_type: vk::StructureType(2),
+            p_next: ptr::null_mut(),
+        };
         let s2 = ptr::addr_of_mut!(s2);
-        let mut s3 = vk::BaseOutStructure { s_type: vk::StructureType(3), p_next: ptr::null_mut() };
+        let mut s3 = vk::BaseOutStructure {
+            s_type: vk::StructureType(3),
+            p_next: ptr::null_mut(),
+        };
         let s3 = ptr::addr_of_mut!(s3);
         unsafe {
             (*s1).p_next = s2;
@@ -672,13 +828,22 @@ mod tests {
         }
 
         // s4 -> (null)
-        let mut s4 = vk::BaseOutStructure { s_type: vk::StructureType(4), p_next: ptr::null_mut() };
+        let mut s4 = vk::BaseOutStructure {
+            s_type: vk::StructureType(4),
+            p_next: ptr::null_mut(),
+        };
         let s4 = ptr::addr_of_mut!(s4);
         // s5 -> (null)
-        let mut s5 = vk::BaseOutStructure { s_type: vk::StructureType(5), p_next: ptr::null_mut() };
+        let mut s5 = vk::BaseOutStructure {
+            s_type: vk::StructureType(5),
+            p_next: ptr::null_mut(),
+        };
         let s5 = ptr::addr_of_mut!(s5);
         // s6 -> (null)
-        let mut s6 = vk::BaseOutStructure { s_type: vk::StructureType(6), p_next: ptr::null_mut() };
+        let mut s6 = vk::BaseOutStructure {
+            s_type: vk::StructureType(6),
+            p_next: ptr::null_mut(),
+        };
         let s6 = ptr::addr_of_mut!(s6);
 
         // s1 -> s6 -> s5 -> s4 -> s2 -> s3 -> (null)
@@ -701,11 +866,20 @@ mod tests {
     #[test]
     fn ptr_chain_addition_chain() {
         // s1 -> s2 -> s3 -> (null)
-        let mut s1 = vk::BaseOutStructure { s_type: vk::StructureType(1), p_next: ptr::null_mut() };
+        let mut s1 = vk::BaseOutStructure {
+            s_type: vk::StructureType(1),
+            p_next: ptr::null_mut(),
+        };
         let s1 = ptr::addr_of_mut!(s1);
-        let mut s2 = vk::BaseOutStructure { s_type: vk::StructureType(2), p_next: ptr::null_mut() };
+        let mut s2 = vk::BaseOutStructure {
+            s_type: vk::StructureType(2),
+            p_next: ptr::null_mut(),
+        };
         let s2 = ptr::addr_of_mut!(s2);
-        let mut s3 = vk::BaseOutStructure { s_type: vk::StructureType(3), p_next: ptr::null_mut() };
+        let mut s3 = vk::BaseOutStructure {
+            s_type: vk::StructureType(3),
+            p_next: ptr::null_mut(),
+        };
         let s3 = ptr::addr_of_mut!(s3);
         unsafe {
             (*s1).p_next = s2;
@@ -713,11 +887,20 @@ mod tests {
         }
 
         // s4 -> s5 -> s6 -> (null)
-        let mut s4 = vk::BaseOutStructure { s_type: vk::StructureType(4), p_next: ptr::null_mut() };
+        let mut s4 = vk::BaseOutStructure {
+            s_type: vk::StructureType(4),
+            p_next: ptr::null_mut(),
+        };
         let s4 = ptr::addr_of_mut!(s4);
-        let mut s5 = vk::BaseOutStructure { s_type: vk::StructureType(5), p_next: ptr::null_mut() };
+        let mut s5 = vk::BaseOutStructure {
+            s_type: vk::StructureType(5),
+            p_next: ptr::null_mut(),
+        };
         let s5 = ptr::addr_of_mut!(s5);
-        let mut s6 = vk::BaseOutStructure { s_type: vk::StructureType(6), p_next: ptr::null_mut() };
+        let mut s6 = vk::BaseOutStructure {
+            s_type: vk::StructureType(6),
+            p_next: ptr::null_mut(),
+        };
         let s6 = ptr::addr_of_mut!(s6);
         unsafe {
             (*s4).p_next = s5;
@@ -743,13 +926,24 @@ mod tests {
     fn ptr_chain_real_world() {
         let mut vk1_1features = vk::PhysicalDeviceVulkan11FeaturesBuilder::new();
         let mut vk1_2features = vk::PhysicalDeviceVulkan12FeaturesBuilder::new();
-        let mut features = vk::PhysicalDeviceFeatures2Builder::new().extend_from(&mut vk1_1features).extend_from(&mut vk1_2features);
+        let mut features = vk::PhysicalDeviceFeatures2Builder::new()
+            .extend_from(&mut vk1_1features)
+            .extend_from(&mut vk1_2features);
 
         let base_ptr = ptr::addr_of_mut!(features) as *mut vk::BaseOutStructure;
         let mut iter = unsafe { iterate_ptr_chain(base_ptr) }.map(|item| unsafe { (*item).s_type });
-        assert_eq!(iter.next(), Some(vk::StructureType::PHYSICAL_DEVICE_FEATURES_2));
-        assert_eq!(iter.next(), Some(vk::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES));
-        assert_eq!(iter.next(), Some(vk::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES));
+        assert_eq!(
+            iter.next(),
+            Some(vk::StructureType::PHYSICAL_DEVICE_FEATURES_2)
+        );
+        assert_eq!(
+            iter.next(),
+            Some(vk::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES)
+        );
+        assert_eq!(
+            iter.next(),
+            Some(vk::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES)
+        );
         assert_eq!(iter.next(), None);
     }
 }

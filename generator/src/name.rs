@@ -2,7 +2,7 @@ use crate::{
     items::enums::EnumKind,
     source::{NotApplicable, Source},
 };
-use heck::{ShoutySnakeCase, SnakeCase};
+use heck::{ToShoutySnakeCase, ToSnakeCase};
 use log::warn;
 use proc_macro2::{Ident, TokenStream};
 use quote::{format_ident, quote};

@@ -21,7 +21,11 @@ impl<T> VulkanResult<T> {
     /// if the raw result is negative (Error).
     #[inline]
     pub fn new(raw: vk::Result, value: T) -> VulkanResult<T> {
-        let value = if raw.0.is_negative() { None } else { Some(value) };
+        let value = if raw.0.is_negative() {
+            None
+        } else {
+            Some(value)
+        };
 
         VulkanResult { raw, value }
     }
@@ -55,7 +59,10 @@ impl<T> VulkanResult<T> {
     /// Clones `self.raw`.
     #[inline]
     pub fn as_ref(&self) -> VulkanResult<&T> {
-        VulkanResult { raw: self.raw.clone(), value: self.value.as_ref() }
+        VulkanResult {
+            raw: self.raw.clone(),
+            value: self.value.as_ref(),
+        }
     }
 
     /// Converts from `&mut VulkanResult<T>` to `VulkanResult<&mut T>`.
@@ -63,7 +70,10 @@ impl<T> VulkanResult<T> {
     /// Clones `self.raw`.
     #[inline]
     pub fn as_mut(&mut self) -> VulkanResult<&mut T> {
-        VulkanResult { raw: self.raw.clone(), value: self.value.as_mut() }
+        VulkanResult {
+            raw: self.raw.clone(),
+            value: self.value.as_mut(),
+        }
     }
 
     /// Constructs a new `VulkanResult` from `value`.

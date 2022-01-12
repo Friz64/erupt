@@ -6,7 +6,7 @@ use crate::{
     source::Source,
     XmlNode,
 };
-use heck::ShoutySnakeCase;
+use heck::ToShoutySnakeCase;
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 use std::{

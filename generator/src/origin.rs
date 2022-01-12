@@ -41,7 +41,7 @@ const TYPES_SKIPPED: &[&str] = &[
     "VK_USE_64_BIT_PTR_DEFINES",
 ];
 
-#[derive(Clone, PartialEq, Hash, Eq)]
+#[derive(Clone, PartialEq, Hash, Eq, Ord, PartialOrd)]
 pub enum Origin {
     Root,
     Feature { major: u32, minor: u32 },

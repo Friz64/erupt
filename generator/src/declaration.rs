@@ -5,7 +5,7 @@ use crate::{
     name::{EnumVariantName, FunctionName, Name, TypeName},
     source::Source,
 };
-use heck::SnakeCase;
+use heck::ToSnakeCase;
 use once_cell::sync::Lazy;
 use proc_macro2::{Ident, Literal, TokenStream};
 use quote::{format_ident, quote};

@@ -13,10 +13,16 @@ const SPV_MAGIC_NUMBER_BE: u32 = SPV_MAGIC_NUMBER_LE.swap_bytes();
 /// endianness, which is also accounted for with this function.
 pub fn decode_spv(bytes: &[u8]) -> io::Result<Vec<u32>> {
     if bytes.len() % 4 != 0 {
-        return Err(io::Error::new(io::ErrorKind::InvalidData, "`bytes` is not 4-byte aligned"));
+        return Err(io::Error::new(
+            io::ErrorKind::InvalidData,
+            "`bytes` is not 4-byte aligned",
+        ));
     }
 
-    let mut words: Vec<_> = bytes.chunks(4).map(|word| u32::from_le_bytes(word.try_into().unwrap())).collect();
+    let mut words: Vec<_> = bytes
+        .chunks(4)
+        .map(|word| u32::from_le_bytes(word.try_into().unwrap()))
+        .collect();
 
     match words.get(0) {
         Some(&SPV_MAGIC_NUMBER_LE) => (),
@@ -25,7 +31,12 @@ pub fn decode_spv(bytes: &[u8]) -> io::Result<Vec<u32>> {
                 *word = word.swap_bytes();
             }
         }
-        _ => return Err(io::Error::new(io::ErrorKind::InvalidData, "`bytes` is not valid SPIR-V data")),
+        _ => {
+            return Err(io::Error::new(
+                io::ErrorKind::InvalidData,
+                "`bytes` is not valid SPIR-V data",
+            ))
+        }
     }
 
     Ok(words)

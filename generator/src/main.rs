@@ -44,19 +44,6 @@ fn main() {
     codegen::generate(&source);
     log::info!("Code generation finished in {:.2?}", start.elapsed());
 
-    log::info!("Formatting output...");
-    let start = Instant::now();
-    let cmd = Command::new("cargo")
-        .current_dir("erupt/")
-        .args(&["+nightly", "fmt"])
-        .status()
-        .expect("Failed to run rustfmt");
-    log::info!("Output formatting finished in {:.2?}", start.elapsed());
-    if !cmd.success() {
-        log::error!("Output formatting failed");
-        return;
-    }
-
     log::info!("Checking output...");
     let start = Instant::now();
     let cmd = Command::new("cargo")

@@ -363,7 +363,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 _Initial Development_
 
 [Unreleased]: https://gitlab.com/Friz64/erupt/-/compare/v0.22.0+204...main
-[0.21.0+202]: https://gitlab.com/Friz64/erupt/-/compare/v0.21.0+190...v0.22.0+204
+[0.22.0+204]: https://gitlab.com/Friz64/erupt/-/compare/v0.21.0+202...v0.22.0+204
 [0.21.0+202]: https://gitlab.com/Friz64/erupt/-/compare/v0.20.0+190...v0.21.0+202
 [0.20.0+190]: https://gitlab.com/Friz64/erupt/-/compare/v0.19.0+182...v0.20.0+190
 [0.19.0+182]: https://gitlab.com/Friz64/erupt/-/compare/v0.18.0+174...v0.19.0+182

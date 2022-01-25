@@ -83,7 +83,7 @@ informational.
 
 ### Memory Allocation
 
-- [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc): Rust-native, used interally by `wgpu`
+- [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc): Rust-native, used internally by `wgpu`
 - [`vk-alloc`](https://github.com/hasenbanck/vk-alloc): Rust-native
 - [`vk-mem-erupt`](https://github.com/HindrikStegenga/vk-mem-rs): Bindings to the C++ Vulkan Memory Allocator (VMA) library
 

@@ -15,7 +15,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCorePropertiesAMD>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCorePropertiesAMDBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderCorePropertiesAMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -98,7 +98,7 @@ impl PhysicalDeviceShaderCorePropertiesAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Builder of [`PhysicalDeviceShaderCorePropertiesAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Builder of [`PhysicalDeviceShaderCorePropertiesAMD`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderCorePropertiesAMDBuilder<'a>(
     PhysicalDeviceShaderCorePropertiesAMD,

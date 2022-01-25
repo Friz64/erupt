@@ -15,7 +15,7 @@ pub const EXT_VIDEO_ENCODE_H265_EXTENSION_NAME: *const std::os::raw::c_char = cr
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH265CapabilityFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH265CapabilityFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265CapabilityFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265CapabilityFlagsEXT : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -44,7 +44,7 @@ impl std::fmt::Debug for VideoEncodeH265CapabilityFlagBitsEXT {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CreateFlagsEXT.html) · Bitmask of [`VideoEncodeH265CreateFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CreateFlagsEXT.html) · Bitmask of [`VideoEncodeH265CreateFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265CreateFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265CreateFlagsEXT : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -94,14 +94,14 @@ impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265InputModeFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265InputModeFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265InputModeFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265InputModeFlagsEXT : u32 { const
     FRAME_EXT = VideoEncodeH265InputModeFlagBitsEXT::FRAME_EXT.0; const SLICE_EXT =
     VideoEncodeH265InputModeFlagBitsEXT::SLICE_EXT.0; const NON_VCL_EXT =
     VideoEncodeH265InputModeFlagBitsEXT::NON_VCL_EXT.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265InputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265InputModeFlagsEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265InputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265InputModeFlagsEXT`]
 #[doc(alias = "VkVideoEncodeH265InputModeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -134,14 +134,14 @@ impl crate::extensions::ext_video_encode_h265::VideoEncodeH265InputModeFlagBitsE
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265OutputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265OutputModeFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265OutputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265OutputModeFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265OutputModeFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265OutputModeFlagsEXT : u32 { const
     FRAME_EXT = VideoEncodeH265OutputModeFlagBitsEXT::FRAME_EXT.0; const SLICE_EXT =
     VideoEncodeH265OutputModeFlagBitsEXT::SLICE_EXT.0; const NON_VCL_EXT =
     VideoEncodeH265OutputModeFlagBitsEXT::NON_VCL_EXT.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265OutputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265OutputModeFlagsEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265OutputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265OutputModeFlagsEXT`]
 #[doc(alias = "VkVideoEncodeH265OutputModeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -174,7 +174,7 @@ impl crate::extensions::ext_video_encode_h265::VideoEncodeH265OutputModeFlagBits
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CtbSizeFlagsEXT.html) · Bitmask of [`VideoEncodeH265CtbSizeFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CtbSizeFlagsEXT.html) · Bitmask of [`VideoEncodeH265CtbSizeFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265CtbSizeFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265CtbSizeFlagsEXT : u32 { const _8_EXT =
     VideoEncodeH265CtbSizeFlagBitsEXT::_8_EXT.0; const _16_EXT =
@@ -182,7 +182,7 @@ bitflags::bitflags! {
     VideoEncodeH265CtbSizeFlagBitsEXT::_32_EXT.0; const _64_EXT =
     VideoEncodeH265CtbSizeFlagBitsEXT::_64_EXT.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CtbSizeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265CtbSizeFlagsEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CtbSizeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265CtbSizeFlagsEXT`]
 #[doc(alias = "VkVideoEncodeH265CtbSizeFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -217,14 +217,14 @@ impl crate::extensions::ext_video_encode_h265::VideoEncodeH265CtbSizeFlagBitsEXT
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265RateControlStructureFlagsEXT.html) · Bitmask of [`VideoEncodeH265RateControlStructureFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlStructureFlagsEXT.html) · Bitmask of [`VideoEncodeH265RateControlStructureFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265RateControlStructureFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265RateControlStructureFlagsEXT : u32 {
     const UNKNOWN_EXT = VideoEncodeH265RateControlStructureFlagBitsEXT::UNKNOWN_EXT.0;
     const FLAT_EXT = VideoEncodeH265RateControlStructureFlagBitsEXT::FLAT_EXT.0; const
     DYADIC_EXT = VideoEncodeH265RateControlStructureFlagBitsEXT::DYADIC_EXT.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265RateControlStructureFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265RateControlStructureFlagsEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlStructureFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265RateControlStructureFlagsEXT`]
 #[doc(alias = "VkVideoEncodeH265RateControlStructureFlagBitsEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -317,7 +317,7 @@ impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265RateControlLayerInfoEXTBuilder
 for crate::extensions::khr_video_encode_queue::VideoEncodeRateControlLayerInfoKHRBuilder<
     'a,
 > {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CapabilitiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CapabilitiesEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265CapabilitiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -385,7 +385,7 @@ impl VideoEncodeH265CapabilitiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265CapabilitiesEXT.html) · Builder of [`VideoEncodeH265CapabilitiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CapabilitiesEXT.html) · Builder of [`VideoEncodeH265CapabilitiesEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265CapabilitiesEXTBuilder<'a>(
     VideoEncodeH265CapabilitiesEXT,
@@ -511,7 +511,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265CapabilitiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265SessionCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265SessionCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -552,7 +552,7 @@ impl VideoEncodeH265SessionCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265SessionCreateInfoEXT.html) · Builder of [`VideoEncodeH265SessionCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionCreateInfoEXT.html) · Builder of [`VideoEncodeH265SessionCreateInfoEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265SessionCreateInfoEXTBuilder<'a>(
     VideoEncodeH265SessionCreateInfoEXT,
@@ -612,7 +612,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265SessionCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265SessionParametersAddInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionParametersAddInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265SessionParametersAddInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -667,7 +667,7 @@ impl VideoEncodeH265SessionParametersAddInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265SessionParametersAddInfoEXT.html) · Builder of [`VideoEncodeH265SessionParametersAddInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionParametersAddInfoEXT.html) · Builder of [`VideoEncodeH265SessionParametersAddInfoEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265SessionParametersAddInfoEXTBuilder<'a>(
     VideoEncodeH265SessionParametersAddInfoEXT,
@@ -740,7 +740,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265SessionParametersAddInfoEXTBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265SessionParametersCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionParametersCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265SessionParametersCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -792,7 +792,7 @@ impl VideoEncodeH265SessionParametersCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265SessionParametersCreateInfoEXT.html) · Builder of [`VideoEncodeH265SessionParametersCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionParametersCreateInfoEXT.html) · Builder of [`VideoEncodeH265SessionParametersCreateInfoEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265SessionParametersCreateInfoEXTBuilder<'a>(
     VideoEncodeH265SessionParametersCreateInfoEXT,
@@ -863,7 +863,7 @@ for VideoEncodeH265SessionParametersCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265VclFrameInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265VclFrameInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265VclFrameInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -910,7 +910,7 @@ impl VideoEncodeH265VclFrameInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265VclFrameInfoEXT.html) · Builder of [`VideoEncodeH265VclFrameInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265VclFrameInfoEXT.html) · Builder of [`VideoEncodeH265VclFrameInfoEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265VclFrameInfoEXTBuilder<'a>(
     VideoEncodeH265VclFrameInfoEXT,
@@ -980,7 +980,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265VclFrameInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265EmitPictureParametersEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265EmitPictureParametersEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265EmitPictureParametersEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1033,7 +1033,7 @@ impl VideoEncodeH265EmitPictureParametersEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265EmitPictureParametersEXT.html) · Builder of [`VideoEncodeH265EmitPictureParametersEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265EmitPictureParametersEXT.html) · Builder of [`VideoEncodeH265EmitPictureParametersEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265EmitPictureParametersEXTBuilder<'a>(
     VideoEncodeH265EmitPictureParametersEXT,
@@ -1106,7 +1106,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265EmitPictureParametersEXTBuilder<'
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265NaluSliceEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265NaluSliceEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265NaluSliceEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1150,7 +1150,7 @@ impl VideoEncodeH265NaluSliceEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265NaluSliceEXT.html) · Builder of [`VideoEncodeH265NaluSliceEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265NaluSliceEXT.html) · Builder of [`VideoEncodeH265NaluSliceEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265NaluSliceEXTBuilder<'a>(
     VideoEncodeH265NaluSliceEXT,
@@ -1213,7 +1213,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265NaluSliceEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265RateControlInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265RateControlInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1263,7 +1263,7 @@ impl VideoEncodeH265RateControlInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265RateControlInfoEXT.html) · Builder of [`VideoEncodeH265RateControlInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlInfoEXT.html) · Builder of [`VideoEncodeH265RateControlInfoEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265RateControlInfoEXTBuilder<'a>(
     VideoEncodeH265RateControlInfoEXT,
@@ -1338,7 +1338,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265RateControlInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265QpEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265QpEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265QpEXT")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -1373,7 +1373,7 @@ impl VideoEncodeH265QpEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265QpEXT.html) · Builder of [`VideoEncodeH265QpEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265QpEXT.html) · Builder of [`VideoEncodeH265QpEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265QpEXTBuilder<'a>(
     VideoEncodeH265QpEXT,
@@ -1428,7 +1428,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265QpEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265FrameSizeEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265FrameSizeEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265FrameSizeEXT")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -1463,7 +1463,7 @@ impl VideoEncodeH265FrameSizeEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265FrameSizeEXT.html) · Builder of [`VideoEncodeH265FrameSizeEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265FrameSizeEXT.html) · Builder of [`VideoEncodeH265FrameSizeEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265FrameSizeEXTBuilder<'a>(
     VideoEncodeH265FrameSizeEXT,
@@ -1518,7 +1518,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265FrameSizeEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265RateControlLayerInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlLayerInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265RateControlLayerInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1580,7 +1580,7 @@ impl VideoEncodeH265RateControlLayerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265RateControlLayerInfoEXT.html) · Builder of [`VideoEncodeH265RateControlLayerInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlLayerInfoEXT.html) · Builder of [`VideoEncodeH265RateControlLayerInfoEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265RateControlLayerInfoEXTBuilder<'a>(
     VideoEncodeH265RateControlLayerInfoEXT,
@@ -1688,7 +1688,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265RateControlLayerInfoEXTBuilder<'a
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265ProfileEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265ProfileEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265ProfileEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1726,7 +1726,7 @@ impl VideoEncodeH265ProfileEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265ProfileEXT.html) · Builder of [`VideoEncodeH265ProfileEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265ProfileEXT.html) · Builder of [`VideoEncodeH265ProfileEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265ProfileEXTBuilder<'a>(
     VideoEncodeH265ProfileEXT,
@@ -1774,7 +1774,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265ProfileEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265DpbSlotInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265DpbSlotInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265DpbSlotInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1815,7 +1815,7 @@ impl VideoEncodeH265DpbSlotInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265DpbSlotInfoEXT.html) · Builder of [`VideoEncodeH265DpbSlotInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265DpbSlotInfoEXT.html) · Builder of [`VideoEncodeH265DpbSlotInfoEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265DpbSlotInfoEXTBuilder<'a>(
     VideoEncodeH265DpbSlotInfoEXT,
@@ -1872,7 +1872,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265DpbSlotInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265ReferenceListsEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265ReferenceListsEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265ReferenceListsEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1922,7 +1922,7 @@ impl VideoEncodeH265ReferenceListsEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEncodeH265ReferenceListsEXT.html) · Builder of [`VideoEncodeH265ReferenceListsEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265ReferenceListsEXT.html) · Builder of [`VideoEncodeH265ReferenceListsEXT`]
 #[repr(transparent)]
 pub struct VideoEncodeH265ReferenceListsEXTBuilder<'a>(
     VideoEncodeH265ReferenceListsEXT,

@@ -25,7 +25,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceComputeShaderDerivativesFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -77,7 +77,7 @@ impl PhysicalDeviceComputeShaderDerivativesFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Builder of [`PhysicalDeviceComputeShaderDerivativesFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceComputeShaderDerivativesFeaturesNV.html) · Builder of [`PhysicalDeviceComputeShaderDerivativesFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceComputeShaderDerivativesFeaturesNVBuilder<'a>(
     PhysicalDeviceComputeShaderDerivativesFeaturesNV,

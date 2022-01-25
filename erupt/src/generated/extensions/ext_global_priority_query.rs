@@ -10,214 +10,28 @@ pub const EXT_GLOBAL_PRIORITY_QUERY_SPEC_VERSION: u32 = 1;
 pub const EXT_GLOBAL_PRIORITY_QUERY_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_EXT_global_priority_query"
 );
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT.html) · Alias
+#[doc(alias = "VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT")]
+#[allow(non_camel_case_types)]
+pub type PhysicalDeviceGlobalPriorityQueryFeaturesEXT = crate::extensions::khr_global_priority::PhysicalDeviceGlobalPriorityQueryFeaturesKHR;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT.html) · Alias
+#[doc(alias = "VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT")]
+#[allow(non_camel_case_types)]
+pub type PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> = crate::extensions::khr_global_priority::PhysicalDeviceGlobalPriorityQueryFeaturesKHRBuilder<
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyGlobalPriorityPropertiesEXT.html) · Alias
+#[doc(alias = "VkQueueFamilyGlobalPriorityPropertiesEXT")]
+#[allow(non_camel_case_types)]
+pub type QueueFamilyGlobalPriorityPropertiesEXT = crate::extensions::khr_global_priority::QueueFamilyGlobalPriorityPropertiesKHR;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyGlobalPriorityPropertiesEXT.html) · Alias
+#[doc(alias = "VkQueueFamilyGlobalPriorityPropertiesEXT")]
+#[allow(non_camel_case_types)]
+pub type QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> = crate::extensions::khr_global_priority::QueueFamilyGlobalPriorityPropertiesKHRBuilder<
+    'a,
+>;
 ///Provided by [`crate::extensions::ext_global_priority_query`]
 impl crate::vk1_0::StructureType {
-    pub const PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT: Self = Self(
-        1000388000,
-    );
-    pub const QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT: Self = Self(1000388001);
-}
-impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXT>
-for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<
-    'a,
-> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'_>>
-for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXT>
-for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<
-    'a,
-> crate::ExtendableFrom<'a, PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'_>>
-for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, QueueFamilyGlobalPriorityPropertiesEXT>
-for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, QueueFamilyGlobalPriorityPropertiesEXTBuilder<'_>>
-for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT.html) · Structure
-#[doc(alias = "VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT")]
-#[derive(Copy, Clone, )]
-#[repr(C)]
-pub struct PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
-    pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *mut std::ffi::c_void,
-    pub global_priority_query: crate::vk1_0::Bool32,
-}
-impl PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
-    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT;
-}
-impl Default for PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
-    fn default() -> Self {
-        Self {
-            s_type: Self::STRUCTURE_TYPE,
-            p_next: std::ptr::null_mut(),
-            global_priority_query: Default::default(),
-        }
-    }
-}
-impl std::fmt::Debug for PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceGlobalPriorityQueryFeaturesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("global_priority_query", &(self.global_priority_query != 0))
-            .finish()
-    }
-}
-impl PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
-    #[inline]
-    pub fn into_builder<'a>(
-        self,
-    ) -> PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-        PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder(
-            self,
-            std::marker::PhantomData,
-        )
-    }
-}
-#[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGlobalPriorityQueryFeaturesEXT.html) · Builder of [`PhysicalDeviceGlobalPriorityQueryFeaturesEXT`]
-#[repr(transparent)]
-pub struct PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a>(
-    PhysicalDeviceGlobalPriorityQueryFeaturesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-    #[inline]
-    pub fn new() -> PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-        PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
-    }
-    #[inline]
-    #[must_use]
-    pub fn global_priority_query(mut self, global_priority_query: bool) -> Self {
-        self.0.global_priority_query = global_priority_query as _;
-        self
-    }
-    #[inline]
-    /// Discards all lifetime information.
-    /// Use the `Deref` and `DerefMut` implementations if possible.
-    pub fn build_dangling(self) -> PhysicalDeviceGlobalPriorityQueryFeaturesEXT {
-        self.0
-    }
-}
-impl<'a> std::default::Default
-for PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-    fn default() -> PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-        Self::new()
-    }
-}
-impl<'a> std::fmt::Debug for PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, f)
-    }
-}
-impl<'a> std::ops::Deref for PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-    type Target = PhysicalDeviceGlobalPriorityQueryFeaturesEXT;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for PhysicalDeviceGlobalPriorityQueryFeaturesEXTBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyGlobalPriorityPropertiesEXT.html) · Structure
-#[doc(alias = "VkQueueFamilyGlobalPriorityPropertiesEXT")]
-#[derive(Copy, Clone, )]
-#[repr(C)]
-pub struct QueueFamilyGlobalPriorityPropertiesEXT {
-    pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *mut std::ffi::c_void,
-    pub priority_count: u32,
-    pub priorities: [crate::extensions::ext_global_priority::QueueGlobalPriorityEXT; 16],
-}
-impl QueueFamilyGlobalPriorityPropertiesEXT {
-    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT;
-}
-impl Default for QueueFamilyGlobalPriorityPropertiesEXT {
-    fn default() -> Self {
-        Self {
-            s_type: Self::STRUCTURE_TYPE,
-            p_next: std::ptr::null_mut(),
-            priority_count: Default::default(),
-            priorities: unsafe { std::mem::zeroed() },
-        }
-    }
-}
-impl std::fmt::Debug for QueueFamilyGlobalPriorityPropertiesEXT {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueueFamilyGlobalPriorityPropertiesEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("priority_count", &self.priority_count)
-            .field("priorities", &self.priorities)
-            .finish()
-    }
-}
-impl QueueFamilyGlobalPriorityPropertiesEXT {
-    #[inline]
-    pub fn into_builder<'a>(self) -> QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-        QueueFamilyGlobalPriorityPropertiesEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-#[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyGlobalPriorityPropertiesEXT.html) · Builder of [`QueueFamilyGlobalPriorityPropertiesEXT`]
-#[repr(transparent)]
-pub struct QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a>(
-    QueueFamilyGlobalPriorityPropertiesEXT,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-    #[inline]
-    pub fn new() -> QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-        QueueFamilyGlobalPriorityPropertiesEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
-    }
-    #[inline]
-    #[must_use]
-    pub fn priorities(
-        mut self,
-        priorities: &'a [crate::extensions::ext_global_priority::QueueGlobalPriorityEXT],
-    ) -> Self {
-        let mut priorities_array = [Default::default(); 16];
-        let truncated_len = priorities.len().min(priorities_array.len());
-        priorities_array[..truncated_len].copy_from_slice(&priorities[..truncated_len]);
-        self.0.priority_count = truncated_len as _;
-        self.0.priorities = priorities_array;
-        self
-    }
-    #[inline]
-    /// Discards all lifetime information.
-    /// Use the `Deref` and `DerefMut` implementations if possible.
-    pub fn build_dangling(self) -> QueueFamilyGlobalPriorityPropertiesEXT {
-        self.0
-    }
-}
-impl<'a> std::default::Default for QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-    fn default() -> QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-        Self::new()
-    }
-}
-impl<'a> std::fmt::Debug for QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, f)
-    }
-}
-impl<'a> std::ops::Deref for QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-    type Target = QueueFamilyGlobalPriorityPropertiesEXT;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for QueueFamilyGlobalPriorityPropertiesEXTBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
+    pub const PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_EXT: Self = Self::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_KHR;
+    pub const QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_EXT: Self = Self::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_KHR;
 }

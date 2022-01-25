@@ -9,13 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Vulkan 1.3 support
 - Add `DeviceLoaderBuilder::build_with_existing_device`.
 - Add `#[must_use]` attribute to builder methods
 
 ### Changed
 
 - Only use `build_dangling` for structs which directly have pointers
-- Update Vulkan Headers to version 203
+- Update Vulkan Headers to version 204
 
 ### Fixed
 

@@ -9,7 +9,7 @@ pub const NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME: *const std::os::raw::c_c
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageToColorStateCreateFlagBitsNV`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageToColorStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageToColorStateCreateFlagBitsNV`]"]
     #[doc(alias = "VkPipelineCoverageToColorStateCreateFlagsNV")] #[derive(Default)]
     #[repr(transparent)] pub struct PipelineCoverageToColorStateCreateFlagsNV : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -44,7 +44,7 @@ impl<'a> crate::ExtendableFrom<'a, PipelineCoverageToColorStateCreateInfoNV>
 for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PipelineCoverageToColorStateCreateInfoNVBuilder<'_>>
 for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineCoverageToColorStateCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -90,7 +90,7 @@ impl PipelineCoverageToColorStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Builder of [`PipelineCoverageToColorStateCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Builder of [`PipelineCoverageToColorStateCreateInfoNV`]
 #[repr(transparent)]
 pub struct PipelineCoverageToColorStateCreateInfoNVBuilder<'a>(
     PipelineCoverageToColorStateCreateInfoNV,

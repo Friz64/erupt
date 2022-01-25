@@ -20,24 +20,24 @@ impl crate::vk1_0::StructureType {
     pub const CHECKPOINT_DATA_NV: Self = Self(1000206000);
     pub const QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV: Self = Self(1000206001);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCheckpointNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetCheckpointNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_checkpoint_marker: *const std::ffi::c_void,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_checkpoint_marker: *const std::ffi::c_void,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetQueueCheckpointDataNV = unsafe extern "system" fn(
-        queue: crate::vk1_0::Queue,
-        p_checkpoint_data_count: *mut u32,
-        p_checkpoint_data: *mut crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV,
-    ) -> ();
+    queue: crate::vk1_0::Queue,
+    p_checkpoint_data_count: *mut u32,
+    p_checkpoint_data: *mut crate::extensions::nv_device_diagnostic_checkpoints::CheckpointDataNV,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, QueueFamilyCheckpointPropertiesNV>
 for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, QueueFamilyCheckpointPropertiesNVBuilder<'_>>
 for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Structure
 #[doc(alias = "VkQueueFamilyCheckpointPropertiesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -78,7 +78,7 @@ impl QueueFamilyCheckpointPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Builder of [`QueueFamilyCheckpointPropertiesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyCheckpointPropertiesNV.html) · Builder of [`QueueFamilyCheckpointPropertiesNV`]
 #[repr(transparent)]
 pub struct QueueFamilyCheckpointPropertiesNVBuilder<'a>(
     QueueFamilyCheckpointPropertiesNV,
@@ -129,7 +129,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyCheckpointPropertiesNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointDataNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCheckpointDataNV.html) · Structure
 #[doc(alias = "VkCheckpointDataNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -170,7 +170,7 @@ impl CheckpointDataNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCheckpointDataNV.html) · Builder of [`CheckpointDataNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCheckpointDataNV.html) · Builder of [`CheckpointDataNV`]
 #[repr(transparent)]
 pub struct CheckpointDataNVBuilder<'a>(
     CheckpointDataNV,
@@ -228,7 +228,7 @@ impl<'a> std::ops::DerefMut for CheckpointDataNVBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetCheckpointNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetCheckpointNV.html) · Function
     #[doc(alias = "vkCmdSetCheckpointNV")]
     pub unsafe fn cmd_set_checkpoint_nv(
         &self,
@@ -241,7 +241,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetQueueCheckpointDataNV.html) · Function
     #[doc(alias = "vkGetQueueCheckpointDataNV")]
     pub unsafe fn get_queue_checkpoint_data_nv(
         &self,

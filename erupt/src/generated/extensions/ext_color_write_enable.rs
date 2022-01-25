@@ -20,13 +20,13 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT: Self = Self(1000381000);
     pub const PIPELINE_COLOR_WRITE_CREATE_INFO_EXT: Self = Self(1000381001);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetColorWriteEnableEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorWriteEnableEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetColorWriteEnableEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        attachment_count: u32,
-        p_color_write_enables: *const crate::vk1_0::Bool32,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    attachment_count: u32,
+    p_color_write_enables: *const crate::vk1_0::Bool32,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceColorWriteEnableFeaturesEXT>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_>>
@@ -39,7 +39,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceColorWriteEnableFeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceColorWriteEnableFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceColorWriteEnableFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceColorWriteEnableFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -79,7 +79,7 @@ impl PhysicalDeviceColorWriteEnableFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceColorWriteEnableFeaturesEXT.html) · Builder of [`PhysicalDeviceColorWriteEnableFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceColorWriteEnableFeaturesEXT.html) · Builder of [`PhysicalDeviceColorWriteEnableFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceColorWriteEnableFeaturesEXTBuilder<'a>(
     PhysicalDeviceColorWriteEnableFeaturesEXT,
@@ -127,7 +127,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceColorWriteEnableFeaturesEXTBuilder
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorWriteCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorWriteCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineColorWriteCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -168,7 +168,7 @@ impl PipelineColorWriteCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorWriteCreateInfoEXT.html) · Builder of [`PipelineColorWriteCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorWriteCreateInfoEXT.html) · Builder of [`PipelineColorWriteCreateInfoEXT`]
 #[repr(transparent)]
 pub struct PipelineColorWriteCreateInfoEXTBuilder<'a>(
     PipelineColorWriteCreateInfoEXT,
@@ -224,7 +224,7 @@ impl<'a> std::ops::DerefMut for PipelineColorWriteCreateInfoEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetColorWriteEnableEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetColorWriteEnableEXT.html) · Function
     #[doc(alias = "vkCmdSetColorWriteEnableEXT")]
     pub unsafe fn cmd_set_color_write_enable_ext(
         &self,

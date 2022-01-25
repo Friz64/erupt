@@ -17,7 +17,7 @@ pub const FN_GET_PHYSICAL_DEVICE_WIN32_PRESENTATION_SUPPORT_KHR: *const std::os:
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateFlagsKHR.html) · Bitmask of [`Win32SurfaceCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWin32SurfaceCreateFlagsKHR.html) · Bitmask of [`Win32SurfaceCreateFlagBitsKHR`]"]
     #[doc(alias = "VkWin32SurfaceCreateFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct Win32SurfaceCreateFlagsKHR : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -48,21 +48,21 @@ impl std::fmt::Debug for Win32SurfaceCreateFlagBitsKHR {
 impl crate::vk1_0::StructureType {
     pub const WIN32_SURFACE_CREATE_INFO_KHR: Self = Self(1000009000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateWin32SurfaceKHR = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::khr_win32_surface::Win32SurfaceCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-    ) -> crate::vk1_0::Bool32;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Structure
+    physical_device: crate::vk1_0::PhysicalDevice,
+    queue_family_index: u32,
+) -> crate::vk1_0::Bool32;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkWin32SurfaceCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -106,7 +106,7 @@ impl Win32SurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Builder of [`Win32SurfaceCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Builder of [`Win32SurfaceCreateInfoKHR`]
 #[repr(transparent)]
 pub struct Win32SurfaceCreateInfoKHRBuilder<'a>(
     Win32SurfaceCreateInfoKHR,
@@ -170,7 +170,7 @@ impl<'a> std::ops::DerefMut for Win32SurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWin32SurfaceKHR.html) · Function
     #[doc(alias = "vkCreateWin32SurfaceKHR")]
     pub unsafe fn create_win32_surface_khr(
         &self,
@@ -192,7 +192,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceWin32PresentationSupportKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceWin32PresentationSupportKHR")]
     pub unsafe fn get_physical_device_win32_presentation_support_khr(
         &self,

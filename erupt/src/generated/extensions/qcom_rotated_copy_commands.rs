@@ -11,7 +11,7 @@ pub const QCOM_ROTATED_COPY_COMMANDS_EXTENSION_NAME: *const std::os::raw::c_char
 impl crate::vk1_0::StructureType {
     pub const COPY_COMMAND_TRANSFORM_INFO_QCOM: Self = Self(1000333000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Structure
 #[doc(alias = "VkCopyCommandTransformInfoQCOM")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -49,7 +49,7 @@ impl CopyCommandTransformInfoQCOM {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Builder of [`CopyCommandTransformInfoQCOM`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyCommandTransformInfoQCOM.html) · Builder of [`CopyCommandTransformInfoQCOM`]
 #[repr(transparent)]
 pub struct CopyCommandTransformInfoQCOMBuilder<'a>(
     CopyCommandTransformInfoQCOM,
@@ -98,10 +98,10 @@ impl<'a> std::ops::DerefMut for CopyCommandTransformInfoQCOMBuilder<'a> {
     }
 }
 impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOM>
-for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+for crate::vk1_3::ImageBlit2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOMBuilder<'_>>
-for crate::extensions::khr_copy_commands2::ImageBlit2KHRBuilder<'a> {}
+for crate::vk1_3::ImageBlit2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOM>
-for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}
+for crate::vk1_3::BufferImageCopy2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, CopyCommandTransformInfoQCOMBuilder<'_>>
-for crate::extensions::khr_copy_commands2::BufferImageCopy2KHRBuilder<'a> {}
+for crate::vk1_3::BufferImageCopy2Builder<'a> {}

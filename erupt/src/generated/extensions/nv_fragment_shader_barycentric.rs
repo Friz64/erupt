@@ -25,7 +25,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -71,7 +71,7 @@ impl PhysicalDeviceFragmentShaderBarycentricFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Builder of [`PhysicalDeviceFragmentShaderBarycentricFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV.html) · Builder of [`PhysicalDeviceFragmentShaderBarycentricFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShaderBarycentricFeaturesNVBuilder<'a>(
     PhysicalDeviceFragmentShaderBarycentricFeaturesNV,

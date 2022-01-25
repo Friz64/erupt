@@ -19,63 +19,63 @@ pub const FN_GET_BUFFER_DEVICE_ADDRESS_KHR: *const std::os::raw::c_char = crate:
 pub const FN_GET_DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkGetDeviceMemoryOpaqueCaptureAddressKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceBufferDeviceAddressFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceBufferDeviceAddressFeaturesKHR = crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceBufferDeviceAddressFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceBufferDeviceAddressFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceBufferDeviceAddressFeaturesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferDeviceAddressInfoKHR.html) · Alias
 #[doc(alias = "VkBufferDeviceAddressInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BufferDeviceAddressInfoKHR = crate::vk1_2::BufferDeviceAddressInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferDeviceAddressInfoKHR.html) · Alias
 #[doc(alias = "VkBufferDeviceAddressInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BufferDeviceAddressInfoKHRBuilder<'a> = crate::vk1_2::BufferDeviceAddressInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfoKHR.html) · Alias
 #[doc(alias = "VkBufferOpaqueCaptureAddressCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BufferOpaqueCaptureAddressCreateInfoKHR = crate::vk1_2::BufferOpaqueCaptureAddressCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferOpaqueCaptureAddressCreateInfoKHR.html) · Alias
 #[doc(alias = "VkBufferOpaqueCaptureAddressCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BufferOpaqueCaptureAddressCreateInfoKHRBuilder<'a> = crate::vk1_2::BufferOpaqueCaptureAddressCreateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOpaqueCaptureAddressAllocateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryOpaqueCaptureAddressAllocateInfoKHR.html) · Alias
 #[doc(alias = "VkMemoryOpaqueCaptureAddressAllocateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type MemoryOpaqueCaptureAddressAllocateInfoKHR = crate::vk1_2::MemoryOpaqueCaptureAddressAllocateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOpaqueCaptureAddressAllocateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryOpaqueCaptureAddressAllocateInfoKHR.html) · Alias
 #[doc(alias = "VkMemoryOpaqueCaptureAddressAllocateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type MemoryOpaqueCaptureAddressAllocateInfoKHRBuilder<'a> = crate::vk1_2::MemoryOpaqueCaptureAddressAllocateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceMemoryOpaqueCaptureAddressInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceMemoryOpaqueCaptureAddressInfoKHR = crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryOpaqueCaptureAddressInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceMemoryOpaqueCaptureAddressInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceMemoryOpaqueCaptureAddressInfoKHRBuilder<'a> = crate::vk1_2::DeviceMemoryOpaqueCaptureAddressInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferOpaqueCaptureAddressKHR = crate::vk1_2::PFN_vkGetBufferOpaqueCaptureAddress;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferDeviceAddressKHR = crate::vk1_2::PFN_vkGetBufferDeviceAddress;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddressKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddressKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR = crate::vk1_2::PFN_vkGetDeviceMemoryOpaqueCaptureAddress;
 ///Provided by [`crate::extensions::khr_buffer_device_address`]
@@ -107,7 +107,7 @@ impl crate::vk1_1::MemoryAllocateFlagBits {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferOpaqueCaptureAddressKHR.html) · Function
     #[doc(alias = "vkGetBufferOpaqueCaptureAddressKHR")]
     pub unsafe fn get_buffer_opaque_capture_address_khr(
         &self,
@@ -121,7 +121,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressKHR.html) · Function
     #[doc(alias = "vkGetBufferDeviceAddressKHR")]
     pub unsafe fn get_buffer_device_address_khr(
         &self,
@@ -135,7 +135,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddressKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceMemoryOpaqueCaptureAddressKHR.html) · Function
     #[doc(alias = "vkGetDeviceMemoryOpaqueCaptureAddressKHR")]
     pub unsafe fn get_device_memory_opaque_capture_address_khr(
         &self,

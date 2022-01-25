@@ -17,7 +17,7 @@ pub const FN_GET_PHYSICAL_DEVICE_SCREEN_PRESENTATION_SUPPORT_QNX: *const std::os
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkScreenSurfaceCreateFlagsQNX.html) · Bitmask of [`ScreenSurfaceCreateFlagBitsQNX`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkScreenSurfaceCreateFlagsQNX.html) · Bitmask of [`ScreenSurfaceCreateFlagBitsQNX`]"]
     #[doc(alias = "VkScreenSurfaceCreateFlagsQNX")] #[derive(Default)]
     #[repr(transparent)] pub struct ScreenSurfaceCreateFlagsQNX : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -48,22 +48,22 @@ impl std::fmt::Debug for ScreenSurfaceCreateFlagBitsQNX {
 impl crate::vk1_0::StructureType {
     pub const SCREEN_SURFACE_CREATE_INFO_QNX: Self = Self(1000378000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateScreenSurfaceQNX = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceScreenPresentationSupportQNX.html) · Function
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::qnx_screen_surface::ScreenSurfaceCreateInfoQNX,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceScreenPresentationSupportQNX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceScreenPresentationSupportQNX = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        window: *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Bool32;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkScreenSurfaceCreateInfoQNX.html) · Structure
+    physical_device: crate::vk1_0::PhysicalDevice,
+    queue_family_index: u32,
+    window: *mut std::ffi::c_void,
+) -> crate::vk1_0::Bool32;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkScreenSurfaceCreateInfoQNX.html) · Structure
 #[doc(alias = "VkScreenSurfaceCreateInfoQNX")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -107,7 +107,7 @@ impl ScreenSurfaceCreateInfoQNX {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkScreenSurfaceCreateInfoQNX.html) · Builder of [`ScreenSurfaceCreateInfoQNX`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkScreenSurfaceCreateInfoQNX.html) · Builder of [`ScreenSurfaceCreateInfoQNX`]
 #[repr(transparent)]
 pub struct ScreenSurfaceCreateInfoQNXBuilder<'a>(
     ScreenSurfaceCreateInfoQNX,
@@ -171,7 +171,7 @@ impl<'a> std::ops::DerefMut for ScreenSurfaceCreateInfoQNXBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateScreenSurfaceQNX.html) · Function
     #[doc(alias = "vkCreateScreenSurfaceQNX")]
     pub unsafe fn create_screen_surface_qnx(
         &self,
@@ -193,7 +193,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceScreenPresentationSupportQNX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceScreenPresentationSupportQNX.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceScreenPresentationSupportQNX")]
     pub unsafe fn get_physical_device_screen_presentation_support_qnx(
         &self,

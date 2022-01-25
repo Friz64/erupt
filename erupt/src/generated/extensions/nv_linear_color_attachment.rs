@@ -8,7 +8,7 @@ pub const NV_LINEAR_COLOR_ATTACHMENT_EXTENSION_NAME: *const std::os::raw::c_char
     "VK_NV_linear_color_attachment"
 );
 ///Provided by [`crate::extensions::nv_linear_color_attachment`]
-impl crate::extensions::khr_format_feature_flags2::FormatFeatureFlagBits2KHR {
+impl crate::vk1_3::FormatFeatureFlagBits2 {
     pub const LINEAR_COLOR_ATTACHMENT_NV: Self = Self(274877906944);
 }
 ///Provided by [`crate::extensions::nv_linear_color_attachment`]
@@ -29,7 +29,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceLinearColorAttachmentFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLinearColorAttachmentFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLinearColorAttachmentFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceLinearColorAttachmentFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -72,7 +72,7 @@ impl PhysicalDeviceLinearColorAttachmentFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLinearColorAttachmentFeaturesNV.html) · Builder of [`PhysicalDeviceLinearColorAttachmentFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLinearColorAttachmentFeaturesNV.html) · Builder of [`PhysicalDeviceLinearColorAttachmentFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceLinearColorAttachmentFeaturesNVBuilder<'a>(
     PhysicalDeviceLinearColorAttachmentFeaturesNV,

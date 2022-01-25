@@ -15,7 +15,7 @@ impl<'a> crate::ExtendableFrom<'a, PresentRegionsKHR>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PresentRegionsKHRBuilder<'_>>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionsKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentRegionsKHR.html) · Structure
 #[doc(alias = "VkPresentRegionsKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -56,7 +56,7 @@ impl PresentRegionsKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionsKHR.html) · Builder of [`PresentRegionsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentRegionsKHR.html) · Builder of [`PresentRegionsKHR`]
 #[repr(transparent)]
 pub struct PresentRegionsKHRBuilder<'a>(
     PresentRegionsKHR,
@@ -105,7 +105,7 @@ impl<'a> std::ops::DerefMut for PresentRegionsKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentRegionKHR.html) · Structure
 #[doc(alias = "VkPresentRegionKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -137,7 +137,7 @@ impl PresentRegionKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentRegionKHR.html) · Builder of [`PresentRegionKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentRegionKHR.html) · Builder of [`PresentRegionKHR`]
 #[repr(transparent)]
 pub struct PresentRegionKHRBuilder<'a>(
     PresentRegionKHR,
@@ -186,7 +186,7 @@ impl<'a> std::ops::DerefMut for PresentRegionKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRectLayerKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRectLayerKHR.html) · Structure
 #[doc(alias = "VkRectLayerKHR")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -221,7 +221,7 @@ impl RectLayerKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRectLayerKHR.html) · Builder of [`RectLayerKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRectLayerKHR.html) · Builder of [`RectLayerKHR`]
 #[repr(transparent)]
 pub struct RectLayerKHRBuilder<'a>(RectLayerKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> RectLayerKHRBuilder<'a> {

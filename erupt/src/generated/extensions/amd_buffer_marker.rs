@@ -11,20 +11,20 @@ pub const AMD_BUFFER_MARKER_EXTENSION_NAME: *const std::os::raw::c_char = crate:
 pub const FN_CMD_WRITE_BUFFER_MARKER_AMD: *const std::os::raw::c_char = crate::cstr!(
     "vkCmdWriteBufferMarkerAMD"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdWriteBufferMarkerAMD = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        pipeline_stage: crate::vk1_0::PipelineStageFlagBits,
-        dst_buffer: crate::vk1_0::Buffer,
-        dst_offset: crate::vk1_0::DeviceSize,
-        marker: u32,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    pipeline_stage: crate::vk1_0::PipelineStageFlagBits,
+    dst_buffer: crate::vk1_0::Buffer,
+    dst_offset: crate::vk1_0::DeviceSize,
+    marker: u32,
+) -> ();
 ///Provided by [`crate::extensions::amd_buffer_marker`]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteBufferMarkerAMD.html) · Function
     #[doc(alias = "vkCmdWriteBufferMarkerAMD")]
     pub unsafe fn cmd_write_buffer_marker_amd(
         &self,

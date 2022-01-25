@@ -14,7 +14,7 @@ impl crate::vk1_0::StructureType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagsNV.html) · Bitmask of [`DeviceDiagnosticsConfigFlagBitsNV`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDiagnosticsConfigFlagsNV.html) · Bitmask of [`DeviceDiagnosticsConfigFlagBitsNV`]"]
     #[doc(alias = "VkDeviceDiagnosticsConfigFlagsNV")] #[derive(Default)]
     #[repr(transparent)] pub struct DeviceDiagnosticsConfigFlagsNV : u32 { const
     ENABLE_SHADER_DEBUG_INFO_NV =
@@ -24,7 +24,7 @@ bitflags::bitflags! {
     ENABLE_AUTOMATIC_CHECKPOINTS_NV =
     DeviceDiagnosticsConfigFlagBitsNV::ENABLE_AUTOMATIC_CHECKPOINTS_NV.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigFlagBitsNV.html) · Bits enum of [`DeviceDiagnosticsConfigFlagsNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDiagnosticsConfigFlagBitsNV.html) · Bits enum of [`DeviceDiagnosticsConfigFlagsNV`]
 #[doc(alias = "VkDeviceDiagnosticsConfigFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -69,7 +69,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDiagnosticsConfigFeaturesNV>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDiagnosticsConfigFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -109,7 +109,7 @@ impl PhysicalDeviceDiagnosticsConfigFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Builder of [`PhysicalDeviceDiagnosticsConfigFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Builder of [`PhysicalDeviceDiagnosticsConfigFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder<'a>(
     PhysicalDeviceDiagnosticsConfigFeaturesNV,
@@ -157,7 +157,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDiagnosticsConfigCreateInfoNV.html) · Structure
 #[doc(alias = "VkDeviceDiagnosticsConfigCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -195,7 +195,7 @@ impl DeviceDiagnosticsConfigCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDiagnosticsConfigCreateInfoNV.html) · Builder of [`DeviceDiagnosticsConfigCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDiagnosticsConfigCreateInfoNV.html) · Builder of [`DeviceDiagnosticsConfigCreateInfoNV`]
 #[repr(transparent)]
 pub struct DeviceDiagnosticsConfigCreateInfoNVBuilder<'a>(
     DeviceDiagnosticsConfigCreateInfoNV,

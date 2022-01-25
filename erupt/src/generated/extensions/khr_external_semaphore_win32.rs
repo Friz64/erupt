@@ -22,19 +22,19 @@ impl crate::vk1_0::StructureType {
     pub const D3D12_FENCE_SUBMIT_INFO_KHR: Self = Self(1000078002);
     pub const SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR: Self = Self(1000078003);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreWin32HandleKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_get_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR,
-        p_handle: *mut *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function
+    device: crate::vk1_0::Device,
+    p_get_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::SemaphoreGetWin32HandleInfoKHR,
+    p_handle: *mut *mut std::ffi::c_void,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportSemaphoreWin32HandleKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_import_semaphore_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    p_import_semaphore_win32_handle_info: *const crate::extensions::khr_external_semaphore_win32::ImportSemaphoreWin32HandleInfoKHR,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, ExportSemaphoreWin32HandleInfoKHR>
 for crate::vk1_0::SemaphoreCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ExportSemaphoreWin32HandleInfoKHRBuilder<'_>>
@@ -43,7 +43,7 @@ impl<'a> crate::ExtendableFrom<'a, D3D12FenceSubmitInfoKHR>
 for crate::vk1_0::SubmitInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, D3D12FenceSubmitInfoKHRBuilder<'_>>
 for crate::vk1_0::SubmitInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkImportSemaphoreWin32HandleInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -93,7 +93,7 @@ impl ImportSemaphoreWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ImportSemaphoreWin32HandleInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ImportSemaphoreWin32HandleInfoKHR`]
 #[repr(transparent)]
 pub struct ImportSemaphoreWin32HandleInfoKHRBuilder<'a>(
     ImportSemaphoreWin32HandleInfoKHR,
@@ -168,7 +168,7 @@ impl<'a> std::ops::DerefMut for ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportSemaphoreWin32HandleInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportSemaphoreWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkExportSemaphoreWin32HandleInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -212,7 +212,7 @@ impl ExportSemaphoreWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ExportSemaphoreWin32HandleInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportSemaphoreWin32HandleInfoKHR.html) · Builder of [`ExportSemaphoreWin32HandleInfoKHR`]
 #[repr(transparent)]
 pub struct ExportSemaphoreWin32HandleInfoKHRBuilder<'a>(
     ExportSemaphoreWin32HandleInfoKHR,
@@ -272,7 +272,7 @@ impl<'a> std::ops::DerefMut for ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkD3D12FenceSubmitInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkD3D12FenceSubmitInfoKHR.html) · Structure
 #[doc(alias = "VkD3D12FenceSubmitInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -319,7 +319,7 @@ impl D3D12FenceSubmitInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkD3D12FenceSubmitInfoKHR.html) · Builder of [`D3D12FenceSubmitInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkD3D12FenceSubmitInfoKHR.html) · Builder of [`D3D12FenceSubmitInfoKHR`]
 #[repr(transparent)]
 pub struct D3D12FenceSubmitInfoKHRBuilder<'a>(
     D3D12FenceSubmitInfoKHR,
@@ -375,7 +375,7 @@ impl<'a> std::ops::DerefMut for D3D12FenceSubmitInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetWin32HandleInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreGetWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkSemaphoreGetWin32HandleInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -416,7 +416,7 @@ impl SemaphoreGetWin32HandleInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetWin32HandleInfoKHR.html) · Builder of [`SemaphoreGetWin32HandleInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreGetWin32HandleInfoKHR.html) · Builder of [`SemaphoreGetWin32HandleInfoKHR`]
 #[repr(transparent)]
 pub struct SemaphoreGetWin32HandleInfoKHRBuilder<'a>(
     SemaphoreGetWin32HandleInfoKHR,
@@ -477,7 +477,7 @@ impl<'a> std::ops::DerefMut for SemaphoreGetWin32HandleInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSemaphoreWin32HandleKHR.html) · Function
     #[doc(alias = "vkGetSemaphoreWin32HandleKHR")]
     pub unsafe fn get_semaphore_win32_handle_khr(
         &self,
@@ -492,7 +492,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportSemaphoreWin32HandleKHR.html) · Function
     #[doc(alias = "vkImportSemaphoreWin32HandleKHR")]
     pub unsafe fn import_semaphore_win32_handle_khr(
         &self,

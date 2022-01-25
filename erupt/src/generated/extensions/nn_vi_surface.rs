@@ -13,7 +13,7 @@ pub const FN_CREATE_VI_SURFACE_NN: *const std::os::raw::c_char = crate::cstr!(
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateFlagsNN.html) · Bitmask of [`ViSurfaceCreateFlagBitsNN`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViSurfaceCreateFlagsNN.html) · Bitmask of [`ViSurfaceCreateFlagBitsNN`]"]
     #[doc(alias = "VkViSurfaceCreateFlagsNN")] #[derive(Default)] #[repr(transparent)]
     pub struct ViSurfaceCreateFlagsNN : u32 { #[cfg(empty_bitflag_workaround)] const
     EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -44,15 +44,15 @@ impl std::fmt::Debug for ViSurfaceCreateFlagBitsNN {
 impl crate::vk1_0::StructureType {
     pub const VI_SURFACE_CREATE_INFO_NN: Self = Self(1000062000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateViSurfaceNN.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateViSurfaceNN.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateViSurfaceNN = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::nn_vi_surface::ViSurfaceCreateInfoNN,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Structure
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::nn_vi_surface::ViSurfaceCreateInfoNN,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Structure
 #[doc(alias = "VkViSurfaceCreateInfoNN")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -93,7 +93,7 @@ impl ViSurfaceCreateInfoNN {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Builder of [`ViSurfaceCreateInfoNN`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViSurfaceCreateInfoNN.html) · Builder of [`ViSurfaceCreateInfoNN`]
 #[repr(transparent)]
 pub struct ViSurfaceCreateInfoNNBuilder<'a>(
     ViSurfaceCreateInfoNN,
@@ -151,7 +151,7 @@ impl<'a> std::ops::DerefMut for ViSurfaceCreateInfoNNBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateViSurfaceNN.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateViSurfaceNN.html) · Function
     #[doc(alias = "vkCreateViSurfaceNN")]
     pub unsafe fn create_vi_surface_nn(
         &self,

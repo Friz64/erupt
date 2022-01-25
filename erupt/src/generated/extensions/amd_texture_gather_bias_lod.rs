@@ -15,7 +15,7 @@ impl<'a> crate::ExtendableFrom<'a, TextureLODGatherFormatPropertiesAMD>
 for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, TextureLODGatherFormatPropertiesAMDBuilder<'_>>
 for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Structure
 #[doc(alias = "VkTextureLODGatherFormatPropertiesAMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -56,7 +56,7 @@ impl TextureLODGatherFormatPropertiesAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Builder of [`TextureLODGatherFormatPropertiesAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Builder of [`TextureLODGatherFormatPropertiesAMD`]
 #[repr(transparent)]
 pub struct TextureLODGatherFormatPropertiesAMDBuilder<'a>(
     TextureLODGatherFormatPropertiesAMD,

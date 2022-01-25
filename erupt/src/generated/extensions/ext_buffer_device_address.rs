@@ -11,27 +11,27 @@ pub const EXT_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_GET_BUFFER_DEVICE_ADDRESS_EXT: *const std::os::raw::c_char = crate::cstr!(
     "vkGetBufferDeviceAddressEXT"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferAddressFeaturesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBufferAddressFeaturesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceBufferAddressFeaturesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceBufferAddressFeaturesEXT = crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXT;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferAddressFeaturesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBufferAddressFeaturesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceBufferAddressFeaturesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceBufferAddressFeaturesEXTBuilder<'a> = crate::extensions::ext_buffer_device_address::PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressInfoEXT.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferDeviceAddressInfoEXT.html) · Alias
 #[doc(alias = "VkBufferDeviceAddressInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type BufferDeviceAddressInfoEXT = crate::vk1_2::BufferDeviceAddressInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressInfoEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferDeviceAddressInfoEXT.html) · Alias
 #[doc(alias = "VkBufferDeviceAddressInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type BufferDeviceAddressInfoEXTBuilder<'a> = crate::vk1_2::BufferDeviceAddressInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressEXT.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressEXT.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferDeviceAddressEXT = crate::vk1_2::PFN_vkGetBufferDeviceAddress;
 ///Provided by [`crate::extensions::ext_buffer_device_address`]
@@ -71,7 +71,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceBufferDeviceAddressFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -126,7 +126,7 @@ impl PhysicalDeviceBufferDeviceAddressFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesEXT.html) · Builder of [`PhysicalDeviceBufferDeviceAddressFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBufferDeviceAddressFeaturesEXT.html) · Builder of [`PhysicalDeviceBufferDeviceAddressFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceBufferDeviceAddressFeaturesEXTBuilder<'a>(
     PhysicalDeviceBufferDeviceAddressFeaturesEXT,
@@ -199,7 +199,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceBufferDeviceAddressFeaturesEXTBuil
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferDeviceAddressCreateInfoEXT.html) · Structure
 #[doc(alias = "VkBufferDeviceAddressCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -237,7 +237,7 @@ impl BufferDeviceAddressCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferDeviceAddressCreateInfoEXT.html) · Builder of [`BufferDeviceAddressCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferDeviceAddressCreateInfoEXT.html) · Builder of [`BufferDeviceAddressCreateInfoEXT`]
 #[repr(transparent)]
 pub struct BufferDeviceAddressCreateInfoEXTBuilder<'a>(
     BufferDeviceAddressCreateInfoEXT,
@@ -292,7 +292,7 @@ impl<'a> std::ops::DerefMut for BufferDeviceAddressCreateInfoEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferDeviceAddressEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferDeviceAddressEXT.html) · Function
     #[doc(alias = "vkGetBufferDeviceAddressEXT")]
     pub unsafe fn get_buffer_device_address_ext(
         &self,

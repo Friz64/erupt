@@ -11,7 +11,7 @@ pub const EXT_VALIDATION_FLAGS_EXTENSION_NAME: *const std::os::raw::c_char = cra
 impl crate::vk1_0::StructureType {
     pub const VALIDATION_FLAGS_EXT: Self = Self(1000061000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationCheckEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationCheckEXT.html) · Enum
 #[doc(alias = "VkValidationCheckEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -37,7 +37,7 @@ impl<'a> crate::ExtendableFrom<'a, ValidationFlagsEXT>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ValidationFlagsEXTBuilder<'_>>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFlagsEXT.html) · Structure
 #[doc(alias = "VkValidationFlagsEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -81,7 +81,7 @@ impl ValidationFlagsEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFlagsEXT.html) · Builder of [`ValidationFlagsEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFlagsEXT.html) · Builder of [`ValidationFlagsEXT`]
 #[repr(transparent)]
 pub struct ValidationFlagsEXTBuilder<'a>(
     ValidationFlagsEXT,

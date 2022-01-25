@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentIdFeaturesKHR>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentIdFeaturesKHRBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePresentIdFeaturesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePresentIdFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePresentIdFeaturesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -62,7 +62,7 @@ impl PhysicalDevicePresentIdFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePresentIdFeaturesKHR.html) · Builder of [`PhysicalDevicePresentIdFeaturesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePresentIdFeaturesKHR.html) · Builder of [`PhysicalDevicePresentIdFeaturesKHR`]
 #[repr(transparent)]
 pub struct PhysicalDevicePresentIdFeaturesKHRBuilder<'a>(
     PhysicalDevicePresentIdFeaturesKHR,
@@ -110,7 +110,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePresentIdFeaturesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentIdKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentIdKHR.html) · Structure
 #[doc(alias = "VkPresentIdKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -151,7 +151,7 @@ impl PresentIdKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentIdKHR.html) · Builder of [`PresentIdKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentIdKHR.html) · Builder of [`PresentIdKHR`]
 #[repr(transparent)]
 pub struct PresentIdKHRBuilder<'a>(PresentIdKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentIdKHRBuilder<'a> {

@@ -15,7 +15,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDrmPropertiesEXT>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDrmPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDrmPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDrmPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDrmPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -68,7 +68,7 @@ impl PhysicalDeviceDrmPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDrmPropertiesEXT.html) · Builder of [`PhysicalDeviceDrmPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDrmPropertiesEXT.html) · Builder of [`PhysicalDeviceDrmPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceDrmPropertiesEXTBuilder<'a>(
     PhysicalDeviceDrmPropertiesEXT,

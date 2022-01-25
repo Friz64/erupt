@@ -21,11 +21,11 @@ pub const KHR_MAINTENANCE1_EXTENSION_NAME: *const std::os::raw::c_char = crate::
 pub const FN_TRIM_COMMAND_POOL_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkTrimCommandPoolKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandPoolTrimFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandPoolTrimFlagsKHR.html) · Alias
 #[doc(alias = "VkCommandPoolTrimFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type CommandPoolTrimFlagsKHR = crate::vk1_1::CommandPoolTrimFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPoolKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkTrimCommandPoolKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkTrimCommandPoolKHR = crate::vk1_1::PFN_vkTrimCommandPool;
 ///Provided by [`crate::extensions::khr_maintenance1`]
@@ -45,7 +45,7 @@ impl crate::vk1_0::Result {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkTrimCommandPoolKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkTrimCommandPoolKHR.html) · Function
     #[doc(alias = "vkTrimCommandPoolKHR")]
     pub unsafe fn trim_command_pool_khr(
         &self,

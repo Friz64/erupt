@@ -17,13 +17,13 @@ impl crate::vk1_0::StructureType {
         1000412000,
     );
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetDeviceMemoryPriorityEXT = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        memory: crate::vk1_0::DeviceMemory,
-        priority: std::os::raw::c_float,
-    ) -> ();
+    device: crate::vk1_0::Device,
+    memory: crate::vk1_0::DeviceMemory,
+    priority: std::os::raw::c_float,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<
@@ -40,7 +40,7 @@ impl<
     'a,
     PhysicalDevicePageableDeviceLocalMemoryFeaturesEXTBuilder<'_>,
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -86,7 +86,7 @@ impl PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT.html) · Builder of [`PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePageableDeviceLocalMemoryFeaturesEXT.html) · Builder of [`PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDevicePageableDeviceLocalMemoryFeaturesEXTBuilder<'a>(
     PhysicalDevicePageableDeviceLocalMemoryFeaturesEXT,
@@ -145,7 +145,7 @@ for PhysicalDevicePageableDeviceLocalMemoryFeaturesEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetDeviceMemoryPriorityEXT.html) · Function
     #[doc(alias = "vkSetDeviceMemoryPriorityEXT")]
     pub unsafe fn set_device_memory_priority_ext(
         &self,

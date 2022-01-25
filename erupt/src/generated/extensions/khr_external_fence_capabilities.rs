@@ -11,43 +11,43 @@ pub const KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::c
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_FENCE_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkGetPhysicalDeviceExternalFencePropertiesKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceHandleTypeFlagsKHR.html) · Alias
 #[doc(alias = "VkExternalFenceHandleTypeFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalFenceHandleTypeFlagsKHR = crate::vk1_1::ExternalFenceHandleTypeFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceFeatureFlagsKHR.html) · Alias
 #[doc(alias = "VkExternalFenceFeatureFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalFenceFeatureFlagsKHR = crate::vk1_1::ExternalFenceFeatureFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceHandleTypeFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceHandleTypeFlagBitsKHR.html) · Alias
 #[doc(alias = "VkExternalFenceHandleTypeFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalFenceHandleTypeFlagBitsKHR = crate::vk1_1::ExternalFenceHandleTypeFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFenceFeatureFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceFeatureFlagBitsKHR.html) · Alias
 #[doc(alias = "VkExternalFenceFeatureFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalFenceFeatureFlagBitsKHR = crate::vk1_1::ExternalFenceFeatureFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalFenceInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalFenceInfoKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceExternalFenceInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceExternalFenceInfoKHR = crate::vk1_1::PhysicalDeviceExternalFenceInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalFenceInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalFenceInfoKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceExternalFenceInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceExternalFenceInfoKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceExternalFenceInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFencePropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFencePropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalFencePropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalFencePropertiesKHR = crate::vk1_1::ExternalFenceProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFencePropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFencePropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalFencePropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalFencePropertiesKHRBuilder<'a> = crate::vk1_1::ExternalFencePropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFencePropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceExternalFencePropertiesKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR = crate::vk1_1::PFN_vkGetPhysicalDeviceExternalFenceProperties;
 ///Provided by [`crate::extensions::khr_external_fence_capabilities`]
@@ -71,7 +71,7 @@ impl crate::vk1_1::ExternalFenceFeatureFlagBits {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalFencePropertiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceExternalFencePropertiesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceExternalFencePropertiesKHR")]
     pub unsafe fn get_physical_device_external_fence_properties_khr(
         &self,

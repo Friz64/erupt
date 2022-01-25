@@ -19,7 +19,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderClockFeaturesKHR>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderClockFeaturesKHRBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderClockFeaturesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -60,7 +60,7 @@ impl PhysicalDeviceShaderClockFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Builder of [`PhysicalDeviceShaderClockFeaturesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Builder of [`PhysicalDeviceShaderClockFeaturesKHR`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderClockFeaturesKHRBuilder<'a>(
     PhysicalDeviceShaderClockFeaturesKHR,

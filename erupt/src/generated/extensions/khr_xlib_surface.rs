@@ -17,7 +17,7 @@ pub const FN_GET_PHYSICAL_DEVICE_XLIB_PRESENTATION_SUPPORT_KHR: *const std::os::
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateFlagsKHR.html) · Bitmask of [`XlibSurfaceCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXlibSurfaceCreateFlagsKHR.html) · Bitmask of [`XlibSurfaceCreateFlagBitsKHR`]"]
     #[doc(alias = "VkXlibSurfaceCreateFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct XlibSurfaceCreateFlagsKHR : u32 { #[cfg(empty_bitflag_workaround)] const
     EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -48,23 +48,23 @@ impl std::fmt::Debug for XlibSurfaceCreateFlagBitsKHR {
 impl crate::vk1_0::StructureType {
     pub const XLIB_SURFACE_CREATE_INFO_KHR: Self = Self(1000004000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateXlibSurfaceKHR = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::khr_xlib_surface::XlibSurfaceCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceXlibPresentationSupportKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        dpy: *mut std::ffi::c_void,
-        visual_id: u64,
-    ) -> crate::vk1_0::Bool32;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Structure
+    physical_device: crate::vk1_0::PhysicalDevice,
+    queue_family_index: u32,
+    dpy: *mut std::ffi::c_void,
+    visual_id: u64,
+) -> crate::vk1_0::Bool32;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkXlibSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -108,7 +108,7 @@ impl XlibSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Builder of [`XlibSurfaceCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXlibSurfaceCreateInfoKHR.html) · Builder of [`XlibSurfaceCreateInfoKHR`]
 #[repr(transparent)]
 pub struct XlibSurfaceCreateInfoKHRBuilder<'a>(
     XlibSurfaceCreateInfoKHR,
@@ -172,7 +172,7 @@ impl<'a> std::ops::DerefMut for XlibSurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXlibSurfaceKHR.html) · Function
     #[doc(alias = "vkCreateXlibSurfaceKHR")]
     pub unsafe fn create_xlib_surface_khr(
         &self,
@@ -194,7 +194,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceXlibPresentationSupportKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceXlibPresentationSupportKHR")]
     pub unsafe fn get_physical_device_xlib_presentation_support_khr(
         &self,

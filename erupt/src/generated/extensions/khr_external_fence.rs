@@ -7,24 +7,24 @@ pub const KHR_EXTERNAL_FENCE_SPEC_VERSION: u32 = 1;
 pub const KHR_EXTERNAL_FENCE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_external_fence"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagsKHR.html) · Alias
 #[doc(alias = "VkFenceImportFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type FenceImportFlagsKHR = crate::vk1_1::FenceImportFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFenceImportFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceImportFlagBitsKHR.html) · Alias
 #[doc(alias = "VkFenceImportFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type FenceImportFlagBitsKHR = crate::vk1_1::FenceImportFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportFenceCreateInfoKHR.html) · Alias
 #[doc(alias = "VkExportFenceCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ExportFenceCreateInfoKHR = crate::vk1_1::ExportFenceCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportFenceCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportFenceCreateInfoKHR.html) · Alias
 #[doc(alias = "VkExportFenceCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ExportFenceCreateInfoKHRBuilder<'a> = crate::vk1_1::ExportFenceCreateInfoBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_external_fence`]
 impl crate::vk1_0::StructureType {
     pub const EXPORT_FENCE_CREATE_INFO_KHR: Self = Self::EXPORT_FENCE_CREATE_INFO;

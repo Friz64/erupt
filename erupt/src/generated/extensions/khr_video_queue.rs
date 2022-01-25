@@ -63,17 +63,17 @@ pub const FN_CMD_END_VIDEO_CODING_KHR: *const std::os::raw::c_char = crate::cstr
 );
 crate::non_dispatchable_handle!(
     VideoSessionKHR, VIDEO_SESSION_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionKHR.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionKHR.html) · Non-dispatchable Handle",
     "VkVideoSessionKHR"
 );
 crate::non_dispatchable_handle!(
     VideoSessionParametersKHR, VIDEO_SESSION_PARAMETERS_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionParametersKHR.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionParametersKHR.html) · Non-dispatchable Handle",
     "VkVideoSessionParametersKHR"
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoBeginCodingFlagsKHR.html) · Bitmask of [`VideoBeginCodingFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoBeginCodingFlagsKHR.html) · Bitmask of [`VideoBeginCodingFlagBitsKHR`]"]
     #[doc(alias = "VkVideoBeginCodingFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct VideoBeginCodingFlagsKHR : u32 { #[cfg(empty_bitflag_workaround)] const
     EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -102,7 +102,7 @@ impl std::fmt::Debug for VideoBeginCodingFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEndCodingFlagsKHR.html) · Bitmask of [`VideoEndCodingFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEndCodingFlagsKHR.html) · Bitmask of [`VideoEndCodingFlagBitsKHR`]"]
     #[doc(alias = "VkVideoEndCodingFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct VideoEndCodingFlagsKHR : u32 { #[cfg(empty_bitflag_workaround)] const
     EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -164,7 +164,7 @@ impl crate::vk1_0::ObjectType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagsKHR.html) · Bitmask of [`VideoCodecOperationFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodecOperationFlagsKHR.html) · Bitmask of [`VideoCodecOperationFlagBitsKHR`]"]
     #[doc(alias = "VkVideoCodecOperationFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoCodecOperationFlagsKHR : u32 { const INVALID_KHR
     = VideoCodecOperationFlagBitsKHR::INVALID_KHR.0; const ENCODE_H264_EXT =
@@ -173,7 +173,7 @@ bitflags::bitflags! {
     VideoCodecOperationFlagBitsKHR::DECODE_H264_EXT.0; const DECODE_H265_EXT =
     VideoCodecOperationFlagBitsKHR::DECODE_H265_EXT.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodecOperationFlagBitsKHR.html) · Bits enum of [`VideoCodecOperationFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodecOperationFlagBitsKHR.html) · Bits enum of [`VideoCodecOperationFlagsKHR`]
 #[doc(alias = "VkVideoCodecOperationFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -206,7 +206,7 @@ impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoChromaSubsamplingFlagsKHR.html) · Bitmask of [`VideoChromaSubsamplingFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoChromaSubsamplingFlagsKHR.html) · Bitmask of [`VideoChromaSubsamplingFlagBitsKHR`]"]
     #[doc(alias = "VkVideoChromaSubsamplingFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoChromaSubsamplingFlagsKHR : u32 { const
     INVALID_KHR = VideoChromaSubsamplingFlagBitsKHR::INVALID_KHR.0; const MONOCHROME_KHR
@@ -215,7 +215,7 @@ bitflags::bitflags! {
     VideoChromaSubsamplingFlagBitsKHR::_422_KHR.0; const _444_KHR =
     VideoChromaSubsamplingFlagBitsKHR::_444_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoChromaSubsamplingFlagBitsKHR.html) · Bits enum of [`VideoChromaSubsamplingFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoChromaSubsamplingFlagBitsKHR.html) · Bits enum of [`VideoChromaSubsamplingFlagsKHR`]
 #[doc(alias = "VkVideoChromaSubsamplingFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -252,7 +252,7 @@ impl crate::extensions::khr_video_queue::VideoChromaSubsamplingFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagsKHR.html) · Bitmask of [`VideoComponentBitDepthFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoComponentBitDepthFlagsKHR.html) · Bitmask of [`VideoComponentBitDepthFlagBitsKHR`]"]
     #[doc(alias = "VkVideoComponentBitDepthFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoComponentBitDepthFlagsKHR : u32 { const
     INVALID_KHR = VideoComponentBitDepthFlagBitsKHR::INVALID_KHR.0; const _8_KHR =
@@ -260,7 +260,7 @@ bitflags::bitflags! {
     VideoComponentBitDepthFlagBitsKHR::_10_KHR.0; const _12_KHR =
     VideoComponentBitDepthFlagBitsKHR::_12_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoComponentBitDepthFlagBitsKHR.html) · Bits enum of [`VideoComponentBitDepthFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoComponentBitDepthFlagBitsKHR.html) · Bits enum of [`VideoComponentBitDepthFlagsKHR`]
 #[doc(alias = "VkVideoComponentBitDepthFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -295,14 +295,14 @@ impl crate::extensions::khr_video_queue::VideoComponentBitDepthFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilityFlagsKHR.html) · Bitmask of [`VideoCapabilityFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCapabilityFlagsKHR.html) · Bitmask of [`VideoCapabilityFlagBitsKHR`]"]
     #[doc(alias = "VkVideoCapabilityFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct VideoCapabilityFlagsKHR : u32 { const PROTECTED_CONTENT_KHR =
     VideoCapabilityFlagBitsKHR::PROTECTED_CONTENT_KHR.0; const
     SEPARATE_REFERENCE_IMAGES_KHR =
     VideoCapabilityFlagBitsKHR::SEPARATE_REFERENCE_IMAGES_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilityFlagBitsKHR.html) · Bits enum of [`VideoCapabilityFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCapabilityFlagBitsKHR.html) · Bits enum of [`VideoCapabilityFlagsKHR`]
 #[doc(alias = "VkVideoCapabilityFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -335,13 +335,13 @@ impl crate::extensions::khr_video_queue::VideoCapabilityFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionCreateFlagsKHR.html) · Bitmask of [`VideoSessionCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionCreateFlagsKHR.html) · Bitmask of [`VideoSessionCreateFlagBitsKHR`]"]
     #[doc(alias = "VkVideoSessionCreateFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoSessionCreateFlagsKHR : u32 { const DEFAULT_KHR
     = VideoSessionCreateFlagBitsKHR::DEFAULT_KHR.0; const PROTECTED_CONTENT_KHR =
     VideoSessionCreateFlagBitsKHR::PROTECTED_CONTENT_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionCreateFlagBitsKHR.html) · Bits enum of [`VideoSessionCreateFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionCreateFlagBitsKHR.html) · Bits enum of [`VideoSessionCreateFlagsKHR`]
 #[doc(alias = "VkVideoSessionCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -372,14 +372,14 @@ impl crate::extensions::khr_video_queue::VideoSessionCreateFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagsKHR.html) · Bitmask of [`VideoCodingQualityPresetFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodingQualityPresetFlagsKHR.html) · Bitmask of [`VideoCodingQualityPresetFlagBitsKHR`]"]
     #[doc(alias = "VkVideoCodingQualityPresetFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoCodingQualityPresetFlagsKHR : u32 { const
     NORMAL_KHR = VideoCodingQualityPresetFlagBitsKHR::NORMAL_KHR.0; const POWER_KHR =
     VideoCodingQualityPresetFlagBitsKHR::POWER_KHR.0; const QUALITY_KHR =
     VideoCodingQualityPresetFlagBitsKHR::QUALITY_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingQualityPresetFlagBitsKHR.html) · Bits enum of [`VideoCodingQualityPresetFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodingQualityPresetFlagBitsKHR.html) · Bits enum of [`VideoCodingQualityPresetFlagsKHR`]
 #[doc(alias = "VkVideoCodingQualityPresetFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -412,13 +412,13 @@ impl crate::extensions::khr_video_queue::VideoCodingQualityPresetFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingControlFlagsKHR.html) · Bitmask of [`VideoCodingControlFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodingControlFlagsKHR.html) · Bitmask of [`VideoCodingControlFlagBitsKHR`]"]
     #[doc(alias = "VkVideoCodingControlFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoCodingControlFlagsKHR : u32 { const DEFAULT_KHR
     = VideoCodingControlFlagBitsKHR::DEFAULT_KHR.0; const RESET_KHR =
     VideoCodingControlFlagBitsKHR::RESET_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingControlFlagBitsKHR.html) · Bits enum of [`VideoCodingControlFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodingControlFlagBitsKHR.html) · Bits enum of [`VideoCodingControlFlagsKHR`]
 #[doc(alias = "VkVideoCodingControlFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -447,7 +447,7 @@ impl crate::extensions::khr_video_queue::VideoCodingControlFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const RESET_KHR: Self = Self(1);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueryResultStatusKHR.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryResultStatusKHR.html) · Enum
 #[doc(alias = "VkQueryResultStatusKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -471,92 +471,92 @@ impl crate::extensions::khr_video_queue::QueryResultStatusKHR {
     pub const NOT_READY_KHR: Self = Self(0);
     pub const COMPLETE_KHR: Self = Self(1);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceVideoCapabilitiesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_video_profile: *const crate::extensions::khr_video_queue::VideoProfileKHR,
-        p_capabilities: *mut crate::extensions::khr_video_queue::VideoCapabilitiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_video_profile: *const crate::extensions::khr_video_queue::VideoProfileKHR,
+    p_capabilities: *mut crate::extensions::khr_video_queue::VideoCapabilitiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceVideoFormatPropertiesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_video_format_info: *const crate::extensions::khr_video_queue::PhysicalDeviceVideoFormatInfoKHR,
-        p_video_format_property_count: *mut u32,
-        p_video_format_properties: *mut crate::extensions::khr_video_queue::VideoFormatPropertiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateVideoSessionKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_video_format_info: *const crate::extensions::khr_video_queue::PhysicalDeviceVideoFormatInfoKHR,
+    p_video_format_property_count: *mut u32,
+    p_video_format_properties: *mut crate::extensions::khr_video_queue::VideoFormatPropertiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateVideoSessionKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateVideoSessionKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::khr_video_queue::VideoSessionCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_video_session: *mut crate::extensions::khr_video_queue::VideoSessionKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyVideoSessionKHR.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::khr_video_queue::VideoSessionCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_video_session: *mut crate::extensions::khr_video_queue::VideoSessionKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyVideoSessionKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyVideoSessionKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        video_session: crate::extensions::khr_video_queue::VideoSessionKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateVideoSessionParametersKHR.html) · Function
+    device: crate::vk1_0::Device,
+    video_session: crate::extensions::khr_video_queue::VideoSessionKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateVideoSessionParametersKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateVideoSessionParametersKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_video_session_parameters: *mut crate::extensions::khr_video_queue::VideoSessionParametersKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateVideoSessionParametersKHR.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_video_session_parameters: *mut crate::extensions::khr_video_queue::VideoSessionParametersKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateVideoSessionParametersKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkUpdateVideoSessionParametersKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR,
-        p_update_info: *const crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyVideoSessionParametersKHR.html) · Function
+    device: crate::vk1_0::Device,
+    video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR,
+    p_update_info: *const crate::extensions::khr_video_queue::VideoSessionParametersUpdateInfoKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyVideoSessionParametersKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyVideoSessionParametersKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetVideoSessionMemoryRequirementsKHR.html) · Function
+    device: crate::vk1_0::Device,
+    video_session_parameters: crate::extensions::khr_video_queue::VideoSessionParametersKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetVideoSessionMemoryRequirementsKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetVideoSessionMemoryRequirementsKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        video_session: crate::extensions::khr_video_queue::VideoSessionKHR,
-        p_video_session_memory_requirements_count: *mut u32,
-        p_video_session_memory_requirements: *mut crate::extensions::khr_video_queue::VideoGetMemoryPropertiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindVideoSessionMemoryKHR.html) · Function
+    device: crate::vk1_0::Device,
+    video_session: crate::extensions::khr_video_queue::VideoSessionKHR,
+    p_video_session_memory_requirements_count: *mut u32,
+    p_video_session_memory_requirements: *mut crate::extensions::khr_video_queue::VideoGetMemoryPropertiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindVideoSessionMemoryKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindVideoSessionMemoryKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        video_session: crate::extensions::khr_video_queue::VideoSessionKHR,
-        video_session_bind_memory_count: u32,
-        p_video_session_bind_memories: *const crate::extensions::khr_video_queue::VideoBindMemoryKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginVideoCodingKHR.html) · Function
+    device: crate::vk1_0::Device,
+    video_session: crate::extensions::khr_video_queue::VideoSessionKHR,
+    video_session_bind_memory_count: u32,
+    p_video_session_bind_memories: *const crate::extensions::khr_video_queue::VideoBindMemoryKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginVideoCodingKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginVideoCodingKHR = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_begin_info: *const crate::extensions::khr_video_queue::VideoBeginCodingInfoKHR,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdControlVideoCodingKHR.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_begin_info: *const crate::extensions::khr_video_queue::VideoBeginCodingInfoKHR,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdControlVideoCodingKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdControlVideoCodingKHR = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_coding_control_info: *const crate::extensions::khr_video_queue::VideoCodingControlInfoKHR,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndVideoCodingKHR.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_coding_control_info: *const crate::extensions::khr_video_queue::VideoCodingControlInfoKHR,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndVideoCodingKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndVideoCodingKHR = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_end_coding_info: *const crate::extensions::khr_video_queue::VideoEndCodingInfoKHR,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_end_coding_info: *const crate::extensions::khr_video_queue::VideoEndCodingInfoKHR,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHR>
 for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoProfilesKHRBuilder<'_>>
@@ -601,7 +601,7 @@ impl<'a> crate::ExtendableFrom<'a, QueueFamilyQueryResultStatusProperties2KHR>
 for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, QueueFamilyQueryResultStatusProperties2KHRBuilder<'_>>
 for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoQueueFamilyProperties2KHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoQueueFamilyProperties2KHR.html) · Structure
 #[doc(alias = "VkVideoQueueFamilyProperties2KHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -639,7 +639,7 @@ impl VideoQueueFamilyProperties2KHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoQueueFamilyProperties2KHR.html) · Builder of [`VideoQueueFamilyProperties2KHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoQueueFamilyProperties2KHR.html) · Builder of [`VideoQueueFamilyProperties2KHR`]
 #[repr(transparent)]
 pub struct VideoQueueFamilyProperties2KHRBuilder<'a>(
     VideoQueueFamilyProperties2KHR,
@@ -690,7 +690,7 @@ impl<'a> std::ops::DerefMut for VideoQueueFamilyProperties2KHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyQueryResultStatusProperties2KHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyQueryResultStatusProperties2KHR.html) · Structure
 #[doc(alias = "VkQueueFamilyQueryResultStatusProperties2KHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -730,7 +730,7 @@ impl QueueFamilyQueryResultStatusProperties2KHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkQueueFamilyQueryResultStatusProperties2KHR.html) · Builder of [`QueueFamilyQueryResultStatusProperties2KHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyQueryResultStatusProperties2KHR.html) · Builder of [`QueueFamilyQueryResultStatusProperties2KHR`]
 #[repr(transparent)]
 pub struct QueueFamilyQueryResultStatusProperties2KHRBuilder<'a>(
     QueueFamilyQueryResultStatusProperties2KHR,
@@ -779,7 +779,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyQueryResultStatusProperties2KHRBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoProfilesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfilesKHR.html) · Structure
 #[doc(alias = "VkVideoProfilesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -820,7 +820,7 @@ impl VideoProfilesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoProfilesKHR.html) · Builder of [`VideoProfilesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfilesKHR.html) · Builder of [`VideoProfilesKHR`]
 #[repr(transparent)]
 pub struct VideoProfilesKHRBuilder<'a>(
     VideoProfilesKHR,
@@ -874,7 +874,7 @@ impl<'a> std::ops::DerefMut for VideoProfilesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVideoFormatInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVideoFormatInfoKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVideoFormatInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -915,7 +915,7 @@ impl PhysicalDeviceVideoFormatInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVideoFormatInfoKHR.html) · Builder of [`PhysicalDeviceVideoFormatInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVideoFormatInfoKHR.html) · Builder of [`PhysicalDeviceVideoFormatInfoKHR`]
 #[repr(transparent)]
 pub struct PhysicalDeviceVideoFormatInfoKHRBuilder<'a>(
     PhysicalDeviceVideoFormatInfoKHR,
@@ -972,7 +972,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVideoFormatInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoFormatPropertiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoFormatPropertiesKHR.html) · Structure
 #[doc(alias = "VkVideoFormatPropertiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1010,7 +1010,7 @@ impl VideoFormatPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoFormatPropertiesKHR.html) · Builder of [`VideoFormatPropertiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoFormatPropertiesKHR.html) · Builder of [`VideoFormatPropertiesKHR`]
 #[repr(transparent)]
 pub struct VideoFormatPropertiesKHRBuilder<'a>(
     VideoFormatPropertiesKHR,
@@ -1055,7 +1055,7 @@ impl<'a> std::ops::DerefMut for VideoFormatPropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoProfileKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html) · Structure
 #[doc(alias = "VkVideoProfileKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1102,7 +1102,7 @@ impl VideoProfileKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoProfileKHR.html) · Builder of [`VideoProfileKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html) · Builder of [`VideoProfileKHR`]
 #[repr(transparent)]
 pub struct VideoProfileKHRBuilder<'a>(VideoProfileKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> VideoProfileKHRBuilder<'a> {
@@ -1174,7 +1174,7 @@ impl<'a> std::ops::DerefMut for VideoProfileKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilitiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkVideoCapabilitiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1248,7 +1248,7 @@ impl VideoCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCapabilitiesKHR.html) · Builder of [`VideoCapabilitiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCapabilitiesKHR.html) · Builder of [`VideoCapabilitiesKHR`]
 #[repr(transparent)]
 pub struct VideoCapabilitiesKHRBuilder<'a>(
     VideoCapabilitiesKHR,
@@ -1365,7 +1365,7 @@ impl<'a> std::ops::DerefMut for VideoCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoGetMemoryPropertiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoGetMemoryPropertiesKHR.html) · Structure
 #[doc(alias = "VkVideoGetMemoryPropertiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1406,7 +1406,7 @@ impl VideoGetMemoryPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoGetMemoryPropertiesKHR.html) · Builder of [`VideoGetMemoryPropertiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoGetMemoryPropertiesKHR.html) · Builder of [`VideoGetMemoryPropertiesKHR`]
 #[repr(transparent)]
 pub struct VideoGetMemoryPropertiesKHRBuilder<'a>(
     VideoGetMemoryPropertiesKHR,
@@ -1460,7 +1460,7 @@ impl<'a> std::ops::DerefMut for VideoGetMemoryPropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoBindMemoryKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoBindMemoryKHR.html) · Structure
 #[doc(alias = "VkVideoBindMemoryKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1507,7 +1507,7 @@ impl VideoBindMemoryKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoBindMemoryKHR.html) · Builder of [`VideoBindMemoryKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoBindMemoryKHR.html) · Builder of [`VideoBindMemoryKHR`]
 #[repr(transparent)]
 pub struct VideoBindMemoryKHRBuilder<'a>(
     VideoBindMemoryKHR,
@@ -1570,7 +1570,7 @@ impl<'a> std::ops::DerefMut for VideoBindMemoryKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoPictureResourceKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoPictureResourceKHR.html) · Structure
 #[doc(alias = "VkVideoPictureResourceKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1617,7 +1617,7 @@ impl VideoPictureResourceKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoPictureResourceKHR.html) · Builder of [`VideoPictureResourceKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoPictureResourceKHR.html) · Builder of [`VideoPictureResourceKHR`]
 #[repr(transparent)]
 pub struct VideoPictureResourceKHRBuilder<'a>(
     VideoPictureResourceKHR,
@@ -1683,7 +1683,7 @@ impl<'a> std::ops::DerefMut for VideoPictureResourceKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoReferenceSlotKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoReferenceSlotKHR.html) · Structure
 #[doc(alias = "VkVideoReferenceSlotKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1724,7 +1724,7 @@ impl VideoReferenceSlotKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoReferenceSlotKHR.html) · Builder of [`VideoReferenceSlotKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoReferenceSlotKHR.html) · Builder of [`VideoReferenceSlotKHR`]
 #[repr(transparent)]
 pub struct VideoReferenceSlotKHRBuilder<'a>(
     VideoReferenceSlotKHR,
@@ -1778,7 +1778,7 @@ impl<'a> std::ops::DerefMut for VideoReferenceSlotKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionCreateInfoKHR.html) · Structure
 #[doc(alias = "VkVideoSessionCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1843,7 +1843,7 @@ impl VideoSessionCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionCreateInfoKHR.html) · Builder of [`VideoSessionCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionCreateInfoKHR.html) · Builder of [`VideoSessionCreateInfoKHR`]
 #[repr(transparent)]
 pub struct VideoSessionCreateInfoKHRBuilder<'a>(
     VideoSessionCreateInfoKHR,
@@ -1951,7 +1951,7 @@ impl<'a> std::ops::DerefMut for VideoSessionCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionParametersCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionParametersCreateInfoKHR.html) · Structure
 #[doc(alias = "VkVideoSessionParametersCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1995,7 +1995,7 @@ impl VideoSessionParametersCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionParametersCreateInfoKHR.html) · Builder of [`VideoSessionParametersCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionParametersCreateInfoKHR.html) · Builder of [`VideoSessionParametersCreateInfoKHR`]
 #[repr(transparent)]
 pub struct VideoSessionParametersCreateInfoKHRBuilder<'a>(
     VideoSessionParametersCreateInfoKHR,
@@ -2057,7 +2057,7 @@ impl<'a> std::ops::DerefMut for VideoSessionParametersCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionParametersUpdateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionParametersUpdateInfoKHR.html) · Structure
 #[doc(alias = "VkVideoSessionParametersUpdateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -2095,7 +2095,7 @@ impl VideoSessionParametersUpdateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoSessionParametersUpdateInfoKHR.html) · Builder of [`VideoSessionParametersUpdateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionParametersUpdateInfoKHR.html) · Builder of [`VideoSessionParametersUpdateInfoKHR`]
 #[repr(transparent)]
 pub struct VideoSessionParametersUpdateInfoKHRBuilder<'a>(
     VideoSessionParametersUpdateInfoKHR,
@@ -2143,7 +2143,7 @@ impl<'a> std::ops::DerefMut for VideoSessionParametersUpdateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoBeginCodingInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoBeginCodingInfoKHR.html) · Structure
 #[doc(alias = "VkVideoBeginCodingInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -2196,7 +2196,7 @@ impl VideoBeginCodingInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoBeginCodingInfoKHR.html) · Builder of [`VideoBeginCodingInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoBeginCodingInfoKHR.html) · Builder of [`VideoBeginCodingInfoKHR`]
 #[repr(transparent)]
 pub struct VideoBeginCodingInfoKHRBuilder<'a>(
     VideoBeginCodingInfoKHR,
@@ -2281,7 +2281,7 @@ impl<'a> std::ops::DerefMut for VideoBeginCodingInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEndCodingInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEndCodingInfoKHR.html) · Structure
 #[doc(alias = "VkVideoEndCodingInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -2319,7 +2319,7 @@ impl VideoEndCodingInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoEndCodingInfoKHR.html) · Builder of [`VideoEndCodingInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEndCodingInfoKHR.html) · Builder of [`VideoEndCodingInfoKHR`]
 #[repr(transparent)]
 pub struct VideoEndCodingInfoKHRBuilder<'a>(
     VideoEndCodingInfoKHR,
@@ -2367,7 +2367,7 @@ impl<'a> std::ops::DerefMut for VideoEndCodingInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingControlInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodingControlInfoKHR.html) · Structure
 #[doc(alias = "VkVideoCodingControlInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -2405,7 +2405,7 @@ impl VideoCodingControlInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoCodingControlInfoKHR.html) · Builder of [`VideoCodingControlInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodingControlInfoKHR.html) · Builder of [`VideoCodingControlInfoKHR`]
 #[repr(transparent)]
 pub struct VideoCodingControlInfoKHRBuilder<'a>(
     VideoCodingControlInfoKHR,
@@ -2457,7 +2457,7 @@ impl<'a> std::ops::DerefMut for VideoCodingControlInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceVideoCapabilitiesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceVideoCapabilitiesKHR")]
     pub unsafe fn get_physical_device_video_capabilities_khr(
         &self,
@@ -2483,7 +2483,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceVideoFormatPropertiesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceVideoFormatPropertiesKHR")]
     pub unsafe fn get_physical_device_video_format_properties_khr(
         &self,
@@ -2533,7 +2533,7 @@ impl crate::InstanceLoader {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateVideoSessionKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateVideoSessionKHR.html) · Function
     #[doc(alias = "vkCreateVideoSessionKHR")]
     pub unsafe fn create_video_session_khr(
         &self,
@@ -2557,7 +2557,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyVideoSessionKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyVideoSessionKHR.html) · Function
     #[doc(alias = "vkDestroyVideoSessionKHR")]
     pub unsafe fn destroy_video_session_khr(
         &self,
@@ -2577,7 +2577,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateVideoSessionParametersKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateVideoSessionParametersKHR.html) · Function
     #[doc(alias = "vkCreateVideoSessionParametersKHR")]
     pub unsafe fn create_video_session_parameters_khr(
         &self,
@@ -2603,7 +2603,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateVideoSessionParametersKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateVideoSessionParametersKHR.html) · Function
     #[doc(alias = "vkUpdateVideoSessionParametersKHR")]
     pub unsafe fn update_video_session_parameters_khr(
         &self,
@@ -2622,7 +2622,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyVideoSessionParametersKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyVideoSessionParametersKHR.html) · Function
     #[doc(alias = "vkDestroyVideoSessionParametersKHR")]
     pub unsafe fn destroy_video_session_parameters_khr(
         &self,
@@ -2644,7 +2644,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetVideoSessionMemoryRequirementsKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetVideoSessionMemoryRequirementsKHR.html) · Function
     #[doc(alias = "vkGetVideoSessionMemoryRequirementsKHR")]
     pub unsafe fn get_video_session_memory_requirements_khr(
         &self,
@@ -2687,7 +2687,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindVideoSessionMemoryKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindVideoSessionMemoryKHR.html) · Function
     #[doc(alias = "vkBindVideoSessionMemoryKHR")]
     pub unsafe fn bind_video_session_memory_khr(
         &self,
@@ -2708,7 +2708,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginVideoCodingKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginVideoCodingKHR.html) · Function
     #[doc(alias = "vkCmdBeginVideoCodingKHR")]
     pub unsafe fn cmd_begin_video_coding_khr(
         &self,
@@ -2723,7 +2723,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdControlVideoCodingKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdControlVideoCodingKHR.html) · Function
     #[doc(alias = "vkCmdControlVideoCodingKHR")]
     pub unsafe fn cmd_control_video_coding_khr(
         &self,
@@ -2738,7 +2738,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndVideoCodingKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndVideoCodingKHR.html) · Function
     #[doc(alias = "vkCmdEndVideoCodingKHR")]
     pub unsafe fn cmd_end_video_coding_khr(
         &self,

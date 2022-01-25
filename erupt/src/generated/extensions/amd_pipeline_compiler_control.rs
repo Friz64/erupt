@@ -13,7 +13,7 @@ impl crate::vk1_0::StructureType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlFlagsAMD.html) · Bitmask of [`PipelineCompilerControlFlagBitsAMD`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCompilerControlFlagsAMD.html) · Bitmask of [`PipelineCompilerControlFlagBitsAMD`]"]
     #[doc(alias = "VkPipelineCompilerControlFlagsAMD")] #[derive(Default)]
     #[repr(transparent)] pub struct PipelineCompilerControlFlagsAMD : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -48,7 +48,7 @@ impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMD>
 for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMDBuilder<'_>>
 for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Structure
 #[doc(alias = "VkPipelineCompilerControlCreateInfoAMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -86,7 +86,7 @@ impl PipelineCompilerControlCreateInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Builder of [`PipelineCompilerControlCreateInfoAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Builder of [`PipelineCompilerControlCreateInfoAMD`]
 #[repr(transparent)]
 pub struct PipelineCompilerControlCreateInfoAMDBuilder<'a>(
     PipelineCompilerControlCreateInfoAMD,

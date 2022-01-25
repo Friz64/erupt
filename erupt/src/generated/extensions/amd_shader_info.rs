@@ -11,7 +11,7 @@ pub const AMD_SHADER_INFO_EXTENSION_NAME: *const std::os::raw::c_char = crate::c
 pub const FN_GET_SHADER_INFO_AMD: *const std::os::raw::c_char = crate::cstr!(
     "vkGetShaderInfoAMD"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderInfoTypeAMD.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderInfoTypeAMD.html) · Enum
 #[doc(alias = "VkShaderInfoTypeAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -35,17 +35,17 @@ impl crate::extensions::amd_shader_info::ShaderInfoTypeAMD {
     pub const BINARY_AMD: Self = Self(1);
     pub const DISASSEMBLY_AMD: Self = Self(2);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetShaderInfoAMD.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderInfoAMD.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetShaderInfoAMD = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        pipeline: crate::vk1_0::Pipeline,
-        shader_stage: crate::vk1_0::ShaderStageFlagBits,
-        info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD,
-        p_info_size: *mut usize,
-        p_info: *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Structure
+    device: crate::vk1_0::Device,
+    pipeline: crate::vk1_0::Pipeline,
+    shader_stage: crate::vk1_0::ShaderStageFlagBits,
+    info_type: crate::extensions::amd_shader_info::ShaderInfoTypeAMD,
+    p_info_size: *mut usize,
+    p_info: *mut std::ffi::c_void,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderResourceUsageAMD.html) · Structure
 #[doc(alias = "VkShaderResourceUsageAMD")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -86,7 +86,7 @@ impl ShaderResourceUsageAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderResourceUsageAMD.html) · Builder of [`ShaderResourceUsageAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderResourceUsageAMD.html) · Builder of [`ShaderResourceUsageAMD`]
 #[repr(transparent)]
 pub struct ShaderResourceUsageAMDBuilder<'a>(
     ShaderResourceUsageAMD,
@@ -159,7 +159,7 @@ impl<'a> std::ops::DerefMut for ShaderResourceUsageAMDBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Structure
 #[doc(alias = "VkShaderStatisticsInfoAMD")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -206,7 +206,7 @@ impl ShaderStatisticsInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Builder of [`ShaderStatisticsInfoAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Builder of [`ShaderStatisticsInfoAMD`]
 #[repr(transparent)]
 pub struct ShaderStatisticsInfoAMDBuilder<'a>(
     ShaderStatisticsInfoAMD,
@@ -295,7 +295,7 @@ impl<'a> std::ops::DerefMut for ShaderStatisticsInfoAMDBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetShaderInfoAMD.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetShaderInfoAMD.html) · Function
     #[doc(alias = "vkGetShaderInfoAMD")]
     pub unsafe fn get_shader_info_amd(
         &self,

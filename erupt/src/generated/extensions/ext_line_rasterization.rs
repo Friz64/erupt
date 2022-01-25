@@ -21,7 +21,7 @@ impl crate::vk1_0::StructureType {
     pub const PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT: Self = Self(1000259001);
     pub const PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT: Self = Self(1000259002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkLineRasterizationModeEXT.html) · Enum
 #[doc(alias = "VkLineRasterizationModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -47,13 +47,13 @@ impl crate::extensions::ext_line_rasterization::LineRasterizationModeEXT {
     pub const BRESENHAM_EXT: Self = Self(2);
     pub const RECTANGULAR_SMOOTH_EXT: Self = Self(3);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetLineStippleEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        line_stipple_factor: u32,
-        line_stipple_pattern: u16,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    line_stipple_factor: u32,
+    line_stipple_pattern: u16,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceLineRasterizationFeaturesEXT>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'_>>
@@ -74,7 +74,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceLineRasterizationFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -129,7 +129,7 @@ impl PhysicalDeviceLineRasterizationFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceLineRasterizationFeaturesEXTBuilder<'a>(
     PhysicalDeviceLineRasterizationFeaturesEXT,
@@ -211,7 +211,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationFeaturesEXTBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceLineRasterizationPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -254,7 +254,7 @@ impl PhysicalDeviceLineRasterizationPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceLineRasterizationPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceLineRasterizationPropertiesEXTBuilder<'a>(
     PhysicalDeviceLineRasterizationPropertiesEXT,
@@ -306,7 +306,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationPropertiesEXTBuil
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationLineStateCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -358,7 +358,7 @@ impl PipelineRasterizationLineStateCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationLineStateCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationLineStateCreateInfoEXT`]
 #[repr(transparent)]
 pub struct PipelineRasterizationLineStateCreateInfoEXTBuilder<'a>(
     PipelineRasterizationLineStateCreateInfoEXT,
@@ -432,7 +432,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationLineStateCreateInfoEXTBuild
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLineStippleEXT.html) · Function
     #[doc(alias = "vkCmdSetLineStippleEXT")]
     pub unsafe fn cmd_set_line_stipple_ext(
         &self,

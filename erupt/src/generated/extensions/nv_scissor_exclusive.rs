@@ -22,14 +22,14 @@ impl crate::vk1_0::StructureType {
     );
     pub const PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV: Self = Self(1000205002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetExclusiveScissorNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_exclusive_scissor: u32,
-        exclusive_scissor_count: u32,
-        p_exclusive_scissors: *const crate::vk1_0::Rect2D,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    first_exclusive_scissor: u32,
+    exclusive_scissor_count: u32,
+    p_exclusive_scissors: *const crate::vk1_0::Rect2D,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExclusiveScissorFeaturesNV>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>>
@@ -44,7 +44,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExclusiveScissorFeaturesNV>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExclusiveScissorFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -84,7 +84,7 @@ impl PhysicalDeviceExclusiveScissorFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Builder of [`PhysicalDeviceExclusiveScissorFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Builder of [`PhysicalDeviceExclusiveScissorFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceExclusiveScissorFeaturesNVBuilder<'a>(
     PhysicalDeviceExclusiveScissorFeaturesNV,
@@ -132,7 +132,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExclusiveScissorFeaturesNVBuilder<
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineViewportExclusiveScissorStateCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -178,7 +178,7 @@ impl PipelineViewportExclusiveScissorStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Builder of [`PipelineViewportExclusiveScissorStateCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Builder of [`PipelineViewportExclusiveScissorStateCreateInfoNV`]
 #[repr(transparent)]
 pub struct PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a>(
     PipelineViewportExclusiveScissorStateCreateInfoNV,
@@ -238,7 +238,7 @@ for PipelineViewportExclusiveScissorStateCreateInfoNVBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetExclusiveScissorNV.html) · Function
     #[doc(alias = "vkCmdSetExclusiveScissorNV")]
     pub unsafe fn cmd_set_exclusive_scissor_nv(
         &self,

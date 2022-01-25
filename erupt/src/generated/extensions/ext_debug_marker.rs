@@ -33,36 +33,36 @@ impl crate::vk1_0::StructureType {
     pub const DEBUG_MARKER_OBJECT_TAG_INFO_EXT: Self = Self(1000022001);
     pub const DEBUG_MARKER_MARKER_INFO_EXT: Self = Self(1000022002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugMarkerSetObjectNameEXT = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_name_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html) · Function
+    device: crate::vk1_0::Device,
+    p_name_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectNameInfoEXT,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDebugMarkerSetObjectTagEXT = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_tag_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerBeginEXT.html) · Function
+    device: crate::vk1_0::Device,
+    p_tag_info: *const crate::extensions::ext_debug_marker::DebugMarkerObjectTagInfoEXT,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerBeginEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDebugMarkerBeginEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDebugMarkerEndEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerInsertEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerInsertEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDebugMarkerInsertEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Structure
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_marker_info: *const crate::extensions::ext_debug_marker::DebugMarkerMarkerInfoEXT,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Structure
 #[doc(alias = "VkDebugMarkerObjectNameInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -106,7 +106,7 @@ impl DebugMarkerObjectNameInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Builder of [`DebugMarkerObjectNameInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Builder of [`DebugMarkerObjectNameInfoEXT`]
 #[repr(transparent)]
 pub struct DebugMarkerObjectNameInfoEXTBuilder<'a>(
     DebugMarkerObjectNameInfoEXT,
@@ -166,7 +166,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerObjectNameInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Structure
 #[doc(alias = "VkDebugMarkerObjectTagInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -216,7 +216,7 @@ impl DebugMarkerObjectTagInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Builder of [`DebugMarkerObjectTagInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Builder of [`DebugMarkerObjectTagInfoEXT`]
 #[repr(transparent)]
 pub struct DebugMarkerObjectTagInfoEXTBuilder<'a>(
     DebugMarkerObjectTagInfoEXT,
@@ -288,7 +288,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerObjectTagInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Structure
 #[doc(alias = "VkDebugMarkerMarkerInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -329,7 +329,7 @@ impl DebugMarkerMarkerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Builder of [`DebugMarkerMarkerInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Builder of [`DebugMarkerMarkerInfoEXT`]
 #[repr(transparent)]
 pub struct DebugMarkerMarkerInfoEXTBuilder<'a>(
     DebugMarkerMarkerInfoEXT,
@@ -384,7 +384,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerMarkerInfoEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectNameEXT.html) · Function
     #[doc(alias = "vkDebugMarkerSetObjectNameEXT")]
     pub unsafe fn debug_marker_set_object_name_ext(
         &self,
@@ -398,7 +398,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDebugMarkerSetObjectTagEXT.html) · Function
     #[doc(alias = "vkDebugMarkerSetObjectTagEXT")]
     pub unsafe fn debug_marker_set_object_tag_ext(
         &self,
@@ -412,7 +412,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerBeginEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerBeginEXT.html) · Function
     #[doc(alias = "vkCmdDebugMarkerBeginEXT")]
     pub unsafe fn cmd_debug_marker_begin_ext(
         &self,
@@ -427,7 +427,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerEndEXT.html) · Function
     #[doc(alias = "vkCmdDebugMarkerEndEXT")]
     pub unsafe fn cmd_debug_marker_end_ext(
         &self,
@@ -439,7 +439,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDebugMarkerInsertEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDebugMarkerInsertEXT.html) · Function
     #[doc(alias = "vkCmdDebugMarkerInsertEXT")]
     pub unsafe fn cmd_debug_marker_insert_ext(
         &self,

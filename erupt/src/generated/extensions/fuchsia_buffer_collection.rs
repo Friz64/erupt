@@ -29,12 +29,12 @@ pub const FN_GET_BUFFER_COLLECTION_PROPERTIES_FUCHSIA: *const std::os::raw::c_ch
 );
 crate::non_dispatchable_handle!(
     BufferCollectionFUCHSIA, BUFFER_COLLECTION_FUCHSIA,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionFUCHSIA.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionFUCHSIA.html) · Non-dispatchable Handle",
     "VkBufferCollectionFUCHSIA"
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatConstraintsFlagsFUCHSIA.html) · Bitmask of [`ImageFormatConstraintsFlagBitsFUCHSIA`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatConstraintsFlagsFUCHSIA.html) · Bitmask of [`ImageFormatConstraintsFlagBitsFUCHSIA`]"]
     #[doc(alias = "VkImageFormatConstraintsFlagsFUCHSIA")] #[derive(Default)]
     #[repr(transparent)] pub struct ImageFormatConstraintsFlagsFUCHSIA : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -80,7 +80,7 @@ impl crate::vk1_0::ObjectType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageConstraintsInfoFlagsFUCHSIA.html) · Bitmask of [`ImageConstraintsInfoFlagBitsFUCHSIA`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageConstraintsInfoFlagsFUCHSIA.html) · Bitmask of [`ImageConstraintsInfoFlagBitsFUCHSIA`]"]
     #[doc(alias = "VkImageConstraintsInfoFlagsFUCHSIA")] #[derive(Default)]
     #[repr(transparent)] pub struct ImageConstraintsInfoFlagsFUCHSIA : u32 { const
     CPU_READ_RARELY_FUCHSIA =
@@ -94,7 +94,7 @@ bitflags::bitflags! {
     PROTECTED_OPTIONAL_FUCHSIA =
     ImageConstraintsInfoFlagBitsFUCHSIA::PROTECTED_OPTIONAL_FUCHSIA.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageConstraintsInfoFlagBitsFUCHSIA.html) · Bits enum of [`ImageConstraintsInfoFlagsFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageConstraintsInfoFlagBitsFUCHSIA.html) · Bits enum of [`ImageConstraintsInfoFlagsFUCHSIA`]
 #[doc(alias = "VkImageConstraintsInfoFlagBitsFUCHSIA")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -133,42 +133,42 @@ impl crate::extensions::fuchsia_buffer_collection::ImageConstraintsInfoFlagBitsF
 impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
     pub const BUFFER_COLLECTION_FUCHSIA_EXT: Self = Self(1000366000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBufferCollectionFUCHSIA.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateBufferCollectionFUCHSIA.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateBufferCollectionFUCHSIA = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::fuchsia_buffer_collection::BufferCollectionCreateInfoFUCHSIA,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_collection: *mut crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetBufferCollectionBufferConstraintsFUCHSIA.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::fuchsia_buffer_collection::BufferCollectionCreateInfoFUCHSIA,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_collection: *mut crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetBufferCollectionBufferConstraintsFUCHSIA.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetBufferCollectionBufferConstraintsFUCHSIA = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
-        p_buffer_constraints_info: *const crate::extensions::fuchsia_buffer_collection::BufferConstraintsInfoFUCHSIA,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetBufferCollectionImageConstraintsFUCHSIA.html) · Function
+    device: crate::vk1_0::Device,
+    collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
+    p_buffer_constraints_info: *const crate::extensions::fuchsia_buffer_collection::BufferConstraintsInfoFUCHSIA,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetBufferCollectionImageConstraintsFUCHSIA.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetBufferCollectionImageConstraintsFUCHSIA = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
-        p_image_constraints_info: *const crate::extensions::fuchsia_buffer_collection::ImageConstraintsInfoFUCHSIA,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBufferCollectionFUCHSIA.html) · Function
+    device: crate::vk1_0::Device,
+    collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
+    p_image_constraints_info: *const crate::extensions::fuchsia_buffer_collection::ImageConstraintsInfoFUCHSIA,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyBufferCollectionFUCHSIA.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyBufferCollectionFUCHSIA = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferCollectionPropertiesFUCHSIA.html) · Function
+    device: crate::vk1_0::Device,
+    collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferCollectionPropertiesFUCHSIA.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetBufferCollectionPropertiesFUCHSIA = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
-        p_properties: *mut crate::extensions::fuchsia_buffer_collection::BufferCollectionPropertiesFUCHSIA,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
+    p_properties: *mut crate::extensions::fuchsia_buffer_collection::BufferCollectionPropertiesFUCHSIA,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryBufferCollectionFUCHSIA>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryBufferCollectionFUCHSIABuilder<'_>>
@@ -181,7 +181,7 @@ impl<'a> crate::ExtendableFrom<'a, BufferCollectionImageCreateInfoFUCHSIA>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, BufferCollectionImageCreateInfoFUCHSIABuilder<'_>>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryBufferCollectionFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryBufferCollectionFUCHSIA.html) · Structure
 #[doc(alias = "VkImportMemoryBufferCollectionFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -222,7 +222,7 @@ impl ImportMemoryBufferCollectionFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryBufferCollectionFUCHSIA.html) · Builder of [`ImportMemoryBufferCollectionFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryBufferCollectionFUCHSIA.html) · Builder of [`ImportMemoryBufferCollectionFUCHSIA`]
 #[repr(transparent)]
 pub struct ImportMemoryBufferCollectionFUCHSIABuilder<'a>(
     ImportMemoryBufferCollectionFUCHSIA,
@@ -279,7 +279,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryBufferCollectionFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionImageCreateInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionImageCreateInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionImageCreateInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -320,7 +320,7 @@ impl BufferCollectionImageCreateInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionImageCreateInfoFUCHSIA.html) · Builder of [`BufferCollectionImageCreateInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionImageCreateInfoFUCHSIA.html) · Builder of [`BufferCollectionImageCreateInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct BufferCollectionImageCreateInfoFUCHSIABuilder<'a>(
     BufferCollectionImageCreateInfoFUCHSIA,
@@ -377,7 +377,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionImageCreateInfoFUCHSIABuilder<'a
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionBufferCreateInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionBufferCreateInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionBufferCreateInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -418,7 +418,7 @@ impl BufferCollectionBufferCreateInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionBufferCreateInfoFUCHSIA.html) · Builder of [`BufferCollectionBufferCreateInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionBufferCreateInfoFUCHSIA.html) · Builder of [`BufferCollectionBufferCreateInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct BufferCollectionBufferCreateInfoFUCHSIABuilder<'a>(
     BufferCollectionBufferCreateInfoFUCHSIA,
@@ -475,7 +475,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionBufferCreateInfoFUCHSIABuilder<'
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionCreateInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionCreateInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionCreateInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -513,7 +513,7 @@ impl BufferCollectionCreateInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionCreateInfoFUCHSIA.html) · Builder of [`BufferCollectionCreateInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionCreateInfoFUCHSIA.html) · Builder of [`BufferCollectionCreateInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct BufferCollectionCreateInfoFUCHSIABuilder<'a>(
     BufferCollectionCreateInfoFUCHSIA,
@@ -561,7 +561,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionCreateInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionPropertiesFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionPropertiesFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionPropertiesFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -632,7 +632,7 @@ impl BufferCollectionPropertiesFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionPropertiesFUCHSIA.html) · Builder of [`BufferCollectionPropertiesFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionPropertiesFUCHSIA.html) · Builder of [`BufferCollectionPropertiesFUCHSIA`]
 #[repr(transparent)]
 pub struct BufferCollectionPropertiesFUCHSIABuilder<'a>(
     BufferCollectionPropertiesFUCHSIA,
@@ -764,7 +764,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionPropertiesFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferConstraintsInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferConstraintsInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -808,7 +808,7 @@ impl BufferConstraintsInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferConstraintsInfoFUCHSIA.html) · Builder of [`BufferConstraintsInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferConstraintsInfoFUCHSIA.html) · Builder of [`BufferConstraintsInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct BufferConstraintsInfoFUCHSIABuilder<'a>(
     BufferConstraintsInfoFUCHSIA,
@@ -871,7 +871,7 @@ impl<'a> std::ops::DerefMut for BufferConstraintsInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSysmemColorSpaceFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSysmemColorSpaceFUCHSIA.html) · Structure
 #[doc(alias = "VkSysmemColorSpaceFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -909,7 +909,7 @@ impl SysmemColorSpaceFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSysmemColorSpaceFUCHSIA.html) · Builder of [`SysmemColorSpaceFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSysmemColorSpaceFUCHSIA.html) · Builder of [`SysmemColorSpaceFUCHSIA`]
 #[repr(transparent)]
 pub struct SysmemColorSpaceFUCHSIABuilder<'a>(
     SysmemColorSpaceFUCHSIA,
@@ -954,7 +954,7 @@ impl<'a> std::ops::DerefMut for SysmemColorSpaceFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatConstraintsInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkImageFormatConstraintsInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1007,7 +1007,7 @@ impl ImageFormatConstraintsInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatConstraintsInfoFUCHSIA.html) · Builder of [`ImageFormatConstraintsInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatConstraintsInfoFUCHSIA.html) · Builder of [`ImageFormatConstraintsInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct ImageFormatConstraintsInfoFUCHSIABuilder<'a>(
     ImageFormatConstraintsInfoFUCHSIA,
@@ -1097,7 +1097,7 @@ impl<'a> std::ops::DerefMut for ImageFormatConstraintsInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageConstraintsInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkImageConstraintsInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1144,7 +1144,7 @@ impl ImageConstraintsInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageConstraintsInfoFUCHSIA.html) · Builder of [`ImageConstraintsInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageConstraintsInfoFUCHSIA.html) · Builder of [`ImageConstraintsInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct ImageConstraintsInfoFUCHSIABuilder<'a>(
     ImageConstraintsInfoFUCHSIA,
@@ -1211,7 +1211,7 @@ impl<'a> std::ops::DerefMut for ImageConstraintsInfoFUCHSIABuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionConstraintsInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionConstraintsInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1267,7 +1267,7 @@ impl BufferCollectionConstraintsInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBufferCollectionConstraintsInfoFUCHSIA.html) · Builder of [`BufferCollectionConstraintsInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionConstraintsInfoFUCHSIA.html) · Builder of [`BufferCollectionConstraintsInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct BufferCollectionConstraintsInfoFUCHSIABuilder<'a>(
     BufferCollectionConstraintsInfoFUCHSIA,
@@ -1357,7 +1357,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionConstraintsInfoFUCHSIABuilder<'a
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateBufferCollectionFUCHSIA.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateBufferCollectionFUCHSIA.html) · Function
     #[doc(alias = "vkCreateBufferCollectionFUCHSIA")]
     pub unsafe fn create_buffer_collection_fuchsia(
         &self,
@@ -1383,7 +1383,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetBufferCollectionBufferConstraintsFUCHSIA.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetBufferCollectionBufferConstraintsFUCHSIA.html) · Function
     #[doc(alias = "vkSetBufferCollectionBufferConstraintsFUCHSIA")]
     pub unsafe fn set_buffer_collection_buffer_constraints_fuchsia(
         &self,
@@ -1402,7 +1402,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetBufferCollectionImageConstraintsFUCHSIA.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetBufferCollectionImageConstraintsFUCHSIA.html) · Function
     #[doc(alias = "vkSetBufferCollectionImageConstraintsFUCHSIA")]
     pub unsafe fn set_buffer_collection_image_constraints_fuchsia(
         &self,
@@ -1421,7 +1421,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyBufferCollectionFUCHSIA.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyBufferCollectionFUCHSIA.html) · Function
     #[doc(alias = "vkDestroyBufferCollectionFUCHSIA")]
     pub unsafe fn destroy_buffer_collection_fuchsia(
         &self,
@@ -1443,7 +1443,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetBufferCollectionPropertiesFUCHSIA.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetBufferCollectionPropertiesFUCHSIA.html) · Function
     #[doc(alias = "vkGetBufferCollectionPropertiesFUCHSIA")]
     pub unsafe fn get_buffer_collection_properties_fuchsia(
         &self,

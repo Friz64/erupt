@@ -17,64 +17,64 @@ pub const KHR_MAINTENANCE2_SPEC_VERSION: u32 = 1;
 pub const KHR_MAINTENANCE2_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_maintenance2"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPointClippingBehaviorKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPointClippingBehaviorKHR.html) · Alias
 #[doc(alias = "VkPointClippingBehaviorKHR")]
 #[allow(non_camel_case_types)]
 pub type PointClippingBehaviorKHR = crate::vk1_1::PointClippingBehavior;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTessellationDomainOriginKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTessellationDomainOriginKHR.html) · Alias
 #[doc(alias = "VkTessellationDomainOriginKHR")]
 #[allow(non_camel_case_types)]
 pub type TessellationDomainOriginKHR = crate::vk1_1::TessellationDomainOrigin;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInputAttachmentAspectReferenceKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInputAttachmentAspectReferenceKHR.html) · Alias
 #[doc(alias = "VkInputAttachmentAspectReferenceKHR")]
 #[allow(non_camel_case_types)]
 pub type InputAttachmentAspectReferenceKHR = crate::vk1_1::InputAttachmentAspectReference;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkInputAttachmentAspectReferenceKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInputAttachmentAspectReferenceKHR.html) · Alias
 #[doc(alias = "VkInputAttachmentAspectReferenceKHR")]
 #[allow(non_camel_case_types)]
 pub type InputAttachmentAspectReferenceKHRBuilder<'a> = crate::vk1_1::InputAttachmentAspectReferenceBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassInputAttachmentAspectCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassInputAttachmentAspectCreateInfoKHR.html) · Alias
 #[doc(alias = "VkRenderPassInputAttachmentAspectCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type RenderPassInputAttachmentAspectCreateInfoKHR = crate::vk1_1::RenderPassInputAttachmentAspectCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassInputAttachmentAspectCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassInputAttachmentAspectCreateInfoKHR.html) · Alias
 #[doc(alias = "VkRenderPassInputAttachmentAspectCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type RenderPassInputAttachmentAspectCreateInfoKHRBuilder<'a> = crate::vk1_1::RenderPassInputAttachmentAspectCreateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePointClippingPropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePointClippingPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDevicePointClippingPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDevicePointClippingPropertiesKHR = crate::vk1_1::PhysicalDevicePointClippingProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePointClippingPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePointClippingPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDevicePointClippingPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDevicePointClippingPropertiesKHRBuilder<'a> = crate::vk1_1::PhysicalDevicePointClippingPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewUsageCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewUsageCreateInfoKHR.html) · Alias
 #[doc(alias = "VkImageViewUsageCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ImageViewUsageCreateInfoKHR = crate::vk1_1::ImageViewUsageCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewUsageCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewUsageCreateInfoKHR.html) · Alias
 #[doc(alias = "VkImageViewUsageCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ImageViewUsageCreateInfoKHRBuilder<'a> = crate::vk1_1::ImageViewUsageCreateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfoKHR.html) · Alias
 #[doc(alias = "VkPipelineTessellationDomainOriginStateCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PipelineTessellationDomainOriginStateCreateInfoKHR = crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfoKHR.html) · Alias
 #[doc(alias = "VkPipelineTessellationDomainOriginStateCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PipelineTessellationDomainOriginStateCreateInfoKHRBuilder<'a> = crate::vk1_1::PipelineTessellationDomainOriginStateCreateInfoBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_maintenance2`]
 impl crate::vk1_0::ImageCreateFlagBits {
     pub const BLOCK_TEXEL_VIEW_COMPATIBLE_KHR: Self = Self::BLOCK_TEXEL_VIEW_COMPATIBLE;

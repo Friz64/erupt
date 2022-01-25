@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceCoherentMemoryFeaturesAMD>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCoherentMemoryFeaturesAMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -62,7 +62,7 @@ impl PhysicalDeviceCoherentMemoryFeaturesAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Builder of [`PhysicalDeviceCoherentMemoryFeaturesAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Builder of [`PhysicalDeviceCoherentMemoryFeaturesAMD`]
 #[repr(transparent)]
 pub struct PhysicalDeviceCoherentMemoryFeaturesAMDBuilder<'a>(
     PhysicalDeviceCoherentMemoryFeaturesAMD,

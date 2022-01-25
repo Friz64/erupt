@@ -21,27 +21,27 @@ pub const KHR_MAINTENANCE3_EXTENSION_NAME: *const std::os::raw::c_char = crate::
 pub const FN_GET_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkGetDescriptorSetLayoutSupportKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceMaintenance3PropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceMaintenance3PropertiesKHR = crate::vk1_1::PhysicalDeviceMaintenance3Properties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMaintenance3PropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceMaintenance3PropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceMaintenance3PropertiesKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceMaintenance3PropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupportKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutSupportKHR.html) · Alias
 #[doc(alias = "VkDescriptorSetLayoutSupportKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorSetLayoutSupportKHR = crate::vk1_1::DescriptorSetLayoutSupport;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorSetLayoutSupportKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutSupportKHR.html) · Alias
 #[doc(alias = "VkDescriptorSetLayoutSupportKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorSetLayoutSupportKHRBuilder<'a> = crate::vk1_1::DescriptorSetLayoutSupportBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDescriptorSetLayoutSupportKHR = crate::vk1_1::PFN_vkGetDescriptorSetLayoutSupport;
 ///Provided by [`crate::extensions::khr_maintenance3`]
@@ -53,7 +53,7 @@ impl crate::vk1_0::StructureType {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDescriptorSetLayoutSupportKHR.html) · Function
     #[doc(alias = "vkGetDescriptorSetLayoutSupportKHR")]
     pub unsafe fn get_descriptor_set_layout_support_khr(
         &self,

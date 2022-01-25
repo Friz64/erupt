@@ -15,26 +15,26 @@ pub const FN_ACQUIRE_DRM_DISPLAY_EXT: *const std::os::raw::c_char = crate::cstr!
 pub const FN_GET_DRM_DISPLAY_EXT: *const std::os::raw::c_char = crate::cstr!(
     "vkGetDrmDisplayEXT"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireDrmDisplayEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireDrmDisplayEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireDrmDisplayEXT = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        drm_fd: i32,
-        display: crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDrmDisplayEXT.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    drm_fd: i32,
+    display: crate::extensions::khr_display::DisplayKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDrmDisplayEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDrmDisplayEXT = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        drm_fd: i32,
-        connector_id: u32,
-        display: *mut crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::vk1_0::Result;
+    physical_device: crate::vk1_0::PhysicalDevice,
+    drm_fd: i32,
+    connector_id: u32,
+    display: *mut crate::extensions::khr_display::DisplayKHR,
+) -> crate::vk1_0::Result;
 ///Provided by [`crate::extensions::ext_acquire_drm_display`]
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireDrmDisplayEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireDrmDisplayEXT.html) · Function
     #[doc(alias = "vkAcquireDrmDisplayEXT")]
     pub unsafe fn acquire_drm_display_ext(
         &self,
@@ -48,7 +48,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDrmDisplayEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDrmDisplayEXT.html) · Function
     #[doc(alias = "vkGetDrmDisplayEXT")]
     pub unsafe fn get_drm_display_ext(
         &self,

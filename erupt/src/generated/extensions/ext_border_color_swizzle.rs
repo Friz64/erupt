@@ -32,7 +32,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceBorderColorSwizzleFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerBorderColorComponentMappingCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerBorderColorComponentMappingCreateInfoEXT.html) · Structure
 #[doc(alias = "VkSamplerBorderColorComponentMappingCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -78,7 +78,7 @@ impl SamplerBorderColorComponentMappingCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerBorderColorComponentMappingCreateInfoEXT.html) · Builder of [`SamplerBorderColorComponentMappingCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerBorderColorComponentMappingCreateInfoEXT.html) · Builder of [`SamplerBorderColorComponentMappingCreateInfoEXT`]
 #[repr(transparent)]
 pub struct SamplerBorderColorComponentMappingCreateInfoEXTBuilder<'a>(
     SamplerBorderColorComponentMappingCreateInfoEXT,
@@ -134,7 +134,7 @@ for SamplerBorderColorComponentMappingCreateInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBorderColorSwizzleFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBorderColorSwizzleFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceBorderColorSwizzleFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -183,7 +183,7 @@ impl PhysicalDeviceBorderColorSwizzleFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBorderColorSwizzleFeaturesEXT.html) · Builder of [`PhysicalDeviceBorderColorSwizzleFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBorderColorSwizzleFeaturesEXT.html) · Builder of [`PhysicalDeviceBorderColorSwizzleFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceBorderColorSwizzleFeaturesEXTBuilder<'a>(
     PhysicalDeviceBorderColorSwizzleFeaturesEXT,

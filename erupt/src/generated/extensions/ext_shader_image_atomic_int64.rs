@@ -25,7 +25,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -71,7 +71,7 @@ impl PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT.html) · Builder of [`PhysicalDeviceShaderImageAtomicInt64FeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT.html) · Builder of [`PhysicalDeviceShaderImageAtomicInt64FeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXTBuilder<'a>(
     PhysicalDeviceShaderImageAtomicInt64FeaturesEXT,

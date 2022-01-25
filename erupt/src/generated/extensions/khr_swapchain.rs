@@ -45,7 +45,7 @@ pub const FN_GET_PHYSICAL_DEVICE_PRESENT_RECTANGLES_KHR: *const std::os::raw::c_
 );
 crate::non_dispatchable_handle!(
     SwapchainKHR, SWAPCHAIN_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainKHR.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainKHR.html) · Non-dispatchable Handle",
     "VkSwapchainKHR"
 );
 ///Provided by [`crate::extensions::khr_swapchain`]
@@ -74,7 +74,7 @@ impl crate::vk1_0::ObjectType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentModeFlagsKHR.html) · Bitmask of [`DeviceGroupPresentModeFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentModeFlagsKHR.html) · Bitmask of [`DeviceGroupPresentModeFlagBitsKHR`]"]
     #[doc(alias = "VkDeviceGroupPresentModeFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct DeviceGroupPresentModeFlagsKHR : u32 { const
     LOCAL_KHR = DeviceGroupPresentModeFlagBitsKHR::LOCAL_KHR.0; const REMOTE_KHR =
@@ -82,7 +82,7 @@ bitflags::bitflags! {
     DeviceGroupPresentModeFlagBitsKHR::SUM_KHR.0; const LOCAL_MULTI_DEVICE_KHR =
     DeviceGroupPresentModeFlagBitsKHR::LOCAL_MULTI_DEVICE_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentModeFlagBitsKHR.html) · Bits enum of [`DeviceGroupPresentModeFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentModeFlagBitsKHR.html) · Bits enum of [`DeviceGroupPresentModeFlagsKHR`]
 #[doc(alias = "VkDeviceGroupPresentModeFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -117,14 +117,14 @@ impl crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateFlagsKHR.html) · Bitmask of [`SwapchainCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainCreateFlagsKHR.html) · Bitmask of [`SwapchainCreateFlagBitsKHR`]"]
     #[doc(alias = "VkSwapchainCreateFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct SwapchainCreateFlagsKHR : u32 { const SPLIT_INSTANCE_BIND_REGIONS_KHR =
     SwapchainCreateFlagBitsKHR::SPLIT_INSTANCE_BIND_REGIONS_KHR.0; const PROTECTED_KHR =
     SwapchainCreateFlagBitsKHR::PROTECTED_KHR.0; const MUTABLE_FORMAT_KHR =
     SwapchainCreateFlagBitsKHR::MUTABLE_FORMAT_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateFlagBitsKHR.html) · Bits enum of [`SwapchainCreateFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainCreateFlagBitsKHR.html) · Bits enum of [`SwapchainCreateFlagsKHR`]
 #[doc(alias = "VkSwapchainCreateFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -156,78 +156,78 @@ impl crate::extensions::khr_swapchain::SwapchainCreateFlagBitsKHR {
     pub const SPLIT_INSTANCE_BIND_REGIONS_KHR: Self = Self(1);
     pub const PROTECTED_KHR: Self = Self(2);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSwapchainKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSwapchainKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_swapchain: *mut crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySwapchainKHR.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_swapchain: *mut crate::extensions::khr_swapchain::SwapchainKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySwapchainKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainImagesKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        p_swapchain_image_count: *mut u32,
-        p_swapchain_images: *mut crate::vk1_0::Image,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImageKHR.html) · Function
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    p_swapchain_image_count: *mut u32,
+    p_swapchain_images: *mut crate::vk1_0::Image,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireNextImageKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        timeout: u64,
-        semaphore: crate::vk1_0::Semaphore,
-        fence: crate::vk1_0::Fence,
-        p_image_index: *mut u32,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueuePresentKHR.html) · Function
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    timeout: u64,
+    semaphore: crate::vk1_0::Semaphore,
+    fence: crate::vk1_0::Fence,
+    p_image_index: *mut u32,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkQueuePresentKHR = unsafe extern "system" fn(
-        queue: crate::vk1_0::Queue,
-        p_present_info: *const crate::extensions::khr_swapchain::PresentInfoKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function
+    queue: crate::vk1_0::Queue,
+    p_present_info: *const crate::extensions::khr_swapchain::PresentInfoKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceGroupPresentCapabilitiesKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_device_group_present_capabilities: *mut crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function
+    device: crate::vk1_0::Device,
+    p_device_group_present_capabilities: *mut crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceGroupSurfacePresentModesKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImage2KHR.html) · Function
+    device: crate::vk1_0::Device,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_modes: *mut crate::extensions::khr_swapchain::DeviceGroupPresentModeFlagsKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImage2KHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireNextImage2KHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_acquire_info: *const crate::extensions::khr_swapchain::AcquireNextImageInfoKHR,
-        p_image_index: *mut u32,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function
+    device: crate::vk1_0::Device,
+    p_acquire_info: *const crate::extensions::khr_swapchain::AcquireNextImageInfoKHR,
+    p_image_index: *mut u32,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDevicePresentRectanglesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_rect_count: *mut u32,
-        p_rects: *mut crate::vk1_0::Rect2D,
-    ) -> crate::vk1_0::Result;
+    physical_device: crate::vk1_0::PhysicalDevice,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_rect_count: *mut u32,
+    p_rects: *mut crate::vk1_0::Rect2D,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, ImageSwapchainCreateInfoKHR>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ImageSwapchainCreateInfoKHRBuilder<'_>>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Structure
 #[doc(alias = "VkSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -314,7 +314,7 @@ for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, DeviceGroupSwapchainCreateInfoKHRBuilder<'_>>
 for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Builder of [`SwapchainCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Builder of [`SwapchainCreateInfoKHR`]
 #[repr(transparent)]
 pub struct SwapchainCreateInfoKHRBuilder<'a>(
     SwapchainCreateInfoKHR,
@@ -468,7 +468,7 @@ impl<'a> std::ops::DerefMut for SwapchainCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentInfoKHR.html) · Structure
 #[doc(alias = "VkPresentInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -525,7 +525,7 @@ for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, DeviceGroupPresentInfoKHRBuilder<'_>>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentInfoKHR.html) · Builder of [`PresentInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentInfoKHR.html) · Builder of [`PresentInfoKHR`]
 #[repr(transparent)]
 pub struct PresentInfoKHRBuilder<'a>(PresentInfoKHR, std::marker::PhantomData<&'a ()>);
 impl<'a> PresentInfoKHRBuilder<'a> {
@@ -599,7 +599,7 @@ impl<'a> crate::ExtendableFrom<'a, BindImageMemorySwapchainInfoKHR>
 for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, BindImageMemorySwapchainInfoKHRBuilder<'_>>
 for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkDeviceGroupPresentCapabilitiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -640,7 +640,7 @@ impl DeviceGroupPresentCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Builder of [`DeviceGroupPresentCapabilitiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Builder of [`DeviceGroupPresentCapabilitiesKHR`]
 #[repr(transparent)]
 pub struct DeviceGroupPresentCapabilitiesKHRBuilder<'a>(
     DeviceGroupPresentCapabilitiesKHR,
@@ -697,7 +697,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupPresentCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSwapchainCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html) · Structure
 #[doc(alias = "VkImageSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -735,7 +735,7 @@ impl ImageSwapchainCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageSwapchainCreateInfoKHR.html) · Builder of [`ImageSwapchainCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html) · Builder of [`ImageSwapchainCreateInfoKHR`]
 #[repr(transparent)]
 pub struct ImageSwapchainCreateInfoKHRBuilder<'a>(
     ImageSwapchainCreateInfoKHR,
@@ -783,7 +783,7 @@ impl<'a> std::ops::DerefMut for ImageSwapchainCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemorySwapchainInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemorySwapchainInfoKHR.html) · Structure
 #[doc(alias = "VkBindImageMemorySwapchainInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -824,7 +824,7 @@ impl BindImageMemorySwapchainInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemorySwapchainInfoKHR.html) · Builder of [`BindImageMemorySwapchainInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemorySwapchainInfoKHR.html) · Builder of [`BindImageMemorySwapchainInfoKHR`]
 #[repr(transparent)]
 pub struct BindImageMemorySwapchainInfoKHRBuilder<'a>(
     BindImageMemorySwapchainInfoKHR,
@@ -881,7 +881,7 @@ impl<'a> std::ops::DerefMut for BindImageMemorySwapchainInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireNextImageInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAcquireNextImageInfoKHR.html) · Structure
 #[doc(alias = "VkAcquireNextImageInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -931,7 +931,7 @@ impl AcquireNextImageInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAcquireNextImageInfoKHR.html) · Builder of [`AcquireNextImageInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAcquireNextImageInfoKHR.html) · Builder of [`AcquireNextImageInfoKHR`]
 #[repr(transparent)]
 pub struct AcquireNextImageInfoKHRBuilder<'a>(
     AcquireNextImageInfoKHR,
@@ -1003,7 +1003,7 @@ impl<'a> std::ops::DerefMut for AcquireNextImageInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentInfoKHR.html) · Structure
 #[doc(alias = "VkDeviceGroupPresentInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1047,7 +1047,7 @@ impl DeviceGroupPresentInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupPresentInfoKHR.html) · Builder of [`DeviceGroupPresentInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentInfoKHR.html) · Builder of [`DeviceGroupPresentInfoKHR`]
 #[repr(transparent)]
 pub struct DeviceGroupPresentInfoKHRBuilder<'a>(
     DeviceGroupPresentInfoKHR,
@@ -1102,7 +1102,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupPresentInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSwapchainCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupSwapchainCreateInfoKHR.html) · Structure
 #[doc(alias = "VkDeviceGroupSwapchainCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1140,7 +1140,7 @@ impl DeviceGroupSwapchainCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSwapchainCreateInfoKHR.html) · Builder of [`DeviceGroupSwapchainCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupSwapchainCreateInfoKHR.html) · Builder of [`DeviceGroupSwapchainCreateInfoKHR`]
 #[repr(transparent)]
 pub struct DeviceGroupSwapchainCreateInfoKHRBuilder<'a>(
     DeviceGroupSwapchainCreateInfoKHR,
@@ -1195,7 +1195,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupSwapchainCreateInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSwapchainKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSwapchainKHR.html) · Function
     #[doc(alias = "vkCreateSwapchainKHR")]
     pub unsafe fn create_swapchain_khr(
         &self,
@@ -1217,7 +1217,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySwapchainKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySwapchainKHR.html) · Function
     #[doc(alias = "vkDestroySwapchainKHR")]
     pub unsafe fn destroy_swapchain_khr(
         &self,
@@ -1237,7 +1237,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainImagesKHR.html) · Function
     #[doc(alias = "vkGetSwapchainImagesKHR")]
     pub unsafe fn get_swapchain_images_khr(
         &self,
@@ -1267,7 +1267,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImageKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImageKHR.html) · Function
     #[doc(alias = "vkAcquireNextImageKHR")]
     pub unsafe fn acquire_next_image_khr(
         &self,
@@ -1290,7 +1290,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkQueuePresentKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkQueuePresentKHR.html) · Function
     #[doc(alias = "vkQueuePresentKHR")]
     pub unsafe fn queue_present_khr(
         &self,
@@ -1303,7 +1303,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupPresentCapabilitiesKHR.html) · Function
     #[doc(alias = "vkGetDeviceGroupPresentCapabilitiesKHR")]
     pub unsafe fn get_device_group_present_capabilities_khr(
         &self,
@@ -1325,7 +1325,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupSurfacePresentModesKHR.html) · Function
     #[doc(alias = "vkGetDeviceGroupSurfacePresentModesKHR")]
     pub unsafe fn get_device_group_surface_present_modes_khr(
         &self,
@@ -1342,7 +1342,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireNextImage2KHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireNextImage2KHR.html) · Function
     #[doc(alias = "vkAcquireNextImage2KHR")]
     pub unsafe fn acquire_next_image2_khr(
         &self,
@@ -1358,7 +1358,7 @@ impl crate::DeviceLoader {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDevicePresentRectanglesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDevicePresentRectanglesKHR")]
     pub unsafe fn get_physical_device_present_rectangles_khr(
         &self,

@@ -20,20 +20,20 @@ impl crate::vk1_0::StructureType {
     pub const IMAGE_VIEW_HANDLE_INFO_NVX: Self = Self(1000030000);
     pub const IMAGE_VIEW_ADDRESS_PROPERTIES_NVX: Self = Self(1000030001);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandleNVX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageViewHandleNVX = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_info: *const crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX,
-    ) -> u32;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewAddressNVX.html) · Function
+    device: crate::vk1_0::Device,
+    p_info: *const crate::extensions::nvx_image_view_handle::ImageViewHandleInfoNVX,
+) -> u32;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewAddressNVX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetImageViewAddressNVX = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        image_view: crate::vk1_0::ImageView,
-        p_properties: *mut crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Structure
+    device: crate::vk1_0::Device,
+    image_view: crate::vk1_0::ImageView,
+    p_properties: *mut crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewHandleInfoNVX.html) · Structure
 #[doc(alias = "VkImageViewHandleInfoNVX")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -77,7 +77,7 @@ impl ImageViewHandleInfoNVX {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewHandleInfoNVX.html) · Builder of [`ImageViewHandleInfoNVX`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewHandleInfoNVX.html) · Builder of [`ImageViewHandleInfoNVX`]
 #[repr(transparent)]
 pub struct ImageViewHandleInfoNVXBuilder<'a>(
     ImageViewHandleInfoNVX,
@@ -137,7 +137,7 @@ impl<'a> std::ops::DerefMut for ImageViewHandleInfoNVXBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Structure
 #[doc(alias = "VkImageViewAddressPropertiesNVX")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -178,7 +178,7 @@ impl ImageViewAddressPropertiesNVX {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Builder of [`ImageViewAddressPropertiesNVX`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Builder of [`ImageViewAddressPropertiesNVX`]
 #[repr(transparent)]
 pub struct ImageViewAddressPropertiesNVXBuilder<'a>(
     ImageViewAddressPropertiesNVX,
@@ -239,7 +239,7 @@ impl<'a> std::ops::DerefMut for ImageViewAddressPropertiesNVXBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewHandleNVX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewHandleNVX.html) · Function
     #[doc(alias = "vkGetImageViewHandleNVX")]
     pub unsafe fn get_image_view_handle_nvx(
         &self,
@@ -251,7 +251,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetImageViewAddressNVX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetImageViewAddressNVX.html) · Function
     #[doc(alias = "vkGetImageViewAddressNVX")]
     pub unsafe fn get_image_view_address_nvx(
         &self,

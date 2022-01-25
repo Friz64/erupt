@@ -72,7 +72,7 @@ impl crate::vk1_0::StructureType {
         1000148002,
     );
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBlendOverlapEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlendOverlapEXT.html) · Enum
 #[doc(alias = "VkBlendOverlapEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -120,7 +120,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -166,7 +166,7 @@ impl PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a>(
     PhysicalDeviceBlendOperationAdvancedFeaturesEXT,
@@ -222,7 +222,7 @@ for PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -298,7 +298,7 @@ impl PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Builder of [`PhysicalDeviceBlendOperationAdvancedPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a>(
     PhysicalDeviceBlendOperationAdvancedPropertiesEXT,
@@ -409,7 +409,7 @@ for PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineColorBlendAdvancedStateCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -458,7 +458,7 @@ impl PipelineColorBlendAdvancedStateCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Builder of [`PipelineColorBlendAdvancedStateCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Builder of [`PipelineColorBlendAdvancedStateCreateInfoEXT`]
 #[repr(transparent)]
 pub struct PipelineColorBlendAdvancedStateCreateInfoEXTBuilder<'a>(
     PipelineColorBlendAdvancedStateCreateInfoEXT,

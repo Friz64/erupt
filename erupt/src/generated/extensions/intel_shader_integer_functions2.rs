@@ -29,7 +29,7 @@ impl<
     'a,
     PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'_>,
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -72,7 +72,7 @@ impl PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Builder of [`PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Builder of [`PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTELBuilder<'a>(
     PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL,

@@ -20,18 +20,18 @@ impl crate::vk1_0::StructureType {
 impl crate::extensions::khr_surface::ColorSpaceKHR {
     pub const DISPLAY_NATIVE_AMD: Self = Self(1000213000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLocalDimmingAMD.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetLocalDimmingAMD = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swap_chain: crate::extensions::khr_swapchain::SwapchainKHR,
-        local_dimming_enable: crate::vk1_0::Bool32,
-    ) -> ();
+    device: crate::vk1_0::Device,
+    swap_chain: crate::extensions::khr_swapchain::SwapchainKHR,
+    local_dimming_enable: crate::vk1_0::Bool32,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, SwapchainDisplayNativeHdrCreateInfoAMD>
 for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'_>>
 for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure
 #[doc(alias = "VkDisplayNativeHdrSurfaceCapabilitiesAMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -69,7 +69,7 @@ impl DisplayNativeHdrSurfaceCapabilitiesAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Builder of [`DisplayNativeHdrSurfaceCapabilitiesAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Builder of [`DisplayNativeHdrSurfaceCapabilitiesAMD`]
 #[repr(transparent)]
 pub struct DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a>(
     DisplayNativeHdrSurfaceCapabilitiesAMD,
@@ -117,7 +117,7 @@ impl<'a> std::ops::DerefMut for DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Structure
 #[doc(alias = "VkSwapchainDisplayNativeHdrCreateInfoAMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -155,7 +155,7 @@ impl SwapchainDisplayNativeHdrCreateInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Builder of [`SwapchainDisplayNativeHdrCreateInfoAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Builder of [`SwapchainDisplayNativeHdrCreateInfoAMD`]
 #[repr(transparent)]
 pub struct SwapchainDisplayNativeHdrCreateInfoAMDBuilder<'a>(
     SwapchainDisplayNativeHdrCreateInfoAMD,
@@ -215,7 +215,7 @@ for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBui
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetLocalDimmingAMD.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetLocalDimmingAMD.html) · Function
     #[doc(alias = "vkSetLocalDimmingAMD")]
     pub unsafe fn set_local_dimming_amd(
         &self,

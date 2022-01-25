@@ -11,17 +11,17 @@ pub const EXT_HOST_QUERY_RESET_EXTENSION_NAME: *const std::os::raw::c_char = cra
 pub const FN_RESET_QUERY_POOL_EXT: *const std::os::raw::c_char = crate::cstr!(
     "vkResetQueryPoolEXT"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceHostQueryResetFeaturesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceHostQueryResetFeaturesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceHostQueryResetFeaturesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceHostQueryResetFeaturesEXT = crate::vk1_2::PhysicalDeviceHostQueryResetFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceHostQueryResetFeaturesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceHostQueryResetFeaturesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceHostQueryResetFeaturesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceHostQueryResetFeaturesEXTBuilder<'a> = crate::vk1_2::PhysicalDeviceHostQueryResetFeaturesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPoolEXT.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkResetQueryPoolEXT.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkResetQueryPoolEXT = crate::vk1_2::PFN_vkResetQueryPool;
 ///Provided by [`crate::extensions::ext_host_query_reset`]
@@ -32,7 +32,7 @@ impl crate::vk1_0::StructureType {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkResetQueryPoolEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkResetQueryPoolEXT.html) · Function
     #[doc(alias = "vkResetQueryPoolEXT")]
     pub unsafe fn reset_query_pool_ext(
         &self,

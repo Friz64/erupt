@@ -16,7 +16,7 @@ pub const FN_CMD_SUBPASS_SHADING_HUAWEI: *const std::os::raw::c_char = crate::cs
     "vkCmdSubpassShadingHUAWEI"
 );
 ///Provided by [`crate::extensions::huawei_subpass_shading`]
-impl crate::extensions::khr_synchronization2::PipelineStageFlagBits2KHR {
+impl crate::vk1_3::PipelineStageFlagBits2 {
     pub const SUBPASS_SHADING_HUAWEI: Self = Self(549755813888);
 }
 ///Provided by [`crate::extensions::huawei_subpass_shading`]
@@ -33,18 +33,18 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI: Self = Self(1000369001);
     pub const PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI: Self = Self(1000369002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        renderpass: crate::vk1_0::RenderPass,
-        p_max_workgroup_size: *mut crate::vk1_0::Extent2D,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSubpassShadingHUAWEI.html) · Function
+    device: crate::vk1_0::Device,
+    renderpass: crate::vk1_0::RenderPass,
+    p_max_workgroup_size: *mut crate::vk1_0::Extent2D,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSubpassShadingHUAWEI.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSubpassShadingHUAWEI = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEI>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'_>>
@@ -63,7 +63,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceSubpassShadingPropertiesHUAWEIBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html) · Structure
 #[doc(alias = "VkSubpassShadingPipelineCreateInfoHUAWEI")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -104,7 +104,7 @@ impl SubpassShadingPipelineCreateInfoHUAWEI {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html) · Builder of [`SubpassShadingPipelineCreateInfoHUAWEI`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html) · Builder of [`SubpassShadingPipelineCreateInfoHUAWEI`]
 #[repr(transparent)]
 pub struct SubpassShadingPipelineCreateInfoHUAWEIBuilder<'a>(
     SubpassShadingPipelineCreateInfoHUAWEI,
@@ -158,7 +158,7 @@ impl<'a> std::ops::DerefMut for SubpassShadingPipelineCreateInfoHUAWEIBuilder<'a
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubpassShadingPropertiesHUAWEI.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingPropertiesHUAWEI.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSubpassShadingPropertiesHUAWEI")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -204,7 +204,7 @@ impl PhysicalDeviceSubpassShadingPropertiesHUAWEI {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubpassShadingPropertiesHUAWEI.html) · Builder of [`PhysicalDeviceSubpassShadingPropertiesHUAWEI`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingPropertiesHUAWEI.html) · Builder of [`PhysicalDeviceSubpassShadingPropertiesHUAWEI`]
 #[repr(transparent)]
 pub struct PhysicalDeviceSubpassShadingPropertiesHUAWEIBuilder<'a>(
     PhysicalDeviceSubpassShadingPropertiesHUAWEI,
@@ -259,7 +259,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubpassShadingPropertiesHUAWEIBuil
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubpassShadingFeaturesHUAWEI.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingFeaturesHUAWEI.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSubpassShadingFeaturesHUAWEI")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -299,7 +299,7 @@ impl PhysicalDeviceSubpassShadingFeaturesHUAWEI {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSubpassShadingFeaturesHUAWEI.html) · Builder of [`PhysicalDeviceSubpassShadingFeaturesHUAWEI`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingFeaturesHUAWEI.html) · Builder of [`PhysicalDeviceSubpassShadingFeaturesHUAWEI`]
 #[repr(transparent)]
 pub struct PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilder<'a>(
     PhysicalDeviceSubpassShadingFeaturesHUAWEI,
@@ -352,7 +352,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubpassShadingFeaturesHUAWEIBuilde
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI.html) · Function
     #[doc(alias = "vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI")]
     pub unsafe fn get_device_subpass_shading_max_workgroup_size_huawei(
         &self,
@@ -367,7 +367,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSubpassShadingHUAWEI.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSubpassShadingHUAWEI.html) · Function
     #[doc(alias = "vkCmdSubpassShadingHUAWEI")]
     pub unsafe fn cmd_subpass_shading_huawei(
         &self,

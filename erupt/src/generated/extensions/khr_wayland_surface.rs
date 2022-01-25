@@ -17,7 +17,7 @@ pub const FN_GET_PHYSICAL_DEVICE_WAYLAND_PRESENTATION_SUPPORT_KHR: *const std::o
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateFlagsKHR.html) · Bitmask of [`WaylandSurfaceCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWaylandSurfaceCreateFlagsKHR.html) · Bitmask of [`WaylandSurfaceCreateFlagBitsKHR`]"]
     #[doc(alias = "VkWaylandSurfaceCreateFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct WaylandSurfaceCreateFlagsKHR : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -48,22 +48,22 @@ impl std::fmt::Debug for WaylandSurfaceCreateFlagBitsKHR {
 impl crate::vk1_0::StructureType {
     pub const WAYLAND_SURFACE_CREATE_INFO_KHR: Self = Self(1000006000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateWaylandSurfaceKHR = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWaylandPresentationSupportKHR.html) · Function
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::khr_wayland_surface::WaylandSurfaceCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceWaylandPresentationSupportKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        display: *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Bool32;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Structure
+    physical_device: crate::vk1_0::PhysicalDevice,
+    queue_family_index: u32,
+    display: *mut std::ffi::c_void,
+) -> crate::vk1_0::Bool32;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkWaylandSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -107,7 +107,7 @@ impl WaylandSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Builder of [`WaylandSurfaceCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Builder of [`WaylandSurfaceCreateInfoKHR`]
 #[repr(transparent)]
 pub struct WaylandSurfaceCreateInfoKHRBuilder<'a>(
     WaylandSurfaceCreateInfoKHR,
@@ -171,7 +171,7 @@ impl<'a> std::ops::DerefMut for WaylandSurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateWaylandSurfaceKHR.html) · Function
     #[doc(alias = "vkCreateWaylandSurfaceKHR")]
     pub unsafe fn create_wayland_surface_khr(
         &self,
@@ -195,7 +195,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceWaylandPresentationSupportKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceWaylandPresentationSupportKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceWaylandPresentationSupportKHR")]
     pub unsafe fn get_physical_device_wayland_presentation_support_khr(
         &self,

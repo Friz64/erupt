@@ -17,7 +17,7 @@ pub const FN_GET_PHYSICAL_DEVICE_XCB_PRESENTATION_SUPPORT_KHR: *const std::os::r
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXcbSurfaceCreateFlagsKHR.html) · Bitmask of [`XcbSurfaceCreateFlagBitsKHR`]"]
     #[doc(alias = "VkXcbSurfaceCreateFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct XcbSurfaceCreateFlagsKHR : u32 { #[cfg(empty_bitflag_workaround)] const
     EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -48,23 +48,23 @@ impl std::fmt::Debug for XcbSurfaceCreateFlagBitsKHR {
 impl crate::vk1_0::StructureType {
     pub const XCB_SURFACE_CREATE_INFO_KHR: Self = Self(1000005000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateXcbSurfaceKHR = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::khr_xcb_surface::XcbSurfaceCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        connection: *mut std::ffi::c_void,
-        visual_id: u32,
-    ) -> crate::vk1_0::Bool32;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Structure
+    physical_device: crate::vk1_0::PhysicalDevice,
+    queue_family_index: u32,
+    connection: *mut std::ffi::c_void,
+    visual_id: u32,
+) -> crate::vk1_0::Bool32;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkXcbSurfaceCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -108,7 +108,7 @@ impl XcbSurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Builder of [`XcbSurfaceCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Builder of [`XcbSurfaceCreateInfoKHR`]
 #[repr(transparent)]
 pub struct XcbSurfaceCreateInfoKHRBuilder<'a>(
     XcbSurfaceCreateInfoKHR,
@@ -172,7 +172,7 @@ impl<'a> std::ops::DerefMut for XcbSurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateXcbSurfaceKHR.html) · Function
     #[doc(alias = "vkCreateXcbSurfaceKHR")]
     pub unsafe fn create_xcb_surface_khr(
         &self,
@@ -194,7 +194,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceXcbPresentationSupportKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceXcbPresentationSupportKHR")]
     pub unsafe fn get_physical_device_xcb_presentation_support_khr(
         &self,

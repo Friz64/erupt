@@ -58,82 +58,82 @@ pub const FN_CREATE_RAY_TRACING_PIPELINES_NV: *const std::os::raw::c_char = crat
 pub const FN_GET_RAY_TRACING_SHADER_GROUP_HANDLES_NV: *const std::os::raw::c_char = crate::cstr!(
     "vkGetRayTracingShaderGroupHandlesNV"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryFlagsNV.html) · Alias
 #[doc(alias = "VkGeometryFlagsNV")]
 #[allow(non_camel_case_types)]
 pub type GeometryFlagsNV = crate::extensions::khr_acceleration_structure::GeometryFlagsKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryInstanceFlagsNV.html) · Alias
 #[doc(alias = "VkGeometryInstanceFlagsNV")]
 #[allow(non_camel_case_types)]
 pub type GeometryInstanceFlagsNV = crate::extensions::khr_acceleration_structure::GeometryInstanceFlagsKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuildAccelerationStructureFlagsNV.html) · Alias
 #[doc(alias = "VkBuildAccelerationStructureFlagsNV")]
 #[allow(non_camel_case_types)]
 pub type BuildAccelerationStructureFlagsNV = crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagsKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryFlagBitsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryFlagBitsNV.html) · Alias
 #[doc(alias = "VkGeometryFlagBitsNV")]
 #[allow(non_camel_case_types)]
 pub type GeometryFlagBitsNV = crate::extensions::khr_acceleration_structure::GeometryFlagBitsKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryInstanceFlagBitsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryInstanceFlagBitsNV.html) · Alias
 #[doc(alias = "VkGeometryInstanceFlagBitsNV")]
 #[allow(non_camel_case_types)]
 pub type GeometryInstanceFlagBitsNV = crate::extensions::khr_acceleration_structure::GeometryInstanceFlagBitsKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBuildAccelerationStructureFlagBitsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBuildAccelerationStructureFlagBitsNV.html) · Alias
 #[doc(alias = "VkBuildAccelerationStructureFlagBitsNV")]
 #[allow(non_camel_case_types)]
 pub type BuildAccelerationStructureFlagBitsNV = crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFlagBitsKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCopyAccelerationStructureModeNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyAccelerationStructureModeNV.html) · Alias
 #[doc(alias = "VkCopyAccelerationStructureModeNV")]
 #[allow(non_camel_case_types)]
 pub type CopyAccelerationStructureModeNV = crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureTypeNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureTypeNV.html) · Alias
 #[doc(alias = "VkAccelerationStructureTypeNV")]
 #[allow(non_camel_case_types)]
 pub type AccelerationStructureTypeNV = crate::extensions::khr_acceleration_structure::AccelerationStructureTypeKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTypeNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryTypeNV.html) · Alias
 #[doc(alias = "VkGeometryTypeNV")]
 #[allow(non_camel_case_types)]
 pub type GeometryTypeNV = crate::extensions::khr_acceleration_structure::GeometryTypeKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupTypeNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingShaderGroupTypeNV.html) · Alias
 #[doc(alias = "VkRayTracingShaderGroupTypeNV")]
 #[allow(non_camel_case_types)]
 pub type RayTracingShaderGroupTypeNV = crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAabbPositionsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAabbPositionsNV.html) · Alias
 #[doc(alias = "VkAabbPositionsNV")]
 #[allow(non_camel_case_types)]
 pub type AabbPositionsNV = crate::extensions::khr_acceleration_structure::AabbPositionsKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAabbPositionsNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAabbPositionsNV.html) · Alias
 #[doc(alias = "VkAabbPositionsNV")]
 #[allow(non_camel_case_types)]
 pub type AabbPositionsNVBuilder<'a> = crate::extensions::khr_acceleration_structure::AabbPositionsKHRBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTransformMatrixNV.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTransformMatrixNV.html) · Alias
 #[doc(alias = "VkTransformMatrixNV")]
 #[allow(non_camel_case_types)]
 pub type TransformMatrixNV = crate::extensions::khr_acceleration_structure::TransformMatrixKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTransformMatrixNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTransformMatrixNV.html) · Alias
 #[doc(alias = "VkTransformMatrixNV")]
 #[allow(non_camel_case_types)]
 pub type TransformMatrixNVBuilder<'a> = crate::extensions::khr_acceleration_structure::TransformMatrixKHRBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInstanceNV.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureInstanceNV.html) · Alias
 #[doc(alias = "VkAccelerationStructureInstanceNV")]
 #[allow(non_camel_case_types)]
 pub type AccelerationStructureInstanceNV = crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHR;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInstanceNV.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureInstanceNV.html) · Alias
 #[doc(alias = "VkAccelerationStructureInstanceNV")]
 #[allow(non_camel_case_types)]
 pub type AccelerationStructureInstanceNVBuilder<'a> = crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHRBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesNV.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRayTracingShaderGroupHandlesNV.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRayTracingShaderGroupHandlesNV = crate::extensions::khr_ray_tracing_pipeline::PFN_vkGetRayTracingShaderGroupHandlesKHR;
 crate::non_dispatchable_handle!(
     AccelerationStructureNV, ACCELERATION_STRUCTURE_NV,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureNV.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureNV.html) · Non-dispatchable Handle",
     "VkAccelerationStructureNV"
 );
 ///Provided by [`crate::extensions::nv_ray_tracing`]
@@ -240,7 +240,7 @@ impl crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR {
     pub const TRIANGLES_HIT_GROUP_NV: Self = Self::TRIANGLES_HIT_GROUP_KHR;
     pub const PROCEDURAL_HIT_GROUP_NV: Self = Self::PROCEDURAL_HIT_GROUP_KHR;
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsTypeNV.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMemoryRequirementsTypeNV.html) · Enum
 #[doc(alias = "VkAccelerationStructureMemoryRequirementsTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -268,110 +268,110 @@ impl crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsT
 impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
     pub const ACCELERATION_STRUCTURE_NV_EXT: Self = Self(1000165000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCompileDeferredNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCompileDeferredNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        pipeline: crate::vk1_0::Pipeline,
-        shader: u32,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAccelerationStructureNV.html) · Function
+    device: crate::vk1_0::Device,
+    pipeline: crate::vk1_0::Pipeline,
+    shader: u32,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateAccelerationStructureNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateAccelerationStructureNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::nv_ray_tracing::AccelerationStructureCreateInfoNV,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_acceleration_structure: *mut crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureNV.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::nv_ray_tracing::AccelerationStructureCreateInfoNV,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_acceleration_structure: *mut crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyAccelerationStructureNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyAccelerationStructureNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Function
+    device: crate::vk1_0::Device,
+    acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureMemoryRequirementsNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_info: *const crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV,
-        p_memory_requirements: *mut crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function
+    device: crate::vk1_0::Device,
+    p_info: *const crate::extensions::nv_ray_tracing::AccelerationStructureMemoryRequirementsInfoNV,
+    p_memory_requirements: *mut crate::extensions::khr_get_memory_requirements2::MemoryRequirements2KHR,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindAccelerationStructureMemoryNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        bind_info_count: u32,
-        p_bind_infos: *const crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNV,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureNV.html) · Function
+    device: crate::vk1_0::Device,
+    bind_info_count: u32,
+    p_bind_infos: *const crate::extensions::nv_ray_tracing::BindAccelerationStructureMemoryInfoNV,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyAccelerationStructureNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCopyAccelerationStructureNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-        src: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-        mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    src: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    mode: crate::extensions::khr_acceleration_structure::CopyAccelerationStructureModeKHR,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdWriteAccelerationStructuresPropertiesNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        acceleration_structure_count: u32,
-        p_acceleration_structures: *const crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-        query_type: crate::vk1_0::QueryType,
-        query_pool: crate::vk1_0::QueryPool,
-        first_query: u32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructureNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    acceleration_structure_count: u32,
+    p_acceleration_structures: *const crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    query_type: crate::vk1_0::QueryType,
+    query_pool: crate::vk1_0::QueryPool,
+    first_query: u32,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBuildAccelerationStructureNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBuildAccelerationStructureNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_info: *const crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV,
-        instance_data: crate::vk1_0::Buffer,
-        instance_offset: crate::vk1_0::DeviceSize,
-        update: crate::vk1_0::Bool32,
-        dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-        src: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-        scratch: crate::vk1_0::Buffer,
-        scratch_offset: crate::vk1_0::DeviceSize,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_info: *const crate::extensions::nv_ray_tracing::AccelerationStructureInfoNV,
+    instance_data: crate::vk1_0::Buffer,
+    instance_offset: crate::vk1_0::DeviceSize,
+    update: crate::vk1_0::Bool32,
+    dst: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    src: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    scratch: crate::vk1_0::Buffer,
+    scratch_offset: crate::vk1_0::DeviceSize,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdTraceRaysNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdTraceRaysNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        raygen_shader_binding_table_buffer: crate::vk1_0::Buffer,
-        raygen_shader_binding_offset: crate::vk1_0::DeviceSize,
-        miss_shader_binding_table_buffer: crate::vk1_0::Buffer,
-        miss_shader_binding_offset: crate::vk1_0::DeviceSize,
-        miss_shader_binding_stride: crate::vk1_0::DeviceSize,
-        hit_shader_binding_table_buffer: crate::vk1_0::Buffer,
-        hit_shader_binding_offset: crate::vk1_0::DeviceSize,
-        hit_shader_binding_stride: crate::vk1_0::DeviceSize,
-        callable_shader_binding_table_buffer: crate::vk1_0::Buffer,
-        callable_shader_binding_offset: crate::vk1_0::DeviceSize,
-        callable_shader_binding_stride: crate::vk1_0::DeviceSize,
-        width: u32,
-        height: u32,
-        depth: u32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureHandleNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    raygen_shader_binding_table_buffer: crate::vk1_0::Buffer,
+    raygen_shader_binding_offset: crate::vk1_0::DeviceSize,
+    miss_shader_binding_table_buffer: crate::vk1_0::Buffer,
+    miss_shader_binding_offset: crate::vk1_0::DeviceSize,
+    miss_shader_binding_stride: crate::vk1_0::DeviceSize,
+    hit_shader_binding_table_buffer: crate::vk1_0::Buffer,
+    hit_shader_binding_offset: crate::vk1_0::DeviceSize,
+    hit_shader_binding_stride: crate::vk1_0::DeviceSize,
+    callable_shader_binding_table_buffer: crate::vk1_0::Buffer,
+    callable_shader_binding_offset: crate::vk1_0::DeviceSize,
+    callable_shader_binding_stride: crate::vk1_0::DeviceSize,
+    width: u32,
+    height: u32,
+    depth: u32,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureHandleNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAccelerationStructureHandleNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
-        data_size: usize,
-        p_data: *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function
+    device: crate::vk1_0::Device,
+    acceleration_structure: crate::extensions::nv_ray_tracing::AccelerationStructureNV,
+    data_size: usize,
+    p_data: *mut std::ffi::c_void,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateRayTracingPipelinesNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        pipeline_cache: crate::vk1_0::PipelineCache,
-        create_info_count: u32,
-        p_create_infos: *const crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNV,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_pipelines: *mut crate::vk1_0::Pipeline,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    pipeline_cache: crate::vk1_0::PipelineCache,
+    create_info_count: u32,
+    p_create_infos: *const crate::extensions::nv_ray_tracing::RayTracingPipelineCreateInfoNV,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_pipelines: *mut crate::vk1_0::Pipeline,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetAccelerationStructureNV>
 for crate::vk1_0::WriteDescriptorSetBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, WriteDescriptorSetAccelerationStructureNVBuilder<'_>>
@@ -380,7 +380,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingPropertiesNV>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingPropertiesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Structure
 #[doc(alias = "VkRayTracingShaderGroupCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -430,7 +430,7 @@ impl RayTracingShaderGroupCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Builder of [`RayTracingShaderGroupCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Builder of [`RayTracingShaderGroupCreateInfoNV`]
 #[repr(transparent)]
 pub struct RayTracingShaderGroupCreateInfoNVBuilder<'a>(
     RayTracingShaderGroupCreateInfoNV,
@@ -505,7 +505,7 @@ impl<'a> std::ops::DerefMut for RayTracingShaderGroupCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Structure
 #[doc(alias = "VkRayTracingPipelineCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -567,7 +567,7 @@ impl RayTracingPipelineCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Builder of [`RayTracingPipelineCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Builder of [`RayTracingPipelineCreateInfoNV`]
 #[repr(transparent)]
 pub struct RayTracingPipelineCreateInfoNVBuilder<'a>(
     RayTracingPipelineCreateInfoNV,
@@ -662,7 +662,7 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTrianglesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryTrianglesNV.html) · Structure
 #[doc(alias = "VkGeometryTrianglesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -730,7 +730,7 @@ impl GeometryTrianglesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryTrianglesNV.html) · Builder of [`GeometryTrianglesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryTrianglesNV.html) · Builder of [`GeometryTrianglesNV`]
 #[repr(transparent)]
 pub struct GeometryTrianglesNVBuilder<'a>(
     GeometryTrianglesNV,
@@ -838,7 +838,7 @@ impl<'a> std::ops::DerefMut for GeometryTrianglesNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryAABBNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryAABBNV.html) · Structure
 #[doc(alias = "VkGeometryAABBNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -885,7 +885,7 @@ impl GeometryAABBNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryAABBNV.html) · Builder of [`GeometryAABBNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryAABBNV.html) · Builder of [`GeometryAABBNV`]
 #[repr(transparent)]
 pub struct GeometryAABBNVBuilder<'a>(GeometryAABBNV, std::marker::PhantomData<&'a ()>);
 impl<'a> GeometryAABBNVBuilder<'a> {
@@ -945,7 +945,7 @@ impl<'a> std::ops::DerefMut for GeometryAABBNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryDataNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryDataNV.html) · Structure
 #[doc(alias = "VkGeometryDataNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -977,7 +977,7 @@ impl GeometryDataNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryDataNV.html) · Builder of [`GeometryDataNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryDataNV.html) · Builder of [`GeometryDataNV`]
 #[repr(transparent)]
 pub struct GeometryDataNVBuilder<'a>(GeometryDataNV, std::marker::PhantomData<&'a ()>);
 impl<'a> GeometryDataNVBuilder<'a> {
@@ -1029,7 +1029,7 @@ impl<'a> std::ops::DerefMut for GeometryDataNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryNV.html) · Structure
 #[doc(alias = "VkGeometryNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1073,7 +1073,7 @@ impl GeometryNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeometryNV.html) · Builder of [`GeometryNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryNV.html) · Builder of [`GeometryNV`]
 #[repr(transparent)]
 pub struct GeometryNVBuilder<'a>(GeometryNV, std::marker::PhantomData<&'a ()>);
 impl<'a> GeometryNVBuilder<'a> {
@@ -1136,7 +1136,7 @@ impl<'a> std::ops::DerefMut for GeometryNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1186,7 +1186,7 @@ impl AccelerationStructureInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureInfoNV.html) · Builder of [`AccelerationStructureInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureInfoNV.html) · Builder of [`AccelerationStructureInfoNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureInfoNVBuilder<'a>(
     AccelerationStructureInfoNV,
@@ -1259,7 +1259,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1300,7 +1300,7 @@ impl AccelerationStructureCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Builder of [`AccelerationStructureCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Builder of [`AccelerationStructureCreateInfoNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureCreateInfoNVBuilder<'a>(
     AccelerationStructureCreateInfoNV,
@@ -1357,7 +1357,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindAccelerationStructureMemoryInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindAccelerationStructureMemoryInfoNV.html) · Structure
 #[doc(alias = "VkBindAccelerationStructureMemoryInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1407,7 +1407,7 @@ impl BindAccelerationStructureMemoryInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindAccelerationStructureMemoryInfoNV.html) · Builder of [`BindAccelerationStructureMemoryInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindAccelerationStructureMemoryInfoNV.html) · Builder of [`BindAccelerationStructureMemoryInfoNV`]
 #[repr(transparent)]
 pub struct BindAccelerationStructureMemoryInfoNVBuilder<'a>(
     BindAccelerationStructureMemoryInfoNV,
@@ -1477,7 +1477,7 @@ impl<'a> std::ops::DerefMut for BindAccelerationStructureMemoryInfoNVBuilder<'a>
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWriteDescriptorSetAccelerationStructureNV.html) · Structure
 #[doc(alias = "VkWriteDescriptorSetAccelerationStructureNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1520,7 +1520,7 @@ impl WriteDescriptorSetAccelerationStructureNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWriteDescriptorSetAccelerationStructureNV.html) · Builder of [`WriteDescriptorSetAccelerationStructureNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWriteDescriptorSetAccelerationStructureNV.html) · Builder of [`WriteDescriptorSetAccelerationStructureNV`]
 #[repr(transparent)]
 pub struct WriteDescriptorSetAccelerationStructureNVBuilder<'a>(
     WriteDescriptorSetAccelerationStructureNV,
@@ -1572,7 +1572,7 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetAccelerationStructureNVBuilder
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMemoryRequirementsInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1618,7 +1618,7 @@ impl AccelerationStructureMemoryRequirementsInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Builder of [`AccelerationStructureMemoryRequirementsInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Builder of [`AccelerationStructureMemoryRequirementsInfoNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureMemoryRequirementsInfoNVBuilder<'a>(
     AccelerationStructureMemoryRequirementsInfoNV,
@@ -1680,7 +1680,7 @@ for AccelerationStructureMemoryRequirementsInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayTracingPropertiesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1742,7 +1742,7 @@ impl PhysicalDeviceRayTracingPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Builder of [`PhysicalDeviceRayTracingPropertiesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Builder of [`PhysicalDeviceRayTracingPropertiesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayTracingPropertiesNVBuilder<'a>(
     PhysicalDeviceRayTracingPropertiesNV,
@@ -1845,7 +1845,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPropertiesNVBuilder<'a> 
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCompileDeferredNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCompileDeferredNV.html) · Function
     #[doc(alias = "vkCompileDeferredNV")]
     pub unsafe fn compile_deferred_nv(
         &self,
@@ -1858,7 +1858,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateAccelerationStructureNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateAccelerationStructureNV.html) · Function
     #[doc(alias = "vkCreateAccelerationStructureNV")]
     pub unsafe fn create_acceleration_structure_nv(
         &self,
@@ -1884,7 +1884,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyAccelerationStructureNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyAccelerationStructureNV.html) · Function
     #[doc(alias = "vkDestroyAccelerationStructureNV")]
     pub unsafe fn destroy_acceleration_structure_nv(
         &self,
@@ -1906,7 +1906,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureMemoryRequirementsNV.html) · Function
     #[doc(alias = "vkGetAccelerationStructureMemoryRequirementsNV")]
     pub unsafe fn get_acceleration_structure_memory_requirements_nv(
         &self,
@@ -1921,7 +1921,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindAccelerationStructureMemoryNV.html) · Function
     #[doc(alias = "vkBindAccelerationStructureMemoryNV")]
     pub unsafe fn bind_acceleration_structure_memory_nv(
         &self,
@@ -1940,7 +1940,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCopyAccelerationStructureNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCopyAccelerationStructureNV.html) · Function
     #[doc(alias = "vkCmdCopyAccelerationStructureNV")]
     pub unsafe fn cmd_copy_acceleration_structure_nv(
         &self,
@@ -1957,7 +1957,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdWriteAccelerationStructuresPropertiesNV.html) · Function
     #[doc(alias = "vkCmdWriteAccelerationStructuresPropertiesNV")]
     pub unsafe fn cmd_write_acceleration_structures_properties_nv(
         &self,
@@ -1983,7 +1983,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBuildAccelerationStructureNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBuildAccelerationStructureNV.html) · Function
     #[doc(alias = "vkCmdBuildAccelerationStructureNV")]
     pub unsafe fn cmd_build_acceleration_structure_nv(
         &self,
@@ -2015,7 +2015,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdTraceRaysNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdTraceRaysNV.html) · Function
     #[doc(alias = "vkCmdTraceRaysNV")]
     pub unsafe fn cmd_trace_rays_nv(
         &self,
@@ -2057,7 +2057,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAccelerationStructureHandleNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAccelerationStructureHandleNV.html) · Function
     #[doc(alias = "vkGetAccelerationStructureHandleNV")]
     pub unsafe fn get_acceleration_structure_handle_nv(
         &self,
@@ -2078,7 +2078,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateRayTracingPipelinesNV.html) · Function
     #[doc(alias = "vkCreateRayTracingPipelinesNV")]
     pub unsafe fn create_ray_tracing_pipelines_nv(
         &self,
@@ -2109,7 +2109,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRayTracingShaderGroupHandlesNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRayTracingShaderGroupHandlesNV.html) · Function
     #[doc(alias = "vkGetRayTracingShaderGroupHandlesNV")]
     pub unsafe fn get_ray_tracing_shader_group_handles_nv(
         &self,

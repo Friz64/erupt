@@ -15,86 +15,86 @@ pub const FN_CREATE_SAMPLER_YCBCR_CONVERSION_KHR: *const std::os::raw::c_char = 
 pub const FN_DESTROY_SAMPLER_YCBCR_CONVERSION_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkDestroySamplerYcbcrConversionKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrConversionKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrConversionKHR = crate::vk1_1::SamplerYcbcrConversion;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrModelConversionKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrModelConversionKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrModelConversionKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrModelConversionKHR = crate::vk1_1::SamplerYcbcrModelConversion;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrRangeKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrRangeKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrRangeKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrRangeKHR = crate::vk1_1::SamplerYcbcrRange;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkChromaLocationKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkChromaLocationKHR.html) · Alias
 #[doc(alias = "VkChromaLocationKHR")]
 #[allow(non_camel_case_types)]
 pub type ChromaLocationKHR = crate::vk1_1::ChromaLocation;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionInfoKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrConversionInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrConversionInfoKHR = crate::vk1_1::SamplerYcbcrConversionInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionInfoKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrConversionInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrConversionInfoKHRBuilder<'a> = crate::vk1_1::SamplerYcbcrConversionInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionCreateInfoKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrConversionCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrConversionCreateInfoKHR = crate::vk1_1::SamplerYcbcrConversionCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionCreateInfoKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrConversionCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrConversionCreateInfoKHRBuilder<'a> = crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImagePlaneMemoryInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImagePlaneMemoryInfoKHR.html) · Alias
 #[doc(alias = "VkBindImagePlaneMemoryInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindImagePlaneMemoryInfoKHR = crate::vk1_1::BindImagePlaneMemoryInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImagePlaneMemoryInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImagePlaneMemoryInfoKHR.html) · Alias
 #[doc(alias = "VkBindImagePlaneMemoryInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindImagePlaneMemoryInfoKHRBuilder<'a> = crate::vk1_1::BindImagePlaneMemoryInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePlaneMemoryRequirementsInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImagePlaneMemoryRequirementsInfoKHR.html) · Alias
 #[doc(alias = "VkImagePlaneMemoryRequirementsInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ImagePlaneMemoryRequirementsInfoKHR = crate::vk1_1::ImagePlaneMemoryRequirementsInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImagePlaneMemoryRequirementsInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImagePlaneMemoryRequirementsInfoKHR.html) · Alias
 #[doc(alias = "VkImagePlaneMemoryRequirementsInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ImagePlaneMemoryRequirementsInfoKHRBuilder<'a> = crate::vk1_1::ImagePlaneMemoryRequirementsInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceSamplerYcbcrConversionFeaturesKHR = crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceSamplerYcbcrConversionFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceSamplerYcbcrConversionFeaturesKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceSamplerYcbcrConversionFeaturesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionImageFormatPropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionImageFormatPropertiesKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrConversionImageFormatPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrConversionImageFormatPropertiesKHR = crate::vk1_1::SamplerYcbcrConversionImageFormatProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerYcbcrConversionImageFormatPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionImageFormatPropertiesKHR.html) · Alias
 #[doc(alias = "VkSamplerYcbcrConversionImageFormatPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type SamplerYcbcrConversionImageFormatPropertiesKHRBuilder<'a> = crate::vk1_1::SamplerYcbcrConversionImageFormatPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkCreateSamplerYcbcrConversion;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySamplerYcbcrConversionKHR = crate::vk1_1::PFN_vkDestroySamplerYcbcrConversion;
 ///Provided by [`crate::extensions::khr_sampler_ycbcr_conversion`]
@@ -193,7 +193,7 @@ impl crate::vk1_1::ChromaLocation {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSamplerYcbcrConversionKHR.html) · Function
     #[doc(alias = "vkCreateSamplerYcbcrConversionKHR")]
     pub unsafe fn create_sampler_ycbcr_conversion_khr(
         &self,
@@ -217,7 +217,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySamplerYcbcrConversionKHR.html) · Function
     #[doc(alias = "vkDestroySamplerYcbcrConversionKHR")]
     pub unsafe fn destroy_sampler_ycbcr_conversion_khr(
         &self,

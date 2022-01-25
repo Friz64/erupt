@@ -13,7 +13,7 @@ pub const FN_CREATE_IOS_SURFACE_MVK: *const std::os::raw::c_char = crate::cstr!(
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateFlagsMVK.html) · Bitmask of [`IOSSurfaceCreateFlagBitsMVK`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIOSSurfaceCreateFlagsMVK.html) · Bitmask of [`IOSSurfaceCreateFlagBitsMVK`]"]
     #[doc(alias = "VkIOSSurfaceCreateFlagsMVK")] #[derive(Default)] #[repr(transparent)]
     pub struct IOSSurfaceCreateFlagsMVK : u32 { #[cfg(empty_bitflag_workaround)] const
     EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -44,15 +44,15 @@ impl std::fmt::Debug for IOSSurfaceCreateFlagBitsMVK {
 impl crate::vk1_0::StructureType {
     pub const IOS_SURFACE_CREATE_INFO_MVK: Self = Self(1000122000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateIOSSurfaceMVK = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Structure
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::mvk_ios_surface::IOSSurfaceCreateInfoMVK,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Structure
 #[doc(alias = "VkIOSSurfaceCreateInfoMVK")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -93,7 +93,7 @@ impl IOSSurfaceCreateInfoMVK {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Builder of [`IOSSurfaceCreateInfoMVK`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Builder of [`IOSSurfaceCreateInfoMVK`]
 #[repr(transparent)]
 pub struct IOSSurfaceCreateInfoMVKBuilder<'a>(
     IOSSurfaceCreateInfoMVK,
@@ -151,7 +151,7 @@ impl<'a> std::ops::DerefMut for IOSSurfaceCreateInfoMVKBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateIOSSurfaceMVK.html) · Function
     #[doc(alias = "vkCreateIOSSurfaceMVK")]
     pub unsafe fn create_ios_surface_mvk(
         &self,

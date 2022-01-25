@@ -13,7 +13,7 @@ pub const FN_CREATE_MAC_OS_SURFACE_MVK: *const std::os::raw::c_char = crate::cst
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateFlagsMVK.html) · Bitmask of [`MacOSSurfaceCreateFlagBitsMVK`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMacOSSurfaceCreateFlagsMVK.html) · Bitmask of [`MacOSSurfaceCreateFlagBitsMVK`]"]
     #[doc(alias = "VkMacOSSurfaceCreateFlagsMVK")] #[derive(Default)]
     #[repr(transparent)] pub struct MacOSSurfaceCreateFlagsMVK : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -44,15 +44,15 @@ impl std::fmt::Debug for MacOSSurfaceCreateFlagBitsMVK {
 impl crate::vk1_0::StructureType {
     pub const MACOS_SURFACE_CREATE_INFO_MVK: Self = Self(1000123000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateMacOSSurfaceMVK = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Structure
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::mvk_macos_surface::MacOSSurfaceCreateInfoMVK,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Structure
 #[doc(alias = "VkMacOSSurfaceCreateInfoMVK")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -93,7 +93,7 @@ impl MacOSSurfaceCreateInfoMVK {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Builder of [`MacOSSurfaceCreateInfoMVK`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMacOSSurfaceCreateInfoMVK.html) · Builder of [`MacOSSurfaceCreateInfoMVK`]
 #[repr(transparent)]
 pub struct MacOSSurfaceCreateInfoMVKBuilder<'a>(
     MacOSSurfaceCreateInfoMVK,
@@ -151,7 +151,7 @@ impl<'a> std::ops::DerefMut for MacOSSurfaceCreateInfoMVKBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateMacOSSurfaceMVK.html) · Function
     #[doc(alias = "vkCreateMacOSSurfaceMVK")]
     pub unsafe fn create_mac_os_surface_mvk(
         &self,

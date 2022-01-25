@@ -19,7 +19,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayQueryFeaturesKHR>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayQueryFeaturesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -57,7 +57,7 @@ impl PhysicalDeviceRayQueryFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Builder of [`PhysicalDeviceRayQueryFeaturesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Builder of [`PhysicalDeviceRayQueryFeaturesKHR`]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayQueryFeaturesKHRBuilder<'a>(
     PhysicalDeviceRayQueryFeaturesKHR,

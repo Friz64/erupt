@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderSMBuiltinsPropertiesNV>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderSMBuiltinsPropertiesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -67,7 +67,7 @@ impl PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsPropertiesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsPropertiesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilder<'a>(
     PhysicalDeviceShaderSMBuiltinsPropertiesNV,
@@ -122,7 +122,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderSMBuiltinsFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -162,7 +162,7 @@ impl PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Builder of [`PhysicalDeviceShaderSMBuiltinsFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNVBuilder<'a>(
     PhysicalDeviceShaderSMBuiltinsFeaturesNV,

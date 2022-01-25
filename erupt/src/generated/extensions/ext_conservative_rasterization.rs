@@ -9,7 +9,7 @@ pub const EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME: *const std::os::raw::c_
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationConservativeStateCreateFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationConservativeStateCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationConservativeStateCreateFlagBitsEXT`]"]
     #[doc(alias = "VkPipelineRasterizationConservativeStateCreateFlagsEXT")]
     #[derive(Default)] #[repr(transparent)] pub struct
     PipelineRasterizationConservativeStateCreateFlagsEXT : u32 {
@@ -46,7 +46,7 @@ impl crate::vk1_0::StructureType {
         1000101001,
     );
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConservativeRasterizationModeEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkConservativeRasterizationModeEXT.html) · Enum
 #[doc(alias = "VkConservativeRasterizationModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -86,7 +86,7 @@ impl<
     'a,
     PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'_>,
 > for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceConservativeRasterizationPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceConservativeRasterizationPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceConservativeRasterizationPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -174,7 +174,7 @@ impl PhysicalDeviceConservativeRasterizationPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceConservativeRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceConservativeRasterizationPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceConservativeRasterizationPropertiesEXT.html) · Builder of [`PhysicalDeviceConservativeRasterizationPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'a>(
     PhysicalDeviceConservativeRasterizationPropertiesEXT,
@@ -313,7 +313,7 @@ for PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationConservativeStateCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -368,7 +368,7 @@ impl PipelineRasterizationConservativeStateCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationConservativeStateCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationConservativeStateCreateInfoEXT`]
 #[repr(transparent)]
 pub struct PipelineRasterizationConservativeStateCreateInfoEXTBuilder<'a>(
     PipelineRasterizationConservativeStateCreateInfoEXT,

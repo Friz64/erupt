@@ -25,7 +25,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderImageFootprintFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -68,7 +68,7 @@ impl PhysicalDeviceShaderImageFootprintFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Builder of [`PhysicalDeviceShaderImageFootprintFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Builder of [`PhysicalDeviceShaderImageFootprintFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderImageFootprintFeaturesNVBuilder<'a>(
     PhysicalDeviceShaderImageFootprintFeaturesNV,

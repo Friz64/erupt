@@ -9,7 +9,7 @@ pub const NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME: *const std::os::raw::c_ch
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageModulationStateCreateFlagBitsNV`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageModulationStateCreateFlagsNV.html) · Bitmask of [`PipelineCoverageModulationStateCreateFlagBitsNV`]"]
     #[doc(alias = "VkPipelineCoverageModulationStateCreateFlagsNV")] #[derive(Default)]
     #[repr(transparent)] pub struct PipelineCoverageModulationStateCreateFlagsNV : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -40,7 +40,7 @@ impl std::fmt::Debug for PipelineCoverageModulationStateCreateFlagBitsNV {
 impl crate::vk1_0::StructureType {
     pub const PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV: Self = Self(1000152000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCoverageModulationModeNV.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCoverageModulationModeNV.html) · Enum
 #[doc(alias = "VkCoverageModulationModeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -72,7 +72,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PipelineCoverageModulationStateCreateInfoNVBuilder<'_>>
 for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineCoverageModulationStateCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -133,7 +133,7 @@ impl PipelineCoverageModulationStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html) · Builder of [`PipelineCoverageModulationStateCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html) · Builder of [`PipelineCoverageModulationStateCreateInfoNV`]
 #[repr(transparent)]
 pub struct PipelineCoverageModulationStateCreateInfoNVBuilder<'a>(
     PipelineCoverageModulationStateCreateInfoNV,

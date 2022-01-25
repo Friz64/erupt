@@ -125,6 +125,13 @@ pub fn tokens(comment_gen: &DocCommentGen) -> HashMap<Origin, TokenStream> {
     );
 
     define(
+        "VK_API_VERSION_1_3",
+        quote! {
+            pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
+        },
+    );
+
+    define(
         "VK_HEADER_VERSION",
         quote! {
             pub const HEADER_VERSION: u32 = #patch_version;

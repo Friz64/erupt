@@ -11,6 +11,7 @@ pub struct EntryEnabled {
     pub instance_version: u32,
     pub vk1_1: bool,
     pub vk1_2: bool,
+    pub vk1_3: bool,
 }
 impl EntryEnabled {
     pub(crate) unsafe fn new<T>(
@@ -35,6 +36,7 @@ impl EntryEnabled {
             instance_version: version,
             vk1_1: version >= crate::vk1_0::make_api_version(0, 1, 1, 0),
             vk1_2: version >= crate::vk1_0::make_api_version(0, 1, 2, 0),
+            vk1_3: version >= crate::vk1_0::make_api_version(0, 1, 3, 0),
         })
     }
 }
@@ -122,6 +124,7 @@ pub struct InstanceEnabled {
     pub ext_sample_locations: bool,
     pub khr_get_surface_capabilities2: bool,
     pub khr_get_display_properties2: bool,
+    pub vk1_3: bool,
     pub ext_calibrated_timestamps: bool,
     pub ext_debug_utils: bool,
     pub nv_cooperative_matrix: bool,
@@ -129,7 +132,6 @@ pub struct InstanceEnabled {
     pub khr_performance_query: bool,
     pub ext_headless_surface: bool,
     pub nv_coverage_reduction_mode: bool,
-    pub ext_tooling_info: bool,
     pub khr_fragment_shading_rate: bool,
     pub khr_video_queue: bool,
     pub ext_acquire_drm_display: bool,
@@ -138,6 +140,7 @@ pub struct InstanceEnabled {
     pub khr_external_semaphore_capabilities: bool,
     pub khr_external_fence_capabilities: bool,
     pub khr_device_group_creation: bool,
+    pub ext_tooling_info: bool,
 }
 impl InstanceEnabled {
     pub(crate) unsafe fn new(
@@ -231,6 +234,7 @@ impl InstanceEnabled {
             khr_get_display_properties2: enabled_extension(
                 crate::extensions::khr_get_display_properties2::KHR_GET_DISPLAY_PROPERTIES_2_EXTENSION_NAME,
             ),
+            vk1_3: version >= crate::vk1_0::make_api_version(0, 1, 3, 0),
             ext_calibrated_timestamps: available_device_extension(
                 crate::extensions::ext_calibrated_timestamps::EXT_CALIBRATED_TIMESTAMPS_EXTENSION_NAME,
             ),
@@ -251,9 +255,6 @@ impl InstanceEnabled {
             ),
             nv_coverage_reduction_mode: available_device_extension(
                 crate::extensions::nv_coverage_reduction_mode::NV_COVERAGE_REDUCTION_MODE_EXTENSION_NAME,
-            ),
-            ext_tooling_info: available_device_extension(
-                crate::extensions::ext_tooling_info::EXT_TOOLING_INFO_EXTENSION_NAME,
             ),
             khr_fragment_shading_rate: available_device_extension(
                 crate::extensions::khr_fragment_shading_rate::KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME,
@@ -278,6 +279,9 @@ impl InstanceEnabled {
             ),
             khr_device_group_creation: enabled_extension(
                 crate::extensions::khr_device_group_creation::KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME,
+            ),
+            ext_tooling_info: available_device_extension(
+                crate::extensions::ext_tooling_info::EXT_TOOLING_INFO_EXTENSION_NAME,
             ),
         })
     }
@@ -526,8 +530,8 @@ pub struct InstanceLoader {
     pub get_physical_device_supported_framebuffer_mixed_samples_combinations_nv: Option<
         extensions::nv_coverage_reduction_mode::PFN_vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV,
     >,
-    pub get_physical_device_tool_properties_ext: Option<
-        extensions::ext_tooling_info::PFN_vkGetPhysicalDeviceToolPropertiesEXT,
+    pub get_physical_device_tool_properties: Option<
+        vk1_3::PFN_vkGetPhysicalDeviceToolProperties,
     >,
     pub get_physical_device_fragment_shading_rates_khr: Option<
         extensions::khr_fragment_shading_rate::PFN_vkGetPhysicalDeviceFragmentShadingRatesKHR,
@@ -576,6 +580,9 @@ pub struct InstanceLoader {
     >,
     pub enumerate_physical_device_groups_khr: Option<
         extensions::khr_device_group_creation::PFN_vkEnumeratePhysicalDeviceGroupsKHR,
+    >,
+    pub get_physical_device_tool_properties_ext: Option<
+        extensions::ext_tooling_info::PFN_vkGetPhysicalDeviceToolPropertiesEXT,
     >,
 }
 impl InstanceLoader {
@@ -1297,12 +1304,9 @@ impl InstanceLoader {
             } else {
                 None
             },
-            get_physical_device_tool_properties_ext: if instance_enabled.ext_tooling_info
-            {
+            get_physical_device_tool_properties: if instance_enabled.vk1_3 {
                 std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_tooling_info::FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT,
-                    ),
+                    symbol(crate::vk1_3::FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES),
                 )
             } else {
                 None
@@ -1479,6 +1483,16 @@ impl InstanceLoader {
             } else {
                 None
             },
+            get_physical_device_tool_properties_ext: if instance_enabled.ext_tooling_info
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_tooling_info::FN_GET_PHYSICAL_DEVICE_TOOL_PROPERTIES_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
             enabled: instance_enabled,
         })
     }
@@ -1512,7 +1526,6 @@ pub struct DeviceEnabled {
     pub nv_clip_space_w_scaling: bool,
     pub ext_discard_rectangles: bool,
     pub ext_sample_locations: bool,
-    pub khr_maintenance4: bool,
     pub ext_validation_cache: bool,
     pub amd_shader_info: bool,
     pub amd_display_native_hdr: bool,
@@ -1538,12 +1551,8 @@ pub struct DeviceEnabled {
     pub intel_performance_query: bool,
     pub khr_pipeline_executable_properties: bool,
     pub ext_line_rasterization: bool,
-    pub ext_tooling_info: bool,
     pub khr_deferred_host_operations: bool,
-    pub ext_extended_dynamic_state: bool,
     pub ext_extended_dynamic_state2: bool,
-    pub ext_private_data: bool,
-    pub khr_copy_commands2: bool,
     pub khr_fragment_shading_rate: bool,
     pub nv_fragment_shading_rate_enums: bool,
     pub ext_vertex_input_dynamic_state: bool,
@@ -1556,13 +1565,13 @@ pub struct DeviceEnabled {
     pub ext_pageable_device_local_memory: bool,
     pub khr_present_wait: bool,
     pub fuchsia_buffer_collection: bool,
-    pub khr_dynamic_rendering: bool,
     pub ext_host_query_reset: bool,
     pub khr_maintenance1: bool,
     pub khr_device_group: bool,
     pub khr_bind_memory2: bool,
     pub khr_descriptor_update_template: bool,
     pub khr_get_memory_requirements2: bool,
+    pub khr_maintenance4: bool,
     pub khr_sampler_ycbcr_conversion: bool,
     pub khr_maintenance3: bool,
     pub khr_create_renderpass2: bool,
@@ -1571,6 +1580,11 @@ pub struct DeviceEnabled {
     pub amd_draw_indirect_count: bool,
     pub khr_buffer_device_address: bool,
     pub ext_buffer_device_address: bool,
+    pub ext_tooling_info: bool,
+    pub ext_extended_dynamic_state: bool,
+    pub ext_private_data: bool,
+    pub khr_copy_commands2: bool,
+    pub khr_dynamic_rendering: bool,
 }
 impl DeviceEnabled {
     pub(crate) unsafe fn new(enabled_extensions: &[&std::ffi::CStr]) -> DeviceEnabled {
@@ -1655,9 +1669,6 @@ impl DeviceEnabled {
             ext_sample_locations: enabled_extension(
                 crate::extensions::ext_sample_locations::EXT_SAMPLE_LOCATIONS_EXTENSION_NAME,
             ),
-            khr_maintenance4: enabled_extension(
-                crate::extensions::khr_maintenance4::KHR_MAINTENANCE_4_EXTENSION_NAME,
-            ),
             ext_validation_cache: enabled_extension(
                 crate::extensions::ext_validation_cache::EXT_VALIDATION_CACHE_EXTENSION_NAME,
             ),
@@ -1733,23 +1744,11 @@ impl DeviceEnabled {
             ext_line_rasterization: enabled_extension(
                 crate::extensions::ext_line_rasterization::EXT_LINE_RASTERIZATION_EXTENSION_NAME,
             ),
-            ext_tooling_info: enabled_extension(
-                crate::extensions::ext_tooling_info::EXT_TOOLING_INFO_EXTENSION_NAME,
-            ),
             khr_deferred_host_operations: enabled_extension(
                 crate::extensions::khr_deferred_host_operations::KHR_DEFERRED_HOST_OPERATIONS_EXTENSION_NAME,
             ),
-            ext_extended_dynamic_state: enabled_extension(
-                crate::extensions::ext_extended_dynamic_state::EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME,
-            ),
             ext_extended_dynamic_state2: enabled_extension(
                 crate::extensions::ext_extended_dynamic_state2::EXT_EXTENDED_DYNAMIC_STATE_2_EXTENSION_NAME,
-            ),
-            ext_private_data: enabled_extension(
-                crate::extensions::ext_private_data::EXT_PRIVATE_DATA_EXTENSION_NAME,
-            ),
-            khr_copy_commands2: enabled_extension(
-                crate::extensions::khr_copy_commands2::KHR_COPY_COMMANDS_2_EXTENSION_NAME,
             ),
             khr_fragment_shading_rate: enabled_extension(
                 crate::extensions::khr_fragment_shading_rate::KHR_FRAGMENT_SHADING_RATE_EXTENSION_NAME,
@@ -1787,9 +1786,6 @@ impl DeviceEnabled {
             fuchsia_buffer_collection: enabled_extension(
                 crate::extensions::fuchsia_buffer_collection::FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME,
             ),
-            khr_dynamic_rendering: enabled_extension(
-                crate::extensions::khr_dynamic_rendering::KHR_DYNAMIC_RENDERING_EXTENSION_NAME,
-            ),
             ext_host_query_reset: enabled_extension(
                 crate::extensions::ext_host_query_reset::EXT_HOST_QUERY_RESET_EXTENSION_NAME,
             ),
@@ -1807,6 +1803,9 @@ impl DeviceEnabled {
             ),
             khr_get_memory_requirements2: enabled_extension(
                 crate::extensions::khr_get_memory_requirements2::KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME,
+            ),
+            khr_maintenance4: enabled_extension(
+                crate::extensions::khr_maintenance4::KHR_MAINTENANCE_4_EXTENSION_NAME,
             ),
             khr_sampler_ycbcr_conversion: enabled_extension(
                 crate::extensions::khr_sampler_ycbcr_conversion::KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME,
@@ -1831,6 +1830,21 @@ impl DeviceEnabled {
             ),
             ext_buffer_device_address: enabled_extension(
                 crate::extensions::ext_buffer_device_address::EXT_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME,
+            ),
+            ext_tooling_info: enabled_extension(
+                crate::extensions::ext_tooling_info::EXT_TOOLING_INFO_EXTENSION_NAME,
+            ),
+            ext_extended_dynamic_state: enabled_extension(
+                crate::extensions::ext_extended_dynamic_state::EXT_EXTENDED_DYNAMIC_STATE_EXTENSION_NAME,
+            ),
+            ext_private_data: enabled_extension(
+                crate::extensions::ext_private_data::EXT_PRIVATE_DATA_EXTENSION_NAME,
+            ),
+            khr_copy_commands2: enabled_extension(
+                crate::extensions::khr_copy_commands2::KHR_COPY_COMMANDS_2_EXTENSION_NAME,
+            ),
+            khr_dynamic_rendering: enabled_extension(
+                crate::extensions::khr_dynamic_rendering::KHR_DYNAMIC_RENDERING_EXTENSION_NAME,
             ),
         }
     }
@@ -2161,14 +2175,14 @@ pub struct DeviceLoader {
     pub get_image_sparse_memory_requirements2: Option<
         vk1_1::PFN_vkGetImageSparseMemoryRequirements2,
     >,
-    pub get_device_buffer_memory_requirements_khr: Option<
-        extensions::khr_maintenance4::PFN_vkGetDeviceBufferMemoryRequirementsKHR,
+    pub get_device_buffer_memory_requirements: Option<
+        vk1_3::PFN_vkGetDeviceBufferMemoryRequirements,
     >,
-    pub get_device_image_memory_requirements_khr: Option<
-        extensions::khr_maintenance4::PFN_vkGetDeviceImageMemoryRequirementsKHR,
+    pub get_device_image_memory_requirements: Option<
+        vk1_3::PFN_vkGetDeviceImageMemoryRequirements,
     >,
-    pub get_device_image_sparse_memory_requirements_khr: Option<
-        extensions::khr_maintenance4::PFN_vkGetDeviceImageSparseMemoryRequirementsKHR,
+    pub get_device_image_sparse_memory_requirements: Option<
+        vk1_3::PFN_vkGetDeviceImageSparseMemoryRequirements,
     >,
     pub create_sampler_ycbcr_conversion: Option<
         vk1_1::PFN_vkCreateSamplerYcbcrConversion,
@@ -2474,87 +2488,43 @@ pub struct DeviceLoader {
     pub deferred_operation_join_khr: Option<
         extensions::khr_deferred_host_operations::PFN_vkDeferredOperationJoinKHR,
     >,
-    pub cmd_set_cull_mode_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetCullModeEXT,
+    pub cmd_set_cull_mode: Option<vk1_3::PFN_vkCmdSetCullMode>,
+    pub cmd_set_front_face: Option<vk1_3::PFN_vkCmdSetFrontFace>,
+    pub cmd_set_primitive_topology: Option<vk1_3::PFN_vkCmdSetPrimitiveTopology>,
+    pub cmd_set_viewport_with_count: Option<vk1_3::PFN_vkCmdSetViewportWithCount>,
+    pub cmd_set_scissor_with_count: Option<vk1_3::PFN_vkCmdSetScissorWithCount>,
+    pub cmd_bind_vertex_buffers2: Option<vk1_3::PFN_vkCmdBindVertexBuffers2>,
+    pub cmd_set_depth_test_enable: Option<vk1_3::PFN_vkCmdSetDepthTestEnable>,
+    pub cmd_set_depth_write_enable: Option<vk1_3::PFN_vkCmdSetDepthWriteEnable>,
+    pub cmd_set_depth_compare_op: Option<vk1_3::PFN_vkCmdSetDepthCompareOp>,
+    pub cmd_set_depth_bounds_test_enable: Option<
+        vk1_3::PFN_vkCmdSetDepthBoundsTestEnable,
     >,
-    pub cmd_set_front_face_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetFrontFaceEXT,
-    >,
-    pub cmd_set_primitive_topology_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetPrimitiveTopologyEXT,
-    >,
-    pub cmd_set_viewport_with_count_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetViewportWithCountEXT,
-    >,
-    pub cmd_set_scissor_with_count_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetScissorWithCountEXT,
-    >,
-    pub cmd_bind_vertex_buffers2_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdBindVertexBuffers2EXT,
-    >,
-    pub cmd_set_depth_test_enable_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthTestEnableEXT,
-    >,
-    pub cmd_set_depth_write_enable_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthWriteEnableEXT,
-    >,
-    pub cmd_set_depth_compare_op_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthCompareOpEXT,
-    >,
-    pub cmd_set_depth_bounds_test_enable_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthBoundsTestEnableEXT,
-    >,
-    pub cmd_set_stencil_test_enable_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetStencilTestEnableEXT,
-    >,
-    pub cmd_set_stencil_op_ext: Option<
-        extensions::ext_extended_dynamic_state::PFN_vkCmdSetStencilOpEXT,
-    >,
+    pub cmd_set_stencil_test_enable: Option<vk1_3::PFN_vkCmdSetStencilTestEnable>,
+    pub cmd_set_stencil_op: Option<vk1_3::PFN_vkCmdSetStencilOp>,
     pub cmd_set_patch_control_points_ext: Option<
         extensions::ext_extended_dynamic_state2::PFN_vkCmdSetPatchControlPointsEXT,
     >,
-    pub cmd_set_rasterizer_discard_enable_ext: Option<
-        extensions::ext_extended_dynamic_state2::PFN_vkCmdSetRasterizerDiscardEnableEXT,
+    pub cmd_set_rasterizer_discard_enable: Option<
+        vk1_3::PFN_vkCmdSetRasterizerDiscardEnable,
     >,
-    pub cmd_set_depth_bias_enable_ext: Option<
-        extensions::ext_extended_dynamic_state2::PFN_vkCmdSetDepthBiasEnableEXT,
-    >,
+    pub cmd_set_depth_bias_enable: Option<vk1_3::PFN_vkCmdSetDepthBiasEnable>,
     pub cmd_set_logic_op_ext: Option<
         extensions::ext_extended_dynamic_state2::PFN_vkCmdSetLogicOpEXT,
     >,
-    pub cmd_set_primitive_restart_enable_ext: Option<
-        extensions::ext_extended_dynamic_state2::PFN_vkCmdSetPrimitiveRestartEnableEXT,
+    pub cmd_set_primitive_restart_enable: Option<
+        vk1_3::PFN_vkCmdSetPrimitiveRestartEnable,
     >,
-    pub create_private_data_slot_ext: Option<
-        extensions::ext_private_data::PFN_vkCreatePrivateDataSlotEXT,
-    >,
-    pub destroy_private_data_slot_ext: Option<
-        extensions::ext_private_data::PFN_vkDestroyPrivateDataSlotEXT,
-    >,
-    pub set_private_data_ext: Option<
-        extensions::ext_private_data::PFN_vkSetPrivateDataEXT,
-    >,
-    pub get_private_data_ext: Option<
-        extensions::ext_private_data::PFN_vkGetPrivateDataEXT,
-    >,
-    pub cmd_copy_buffer2_khr: Option<
-        extensions::khr_copy_commands2::PFN_vkCmdCopyBuffer2KHR,
-    >,
-    pub cmd_copy_image2_khr: Option<
-        extensions::khr_copy_commands2::PFN_vkCmdCopyImage2KHR,
-    >,
-    pub cmd_blit_image2_khr: Option<
-        extensions::khr_copy_commands2::PFN_vkCmdBlitImage2KHR,
-    >,
-    pub cmd_copy_buffer_to_image2_khr: Option<
-        extensions::khr_copy_commands2::PFN_vkCmdCopyBufferToImage2KHR,
-    >,
-    pub cmd_copy_image_to_buffer2_khr: Option<
-        extensions::khr_copy_commands2::PFN_vkCmdCopyImageToBuffer2KHR,
-    >,
-    pub cmd_resolve_image2_khr: Option<
-        extensions::khr_copy_commands2::PFN_vkCmdResolveImage2KHR,
-    >,
+    pub create_private_data_slot: Option<vk1_3::PFN_vkCreatePrivateDataSlot>,
+    pub destroy_private_data_slot: Option<vk1_3::PFN_vkDestroyPrivateDataSlot>,
+    pub set_private_data: Option<vk1_3::PFN_vkSetPrivateData>,
+    pub get_private_data: Option<vk1_3::PFN_vkGetPrivateData>,
+    pub cmd_copy_buffer2: Option<vk1_3::PFN_vkCmdCopyBuffer2>,
+    pub cmd_copy_image2: Option<vk1_3::PFN_vkCmdCopyImage2>,
+    pub cmd_blit_image2: Option<vk1_3::PFN_vkCmdBlitImage2>,
+    pub cmd_copy_buffer_to_image2: Option<vk1_3::PFN_vkCmdCopyBufferToImage2>,
+    pub cmd_copy_image_to_buffer2: Option<vk1_3::PFN_vkCmdCopyImageToBuffer2>,
+    pub cmd_resolve_image2: Option<vk1_3::PFN_vkCmdResolveImage2>,
     pub cmd_set_fragment_shading_rate_khr: Option<
         extensions::khr_fragment_shading_rate::PFN_vkCmdSetFragmentShadingRateKHR,
     >,
@@ -2570,24 +2540,12 @@ pub struct DeviceLoader {
     pub cmd_set_color_write_enable_ext: Option<
         extensions::ext_color_write_enable::PFN_vkCmdSetColorWriteEnableEXT,
     >,
-    pub cmd_set_event2_khr: Option<
-        extensions::khr_synchronization2::PFN_vkCmdSetEvent2KHR,
-    >,
-    pub cmd_reset_event2_khr: Option<
-        extensions::khr_synchronization2::PFN_vkCmdResetEvent2KHR,
-    >,
-    pub cmd_wait_events2_khr: Option<
-        extensions::khr_synchronization2::PFN_vkCmdWaitEvents2KHR,
-    >,
-    pub cmd_pipeline_barrier2_khr: Option<
-        extensions::khr_synchronization2::PFN_vkCmdPipelineBarrier2KHR,
-    >,
-    pub queue_submit2_khr: Option<
-        extensions::khr_synchronization2::PFN_vkQueueSubmit2KHR,
-    >,
-    pub cmd_write_timestamp2_khr: Option<
-        extensions::khr_synchronization2::PFN_vkCmdWriteTimestamp2KHR,
-    >,
+    pub cmd_set_event2: Option<vk1_3::PFN_vkCmdSetEvent2>,
+    pub cmd_reset_event2: Option<vk1_3::PFN_vkCmdResetEvent2>,
+    pub cmd_wait_events2: Option<vk1_3::PFN_vkCmdWaitEvents2>,
+    pub cmd_pipeline_barrier2: Option<vk1_3::PFN_vkCmdPipelineBarrier2>,
+    pub queue_submit2: Option<vk1_3::PFN_vkQueueSubmit2>,
+    pub cmd_write_timestamp2: Option<vk1_3::PFN_vkCmdWriteTimestamp2>,
     pub cmd_write_buffer_marker2_amd: Option<
         extensions::khr_synchronization2::PFN_vkCmdWriteBufferMarker2AMD,
     >,
@@ -2666,12 +2624,8 @@ pub struct DeviceLoader {
     pub get_buffer_collection_properties_fuchsia: Option<
         extensions::fuchsia_buffer_collection::PFN_vkGetBufferCollectionPropertiesFUCHSIA,
     >,
-    pub cmd_begin_rendering_khr: Option<
-        extensions::khr_dynamic_rendering::PFN_vkCmdBeginRenderingKHR,
-    >,
-    pub cmd_end_rendering_khr: Option<
-        extensions::khr_dynamic_rendering::PFN_vkCmdEndRenderingKHR,
-    >,
+    pub cmd_begin_rendering: Option<vk1_3::PFN_vkCmdBeginRendering>,
+    pub cmd_end_rendering: Option<vk1_3::PFN_vkCmdEndRendering>,
     pub reset_query_pool_ext: Option<
         extensions::ext_host_query_reset::PFN_vkResetQueryPoolEXT,
     >,
@@ -2710,6 +2664,15 @@ pub struct DeviceLoader {
     >,
     pub get_image_sparse_memory_requirements2_khr: Option<
         extensions::khr_get_memory_requirements2::PFN_vkGetImageSparseMemoryRequirements2KHR,
+    >,
+    pub get_device_buffer_memory_requirements_khr: Option<
+        extensions::khr_maintenance4::PFN_vkGetDeviceBufferMemoryRequirementsKHR,
+    >,
+    pub get_device_image_memory_requirements_khr: Option<
+        extensions::khr_maintenance4::PFN_vkGetDeviceImageMemoryRequirementsKHR,
+    >,
+    pub get_device_image_sparse_memory_requirements_khr: Option<
+        extensions::khr_maintenance4::PFN_vkGetDeviceImageSparseMemoryRequirementsKHR,
     >,
     pub create_sampler_ycbcr_conversion_khr: Option<
         extensions::khr_sampler_ycbcr_conversion::PFN_vkCreateSamplerYcbcrConversionKHR,
@@ -2767,6 +2730,105 @@ pub struct DeviceLoader {
     >,
     pub get_device_memory_opaque_capture_address_khr: Option<
         extensions::khr_buffer_device_address::PFN_vkGetDeviceMemoryOpaqueCaptureAddressKHR,
+    >,
+    pub cmd_set_cull_mode_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetCullModeEXT,
+    >,
+    pub cmd_set_front_face_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetFrontFaceEXT,
+    >,
+    pub cmd_set_primitive_topology_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetPrimitiveTopologyEXT,
+    >,
+    pub cmd_set_viewport_with_count_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetViewportWithCountEXT,
+    >,
+    pub cmd_set_scissor_with_count_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetScissorWithCountEXT,
+    >,
+    pub cmd_bind_vertex_buffers2_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdBindVertexBuffers2EXT,
+    >,
+    pub cmd_set_depth_test_enable_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthTestEnableEXT,
+    >,
+    pub cmd_set_depth_write_enable_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthWriteEnableEXT,
+    >,
+    pub cmd_set_depth_compare_op_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthCompareOpEXT,
+    >,
+    pub cmd_set_depth_bounds_test_enable_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetDepthBoundsTestEnableEXT,
+    >,
+    pub cmd_set_stencil_test_enable_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetStencilTestEnableEXT,
+    >,
+    pub cmd_set_stencil_op_ext: Option<
+        extensions::ext_extended_dynamic_state::PFN_vkCmdSetStencilOpEXT,
+    >,
+    pub cmd_set_rasterizer_discard_enable_ext: Option<
+        extensions::ext_extended_dynamic_state2::PFN_vkCmdSetRasterizerDiscardEnableEXT,
+    >,
+    pub cmd_set_depth_bias_enable_ext: Option<
+        extensions::ext_extended_dynamic_state2::PFN_vkCmdSetDepthBiasEnableEXT,
+    >,
+    pub cmd_set_primitive_restart_enable_ext: Option<
+        extensions::ext_extended_dynamic_state2::PFN_vkCmdSetPrimitiveRestartEnableEXT,
+    >,
+    pub create_private_data_slot_ext: Option<
+        extensions::ext_private_data::PFN_vkCreatePrivateDataSlotEXT,
+    >,
+    pub destroy_private_data_slot_ext: Option<
+        extensions::ext_private_data::PFN_vkDestroyPrivateDataSlotEXT,
+    >,
+    pub set_private_data_ext: Option<
+        extensions::ext_private_data::PFN_vkSetPrivateDataEXT,
+    >,
+    pub get_private_data_ext: Option<
+        extensions::ext_private_data::PFN_vkGetPrivateDataEXT,
+    >,
+    pub cmd_copy_buffer2_khr: Option<
+        extensions::khr_copy_commands2::PFN_vkCmdCopyBuffer2KHR,
+    >,
+    pub cmd_copy_image2_khr: Option<
+        extensions::khr_copy_commands2::PFN_vkCmdCopyImage2KHR,
+    >,
+    pub cmd_blit_image2_khr: Option<
+        extensions::khr_copy_commands2::PFN_vkCmdBlitImage2KHR,
+    >,
+    pub cmd_copy_buffer_to_image2_khr: Option<
+        extensions::khr_copy_commands2::PFN_vkCmdCopyBufferToImage2KHR,
+    >,
+    pub cmd_copy_image_to_buffer2_khr: Option<
+        extensions::khr_copy_commands2::PFN_vkCmdCopyImageToBuffer2KHR,
+    >,
+    pub cmd_resolve_image2_khr: Option<
+        extensions::khr_copy_commands2::PFN_vkCmdResolveImage2KHR,
+    >,
+    pub cmd_set_event2_khr: Option<
+        extensions::khr_synchronization2::PFN_vkCmdSetEvent2KHR,
+    >,
+    pub cmd_reset_event2_khr: Option<
+        extensions::khr_synchronization2::PFN_vkCmdResetEvent2KHR,
+    >,
+    pub cmd_wait_events2_khr: Option<
+        extensions::khr_synchronization2::PFN_vkCmdWaitEvents2KHR,
+    >,
+    pub cmd_pipeline_barrier2_khr: Option<
+        extensions::khr_synchronization2::PFN_vkCmdPipelineBarrier2KHR,
+    >,
+    pub queue_submit2_khr: Option<
+        extensions::khr_synchronization2::PFN_vkQueueSubmit2KHR,
+    >,
+    pub cmd_write_timestamp2_khr: Option<
+        extensions::khr_synchronization2::PFN_vkCmdWriteTimestamp2KHR,
+    >,
+    pub cmd_begin_rendering_khr: Option<
+        extensions::khr_dynamic_rendering::PFN_vkCmdBeginRenderingKHR,
+    >,
+    pub cmd_end_rendering_khr: Option<
+        extensions::khr_dynamic_rendering::PFN_vkCmdEndRenderingKHR,
     >,
 }
 impl DeviceLoader {
@@ -3720,33 +3782,23 @@ impl DeviceLoader {
             } else {
                 None
             },
-            get_device_buffer_memory_requirements_khr: if device_enabled.khr_maintenance4
-            {
+            get_device_buffer_memory_requirements: if instance_enabled.vk1_3 {
                 std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_maintenance4::FN_GET_DEVICE_BUFFER_MEMORY_REQUIREMENTS_KHR,
-                    ),
+                    symbol(crate::vk1_3::FN_GET_DEVICE_BUFFER_MEMORY_REQUIREMENTS),
                 )
             } else {
                 None
             },
-            get_device_image_memory_requirements_khr: if device_enabled.khr_maintenance4
-            {
+            get_device_image_memory_requirements: if instance_enabled.vk1_3 {
                 std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_maintenance4::FN_GET_DEVICE_IMAGE_MEMORY_REQUIREMENTS_KHR,
-                    ),
+                    symbol(crate::vk1_3::FN_GET_DEVICE_IMAGE_MEMORY_REQUIREMENTS),
                 )
             } else {
                 None
             },
-            get_device_image_sparse_memory_requirements_khr: if device_enabled
-                .khr_maintenance4
-            {
+            get_device_image_sparse_memory_requirements: if instance_enabled.vk1_3 {
                 std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_maintenance4::FN_GET_DEVICE_IMAGE_SPARSE_MEMORY_REQUIREMENTS_KHR,
-                    ),
+                    symbol(crate::vk1_3::FN_GET_DEVICE_IMAGE_SPARSE_MEMORY_REQUIREMENTS),
                 )
             } else {
                 None
@@ -4767,118 +4819,65 @@ impl DeviceLoader {
             } else {
                 None
             },
-            cmd_set_cull_mode_ext: if device_enabled.ext_extended_dynamic_state {
+            cmd_set_cull_mode: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_CULL_MODE))
+            } else {
+                None
+            },
+            cmd_set_front_face: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_FRONT_FACE))
+            } else {
+                None
+            },
+            cmd_set_primitive_topology: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_PRIMITIVE_TOPOLOGY))
+            } else {
+                None
+            },
+            cmd_set_viewport_with_count: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_VIEWPORT_WITH_COUNT))
+            } else {
+                None
+            },
+            cmd_set_scissor_with_count: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_SCISSOR_WITH_COUNT))
+            } else {
+                None
+            },
+            cmd_bind_vertex_buffers2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_BIND_VERTEX_BUFFERS2))
+            } else {
+                None
+            },
+            cmd_set_depth_test_enable: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_DEPTH_TEST_ENABLE))
+            } else {
+                None
+            },
+            cmd_set_depth_write_enable: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_DEPTH_WRITE_ENABLE))
+            } else {
+                None
+            },
+            cmd_set_depth_compare_op: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_DEPTH_COMPARE_OP))
+            } else {
+                None
+            },
+            cmd_set_depth_bounds_test_enable: if instance_enabled.vk1_3 {
                 std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_CULL_MODE_EXT,
-                    ),
+                    symbol(crate::vk1_3::FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE),
                 )
             } else {
                 None
             },
-            cmd_set_front_face_ext: if device_enabled.ext_extended_dynamic_state {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_FRONT_FACE_EXT,
-                    ),
-                )
+            cmd_set_stencil_test_enable: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_STENCIL_TEST_ENABLE))
             } else {
                 None
             },
-            cmd_set_primitive_topology_ext: if device_enabled.ext_extended_dynamic_state
-            {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_viewport_with_count_ext: if device_enabled.ext_extended_dynamic_state
-            {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_scissor_with_count_ext: if device_enabled.ext_extended_dynamic_state
-            {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_SCISSOR_WITH_COUNT_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_bind_vertex_buffers2_ext: if device_enabled.ext_extended_dynamic_state {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_BIND_VERTEX_BUFFERS2_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_depth_test_enable_ext: if device_enabled.ext_extended_dynamic_state {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_TEST_ENABLE_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_depth_write_enable_ext: if device_enabled.ext_extended_dynamic_state
-            {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_depth_compare_op_ext: if device_enabled.ext_extended_dynamic_state {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_COMPARE_OP_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_depth_bounds_test_enable_ext: if device_enabled
-                .ext_extended_dynamic_state
-            {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_stencil_test_enable_ext: if device_enabled.ext_extended_dynamic_state
-            {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_TEST_ENABLE_EXT,
-                    ),
-                )
-            } else {
-                None
-            },
-            cmd_set_stencil_op_ext: if device_enabled.ext_extended_dynamic_state {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_OP_EXT,
-                    ),
-                )
+            cmd_set_stencil_op: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_STENCIL_OP))
             } else {
                 None
             },
@@ -4893,24 +4892,15 @@ impl DeviceLoader {
             } else {
                 None
             },
-            cmd_set_rasterizer_discard_enable_ext: if device_enabled
-                .ext_extended_dynamic_state2
-            {
+            cmd_set_rasterizer_discard_enable: if instance_enabled.vk1_3 {
                 std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state2::FN_CMD_SET_RASTERIZER_DISCARD_ENABLE_EXT,
-                    ),
+                    symbol(crate::vk1_3::FN_CMD_SET_RASTERIZER_DISCARD_ENABLE),
                 )
             } else {
                 None
             },
-            cmd_set_depth_bias_enable_ext: if device_enabled.ext_extended_dynamic_state2
-            {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state2::FN_CMD_SET_DEPTH_BIAS_ENABLE_EXT,
-                    ),
-                )
+            cmd_set_depth_bias_enable: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_DEPTH_BIAS_ENABLE))
             } else {
                 None
             },
@@ -4923,96 +4913,60 @@ impl DeviceLoader {
             } else {
                 None
             },
-            cmd_set_primitive_restart_enable_ext: if device_enabled
-                .ext_extended_dynamic_state2
-            {
+            cmd_set_primitive_restart_enable: if instance_enabled.vk1_3 {
                 std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_extended_dynamic_state2::FN_CMD_SET_PRIMITIVE_RESTART_ENABLE_EXT,
-                    ),
+                    symbol(crate::vk1_3::FN_CMD_SET_PRIMITIVE_RESTART_ENABLE),
                 )
             } else {
                 None
             },
-            create_private_data_slot_ext: if device_enabled.ext_private_data {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_private_data::FN_CREATE_PRIVATE_DATA_SLOT_EXT,
-                    ),
-                )
+            create_private_data_slot: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CREATE_PRIVATE_DATA_SLOT))
             } else {
                 None
             },
-            destroy_private_data_slot_ext: if device_enabled.ext_private_data {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::ext_private_data::FN_DESTROY_PRIVATE_DATA_SLOT_EXT,
-                    ),
-                )
+            destroy_private_data_slot: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_DESTROY_PRIVATE_DATA_SLOT))
             } else {
                 None
             },
-            set_private_data_ext: if device_enabled.ext_private_data {
-                std::mem::transmute(
-                    symbol(crate::extensions::ext_private_data::FN_SET_PRIVATE_DATA_EXT),
-                )
+            set_private_data: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_SET_PRIVATE_DATA))
             } else {
                 None
             },
-            get_private_data_ext: if device_enabled.ext_private_data {
-                std::mem::transmute(
-                    symbol(crate::extensions::ext_private_data::FN_GET_PRIVATE_DATA_EXT),
-                )
+            get_private_data: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_GET_PRIVATE_DATA))
             } else {
                 None
             },
-            cmd_copy_buffer2_khr: if device_enabled.khr_copy_commands2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER2_KHR,
-                    ),
-                )
+            cmd_copy_buffer2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_COPY_BUFFER2))
             } else {
                 None
             },
-            cmd_copy_image2_khr: if device_enabled.khr_copy_commands2 {
-                std::mem::transmute(
-                    symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE2_KHR),
-                )
+            cmd_copy_image2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_COPY_IMAGE2))
             } else {
                 None
             },
-            cmd_blit_image2_khr: if device_enabled.khr_copy_commands2 {
-                std::mem::transmute(
-                    symbol(crate::extensions::khr_copy_commands2::FN_CMD_BLIT_IMAGE2_KHR),
-                )
+            cmd_blit_image2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_BLIT_IMAGE2))
             } else {
                 None
             },
-            cmd_copy_buffer_to_image2_khr: if device_enabled.khr_copy_commands2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER_TO_IMAGE2_KHR,
-                    ),
-                )
+            cmd_copy_buffer_to_image2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_COPY_BUFFER_TO_IMAGE2))
             } else {
                 None
             },
-            cmd_copy_image_to_buffer2_khr: if device_enabled.khr_copy_commands2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE_TO_BUFFER2_KHR,
-                    ),
-                )
+            cmd_copy_image_to_buffer2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_COPY_IMAGE_TO_BUFFER2))
             } else {
                 None
             },
-            cmd_resolve_image2_khr: if device_enabled.khr_copy_commands2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_copy_commands2::FN_CMD_RESOLVE_IMAGE2_KHR,
-                    ),
-                )
+            cmd_resolve_image2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_RESOLVE_IMAGE2))
             } else {
                 None
             },
@@ -5067,55 +5021,33 @@ impl DeviceLoader {
             } else {
                 None
             },
-            cmd_set_event2_khr: if device_enabled.khr_synchronization2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_synchronization2::FN_CMD_SET_EVENT2_KHR,
-                    ),
-                )
+            cmd_set_event2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_SET_EVENT2))
             } else {
                 None
             },
-            cmd_reset_event2_khr: if device_enabled.khr_synchronization2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_synchronization2::FN_CMD_RESET_EVENT2_KHR,
-                    ),
-                )
+            cmd_reset_event2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_RESET_EVENT2))
             } else {
                 None
             },
-            cmd_wait_events2_khr: if device_enabled.khr_synchronization2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_synchronization2::FN_CMD_WAIT_EVENTS2_KHR,
-                    ),
-                )
+            cmd_wait_events2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_WAIT_EVENTS2))
             } else {
                 None
             },
-            cmd_pipeline_barrier2_khr: if device_enabled.khr_synchronization2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_synchronization2::FN_CMD_PIPELINE_BARRIER2_KHR,
-                    ),
-                )
+            cmd_pipeline_barrier2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_PIPELINE_BARRIER2))
             } else {
                 None
             },
-            queue_submit2_khr: if device_enabled.khr_synchronization2 {
-                std::mem::transmute(
-                    symbol(crate::extensions::khr_synchronization2::FN_QUEUE_SUBMIT2_KHR),
-                )
+            queue_submit2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_QUEUE_SUBMIT2))
             } else {
                 None
             },
-            cmd_write_timestamp2_khr: if device_enabled.khr_synchronization2 {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_synchronization2::FN_CMD_WRITE_TIMESTAMP2_KHR,
-                    ),
-                )
+            cmd_write_timestamp2: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_WRITE_TIMESTAMP2))
             } else {
                 None
             },
@@ -5365,21 +5297,13 @@ impl DeviceLoader {
             } else {
                 None
             },
-            cmd_begin_rendering_khr: if device_enabled.khr_dynamic_rendering {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_dynamic_rendering::FN_CMD_BEGIN_RENDERING_KHR,
-                    ),
-                )
+            cmd_begin_rendering: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_BEGIN_RENDERING))
             } else {
                 None
             },
-            cmd_end_rendering_khr: if device_enabled.khr_dynamic_rendering {
-                std::mem::transmute(
-                    symbol(
-                        crate::extensions::khr_dynamic_rendering::FN_CMD_END_RENDERING_KHR,
-                    ),
-                )
+            cmd_end_rendering: if instance_enabled.vk1_3 {
+                std::mem::transmute(symbol(crate::vk1_3::FN_CMD_END_RENDERING))
             } else {
                 None
             },
@@ -5504,6 +5428,37 @@ impl DeviceLoader {
                 std::mem::transmute(
                     symbol(
                         crate::extensions::khr_get_memory_requirements2::FN_GET_IMAGE_SPARSE_MEMORY_REQUIREMENTS2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            get_device_buffer_memory_requirements_khr: if device_enabled.khr_maintenance4
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_maintenance4::FN_GET_DEVICE_BUFFER_MEMORY_REQUIREMENTS_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            get_device_image_memory_requirements_khr: if device_enabled.khr_maintenance4
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_maintenance4::FN_GET_DEVICE_IMAGE_MEMORY_REQUIREMENTS_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            get_device_image_sparse_memory_requirements_khr: if device_enabled
+                .khr_maintenance4
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_maintenance4::FN_GET_DEVICE_IMAGE_SPARSE_MEMORY_REQUIREMENTS_KHR,
                     ),
                 )
             } else {
@@ -5692,6 +5647,305 @@ impl DeviceLoader {
             } else {
                 None
             },
+            cmd_set_cull_mode_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_CULL_MODE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_front_face_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_FRONT_FACE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_primitive_topology_ext: if device_enabled.ext_extended_dynamic_state
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_PRIMITIVE_TOPOLOGY_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_viewport_with_count_ext: if device_enabled.ext_extended_dynamic_state
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_VIEWPORT_WITH_COUNT_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_scissor_with_count_ext: if device_enabled.ext_extended_dynamic_state
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_SCISSOR_WITH_COUNT_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_bind_vertex_buffers2_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_BIND_VERTEX_BUFFERS2_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_depth_test_enable_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_TEST_ENABLE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_depth_write_enable_ext: if device_enabled.ext_extended_dynamic_state
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_WRITE_ENABLE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_depth_compare_op_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_COMPARE_OP_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_depth_bounds_test_enable_ext: if device_enabled
+                .ext_extended_dynamic_state
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_DEPTH_BOUNDS_TEST_ENABLE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_stencil_test_enable_ext: if device_enabled.ext_extended_dynamic_state
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_TEST_ENABLE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_stencil_op_ext: if device_enabled.ext_extended_dynamic_state {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state::FN_CMD_SET_STENCIL_OP_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_rasterizer_discard_enable_ext: if device_enabled
+                .ext_extended_dynamic_state2
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state2::FN_CMD_SET_RASTERIZER_DISCARD_ENABLE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_depth_bias_enable_ext: if device_enabled.ext_extended_dynamic_state2
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state2::FN_CMD_SET_DEPTH_BIAS_ENABLE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_primitive_restart_enable_ext: if device_enabled
+                .ext_extended_dynamic_state2
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_extended_dynamic_state2::FN_CMD_SET_PRIMITIVE_RESTART_ENABLE_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            create_private_data_slot_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_private_data::FN_CREATE_PRIVATE_DATA_SLOT_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            destroy_private_data_slot_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_private_data::FN_DESTROY_PRIVATE_DATA_SLOT_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            set_private_data_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(
+                    symbol(crate::extensions::ext_private_data::FN_SET_PRIVATE_DATA_EXT),
+                )
+            } else {
+                None
+            },
+            get_private_data_ext: if device_enabled.ext_private_data {
+                std::mem::transmute(
+                    symbol(crate::extensions::ext_private_data::FN_GET_PRIVATE_DATA_EXT),
+                )
+            } else {
+                None
+            },
+            cmd_copy_buffer2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_copy_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(
+                    symbol(crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE2_KHR),
+                )
+            } else {
+                None
+            },
+            cmd_blit_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(
+                    symbol(crate::extensions::khr_copy_commands2::FN_CMD_BLIT_IMAGE2_KHR),
+                )
+            } else {
+                None
+            },
+            cmd_copy_buffer_to_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_copy_commands2::FN_CMD_COPY_BUFFER_TO_IMAGE2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_copy_image_to_buffer2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_copy_commands2::FN_CMD_COPY_IMAGE_TO_BUFFER2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_resolve_image2_khr: if device_enabled.khr_copy_commands2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_copy_commands2::FN_CMD_RESOLVE_IMAGE2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_set_event2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_synchronization2::FN_CMD_SET_EVENT2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_reset_event2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_synchronization2::FN_CMD_RESET_EVENT2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_wait_events2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_synchronization2::FN_CMD_WAIT_EVENTS2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_pipeline_barrier2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_synchronization2::FN_CMD_PIPELINE_BARRIER2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            queue_submit2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(
+                    symbol(crate::extensions::khr_synchronization2::FN_QUEUE_SUBMIT2_KHR),
+                )
+            } else {
+                None
+            },
+            cmd_write_timestamp2_khr: if device_enabled.khr_synchronization2 {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_synchronization2::FN_CMD_WRITE_TIMESTAMP2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_begin_rendering_khr: if device_enabled.khr_dynamic_rendering {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_dynamic_rendering::FN_CMD_BEGIN_RENDERING_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
+            cmd_end_rendering_khr: if device_enabled.khr_dynamic_rendering {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_dynamic_rendering::FN_CMD_END_RENDERING_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
             enabled: device_enabled,
         })
     }
@@ -5702,3 +5956,5 @@ pub mod vk1_0;
 pub mod vk1_1;
 /// Provides Vulkan feature items.
 pub mod vk1_2;
+/// Provides Vulkan feature items.
+pub mod vk1_3;

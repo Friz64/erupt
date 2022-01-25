@@ -46,7 +46,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -89,7 +89,7 @@ impl PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Builder of [`PhysicalDeviceMutableDescriptorTypeFeaturesVALVE`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Builder of [`PhysicalDeviceMutableDescriptorTypeFeaturesVALVE`]
 #[repr(transparent)]
 pub struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a>(
     PhysicalDeviceMutableDescriptorTypeFeaturesVALVE,
@@ -141,7 +141,7 @@ for PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeListVALVE.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListVALVE.html) · Structure
 #[doc(alias = "VkMutableDescriptorTypeListVALVE")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -173,7 +173,7 @@ impl MutableDescriptorTypeListVALVE {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeListVALVE.html) · Builder of [`MutableDescriptorTypeListVALVE`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListVALVE.html) · Builder of [`MutableDescriptorTypeListVALVE`]
 #[repr(transparent)]
 pub struct MutableDescriptorTypeListVALVEBuilder<'a>(
     MutableDescriptorTypeListVALVE,
@@ -225,7 +225,7 @@ impl<'a> std::ops::DerefMut for MutableDescriptorTypeListVALVEBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html) · Structure
 #[doc(alias = "VkMutableDescriptorTypeCreateInfoVALVE")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -272,7 +272,7 @@ impl MutableDescriptorTypeCreateInfoVALVE {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html) · Builder of [`MutableDescriptorTypeCreateInfoVALVE`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html) · Builder of [`MutableDescriptorTypeCreateInfoVALVE`]
 #[repr(transparent)]
 pub struct MutableDescriptorTypeCreateInfoVALVEBuilder<'a>(
     MutableDescriptorTypeCreateInfoVALVE,

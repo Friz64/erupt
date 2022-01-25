@@ -7,16 +7,16 @@ pub const KHR_IMAGE_FORMAT_LIST_SPEC_VERSION: u32 = 1;
 pub const KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_image_format_list"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatListCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatListCreateInfoKHR.html) · Alias
 #[doc(alias = "VkImageFormatListCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ImageFormatListCreateInfoKHR = crate::vk1_2::ImageFormatListCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageFormatListCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatListCreateInfoKHR.html) · Alias
 #[doc(alias = "VkImageFormatListCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type ImageFormatListCreateInfoKHRBuilder<'a> = crate::vk1_2::ImageFormatListCreateInfoBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_image_format_list`]
 impl crate::vk1_0::StructureType {
     pub const IMAGE_FORMAT_LIST_CREATE_INFO_KHR: Self = Self::IMAGE_FORMAT_LIST_CREATE_INFO;

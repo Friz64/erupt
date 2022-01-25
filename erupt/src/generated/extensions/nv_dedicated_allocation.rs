@@ -25,7 +25,7 @@ impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationImageCreateInfoNV>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationImageCreateInfoNVBuilder<'_>>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Structure
 #[doc(alias = "VkDedicatedAllocationImageCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -63,7 +63,7 @@ impl DedicatedAllocationImageCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Builder of [`DedicatedAllocationImageCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Builder of [`DedicatedAllocationImageCreateInfoNV`]
 #[repr(transparent)]
 pub struct DedicatedAllocationImageCreateInfoNVBuilder<'a>(
     DedicatedAllocationImageCreateInfoNV,
@@ -111,7 +111,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationImageCreateInfoNVBuilder<'a> 
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Structure
 #[doc(alias = "VkDedicatedAllocationBufferCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -149,7 +149,7 @@ impl DedicatedAllocationBufferCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Builder of [`DedicatedAllocationBufferCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Builder of [`DedicatedAllocationBufferCreateInfoNV`]
 #[repr(transparent)]
 pub struct DedicatedAllocationBufferCreateInfoNVBuilder<'a>(
     DedicatedAllocationBufferCreateInfoNV,
@@ -197,7 +197,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationBufferCreateInfoNVBuilder<'a>
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Structure
 #[doc(alias = "VkDedicatedAllocationMemoryAllocateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -238,7 +238,7 @@ impl DedicatedAllocationMemoryAllocateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Builder of [`DedicatedAllocationMemoryAllocateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Builder of [`DedicatedAllocationMemoryAllocateInfoNV`]
 #[repr(transparent)]
 pub struct DedicatedAllocationMemoryAllocateInfoNVBuilder<'a>(
     DedicatedAllocationMemoryAllocateInfoNV,

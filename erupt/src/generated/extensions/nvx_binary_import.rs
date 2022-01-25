@@ -29,12 +29,12 @@ pub const FN_CMD_CU_LAUNCH_KERNEL_NVX: *const std::os::raw::c_char = crate::cstr
 );
 crate::non_dispatchable_handle!(
     CuModuleNVX, CU_MODULE_NVX,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuModuleNVX.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleNVX.html) · Non-dispatchable Handle",
     "VkCuModuleNVX"
 );
 crate::non_dispatchable_handle!(
     CuFunctionNVX, CU_FUNCTION_NVX,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuFunctionNVX.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuFunctionNVX.html) · Non-dispatchable Handle",
     "VkCuFunctionNVX"
 );
 ///Provided by [`crate::extensions::nvx_binary_import`]
@@ -53,43 +53,43 @@ impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
     pub const CU_MODULE_NVX_EXT: Self = Self(1000029000);
     pub const CU_FUNCTION_NVX_EXT: Self = Self(1000029001);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCuModuleNVX.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuModuleNVX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateCuModuleNVX = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::nvx_binary_import::CuModuleCreateInfoNVX,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_module: *mut crate::extensions::nvx_binary_import::CuModuleNVX,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCuFunctionNVX.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::nvx_binary_import::CuModuleCreateInfoNVX,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_module: *mut crate::extensions::nvx_binary_import::CuModuleNVX,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuFunctionNVX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateCuFunctionNVX = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::nvx_binary_import::CuFunctionCreateInfoNVX,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_function: *mut crate::extensions::nvx_binary_import::CuFunctionNVX,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCuModuleNVX.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::nvx_binary_import::CuFunctionCreateInfoNVX,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_function: *mut crate::extensions::nvx_binary_import::CuFunctionNVX,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuModuleNVX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyCuModuleNVX = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        module: crate::extensions::nvx_binary_import::CuModuleNVX,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCuFunctionNVX.html) · Function
+    device: crate::vk1_0::Device,
+    module: crate::extensions::nvx_binary_import::CuModuleNVX,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuFunctionNVX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyCuFunctionNVX = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        function: crate::extensions::nvx_binary_import::CuFunctionNVX,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCuLaunchKernelNVX.html) · Function
+    device: crate::vk1_0::Device,
+    function: crate::extensions::nvx_binary_import::CuFunctionNVX,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCuLaunchKernelNVX.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdCuLaunchKernelNVX = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_launch_info: *const crate::extensions::nvx_binary_import::CuLaunchInfoNVX,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuModuleCreateInfoNVX.html) · Structure
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_launch_info: *const crate::extensions::nvx_binary_import::CuLaunchInfoNVX,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleCreateInfoNVX.html) · Structure
 #[doc(alias = "VkCuModuleCreateInfoNVX")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -130,7 +130,7 @@ impl CuModuleCreateInfoNVX {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuModuleCreateInfoNVX.html) · Builder of [`CuModuleCreateInfoNVX`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleCreateInfoNVX.html) · Builder of [`CuModuleCreateInfoNVX`]
 #[repr(transparent)]
 pub struct CuModuleCreateInfoNVXBuilder<'a>(
     CuModuleCreateInfoNVX,
@@ -181,7 +181,7 @@ impl<'a> std::ops::DerefMut for CuModuleCreateInfoNVXBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuFunctionCreateInfoNVX.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuFunctionCreateInfoNVX.html) · Structure
 #[doc(alias = "VkCuFunctionCreateInfoNVX")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -222,7 +222,7 @@ impl CuFunctionCreateInfoNVX {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuFunctionCreateInfoNVX.html) · Builder of [`CuFunctionCreateInfoNVX`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuFunctionCreateInfoNVX.html) · Builder of [`CuFunctionCreateInfoNVX`]
 #[repr(transparent)]
 pub struct CuFunctionCreateInfoNVXBuilder<'a>(
     CuFunctionCreateInfoNVX,
@@ -276,7 +276,7 @@ impl<'a> std::ops::DerefMut for CuFunctionCreateInfoNVXBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuLaunchInfoNVX.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuLaunchInfoNVX.html) · Structure
 #[doc(alias = "VkCuLaunchInfoNVX")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -347,7 +347,7 @@ impl CuLaunchInfoNVX {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCuLaunchInfoNVX.html) · Builder of [`CuLaunchInfoNVX`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuLaunchInfoNVX.html) · Builder of [`CuLaunchInfoNVX`]
 #[repr(transparent)]
 pub struct CuLaunchInfoNVXBuilder<'a>(CuLaunchInfoNVX, std::marker::PhantomData<&'a ()>);
 impl<'a> CuLaunchInfoNVXBuilder<'a> {
@@ -462,7 +462,7 @@ impl<'a> std::ops::DerefMut for CuLaunchInfoNVXBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCuModuleNVX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuModuleNVX.html) · Function
     #[doc(alias = "vkCreateCuModuleNVX")]
     pub unsafe fn create_cu_module_nvx(
         &self,
@@ -484,7 +484,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateCuFunctionNVX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateCuFunctionNVX.html) · Function
     #[doc(alias = "vkCreateCuFunctionNVX")]
     pub unsafe fn create_cu_function_nvx(
         &self,
@@ -508,7 +508,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCuModuleNVX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuModuleNVX.html) · Function
     #[doc(alias = "vkDestroyCuModuleNVX")]
     pub unsafe fn destroy_cu_module_nvx(
         &self,
@@ -528,7 +528,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyCuFunctionNVX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyCuFunctionNVX.html) · Function
     #[doc(alias = "vkDestroyCuFunctionNVX")]
     pub unsafe fn destroy_cu_function_nvx(
         &self,
@@ -548,7 +548,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdCuLaunchKernelNVX.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdCuLaunchKernelNVX.html) · Function
     #[doc(alias = "vkCmdCuLaunchKernelNVX")]
     pub unsafe fn cmd_cu_launch_kernel_nvx(
         &self,

@@ -33,7 +33,7 @@ pub const FN_CMD_DRAW_INDIRECT_BYTE_COUNT_EXT: *const std::os::raw::c_char = cra
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateStreamCreateFlagsEXT.html) · Bitmask of [`PipelineRasterizationStateStreamCreateFlagBitsEXT`]"]
     #[doc(alias = "VkPipelineRasterizationStateStreamCreateFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct PipelineRasterizationStateStreamCreateFlagsEXT : u32
     { #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -87,62 +87,62 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_0::PipelineStageFlagBits {
     pub const TRANSFORM_FEEDBACK_EXT: Self = Self(16777216);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindTransformFeedbackBuffersEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_binding: u32,
-        binding_count: u32,
-        p_buffers: *const crate::vk1_0::Buffer,
-        p_offsets: *const crate::vk1_0::DeviceSize,
-        p_sizes: *const crate::vk1_0::DeviceSize,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    first_binding: u32,
+    binding_count: u32,
+    p_buffers: *const crate::vk1_0::Buffer,
+    p_offsets: *const crate::vk1_0::DeviceSize,
+    p_sizes: *const crate::vk1_0::DeviceSize,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginTransformFeedbackEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_counter_buffer: u32,
-        counter_buffer_count: u32,
-        p_counter_buffers: *const crate::vk1_0::Buffer,
-        p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    first_counter_buffer: u32,
+    counter_buffer_count: u32,
+    p_counter_buffers: *const crate::vk1_0::Buffer,
+    p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndTransformFeedbackEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        first_counter_buffer: u32,
-        counter_buffer_count: u32,
-        p_counter_buffers: *const crate::vk1_0::Buffer,
-        p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    first_counter_buffer: u32,
+    counter_buffer_count: u32,
+    p_counter_buffers: *const crate::vk1_0::Buffer,
+    p_counter_buffer_offsets: *const crate::vk1_0::DeviceSize,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBeginQueryIndexedEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        query_pool: crate::vk1_0::QueryPool,
-        query: u32,
-        flags: crate::vk1_0::QueryControlFlags,
-        index: u32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    query_pool: crate::vk1_0::QueryPool,
+    query: u32,
+    flags: crate::vk1_0::QueryControlFlags,
+    index: u32,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdEndQueryIndexedEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        query_pool: crate::vk1_0::QueryPool,
-        query: u32,
-        index: u32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    query_pool: crate::vk1_0::QueryPool,
+    query: u32,
+    index: u32,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectByteCountEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        instance_count: u32,
-        first_instance: u32,
-        counter_buffer: crate::vk1_0::Buffer,
-        counter_buffer_offset: crate::vk1_0::DeviceSize,
-        counter_offset: u32,
-        vertex_stride: u32,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    instance_count: u32,
+    first_instance: u32,
+    counter_buffer: crate::vk1_0::Buffer,
+    counter_buffer_offset: crate::vk1_0::DeviceSize,
+    counter_offset: u32,
+    vertex_stride: u32,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTransformFeedbackFeaturesEXT>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'_>>
@@ -163,7 +163,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceTransformFeedbackFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -206,7 +206,7 @@ impl PhysicalDeviceTransformFeedbackFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceTransformFeedbackFeaturesEXTBuilder<'a>(
     PhysicalDeviceTransformFeedbackFeaturesEXT,
@@ -261,7 +261,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackFeaturesEXTBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceTransformFeedbackPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -355,7 +355,7 @@ impl PhysicalDeviceTransformFeedbackPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Builder of [`PhysicalDeviceTransformFeedbackPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceTransformFeedbackPropertiesEXTBuilder<'a>(
     PhysicalDeviceTransformFeedbackPropertiesEXT,
@@ -503,7 +503,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackPropertiesEXTBuil
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationStateStreamCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -549,7 +549,7 @@ impl PipelineRasterizationStateStreamCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Builder of [`PipelineRasterizationStateStreamCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Builder of [`PipelineRasterizationStateStreamCreateInfoEXT`]
 #[repr(transparent)]
 pub struct PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a>(
     PipelineRasterizationStateStreamCreateInfoEXT,
@@ -612,7 +612,7 @@ for PipelineRasterizationStateStreamCreateInfoEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindTransformFeedbackBuffersEXT.html) · Function
     #[doc(alias = "vkCmdBindTransformFeedbackBuffersEXT")]
     pub unsafe fn cmd_bind_transform_feedback_buffers_ext(
         &self,
@@ -638,7 +638,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginTransformFeedbackEXT.html) · Function
     #[doc(alias = "vkCmdBeginTransformFeedbackEXT")]
     pub unsafe fn cmd_begin_transform_feedback_ext(
         &self,
@@ -664,7 +664,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndTransformFeedbackEXT.html) · Function
     #[doc(alias = "vkCmdEndTransformFeedbackEXT")]
     pub unsafe fn cmd_end_transform_feedback_ext(
         &self,
@@ -690,7 +690,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBeginQueryIndexedEXT.html) · Function
     #[doc(alias = "vkCmdBeginQueryIndexedEXT")]
     pub unsafe fn cmd_begin_query_indexed_ext(
         &self,
@@ -714,7 +714,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdEndQueryIndexedEXT.html) · Function
     #[doc(alias = "vkCmdEndQueryIndexedEXT")]
     pub unsafe fn cmd_end_query_indexed_ext(
         &self,
@@ -734,7 +734,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectByteCountEXT.html) · Function
     #[doc(alias = "vkCmdDrawIndirectByteCountEXT")]
     pub unsafe fn cmd_draw_indirect_byte_count_ext(
         &self,

@@ -7,16 +7,16 @@ pub const EXT_SEPARATE_STENCIL_USAGE_SPEC_VERSION: u32 = 1;
 pub const EXT_SEPARATE_STENCIL_USAGE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_EXT_separate_stencil_usage"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageStencilUsageCreateInfoEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageStencilUsageCreateInfoEXT.html) · Alias
 #[doc(alias = "VkImageStencilUsageCreateInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type ImageStencilUsageCreateInfoEXT = crate::vk1_2::ImageStencilUsageCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageStencilUsageCreateInfoEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageStencilUsageCreateInfoEXT.html) · Alias
 #[doc(alias = "VkImageStencilUsageCreateInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type ImageStencilUsageCreateInfoEXTBuilder<'a> = crate::vk1_2::ImageStencilUsageCreateInfoBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::ext_separate_stencil_usage`]
 impl crate::vk1_0::StructureType {
     pub const IMAGE_STENCIL_USAGE_CREATE_INFO_EXT: Self = Self::IMAGE_STENCIL_USAGE_CREATE_INFO;

@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceImageViewMinLodFeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceImageViewMinLodFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceImageViewMinLodFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -64,7 +64,7 @@ impl PhysicalDeviceImageViewMinLodFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html) · Builder of [`PhysicalDeviceImageViewMinLodFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewMinLodFeaturesEXT.html) · Builder of [`PhysicalDeviceImageViewMinLodFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceImageViewMinLodFeaturesEXTBuilder<'a>(
     PhysicalDeviceImageViewMinLodFeaturesEXT,
@@ -112,7 +112,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageViewMinLodFeaturesEXTBuilder<
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewMinLodCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewMinLodCreateInfoEXT.html) · Structure
 #[doc(alias = "VkImageViewMinLodCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -150,7 +150,7 @@ impl ImageViewMinLodCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewMinLodCreateInfoEXT.html) · Builder of [`ImageViewMinLodCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewMinLodCreateInfoEXT.html) · Builder of [`ImageViewMinLodCreateInfoEXT`]
 #[repr(transparent)]
 pub struct ImageViewMinLodCreateInfoEXTBuilder<'a>(
     ImageViewMinLodCreateInfoEXT,

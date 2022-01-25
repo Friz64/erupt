@@ -7,16 +7,16 @@ pub const EXT_SCALAR_BLOCK_LAYOUT_SPEC_VERSION: u32 = 1;
 pub const EXT_SCALAR_BLOCK_LAYOUT_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_EXT_scalar_block_layout"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceScalarBlockLayoutFeaturesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceScalarBlockLayoutFeaturesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceScalarBlockLayoutFeaturesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceScalarBlockLayoutFeaturesEXT = crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceScalarBlockLayoutFeaturesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceScalarBlockLayoutFeaturesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceScalarBlockLayoutFeaturesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceScalarBlockLayoutFeaturesEXTBuilder<'a> = crate::vk1_2::PhysicalDeviceScalarBlockLayoutFeaturesBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::ext_scalar_block_layout`]
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES_EXT: Self = Self::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES;

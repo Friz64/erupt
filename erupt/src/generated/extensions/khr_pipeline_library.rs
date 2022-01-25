@@ -15,7 +15,7 @@ impl crate::vk1_0::PipelineCreateFlagBits {
 impl crate::vk1_0::StructureType {
     pub const PIPELINE_LIBRARY_CREATE_INFO_KHR: Self = Self(1000290000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Structure
 #[doc(alias = "VkPipelineLibraryCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -56,7 +56,7 @@ impl PipelineLibraryCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Builder of [`PipelineLibraryCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Builder of [`PipelineLibraryCreateInfoKHR`]
 #[repr(transparent)]
 pub struct PipelineLibraryCreateInfoKHRBuilder<'a>(
     PipelineLibraryCreateInfoKHR,

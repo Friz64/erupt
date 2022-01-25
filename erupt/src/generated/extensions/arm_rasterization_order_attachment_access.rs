@@ -48,7 +48,7 @@ impl<
     'a,
     PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARMBuilder<'_>,
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -106,7 +106,7 @@ impl PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM.html) · Builder of [`PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM.html) · Builder of [`PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM`]
 #[repr(transparent)]
 pub struct PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARMBuilder<'a>(
     PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM,

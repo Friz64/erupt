@@ -20,32 +20,32 @@ impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT: Self = Self(1000392000);
     pub const PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT: Self = Self(1000392001);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMultiEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawMultiEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMultiEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        draw_count: u32,
-        p_vertex_info: *const crate::extensions::ext_multi_draw::MultiDrawInfoEXT,
-        instance_count: u32,
-        first_instance: u32,
-        stride: u32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMultiIndexedEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    draw_count: u32,
+    p_vertex_info: *const crate::extensions::ext_multi_draw::MultiDrawInfoEXT,
+    instance_count: u32,
+    first_instance: u32,
+    stride: u32,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawMultiIndexedEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawMultiIndexedEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        draw_count: u32,
-        p_index_info: *const crate::extensions::ext_multi_draw::MultiDrawIndexedInfoEXT,
-        instance_count: u32,
-        first_instance: u32,
-        stride: u32,
-        p_vertex_offset: *const i32,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    draw_count: u32,
+    p_index_info: *const crate::extensions::ext_multi_draw::MultiDrawIndexedInfoEXT,
+    instance_count: u32,
+    first_instance: u32,
+    stride: u32,
+    p_vertex_offset: *const i32,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiDrawFeaturesEXT>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiDrawFeaturesEXTBuilder<'_>>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultiDrawInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultiDrawInfoEXT.html) · Structure
 #[doc(alias = "VkMultiDrawInfoEXT")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -77,7 +77,7 @@ impl MultiDrawInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultiDrawInfoEXT.html) · Builder of [`MultiDrawInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultiDrawInfoEXT.html) · Builder of [`MultiDrawInfoEXT`]
 #[repr(transparent)]
 pub struct MultiDrawInfoEXTBuilder<'a>(
     MultiDrawInfoEXT,
@@ -126,7 +126,7 @@ impl<'a> std::ops::DerefMut for MultiDrawInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultiDrawIndexedInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultiDrawIndexedInfoEXT.html) · Structure
 #[doc(alias = "VkMultiDrawIndexedInfoEXT")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -161,7 +161,7 @@ impl MultiDrawIndexedInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMultiDrawIndexedInfoEXT.html) · Builder of [`MultiDrawIndexedInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultiDrawIndexedInfoEXT.html) · Builder of [`MultiDrawIndexedInfoEXT`]
 #[repr(transparent)]
 pub struct MultiDrawIndexedInfoEXTBuilder<'a>(
     MultiDrawIndexedInfoEXT,
@@ -216,7 +216,7 @@ impl<'a> std::ops::DerefMut for MultiDrawIndexedInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiDrawPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiDrawPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMultiDrawPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -254,7 +254,7 @@ impl PhysicalDeviceMultiDrawPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiDrawPropertiesEXT.html) · Builder of [`PhysicalDeviceMultiDrawPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiDrawPropertiesEXT.html) · Builder of [`PhysicalDeviceMultiDrawPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceMultiDrawPropertiesEXTBuilder<'a>(
     PhysicalDeviceMultiDrawPropertiesEXT,
@@ -310,7 +310,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiDrawPropertiesEXT>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiDrawPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiDrawFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiDrawFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMultiDrawFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -348,7 +348,7 @@ impl PhysicalDeviceMultiDrawFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiDrawFeaturesEXT.html) · Builder of [`PhysicalDeviceMultiDrawFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiDrawFeaturesEXT.html) · Builder of [`PhysicalDeviceMultiDrawFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceMultiDrawFeaturesEXTBuilder<'a>(
     PhysicalDeviceMultiDrawFeaturesEXT,
@@ -400,7 +400,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMultiDrawFeaturesEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMultiEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawMultiEXT.html) · Function
     #[doc(alias = "vkCmdDrawMultiEXT")]
     pub unsafe fn cmd_draw_multi_ext(
         &self,
@@ -424,7 +424,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawMultiIndexedEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawMultiIndexedEXT.html) · Function
     #[doc(alias = "vkCmdDrawMultiIndexedEXT")]
     pub unsafe fn cmd_draw_multi_indexed_ext(
         &self,

@@ -32,7 +32,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePortabilitySubsetFeaturesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -129,7 +129,7 @@ impl PhysicalDevicePortabilitySubsetFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetFeaturesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetFeaturesKHR`]
 #[repr(transparent)]
 pub struct PhysicalDevicePortabilitySubsetFeaturesKHRBuilder<'a>(
     PhysicalDevicePortabilitySubsetFeaturesKHR,
@@ -289,7 +289,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePortabilitySubsetFeaturesKHRBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePortabilitySubsetPropertiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -335,7 +335,7 @@ impl PhysicalDevicePortabilitySubsetPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetPropertiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Builder of [`PhysicalDevicePortabilitySubsetPropertiesKHR`]
 #[repr(transparent)]
 pub struct PhysicalDevicePortabilitySubsetPropertiesKHRBuilder<'a>(
     PhysicalDevicePortabilitySubsetPropertiesKHR,

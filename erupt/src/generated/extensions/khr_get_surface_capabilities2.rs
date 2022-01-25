@@ -21,22 +21,22 @@ impl crate::vk1_0::StructureType {
     pub const SURFACE_CAPABILITIES_2_KHR: Self = Self(1000119001);
     pub const SURFACE_FORMAT_2_KHR: Self = Self(1000119002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
-        p_surface_capabilities: *mut crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
+    p_surface_capabilities: *mut crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
-        p_surface_format_count: *mut u32,
-        p_surface_formats: *mut crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Structure
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_surface_info: *const crate::extensions::khr_get_surface_capabilities2::PhysicalDeviceSurfaceInfo2KHR,
+    p_surface_format_count: *mut u32,
+    p_surface_formats: *mut crate::extensions::khr_get_surface_capabilities2::SurfaceFormat2KHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSurfaceInfo2KHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -74,7 +74,7 @@ impl PhysicalDeviceSurfaceInfo2KHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Builder of [`PhysicalDeviceSurfaceInfo2KHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Builder of [`PhysicalDeviceSurfaceInfo2KHR`]
 #[repr(transparent)]
 pub struct PhysicalDeviceSurfaceInfo2KHRBuilder<'a>(
     PhysicalDeviceSurfaceInfo2KHR,
@@ -125,7 +125,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Structure
 #[doc(alias = "VkSurfaceCapabilities2KHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -163,7 +163,7 @@ impl SurfaceCapabilities2KHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Builder of [`SurfaceCapabilities2KHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Builder of [`SurfaceCapabilities2KHR`]
 #[repr(transparent)]
 pub struct SurfaceCapabilities2KHRBuilder<'a>(
     SurfaceCapabilities2KHR,
@@ -211,7 +211,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilities2KHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormat2KHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormat2KHR.html) · Structure
 #[doc(alias = "VkSurfaceFormat2KHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -249,7 +249,7 @@ impl SurfaceFormat2KHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormat2KHR.html) · Builder of [`SurfaceFormat2KHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormat2KHR.html) · Builder of [`SurfaceFormat2KHR`]
 #[repr(transparent)]
 pub struct SurfaceFormat2KHRBuilder<'a>(
     SurfaceFormat2KHR,
@@ -301,7 +301,7 @@ impl<'a> std::ops::DerefMut for SurfaceFormat2KHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilities2KHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilities2KHR")]
     pub unsafe fn get_physical_device_surface_capabilities2_khr(
         &self,
@@ -329,7 +329,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceFormats2KHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceSurfaceFormats2KHR")]
     pub unsafe fn get_physical_device_surface_formats2_khr(
         &self,

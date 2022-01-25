@@ -20,7 +20,7 @@ impl<'a> crate::ExtendableFrom<'a, ExternalMemoryImageCreateInfoNV>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ExternalMemoryImageCreateInfoNVBuilder<'_>>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Structure
 #[doc(alias = "VkExternalMemoryImageCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -58,7 +58,7 @@ impl ExternalMemoryImageCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Builder of [`ExternalMemoryImageCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Builder of [`ExternalMemoryImageCreateInfoNV`]
 #[repr(transparent)]
 pub struct ExternalMemoryImageCreateInfoNVBuilder<'a>(
     ExternalMemoryImageCreateInfoNV,
@@ -109,7 +109,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryImageCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Structure
 #[doc(alias = "VkExportMemoryAllocateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -147,7 +147,7 @@ impl ExportMemoryAllocateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Builder of [`ExportMemoryAllocateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Builder of [`ExportMemoryAllocateInfoNV`]
 #[repr(transparent)]
 pub struct ExportMemoryAllocateInfoNVBuilder<'a>(
     ExportMemoryAllocateInfoNV,

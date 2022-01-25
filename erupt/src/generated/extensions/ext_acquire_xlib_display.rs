@@ -15,26 +15,26 @@ pub const FN_ACQUIRE_XLIB_DISPLAY_EXT: *const std::os::raw::c_char = crate::cstr
 pub const FN_GET_RAND_R_OUTPUT_DISPLAY_EXT: *const std::os::raw::c_char = crate::cstr!(
     "vkGetRandROutputDisplayEXT"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireXlibDisplayEXT = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        dpy: *mut std::ffi::c_void,
-        display: crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    dpy: *mut std::ffi::c_void,
+    display: crate::extensions::khr_display::DisplayKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRandROutputDisplayEXT = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        dpy: *mut std::ffi::c_void,
-        rr_output: u64,
-        p_display: *mut crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::vk1_0::Result;
+    physical_device: crate::vk1_0::PhysicalDevice,
+    dpy: *mut std::ffi::c_void,
+    rr_output: u64,
+    p_display: *mut crate::extensions::khr_display::DisplayKHR,
+) -> crate::vk1_0::Result;
 ///Provided by [`crate::extensions::ext_acquire_xlib_display`]
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireXlibDisplayEXT.html) · Function
     #[doc(alias = "vkAcquireXlibDisplayEXT")]
     pub unsafe fn acquire_xlib_display_ext(
         &self,
@@ -48,7 +48,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRandROutputDisplayEXT.html) · Function
     #[doc(alias = "vkGetRandROutputDisplayEXT")]
     pub unsafe fn get_rand_r_output_display_ext(
         &self,

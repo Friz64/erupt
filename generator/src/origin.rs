@@ -17,7 +17,7 @@ use std::{
 static FEATURE_NAME_REGEX: Lazy<Regex> =
     Lazy::new(|| Regex::new("VK_VERSION_([1-9]+)_([0-9]+)").unwrap());
 
-const TYPES_SKIPPED: &[&str] = &[
+const NO_AUTOGEN_TYPES: &[&str] = &[
     "vk_platform",
     "VK_DEFINE_HANDLE",
     "VK_DEFINE_NON_DISPATCHABLE_HANDLE",
@@ -37,6 +37,7 @@ const TYPES_SKIPPED: &[&str] = &[
     "VK_NULL_HANDLE",
     "VK_API_VERSION_1_1",
     "VK_API_VERSION_1_2",
+    "VK_API_VERSION_1_3",
     "VK_PIPELINE_CREATE_DISPATCH_BASE",
     "VK_USE_64_BIT_PTR_DEFINES",
 ];
@@ -165,7 +166,7 @@ impl Source {
                 for item in node_child.children().filter(|n| n.is_element()) {
                     let name = item.attribute("name");
                     if let Some(name) = name {
-                        if TYPES_SKIPPED.contains(&name) {
+                        if NO_AUTOGEN_TYPES.contains(&name) {
                             continue;
                         }
                     }

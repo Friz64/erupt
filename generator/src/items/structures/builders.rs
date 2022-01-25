@@ -445,11 +445,24 @@ impl Structure {
             },
         );
 
-        for other in source
-            .structures
-            .iter()
-            .filter(|structure| structure.metadata.extends.contains(&self.name))
-        {
+        let mut names = vec![&self.name];
+        for alias in &source.aliases {
+            if let Name::Type(alias_name) = &alias.name {
+                if let Name::Type(resolved) = alias.resolve(source) {
+                    if resolved == &self.name {
+                        names.push(alias_name);
+                    }
+                }
+            }
+        }
+
+        for other in source.structures.iter().filter(|structure| {
+            structure
+                .metadata
+                .extends
+                .iter()
+                .any(|extends| names.contains(&extends))
+        }) {
             let this_path = origin.module_path();
             let other_origin = other
                 .origin

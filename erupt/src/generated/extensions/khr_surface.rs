@@ -29,7 +29,7 @@ pub const FN_GET_PHYSICAL_DEVICE_SURFACE_PRESENT_MODES_KHR: *const std::os::raw:
 );
 crate::non_dispatchable_handle!(
     SurfaceKHR, SURFACE_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceKHR.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceKHR.html) · Non-dispatchable Handle",
     "VkSurfaceKHR"
 );
 ///Provided by [`crate::extensions::khr_surface`]
@@ -41,7 +41,7 @@ impl crate::vk1_0::Result {
 impl crate::vk1_0::ObjectType {
     pub const SURFACE_KHR: Self = Self(1000000000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkColorSpaceKHR.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkColorSpaceKHR.html) · Enum
 #[doc(alias = "VkColorSpaceKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -80,7 +80,7 @@ impl crate::extensions::khr_surface::ColorSpaceKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCompositeAlphaFlagsKHR.html) · Bitmask of [`CompositeAlphaFlagBitsKHR`]"]
     #[doc(alias = "VkCompositeAlphaFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct CompositeAlphaFlagsKHR : u32 { const OPAQUE_KHR =
     CompositeAlphaFlagBitsKHR::OPAQUE_KHR.0; const PRE_MULTIPLIED_KHR =
@@ -88,7 +88,7 @@ bitflags::bitflags! {
     CompositeAlphaFlagBitsKHR::POST_MULTIPLIED_KHR.0; const INHERIT_KHR =
     CompositeAlphaFlagBitsKHR::INHERIT_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Bits enum of [`CompositeAlphaFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCompositeAlphaFlagBitsKHR.html) · Bits enum of [`CompositeAlphaFlagsKHR`]
 #[doc(alias = "VkCompositeAlphaFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -121,7 +121,7 @@ impl crate::extensions::khr_surface::CompositeAlphaFlagBitsKHR {
     pub const POST_MULTIPLIED_KHR: Self = Self(4);
     pub const INHERIT_KHR: Self = Self(8);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentModeKHR.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentModeKHR.html) · Enum
 #[doc(alias = "VkPresentModeKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -153,7 +153,7 @@ impl crate::extensions::khr_surface::PresentModeKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceTransformFlagsKHR.html) · Bitmask of [`SurfaceTransformFlagBitsKHR`]"]
     #[doc(alias = "VkSurfaceTransformFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct SurfaceTransformFlagsKHR : u32 { const IDENTITY_KHR =
     SurfaceTransformFlagBitsKHR::IDENTITY_KHR.0; const ROTATE_90_KHR =
@@ -169,7 +169,7 @@ bitflags::bitflags! {
     SurfaceTransformFlagBitsKHR::HORIZONTAL_MIRROR_ROTATE_270_KHR.0; const INHERIT_KHR =
     SurfaceTransformFlagBitsKHR::INHERIT_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Bits enum of [`SurfaceTransformFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceTransformFlagBitsKHR.html) · Bits enum of [`SurfaceTransformFlagsKHR`]
 #[doc(alias = "VkSurfaceTransformFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -218,45 +218,45 @@ impl crate::extensions::khr_surface::SurfaceTransformFlagBitsKHR {
     pub const HORIZONTAL_MIRROR_ROTATE_270_KHR: Self = Self(128);
     pub const INHERIT_KHR: Self = Self(256);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySurfaceKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroySurfaceKHR = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function
+    instance: crate::vk1_0::Instance,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceSupportKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        queue_family_index: u32,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_supported: *mut crate::vk1_0::Bool32,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    queue_family_index: u32,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_supported: *mut crate::vk1_0::Bool32,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_surface_capabilities: *mut crate::extensions::khr_surface::SurfaceCapabilitiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfaceFormatsKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_surface_format_count: *mut u32,
-        p_surface_formats: *mut crate::extensions::khr_surface::SurfaceFormatKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_surface_format_count: *mut u32,
+    p_surface_formats: *mut crate::extensions::khr_surface::SurfaceFormatKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        surface: crate::extensions::khr_surface::SurfaceKHR,
-        p_present_mode_count: *mut u32,
-        p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Structure
+    physical_device: crate::vk1_0::PhysicalDevice,
+    surface: crate::extensions::khr_surface::SurfaceKHR,
+    p_present_mode_count: *mut u32,
+    p_present_modes: *mut crate::extensions::khr_surface::PresentModeKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkSurfaceCapabilitiesKHR")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -312,7 +312,7 @@ impl SurfaceCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Builder of [`SurfaceCapabilitiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Builder of [`SurfaceCapabilitiesKHR`]
 #[repr(transparent)]
 pub struct SurfaceCapabilitiesKHRBuilder<'a>(
     SurfaceCapabilitiesKHR,
@@ -421,7 +421,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormatKHR.html) · Structure
 #[doc(alias = "VkSurfaceFormatKHR")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -453,7 +453,7 @@ impl SurfaceFormatKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceFormatKHR.html) · Builder of [`SurfaceFormatKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormatKHR.html) · Builder of [`SurfaceFormatKHR`]
 #[repr(transparent)]
 pub struct SurfaceFormatKHRBuilder<'a>(
     SurfaceFormatKHR,
@@ -509,7 +509,7 @@ impl<'a> std::ops::DerefMut for SurfaceFormatKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroySurfaceKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroySurfaceKHR.html) · Function
     #[doc(alias = "vkDestroySurfaceKHR")]
     pub unsafe fn destroy_surface_khr(
         &self,
@@ -529,7 +529,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceSupportKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceSurfaceSupportKHR")]
     pub unsafe fn get_physical_device_surface_support_khr(
         &self,
@@ -551,7 +551,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceSurfaceCapabilitiesKHR")]
     pub unsafe fn get_physical_device_surface_capabilities_khr(
         &self,
@@ -573,7 +573,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfaceFormatsKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceSurfaceFormatsKHR")]
     pub unsafe fn get_physical_device_surface_formats_khr(
         &self,
@@ -613,7 +613,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceSurfacePresentModesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceSurfacePresentModesKHR")]
     pub unsafe fn get_physical_device_surface_present_modes_khr(
         &self,

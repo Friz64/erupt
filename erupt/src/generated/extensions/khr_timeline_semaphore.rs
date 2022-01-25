@@ -19,83 +19,83 @@ pub const FN_WAIT_SEMAPHORES_KHR: *const std::os::raw::c_char = crate::cstr!(
 pub const FN_SIGNAL_SEMAPHORE_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkSignalSemaphoreKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreWaitFlagsKHR.html) · Alias
 #[doc(alias = "VkSemaphoreWaitFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreWaitFlagsKHR = crate::vk1_2::SemaphoreWaitFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreTypeKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeKHR.html) · Alias
 #[doc(alias = "VkSemaphoreTypeKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreTypeKHR = crate::vk1_2::SemaphoreType;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreWaitFlagBitsKHR.html) · Alias
 #[doc(alias = "VkSemaphoreWaitFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreWaitFlagBitsKHR = crate::vk1_2::SemaphoreWaitFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceTimelineSemaphoreFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceTimelineSemaphoreFeaturesKHR = crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTimelineSemaphoreFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceTimelineSemaphoreFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceTimelineSemaphoreFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceTimelineSemaphoreFeaturesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphorePropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTimelineSemaphorePropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceTimelineSemaphorePropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceTimelineSemaphorePropertiesKHR = crate::vk1_2::PhysicalDeviceTimelineSemaphoreProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceTimelineSemaphorePropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTimelineSemaphorePropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceTimelineSemaphorePropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceTimelineSemaphorePropertiesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceTimelineSemaphorePropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreTypeCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfoKHR.html) · Alias
 #[doc(alias = "VkSemaphoreTypeCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreTypeCreateInfoKHR = crate::vk1_2::SemaphoreTypeCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreTypeCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreTypeCreateInfoKHR.html) · Alias
 #[doc(alias = "VkSemaphoreTypeCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreTypeCreateInfoKHRBuilder<'a> = crate::vk1_2::SemaphoreTypeCreateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimelineSemaphoreSubmitInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTimelineSemaphoreSubmitInfoKHR.html) · Alias
 #[doc(alias = "VkTimelineSemaphoreSubmitInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type TimelineSemaphoreSubmitInfoKHR = crate::vk1_2::TimelineSemaphoreSubmitInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkTimelineSemaphoreSubmitInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTimelineSemaphoreSubmitInfoKHR.html) · Alias
 #[doc(alias = "VkTimelineSemaphoreSubmitInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type TimelineSemaphoreSubmitInfoKHRBuilder<'a> = crate::vk1_2::TimelineSemaphoreSubmitInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreWaitInfoKHR.html) · Alias
 #[doc(alias = "VkSemaphoreWaitInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreWaitInfoKHR = crate::vk1_2::SemaphoreWaitInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreWaitInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreWaitInfoKHR.html) · Alias
 #[doc(alias = "VkSemaphoreWaitInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreWaitInfoKHRBuilder<'a> = crate::vk1_2::SemaphoreWaitInfoBuilder<'a>;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreSignalInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreSignalInfoKHR.html) · Alias
 #[doc(alias = "VkSemaphoreSignalInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreSignalInfoKHR = crate::vk1_2::SemaphoreSignalInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreSignalInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreSignalInfoKHR.html) · Alias
 #[doc(alias = "VkSemaphoreSignalInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type SemaphoreSignalInfoKHRBuilder<'a> = crate::vk1_2::SemaphoreSignalInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreCounterValueKHR = crate::vk1_2::PFN_vkGetSemaphoreCounterValue;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitSemaphoresKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWaitSemaphoresKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkWaitSemaphoresKHR = crate::vk1_2::PFN_vkWaitSemaphores;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphoreKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSignalSemaphoreKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkSignalSemaphoreKHR = crate::vk1_2::PFN_vkSignalSemaphore;
 ///Provided by [`crate::extensions::khr_timeline_semaphore`]
@@ -120,7 +120,7 @@ impl crate::vk1_2::SemaphoreWaitFlagBits {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSemaphoreCounterValueKHR.html) · Function
     #[doc(alias = "vkGetSemaphoreCounterValueKHR")]
     pub unsafe fn get_semaphore_counter_value_khr(
         &self,
@@ -135,7 +135,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitSemaphoresKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWaitSemaphoresKHR.html) · Function
     #[doc(alias = "vkWaitSemaphoresKHR")]
     pub unsafe fn wait_semaphores_khr(
         &self,
@@ -148,7 +148,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSignalSemaphoreKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSignalSemaphoreKHR.html) · Function
     #[doc(alias = "vkSignalSemaphoreKHR")]
     pub unsafe fn signal_semaphore_khr(
         &self,

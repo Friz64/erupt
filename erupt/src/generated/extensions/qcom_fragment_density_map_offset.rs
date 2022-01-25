@@ -49,7 +49,7 @@ impl<'a> crate::ExtendableFrom<'a, SubpassFragmentDensityMapOffsetEndInfoQCOM>
 for crate::vk1_2::SubpassEndInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, SubpassFragmentDensityMapOffsetEndInfoQCOMBuilder<'_>>
 for crate::vk1_2::SubpassEndInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -95,7 +95,7 @@ impl PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM.html) · Builder of [`PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM.html) · Builder of [`PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM`]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOMBuilder<'a>(
     PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM,
@@ -150,7 +150,7 @@ for PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOMBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -196,7 +196,7 @@ impl PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM.html) · Builder of [`PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM.html) · Builder of [`PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM`]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOMBuilder<'a>(
     PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM,
@@ -254,7 +254,7 @@ for PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOMBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassFragmentDensityMapOffsetEndInfoQCOM.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassFragmentDensityMapOffsetEndInfoQCOM.html) · Structure
 #[doc(alias = "VkSubpassFragmentDensityMapOffsetEndInfoQCOM")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -297,7 +297,7 @@ impl SubpassFragmentDensityMapOffsetEndInfoQCOM {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSubpassFragmentDensityMapOffsetEndInfoQCOM.html) · Builder of [`SubpassFragmentDensityMapOffsetEndInfoQCOM`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassFragmentDensityMapOffsetEndInfoQCOM.html) · Builder of [`SubpassFragmentDensityMapOffsetEndInfoQCOM`]
 #[repr(transparent)]
 pub struct SubpassFragmentDensityMapOffsetEndInfoQCOMBuilder<'a>(
     SubpassFragmentDensityMapOffsetEndInfoQCOM,

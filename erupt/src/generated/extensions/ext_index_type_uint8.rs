@@ -23,7 +23,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceIndexTypeUint8FeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceIndexTypeUint8FeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -61,7 +61,7 @@ impl PhysicalDeviceIndexTypeUint8FeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html) · Builder of [`PhysicalDeviceIndexTypeUint8FeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIndexTypeUint8FeaturesEXT.html) · Builder of [`PhysicalDeviceIndexTypeUint8FeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceIndexTypeUint8FeaturesEXTBuilder<'a>(
     PhysicalDeviceIndexTypeUint8FeaturesEXT,

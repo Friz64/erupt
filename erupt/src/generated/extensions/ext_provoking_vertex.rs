@@ -15,7 +15,7 @@ impl crate::vk1_0::StructureType {
     );
     pub const PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT: Self = Self(1000254002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkProvokingVertexModeEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkProvokingVertexModeEXT.html) · Enum
 #[doc(alias = "VkProvokingVertexModeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -59,7 +59,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexPropertiesEXT>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProvokingVertexFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProvokingVertexFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -105,7 +105,7 @@ impl PhysicalDeviceProvokingVertexFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProvokingVertexFeaturesEXT.html) · Builder of [`PhysicalDeviceProvokingVertexFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexFeaturesEXT.html) · Builder of [`PhysicalDeviceProvokingVertexFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceProvokingVertexFeaturesEXTBuilder<'a>(
     PhysicalDeviceProvokingVertexFeaturesEXT,
@@ -165,7 +165,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProvokingVertexFeaturesEXTBuilder<
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProvokingVertexPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProvokingVertexPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -214,7 +214,7 @@ impl PhysicalDeviceProvokingVertexPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceProvokingVertexPropertiesEXT.html) · Builder of [`PhysicalDeviceProvokingVertexPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexPropertiesEXT.html) · Builder of [`PhysicalDeviceProvokingVertexPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceProvokingVertexPropertiesEXTBuilder<'a>(
     PhysicalDeviceProvokingVertexPropertiesEXT,
@@ -281,7 +281,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProvokingVertexPropertiesEXTBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationProvokingVertexStateCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationProvokingVertexStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationProvokingVertexStateCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -324,7 +324,7 @@ impl PipelineRasterizationProvokingVertexStateCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineRasterizationProvokingVertexStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationProvokingVertexStateCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationProvokingVertexStateCreateInfoEXT.html) · Builder of [`PipelineRasterizationProvokingVertexStateCreateInfoEXT`]
 #[repr(transparent)]
 pub struct PipelineRasterizationProvokingVertexStateCreateInfoEXTBuilder<'a>(
     PipelineRasterizationProvokingVertexStateCreateInfoEXT,

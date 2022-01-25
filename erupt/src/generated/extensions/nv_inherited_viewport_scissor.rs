@@ -34,7 +34,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInheritedViewportScissorFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInheritedViewportScissorFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceInheritedViewportScissorFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -80,7 +80,7 @@ impl PhysicalDeviceInheritedViewportScissorFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInheritedViewportScissorFeaturesNV.html) · Builder of [`PhysicalDeviceInheritedViewportScissorFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInheritedViewportScissorFeaturesNV.html) · Builder of [`PhysicalDeviceInheritedViewportScissorFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'a>(
     PhysicalDeviceInheritedViewportScissorFeaturesNV,
@@ -135,7 +135,7 @@ for PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceViewportScissorInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceViewportScissorInfoNV.html) · Structure
 #[doc(alias = "VkCommandBufferInheritanceViewportScissorInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -184,7 +184,7 @@ impl CommandBufferInheritanceViewportScissorInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkCommandBufferInheritanceViewportScissorInfoNV.html) · Builder of [`CommandBufferInheritanceViewportScissorInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceViewportScissorInfoNV.html) · Builder of [`CommandBufferInheritanceViewportScissorInfoNV`]
 #[repr(transparent)]
 pub struct CommandBufferInheritanceViewportScissorInfoNVBuilder<'a>(
     CommandBufferInheritanceViewportScissorInfoNV,

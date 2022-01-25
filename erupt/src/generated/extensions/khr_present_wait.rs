@@ -15,14 +15,14 @@ pub const FN_WAIT_FOR_PRESENT_KHR: *const std::os::raw::c_char = crate::cstr!(
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR: Self = Self(1000248000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitForPresentKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWaitForPresentKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkWaitForPresentKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        present_id: u64,
-        timeout: u64,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    present_id: u64,
+    timeout: u64,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentWaitFeaturesKHR>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentWaitFeaturesKHRBuilder<'_>>
@@ -31,7 +31,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentWaitFeaturesKHR>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentWaitFeaturesKHRBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePresentWaitFeaturesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePresentWaitFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePresentWaitFeaturesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -69,7 +69,7 @@ impl PhysicalDevicePresentWaitFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePresentWaitFeaturesKHR.html) · Builder of [`PhysicalDevicePresentWaitFeaturesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePresentWaitFeaturesKHR.html) · Builder of [`PhysicalDevicePresentWaitFeaturesKHR`]
 #[repr(transparent)]
 pub struct PhysicalDevicePresentWaitFeaturesKHRBuilder<'a>(
     PhysicalDevicePresentWaitFeaturesKHR,
@@ -121,7 +121,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePresentWaitFeaturesKHRBuilder<'a> 
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkWaitForPresentKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkWaitForPresentKHR.html) · Function
     #[doc(alias = "vkWaitForPresentKHR")]
     pub unsafe fn wait_for_present_khr(
         &self,

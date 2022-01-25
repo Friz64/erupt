@@ -19,99 +19,99 @@ pub const FN_CMD_SET_DEVICE_MASK_KHR: *const std::os::raw::c_char = crate::cstr!
 pub const FN_CMD_DISPATCH_BASE_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkCmdDispatchBaseKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPeerMemoryFeatureFlagsKHR.html) · Alias
 #[doc(alias = "VkPeerMemoryFeatureFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type PeerMemoryFeatureFlagsKHR = crate::vk1_1::PeerMemoryFeatureFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsKHR.html) · Alias
 #[doc(alias = "VkMemoryAllocateFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type MemoryAllocateFlagsKHR = crate::vk1_1::MemoryAllocateFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPeerMemoryFeatureFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPeerMemoryFeatureFlagBitsKHR.html) · Alias
 #[doc(alias = "VkPeerMemoryFeatureFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type PeerMemoryFeatureFlagBitsKHR = crate::vk1_1::PeerMemoryFeatureFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagBitsKHR.html) · Alias
 #[doc(alias = "VkMemoryAllocateFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type MemoryAllocateFlagBitsKHR = crate::vk1_1::MemoryAllocateFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagsInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfoKHR.html) · Alias
 #[doc(alias = "VkMemoryAllocateFlagsInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type MemoryAllocateFlagsInfoKHR = crate::vk1_1::MemoryAllocateFlagsInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryAllocateFlagsInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfoKHR.html) · Alias
 #[doc(alias = "VkMemoryAllocateFlagsInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type MemoryAllocateFlagsInfoKHRBuilder<'a> = crate::vk1_1::MemoryAllocateFlagsInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryDeviceGroupInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindBufferMemoryDeviceGroupInfoKHR.html) · Alias
 #[doc(alias = "VkBindBufferMemoryDeviceGroupInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindBufferMemoryDeviceGroupInfoKHR = crate::vk1_1::BindBufferMemoryDeviceGroupInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryDeviceGroupInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindBufferMemoryDeviceGroupInfoKHR.html) · Alias
 #[doc(alias = "VkBindBufferMemoryDeviceGroupInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindBufferMemoryDeviceGroupInfoKHRBuilder<'a> = crate::vk1_1::BindBufferMemoryDeviceGroupInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryDeviceGroupInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemoryDeviceGroupInfoKHR.html) · Alias
 #[doc(alias = "VkBindImageMemoryDeviceGroupInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindImageMemoryDeviceGroupInfoKHR = crate::vk1_1::BindImageMemoryDeviceGroupInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryDeviceGroupInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemoryDeviceGroupInfoKHR.html) · Alias
 #[doc(alias = "VkBindImageMemoryDeviceGroupInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindImageMemoryDeviceGroupInfoKHRBuilder<'a> = crate::vk1_1::BindImageMemoryDeviceGroupInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupRenderPassBeginInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupRenderPassBeginInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupRenderPassBeginInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupRenderPassBeginInfoKHR = crate::vk1_1::DeviceGroupRenderPassBeginInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupRenderPassBeginInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupRenderPassBeginInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupRenderPassBeginInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupRenderPassBeginInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupRenderPassBeginInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupCommandBufferBeginInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupCommandBufferBeginInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupCommandBufferBeginInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupCommandBufferBeginInfoKHR = crate::vk1_1::DeviceGroupCommandBufferBeginInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupCommandBufferBeginInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupCommandBufferBeginInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupCommandBufferBeginInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupCommandBufferBeginInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupCommandBufferBeginInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSubmitInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupSubmitInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupSubmitInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupSubmitInfoKHR = crate::vk1_1::DeviceGroupSubmitInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupSubmitInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupSubmitInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupSubmitInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupSubmitInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupSubmitInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupBindSparseInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupBindSparseInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupBindSparseInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupBindSparseInfoKHR = crate::vk1_1::DeviceGroupBindSparseInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupBindSparseInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupBindSparseInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupBindSparseInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupBindSparseInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupBindSparseInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR = crate::vk1_1::PFN_vkGetDeviceGroupPeerMemoryFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetDeviceMaskKHR = crate::vk1_1::PFN_vkCmdSetDeviceMask;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBaseKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDispatchBaseKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDispatchBaseKHR = crate::vk1_1::PFN_vkCmdDispatchBase;
 ///Provided by [`crate::extensions::khr_device_group`]
@@ -152,7 +152,7 @@ impl crate::vk1_1::MemoryAllocateFlagBits {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDeviceGroupPeerMemoryFeaturesKHR.html) · Function
     #[doc(alias = "vkGetDeviceGroupPeerMemoryFeaturesKHR")]
     pub unsafe fn get_device_group_peer_memory_features_khr(
         &self,
@@ -175,7 +175,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDeviceMaskKHR.html) · Function
     #[doc(alias = "vkCmdSetDeviceMaskKHR")]
     pub unsafe fn cmd_set_device_mask_khr(
         &self,
@@ -188,7 +188,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDispatchBaseKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDispatchBaseKHR.html) · Function
     #[doc(alias = "vkCmdDispatchBaseKHR")]
     pub unsafe fn cmd_dispatch_base_khr(
         &self,

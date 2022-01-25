@@ -19,16 +19,16 @@ impl crate::vk1_0::Result {
 impl crate::vk1_0::StructureType {
     pub const DISPLAY_PRESENT_INFO_KHR: Self = Self(1000003000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain_count: u32,
-        p_create_infos: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_swapchains: *mut crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Structure
+    device: crate::vk1_0::Device,
+    swapchain_count: u32,
+    p_create_infos: *const crate::extensions::khr_swapchain::SwapchainCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_swapchains: *mut crate::extensions::khr_swapchain::SwapchainKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPresentInfoKHR.html) · Structure
 #[doc(alias = "VkDisplayPresentInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -72,7 +72,7 @@ impl DisplayPresentInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPresentInfoKHR.html) · Builder of [`DisplayPresentInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPresentInfoKHR.html) · Builder of [`DisplayPresentInfoKHR`]
 #[repr(transparent)]
 pub struct DisplayPresentInfoKHRBuilder<'a>(
     DisplayPresentInfoKHR,
@@ -137,7 +137,7 @@ for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateSharedSwapchainsKHR.html) · Function
     #[doc(alias = "vkCreateSharedSwapchainsKHR")]
     pub unsafe fn create_shared_swapchains_khr(
         &self,

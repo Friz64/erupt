@@ -9,7 +9,7 @@ pub const EXT_DEVICE_MEMORY_REPORT_EXTENSION_NAME: *const std::os::raw::c_char =
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryReportFlagsEXT.html) · Bitmask of [`DeviceMemoryReportFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryReportFlagsEXT.html) · Bitmask of [`DeviceMemoryReportFlagBitsEXT`]"]
     #[doc(alias = "VkDeviceMemoryReportFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct DeviceMemoryReportFlagsEXT : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -42,7 +42,7 @@ impl crate::vk1_0::StructureType {
     pub const DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT: Self = Self(1000284001);
     pub const DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT: Self = Self(1000284002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryReportEventTypeEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryReportEventTypeEXT.html) · Enum
 #[doc(alias = "VkDeviceMemoryReportEventTypeEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -70,12 +70,12 @@ impl crate::extensions::ext_device_memory_report::DeviceMemoryReportEventTypeEXT
     pub const UNIMPORT_EXT: Self = Self(3);
     pub const ALLOCATION_FAILED_EXT: Self = Self(4);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/PFN_vkDeviceMemoryReportCallbackEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/PFN_vkDeviceMemoryReportCallbackEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDeviceMemoryReportCallbackEXT = unsafe extern "system" fn(
-        p_callback_data: *const crate::extensions::ext_device_memory_report::DeviceMemoryReportCallbackDataEXT,
-        p_user_data: *mut std::ffi::c_void,
-    ) -> ();
+    p_callback_data: *const crate::extensions::ext_device_memory_report::DeviceMemoryReportCallbackDataEXT,
+    p_user_data: *mut std::ffi::c_void,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDeviceMemoryReportFeaturesEXT>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<
@@ -92,7 +92,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceMemoryReportFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceMemoryReportFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDeviceMemoryReportFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -135,7 +135,7 @@ impl PhysicalDeviceDeviceMemoryReportFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceMemoryReportFeaturesEXT.html) · Builder of [`PhysicalDeviceDeviceMemoryReportFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceMemoryReportFeaturesEXT.html) · Builder of [`PhysicalDeviceDeviceMemoryReportFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceDeviceMemoryReportFeaturesEXTBuilder<'a>(
     PhysicalDeviceDeviceMemoryReportFeaturesEXT,
@@ -184,7 +184,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDeviceMemoryReportFeaturesEXTBuild
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDeviceMemoryReportCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDeviceMemoryReportCreateInfoEXT.html) · Structure
 #[doc(alias = "VkDeviceDeviceMemoryReportCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -233,7 +233,7 @@ impl DeviceDeviceMemoryReportCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceDeviceMemoryReportCreateInfoEXT.html) · Builder of [`DeviceDeviceMemoryReportCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDeviceMemoryReportCreateInfoEXT.html) · Builder of [`DeviceDeviceMemoryReportCreateInfoEXT`]
 #[repr(transparent)]
 pub struct DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a>(
     DeviceDeviceMemoryReportCreateInfoEXT,
@@ -301,7 +301,7 @@ impl<'a> std::ops::DerefMut for DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a>
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryReportCallbackDataEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryReportCallbackDataEXT.html) · Structure
 #[doc(alias = "VkDeviceMemoryReportCallbackDataEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -357,7 +357,7 @@ impl DeviceMemoryReportCallbackDataEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryReportCallbackDataEXT.html) · Builder of [`DeviceMemoryReportCallbackDataEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryReportCallbackDataEXT.html) · Builder of [`DeviceMemoryReportCallbackDataEXT`]
 #[repr(transparent)]
 pub struct DeviceMemoryReportCallbackDataEXTBuilder<'a>(
     DeviceMemoryReportCallbackDataEXT,

@@ -25,7 +25,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceShaderAtomicFloat2FeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -137,7 +137,7 @@ impl PhysicalDeviceShaderAtomicFloat2FeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT.html) · Builder of [`PhysicalDeviceShaderAtomicFloat2FeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderAtomicFloat2FeaturesEXT.html) · Builder of [`PhysicalDeviceShaderAtomicFloat2FeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderAtomicFloat2FeaturesEXTBuilder<'a>(
     PhysicalDeviceShaderAtomicFloat2FeaturesEXT,

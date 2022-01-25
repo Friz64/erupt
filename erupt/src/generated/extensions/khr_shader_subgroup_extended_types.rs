@@ -7,16 +7,16 @@ pub const KHR_SHADER_SUBGROUP_EXTENDED_TYPES_SPEC_VERSION: u32 = 1;
 pub const KHR_SHADER_SUBGROUP_EXTENDED_TYPES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_shader_subgroup_extended_types"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR = crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceShaderSubgroupExtendedTypesFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceShaderSubgroupExtendedTypesFeaturesBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_shader_subgroup_extended_types`]
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES;

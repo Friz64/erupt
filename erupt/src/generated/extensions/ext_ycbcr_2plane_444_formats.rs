@@ -9,10 +9,10 @@ pub const EXT_YCBCR_2PLANE_444_FORMATS_EXTENSION_NAME: *const std::os::raw::c_ch
 );
 ///Provided by [`crate::extensions::ext_ycbcr_2plane_444_formats`]
 impl crate::vk1_0::Format {
-    pub const G8_B8R8_2PLANE_444_UNORM_EXT: Self = Self(1000330000);
-    pub const G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT: Self = Self(1000330001);
-    pub const G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT: Self = Self(1000330002);
-    pub const G16_B16R16_2PLANE_444_UNORM_EXT: Self = Self(1000330003);
+    pub const G8_B8R8_2PLANE_444_UNORM_EXT: Self = Self::G8_B8R8_2PLANE_444_UNORM;
+    pub const G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16_EXT: Self = Self::G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16;
+    pub const G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16_EXT: Self = Self::G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16;
+    pub const G16_B16R16_2PLANE_444_UNORM_EXT: Self = Self::G16_B16R16_2PLANE_444_UNORM;
 }
 ///Provided by [`crate::extensions::ext_ycbcr_2plane_444_formats`]
 impl crate::vk1_0::StructureType {
@@ -32,7 +32,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -75,7 +75,7 @@ impl PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXTBuilder<'a>(
     PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT,

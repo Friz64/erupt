@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRobustness2PropertiesEXT>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRobustness2PropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRobustness2FeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -68,7 +68,7 @@ impl PhysicalDeviceRobustness2FeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Builder of [`PhysicalDeviceRobustness2FeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRobustness2FeaturesEXT.html) · Builder of [`PhysicalDeviceRobustness2FeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceRobustness2FeaturesEXTBuilder<'a>(
     PhysicalDeviceRobustness2FeaturesEXT,
@@ -128,7 +128,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRobustness2FeaturesEXTBuilder<'a> 
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2PropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRobustness2PropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRobustness2PropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -175,7 +175,7 @@ impl PhysicalDeviceRobustness2PropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRobustness2PropertiesEXT.html) · Builder of [`PhysicalDeviceRobustness2PropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRobustness2PropertiesEXT.html) · Builder of [`PhysicalDeviceRobustness2PropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceRobustness2PropertiesEXTBuilder<'a>(
     PhysicalDeviceRobustness2PropertiesEXT,

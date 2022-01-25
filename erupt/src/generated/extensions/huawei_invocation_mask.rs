@@ -12,11 +12,11 @@ pub const FN_CMD_BIND_INVOCATION_MASK_HUAWEI: *const std::os::raw::c_char = crat
     "vkCmdBindInvocationMaskHUAWEI"
 );
 ///Provided by [`crate::extensions::huawei_invocation_mask`]
-impl crate::extensions::khr_synchronization2::AccessFlagBits2KHR {
+impl crate::vk1_3::AccessFlagBits2 {
     pub const INVOCATION_MASK_READ_HUAWEI: Self = Self(549755813888);
 }
 ///Provided by [`crate::extensions::huawei_invocation_mask`]
-impl crate::extensions::khr_synchronization2::PipelineStageFlagBits2KHR {
+impl crate::vk1_3::PipelineStageFlagBits2 {
     pub const INVOCATION_MASK_HUAWEI: Self = Self(1099511627776);
 }
 ///Provided by [`crate::extensions::huawei_invocation_mask`]
@@ -27,13 +27,13 @@ impl crate::vk1_0::ImageUsageFlagBits {
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI: Self = Self(1000370000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindInvocationMaskHUAWEI = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        image_view: crate::vk1_0::ImageView,
-        image_layout: crate::vk1_0::ImageLayout,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    image_view: crate::vk1_0::ImageView,
+    image_layout: crate::vk1_0::ImageLayout,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInvocationMaskFeaturesHUAWEI>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInvocationMaskFeaturesHUAWEIBuilder<'_>>
@@ -42,7 +42,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInvocationMaskFeaturesHUAWEI>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceInvocationMaskFeaturesHUAWEIBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInvocationMaskFeaturesHUAWEI.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInvocationMaskFeaturesHUAWEI.html) · Structure
 #[doc(alias = "VkPhysicalDeviceInvocationMaskFeaturesHUAWEI")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -82,7 +82,7 @@ impl PhysicalDeviceInvocationMaskFeaturesHUAWEI {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceInvocationMaskFeaturesHUAWEI.html) · Builder of [`PhysicalDeviceInvocationMaskFeaturesHUAWEI`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInvocationMaskFeaturesHUAWEI.html) · Builder of [`PhysicalDeviceInvocationMaskFeaturesHUAWEI`]
 #[repr(transparent)]
 pub struct PhysicalDeviceInvocationMaskFeaturesHUAWEIBuilder<'a>(
     PhysicalDeviceInvocationMaskFeaturesHUAWEI,
@@ -135,7 +135,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceInvocationMaskFeaturesHUAWEIBuilde
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindInvocationMaskHUAWEI.html) · Function
     #[doc(alias = "vkCmdBindInvocationMaskHUAWEI")]
     pub unsafe fn cmd_bind_invocation_mask_huawei(
         &self,

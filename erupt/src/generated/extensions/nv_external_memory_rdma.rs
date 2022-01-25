@@ -11,7 +11,7 @@ pub const NV_EXTERNAL_MEMORY_RDMA_EXTENSION_NAME: *const std::os::raw::c_char = 
 pub const FN_GET_MEMORY_REMOTE_ADDRESS_NV: *const std::os::raw::c_char = crate::cstr!(
     "vkGetMemoryRemoteAddressNV"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRemoteAddressNV.html) · Basetype
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRemoteAddressNV.html) · Basetype
 #[doc(alias = "VkRemoteAddressNV")]
 pub type RemoteAddressNV = *mut std::ffi::c_void;
 ///Provided by [`crate::extensions::nv_external_memory_rdma`]
@@ -27,13 +27,13 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
     pub const RDMA_ADDRESS_NV: Self = Self(4096);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryRemoteAddressNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryRemoteAddressNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryRemoteAddressNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_memory_get_remote_address_info: *const crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV,
-        p_address: *mut crate::extensions::nv_external_memory_rdma::RemoteAddressNV,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    p_memory_get_remote_address_info: *const crate::extensions::nv_external_memory_rdma::MemoryGetRemoteAddressInfoNV,
+    p_address: *mut crate::extensions::nv_external_memory_rdma::RemoteAddressNV,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'_>>
@@ -42,7 +42,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNV>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryRDMAFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalMemoryRDMAFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExternalMemoryRDMAFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -82,7 +82,7 @@ impl PhysicalDeviceExternalMemoryRDMAFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryRDMAFeaturesNV.html) · Builder of [`PhysicalDeviceExternalMemoryRDMAFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalMemoryRDMAFeaturesNV.html) · Builder of [`PhysicalDeviceExternalMemoryRDMAFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilder<'a>(
     PhysicalDeviceExternalMemoryRDMAFeaturesNV,
@@ -131,7 +131,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalMemoryRDMAFeaturesNVBuilde
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html) · Structure
 #[doc(alias = "VkMemoryGetRemoteAddressInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -172,7 +172,7 @@ impl MemoryGetRemoteAddressInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html) · Builder of [`MemoryGetRemoteAddressInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetRemoteAddressInfoNV.html) · Builder of [`MemoryGetRemoteAddressInfoNV`]
 #[repr(transparent)]
 pub struct MemoryGetRemoteAddressInfoNVBuilder<'a>(
     MemoryGetRemoteAddressInfoNV,
@@ -230,7 +230,7 @@ impl<'a> std::ops::DerefMut for MemoryGetRemoteAddressInfoNVBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryRemoteAddressNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryRemoteAddressNV.html) · Function
     #[doc(alias = "vkGetMemoryRemoteAddressNV")]
     pub unsafe fn get_memory_remote_address_nv(
         &self,

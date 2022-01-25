@@ -9,5 +9,5 @@ pub const QCOM_RENDER_PASS_STORE_OPS_EXTENSION_NAME: *const std::os::raw::c_char
 );
 ///Provided by [`crate::extensions::qcom_render_pass_store_ops`]
 impl crate::vk1_0::AttachmentStoreOp {
-    pub const NONE_QCOM: Self = Self::NONE_KHR;
+    pub const NONE_QCOM: Self = Self::NONE;
 }

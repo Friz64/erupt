@@ -12,6 +12,10 @@ pub const FN_CMD_SET_PATCH_CONTROL_POINTS_EXT: *const std::os::raw::c_char = cra
     "vkCmdSetPatchControlPointsEXT"
 );
 ///<s>Vulkan Manual Page</s> · Constant
+pub const FN_CMD_SET_LOGIC_OP_EXT: *const std::os::raw::c_char = crate::cstr!(
+    "vkCmdSetLogicOpEXT"
+);
+///<s>Vulkan Manual Page</s> · Constant
 pub const FN_CMD_SET_RASTERIZER_DISCARD_ENABLE_EXT: *const std::os::raw::c_char = crate::cstr!(
     "vkCmdSetRasterizerDiscardEnableEXT"
 );
@@ -20,20 +24,25 @@ pub const FN_CMD_SET_DEPTH_BIAS_ENABLE_EXT: *const std::os::raw::c_char = crate:
     "vkCmdSetDepthBiasEnableEXT"
 );
 ///<s>Vulkan Manual Page</s> · Constant
-pub const FN_CMD_SET_LOGIC_OP_EXT: *const std::os::raw::c_char = crate::cstr!(
-    "vkCmdSetLogicOpEXT"
-);
-///<s>Vulkan Manual Page</s> · Constant
 pub const FN_CMD_SET_PRIMITIVE_RESTART_ENABLE_EXT: *const std::os::raw::c_char = crate::cstr!(
     "vkCmdSetPrimitiveRestartEnableEXT"
 );
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizerDiscardEnableEXT.html) · Alias
+#[allow(non_camel_case_types)]
+pub type PFN_vkCmdSetRasterizerDiscardEnableEXT = crate::vk1_3::PFN_vkCmdSetRasterizerDiscardEnable;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html) · Alias
+#[allow(non_camel_case_types)]
+pub type PFN_vkCmdSetDepthBiasEnableEXT = crate::vk1_3::PFN_vkCmdSetDepthBiasEnable;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnableEXT.html) · Alias
+#[allow(non_camel_case_types)]
+pub type PFN_vkCmdSetPrimitiveRestartEnableEXT = crate::vk1_3::PFN_vkCmdSetPrimitiveRestartEnable;
 ///Provided by [`crate::extensions::ext_extended_dynamic_state2`]
 impl crate::vk1_0::DynamicState {
     pub const PATCH_CONTROL_POINTS_EXT: Self = Self(1000377000);
-    pub const RASTERIZER_DISCARD_ENABLE_EXT: Self = Self(1000377001);
-    pub const DEPTH_BIAS_ENABLE_EXT: Self = Self(1000377002);
     pub const LOGIC_OP_EXT: Self = Self(1000377003);
-    pub const PRIMITIVE_RESTART_ENABLE_EXT: Self = Self(1000377004);
+    pub const RASTERIZER_DISCARD_ENABLE_EXT: Self = Self::RASTERIZER_DISCARD_ENABLE;
+    pub const DEPTH_BIAS_ENABLE_EXT: Self = Self::DEPTH_BIAS_ENABLE;
+    pub const PRIMITIVE_RESTART_ENABLE_EXT: Self = Self::PRIMITIVE_RESTART_ENABLE;
 }
 ///Provided by [`crate::extensions::ext_extended_dynamic_state2`]
 impl crate::vk1_0::StructureType {
@@ -41,36 +50,18 @@ impl crate::vk1_0::StructureType {
         1000377000,
     );
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPatchControlPointsEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetPatchControlPointsEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        patch_control_points: u32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRasterizerDiscardEnableEXT.html) · Function
-#[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetRasterizerDiscardEnableEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        rasterizer_discard_enable: crate::vk1_0::Bool32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html) · Function
-#[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetDepthBiasEnableEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        depth_bias_enable: crate::vk1_0::Bool32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLogicOpEXT.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    patch_control_points: u32,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetLogicOpEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        logic_op: crate::vk1_0::LogicOp,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPrimitiveRestartEnableEXT.html) · Function
-#[allow(non_camel_case_types)]
-pub type PFN_vkCmdSetPrimitiveRestartEnableEXT = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        primitive_restart_enable: crate::vk1_0::Bool32,
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    logic_op: crate::vk1_0::LogicOp,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExtendedDynamicState2FeaturesEXT>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<
@@ -83,7 +74,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicState2FeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExtendedDynamicState2FeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExtendedDynamicState2FeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -138,7 +129,7 @@ impl PhysicalDeviceExtendedDynamicState2FeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExtendedDynamicState2FeaturesEXT.html) · Builder of [`PhysicalDeviceExtendedDynamicState2FeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExtendedDynamicState2FeaturesEXT.html) · Builder of [`PhysicalDeviceExtendedDynamicState2FeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'a>(
     PhysicalDeviceExtendedDynamicState2FeaturesEXT,
@@ -213,7 +204,7 @@ for PhysicalDeviceExtendedDynamicState2FeaturesEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPatchControlPointsEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPatchControlPointsEXT.html) · Function
     #[doc(alias = "vkCmdSetPatchControlPointsEXT")]
     pub unsafe fn cmd_set_patch_control_points_ext(
         &self,
@@ -228,7 +219,20 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetRasterizerDiscardEnableEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetLogicOpEXT.html) · Function
+    #[doc(alias = "vkCmdSetLogicOpEXT")]
+    pub unsafe fn cmd_set_logic_op_ext(
+        &self,
+        command_buffer: crate::vk1_0::CommandBuffer,
+        logic_op: crate::vk1_0::LogicOp,
+    ) -> () {
+        let _function = self.cmd_set_logic_op_ext.expect(crate::NOT_LOADED_MESSAGE);
+        let _return = _function(command_buffer as _, logic_op as _);
+        ()
+    }
+    #[inline]
+    #[track_caller]
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetRasterizerDiscardEnableEXT.html) · Function
     #[doc(alias = "vkCmdSetRasterizerDiscardEnableEXT")]
     pub unsafe fn cmd_set_rasterizer_discard_enable_ext(
         &self,
@@ -243,7 +247,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetDepthBiasEnableEXT.html) · Function
     #[doc(alias = "vkCmdSetDepthBiasEnableEXT")]
     pub unsafe fn cmd_set_depth_bias_enable_ext(
         &self,
@@ -258,20 +262,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetLogicOpEXT.html) · Function
-    #[doc(alias = "vkCmdSetLogicOpEXT")]
-    pub unsafe fn cmd_set_logic_op_ext(
-        &self,
-        command_buffer: crate::vk1_0::CommandBuffer,
-        logic_op: crate::vk1_0::LogicOp,
-    ) -> () {
-        let _function = self.cmd_set_logic_op_ext.expect(crate::NOT_LOADED_MESSAGE);
-        let _return = _function(command_buffer as _, logic_op as _);
-        ()
-    }
-    #[inline]
-    #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetPrimitiveRestartEnableEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetPrimitiveRestartEnableEXT.html) · Function
     #[doc(alias = "vkCmdSetPrimitiveRestartEnableEXT")]
     pub unsafe fn cmd_set_primitive_restart_enable_ext(
         &self,

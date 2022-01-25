@@ -23,7 +23,7 @@ impl crate::vk1_0::StructureType {
         1000326002,
     );
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateNV.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFragmentShadingRateNV.html) · Enum
 #[doc(alias = "VkFragmentShadingRateNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -77,7 +77,7 @@ impl crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV {
     pub const _16_INVOCATIONS_PER_PIXEL_NV: Self = Self(14);
     pub const NO_INVOCATIONS_NV: Self = Self(15);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkFragmentShadingRateTypeNV.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFragmentShadingRateTypeNV.html) · Enum
 #[doc(alias = "VkFragmentShadingRateTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -99,13 +99,13 @@ impl crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateTypeN
     pub const FRAGMENT_SIZE_NV: Self = Self(0);
     pub const ENUMS_NV: Self = Self(1);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdSetFragmentShadingRateEnumNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV,
-        combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
-    ) -> ();
+    command_buffer: crate::vk1_0::CommandBuffer,
+    shading_rate: crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV,
+    combiner_ops: [crate::extensions::khr_fragment_shading_rate::FragmentShadingRateCombinerOpKHR; 2],
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceFragmentShadingRateEnumsFeaturesNV>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<
@@ -132,7 +132,7 @@ impl<
     'a,
     PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'_>,
 > for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -190,7 +190,7 @@ impl PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Builder of [`PhysicalDeviceFragmentShadingRateEnumsFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Builder of [`PhysicalDeviceFragmentShadingRateEnumsFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'a>(
     PhysicalDeviceFragmentShadingRateEnumsFeaturesNV,
@@ -269,7 +269,7 @@ for PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -315,7 +315,7 @@ impl PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV.html) · Builder of [`PhysicalDeviceFragmentShadingRateEnumsPropertiesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV.html) · Builder of [`PhysicalDeviceFragmentShadingRateEnumsPropertiesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'a>(
     PhysicalDeviceFragmentShadingRateEnumsPropertiesNV,
@@ -373,7 +373,7 @@ for PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineFragmentShadingRateEnumStateCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -422,7 +422,7 @@ impl PipelineFragmentShadingRateEnumStateCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html) · Builder of [`PipelineFragmentShadingRateEnumStateCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html) · Builder of [`PipelineFragmentShadingRateEnumStateCreateInfoNV`]
 #[repr(transparent)]
 pub struct PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'a>(
     PipelineFragmentShadingRateEnumStateCreateInfoNV,
@@ -499,7 +499,7 @@ for PipelineFragmentShadingRateEnumStateCreateInfoNVBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdSetFragmentShadingRateEnumNV.html) · Function
     #[doc(alias = "vkCmdSetFragmentShadingRateEnumNV")]
     pub unsafe fn cmd_set_fragment_shading_rate_enum_nv(
         &self,

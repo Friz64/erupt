@@ -16,14 +16,14 @@ impl crate::vk1_0::StructureType {
     pub const IMPORT_MEMORY_WIN32_HANDLE_INFO_NV: Self = Self(1000057000);
     pub const EXPORT_MEMORY_WIN32_HANDLE_INFO_NV: Self = Self(1000057001);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryWin32HandleNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        memory: crate::vk1_0::DeviceMemory,
-        handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
-        p_handle: *mut *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    memory: crate::vk1_0::DeviceMemory,
+    handle_type: crate::extensions::nv_external_memory_capabilities::ExternalMemoryHandleTypeFlagsNV,
+    p_handle: *mut *mut std::ffi::c_void,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryWin32HandleInfoNV>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryWin32HandleInfoNVBuilder<'_>>
@@ -32,7 +32,7 @@ impl<'a> crate::ExtendableFrom<'a, ExportMemoryWin32HandleInfoNV>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ExportMemoryWin32HandleInfoNVBuilder<'_>>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Structure
 #[doc(alias = "VkImportMemoryWin32HandleInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -73,7 +73,7 @@ impl ImportMemoryWin32HandleInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Builder of [`ImportMemoryWin32HandleInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Builder of [`ImportMemoryWin32HandleInfoNV`]
 #[repr(transparent)]
 pub struct ImportMemoryWin32HandleInfoNVBuilder<'a>(
     ImportMemoryWin32HandleInfoNV,
@@ -130,7 +130,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryWin32HandleInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Structure
 #[doc(alias = "VkExportMemoryWin32HandleInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -171,7 +171,7 @@ impl ExportMemoryWin32HandleInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Builder of [`ExportMemoryWin32HandleInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Builder of [`ExportMemoryWin32HandleInfoNV`]
 #[repr(transparent)]
 pub struct ExportMemoryWin32HandleInfoNVBuilder<'a>(
     ExportMemoryWin32HandleInfoNV,
@@ -229,7 +229,7 @@ impl<'a> std::ops::DerefMut for ExportMemoryWin32HandleInfoNVBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryWin32HandleNV.html) · Function
     #[doc(alias = "vkGetMemoryWin32HandleNV")]
     pub unsafe fn get_memory_win32_handle_nv(
         &self,

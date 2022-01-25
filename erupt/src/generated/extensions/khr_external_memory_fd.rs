@@ -21,26 +21,26 @@ impl crate::vk1_0::StructureType {
     pub const MEMORY_FD_PROPERTIES_KHR: Self = Self(1000074001);
     pub const MEMORY_GET_FD_INFO_KHR: Self = Self(1000074002);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryFdKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_get_fd_info: *const crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR,
-        p_fd: *mut std::os::raw::c_int,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function
+    device: crate::vk1_0::Device,
+    p_get_fd_info: *const crate::extensions::khr_external_memory_fd::MemoryGetFdInfoKHR,
+    p_fd: *mut std::os::raw::c_int,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryFdPropertiesKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-        fd: std::os::raw::c_int,
-        p_memory_fd_properties: *mut crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
+    fd: std::os::raw::c_int,
+    p_memory_fd_properties: *mut crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryFdInfoKHR>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryFdInfoKHRBuilder<'_>>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Structure
 #[doc(alias = "VkImportMemoryFdInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -81,7 +81,7 @@ impl ImportMemoryFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Builder of [`ImportMemoryFdInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Builder of [`ImportMemoryFdInfoKHR`]
 #[repr(transparent)]
 pub struct ImportMemoryFdInfoKHRBuilder<'a>(
     ImportMemoryFdInfoKHR,
@@ -135,7 +135,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryFdInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Structure
 #[doc(alias = "VkMemoryFdPropertiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -173,7 +173,7 @@ impl MemoryFdPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Builder of [`MemoryFdPropertiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Builder of [`MemoryFdPropertiesKHR`]
 #[repr(transparent)]
 pub struct MemoryFdPropertiesKHRBuilder<'a>(
     MemoryFdPropertiesKHR,
@@ -218,7 +218,7 @@ impl<'a> std::ops::DerefMut for MemoryFdPropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Structure
 #[doc(alias = "VkMemoryGetFdInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -259,7 +259,7 @@ impl MemoryGetFdInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Builder of [`MemoryGetFdInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Builder of [`MemoryGetFdInfoKHR`]
 #[repr(transparent)]
 pub struct MemoryGetFdInfoKHRBuilder<'a>(
     MemoryGetFdInfoKHR,
@@ -317,7 +317,7 @@ impl<'a> std::ops::DerefMut for MemoryGetFdInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdKHR.html) · Function
     #[doc(alias = "vkGetMemoryFdKHR")]
     pub unsafe fn get_memory_fd_khr(
         &self,
@@ -330,7 +330,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryFdPropertiesKHR.html) · Function
     #[doc(alias = "vkGetMemoryFdPropertiesKHR")]
     pub unsafe fn get_memory_fd_properties_khr(
         &self,

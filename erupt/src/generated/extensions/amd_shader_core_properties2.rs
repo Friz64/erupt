@@ -13,7 +13,7 @@ impl crate::vk1_0::StructureType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderCorePropertiesFlagsAMD.html) · Bitmask of [`ShaderCorePropertiesFlagBitsAMD`]"]
     #[doc(alias = "VkShaderCorePropertiesFlagsAMD")] #[derive(Default)]
     #[repr(transparent)] pub struct ShaderCorePropertiesFlagsAMD : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -44,7 +44,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCoreProperties2AMD>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCoreProperties2AMDBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderCoreProperties2AMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -85,7 +85,7 @@ impl PhysicalDeviceShaderCoreProperties2AMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Builder of [`PhysicalDeviceShaderCoreProperties2AMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Builder of [`PhysicalDeviceShaderCoreProperties2AMD`]
 #[repr(transparent)]
 pub struct PhysicalDeviceShaderCoreProperties2AMDBuilder<'a>(
     PhysicalDeviceShaderCoreProperties2AMD,

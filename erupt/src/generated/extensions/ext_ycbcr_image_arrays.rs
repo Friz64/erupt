@@ -19,7 +19,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceYcbcrImageArraysFeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceYcbcrImageArraysFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -59,7 +59,7 @@ impl PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcrImageArraysFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Builder of [`PhysicalDeviceYcbcrImageArraysFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXTBuilder<'a>(
     PhysicalDeviceYcbcrImageArraysFeaturesEXT,

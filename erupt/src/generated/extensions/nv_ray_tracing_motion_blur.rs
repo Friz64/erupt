@@ -9,7 +9,7 @@ pub const NV_RAY_TRACING_MOTION_BLUR_EXTENSION_NAME: *const std::os::raw::c_char
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInfoFlagsNV.html) · Bitmask of [`AccelerationStructureMotionInfoFlagBitsNV`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInfoFlagsNV.html) · Bitmask of [`AccelerationStructureMotionInfoFlagBitsNV`]"]
     #[doc(alias = "VkAccelerationStructureMotionInfoFlagsNV")] #[derive(Default)]
     #[repr(transparent)] pub struct AccelerationStructureMotionInfoFlagsNV : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -38,7 +38,7 @@ impl std::fmt::Debug for AccelerationStructureMotionInfoFlagBitsNV {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInstanceFlagsNV.html) · Bitmask of [`AccelerationStructureMotionInstanceFlagBitsNV`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceFlagsNV.html) · Bitmask of [`AccelerationStructureMotionInstanceFlagBitsNV`]"]
     #[doc(alias = "VkAccelerationStructureMotionInstanceFlagsNV")] #[derive(Default)]
     #[repr(transparent)] pub struct AccelerationStructureMotionInstanceFlagsNV : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -87,7 +87,7 @@ impl crate::extensions::khr_acceleration_structure::BuildAccelerationStructureFl
 impl crate::extensions::khr_acceleration_structure::AccelerationStructureCreateFlagBitsKHR {
     pub const MOTION_NV: Self = Self(4);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInstanceTypeNV.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceTypeNV.html) · Enum
 #[doc(alias = "VkAccelerationStructureMotionInstanceTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -144,7 +144,7 @@ impl<'a> crate::ExtendableFrom<'a, AccelerationStructureMotionInfoNVBuilder<'_>>
 for crate::extensions::khr_acceleration_structure::AccelerationStructureCreateInfoKHRBuilder<
     'a,
 > {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayTracingMotionBlurFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -193,7 +193,7 @@ impl PhysicalDeviceRayTracingMotionBlurFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html) · Builder of [`PhysicalDeviceRayTracingMotionBlurFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html) · Builder of [`PhysicalDeviceRayTracingMotionBlurFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceRayTracingMotionBlurFeaturesNVBuilder<'a>(
     PhysicalDeviceRayTracingMotionBlurFeaturesNV,
@@ -254,7 +254,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingMotionBlurFeaturesNVBuil
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryMotionTrianglesDataNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureGeometryMotionTrianglesDataNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureGeometryMotionTrianglesDataNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -297,7 +297,7 @@ impl AccelerationStructureGeometryMotionTrianglesDataNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureGeometryMotionTrianglesDataNV.html) · Builder of [`AccelerationStructureGeometryMotionTrianglesDataNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureGeometryMotionTrianglesDataNV.html) · Builder of [`AccelerationStructureGeometryMotionTrianglesDataNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureGeometryMotionTrianglesDataNVBuilder<'a>(
     AccelerationStructureGeometryMotionTrianglesDataNV,
@@ -352,7 +352,7 @@ for AccelerationStructureGeometryMotionTrianglesDataNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMotionInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -393,7 +393,7 @@ impl AccelerationStructureMotionInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInfoNV.html) · Builder of [`AccelerationStructureMotionInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInfoNV.html) · Builder of [`AccelerationStructureMotionInfoNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureMotionInfoNVBuilder<'a>(
     AccelerationStructureMotionInfoNV,
@@ -450,7 +450,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureMotionInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSRTDataNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSRTDataNV.html) · Structure
 #[doc(alias = "VkSRTDataNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -524,7 +524,7 @@ impl SRTDataNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSRTDataNV.html) · Builder of [`SRTDataNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSRTDataNV.html) · Builder of [`SRTDataNV`]
 #[repr(transparent)]
 pub struct SRTDataNVBuilder<'a>(SRTDataNV, std::marker::PhantomData<&'a ()>);
 impl<'a> SRTDataNVBuilder<'a> {
@@ -654,7 +654,7 @@ impl<'a> std::ops::DerefMut for SRTDataNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureSRTMotionInstanceNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureSRTMotionInstanceNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureSRTMotionInstanceNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -708,7 +708,7 @@ impl AccelerationStructureSRTMotionInstanceNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureSRTMotionInstanceNV.html) · Builder of [`AccelerationStructureSRTMotionInstanceNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureSRTMotionInstanceNV.html) · Builder of [`AccelerationStructureSRTMotionInstanceNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureSRTMotionInstanceNVBuilder<'a>(
     AccelerationStructureSRTMotionInstanceNV,
@@ -823,7 +823,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureSRTMotionInstanceNVBuilder<
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMatrixMotionInstanceNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMatrixMotionInstanceNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMatrixMotionInstanceNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -880,7 +880,7 @@ impl AccelerationStructureMatrixMotionInstanceNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMatrixMotionInstanceNV.html) · Builder of [`AccelerationStructureMatrixMotionInstanceNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMatrixMotionInstanceNV.html) · Builder of [`AccelerationStructureMatrixMotionInstanceNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureMatrixMotionInstanceNVBuilder<'a>(
     AccelerationStructureMatrixMotionInstanceNV,
@@ -996,7 +996,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureMatrixMotionInstanceNVBuild
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInstanceDataNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceDataNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMotionInstanceDataNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1015,7 +1015,7 @@ impl std::fmt::Debug for AccelerationStructureMotionInstanceDataNV {
         f.debug_struct("AccelerationStructureMotionInstanceDataNV").finish()
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInstanceNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMotionInstanceNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1050,7 +1050,7 @@ impl AccelerationStructureMotionInstanceNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAccelerationStructureMotionInstanceNV.html) · Builder of [`AccelerationStructureMotionInstanceNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceNV.html) · Builder of [`AccelerationStructureMotionInstanceNV`]
 #[repr(transparent)]
 pub struct AccelerationStructureMotionInstanceNVBuilder<'a>(
     AccelerationStructureMotionInstanceNV,

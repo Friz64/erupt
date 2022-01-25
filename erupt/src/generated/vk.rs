@@ -6,6 +6,8 @@ pub use crate::vk1_1::*;
 #[doc(no_inline)]
 pub use crate::vk1_2::*;
 #[doc(no_inline)]
+pub use crate::vk1_3::*;
+#[doc(no_inline)]
 pub use crate::extensions::amd_buffer_marker::*;
 #[doc(no_inline)]
 pub use crate::extensions::amd_device_coherent_memory::*;
@@ -341,6 +343,8 @@ pub use crate::extensions::khr_get_memory_requirements2::*;
 pub use crate::extensions::khr_get_physical_device_properties2::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_get_surface_capabilities2::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_global_priority::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_image_format_list::*;
 #[doc(no_inline)]

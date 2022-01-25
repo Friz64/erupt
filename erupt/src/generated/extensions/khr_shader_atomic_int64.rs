@@ -7,16 +7,16 @@ pub const KHR_SHADER_ATOMIC_INT64_SPEC_VERSION: u32 = 1;
 pub const KHR_SHADER_ATOMIC_INT64_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_shader_atomic_int64"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicInt64FeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderAtomicInt64FeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceShaderAtomicInt64FeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceShaderAtomicInt64FeaturesKHR = crate::vk1_2::PhysicalDeviceShaderAtomicInt64Features;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceShaderAtomicInt64FeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderAtomicInt64FeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceShaderAtomicInt64FeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceShaderAtomicInt64FeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceShaderAtomicInt64FeaturesBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_shader_atomic_int64`]
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES_KHR: Self = Self::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES;

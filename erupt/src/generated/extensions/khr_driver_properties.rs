@@ -13,28 +13,28 @@ pub const KHR_DRIVER_PROPERTIES_SPEC_VERSION: u32 = 1;
 pub const KHR_DRIVER_PROPERTIES_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_driver_properties"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDriverIdKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDriverIdKHR.html) · Alias
 #[doc(alias = "VkDriverIdKHR")]
 #[allow(non_camel_case_types)]
 pub type DriverIdKHR = crate::vk1_2::DriverId;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConformanceVersionKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkConformanceVersionKHR.html) · Alias
 #[doc(alias = "VkConformanceVersionKHR")]
 #[allow(non_camel_case_types)]
 pub type ConformanceVersionKHR = crate::vk1_2::ConformanceVersion;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkConformanceVersionKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkConformanceVersionKHR.html) · Alias
 #[doc(alias = "VkConformanceVersionKHR")]
 #[allow(non_camel_case_types)]
 pub type ConformanceVersionKHRBuilder<'a> = crate::vk1_2::ConformanceVersionBuilder<'a>;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDriverPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDriverPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceDriverPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceDriverPropertiesKHR = crate::vk1_2::PhysicalDeviceDriverProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDriverPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDriverPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceDriverPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceDriverPropertiesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceDriverPropertiesBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_driver_properties`]
 impl crate::vk1_0::StructureType {
     pub const PHYSICAL_DEVICE_DRIVER_PROPERTIES_KHR: Self = Self::PHYSICAL_DEVICE_DRIVER_PROPERTIES;

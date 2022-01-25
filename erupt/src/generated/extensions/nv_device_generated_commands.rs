@@ -33,7 +33,7 @@ pub const FN_DESTROY_INDIRECT_COMMANDS_LAYOUT_NV: *const std::os::raw::c_char = 
 );
 crate::non_dispatchable_handle!(
     IndirectCommandsLayoutNV, INDIRECT_COMMANDS_LAYOUT_NV,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutNV.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutNV.html) · Non-dispatchable Handle",
     "VkIndirectCommandsLayoutNV"
 );
 ///Provided by [`crate::extensions::nv_device_generated_commands`]
@@ -70,7 +70,7 @@ impl crate::vk1_0::ObjectType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutUsageFlagsNV.html) · Bitmask of [`IndirectCommandsLayoutUsageFlagBitsNV`]"]
     #[doc(alias = "VkIndirectCommandsLayoutUsageFlagsNV")] #[derive(Default)]
     #[repr(transparent)] pub struct IndirectCommandsLayoutUsageFlagsNV : u32 { const
     EXPLICIT_PREPROCESS_NV =
@@ -79,7 +79,7 @@ bitflags::bitflags! {
     const UNORDERED_SEQUENCES_NV =
     IndirectCommandsLayoutUsageFlagBitsNV::UNORDERED_SEQUENCES_NV.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutUsageFlagBitsNV.html) · Bits enum of [`IndirectCommandsLayoutUsageFlagsNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutUsageFlagBitsNV.html) · Bits enum of [`IndirectCommandsLayoutUsageFlagsNV`]
 #[doc(alias = "VkIndirectCommandsLayoutUsageFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -110,7 +110,7 @@ impl crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutUsag
     pub const INDEXED_SEQUENCES_NV: Self = Self(2);
     pub const UNORDERED_SEQUENCES_NV: Self = Self(4);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsTokenTypeNV.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsTokenTypeNV.html) · Enum
 #[doc(alias = "VkIndirectCommandsTokenTypeNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -146,12 +146,12 @@ impl crate::extensions::nv_device_generated_commands::IndirectCommandsTokenTypeN
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagsNV.html) · Bitmask of [`IndirectStateFlagBitsNV`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectStateFlagsNV.html) · Bitmask of [`IndirectStateFlagBitsNV`]"]
     #[doc(alias = "VkIndirectStateFlagsNV")] #[derive(Default)] #[repr(transparent)] pub
     struct IndirectStateFlagsNV : u32 { const FLAG_FRONTFACE_NV =
     IndirectStateFlagBitsNV::FLAG_FRONTFACE_NV.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectStateFlagBitsNV.html) · Bits enum of [`IndirectStateFlagsNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectStateFlagBitsNV.html) · Bits enum of [`IndirectStateFlagsNV`]
 #[doc(alias = "VkIndirectStateFlagBitsNV")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -178,49 +178,49 @@ impl std::fmt::Debug for IndirectStateFlagBitsNV {
 impl crate::extensions::nv_device_generated_commands::IndirectStateFlagBitsNV {
     pub const FLAG_FRONTFACE_NV: Self = Self(1);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdExecuteGeneratedCommandsNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        is_preprocessed: crate::vk1_0::Bool32,
-        p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    is_preprocessed: crate::vk1_0::Bool32,
+    p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdPreprocessGeneratedCommandsNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_generated_commands_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsInfoNV,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdBindPipelineShaderGroupNV = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
-        pipeline: crate::vk1_0::Pipeline,
-        group_index: u32,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function
+    command_buffer: crate::vk1_0::CommandBuffer,
+    pipeline_bind_point: crate::vk1_0::PipelineBindPoint,
+    pipeline: crate::vk1_0::Pipeline,
+    group_index: u32,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetGeneratedCommandsMemoryRequirementsNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV,
-        p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function
+    device: crate::vk1_0::Device,
+    p_info: *const crate::extensions::nv_device_generated_commands::GeneratedCommandsMemoryRequirementsInfoNV,
+    p_memory_requirements: *mut crate::vk1_1::MemoryRequirements2,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateIndirectCommandsLayoutNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_create_info: *const crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_indirect_commands_layout: *mut crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function
+    device: crate::vk1_0::Device,
+    p_create_info: *const crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutCreateInfoNV,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_indirect_commands_layout: *mut crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyIndirectCommandsLayoutNV = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-    ) -> ();
+    device: crate::vk1_0::Device,
+    indirect_commands_layout: crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutNV,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+) -> ();
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDeviceGeneratedCommandsFeaturesNV>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<
@@ -231,7 +231,7 @@ impl<'a> crate::ExtendableFrom<'a, GraphicsPipelineShaderGroupsCreateInfoNV>
 for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'_>>
 for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -274,7 +274,7 @@ impl PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Builder of [`PhysicalDeviceDeviceGeneratedCommandsFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Builder of [`PhysicalDeviceDeviceGeneratedCommandsFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a>(
     PhysicalDeviceDeviceGeneratedCommandsFeaturesNV,
@@ -324,7 +324,7 @@ for PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -415,7 +415,7 @@ impl PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV.html) · Builder of [`PhysicalDeviceDeviceGeneratedCommandsPropertiesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV.html) · Builder of [`PhysicalDeviceDeviceGeneratedCommandsPropertiesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a>(
     PhysicalDeviceDeviceGeneratedCommandsPropertiesNV,
@@ -562,7 +562,7 @@ for PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsShaderGroupCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsShaderGroupCreateInfoNV.html) · Structure
 #[doc(alias = "VkGraphicsShaderGroupCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -609,7 +609,7 @@ impl GraphicsShaderGroupCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsShaderGroupCreateInfoNV.html) · Builder of [`GraphicsShaderGroupCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsShaderGroupCreateInfoNV.html) · Builder of [`GraphicsShaderGroupCreateInfoNV`]
 #[repr(transparent)]
 pub struct GraphicsShaderGroupCreateInfoNVBuilder<'a>(
     GraphicsShaderGroupCreateInfoNV,
@@ -679,7 +679,7 @@ impl<'a> std::ops::DerefMut for GraphicsShaderGroupCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html) · Structure
 #[doc(alias = "VkGraphicsPipelineShaderGroupsCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -728,7 +728,7 @@ impl GraphicsPipelineShaderGroupsCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html) · Builder of [`GraphicsPipelineShaderGroupsCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html) · Builder of [`GraphicsPipelineShaderGroupsCreateInfoNV`]
 #[repr(transparent)]
 pub struct GraphicsPipelineShaderGroupsCreateInfoNVBuilder<'a>(
     GraphicsPipelineShaderGroupsCreateInfoNV,
@@ -787,7 +787,7 @@ impl<'a> std::ops::DerefMut for GraphicsPipelineShaderGroupsCreateInfoNVBuilder<
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html) · Structure
 #[doc(alias = "VkBindShaderGroupIndirectCommandNV")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -816,7 +816,7 @@ impl BindShaderGroupIndirectCommandNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html) · Builder of [`BindShaderGroupIndirectCommandNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html) · Builder of [`BindShaderGroupIndirectCommandNV`]
 #[repr(transparent)]
 pub struct BindShaderGroupIndirectCommandNVBuilder<'a>(
     BindShaderGroupIndirectCommandNV,
@@ -862,7 +862,7 @@ impl<'a> std::ops::DerefMut for BindShaderGroupIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindIndexBufferIndirectCommandNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindIndexBufferIndirectCommandNV.html) · Structure
 #[doc(alias = "VkBindIndexBufferIndirectCommandNV")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -897,7 +897,7 @@ impl BindIndexBufferIndirectCommandNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindIndexBufferIndirectCommandNV.html) · Builder of [`BindIndexBufferIndirectCommandNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindIndexBufferIndirectCommandNV.html) · Builder of [`BindIndexBufferIndirectCommandNV`]
 #[repr(transparent)]
 pub struct BindIndexBufferIndirectCommandNVBuilder<'a>(
     BindIndexBufferIndirectCommandNV,
@@ -958,7 +958,7 @@ impl<'a> std::ops::DerefMut for BindIndexBufferIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindVertexBufferIndirectCommandNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindVertexBufferIndirectCommandNV.html) · Structure
 #[doc(alias = "VkBindVertexBufferIndirectCommandNV")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -993,7 +993,7 @@ impl BindVertexBufferIndirectCommandNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindVertexBufferIndirectCommandNV.html) · Builder of [`BindVertexBufferIndirectCommandNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindVertexBufferIndirectCommandNV.html) · Builder of [`BindVertexBufferIndirectCommandNV`]
 #[repr(transparent)]
 pub struct BindVertexBufferIndirectCommandNVBuilder<'a>(
     BindVertexBufferIndirectCommandNV,
@@ -1054,7 +1054,7 @@ impl<'a> std::ops::DerefMut for BindVertexBufferIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSetStateFlagsIndirectCommandNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSetStateFlagsIndirectCommandNV.html) · Structure
 #[doc(alias = "VkSetStateFlagsIndirectCommandNV")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -1081,7 +1081,7 @@ impl SetStateFlagsIndirectCommandNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSetStateFlagsIndirectCommandNV.html) · Builder of [`SetStateFlagsIndirectCommandNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSetStateFlagsIndirectCommandNV.html) · Builder of [`SetStateFlagsIndirectCommandNV`]
 #[repr(transparent)]
 pub struct SetStateFlagsIndirectCommandNVBuilder<'a>(
     SetStateFlagsIndirectCommandNV,
@@ -1127,7 +1127,7 @@ impl<'a> std::ops::DerefMut for SetStateFlagsIndirectCommandNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsStreamNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsStreamNV.html) · Structure
 #[doc(alias = "VkIndirectCommandsStreamNV")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -1159,7 +1159,7 @@ impl IndirectCommandsStreamNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsStreamNV.html) · Builder of [`IndirectCommandsStreamNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsStreamNV.html) · Builder of [`IndirectCommandsStreamNV`]
 #[repr(transparent)]
 pub struct IndirectCommandsStreamNVBuilder<'a>(
     IndirectCommandsStreamNV,
@@ -1208,7 +1208,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsStreamNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutTokenNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutTokenNV.html) · Structure
 #[doc(alias = "VkIndirectCommandsLayoutTokenNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1285,7 +1285,7 @@ impl IndirectCommandsLayoutTokenNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutTokenNV.html) · Builder of [`IndirectCommandsLayoutTokenNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutTokenNV.html) · Builder of [`IndirectCommandsLayoutTokenNV`]
 #[repr(transparent)]
 pub struct IndirectCommandsLayoutTokenNVBuilder<'a>(
     IndirectCommandsLayoutTokenNV,
@@ -1413,7 +1413,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutTokenNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNV.html) · Structure
 #[doc(alias = "VkIndirectCommandsLayoutCreateInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1466,7 +1466,7 @@ impl IndirectCommandsLayoutCreateInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNV.html) · Builder of [`IndirectCommandsLayoutCreateInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNV.html) · Builder of [`IndirectCommandsLayoutCreateInfoNV`]
 #[repr(transparent)]
 pub struct IndirectCommandsLayoutCreateInfoNVBuilder<'a>(
     IndirectCommandsLayoutCreateInfoNV,
@@ -1543,7 +1543,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeneratedCommandsInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeneratedCommandsInfoNV.html) · Structure
 #[doc(alias = "VkGeneratedCommandsInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1617,7 +1617,7 @@ impl GeneratedCommandsInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeneratedCommandsInfoNV.html) · Builder of [`GeneratedCommandsInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeneratedCommandsInfoNV.html) · Builder of [`GeneratedCommandsInfoNV`]
 #[repr(transparent)]
 pub struct GeneratedCommandsInfoNVBuilder<'a>(
     GeneratedCommandsInfoNV,
@@ -1753,7 +1753,7 @@ impl<'a> std::ops::DerefMut for GeneratedCommandsInfoNVBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeneratedCommandsMemoryRequirementsInfoNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeneratedCommandsMemoryRequirementsInfoNV.html) · Structure
 #[doc(alias = "VkGeneratedCommandsMemoryRequirementsInfoNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -1802,7 +1802,7 @@ impl GeneratedCommandsMemoryRequirementsInfoNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkGeneratedCommandsMemoryRequirementsInfoNV.html) · Builder of [`GeneratedCommandsMemoryRequirementsInfoNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeneratedCommandsMemoryRequirementsInfoNV.html) · Builder of [`GeneratedCommandsMemoryRequirementsInfoNV`]
 #[repr(transparent)]
 pub struct GeneratedCommandsMemoryRequirementsInfoNVBuilder<'a>(
     GeneratedCommandsMemoryRequirementsInfoNV,
@@ -1890,7 +1890,7 @@ for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdExecuteGeneratedCommandsNV.html) · Function
     #[doc(alias = "vkCmdExecuteGeneratedCommandsNV")]
     pub unsafe fn cmd_execute_generated_commands_nv(
         &self,
@@ -1910,7 +1910,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdPreprocessGeneratedCommandsNV.html) · Function
     #[doc(alias = "vkCmdPreprocessGeneratedCommandsNV")]
     pub unsafe fn cmd_preprocess_generated_commands_nv(
         &self,
@@ -1925,7 +1925,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdBindPipelineShaderGroupNV.html) · Function
     #[doc(alias = "vkCmdBindPipelineShaderGroupNV")]
     pub unsafe fn cmd_bind_pipeline_shader_group_nv(
         &self,
@@ -1947,7 +1947,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetGeneratedCommandsMemoryRequirementsNV.html) · Function
     #[doc(alias = "vkGetGeneratedCommandsMemoryRequirementsNV")]
     pub unsafe fn get_generated_commands_memory_requirements_nv(
         &self,
@@ -1966,7 +1966,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateIndirectCommandsLayoutNV.html) · Function
     #[doc(alias = "vkCreateIndirectCommandsLayoutNV")]
     pub unsafe fn create_indirect_commands_layout_nv(
         &self,
@@ -1992,7 +1992,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyIndirectCommandsLayoutNV.html) · Function
     #[doc(alias = "vkDestroyIndirectCommandsLayoutNV")]
     pub unsafe fn destroy_indirect_commands_layout_nv(
         &self,

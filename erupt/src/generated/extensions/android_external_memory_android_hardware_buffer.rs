@@ -15,7 +15,7 @@ pub const FN_GET_ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID: *const std::os::raw
 pub const FN_GET_MEMORY_ANDROID_HARDWARE_BUFFER_ANDROID: *const std::os::raw::c_char = crate::cstr!(
     "vkGetMemoryAndroidHardwareBufferANDROID"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/AHardwareBuffer.html) · Basetype
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/AHardwareBuffer.html) · Basetype
 pub type AHardwareBuffer = std::ffi::c_void;
 ///Provided by [`crate::extensions::android_external_memory_android_hardware_buffer`]
 impl crate::vk1_0::StructureType {
@@ -33,20 +33,20 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
     pub const ANDROID_HARDWARE_BUFFER_ANDROID: Self = Self(1024);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetAndroidHardwareBufferPropertiesANDROID = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        buffer: *const crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
-        p_properties: *mut crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function
+    device: crate::vk1_0::Device,
+    buffer: *const crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
+    p_properties: *mut crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryAndroidHardwareBufferANDROID = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_info: *const crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID,
-        p_buffer: *mut *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    p_info: *const crate::extensions::android_external_memory_android_hardware_buffer::MemoryGetAndroidHardwareBufferInfoANDROID,
+    p_buffer: *mut *mut crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, ImportAndroidHardwareBufferInfoANDROID>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ImportAndroidHardwareBufferInfoANDROIDBuilder<'_>>
@@ -63,7 +63,7 @@ impl<'a> crate::ExtendableFrom<'a, ExternalFormatANDROID>
 for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ExternalFormatANDROIDBuilder<'_>>
 for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Structure
 #[doc(alias = "VkImportAndroidHardwareBufferInfoANDROID")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -101,7 +101,7 @@ impl ImportAndroidHardwareBufferInfoANDROID {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Builder of [`ImportAndroidHardwareBufferInfoANDROID`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Builder of [`ImportAndroidHardwareBufferInfoANDROID`]
 #[repr(transparent)]
 pub struct ImportAndroidHardwareBufferInfoANDROIDBuilder<'a>(
     ImportAndroidHardwareBufferInfoANDROID,
@@ -152,7 +152,7 @@ impl<'a> std::ops::DerefMut for ImportAndroidHardwareBufferInfoANDROIDBuilder<'a
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferUsageANDROID.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferUsageANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferUsageANDROID")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -190,7 +190,7 @@ impl AndroidHardwareBufferUsageANDROID {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferUsageANDROID.html) · Builder of [`AndroidHardwareBufferUsageANDROID`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferUsageANDROID.html) · Builder of [`AndroidHardwareBufferUsageANDROID`]
 #[repr(transparent)]
 pub struct AndroidHardwareBufferUsageANDROIDBuilder<'a>(
     AndroidHardwareBufferUsageANDROID,
@@ -241,7 +241,7 @@ impl<'a> std::ops::DerefMut for AndroidHardwareBufferUsageANDROIDBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferPropertiesANDROID")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -302,7 +302,7 @@ for crate::extensions::android_external_memory_android_hardware_buffer::AndroidH
     'a,
 > {}
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferPropertiesANDROID`]
 #[repr(transparent)]
 pub struct AndroidHardwareBufferPropertiesANDROIDBuilder<'a>(
     AndroidHardwareBufferPropertiesANDROID,
@@ -356,7 +356,7 @@ impl<'a> std::ops::DerefMut for AndroidHardwareBufferPropertiesANDROIDBuilder<'a
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetAndroidHardwareBufferInfoANDROID.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetAndroidHardwareBufferInfoANDROID.html) · Structure
 #[doc(alias = "VkMemoryGetAndroidHardwareBufferInfoANDROID")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -396,7 +396,7 @@ impl MemoryGetAndroidHardwareBufferInfoANDROID {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryGetAndroidHardwareBufferInfoANDROID.html) · Builder of [`MemoryGetAndroidHardwareBufferInfoANDROID`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetAndroidHardwareBufferInfoANDROID.html) · Builder of [`MemoryGetAndroidHardwareBufferInfoANDROID`]
 #[repr(transparent)]
 pub struct MemoryGetAndroidHardwareBufferInfoANDROIDBuilder<'a>(
     MemoryGetAndroidHardwareBufferInfoANDROID,
@@ -444,7 +444,7 @@ impl<'a> std::ops::DerefMut for MemoryGetAndroidHardwareBufferInfoANDROIDBuilder
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatPropertiesANDROID.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferFormatPropertiesANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferFormatPropertiesANDROID")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -511,7 +511,7 @@ impl AndroidHardwareBufferFormatPropertiesANDROID {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferFormatPropertiesANDROID`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferFormatPropertiesANDROID.html) · Builder of [`AndroidHardwareBufferFormatPropertiesANDROID`]
 #[repr(transparent)]
 pub struct AndroidHardwareBufferFormatPropertiesANDROIDBuilder<'a>(
     AndroidHardwareBufferFormatPropertiesANDROID,
@@ -623,7 +623,7 @@ impl<'a> std::ops::DerefMut for AndroidHardwareBufferFormatPropertiesANDROIDBuil
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFormatANDROID.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFormatANDROID.html) · Structure
 #[doc(alias = "VkExternalFormatANDROID")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -661,7 +661,7 @@ impl ExternalFormatANDROID {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalFormatANDROID.html) · Builder of [`ExternalFormatANDROID`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFormatANDROID.html) · Builder of [`ExternalFormatANDROID`]
 #[repr(transparent)]
 pub struct ExternalFormatANDROIDBuilder<'a>(
     ExternalFormatANDROID,
@@ -706,7 +706,7 @@ impl<'a> std::ops::DerefMut for ExternalFormatANDROIDBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatProperties2ANDROID.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferFormatProperties2ANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferFormatProperties2ANDROID")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -715,7 +715,7 @@ pub struct AndroidHardwareBufferFormatProperties2ANDROID {
     pub p_next: *mut std::ffi::c_void,
     pub format: crate::vk1_0::Format,
     pub external_format: u64,
-    pub format_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR,
+    pub format_features: crate::vk1_3::FormatFeatureFlags2,
     pub sampler_ycbcr_conversion_components: crate::vk1_0::ComponentMapping,
     pub suggested_ycbcr_model: crate::vk1_1::SamplerYcbcrModelConversion,
     pub suggested_ycbcr_range: crate::vk1_1::SamplerYcbcrRange,
@@ -773,7 +773,7 @@ impl AndroidHardwareBufferFormatProperties2ANDROID {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAndroidHardwareBufferFormatProperties2ANDROID.html) · Builder of [`AndroidHardwareBufferFormatProperties2ANDROID`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferFormatProperties2ANDROID.html) · Builder of [`AndroidHardwareBufferFormatProperties2ANDROID`]
 #[repr(transparent)]
 pub struct AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a>(
     AndroidHardwareBufferFormatProperties2ANDROID,
@@ -803,7 +803,7 @@ impl<'a> AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
     #[must_use]
     pub fn format_features(
         mut self,
-        format_features: crate::extensions::khr_format_feature_flags2::FormatFeatureFlags2KHR,
+        format_features: crate::vk1_3::FormatFeatureFlags2,
     ) -> Self {
         self.0.format_features = format_features as _;
         self
@@ -890,7 +890,7 @@ for AndroidHardwareBufferFormatProperties2ANDROIDBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetAndroidHardwareBufferPropertiesANDROID.html) · Function
     #[doc(alias = "vkGetAndroidHardwareBufferPropertiesANDROID")]
     pub unsafe fn get_android_hardware_buffer_properties_android(
         &self,
@@ -913,7 +913,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryAndroidHardwareBufferANDROID.html) · Function
     #[doc(alias = "vkGetMemoryAndroidHardwareBufferANDROID")]
     pub unsafe fn get_memory_android_hardware_buffer_android(
         &self,

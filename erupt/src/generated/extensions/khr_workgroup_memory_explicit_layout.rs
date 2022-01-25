@@ -33,7 +33,7 @@ impl<
     'a,
     PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'_>,
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -97,7 +97,7 @@ impl PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR.html) · Builder of [`PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR.html) · Builder of [`PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR`]
 #[repr(transparent)]
 pub struct PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHRBuilder<'a>(
     PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR,

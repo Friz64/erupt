@@ -15,7 +15,7 @@ impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoKHR>
 for crate::vk1_0::SubmitInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>>
 for crate::vk1_0::SubmitInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoKHR.html) · Structure
 #[doc(alias = "VkWin32KeyedMutexAcquireReleaseInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -71,7 +71,7 @@ impl Win32KeyedMutexAcquireReleaseInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoKHR.html) · Builder of [`Win32KeyedMutexAcquireReleaseInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoKHR.html) · Builder of [`Win32KeyedMutexAcquireReleaseInfoKHR`]
 #[repr(transparent)]
 pub struct Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'a>(
     Win32KeyedMutexAcquireReleaseInfoKHR,
@@ -155,6 +155,6 @@ impl<'a> std::ops::DerefMut for Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'a> 
     }
 }
 impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoKHR>
-for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+for crate::vk1_3::SubmitInfo2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'_>>
-for crate::extensions::khr_synchronization2::SubmitInfo2KHRBuilder<'a> {}
+for crate::vk1_3::SubmitInfo2Builder<'a> {}

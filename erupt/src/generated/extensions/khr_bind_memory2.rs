@@ -15,30 +15,30 @@ pub const FN_BIND_BUFFER_MEMORY2_KHR: *const std::os::raw::c_char = crate::cstr!
 pub const FN_BIND_IMAGE_MEMORY2_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkBindImageMemory2KHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindBufferMemoryInfoKHR.html) · Alias
 #[doc(alias = "VkBindBufferMemoryInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindBufferMemoryInfoKHR = crate::vk1_1::BindBufferMemoryInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindBufferMemoryInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindBufferMemoryInfoKHR.html) · Alias
 #[doc(alias = "VkBindBufferMemoryInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindBufferMemoryInfoKHRBuilder<'a> = crate::vk1_1::BindBufferMemoryInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemoryInfoKHR.html) · Alias
 #[doc(alias = "VkBindImageMemoryInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindImageMemoryInfoKHR = crate::vk1_1::BindImageMemoryInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkBindImageMemoryInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemoryInfoKHR.html) · Alias
 #[doc(alias = "VkBindImageMemoryInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type BindImageMemoryInfoKHRBuilder<'a> = crate::vk1_1::BindImageMemoryInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2KHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindBufferMemory2KHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindBufferMemory2KHR = crate::vk1_1::PFN_vkBindBufferMemory2;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory2KHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindImageMemory2KHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkBindImageMemory2KHR = crate::vk1_1::PFN_vkBindImageMemory2;
 ///Provided by [`crate::extensions::khr_bind_memory2`]
@@ -54,7 +54,7 @@ impl crate::vk1_0::StructureType {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindBufferMemory2KHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindBufferMemory2KHR.html) · Function
     #[doc(alias = "vkBindBufferMemory2KHR")]
     pub unsafe fn bind_buffer_memory2_khr(
         &self,
@@ -71,7 +71,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkBindImageMemory2KHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkBindImageMemory2KHR.html) · Function
     #[doc(alias = "vkBindImageMemory2KHR")]
     pub unsafe fn bind_image_memory2_khr(
         &self,

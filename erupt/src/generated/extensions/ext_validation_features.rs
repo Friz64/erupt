@@ -11,7 +11,7 @@ pub const EXT_VALIDATION_FEATURES_EXTENSION_NAME: *const std::os::raw::c_char = 
 impl crate::vk1_0::StructureType {
     pub const VALIDATION_FEATURES_EXT: Self = Self(1000247000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureEnableEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFeatureEnableEXT.html) · Enum
 #[doc(alias = "VkValidationFeatureEnableEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -43,7 +43,7 @@ impl crate::extensions::ext_validation_features::ValidationFeatureEnableEXT {
     pub const DEBUG_PRINTF_EXT: Self = Self(3);
     pub const SYNCHRONIZATION_VALIDATION_EXT: Self = Self(4);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeatureDisableEXT.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFeatureDisableEXT.html) · Enum
 #[doc(alias = "VkValidationFeatureDisableEXT")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -81,7 +81,7 @@ impl<'a> crate::ExtendableFrom<'a, ValidationFeaturesEXT>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ValidationFeaturesEXTBuilder<'_>>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFeaturesEXT.html) · Structure
 #[doc(alias = "VkValidationFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -137,7 +137,7 @@ impl ValidationFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkValidationFeaturesEXT.html) · Builder of [`ValidationFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFeaturesEXT.html) · Builder of [`ValidationFeaturesEXT`]
 #[repr(transparent)]
 pub struct ValidationFeaturesEXTBuilder<'a>(
     ValidationFeaturesEXT,

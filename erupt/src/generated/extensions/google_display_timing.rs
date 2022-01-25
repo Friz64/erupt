@@ -19,26 +19,26 @@ pub const FN_GET_PAST_PRESENTATION_TIMING_GOOGLE: *const std::os::raw::c_char = 
 impl crate::vk1_0::StructureType {
     pub const PRESENT_TIMES_INFO_GOOGLE: Self = Self(1000092000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetRefreshCycleDurationGOOGLE = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    p_display_timing_properties: *mut crate::extensions::google_display_timing::RefreshCycleDurationGOOGLE,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPastPresentationTimingGOOGLE = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-        p_presentation_timing_count: *mut u32,
-        p_presentation_timings: *mut crate::extensions::google_display_timing::PastPresentationTimingGOOGLE,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+    p_presentation_timing_count: *mut u32,
+    p_presentation_timings: *mut crate::extensions::google_display_timing::PastPresentationTimingGOOGLE,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, PresentTimesInfoGOOGLE>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PresentTimesInfoGOOGLEBuilder<'_>>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure
 #[doc(alias = "VkRefreshCycleDurationGOOGLE")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -67,7 +67,7 @@ impl RefreshCycleDurationGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Builder of [`RefreshCycleDurationGOOGLE`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Builder of [`RefreshCycleDurationGOOGLE`]
 #[repr(transparent)]
 pub struct RefreshCycleDurationGOOGLEBuilder<'a>(
     RefreshCycleDurationGOOGLE,
@@ -110,7 +110,7 @@ impl<'a> std::ops::DerefMut for RefreshCycleDurationGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Structure
 #[doc(alias = "VkPastPresentationTimingGOOGLE")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -151,7 +151,7 @@ impl PastPresentationTimingGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Builder of [`PastPresentationTimingGOOGLE`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Builder of [`PastPresentationTimingGOOGLE`]
 #[repr(transparent)]
 pub struct PastPresentationTimingGOOGLEBuilder<'a>(
     PastPresentationTimingGOOGLE,
@@ -218,7 +218,7 @@ impl<'a> std::ops::DerefMut for PastPresentationTimingGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Structure
 #[doc(alias = "VkPresentTimesInfoGOOGLE")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -259,7 +259,7 @@ impl PresentTimesInfoGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Builder of [`PresentTimesInfoGOOGLE`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Builder of [`PresentTimesInfoGOOGLE`]
 #[repr(transparent)]
 pub struct PresentTimesInfoGOOGLEBuilder<'a>(
     PresentTimesInfoGOOGLE,
@@ -308,7 +308,7 @@ impl<'a> std::ops::DerefMut for PresentTimesInfoGOOGLEBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimeGOOGLE.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentTimeGOOGLE.html) · Structure
 #[doc(alias = "VkPresentTimeGOOGLE")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -340,7 +340,7 @@ impl PresentTimeGOOGLE {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPresentTimeGOOGLE.html) · Builder of [`PresentTimeGOOGLE`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentTimeGOOGLE.html) · Builder of [`PresentTimeGOOGLE`]
 #[repr(transparent)]
 pub struct PresentTimeGOOGLEBuilder<'a>(
     PresentTimeGOOGLE,
@@ -393,7 +393,7 @@ impl<'a> std::ops::DerefMut for PresentTimeGOOGLEBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetRefreshCycleDurationGOOGLE.html) · Function
     #[doc(alias = "vkGetRefreshCycleDurationGOOGLE")]
     pub unsafe fn get_refresh_cycle_duration_google(
         &self,
@@ -414,7 +414,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPastPresentationTimingGOOGLE.html) · Function
     #[doc(alias = "vkGetPastPresentationTimingGOOGLE")]
     pub unsafe fn get_past_presentation_timing_google(
         &self,

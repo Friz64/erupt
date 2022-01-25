@@ -13,5 +13,5 @@ impl crate::vk1_0::AttachmentLoadOp {
 }
 ///Provided by [`crate::extensions::ext_load_store_op_none`]
 impl crate::vk1_0::AttachmentStoreOp {
-    pub const NONE_EXT: Self = Self::NONE_KHR;
+    pub const NONE_EXT: Self = Self::NONE;
 }

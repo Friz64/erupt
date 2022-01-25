@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMemoryPriorityFeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMemoryPriorityFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -62,7 +62,7 @@ impl PhysicalDeviceMemoryPriorityFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Builder of [`PhysicalDeviceMemoryPriorityFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Builder of [`PhysicalDeviceMemoryPriorityFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'a>(
     PhysicalDeviceMemoryPriorityFeaturesEXT,
@@ -110,7 +110,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Structure
 #[doc(alias = "VkMemoryPriorityAllocateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -148,7 +148,7 @@ impl MemoryPriorityAllocateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Builder of [`MemoryPriorityAllocateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Builder of [`MemoryPriorityAllocateInfoEXT`]
 #[repr(transparent)]
 pub struct MemoryPriorityAllocateInfoEXTBuilder<'a>(
     MemoryPriorityAllocateInfoEXT,

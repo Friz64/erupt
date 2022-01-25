@@ -14,27 +14,27 @@ pub const KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME: *const std::os::raw::c_char 
 pub const FN_ENUMERATE_PHYSICAL_DEVICE_GROUPS_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkEnumeratePhysicalDeviceGroupsKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGroupPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceGroupPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceGroupPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceGroupPropertiesKHR = crate::vk1_1::PhysicalDeviceGroupProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceGroupPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceGroupPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceGroupPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceGroupPropertiesKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceGroupPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupDeviceCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupDeviceCreateInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupDeviceCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupDeviceCreateInfoKHR = crate::vk1_1::DeviceGroupDeviceCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceGroupDeviceCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupDeviceCreateInfoKHR.html) · Alias
 #[doc(alias = "VkDeviceGroupDeviceCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DeviceGroupDeviceCreateInfoKHRBuilder<'a> = crate::vk1_1::DeviceGroupDeviceCreateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkEnumeratePhysicalDeviceGroupsKHR = crate::vk1_1::PFN_vkEnumeratePhysicalDeviceGroups;
 ///Provided by [`crate::extensions::khr_device_group_creation`]
@@ -50,7 +50,7 @@ impl crate::vk1_0::StructureType {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumeratePhysicalDeviceGroupsKHR.html) · Function
     #[doc(alias = "vkEnumeratePhysicalDeviceGroupsKHR")]
     pub unsafe fn enumerate_physical_device_groups_khr(
         &self,

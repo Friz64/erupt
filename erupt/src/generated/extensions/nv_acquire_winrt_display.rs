@@ -15,24 +15,24 @@ pub const FN_ACQUIRE_WINRT_DISPLAY_NV: *const std::os::raw::c_char = crate::cstr
 pub const FN_GET_WINRT_DISPLAY_NV: *const std::os::raw::c_char = crate::cstr!(
     "vkGetWinrtDisplayNV"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireWinrtDisplayNV.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireWinrtDisplayNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkAcquireWinrtDisplayNV = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        display: crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetWinrtDisplayNV.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    display: crate::extensions::khr_display::DisplayKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetWinrtDisplayNV.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetWinrtDisplayNV = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        device_relative_id: u32,
-        p_display: *mut crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::vk1_0::Result;
+    physical_device: crate::vk1_0::PhysicalDevice,
+    device_relative_id: u32,
+    p_display: *mut crate::extensions::khr_display::DisplayKHR,
+) -> crate::vk1_0::Result;
 ///Provided by [`crate::extensions::nv_acquire_winrt_display`]
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkAcquireWinrtDisplayNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkAcquireWinrtDisplayNV.html) · Function
     #[doc(alias = "vkAcquireWinrtDisplayNV")]
     pub unsafe fn acquire_winrt_display_nv(
         &self,
@@ -45,7 +45,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetWinrtDisplayNV.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetWinrtDisplayNV.html) · Function
     #[doc(alias = "vkGetWinrtDisplayNV")]
     pub unsafe fn get_winrt_display_nv(
         &self,

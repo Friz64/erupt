@@ -7,36 +7,36 @@ pub const KHR_MULTIVIEW_SPEC_VERSION: u32 = 1;
 pub const KHR_MULTIVIEW_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_multiview"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiviewFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceMultiviewFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceMultiviewFeaturesKHR = crate::vk1_1::PhysicalDeviceMultiviewFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiviewFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceMultiviewFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceMultiviewFeaturesKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceMultiviewFeaturesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiviewPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceMultiviewPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceMultiviewPropertiesKHR = crate::vk1_1::PhysicalDeviceMultiviewProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceMultiviewPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiviewPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceMultiviewPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceMultiviewPropertiesKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceMultiviewPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassMultiviewCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassMultiviewCreateInfoKHR.html) · Alias
 #[doc(alias = "VkRenderPassMultiviewCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type RenderPassMultiviewCreateInfoKHR = crate::vk1_1::RenderPassMultiviewCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkRenderPassMultiviewCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassMultiviewCreateInfoKHR.html) · Alias
 #[doc(alias = "VkRenderPassMultiviewCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type RenderPassMultiviewCreateInfoKHRBuilder<'a> = crate::vk1_1::RenderPassMultiviewCreateInfoBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_multiview`]
 impl crate::vk1_0::StructureType {
     pub const RENDER_PASS_MULTIVIEW_CREATE_INFO_KHR: Self = Self::RENDER_PASS_MULTIVIEW_CREATE_INFO;

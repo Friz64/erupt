@@ -18,16 +18,16 @@ pub const FN_CMD_DECODE_VIDEO_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkCmdDecodeVideoKHR"
 );
 ///Provided by [`crate::extensions::khr_video_decode_queue`]
-impl crate::extensions::khr_synchronization2::AccessFlagBits2KHR {
+impl crate::vk1_3::AccessFlagBits2 {
     pub const VIDEO_DECODE_READ_KHR: Self = Self(34359738368);
     pub const VIDEO_DECODE_WRITE_KHR: Self = Self(68719476736);
 }
 ///Provided by [`crate::extensions::khr_video_decode_queue`]
-impl crate::extensions::khr_synchronization2::PipelineStageFlagBits2KHR {
+impl crate::vk1_3::PipelineStageFlagBits2 {
     pub const VIDEO_DECODE_KHR: Self = Self(67108864);
 }
 ///Provided by [`crate::extensions::khr_video_decode_queue`]
-impl crate::extensions::khr_format_feature_flags2::FormatFeatureFlagBits2KHR {
+impl crate::vk1_3::FormatFeatureFlagBits2 {
     pub const VIDEO_DECODE_OUTPUT_KHR: Self = Self(33554432);
     pub const VIDEO_DECODE_DPB_KHR: Self = Self(67108864);
 }
@@ -63,13 +63,13 @@ impl crate::vk1_0::StructureType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeFlagsKHR.html) · Bitmask of [`VideoDecodeFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeFlagsKHR.html) · Bitmask of [`VideoDecodeFlagBitsKHR`]"]
     #[doc(alias = "VkVideoDecodeFlagsKHR")] #[derive(Default)] #[repr(transparent)] pub
     struct VideoDecodeFlagsKHR : u32 { const DEFAULT_KHR =
     VideoDecodeFlagBitsKHR::DEFAULT_KHR.0; const RESERVED_0_KHR =
     VideoDecodeFlagBitsKHR::RESERVED_0_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeFlagBitsKHR.html) · Bits enum of [`VideoDecodeFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeFlagBitsKHR.html) · Bits enum of [`VideoDecodeFlagsKHR`]
 #[doc(alias = "VkVideoDecodeFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -98,13 +98,13 @@ impl crate::extensions::khr_video_decode_queue::VideoDecodeFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const RESERVED_0_KHR: Self = Self(1);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDecodeVideoKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDecodeVideoKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDecodeVideoKHR = unsafe extern "system" fn(
-        command_buffer: crate::vk1_0::CommandBuffer,
-        p_frame_info: *const crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHR,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeInfoKHR.html) · Structure
+    command_buffer: crate::vk1_0::CommandBuffer,
+    p_frame_info: *const crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHR,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeInfoKHR.html) · Structure
 #[doc(alias = "VkVideoDecodeInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -169,7 +169,7 @@ impl VideoDecodeInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVideoDecodeInfoKHR.html) · Builder of [`VideoDecodeInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeInfoKHR.html) · Builder of [`VideoDecodeInfoKHR`]
 #[repr(transparent)]
 pub struct VideoDecodeInfoKHRBuilder<'a>(
     VideoDecodeInfoKHR,
@@ -285,7 +285,7 @@ impl<'a> std::ops::DerefMut for VideoDecodeInfoKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDecodeVideoKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDecodeVideoKHR.html) · Function
     #[doc(alias = "vkCmdDecodeVideoKHR")]
     pub unsafe fn cmd_decode_video_khr(
         &self,

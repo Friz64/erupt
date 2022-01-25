@@ -24,12 +24,12 @@ impl crate::extensions::khr_surface::PresentModeKHR {
     pub const SHARED_DEMAND_REFRESH_KHR: Self = Self(1000111000);
     pub const SHARED_CONTINUOUS_REFRESH_KHR: Self = Self(1000111001);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSwapchainStatusKHR = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    swapchain: crate::extensions::khr_swapchain::SwapchainKHR,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, SharedPresentSurfaceCapabilitiesKHR>
 for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<
     'a,
@@ -38,7 +38,7 @@ impl<'a> crate::ExtendableFrom<'a, SharedPresentSurfaceCapabilitiesKHRBuilder<'_
 for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<
     'a,
 > {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkSharedPresentSurfaceCapabilitiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -79,7 +79,7 @@ impl SharedPresentSurfaceCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Builder of [`SharedPresentSurfaceCapabilitiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Builder of [`SharedPresentSurfaceCapabilitiesKHR`]
 #[repr(transparent)]
 pub struct SharedPresentSurfaceCapabilitiesKHRBuilder<'a>(
     SharedPresentSurfaceCapabilitiesKHR,
@@ -137,7 +137,7 @@ impl<'a> std::ops::DerefMut for SharedPresentSurfaceCapabilitiesKHRBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSwapchainStatusKHR.html) · Function
     #[doc(alias = "vkGetSwapchainStatusKHR")]
     pub unsafe fn get_swapchain_status_khr(
         &self,

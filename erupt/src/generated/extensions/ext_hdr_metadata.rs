@@ -15,15 +15,15 @@ pub const FN_SET_HDR_METADATA_EXT: *const std::os::raw::c_char = crate::cstr!(
 impl crate::vk1_0::StructureType {
     pub const HDR_METADATA_EXT: Self = Self(1000105000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        swapchain_count: u32,
-        p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR,
-        p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT,
-    ) -> ();
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXYColorEXT.html) · Structure
+    device: crate::vk1_0::Device,
+    swapchain_count: u32,
+    p_swapchains: *const crate::extensions::khr_swapchain::SwapchainKHR,
+    p_metadata: *const crate::extensions::ext_hdr_metadata::HdrMetadataEXT,
+) -> ();
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXYColorEXT.html) · Structure
 #[doc(alias = "VkXYColorEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -51,7 +51,7 @@ impl XYColorEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkXYColorEXT.html) · Builder of [`XYColorEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXYColorEXT.html) · Builder of [`XYColorEXT`]
 #[repr(transparent)]
 pub struct XYColorEXTBuilder<'a>(XYColorEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> XYColorEXTBuilder<'a> {
@@ -97,7 +97,7 @@ impl<'a> std::ops::DerefMut for XYColorEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHdrMetadataEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkHdrMetadataEXT.html) · Structure
 #[doc(alias = "VkHdrMetadataEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -156,7 +156,7 @@ impl HdrMetadataEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkHdrMetadataEXT.html) · Builder of [`HdrMetadataEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkHdrMetadataEXT.html) · Builder of [`HdrMetadataEXT`]
 #[repr(transparent)]
 pub struct HdrMetadataEXTBuilder<'a>(HdrMetadataEXT, std::marker::PhantomData<&'a ()>);
 impl<'a> HdrMetadataEXTBuilder<'a> {
@@ -262,7 +262,7 @@ impl<'a> std::ops::DerefMut for HdrMetadataEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkSetHdrMetadataEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkSetHdrMetadataEXT.html) · Function
     #[doc(alias = "vkSetHdrMetadataEXT")]
     pub unsafe fn set_hdr_metadata_ext(
         &self,

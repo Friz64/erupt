@@ -24,20 +24,20 @@ impl crate::vk1_0::StructureType {
 impl crate::vk1_1::ExternalSemaphoreHandleTypeFlagBits {
     pub const ZIRCON_EVENT_FUCHSIA: Self = Self(128);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetSemaphoreZirconHandleFUCHSIA = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA,
-        p_zircon_handle: *mut *mut std::ffi::c_void,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function
+    device: crate::vk1_0::Device,
+    p_get_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::SemaphoreGetZirconHandleInfoFUCHSIA,
+    p_zircon_handle: *mut *mut std::ffi::c_void,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkImportSemaphoreZirconHandleFUCHSIA = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        p_import_semaphore_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreZirconHandleInfoFUCHSIA.html) · Structure
+    device: crate::vk1_0::Device,
+    p_import_semaphore_zircon_handle_info: *const crate::extensions::fuchsia_external_semaphore::ImportSemaphoreZirconHandleInfoFUCHSIA,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportSemaphoreZirconHandleInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkImportSemaphoreZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -84,7 +84,7 @@ impl ImportSemaphoreZirconHandleInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportSemaphoreZirconHandleInfoFUCHSIA.html) · Builder of [`ImportSemaphoreZirconHandleInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportSemaphoreZirconHandleInfoFUCHSIA.html) · Builder of [`ImportSemaphoreZirconHandleInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct ImportSemaphoreZirconHandleInfoFUCHSIABuilder<'a>(
     ImportSemaphoreZirconHandleInfoFUCHSIA,
@@ -153,7 +153,7 @@ impl<'a> std::ops::DerefMut for ImportSemaphoreZirconHandleInfoFUCHSIABuilder<'a
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetZirconHandleInfoFUCHSIA.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreGetZirconHandleInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkSemaphoreGetZirconHandleInfoFUCHSIA")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -194,7 +194,7 @@ impl SemaphoreGetZirconHandleInfoFUCHSIA {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSemaphoreGetZirconHandleInfoFUCHSIA.html) · Builder of [`SemaphoreGetZirconHandleInfoFUCHSIA`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreGetZirconHandleInfoFUCHSIA.html) · Builder of [`SemaphoreGetZirconHandleInfoFUCHSIA`]
 #[repr(transparent)]
 pub struct SemaphoreGetZirconHandleInfoFUCHSIABuilder<'a>(
     SemaphoreGetZirconHandleInfoFUCHSIA,
@@ -255,7 +255,7 @@ impl<'a> std::ops::DerefMut for SemaphoreGetZirconHandleInfoFUCHSIABuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetSemaphoreZirconHandleFUCHSIA.html) · Function
     #[doc(alias = "vkGetSemaphoreZirconHandleFUCHSIA")]
     pub unsafe fn get_semaphore_zircon_handle_fuchsia(
         &self,
@@ -274,7 +274,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkImportSemaphoreZirconHandleFUCHSIA.html) · Function
     #[doc(alias = "vkImportSemaphoreZirconHandleFUCHSIA")]
     pub unsafe fn import_semaphore_zircon_handle_fuchsia(
         &self,

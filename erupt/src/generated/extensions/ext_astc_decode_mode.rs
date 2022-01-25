@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceASTCDecodeFeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewASTCDecodeModeEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewASTCDecodeModeEXT.html) · Structure
 #[doc(alias = "VkImageViewASTCDecodeModeEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -62,7 +62,7 @@ impl ImageViewASTCDecodeModeEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImageViewASTCDecodeModeEXT.html) · Builder of [`ImageViewASTCDecodeModeEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewASTCDecodeModeEXT.html) · Builder of [`ImageViewASTCDecodeModeEXT`]
 #[repr(transparent)]
 pub struct ImageViewASTCDecodeModeEXTBuilder<'a>(
     ImageViewASTCDecodeModeEXT,
@@ -107,7 +107,7 @@ impl<'a> std::ops::DerefMut for ImageViewASTCDecodeModeEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceASTCDecodeFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -148,7 +148,7 @@ impl PhysicalDeviceASTCDecodeFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Builder of [`PhysicalDeviceASTCDecodeFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceASTCDecodeFeaturesEXT.html) · Builder of [`PhysicalDeviceASTCDecodeFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceASTCDecodeFeaturesEXTBuilder<'a>(
     PhysicalDeviceASTCDecodeFeaturesEXT,

@@ -7,36 +7,36 @@ pub const KHR_SEPARATE_DEPTH_STENCIL_LAYOUTS_SPEC_VERSION: u32 = 1;
 pub const KHR_SEPARATE_DEPTH_STENCIL_LAYOUTS_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_KHR_separate_depth_stencil_layouts"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR = crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeatures;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceSeparateDepthStencilLayoutsFeaturesKHRBuilder<'a> = crate::vk1_2::PhysicalDeviceSeparateDepthStencilLayoutsFeaturesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReferenceStencilLayoutKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentReferenceStencilLayoutKHR.html) · Alias
 #[doc(alias = "VkAttachmentReferenceStencilLayoutKHR")]
 #[allow(non_camel_case_types)]
 pub type AttachmentReferenceStencilLayoutKHR = crate::vk1_2::AttachmentReferenceStencilLayout;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentReferenceStencilLayoutKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentReferenceStencilLayoutKHR.html) · Alias
 #[doc(alias = "VkAttachmentReferenceStencilLayoutKHR")]
 #[allow(non_camel_case_types)]
 pub type AttachmentReferenceStencilLayoutKHRBuilder<'a> = crate::vk1_2::AttachmentReferenceStencilLayoutBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionStencilLayoutKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentDescriptionStencilLayoutKHR.html) · Alias
 #[doc(alias = "VkAttachmentDescriptionStencilLayoutKHR")]
 #[allow(non_camel_case_types)]
 pub type AttachmentDescriptionStencilLayoutKHR = crate::vk1_2::AttachmentDescriptionStencilLayout;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkAttachmentDescriptionStencilLayoutKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentDescriptionStencilLayoutKHR.html) · Alias
 #[doc(alias = "VkAttachmentDescriptionStencilLayoutKHR")]
 #[allow(non_camel_case_types)]
 pub type AttachmentDescriptionStencilLayoutKHRBuilder<'a> = crate::vk1_2::AttachmentDescriptionStencilLayoutBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::khr_separate_depth_stencil_layouts`]
 impl crate::vk1_0::ImageLayout {
     pub const DEPTH_ATTACHMENT_OPTIMAL_KHR: Self = Self::DEPTH_ATTACHMENT_OPTIMAL;

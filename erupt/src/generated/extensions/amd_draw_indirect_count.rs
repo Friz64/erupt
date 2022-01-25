@@ -15,17 +15,17 @@ pub const FN_CMD_DRAW_INDIRECT_COUNT_AMD: *const std::os::raw::c_char = crate::c
 pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_AMD: *const std::os::raw::c_char = crate::cstr!(
     "vkCmdDrawIndexedIndirectCountAMD"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountAMD.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountAMD.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectCountAMD = crate::vk1_2::PFN_vkCmdDrawIndirectCount;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountAMD.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndexedIndirectCountAMD.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexedIndirectCountAMD = crate::vk1_2::PFN_vkCmdDrawIndexedIndirectCount;
 ///Provided by [`crate::extensions::amd_draw_indirect_count`]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountAMD.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountAMD.html) · Function
     #[doc(alias = "vkCmdDrawIndirectCountAMD")]
     pub unsafe fn cmd_draw_indirect_count_amd(
         &self,
@@ -53,7 +53,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountAMD.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndexedIndirectCountAMD.html) · Function
     #[doc(alias = "vkCmdDrawIndexedIndirectCountAMD")]
     pub unsafe fn cmd_draw_indexed_indirect_count_amd(
         &self,

@@ -19,45 +19,45 @@ pub const FN_DESTROY_DESCRIPTOR_UPDATE_TEMPLATE_KHR: *const std::os::raw::c_char
 pub const FN_UPDATE_DESCRIPTOR_SET_WITH_TEMPLATE_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkUpdateDescriptorSetWithTemplateKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateCreateFlagsKHR.html) · Alias
 #[doc(alias = "VkDescriptorUpdateTemplateCreateFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorUpdateTemplateCreateFlagsKHR = crate::vk1_1::DescriptorUpdateTemplateCreateFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateKHR.html) · Alias
 #[doc(alias = "VkDescriptorUpdateTemplateKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorUpdateTemplateKHR = crate::vk1_1::DescriptorUpdateTemplate;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateTypeKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateTypeKHR.html) · Alias
 #[doc(alias = "VkDescriptorUpdateTemplateTypeKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorUpdateTemplateTypeKHR = crate::vk1_1::DescriptorUpdateTemplateType;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateEntryKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateEntryKHR.html) · Alias
 #[doc(alias = "VkDescriptorUpdateTemplateEntryKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorUpdateTemplateEntryKHR = crate::vk1_1::DescriptorUpdateTemplateEntry;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateEntryKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateEntryKHR.html) · Alias
 #[doc(alias = "VkDescriptorUpdateTemplateEntryKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorUpdateTemplateEntryKHRBuilder<'a> = crate::vk1_1::DescriptorUpdateTemplateEntryBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateCreateInfoKHR.html) · Alias
 #[doc(alias = "VkDescriptorUpdateTemplateCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorUpdateTemplateCreateInfoKHR = crate::vk1_1::DescriptorUpdateTemplateCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDescriptorUpdateTemplateCreateInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateCreateInfoKHR.html) · Alias
 #[doc(alias = "VkDescriptorUpdateTemplateCreateInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type DescriptorUpdateTemplateCreateInfoKHRBuilder<'a> = crate::vk1_1::DescriptorUpdateTemplateCreateInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDescriptorUpdateTemplateKHR = crate::vk1_1::PFN_vkCreateDescriptorUpdateTemplate;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkDestroyDescriptorUpdateTemplateKHR = crate::vk1_1::PFN_vkDestroyDescriptorUpdateTemplate;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkUpdateDescriptorSetWithTemplateKHR = crate::vk1_1::PFN_vkUpdateDescriptorSetWithTemplate;
 ///Provided by [`crate::extensions::khr_descriptor_update_template`]
@@ -80,7 +80,7 @@ impl crate::extensions::ext_debug_report::DebugReportObjectTypeEXT {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDescriptorUpdateTemplateKHR.html) · Function
     #[doc(alias = "vkCreateDescriptorUpdateTemplateKHR")]
     pub unsafe fn create_descriptor_update_template_khr(
         &self,
@@ -104,7 +104,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkDestroyDescriptorUpdateTemplateKHR.html) · Function
     #[doc(alias = "vkDestroyDescriptorUpdateTemplateKHR")]
     pub unsafe fn destroy_descriptor_update_template_khr(
         &self,
@@ -126,7 +126,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkUpdateDescriptorSetWithTemplateKHR.html) · Function
     #[doc(alias = "vkUpdateDescriptorSetWithTemplateKHR")]
     pub unsafe fn update_descriptor_set_with_template_khr(
         &self,

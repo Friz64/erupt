@@ -15,17 +15,17 @@ pub const FN_CMD_DRAW_INDIRECT_COUNT_KHR: *const std::os::raw::c_char = crate::c
 pub const FN_CMD_DRAW_INDEXED_INDIRECT_COUNT_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkCmdDrawIndexedIndirectCountKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndirectCountKHR = crate::vk1_2::PFN_vkCmdDrawIndirectCount;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkCmdDrawIndexedIndirectCountKHR = crate::vk1_2::PFN_vkCmdDrawIndexedIndirectCount;
 ///Provided by [`crate::extensions::khr_draw_indirect_count`]
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndirectCountKHR.html) · Function
     #[doc(alias = "vkCmdDrawIndirectCountKHR")]
     pub unsafe fn cmd_draw_indirect_count_khr(
         &self,
@@ -53,7 +53,7 @@ impl crate::DeviceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCmdDrawIndexedIndirectCountKHR.html) · Function
     #[doc(alias = "vkCmdDrawIndexedIndirectCountKHR")]
     pub unsafe fn cmd_draw_indexed_indirect_count_khr(
         &self,

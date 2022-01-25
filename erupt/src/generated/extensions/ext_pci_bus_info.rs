@@ -15,7 +15,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePCIBusInfoPropertiesEXT>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDevicePCIBusInfoPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -62,7 +62,7 @@ impl PhysicalDevicePCIBusInfoPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Builder of [`PhysicalDevicePCIBusInfoPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePCIBusInfoPropertiesEXT.html) · Builder of [`PhysicalDevicePCIBusInfoPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDevicePCIBusInfoPropertiesEXTBuilder<'a>(
     PhysicalDevicePCIBusInfoPropertiesEXT,

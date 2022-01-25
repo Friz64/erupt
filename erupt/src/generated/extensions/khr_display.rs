@@ -37,17 +37,17 @@ pub const FN_CREATE_DISPLAY_PLANE_SURFACE_KHR: *const std::os::raw::c_char = cra
 );
 crate::non_dispatchable_handle!(
     DisplayKHR, DISPLAY_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayKHR.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayKHR.html) · Non-dispatchable Handle",
     "VkDisplayKHR"
 );
 crate::non_dispatchable_handle!(
     DisplayModeKHR, DISPLAY_MODE_KHR,
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeKHR.html) · Non-dispatchable Handle",
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeKHR.html) · Non-dispatchable Handle",
     "VkDisplayModeKHR"
 );
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateFlagsKHR.html) · Bitmask of [`DisplayModeCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateFlagsKHR.html) · Bitmask of [`DisplayModeCreateFlagBitsKHR`]"]
     #[doc(alias = "VkDisplayModeCreateFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct DisplayModeCreateFlagsKHR : u32 { #[cfg(empty_bitflag_workaround)] const
     EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -76,7 +76,7 @@ impl std::fmt::Debug for DisplayModeCreateFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateFlagsKHR.html) · Bitmask of [`DisplaySurfaceCreateFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplaySurfaceCreateFlagsKHR.html) · Bitmask of [`DisplaySurfaceCreateFlagBitsKHR`]"]
     #[doc(alias = "VkDisplaySurfaceCreateFlagsKHR")] #[derive(Default)]
     #[repr(transparent)] pub struct DisplaySurfaceCreateFlagsKHR : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -115,7 +115,7 @@ impl crate::vk1_0::ObjectType {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneAlphaFlagsKHR.html) · Bitmask of [`DisplayPlaneAlphaFlagBitsKHR`]"]
     #[doc(alias = "VkDisplayPlaneAlphaFlagsKHR")] #[derive(Default)] #[repr(transparent)]
     pub struct DisplayPlaneAlphaFlagsKHR : u32 { const OPAQUE_KHR =
     DisplayPlaneAlphaFlagBitsKHR::OPAQUE_KHR.0; const GLOBAL_KHR =
@@ -123,7 +123,7 @@ bitflags::bitflags! {
     DisplayPlaneAlphaFlagBitsKHR::PER_PIXEL_KHR.0; const PER_PIXEL_PREMULTIPLIED_KHR =
     DisplayPlaneAlphaFlagBitsKHR::PER_PIXEL_PREMULTIPLIED_KHR.0; }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Bits enum of [`DisplayPlaneAlphaFlagsKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneAlphaFlagBitsKHR.html) · Bits enum of [`DisplayPlaneAlphaFlagsKHR`]
 #[doc(alias = "VkDisplayPlaneAlphaFlagBitsKHR")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -156,62 +156,62 @@ impl crate::extensions::khr_display::DisplayPlaneAlphaFlagBitsKHR {
     pub const PER_PIXEL_KHR: Self = Self(4);
     pub const PER_PIXEL_PREMULTIPLIED_KHR: Self = Self(8);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceDisplayPropertiesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_property_count: *mut u32,
-        p_properties: *mut crate::extensions::khr_display::DisplayPropertiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_property_count: *mut u32,
+    p_properties: *mut crate::extensions::khr_display::DisplayPropertiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        p_property_count: *mut u32,
-        p_properties: *mut crate::extensions::khr_display::DisplayPlanePropertiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    p_property_count: *mut u32,
+    p_properties: *mut crate::extensions::khr_display::DisplayPlanePropertiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDisplayPlaneSupportedDisplaysKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        plane_index: u32,
-        p_display_count: *mut u32,
-        p_displays: *mut crate::extensions::khr_display::DisplayKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    plane_index: u32,
+    p_display_count: *mut u32,
+    p_displays: *mut crate::extensions::khr_display::DisplayKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDisplayModePropertiesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        display: crate::extensions::khr_display::DisplayKHR,
-        p_property_count: *mut u32,
-        p_properties: *mut crate::extensions::khr_display::DisplayModePropertiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayModeKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    display: crate::extensions::khr_display::DisplayKHR,
+    p_property_count: *mut u32,
+    p_properties: *mut crate::extensions::khr_display::DisplayModePropertiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayModeKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDisplayModeKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        display: crate::extensions::khr_display::DisplayKHR,
-        p_create_info: *const crate::extensions::khr_display::DisplayModeCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_mode: *mut crate::extensions::khr_display::DisplayModeKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    display: crate::extensions::khr_display::DisplayKHR,
+    p_create_info: *const crate::extensions::khr_display::DisplayModeCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_mode: *mut crate::extensions::khr_display::DisplayModeKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetDisplayPlaneCapabilitiesKHR = unsafe extern "system" fn(
-        physical_device: crate::vk1_0::PhysicalDevice,
-        mode: crate::extensions::khr_display::DisplayModeKHR,
-        plane_index: u32,
-        p_capabilities: *mut crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Function
+    physical_device: crate::vk1_0::PhysicalDevice,
+    mode: crate::extensions::khr_display::DisplayModeKHR,
+    plane_index: u32,
+    p_capabilities: *mut crate::extensions::khr_display::DisplayPlaneCapabilitiesKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateDisplayPlaneSurfaceKHR = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPropertiesKHR.html) · Structure
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::khr_display::DisplaySurfaceCreateInfoKHR,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPropertiesKHR.html) · Structure
 #[doc(alias = "VkDisplayPropertiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -258,7 +258,7 @@ impl DisplayPropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPropertiesKHR.html) · Builder of [`DisplayPropertiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPropertiesKHR.html) · Builder of [`DisplayPropertiesKHR`]
 #[repr(transparent)]
 pub struct DisplayPropertiesKHRBuilder<'a>(
     DisplayPropertiesKHR,
@@ -351,7 +351,7 @@ impl<'a> std::ops::DerefMut for DisplayPropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Structure
 #[doc(alias = "VkDisplayPlanePropertiesKHR")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -383,7 +383,7 @@ impl DisplayPlanePropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Builder of [`DisplayPlanePropertiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Builder of [`DisplayPlanePropertiesKHR`]
 #[repr(transparent)]
 pub struct DisplayPlanePropertiesKHRBuilder<'a>(
     DisplayPlanePropertiesKHR,
@@ -435,7 +435,7 @@ impl<'a> std::ops::DerefMut for DisplayPlanePropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeParametersKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeParametersKHR.html) · Structure
 #[doc(alias = "VkDisplayModeParametersKHR")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -467,7 +467,7 @@ impl DisplayModeParametersKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeParametersKHR.html) · Builder of [`DisplayModeParametersKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeParametersKHR.html) · Builder of [`DisplayModeParametersKHR`]
 #[repr(transparent)]
 pub struct DisplayModeParametersKHRBuilder<'a>(
     DisplayModeParametersKHR,
@@ -516,7 +516,7 @@ impl<'a> std::ops::DerefMut for DisplayModeParametersKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModePropertiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModePropertiesKHR.html) · Structure
 #[doc(alias = "VkDisplayModePropertiesKHR")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -548,7 +548,7 @@ impl DisplayModePropertiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModePropertiesKHR.html) · Builder of [`DisplayModePropertiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModePropertiesKHR.html) · Builder of [`DisplayModePropertiesKHR`]
 #[repr(transparent)]
 pub struct DisplayModePropertiesKHRBuilder<'a>(
     DisplayModePropertiesKHR,
@@ -603,7 +603,7 @@ impl<'a> std::ops::DerefMut for DisplayModePropertiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateInfoKHR.html) · Structure
 #[doc(alias = "VkDisplayModeCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -644,7 +644,7 @@ impl DisplayModeCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayModeCreateInfoKHR.html) · Builder of [`DisplayModeCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateInfoKHR.html) · Builder of [`DisplayModeCreateInfoKHR`]
 #[repr(transparent)]
 pub struct DisplayModeCreateInfoKHRBuilder<'a>(
     DisplayModeCreateInfoKHR,
@@ -701,7 +701,7 @@ impl<'a> std::ops::DerefMut for DisplayModeCreateInfoKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkDisplayPlaneCapabilitiesKHR")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -754,7 +754,7 @@ impl DisplayPlaneCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Builder of [`DisplayPlaneCapabilitiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Builder of [`DisplayPlaneCapabilitiesKHR`]
 #[repr(transparent)]
 pub struct DisplayPlaneCapabilitiesKHRBuilder<'a>(
     DisplayPlaneCapabilitiesKHR,
@@ -848,7 +848,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneCapabilitiesKHRBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateInfoKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplaySurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkDisplaySurfaceCreateInfoKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -907,7 +907,7 @@ impl DisplaySurfaceCreateInfoKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDisplaySurfaceCreateInfoKHR.html) · Builder of [`DisplaySurfaceCreateInfoKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplaySurfaceCreateInfoKHR.html) · Builder of [`DisplaySurfaceCreateInfoKHR`]
 #[repr(transparent)]
 pub struct DisplaySurfaceCreateInfoKHRBuilder<'a>(
     DisplaySurfaceCreateInfoKHR,
@@ -1010,7 +1010,7 @@ impl<'a> std::ops::DerefMut for DisplaySurfaceCreateInfoKHRBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayPropertiesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceDisplayPropertiesKHR")]
     pub unsafe fn get_physical_device_display_properties_khr(
         &self,
@@ -1043,7 +1043,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceDisplayPlanePropertiesKHR")]
     pub unsafe fn get_physical_device_display_plane_properties_khr(
         &self,
@@ -1076,7 +1076,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayPlaneSupportedDisplaysKHR.html) · Function
     #[doc(alias = "vkGetDisplayPlaneSupportedDisplaysKHR")]
     pub unsafe fn get_display_plane_supported_displays_khr(
         &self,
@@ -1116,7 +1116,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayModePropertiesKHR.html) · Function
     #[doc(alias = "vkGetDisplayModePropertiesKHR")]
     pub unsafe fn get_display_mode_properties_khr(
         &self,
@@ -1156,7 +1156,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayModeKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayModeKHR.html) · Function
     #[doc(alias = "vkCreateDisplayModeKHR")]
     pub unsafe fn create_display_mode_khr(
         &self,
@@ -1181,7 +1181,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetDisplayPlaneCapabilitiesKHR.html) · Function
     #[doc(alias = "vkGetDisplayPlaneCapabilitiesKHR")]
     pub unsafe fn get_display_plane_capabilities_khr(
         &self,
@@ -1205,7 +1205,7 @@ impl crate::InstanceLoader {
     }
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateDisplayPlaneSurfaceKHR.html) · Function
     #[doc(alias = "vkCreateDisplayPlaneSurfaceKHR")]
     pub unsafe fn create_display_plane_surface_khr(
         &self,

@@ -9,8 +9,8 @@ pub const EXT_4444_FORMATS_EXTENSION_NAME: *const std::os::raw::c_char = crate::
 );
 ///Provided by [`crate::extensions::ext_4444_formats`]
 impl crate::vk1_0::Format {
-    pub const A4R4G4B4_UNORM_PACK16_EXT: Self = Self(1000340000);
-    pub const A4B4G4R4_UNORM_PACK16_EXT: Self = Self(1000340001);
+    pub const A4R4G4B4_UNORM_PACK16_EXT: Self = Self::A4R4G4B4_UNORM_PACK16;
+    pub const A4B4G4R4_UNORM_PACK16_EXT: Self = Self::A4B4G4R4_UNORM_PACK16;
 }
 ///Provided by [`crate::extensions::ext_4444_formats`]
 impl crate::vk1_0::StructureType {
@@ -24,7 +24,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDevice4444FormatsFeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDevice4444FormatsFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDevice4444FormatsFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -65,7 +65,7 @@ impl PhysicalDevice4444FormatsFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Builder of [`PhysicalDevice4444FormatsFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Builder of [`PhysicalDevice4444FormatsFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDevice4444FormatsFeaturesEXTBuilder<'a>(
     PhysicalDevice4444FormatsFeaturesEXT,

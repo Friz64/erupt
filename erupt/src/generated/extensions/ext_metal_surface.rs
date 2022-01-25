@@ -11,11 +11,11 @@ pub const EXT_METAL_SURFACE_EXTENSION_NAME: *const std::os::raw::c_char = crate:
 pub const FN_CREATE_METAL_SURFACE_EXT: *const std::os::raw::c_char = crate::cstr!(
     "vkCreateMetalSurfaceEXT"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/CAMetalLayer.html) · Basetype
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/CAMetalLayer.html) · Basetype
 pub type CAMetalLayer = std::ffi::c_void;
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateFlagsEXT.html) · Bitmask of [`MetalSurfaceCreateFlagBitsEXT`]"]
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMetalSurfaceCreateFlagsEXT.html) · Bitmask of [`MetalSurfaceCreateFlagBitsEXT`]"]
     #[doc(alias = "VkMetalSurfaceCreateFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct MetalSurfaceCreateFlagsEXT : u32 {
     #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
@@ -46,15 +46,15 @@ impl std::fmt::Debug for MetalSurfaceCreateFlagBitsEXT {
 impl crate::vk1_0::StructureType {
     pub const METAL_SURFACE_CREATE_INFO_EXT: Self = Self(1000217000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkCreateMetalSurfaceEXT = unsafe extern "system" fn(
-        instance: crate::vk1_0::Instance,
-        p_create_info: *const crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT,
-        p_allocator: *const crate::vk1_0::AllocationCallbacks,
-        p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
-    ) -> crate::vk1_0::Result;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Structure
+    instance: crate::vk1_0::Instance,
+    p_create_info: *const crate::extensions::ext_metal_surface::MetalSurfaceCreateInfoEXT,
+    p_allocator: *const crate::vk1_0::AllocationCallbacks,
+    p_surface: *mut crate::extensions::khr_surface::SurfaceKHR,
+) -> crate::vk1_0::Result;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Structure
 #[doc(alias = "VkMetalSurfaceCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -95,7 +95,7 @@ impl MetalSurfaceCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Builder of [`MetalSurfaceCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMetalSurfaceCreateInfoEXT.html) · Builder of [`MetalSurfaceCreateInfoEXT`]
 #[repr(transparent)]
 pub struct MetalSurfaceCreateInfoEXTBuilder<'a>(
     MetalSurfaceCreateInfoEXT,
@@ -156,7 +156,7 @@ impl<'a> std::ops::DerefMut for MetalSurfaceCreateInfoEXTBuilder<'a> {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkCreateMetalSurfaceEXT.html) · Function
     #[doc(alias = "vkCreateMetalSurfaceEXT")]
     pub unsafe fn create_metal_surface_ext(
         &self,

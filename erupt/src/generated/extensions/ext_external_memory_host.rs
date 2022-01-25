@@ -24,14 +24,14 @@ impl crate::vk1_1::ExternalMemoryHandleTypeFlagBits {
     pub const HOST_ALLOCATION_EXT: Self = Self(128);
     pub const HOST_MAPPED_FOREIGN_MEMORY_EXT: Self = Self(256);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetMemoryHostPointerPropertiesEXT = unsafe extern "system" fn(
-        device: crate::vk1_0::Device,
-        handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
-        p_host_pointer: *const std::ffi::c_void,
-        p_memory_host_pointer_properties: *mut crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
-    ) -> crate::vk1_0::Result;
+    device: crate::vk1_0::Device,
+    handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
+    p_host_pointer: *const std::ffi::c_void,
+    p_memory_host_pointer_properties: *mut crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
+) -> crate::vk1_0::Result;
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryHostPointerInfoEXT>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, ImportMemoryHostPointerInfoEXTBuilder<'_>>
@@ -42,7 +42,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Structure
 #[doc(alias = "VkImportMemoryHostPointerInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -83,7 +83,7 @@ impl ImportMemoryHostPointerInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Builder of [`ImportMemoryHostPointerInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Builder of [`ImportMemoryHostPointerInfoEXT`]
 #[repr(transparent)]
 pub struct ImportMemoryHostPointerInfoEXTBuilder<'a>(
     ImportMemoryHostPointerInfoEXT,
@@ -140,7 +140,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryHostPointerInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Structure
 #[doc(alias = "VkMemoryHostPointerPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -178,7 +178,7 @@ impl MemoryHostPointerPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Builder of [`MemoryHostPointerPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Builder of [`MemoryHostPointerPropertiesEXT`]
 #[repr(transparent)]
 pub struct MemoryHostPointerPropertiesEXTBuilder<'a>(
     MemoryHostPointerPropertiesEXT,
@@ -226,7 +226,7 @@ impl<'a> std::ops::DerefMut for MemoryHostPointerPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExternalMemoryHostPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -272,7 +272,7 @@ impl PhysicalDeviceExternalMemoryHostPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Builder of [`PhysicalDeviceExternalMemoryHostPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Builder of [`PhysicalDeviceExternalMemoryHostPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a>(
     PhysicalDeviceExternalMemoryHostPropertiesEXT,
@@ -332,7 +332,7 @@ for PhysicalDeviceExternalMemoryHostPropertiesEXTBuilder<'a> {
 impl crate::DeviceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetMemoryHostPointerPropertiesEXT.html) · Function
     #[doc(alias = "vkGetMemoryHostPointerPropertiesEXT")]
     pub unsafe fn get_memory_host_pointer_properties_ext(
         &self,

@@ -43,7 +43,7 @@ impl<
     'a,
 > crate::ExtendableFrom<'a, PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Structure
 #[doc(alias = "VkVertexInputBindingDivisorDescriptionEXT")]
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
@@ -75,7 +75,7 @@ impl VertexInputBindingDivisorDescriptionEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Builder of [`VertexInputBindingDivisorDescriptionEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Builder of [`VertexInputBindingDivisorDescriptionEXT`]
 #[repr(transparent)]
 pub struct VertexInputBindingDivisorDescriptionEXTBuilder<'a>(
     VertexInputBindingDivisorDescriptionEXT,
@@ -127,7 +127,7 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDivisorDescriptionEXTBuilder<'
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineVertexInputDivisorStateCreateInfoEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -173,7 +173,7 @@ impl PipelineVertexInputDivisorStateCreateInfoEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Builder of [`PipelineVertexInputDivisorStateCreateInfoEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Builder of [`PipelineVertexInputDivisorStateCreateInfoEXT`]
 #[repr(transparent)]
 pub struct PipelineVertexInputDivisorStateCreateInfoEXTBuilder<'a>(
     PipelineVertexInputDivisorStateCreateInfoEXT,
@@ -226,7 +226,7 @@ impl<'a> std::ops::DerefMut for PipelineVertexInputDivisorStateCreateInfoEXTBuil
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -269,7 +269,7 @@ impl PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorPropertiesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorPropertiesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a>(
     PhysicalDeviceVertexAttributeDivisorPropertiesEXT,
@@ -321,7 +321,7 @@ for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -373,7 +373,7 @@ impl PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Builder of [`PhysicalDeviceVertexAttributeDivisorFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXTBuilder<'a>(
     PhysicalDeviceVertexAttributeDivisorFeaturesEXT,

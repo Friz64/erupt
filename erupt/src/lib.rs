@@ -291,7 +291,9 @@ macro_rules! bits_copy {
     }};
 }
 
-const NOT_LOADED_MESSAGE: &str = "tried to call a function that isn't loaded, is the respective `enabled_extension_names` array updated correctly?";
+const NOT_LOADED_MESSAGE: &str = "tried to call a function that isn't loaded: \
+    is the respective `enabled_extension_names` array correct? \
+    does the configured Vulkan version support this function?";
 
 /// Allows returning small amounts of data (specifically with a length <= 8)
 /// without needlessly allocating heap memory.

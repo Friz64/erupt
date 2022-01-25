@@ -19,7 +19,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRGBA10X6FormatsFeaturesEXT>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRGBA10X6FormatsFeaturesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -62,7 +62,7 @@ impl PhysicalDeviceRGBA10X6FormatsFeaturesEXT {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT.html) · Builder of [`PhysicalDeviceRGBA10X6FormatsFeaturesEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT.html) · Builder of [`PhysicalDeviceRGBA10X6FormatsFeaturesEXT`]
 #[repr(transparent)]
 pub struct PhysicalDeviceRGBA10X6FormatsFeaturesEXTBuilder<'a>(
     PhysicalDeviceRGBA10X6FormatsFeaturesEXT,

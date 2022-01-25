@@ -23,7 +23,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceCornerSampledImageFeaturesNV>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCornerSampledImageFeaturesNV.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCornerSampledImageFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCornerSampledImageFeaturesNV")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -63,7 +63,7 @@ impl PhysicalDeviceCornerSampledImageFeaturesNV {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceCornerSampledImageFeaturesNV.html) · Builder of [`PhysicalDeviceCornerSampledImageFeaturesNV`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCornerSampledImageFeaturesNV.html) · Builder of [`PhysicalDeviceCornerSampledImageFeaturesNV`]
 #[repr(transparent)]
 pub struct PhysicalDeviceCornerSampledImageFeaturesNVBuilder<'a>(
     PhysicalDeviceCornerSampledImageFeaturesNV,

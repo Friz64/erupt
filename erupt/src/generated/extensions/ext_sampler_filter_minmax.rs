@@ -7,30 +7,30 @@ pub const EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION: u32 = 2;
 pub const EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_EXT_sampler_filter_minmax"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionModeEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerReductionModeEXT.html) · Alias
 #[doc(alias = "VkSamplerReductionModeEXT")]
 #[allow(non_camel_case_types)]
 pub type SamplerReductionModeEXT = crate::vk1_2::SamplerReductionMode;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceSamplerFilterMinmaxPropertiesEXT = crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT.html) · Alias
 #[doc(alias = "VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceSamplerFilterMinmaxPropertiesEXTBuilder<'a> = crate::vk1_2::PhysicalDeviceSamplerFilterMinmaxPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionModeCreateInfoEXT.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerReductionModeCreateInfoEXT.html) · Alias
 #[doc(alias = "VkSamplerReductionModeCreateInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type SamplerReductionModeCreateInfoEXT = crate::vk1_2::SamplerReductionModeCreateInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSamplerReductionModeCreateInfoEXT.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerReductionModeCreateInfoEXT.html) · Alias
 #[doc(alias = "VkSamplerReductionModeCreateInfoEXT")]
 #[allow(non_camel_case_types)]
 pub type SamplerReductionModeCreateInfoEXTBuilder<'a> = crate::vk1_2::SamplerReductionModeCreateInfoBuilder<
-        'a,
-    >;
+    'a,
+>;
 ///Provided by [`crate::extensions::ext_sampler_filter_minmax`]
 impl crate::vk1_0::FormatFeatureFlagBits {
     pub const SAMPLED_IMAGE_FILTER_MINMAX_EXT: Self = Self::SAMPLED_IMAGE_FILTER_MINMAX;

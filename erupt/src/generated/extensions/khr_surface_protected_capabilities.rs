@@ -19,7 +19,7 @@ impl<'a> crate::ExtendableFrom<'a, SurfaceProtectedCapabilitiesKHRBuilder<'_>>
 for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBuilder<
     'a,
 > {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkSurfaceProtectedCapabilitiesKHR")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -57,7 +57,7 @@ impl SurfaceProtectedCapabilitiesKHR {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Builder of [`SurfaceProtectedCapabilitiesKHR`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Builder of [`SurfaceProtectedCapabilitiesKHR`]
 #[repr(transparent)]
 pub struct SurfaceProtectedCapabilitiesKHRBuilder<'a>(
     SurfaceProtectedCapabilitiesKHR,

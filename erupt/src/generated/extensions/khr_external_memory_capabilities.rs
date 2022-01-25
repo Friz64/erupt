@@ -14,83 +14,83 @@ pub const KHR_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME: *const std::os::raw::
 pub const FN_GET_PHYSICAL_DEVICE_EXTERNAL_BUFFER_PROPERTIES_KHR: *const std::os::raw::c_char = crate::cstr!(
     "vkGetPhysicalDeviceExternalBufferPropertiesKHR"
 );
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryHandleTypeFlagsKHR.html) · Alias
 #[doc(alias = "VkExternalMemoryHandleTypeFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalMemoryHandleTypeFlagsKHR = crate::vk1_1::ExternalMemoryHandleTypeFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryFeatureFlagsKHR.html) · Alias
 #[doc(alias = "VkExternalMemoryFeatureFlagsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalMemoryFeatureFlagsKHR = crate::vk1_1::ExternalMemoryFeatureFlags;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryHandleTypeFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryHandleTypeFlagBitsKHR.html) · Alias
 #[doc(alias = "VkExternalMemoryHandleTypeFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalMemoryHandleTypeFlagBitsKHR = crate::vk1_1::ExternalMemoryHandleTypeFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryFeatureFlagBitsKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryFeatureFlagBitsKHR.html) · Alias
 #[doc(alias = "VkExternalMemoryFeatureFlagBitsKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalMemoryFeatureFlagBitsKHR = crate::vk1_1::ExternalMemoryFeatureFlagBits;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryPropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalMemoryPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalMemoryPropertiesKHR = crate::vk1_1::ExternalMemoryProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalMemoryPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryPropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalMemoryPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalMemoryPropertiesKHRBuilder<'a> = crate::vk1_1::ExternalMemoryPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalImageFormatInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalImageFormatInfoKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceExternalImageFormatInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceExternalImageFormatInfoKHR = crate::vk1_1::PhysicalDeviceExternalImageFormatInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalImageFormatInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalImageFormatInfoKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceExternalImageFormatInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceExternalImageFormatInfoKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceExternalImageFormatInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalImageFormatPropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalImageFormatPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalImageFormatPropertiesKHR = crate::vk1_1::ExternalImageFormatProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalImageFormatPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalImageFormatPropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalImageFormatPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalImageFormatPropertiesKHRBuilder<'a> = crate::vk1_1::ExternalImageFormatPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalBufferInfoKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalBufferInfoKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceExternalBufferInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceExternalBufferInfoKHR = crate::vk1_1::PhysicalDeviceExternalBufferInfo;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceExternalBufferInfoKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalBufferInfoKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceExternalBufferInfoKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceExternalBufferInfoKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceExternalBufferInfoBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalBufferPropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalBufferPropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalBufferPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalBufferPropertiesKHR = crate::vk1_1::ExternalBufferProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkExternalBufferPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalBufferPropertiesKHR.html) · Alias
 #[doc(alias = "VkExternalBufferPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type ExternalBufferPropertiesKHRBuilder<'a> = crate::vk1_1::ExternalBufferPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIDPropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIDPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceIDPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceIDPropertiesKHR = crate::vk1_1::PhysicalDeviceIDProperties;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkPhysicalDeviceIDPropertiesKHR.html) · Alias
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIDPropertiesKHR.html) · Alias
 #[doc(alias = "VkPhysicalDeviceIDPropertiesKHR")]
 #[allow(non_camel_case_types)]
 pub type PhysicalDeviceIDPropertiesKHRBuilder<'a> = crate::vk1_1::PhysicalDeviceIDPropertiesBuilder<
-        'a,
-    >;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferPropertiesKHR.html) · Alias
+    'a,
+>;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceExternalBufferPropertiesKHR.html) · Alias
 #[allow(non_camel_case_types)]
 pub type PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR = crate::vk1_1::PFN_vkGetPhysicalDeviceExternalBufferProperties;
 ///Provided by [`crate::extensions::khr_external_memory_capabilities`]
@@ -121,7 +121,7 @@ impl crate::vk1_1::ExternalMemoryFeatureFlagBits {
 impl crate::InstanceLoader {
     #[inline]
     #[track_caller]
-    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/vkGetPhysicalDeviceExternalBufferPropertiesKHR.html) · Function
+    ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkGetPhysicalDeviceExternalBufferPropertiesKHR.html) · Function
     #[doc(alias = "vkGetPhysicalDeviceExternalBufferPropertiesKHR")]
     pub unsafe fn get_physical_device_external_buffer_properties_khr(
         &self,

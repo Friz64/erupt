@@ -11,7 +11,7 @@ pub const AMD_MEMORY_OVERALLOCATION_BEHAVIOR_EXTENSION_NAME: *const std::os::raw
 impl crate::vk1_0::StructureType {
     pub const DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD: Self = Self(1000189000);
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkMemoryOverallocationBehaviorAMD.html) · Enum
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryOverallocationBehaviorAMD.html) · Enum
 #[doc(alias = "VkMemoryOverallocationBehaviorAMD")]
 #[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
 #[repr(transparent)]
@@ -39,7 +39,7 @@ impl<'a> crate::ExtendableFrom<'a, DeviceMemoryOverallocationCreateInfoAMD>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, DeviceMemoryOverallocationCreateInfoAMDBuilder<'_>>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Structure
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Structure
 #[doc(alias = "VkDeviceMemoryOverallocationCreateInfoAMD")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
@@ -77,7 +77,7 @@ impl DeviceMemoryOverallocationCreateInfoAMD {
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Builder of [`DeviceMemoryOverallocationCreateInfoAMD`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Builder of [`DeviceMemoryOverallocationCreateInfoAMD`]
 #[repr(transparent)]
 pub struct DeviceMemoryOverallocationCreateInfoAMDBuilder<'a>(
     DeviceMemoryOverallocationCreateInfoAMD,

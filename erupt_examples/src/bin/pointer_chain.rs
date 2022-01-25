@@ -26,16 +26,22 @@ fn main() {
 
         let vk1_1 = device_properties.api_version >= vk::make_api_version(0, 1, 1, 0);
         let vk1_2 = device_properties.api_version >= vk::make_api_version(0, 1, 2, 0);
+        let vk1_3 = device_properties.api_version >= vk::make_api_version(0, 1, 3, 0);
 
         if vk1_1 {
             let mut vk1_1features = vk::PhysicalDeviceVulkan11FeaturesBuilder::new();
             let mut vk1_2features = vk::PhysicalDeviceVulkan12FeaturesBuilder::new();
+            let mut vk1_3features = vk::PhysicalDeviceVulkan13FeaturesBuilder::new();
 
             let mut device_features2_builder =
                 vk::PhysicalDeviceFeatures2Builder::new().extend_from(&mut vk1_1features);
 
             if vk1_2 {
                 device_features2_builder = device_features2_builder.extend_from(&mut vk1_2features);
+            }
+
+            if vk1_3 {
+                device_features2_builder = device_features2_builder.extend_from(&mut vk1_3features);
             }
 
             let device_features2 = unsafe {
@@ -49,6 +55,14 @@ fn main() {
             println!("Vulkan 1.1 Features: {:?}", vk1_1features);
             if vk1_2 {
                 println!("Vulkan 1.2 Features: {:?}", vk1_2features);
+            } else {
+                println!("Vulkan 1.2 is not supported");
+            }
+
+            if vk1_3 {
+                println!("Vulkan 1.3 Features: {:?}", vk1_3features);
+            } else {
+                println!("Vulkan 1.3 is not supported");
             }
         } else {
             println!("Vulkan 1.1 required");

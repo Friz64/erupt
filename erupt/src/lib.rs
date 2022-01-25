@@ -71,12 +71,17 @@ and some more smaller improvements. On the other hand ash has a bigger existing 
 A: It represents the Vulkan Header version this version of erupt was generated against and is purely
 informational.
 
-### Q: I need to easily allocate memory, what should i use?
+## Ecosystem
 
-A: Take a look at [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc),
-[`vk-alloc`](https://github.com/hasenbanck/vk-alloc) for Rust-native
-solutions and [`vk-mem-erupt`](https://github.com/HindrikStegenga/vk-mem-rs) for
-bindings to the C++ Vulkan Memory Allocator (VMA) library.
+### Initialization
+
+- [`erupt-bootstrap`](https://gitlab.com/Friz64/erupt-bootstrap): Vulkan Bootstrapping library, inspired by vk-bootstrap
+
+### Memory Allocation
+
+- [`gpu-alloc`](https://github.com/zakarumych/gpu-alloc): Rust-native, used interally by `wgpu`
+- [`vk-alloc`](https://github.com/hasenbanck/vk-alloc): Rust-native
+- [`vk-mem-erupt`](https://github.com/HindrikStegenga/vk-mem-rs): Bindings to the C++ Vulkan Memory Allocator (VMA) library
 
 ## Minimum Supported Rust Version (MSRV)
 

@@ -5,6 +5,11 @@ use std::{
 };
 
 /// Idiomatic wrapper around a Vulkan Result.
+///
+/// In order to use this type with the `?` operator, call the
+/// [`.result()`](VulkanResult::result) method first.
+/// Using the `?` operator directly on this type is blocked on
+/// [rust-lang/rust#84277](https://github.com/rust-lang/rust/issues/84277).
 #[must_use = "this `VulkanResult` may be an error, which should be handled"]
 #[derive(Copy, Clone, Default)]
 pub struct VulkanResult<T> {

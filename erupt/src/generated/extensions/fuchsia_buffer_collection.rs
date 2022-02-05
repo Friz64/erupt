@@ -1056,17 +1056,12 @@ impl<'a> ImageFormatConstraintsInfoFUCHSIABuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn color_space_count(mut self, color_space_count: u32) -> Self {
-        self.0.color_space_count = color_space_count as _;
-        self
-    }
-    #[inline]
-    #[must_use]
     pub fn color_spaces(
         mut self,
-        color_spaces: &'a crate::extensions::fuchsia_buffer_collection::SysmemColorSpaceFUCHSIA,
+        color_spaces: &'a [crate::extensions::fuchsia_buffer_collection::SysmemColorSpaceFUCHSIABuilder],
     ) -> Self {
-        self.0.p_color_spaces = color_spaces as _;
+        self.0.p_color_spaces = color_spaces.as_ptr() as _;
+        self.0.color_space_count = color_spaces.len() as _;
         self
     }
     #[inline]

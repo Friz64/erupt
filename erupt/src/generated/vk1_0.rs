@@ -2911,15 +2911,15 @@ bitflags::bitflags! {
     DEPTH = ImageAspectFlagBits::DEPTH.0; const STENCIL = ImageAspectFlagBits::STENCIL.0;
     const METADATA = ImageAspectFlagBits::METADATA.0; const PLANE_0 =
     ImageAspectFlagBits::PLANE_0.0; const PLANE_1 = ImageAspectFlagBits::PLANE_1.0; const
-    PLANE_2 = ImageAspectFlagBits::PLANE_2.0; const MEMORY_PLANE_0_EXT =
-    ImageAspectFlagBits::MEMORY_PLANE_0_EXT.0; const MEMORY_PLANE_1_EXT =
-    ImageAspectFlagBits::MEMORY_PLANE_1_EXT.0; const MEMORY_PLANE_2_EXT =
-    ImageAspectFlagBits::MEMORY_PLANE_2_EXT.0; const MEMORY_PLANE_3_EXT =
-    ImageAspectFlagBits::MEMORY_PLANE_3_EXT.0; const NONE_KHR =
-    ImageAspectFlagBits::NONE_KHR.0; const PLANE_0_KHR =
+    PLANE_2 = ImageAspectFlagBits::PLANE_2.0; const NONE = ImageAspectFlagBits::NONE.0;
+    const MEMORY_PLANE_0_EXT = ImageAspectFlagBits::MEMORY_PLANE_0_EXT.0; const
+    MEMORY_PLANE_1_EXT = ImageAspectFlagBits::MEMORY_PLANE_1_EXT.0; const
+    MEMORY_PLANE_2_EXT = ImageAspectFlagBits::MEMORY_PLANE_2_EXT.0; const
+    MEMORY_PLANE_3_EXT = ImageAspectFlagBits::MEMORY_PLANE_3_EXT.0; const PLANE_0_KHR =
     ImageAspectFlagBits::PLANE_0_KHR.0; const PLANE_1_KHR =
     ImageAspectFlagBits::PLANE_1_KHR.0; const PLANE_2_KHR =
-    ImageAspectFlagBits::PLANE_2_KHR.0; }
+    ImageAspectFlagBits::PLANE_2_KHR.0; const NONE_KHR = ImageAspectFlagBits::NONE_KHR.0;
+    }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageAspectFlagBits.html) · Bits enum of [`ImageAspectFlags`]
 #[doc(alias = "VkImageAspectFlagBits")]
@@ -2945,11 +2945,11 @@ impl std::fmt::Debug for ImageAspectFlagBits {
                     &Self::PLANE_0 => "PLANE_0",
                     &Self::PLANE_1 => "PLANE_1",
                     &Self::PLANE_2 => "PLANE_2",
+                    &Self::NONE => "NONE",
                     &Self::MEMORY_PLANE_0_EXT => "MEMORY_PLANE_0_EXT",
                     &Self::MEMORY_PLANE_1_EXT => "MEMORY_PLANE_1_EXT",
                     &Self::MEMORY_PLANE_2_EXT => "MEMORY_PLANE_2_EXT",
                     &Self::MEMORY_PLANE_3_EXT => "MEMORY_PLANE_3_EXT",
-                    &Self::NONE_KHR => "NONE_KHR",
                     _ => "(unknown variant)",
                 },
             )
@@ -5012,8 +5012,8 @@ impl std::fmt::Debug for StructureType {
                     &Self::VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT => {
                         "VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT"
                     }
-                    &Self::VIDEO_ENCODE_H265_NALU_SLICE_EXT => {
-                        "VIDEO_ENCODE_H265_NALU_SLICE_EXT"
+                    &Self::VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT => {
+                        "VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT"
                     }
                     &Self::VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT => {
                         "VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT"
@@ -22094,10 +22094,10 @@ pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION.html) · Define
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 204u32;
+pub const HEADER_VERSION: u32 = 205u32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 204u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 205u32);
 ///Provided by [`crate::vk1_0`]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

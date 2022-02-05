@@ -8418,7 +8418,7 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH265PictureInfoBuilder<'a> {
 ///<s>Vulkan Manual Page</s> · Structure
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
-pub struct StdVideoEncodeH265SliceHeader {
+pub struct StdVideoEncodeH265SliceSegmentHeader {
     pub slice_type: crate::external::vk_video::StdVideoH265SliceType,
     pub slice_pic_parameter_set_id: u8,
     pub num_short_term_ref_pic_sets: u8,
@@ -8448,9 +8448,9 @@ pub struct StdVideoEncodeH265SliceHeader {
     pub slice_act_y_qp_offset: i8,
     pub slice_act_cb_qp_offset: i8,
     pub slice_act_cr_qp_offset: i8,
-    pub flags: crate::external::vk_video::StdVideoEncodeH265SliceHeaderFlags,
+    pub flags: crate::external::vk_video::StdVideoEncodeH265SliceSegmentHeaderFlags,
 }
-impl Default for StdVideoEncodeH265SliceHeader {
+impl Default for StdVideoEncodeH265SliceSegmentHeader {
     fn default() -> Self {
         Self {
             slice_type: Default::default(),
@@ -8486,10 +8486,10 @@ impl Default for StdVideoEncodeH265SliceHeader {
         }
     }
 }
-impl std::fmt::Debug for StdVideoEncodeH265SliceHeader {
+impl std::fmt::Debug for StdVideoEncodeH265SliceSegmentHeader {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f
-            .debug_struct("StdVideoEncodeH265SliceHeader")
+            .debug_struct("StdVideoEncodeH265SliceSegmentHeader")
             .field("slice_type", &self.slice_type)
             .field("slice_pic_parameter_set_id", &self.slice_pic_parameter_set_id)
             .field("num_short_term_ref_pic_sets", &self.num_short_term_ref_pic_sets)
@@ -8526,23 +8526,23 @@ impl std::fmt::Debug for StdVideoEncodeH265SliceHeader {
             .finish()
     }
 }
-impl StdVideoEncodeH265SliceHeader {
+impl StdVideoEncodeH265SliceSegmentHeader {
     #[inline]
-    pub fn into_builder<'a>(self) -> StdVideoEncodeH265SliceHeaderBuilder<'a> {
-        StdVideoEncodeH265SliceHeaderBuilder(self, std::marker::PhantomData)
+    pub fn into_builder<'a>(self) -> StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
+        StdVideoEncodeH265SliceSegmentHeaderBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
-///<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265SliceHeader`]
+///<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265SliceSegmentHeader`]
 #[repr(transparent)]
-pub struct StdVideoEncodeH265SliceHeaderBuilder<'a>(
-    StdVideoEncodeH265SliceHeader,
+pub struct StdVideoEncodeH265SliceSegmentHeaderBuilder<'a>(
+    StdVideoEncodeH265SliceSegmentHeader,
     std::marker::PhantomData<&'a ()>,
 );
-impl<'a> StdVideoEncodeH265SliceHeaderBuilder<'a> {
+impl<'a> StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
     #[inline]
-    pub fn new() -> StdVideoEncodeH265SliceHeaderBuilder<'a> {
-        StdVideoEncodeH265SliceHeaderBuilder(
+    pub fn new() -> StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
+        StdVideoEncodeH265SliceSegmentHeaderBuilder(
             Default::default(),
             std::marker::PhantomData,
         )
@@ -8752,33 +8752,33 @@ impl<'a> StdVideoEncodeH265SliceHeaderBuilder<'a> {
     #[must_use]
     pub fn flags(
         mut self,
-        flags: crate::external::vk_video::StdVideoEncodeH265SliceHeaderFlags,
+        flags: crate::external::vk_video::StdVideoEncodeH265SliceSegmentHeaderFlags,
     ) -> Self {
         self.0.flags = flags as _;
         self
     }
     #[inline]
-    pub fn build(self) -> StdVideoEncodeH265SliceHeader {
+    pub fn build(self) -> StdVideoEncodeH265SliceSegmentHeader {
         self.0
     }
 }
-impl<'a> std::default::Default for StdVideoEncodeH265SliceHeaderBuilder<'a> {
-    fn default() -> StdVideoEncodeH265SliceHeaderBuilder<'a> {
+impl<'a> std::default::Default for StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
+    fn default() -> StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
         Self::new()
     }
 }
-impl<'a> std::fmt::Debug for StdVideoEncodeH265SliceHeaderBuilder<'a> {
+impl<'a> std::fmt::Debug for StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         std::fmt::Debug::fmt(&self.0, f)
     }
 }
-impl<'a> std::ops::Deref for StdVideoEncodeH265SliceHeaderBuilder<'a> {
-    type Target = StdVideoEncodeH265SliceHeader;
+impl<'a> std::ops::Deref for StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
+    type Target = StdVideoEncodeH265SliceSegmentHeader;
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl<'a> std::ops::DerefMut for StdVideoEncodeH265SliceHeaderBuilder<'a> {
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265SliceSegmentHeaderBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }
@@ -9028,14 +9028,14 @@ impl<'a> std::ops::DerefMut for StdVideoEncodeH265ReferenceModificationsBuilder<
 ///<s>Vulkan Manual Page</s> · Structure
 #[derive(Copy, Clone, Hash, PartialEq, Eq, )]
 #[repr(C)]
-pub struct StdVideoEncodeH265SliceHeaderFlags {
+pub struct StdVideoEncodeH265SliceSegmentHeaderFlags {
     pub first_slice_segment_in_pic_flag_and_more_bitfield: u32,
     pub luma_weight_l0_flag: u16,
     pub chroma_weight_l0_flag: u16,
     pub luma_weight_l1_flag: u16,
     pub chroma_weight_l1_flag: u16,
 }
-impl Default for StdVideoEncodeH265SliceHeaderFlags {
+impl Default for StdVideoEncodeH265SliceSegmentHeaderFlags {
     fn default() -> Self {
         Self {
             first_slice_segment_in_pic_flag_and_more_bitfield: Default::default(),
@@ -9046,10 +9046,10 @@ impl Default for StdVideoEncodeH265SliceHeaderFlags {
         }
     }
 }
-impl std::fmt::Debug for StdVideoEncodeH265SliceHeaderFlags {
+impl std::fmt::Debug for StdVideoEncodeH265SliceSegmentHeaderFlags {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f
-            .debug_struct("StdVideoEncodeH265SliceHeaderFlags")
+            .debug_struct("StdVideoEncodeH265SliceSegmentHeaderFlags")
             .field(
                 "first_slice_segment_in_pic_flag_and_more_bitfield",
                 &format!(
@@ -9063,23 +9063,25 @@ impl std::fmt::Debug for StdVideoEncodeH265SliceHeaderFlags {
             .finish()
     }
 }
-impl StdVideoEncodeH265SliceHeaderFlags {
+impl StdVideoEncodeH265SliceSegmentHeaderFlags {
     #[inline]
-    pub fn into_builder<'a>(self) -> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
-        StdVideoEncodeH265SliceHeaderFlagsBuilder(self, std::marker::PhantomData)
+    pub fn into_builder<'a>(
+        self,
+    ) -> StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
+        StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
-///<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265SliceHeaderFlags`]
+///<s>Vulkan Manual Page</s> · Builder of [`StdVideoEncodeH265SliceSegmentHeaderFlags`]
 #[repr(transparent)]
-pub struct StdVideoEncodeH265SliceHeaderFlagsBuilder<'a>(
-    StdVideoEncodeH265SliceHeaderFlags,
+pub struct StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a>(
+    StdVideoEncodeH265SliceSegmentHeaderFlags,
     std::marker::PhantomData<&'a ()>,
 );
-impl<'a> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+impl<'a> StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
     #[inline]
-    pub fn new() -> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
-        StdVideoEncodeH265SliceHeaderFlagsBuilder(
+    pub fn new() -> StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
+        StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder(
             Default::default(),
             std::marker::PhantomData,
         )
@@ -9298,27 +9300,27 @@ impl<'a> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
         self
     }
     #[inline]
-    pub fn build(self) -> StdVideoEncodeH265SliceHeaderFlags {
+    pub fn build(self) -> StdVideoEncodeH265SliceSegmentHeaderFlags {
         self.0
     }
 }
-impl<'a> std::default::Default for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
-    fn default() -> StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+impl<'a> std::default::Default for StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
+    fn default() -> StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
         Self::new()
     }
 }
-impl<'a> std::fmt::Debug for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+impl<'a> std::fmt::Debug for StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         std::fmt::Debug::fmt(&self.0, f)
     }
 }
-impl<'a> std::ops::Deref for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
-    type Target = StdVideoEncodeH265SliceHeaderFlags;
+impl<'a> std::ops::Deref for StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
+    type Target = StdVideoEncodeH265SliceSegmentHeaderFlags;
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl<'a> std::ops::DerefMut for StdVideoEncodeH265SliceHeaderFlagsBuilder<'a> {
+impl<'a> std::ops::DerefMut for StdVideoEncodeH265SliceSegmentHeaderFlagsBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }

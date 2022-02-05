@@ -70,7 +70,7 @@ pub type PFN_vkGetDeviceImageMemoryRequirementsKHR = crate::vk1_3::PFN_vkGetDevi
 pub type PFN_vkGetDeviceImageSparseMemoryRequirementsKHR = crate::vk1_3::PFN_vkGetDeviceImageSparseMemoryRequirements;
 ///Provided by [`crate::extensions::khr_maintenance4`]
 impl crate::vk1_0::ImageAspectFlagBits {
-    pub const NONE_KHR: Self = Self(0);
+    pub const NONE_KHR: Self = Self::NONE;
 }
 ///Provided by [`crate::extensions::khr_maintenance4`]
 impl crate::vk1_0::StructureType {

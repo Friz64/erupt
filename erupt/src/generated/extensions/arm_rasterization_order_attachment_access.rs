@@ -54,7 +54,7 @@ impl<
 #[repr(C)]
 pub struct PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub rasterization_order_color_attachment_access: crate::vk1_0::Bool32,
     pub rasterization_order_depth_attachment_access: crate::vk1_0::Bool32,
     pub rasterization_order_stencil_attachment_access: crate::vk1_0::Bool32,
@@ -66,7 +66,7 @@ impl Default for PhysicalDeviceRasterizationOrderAttachmentAccessFeaturesARM {
     fn default() -> Self {
         Self {
             s_type: Self::STRUCTURE_TYPE,
-            p_next: std::ptr::null(),
+            p_next: std::ptr::null_mut(),
             rasterization_order_color_attachment_access: Default::default(),
             rasterization_order_depth_attachment_access: Default::default(),
             rasterization_order_stencil_attachment_access: Default::default(),

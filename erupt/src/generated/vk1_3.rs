@@ -952,6 +952,10 @@ impl crate::vk1_0::Format {
     pub const ASTC_12X12_SFLOAT_BLOCK: Self = Self(1000066013);
 }
 ///Provided by [`crate::vk1_3`]
+impl crate::vk1_0::ImageAspectFlagBits {
+    pub const NONE: Self = Self(0);
+}
+///Provided by [`crate::vk1_3`]
 impl crate::vk1_0::ImageLayout {
     pub const READ_ONLY_OPTIMAL: Self = Self(1000314000);
     pub const ATTACHMENT_OPTIMAL: Self = Self(1000314001);

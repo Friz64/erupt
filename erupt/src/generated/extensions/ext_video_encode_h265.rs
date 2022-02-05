@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION")]
-pub const EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 3;
+pub const EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 4;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H265_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -81,7 +81,7 @@ impl crate::vk1_0::StructureType {
     pub const VIDEO_ENCODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000039003);
     pub const VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT: Self = Self(1000039004);
     pub const VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT: Self = Self(1000039005);
-    pub const VIDEO_ENCODE_H265_NALU_SLICE_EXT: Self = Self(1000039006);
+    pub const VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT: Self = Self(1000039006);
     pub const VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT: Self = Self(1000039007);
     pub const VIDEO_ENCODE_H265_PROFILE_EXT: Self = Self(1000039008);
     pub const VIDEO_ENCODE_H265_REFERENCE_LISTS_EXT: Self = Self(1000039009);
@@ -97,8 +97,8 @@ bitflags::bitflags! {
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265InputModeFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265InputModeFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265InputModeFlagsEXT : u32 { const
-    FRAME_EXT = VideoEncodeH265InputModeFlagBitsEXT::FRAME_EXT.0; const SLICE_EXT =
-    VideoEncodeH265InputModeFlagBitsEXT::SLICE_EXT.0; const NON_VCL_EXT =
+    FRAME_EXT = VideoEncodeH265InputModeFlagBitsEXT::FRAME_EXT.0; const SLICE_SEGMENT_EXT
+    = VideoEncodeH265InputModeFlagBitsEXT::SLICE_SEGMENT_EXT.0; const NON_VCL_EXT =
     VideoEncodeH265InputModeFlagBitsEXT::NON_VCL_EXT.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265InputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265InputModeFlagsEXT`]
@@ -119,7 +119,7 @@ impl std::fmt::Debug for VideoEncodeH265InputModeFlagBitsEXT {
             .write_str(
                 match self {
                     &Self::FRAME_EXT => "FRAME_EXT",
-                    &Self::SLICE_EXT => "SLICE_EXT",
+                    &Self::SLICE_SEGMENT_EXT => "SLICE_SEGMENT_EXT",
                     &Self::NON_VCL_EXT => "NON_VCL_EXT",
                     _ => "(unknown variant)",
                 },
@@ -129,7 +129,7 @@ impl std::fmt::Debug for VideoEncodeH265InputModeFlagBitsEXT {
 ///Provided by [`crate::extensions::ext_video_encode_h265`]
 impl crate::extensions::ext_video_encode_h265::VideoEncodeH265InputModeFlagBitsEXT {
     pub const FRAME_EXT: Self = Self(1);
-    pub const SLICE_EXT: Self = Self(2);
+    pub const SLICE_SEGMENT_EXT: Self = Self(2);
     pub const NON_VCL_EXT: Self = Self(4);
 }
 bitflags::bitflags! {
@@ -137,9 +137,9 @@ bitflags::bitflags! {
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265OutputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265OutputModeFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265OutputModeFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265OutputModeFlagsEXT : u32 { const
-    FRAME_EXT = VideoEncodeH265OutputModeFlagBitsEXT::FRAME_EXT.0; const SLICE_EXT =
-    VideoEncodeH265OutputModeFlagBitsEXT::SLICE_EXT.0; const NON_VCL_EXT =
-    VideoEncodeH265OutputModeFlagBitsEXT::NON_VCL_EXT.0; }
+    FRAME_EXT = VideoEncodeH265OutputModeFlagBitsEXT::FRAME_EXT.0; const
+    SLICE_SEGMENT_EXT = VideoEncodeH265OutputModeFlagBitsEXT::SLICE_SEGMENT_EXT.0; const
+    NON_VCL_EXT = VideoEncodeH265OutputModeFlagBitsEXT::NON_VCL_EXT.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265OutputModeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265OutputModeFlagsEXT`]
 #[doc(alias = "VkVideoEncodeH265OutputModeFlagBitsEXT")]
@@ -159,7 +159,7 @@ impl std::fmt::Debug for VideoEncodeH265OutputModeFlagBitsEXT {
             .write_str(
                 match self {
                     &Self::FRAME_EXT => "FRAME_EXT",
-                    &Self::SLICE_EXT => "SLICE_EXT",
+                    &Self::SLICE_SEGMENT_EXT => "SLICE_SEGMENT_EXT",
                     &Self::NON_VCL_EXT => "NON_VCL_EXT",
                     _ => "(unknown variant)",
                 },
@@ -169,7 +169,7 @@ impl std::fmt::Debug for VideoEncodeH265OutputModeFlagBitsEXT {
 ///Provided by [`crate::extensions::ext_video_encode_h265`]
 impl crate::extensions::ext_video_encode_h265::VideoEncodeH265OutputModeFlagBitsEXT {
     pub const FRAME_EXT: Self = Self(1);
-    pub const SLICE_EXT: Self = Self(2);
+    pub const SLICE_SEGMENT_EXT: Self = Self(2);
     pub const NON_VCL_EXT: Self = Self(4);
 }
 bitflags::bitflags! {
@@ -871,8 +871,8 @@ pub struct VideoEncodeH265VclFrameInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub p_reference_final_lists: *const crate::extensions::ext_video_encode_h265::VideoEncodeH265ReferenceListsEXT,
-    pub nalu_slice_entry_count: u32,
-    pub p_nalu_slice_entries: *const crate::extensions::ext_video_encode_h265::VideoEncodeH265NaluSliceEXT,
+    pub nalu_slice_segment_entry_count: u32,
+    pub p_nalu_slice_segment_entries: *const crate::extensions::ext_video_encode_h265::VideoEncodeH265NaluSliceSegmentEXT,
     pub p_current_picture_info: *const crate::external::vk_video::StdVideoEncodeH265PictureInfo,
 }
 impl VideoEncodeH265VclFrameInfoEXT {
@@ -884,8 +884,8 @@ impl Default for VideoEncodeH265VclFrameInfoEXT {
             s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null(),
             p_reference_final_lists: std::ptr::null(),
-            nalu_slice_entry_count: Default::default(),
-            p_nalu_slice_entries: std::ptr::null(),
+            nalu_slice_segment_entry_count: Default::default(),
+            p_nalu_slice_segment_entries: std::ptr::null(),
             p_current_picture_info: std::ptr::null(),
         }
     }
@@ -897,8 +897,11 @@ impl std::fmt::Debug for VideoEncodeH265VclFrameInfoEXT {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_reference_final_lists", &self.p_reference_final_lists)
-            .field("nalu_slice_entry_count", &self.nalu_slice_entry_count)
-            .field("p_nalu_slice_entries", &self.p_nalu_slice_entries)
+            .field(
+                "nalu_slice_segment_entry_count",
+                &self.nalu_slice_segment_entry_count,
+            )
+            .field("p_nalu_slice_segment_entries", &self.p_nalu_slice_segment_entries)
             .field("p_current_picture_info", &self.p_current_picture_info)
             .finish()
     }
@@ -935,12 +938,12 @@ impl<'a> VideoEncodeH265VclFrameInfoEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn nalu_slice_entries(
+    pub fn nalu_slice_segment_entries(
         mut self,
-        nalu_slice_entries: &'a [crate::extensions::ext_video_encode_h265::VideoEncodeH265NaluSliceEXTBuilder],
+        nalu_slice_segment_entries: &'a [crate::extensions::ext_video_encode_h265::VideoEncodeH265NaluSliceSegmentEXTBuilder],
     ) -> Self {
-        self.0.p_nalu_slice_entries = nalu_slice_entries.as_ptr() as _;
-        self.0.nalu_slice_entry_count = nalu_slice_entries.len() as _;
+        self.0.p_nalu_slice_segment_entries = nalu_slice_segment_entries.as_ptr() as _;
+        self.0.nalu_slice_segment_entry_count = nalu_slice_segment_entries.len() as _;
         self
     }
     #[inline]
@@ -1106,60 +1109,63 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265EmitPictureParametersEXTBuilder<'
         &mut self.0
     }
 }
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265NaluSliceEXT.html) · Structure
-#[doc(alias = "VkVideoEncodeH265NaluSliceEXT")]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265NaluSliceSegmentEXT.html) · Structure
+#[doc(alias = "VkVideoEncodeH265NaluSliceSegmentEXT")]
 #[derive(Copy, Clone, )]
 #[repr(C)]
-pub struct VideoEncodeH265NaluSliceEXT {
+pub struct VideoEncodeH265NaluSliceSegmentEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub ctb_count: u32,
     pub p_reference_final_lists: *const crate::extensions::ext_video_encode_h265::VideoEncodeH265ReferenceListsEXT,
-    pub p_slice_header_std: *const crate::external::vk_video::StdVideoEncodeH265SliceHeader,
+    pub p_slice_segment_header_std: *const crate::external::vk_video::StdVideoEncodeH265SliceSegmentHeader,
 }
-impl VideoEncodeH265NaluSliceEXT {
-    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H265_NALU_SLICE_EXT;
+impl VideoEncodeH265NaluSliceSegmentEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT;
 }
-impl Default for VideoEncodeH265NaluSliceEXT {
+impl Default for VideoEncodeH265NaluSliceSegmentEXT {
     fn default() -> Self {
         Self {
             s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null(),
             ctb_count: Default::default(),
             p_reference_final_lists: std::ptr::null(),
-            p_slice_header_std: std::ptr::null(),
+            p_slice_segment_header_std: std::ptr::null(),
         }
     }
 }
-impl std::fmt::Debug for VideoEncodeH265NaluSliceEXT {
+impl std::fmt::Debug for VideoEncodeH265NaluSliceSegmentEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f
-            .debug_struct("VideoEncodeH265NaluSliceEXT")
+            .debug_struct("VideoEncodeH265NaluSliceSegmentEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ctb_count", &self.ctb_count)
             .field("p_reference_final_lists", &self.p_reference_final_lists)
-            .field("p_slice_header_std", &self.p_slice_header_std)
+            .field("p_slice_segment_header_std", &self.p_slice_segment_header_std)
             .finish()
     }
 }
-impl VideoEncodeH265NaluSliceEXT {
+impl VideoEncodeH265NaluSliceSegmentEXT {
     #[inline]
-    pub fn into_builder<'a>(self) -> VideoEncodeH265NaluSliceEXTBuilder<'a> {
-        VideoEncodeH265NaluSliceEXTBuilder(self, std::marker::PhantomData)
+    pub fn into_builder<'a>(self) -> VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
+        VideoEncodeH265NaluSliceSegmentEXTBuilder(self, std::marker::PhantomData)
     }
 }
 #[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265NaluSliceEXT.html) · Builder of [`VideoEncodeH265NaluSliceEXT`]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265NaluSliceSegmentEXT.html) · Builder of [`VideoEncodeH265NaluSliceSegmentEXT`]
 #[repr(transparent)]
-pub struct VideoEncodeH265NaluSliceEXTBuilder<'a>(
-    VideoEncodeH265NaluSliceEXT,
+pub struct VideoEncodeH265NaluSliceSegmentEXTBuilder<'a>(
+    VideoEncodeH265NaluSliceSegmentEXT,
     std::marker::PhantomData<&'a ()>,
 );
-impl<'a> VideoEncodeH265NaluSliceEXTBuilder<'a> {
+impl<'a> VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
     #[inline]
-    pub fn new() -> VideoEncodeH265NaluSliceEXTBuilder<'a> {
-        VideoEncodeH265NaluSliceEXTBuilder(Default::default(), std::marker::PhantomData)
+    pub fn new() -> VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
+        VideoEncodeH265NaluSliceSegmentEXTBuilder(
+            Default::default(),
+            std::marker::PhantomData,
+        )
     }
     #[inline]
     #[must_use]
@@ -1178,37 +1184,37 @@ impl<'a> VideoEncodeH265NaluSliceEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn slice_header_std(
+    pub fn slice_segment_header_std(
         mut self,
-        slice_header_std: &'a crate::external::vk_video::StdVideoEncodeH265SliceHeader,
+        slice_segment_header_std: &'a crate::external::vk_video::StdVideoEncodeH265SliceSegmentHeader,
     ) -> Self {
-        self.0.p_slice_header_std = slice_header_std as _;
+        self.0.p_slice_segment_header_std = slice_segment_header_std as _;
         self
     }
     #[inline]
     /// Discards all lifetime information.
     /// Use the `Deref` and `DerefMut` implementations if possible.
-    pub fn build_dangling(self) -> VideoEncodeH265NaluSliceEXT {
+    pub fn build_dangling(self) -> VideoEncodeH265NaluSliceSegmentEXT {
         self.0
     }
 }
-impl<'a> std::default::Default for VideoEncodeH265NaluSliceEXTBuilder<'a> {
-    fn default() -> VideoEncodeH265NaluSliceEXTBuilder<'a> {
+impl<'a> std::default::Default for VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
+    fn default() -> VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
         Self::new()
     }
 }
-impl<'a> std::fmt::Debug for VideoEncodeH265NaluSliceEXTBuilder<'a> {
+impl<'a> std::fmt::Debug for VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         std::fmt::Debug::fmt(&self.0, f)
     }
 }
-impl<'a> std::ops::Deref for VideoEncodeH265NaluSliceEXTBuilder<'a> {
-    type Target = VideoEncodeH265NaluSliceEXT;
+impl<'a> std::ops::Deref for VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
+    type Target = VideoEncodeH265NaluSliceSegmentEXT;
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl<'a> std::ops::DerefMut for VideoEncodeH265NaluSliceEXTBuilder<'a> {
+impl<'a> std::ops::DerefMut for VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }

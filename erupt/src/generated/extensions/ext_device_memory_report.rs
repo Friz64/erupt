@@ -28,12 +28,11 @@ impl DeviceMemoryReportFlagBitsEXT {
 }
 impl std::fmt::Debug for DeviceMemoryReportFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_device_memory_report`]
@@ -49,17 +48,16 @@ impl crate::vk1_0::StructureType {
 pub struct DeviceMemoryReportEventTypeEXT(pub i32);
 impl std::fmt::Debug for DeviceMemoryReportEventTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ALLOCATE_EXT => "ALLOCATE_EXT",
-                    &Self::FREE_EXT => "FREE_EXT",
-                    &Self::IMPORT_EXT => "IMPORT_EXT",
-                    &Self::UNIMPORT_EXT => "UNIMPORT_EXT",
-                    &Self::ALLOCATION_FAILED_EXT => "ALLOCATION_FAILED_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ALLOCATE_EXT => "ALLOCATE_EXT",
+                &Self::FREE_EXT => "FREE_EXT",
+                &Self::IMPORT_EXT => "IMPORT_EXT",
+                &Self::UNIMPORT_EXT => "UNIMPORT_EXT",
+                &Self::ALLOCATION_FAILED_EXT => "ALLOCATION_FAILED_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_device_memory_report`]
@@ -94,7 +92,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceMemoryReportFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDeviceMemoryReportFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDeviceMemoryReportFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -115,8 +113,7 @@ impl Default for PhysicalDeviceDeviceMemoryReportFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceMemoryReportFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDeviceMemoryReportFeaturesEXT")
+        f.debug_struct("PhysicalDeviceDeviceMemoryReportFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_memory_report", &(self.device_memory_report != 0))
@@ -186,7 +183,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDeviceMemoryReportFeaturesEXTBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDeviceMemoryReportCreateInfoEXT.html) · Structure
 #[doc(alias = "VkDeviceDeviceMemoryReportCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceDeviceMemoryReportCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -213,8 +210,7 @@ impl Default for DeviceDeviceMemoryReportCreateInfoEXT {
 }
 impl std::fmt::Debug for DeviceDeviceMemoryReportCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceDeviceMemoryReportCreateInfoEXT")
+        f.debug_struct("DeviceDeviceMemoryReportCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -303,7 +299,7 @@ impl<'a> std::ops::DerefMut for DeviceDeviceMemoryReportCreateInfoEXTBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryReportCallbackDataEXT.html) · Structure
 #[doc(alias = "VkDeviceMemoryReportCallbackDataEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceMemoryReportCallbackDataEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -336,8 +332,7 @@ impl Default for DeviceMemoryReportCallbackDataEXT {
 }
 impl std::fmt::Debug for DeviceMemoryReportCallbackDataEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceMemoryReportCallbackDataEXT")
+        f.debug_struct("DeviceMemoryReportCallbackDataEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

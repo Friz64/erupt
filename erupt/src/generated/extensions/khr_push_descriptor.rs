@@ -52,7 +52,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePushDescriptorPropertiesKHRBuil
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePushDescriptorPropertiesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePushDescriptorPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePushDescriptorPropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -73,8 +73,7 @@ impl Default for PhysicalDevicePushDescriptorPropertiesKHR {
 }
 impl std::fmt::Debug for PhysicalDevicePushDescriptorPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePushDescriptorPropertiesKHR")
+        f.debug_struct("PhysicalDevicePushDescriptorPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_push_descriptors", &self.max_push_descriptors)

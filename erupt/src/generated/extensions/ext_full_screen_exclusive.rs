@@ -40,16 +40,15 @@ impl crate::vk1_0::StructureType {
 pub struct FullScreenExclusiveEXT(pub i32);
 impl std::fmt::Debug for FullScreenExclusiveEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_EXT => "DEFAULT_EXT",
-                    &Self::ALLOWED_EXT => "ALLOWED_EXT",
-                    &Self::DISALLOWED_EXT => "DISALLOWED_EXT",
-                    &Self::APPLICATION_CONTROLLED_EXT => "APPLICATION_CONTROLLED_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_EXT => "DEFAULT_EXT",
+                &Self::ALLOWED_EXT => "ALLOWED_EXT",
+                &Self::DISALLOWED_EXT => "DISALLOWED_EXT",
+                &Self::APPLICATION_CONTROLLED_EXT => "APPLICATION_CONTROLLED_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_full_screen_exclusive`]
@@ -120,7 +119,7 @@ for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBui
 > {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFullScreenExclusiveInfoEXT.html) · Structure
 #[doc(alias = "VkSurfaceFullScreenExclusiveInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceFullScreenExclusiveInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -141,8 +140,7 @@ impl Default for SurfaceFullScreenExclusiveInfoEXT {
 }
 impl std::fmt::Debug for SurfaceFullScreenExclusiveInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceFullScreenExclusiveInfoEXT")
+        f.debug_struct("SurfaceFullScreenExclusiveInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("full_screen_exclusive", &self.full_screen_exclusive)
@@ -209,7 +207,7 @@ impl<'a> std::ops::DerefMut for SurfaceFullScreenExclusiveInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFullScreenExclusiveWin32InfoEXT.html) · Structure
 #[doc(alias = "VkSurfaceFullScreenExclusiveWin32InfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceFullScreenExclusiveWin32InfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -230,8 +228,7 @@ impl Default for SurfaceFullScreenExclusiveWin32InfoEXT {
 }
 impl std::fmt::Debug for SurfaceFullScreenExclusiveWin32InfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceFullScreenExclusiveWin32InfoEXT")
+        f.debug_struct("SurfaceFullScreenExclusiveWin32InfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("hmonitor", &self.hmonitor)
@@ -295,7 +292,7 @@ impl<'a> std::ops::DerefMut for SurfaceFullScreenExclusiveWin32InfoEXTBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilitiesFullScreenExclusiveEXT.html) · Structure
 #[doc(alias = "VkSurfaceCapabilitiesFullScreenExclusiveEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceCapabilitiesFullScreenExclusiveEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -316,8 +313,7 @@ impl Default for SurfaceCapabilitiesFullScreenExclusiveEXT {
 }
 impl std::fmt::Debug for SurfaceCapabilitiesFullScreenExclusiveEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceCapabilitiesFullScreenExclusiveEXT")
+        f.debug_struct("SurfaceCapabilitiesFullScreenExclusiveEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

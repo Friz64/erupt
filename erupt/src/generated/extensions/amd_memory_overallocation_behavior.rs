@@ -18,15 +18,14 @@ impl crate::vk1_0::StructureType {
 pub struct MemoryOverallocationBehaviorAMD(pub i32);
 impl std::fmt::Debug for MemoryOverallocationBehaviorAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_AMD => "DEFAULT_AMD",
-                    &Self::ALLOWED_AMD => "ALLOWED_AMD",
-                    &Self::DISALLOWED_AMD => "DISALLOWED_AMD",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_AMD => "DEFAULT_AMD",
+                &Self::ALLOWED_AMD => "ALLOWED_AMD",
+                &Self::DISALLOWED_AMD => "DISALLOWED_AMD",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::amd_memory_overallocation_behavior`]
@@ -41,7 +40,7 @@ impl<'a> crate::ExtendableFrom<'a, DeviceMemoryOverallocationCreateInfoAMDBuilde
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceMemoryOverallocationCreateInfoAMD.html) · Structure
 #[doc(alias = "VkDeviceMemoryOverallocationCreateInfoAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceMemoryOverallocationCreateInfoAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -62,8 +61,7 @@ impl Default for DeviceMemoryOverallocationCreateInfoAMD {
 }
 impl std::fmt::Debug for DeviceMemoryOverallocationCreateInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceMemoryOverallocationCreateInfoAMD")
+        f.debug_struct("DeviceMemoryOverallocationCreateInfoAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("overallocation_behavior", &self.overallocation_behavior)

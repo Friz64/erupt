@@ -25,7 +25,7 @@ pub type PFN_vkSetHdrMetadataEXT = unsafe extern "system" fn(
 ) -> ();
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXYColorEXT.html) · Structure
 #[doc(alias = "VkXYColorEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct XYColorEXT {
     pub x: std::os::raw::c_float,
@@ -99,7 +99,7 @@ impl<'a> std::ops::DerefMut for XYColorEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkHdrMetadataEXT.html) · Structure
 #[doc(alias = "VkHdrMetadataEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct HdrMetadataEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -134,8 +134,7 @@ impl Default for HdrMetadataEXT {
 }
 impl std::fmt::Debug for HdrMetadataEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("HdrMetadataEXT")
+        f.debug_struct("HdrMetadataEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("display_primary_red", &self.display_primary_red)

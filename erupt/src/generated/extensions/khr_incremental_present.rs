@@ -17,7 +17,7 @@ impl<'a> crate::ExtendableFrom<'a, PresentRegionsKHRBuilder<'_>>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentRegionsKHR.html) · Structure
 #[doc(alias = "VkPresentRegionsKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentRegionsKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -40,8 +40,7 @@ impl Default for PresentRegionsKHR {
 }
 impl std::fmt::Debug for PresentRegionsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PresentRegionsKHR")
+        f.debug_struct("PresentRegionsKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("swapchain_count", &self.swapchain_count)
@@ -107,7 +106,7 @@ impl<'a> std::ops::DerefMut for PresentRegionsKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentRegionKHR.html) · Structure
 #[doc(alias = "VkPresentRegionKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentRegionKHR {
     pub rectangle_count: u32,
@@ -123,8 +122,7 @@ impl Default for PresentRegionKHR {
 }
 impl std::fmt::Debug for PresentRegionKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PresentRegionKHR")
+        f.debug_struct("PresentRegionKHR")
             .field("rectangle_count", &self.rectangle_count)
             .field("p_rectangles", &self.p_rectangles)
             .finish()
@@ -188,7 +186,7 @@ impl<'a> std::ops::DerefMut for PresentRegionKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRectLayerKHR.html) · Structure
 #[doc(alias = "VkRectLayerKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct RectLayerKHR {
     pub offset: crate::vk1_0::Offset2D,
@@ -206,8 +204,7 @@ impl Default for RectLayerKHR {
 }
 impl std::fmt::Debug for RectLayerKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RectLayerKHR")
+        f.debug_struct("RectLayerKHR")
             .field("offset", &self.offset)
             .field("extent", &self.extent)
             .field("layer", &self.layer)

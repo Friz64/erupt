@@ -41,7 +41,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceColorWriteEnableFeaturesEXTBuil
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceColorWriteEnableFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceColorWriteEnableFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceColorWriteEnableFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -62,8 +62,7 @@ impl Default for PhysicalDeviceColorWriteEnableFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceColorWriteEnableFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceColorWriteEnableFeaturesEXT")
+        f.debug_struct("PhysicalDeviceColorWriteEnableFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("color_write_enable", &(self.color_write_enable != 0))
@@ -129,7 +128,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceColorWriteEnableFeaturesEXTBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorWriteCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineColorWriteCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineColorWriteCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -152,8 +151,7 @@ impl Default for PipelineColorWriteCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineColorWriteCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineColorWriteCreateInfoEXT")
+        f.debug_struct("PipelineColorWriteCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("attachment_count", &self.attachment_count)

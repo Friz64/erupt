@@ -35,7 +35,7 @@ impl<
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -62,8 +62,7 @@ impl Default for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR")
+        f.debug_struct("PhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

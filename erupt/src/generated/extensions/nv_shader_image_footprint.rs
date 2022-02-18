@@ -27,7 +27,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderImageFootprintFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderImageFootprintFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderImageFootprintFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -48,8 +48,7 @@ impl Default for PhysicalDeviceShaderImageFootprintFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderImageFootprintFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderImageFootprintFeaturesNV")
+        f.debug_struct("PhysicalDeviceShaderImageFootprintFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_footprint", &(self.image_footprint != 0))

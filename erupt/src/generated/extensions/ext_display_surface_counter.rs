@@ -38,13 +38,12 @@ impl SurfaceCounterFlagBitsEXT {
 }
 impl std::fmt::Debug for SurfaceCounterFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VBLANK_EXT => "VBLANK_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VBLANK_EXT => "VBLANK_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_display_surface_counter`]
@@ -60,7 +59,7 @@ pub type PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT = unsafe extern "system"
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilities2EXT.html) · Structure
 #[doc(alias = "VkSurfaceCapabilities2EXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceCapabilities2EXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -101,8 +100,7 @@ impl Default for SurfaceCapabilities2EXT {
 }
 impl std::fmt::Debug for SurfaceCapabilities2EXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceCapabilities2EXT")
+        f.debug_struct("SurfaceCapabilities2EXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("min_image_count", &self.min_image_count)

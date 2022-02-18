@@ -36,12 +36,11 @@ impl XcbSurfaceCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for XcbSurfaceCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_xcb_surface`]
@@ -66,7 +65,7 @@ pub type PFN_vkGetPhysicalDeviceXcbPresentationSupportKHR = unsafe extern "syste
 ) -> crate::vk1_0::Bool32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkXcbSurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkXcbSurfaceCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct XcbSurfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -91,8 +90,7 @@ impl Default for XcbSurfaceCreateInfoKHR {
 }
 impl std::fmt::Debug for XcbSurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("XcbSurfaceCreateInfoKHR")
+        f.debug_struct("XcbSurfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

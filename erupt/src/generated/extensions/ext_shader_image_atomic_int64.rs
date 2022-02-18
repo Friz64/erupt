@@ -27,7 +27,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderImageAtomicInt64FeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -50,8 +50,7 @@ impl Default for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderImageAtomicInt64FeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderImageAtomicInt64FeaturesEXT")
+        f.debug_struct("PhysicalDeviceShaderImageAtomicInt64FeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_image_int64_atomics", &(self.shader_image_int64_atomics != 0))

@@ -40,7 +40,7 @@ impl<'a> crate::ExtendableFrom<'a, ExportFenceWin32HandleInfoKHRBuilder<'_>>
 for crate::vk1_0::FenceCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportFenceWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkImportFenceWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportFenceWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -69,8 +69,7 @@ impl Default for ImportFenceWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for ImportFenceWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportFenceWin32HandleInfoKHR")
+        f.debug_struct("ImportFenceWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("fence", &self.fence)
@@ -165,7 +164,7 @@ impl<'a> std::ops::DerefMut for ImportFenceWin32HandleInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportFenceWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkExportFenceWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportFenceWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -190,8 +189,7 @@ impl Default for ExportFenceWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for ExportFenceWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportFenceWin32HandleInfoKHR")
+        f.debug_struct("ExportFenceWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_attributes", &self.p_attributes)
@@ -269,7 +267,7 @@ impl<'a> std::ops::DerefMut for ExportFenceWin32HandleInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceGetWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkFenceGetWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FenceGetWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -292,8 +290,7 @@ impl Default for FenceGetWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for FenceGetWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FenceGetWin32HandleInfoKHR")
+        f.debug_struct("FenceGetWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("fence", &self.fence)

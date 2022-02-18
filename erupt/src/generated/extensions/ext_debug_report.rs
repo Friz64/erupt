@@ -63,17 +63,16 @@ impl DebugReportFlagBitsEXT {
 }
 impl std::fmt::Debug for DebugReportFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INFORMATION_EXT => "INFORMATION_EXT",
-                    &Self::WARNING_EXT => "WARNING_EXT",
-                    &Self::PERFORMANCE_WARNING_EXT => "PERFORMANCE_WARNING_EXT",
-                    &Self::ERROR_EXT => "ERROR_EXT",
-                    &Self::DEBUG_EXT => "DEBUG_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INFORMATION_EXT => "INFORMATION_EXT",
+                &Self::WARNING_EXT => "WARNING_EXT",
+                &Self::PERFORMANCE_WARNING_EXT => "PERFORMANCE_WARNING_EXT",
+                &Self::ERROR_EXT => "ERROR_EXT",
+                &Self::DEBUG_EXT => "DEBUG_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_debug_report`]
@@ -91,61 +90,50 @@ impl crate::extensions::ext_debug_report::DebugReportFlagBitsEXT {
 pub struct DebugReportObjectTypeEXT(pub i32);
 impl std::fmt::Debug for DebugReportObjectTypeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
-                    &Self::INSTANCE_EXT => "INSTANCE_EXT",
-                    &Self::PHYSICAL_DEVICE_EXT => "PHYSICAL_DEVICE_EXT",
-                    &Self::DEVICE_EXT => "DEVICE_EXT",
-                    &Self::QUEUE_EXT => "QUEUE_EXT",
-                    &Self::SEMAPHORE_EXT => "SEMAPHORE_EXT",
-                    &Self::COMMAND_BUFFER_EXT => "COMMAND_BUFFER_EXT",
-                    &Self::FENCE_EXT => "FENCE_EXT",
-                    &Self::DEVICE_MEMORY_EXT => "DEVICE_MEMORY_EXT",
-                    &Self::BUFFER_EXT => "BUFFER_EXT",
-                    &Self::IMAGE_EXT => "IMAGE_EXT",
-                    &Self::EVENT_EXT => "EVENT_EXT",
-                    &Self::QUERY_POOL_EXT => "QUERY_POOL_EXT",
-                    &Self::BUFFER_VIEW_EXT => "BUFFER_VIEW_EXT",
-                    &Self::IMAGE_VIEW_EXT => "IMAGE_VIEW_EXT",
-                    &Self::SHADER_MODULE_EXT => "SHADER_MODULE_EXT",
-                    &Self::PIPELINE_CACHE_EXT => "PIPELINE_CACHE_EXT",
-                    &Self::PIPELINE_LAYOUT_EXT => "PIPELINE_LAYOUT_EXT",
-                    &Self::RENDER_PASS_EXT => "RENDER_PASS_EXT",
-                    &Self::PIPELINE_EXT => "PIPELINE_EXT",
-                    &Self::DESCRIPTOR_SET_LAYOUT_EXT => "DESCRIPTOR_SET_LAYOUT_EXT",
-                    &Self::SAMPLER_EXT => "SAMPLER_EXT",
-                    &Self::DESCRIPTOR_POOL_EXT => "DESCRIPTOR_POOL_EXT",
-                    &Self::DESCRIPTOR_SET_EXT => "DESCRIPTOR_SET_EXT",
-                    &Self::FRAMEBUFFER_EXT => "FRAMEBUFFER_EXT",
-                    &Self::COMMAND_POOL_EXT => "COMMAND_POOL_EXT",
-                    &Self::SURFACE_KHR_EXT => "SURFACE_KHR_EXT",
-                    &Self::SWAPCHAIN_KHR_EXT => "SWAPCHAIN_KHR_EXT",
-                    &Self::DEBUG_REPORT_CALLBACK_EXT_EXT => {
-                        "DEBUG_REPORT_CALLBACK_EXT_EXT"
-                    }
-                    &Self::DISPLAY_KHR_EXT => "DISPLAY_KHR_EXT",
-                    &Self::DISPLAY_MODE_KHR_EXT => "DISPLAY_MODE_KHR_EXT",
-                    &Self::VALIDATION_CACHE_EXT_EXT => "VALIDATION_CACHE_EXT_EXT",
-                    &Self::SAMPLER_YCBCR_CONVERSION_EXT => "SAMPLER_YCBCR_CONVERSION_EXT",
-                    &Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT => {
-                        "DESCRIPTOR_UPDATE_TEMPLATE_EXT"
-                    }
-                    &Self::CU_MODULE_NVX_EXT => "CU_MODULE_NVX_EXT",
-                    &Self::CU_FUNCTION_NVX_EXT => "CU_FUNCTION_NVX_EXT",
-                    &Self::ACCELERATION_STRUCTURE_KHR_EXT => {
-                        "ACCELERATION_STRUCTURE_KHR_EXT"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_NV_EXT => {
-                        "ACCELERATION_STRUCTURE_NV_EXT"
-                    }
-                    &Self::BUFFER_COLLECTION_FUCHSIA_EXT => {
-                        "BUFFER_COLLECTION_FUCHSIA_EXT"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
+                &Self::INSTANCE_EXT => "INSTANCE_EXT",
+                &Self::PHYSICAL_DEVICE_EXT => "PHYSICAL_DEVICE_EXT",
+                &Self::DEVICE_EXT => "DEVICE_EXT",
+                &Self::QUEUE_EXT => "QUEUE_EXT",
+                &Self::SEMAPHORE_EXT => "SEMAPHORE_EXT",
+                &Self::COMMAND_BUFFER_EXT => "COMMAND_BUFFER_EXT",
+                &Self::FENCE_EXT => "FENCE_EXT",
+                &Self::DEVICE_MEMORY_EXT => "DEVICE_MEMORY_EXT",
+                &Self::BUFFER_EXT => "BUFFER_EXT",
+                &Self::IMAGE_EXT => "IMAGE_EXT",
+                &Self::EVENT_EXT => "EVENT_EXT",
+                &Self::QUERY_POOL_EXT => "QUERY_POOL_EXT",
+                &Self::BUFFER_VIEW_EXT => "BUFFER_VIEW_EXT",
+                &Self::IMAGE_VIEW_EXT => "IMAGE_VIEW_EXT",
+                &Self::SHADER_MODULE_EXT => "SHADER_MODULE_EXT",
+                &Self::PIPELINE_CACHE_EXT => "PIPELINE_CACHE_EXT",
+                &Self::PIPELINE_LAYOUT_EXT => "PIPELINE_LAYOUT_EXT",
+                &Self::RENDER_PASS_EXT => "RENDER_PASS_EXT",
+                &Self::PIPELINE_EXT => "PIPELINE_EXT",
+                &Self::DESCRIPTOR_SET_LAYOUT_EXT => "DESCRIPTOR_SET_LAYOUT_EXT",
+                &Self::SAMPLER_EXT => "SAMPLER_EXT",
+                &Self::DESCRIPTOR_POOL_EXT => "DESCRIPTOR_POOL_EXT",
+                &Self::DESCRIPTOR_SET_EXT => "DESCRIPTOR_SET_EXT",
+                &Self::FRAMEBUFFER_EXT => "FRAMEBUFFER_EXT",
+                &Self::COMMAND_POOL_EXT => "COMMAND_POOL_EXT",
+                &Self::SURFACE_KHR_EXT => "SURFACE_KHR_EXT",
+                &Self::SWAPCHAIN_KHR_EXT => "SWAPCHAIN_KHR_EXT",
+                &Self::DEBUG_REPORT_CALLBACK_EXT_EXT => "DEBUG_REPORT_CALLBACK_EXT_EXT",
+                &Self::DISPLAY_KHR_EXT => "DISPLAY_KHR_EXT",
+                &Self::DISPLAY_MODE_KHR_EXT => "DISPLAY_MODE_KHR_EXT",
+                &Self::VALIDATION_CACHE_EXT_EXT => "VALIDATION_CACHE_EXT_EXT",
+                &Self::SAMPLER_YCBCR_CONVERSION_EXT => "SAMPLER_YCBCR_CONVERSION_EXT",
+                &Self::DESCRIPTOR_UPDATE_TEMPLATE_EXT => "DESCRIPTOR_UPDATE_TEMPLATE_EXT",
+                &Self::CU_MODULE_NVX_EXT => "CU_MODULE_NVX_EXT",
+                &Self::CU_FUNCTION_NVX_EXT => "CU_FUNCTION_NVX_EXT",
+                &Self::ACCELERATION_STRUCTURE_KHR_EXT => "ACCELERATION_STRUCTURE_KHR_EXT",
+                &Self::ACCELERATION_STRUCTURE_NV_EXT => "ACCELERATION_STRUCTURE_NV_EXT",
+                &Self::BUFFER_COLLECTION_FUCHSIA_EXT => "BUFFER_COLLECTION_FUCHSIA_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_debug_report`]
@@ -234,7 +222,7 @@ impl<'a> crate::ExtendableFrom<'a, DebugReportCallbackCreateInfoEXTBuilder<'_>>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html) · Structure
 #[doc(alias = "VkDebugReportCallbackCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugReportCallbackCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -261,8 +249,7 @@ impl Default for DebugReportCallbackCreateInfoEXT {
 }
 impl std::fmt::Debug for DebugReportCallbackCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugReportCallbackCreateInfoEXT")
+        f.debug_struct("DebugReportCallbackCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

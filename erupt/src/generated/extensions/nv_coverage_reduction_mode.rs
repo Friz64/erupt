@@ -32,12 +32,11 @@ impl PipelineCoverageReductionStateCreateFlagBitsNV {
 }
 impl std::fmt::Debug for PipelineCoverageReductionStateCreateFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_coverage_reduction_mode`]
@@ -55,14 +54,13 @@ impl crate::vk1_0::StructureType {
 pub struct CoverageReductionModeNV(pub i32);
 impl std::fmt::Debug for CoverageReductionModeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::MERGE_NV => "MERGE_NV",
-                    &Self::TRUNCATE_NV => "TRUNCATE_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::MERGE_NV => "MERGE_NV",
+                &Self::TRUNCATE_NV => "TRUNCATE_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_coverage_reduction_mode`]
@@ -95,7 +93,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCoverageReductionModeFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCoverageReductionModeFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCoverageReductionModeFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -116,8 +114,7 @@ impl Default for PhysicalDeviceCoverageReductionModeFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceCoverageReductionModeFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceCoverageReductionModeFeaturesNV")
+        f.debug_struct("PhysicalDeviceCoverageReductionModeFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("coverage_reduction_mode", &(self.coverage_reduction_mode != 0))
@@ -188,7 +185,7 @@ for PhysicalDeviceCoverageReductionModeFeaturesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageReductionStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineCoverageReductionStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineCoverageReductionStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -211,8 +208,7 @@ impl Default for PipelineCoverageReductionStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineCoverageReductionStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCoverageReductionStateCreateInfoNV")
+        f.debug_struct("PipelineCoverageReductionStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -292,7 +288,7 @@ impl<'a> std::ops::DerefMut for PipelineCoverageReductionStateCreateInfoNVBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferMixedSamplesCombinationNV.html) · Structure
 #[doc(alias = "VkFramebufferMixedSamplesCombinationNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FramebufferMixedSamplesCombinationNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -319,8 +315,7 @@ impl Default for FramebufferMixedSamplesCombinationNV {
 }
 impl std::fmt::Debug for FramebufferMixedSamplesCombinationNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FramebufferMixedSamplesCombinationNV")
+        f.debug_struct("FramebufferMixedSamplesCombinationNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("coverage_reduction_mode", &self.coverage_reduction_mode)

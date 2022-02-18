@@ -29,12 +29,11 @@ impl PipelineRasterizationConservativeStateCreateFlagBitsEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_conservative_rasterization`]
@@ -53,15 +52,14 @@ impl crate::vk1_0::StructureType {
 pub struct ConservativeRasterizationModeEXT(pub i32);
 impl std::fmt::Debug for ConservativeRasterizationModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DISABLED_EXT => "DISABLED_EXT",
-                    &Self::OVERESTIMATE_EXT => "OVERESTIMATE_EXT",
-                    &Self::UNDERESTIMATE_EXT => "UNDERESTIMATE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DISABLED_EXT => "DISABLED_EXT",
+                &Self::OVERESTIMATE_EXT => "OVERESTIMATE_EXT",
+                &Self::UNDERESTIMATE_EXT => "UNDERESTIMATE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_conservative_rasterization`]
@@ -88,7 +86,7 @@ impl<
 > for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceConservativeRasterizationPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceConservativeRasterizationPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceConservativeRasterizationPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -125,8 +123,7 @@ impl Default for PhysicalDeviceConservativeRasterizationPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceConservativeRasterizationPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceConservativeRasterizationPropertiesEXT")
+        f.debug_struct("PhysicalDeviceConservativeRasterizationPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("primitive_overestimation_size", &self.primitive_overestimation_size)
@@ -315,7 +312,7 @@ for PhysicalDeviceConservativeRasterizationPropertiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationConservativeStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationConservativeStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationConservativeStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -340,8 +337,7 @@ impl Default for PipelineRasterizationConservativeStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationConservativeStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRasterizationConservativeStateCreateInfoEXT")
+        f.debug_struct("PipelineRasterizationConservativeStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

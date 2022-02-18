@@ -40,7 +40,7 @@ for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBui
 > {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSharedPresentSurfaceCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkSharedPresentSurfaceCapabilitiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SharedPresentSurfaceCapabilitiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -61,8 +61,7 @@ impl Default for SharedPresentSurfaceCapabilitiesKHR {
 }
 impl std::fmt::Debug for SharedPresentSurfaceCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SharedPresentSurfaceCapabilitiesKHR")
+        f.debug_struct("SharedPresentSurfaceCapabilitiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

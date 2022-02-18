@@ -58,13 +58,12 @@ impl ConditionalRenderingFlagBitsEXT {
 }
 impl std::fmt::Debug for ConditionalRenderingFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INVERTED_EXT => "INVERTED_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INVERTED_EXT => "INVERTED_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_conditional_rendering`]
@@ -104,7 +103,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkConditionalRenderingBeginInfoEXT.html) · Structure
 #[doc(alias = "VkConditionalRenderingBeginInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ConditionalRenderingBeginInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -129,8 +128,7 @@ impl Default for ConditionalRenderingBeginInfoEXT {
 }
 impl std::fmt::Debug for ConditionalRenderingBeginInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ConditionalRenderingBeginInfoEXT")
+        f.debug_struct("ConditionalRenderingBeginInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("buffer", &self.buffer)
@@ -211,7 +209,7 @@ impl<'a> std::ops::DerefMut for ConditionalRenderingBeginInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceConditionalRenderingInfoEXT.html) · Structure
 #[doc(alias = "VkCommandBufferInheritanceConditionalRenderingInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferInheritanceConditionalRenderingInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -232,8 +230,7 @@ impl Default for CommandBufferInheritanceConditionalRenderingInfoEXT {
 }
 impl std::fmt::Debug for CommandBufferInheritanceConditionalRenderingInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferInheritanceConditionalRenderingInfoEXT")
+        f.debug_struct("CommandBufferInheritanceConditionalRenderingInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -312,7 +309,7 @@ for CommandBufferInheritanceConditionalRenderingInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceConditionalRenderingFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceConditionalRenderingFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceConditionalRenderingFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -335,8 +332,7 @@ impl Default for PhysicalDeviceConditionalRenderingFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceConditionalRenderingFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceConditionalRenderingFeaturesEXT")
+        f.debug_struct("PhysicalDeviceConditionalRenderingFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("conditional_rendering", &(self.conditional_rendering != 0))

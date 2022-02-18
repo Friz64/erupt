@@ -36,12 +36,11 @@ impl WaylandSurfaceCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for WaylandSurfaceCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_wayland_surface`]
@@ -65,7 +64,7 @@ pub type PFN_vkGetPhysicalDeviceWaylandPresentationSupportKHR = unsafe extern "s
 ) -> crate::vk1_0::Bool32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWaylandSurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkWaylandSurfaceCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct WaylandSurfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -90,8 +89,7 @@ impl Default for WaylandSurfaceCreateInfoKHR {
 }
 impl std::fmt::Debug for WaylandSurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("WaylandSurfaceCreateInfoKHR")
+        f.debug_struct("WaylandSurfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

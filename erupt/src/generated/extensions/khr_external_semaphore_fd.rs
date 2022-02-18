@@ -35,7 +35,7 @@ pub type PFN_vkImportSemaphoreFdKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportSemaphoreFdInfoKHR.html) · Structure
 #[doc(alias = "VkImportSemaphoreFdInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportSemaphoreFdInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -62,8 +62,7 @@ impl Default for ImportSemaphoreFdInfoKHR {
 }
 impl std::fmt::Debug for ImportSemaphoreFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportSemaphoreFdInfoKHR")
+        f.debug_struct("ImportSemaphoreFdInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("semaphore", &self.semaphore)
@@ -148,7 +147,7 @@ impl<'a> std::ops::DerefMut for ImportSemaphoreFdInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreGetFdInfoKHR.html) · Structure
 #[doc(alias = "VkSemaphoreGetFdInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SemaphoreGetFdInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -171,8 +170,7 @@ impl Default for SemaphoreGetFdInfoKHR {
 }
 impl std::fmt::Debug for SemaphoreGetFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SemaphoreGetFdInfoKHR")
+        f.debug_struct("SemaphoreGetFdInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("semaphore", &self.semaphore)

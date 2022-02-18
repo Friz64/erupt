@@ -15,7 +15,7 @@ Take a look at the [`erupt` user guide](https://gitlab.com/Friz64/erupt/-/blob/m
   - [`surface`]: Create a [`SurfaceKHR`] using a [`RawWindowHandle`] (adapted from [`ash-window`])
 - Generated code distributed into multiple modules
 - Function loading ([`EntryLoader`], [`InstanceLoader`], [`DeviceLoader`])
-- Seperate `Flags` and `FlagBits` types
+- Separate `Flags` and `FlagBits` types
 - A high level `Builder` for every struct
 - Type-safe pointer chain support
 - `Default` and `Debug` implementation for every type

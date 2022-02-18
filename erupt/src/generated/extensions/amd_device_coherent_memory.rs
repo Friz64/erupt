@@ -26,7 +26,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceCoherentMemoryFeaturesAMDBuilde
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCoherentMemoryFeaturesAMD.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCoherentMemoryFeaturesAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCoherentMemoryFeaturesAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -47,8 +47,7 @@ impl Default for PhysicalDeviceCoherentMemoryFeaturesAMD {
 }
 impl std::fmt::Debug for PhysicalDeviceCoherentMemoryFeaturesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceCoherentMemoryFeaturesAMD")
+        f.debug_struct("PhysicalDeviceCoherentMemoryFeaturesAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_coherent_memory", &(self.device_coherent_memory != 0))

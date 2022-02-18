@@ -32,12 +32,11 @@ impl PipelineCompilerControlFlagBitsAMD {
 }
 impl std::fmt::Debug for PipelineCompilerControlFlagBitsAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMD>
@@ -50,7 +49,7 @@ impl<'a> crate::ExtendableFrom<'a, PipelineCompilerControlCreateInfoAMDBuilder<'
 for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCompilerControlCreateInfoAMD.html) · Structure
 #[doc(alias = "VkPipelineCompilerControlCreateInfoAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineCompilerControlCreateInfoAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -71,8 +70,7 @@ impl Default for PipelineCompilerControlCreateInfoAMD {
 }
 impl std::fmt::Debug for PipelineCompilerControlCreateInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCompilerControlCreateInfoAMD")
+        f.debug_struct("PipelineCompilerControlCreateInfoAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("compiler_control_flags", &self.compiler_control_flags)

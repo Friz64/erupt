@@ -34,7 +34,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceImageViewImageFormatInfoEXTBuil
 for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageViewImageFormatInfoEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceImageViewImageFormatInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceImageViewImageFormatInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -55,8 +55,7 @@ impl Default for PhysicalDeviceImageViewImageFormatInfoEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceImageViewImageFormatInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceImageViewImageFormatInfoEXT")
+        f.debug_struct("PhysicalDeviceImageViewImageFormatInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_view_type", &self.image_view_type)
@@ -125,7 +124,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageViewImageFormatInfoEXTBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFilterCubicImageViewImageFormatPropertiesEXT.html) · Structure
 #[doc(alias = "VkFilterCubicImageViewImageFormatPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FilterCubicImageViewImageFormatPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -148,8 +147,7 @@ impl Default for FilterCubicImageViewImageFormatPropertiesEXT {
 }
 impl std::fmt::Debug for FilterCubicImageViewImageFormatPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FilterCubicImageViewImageFormatPropertiesEXT")
+        f.debug_struct("FilterCubicImageViewImageFormatPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("filter_cubic", &(self.filter_cubic != 0))

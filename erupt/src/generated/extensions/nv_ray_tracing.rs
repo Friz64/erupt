@@ -247,15 +247,14 @@ impl crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR {
 pub struct AccelerationStructureMemoryRequirementsTypeNV(pub i32);
 impl std::fmt::Debug for AccelerationStructureMemoryRequirementsTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OBJECT_NV => "OBJECT_NV",
-                    &Self::BUILD_SCRATCH_NV => "BUILD_SCRATCH_NV",
-                    &Self::UPDATE_SCRATCH_NV => "UPDATE_SCRATCH_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OBJECT_NV => "OBJECT_NV",
+                &Self::BUILD_SCRATCH_NV => "BUILD_SCRATCH_NV",
+                &Self::UPDATE_SCRATCH_NV => "UPDATE_SCRATCH_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_ray_tracing`]
@@ -382,7 +381,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayTracingPropertiesNVBuilder<'
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingShaderGroupCreateInfoNV.html) · Structure
 #[doc(alias = "VkRayTracingShaderGroupCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingShaderGroupCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -411,8 +410,7 @@ impl Default for RayTracingShaderGroupCreateInfoNV {
 }
 impl std::fmt::Debug for RayTracingShaderGroupCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RayTracingShaderGroupCreateInfoNV")
+        f.debug_struct("RayTracingShaderGroupCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("_type", &self._type)
@@ -507,7 +505,7 @@ impl<'a> std::ops::DerefMut for RayTracingShaderGroupCreateInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineCreateInfoNV.html) · Structure
 #[doc(alias = "VkRayTracingPipelineCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingPipelineCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -544,8 +542,7 @@ impl Default for RayTracingPipelineCreateInfoNV {
 }
 impl std::fmt::Debug for RayTracingPipelineCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RayTracingPipelineCreateInfoNV")
+        f.debug_struct("RayTracingPipelineCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -664,7 +661,7 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineCreateInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryTrianglesNV.html) · Structure
 #[doc(alias = "VkGeometryTrianglesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GeometryTrianglesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -705,8 +702,7 @@ impl Default for GeometryTrianglesNV {
 }
 impl std::fmt::Debug for GeometryTrianglesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GeometryTrianglesNV")
+        f.debug_struct("GeometryTrianglesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("vertex_data", &self.vertex_data)
@@ -840,7 +836,7 @@ impl<'a> std::ops::DerefMut for GeometryTrianglesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryAABBNV.html) · Structure
 #[doc(alias = "VkGeometryAABBNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GeometryAABBNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -867,8 +863,7 @@ impl Default for GeometryAABBNV {
 }
 impl std::fmt::Debug for GeometryAABBNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GeometryAABBNV")
+        f.debug_struct("GeometryAABBNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("aabb_data", &self.aabb_data)
@@ -947,7 +942,7 @@ impl<'a> std::ops::DerefMut for GeometryAABBNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryDataNV.html) · Structure
 #[doc(alias = "VkGeometryDataNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GeometryDataNV {
     pub triangles: crate::extensions::nv_ray_tracing::GeometryTrianglesNV,
@@ -963,8 +958,7 @@ impl Default for GeometryDataNV {
 }
 impl std::fmt::Debug for GeometryDataNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GeometryDataNV")
+        f.debug_struct("GeometryDataNV")
             .field("triangles", &self.triangles)
             .field("aabbs", &self.aabbs)
             .finish()
@@ -1031,7 +1025,7 @@ impl<'a> std::ops::DerefMut for GeometryDataNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeometryNV.html) · Structure
 #[doc(alias = "VkGeometryNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GeometryNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1056,8 +1050,7 @@ impl Default for GeometryNV {
 }
 impl std::fmt::Debug for GeometryNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GeometryNV")
+        f.debug_struct("GeometryNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("geometry_type", &self.geometry_type)
@@ -1138,7 +1131,7 @@ impl<'a> std::ops::DerefMut for GeometryNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1167,8 +1160,7 @@ impl Default for AccelerationStructureInfoNV {
 }
 impl std::fmt::Debug for AccelerationStructureInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureInfoNV")
+        f.debug_struct("AccelerationStructureInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("_type", &self._type)
@@ -1261,7 +1253,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureCreateInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1284,8 +1276,7 @@ impl Default for AccelerationStructureCreateInfoNV {
 }
 impl std::fmt::Debug for AccelerationStructureCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureCreateInfoNV")
+        f.debug_struct("AccelerationStructureCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("compacted_size", &self.compacted_size)
@@ -1359,7 +1350,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureCreateInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindAccelerationStructureMemoryInfoNV.html) · Structure
 #[doc(alias = "VkBindAccelerationStructureMemoryInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindAccelerationStructureMemoryInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1388,8 +1379,7 @@ impl Default for BindAccelerationStructureMemoryInfoNV {
 }
 impl std::fmt::Debug for BindAccelerationStructureMemoryInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindAccelerationStructureMemoryInfoNV")
+        f.debug_struct("BindAccelerationStructureMemoryInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("acceleration_structure", &self.acceleration_structure)
@@ -1479,7 +1469,7 @@ impl<'a> std::ops::DerefMut for BindAccelerationStructureMemoryInfoNVBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWriteDescriptorSetAccelerationStructureNV.html) · Structure
 #[doc(alias = "VkWriteDescriptorSetAccelerationStructureNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct WriteDescriptorSetAccelerationStructureNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1502,8 +1492,7 @@ impl Default for WriteDescriptorSetAccelerationStructureNV {
 }
 impl std::fmt::Debug for WriteDescriptorSetAccelerationStructureNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("WriteDescriptorSetAccelerationStructureNV")
+        f.debug_struct("WriteDescriptorSetAccelerationStructureNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("acceleration_structure_count", &self.acceleration_structure_count)
@@ -1574,7 +1563,7 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetAccelerationStructureNVBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMemoryRequirementsInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMemoryRequirementsInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureMemoryRequirementsInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1597,8 +1586,7 @@ impl Default for AccelerationStructureMemoryRequirementsInfoNV {
 }
 impl std::fmt::Debug for AccelerationStructureMemoryRequirementsInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureMemoryRequirementsInfoNV")
+        f.debug_struct("AccelerationStructureMemoryRequirementsInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("_type", &self._type)
@@ -1682,7 +1670,7 @@ for AccelerationStructureMemoryRequirementsInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayTracingPropertiesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRayTracingPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1717,8 +1705,7 @@ impl Default for PhysicalDeviceRayTracingPropertiesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceRayTracingPropertiesNV")
+        f.debug_struct("PhysicalDeviceRayTracingPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_group_handle_size", &self.shader_group_handle_size)

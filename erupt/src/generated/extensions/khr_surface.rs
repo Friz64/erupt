@@ -48,28 +48,27 @@ impl crate::vk1_0::ObjectType {
 pub struct ColorSpaceKHR(pub i32);
 impl std::fmt::Debug for ColorSpaceKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SRGB_NONLINEAR_KHR => "SRGB_NONLINEAR_KHR",
-                    &Self::DISPLAY_P3_NONLINEAR_EXT => "DISPLAY_P3_NONLINEAR_EXT",
-                    &Self::EXTENDED_SRGB_LINEAR_EXT => "EXTENDED_SRGB_LINEAR_EXT",
-                    &Self::DISPLAY_P3_LINEAR_EXT => "DISPLAY_P3_LINEAR_EXT",
-                    &Self::DCI_P3_NONLINEAR_EXT => "DCI_P3_NONLINEAR_EXT",
-                    &Self::BT709_LINEAR_EXT => "BT709_LINEAR_EXT",
-                    &Self::BT709_NONLINEAR_EXT => "BT709_NONLINEAR_EXT",
-                    &Self::BT2020_LINEAR_EXT => "BT2020_LINEAR_EXT",
-                    &Self::HDR10_ST2084_EXT => "HDR10_ST2084_EXT",
-                    &Self::DOLBYVISION_EXT => "DOLBYVISION_EXT",
-                    &Self::HDR10_HLG_EXT => "HDR10_HLG_EXT",
-                    &Self::ADOBERGB_LINEAR_EXT => "ADOBERGB_LINEAR_EXT",
-                    &Self::ADOBERGB_NONLINEAR_EXT => "ADOBERGB_NONLINEAR_EXT",
-                    &Self::PASS_THROUGH_EXT => "PASS_THROUGH_EXT",
-                    &Self::EXTENDED_SRGB_NONLINEAR_EXT => "EXTENDED_SRGB_NONLINEAR_EXT",
-                    &Self::DISPLAY_NATIVE_AMD => "DISPLAY_NATIVE_AMD",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SRGB_NONLINEAR_KHR => "SRGB_NONLINEAR_KHR",
+                &Self::DISPLAY_P3_NONLINEAR_EXT => "DISPLAY_P3_NONLINEAR_EXT",
+                &Self::EXTENDED_SRGB_LINEAR_EXT => "EXTENDED_SRGB_LINEAR_EXT",
+                &Self::DISPLAY_P3_LINEAR_EXT => "DISPLAY_P3_LINEAR_EXT",
+                &Self::DCI_P3_NONLINEAR_EXT => "DCI_P3_NONLINEAR_EXT",
+                &Self::BT709_LINEAR_EXT => "BT709_LINEAR_EXT",
+                &Self::BT709_NONLINEAR_EXT => "BT709_NONLINEAR_EXT",
+                &Self::BT2020_LINEAR_EXT => "BT2020_LINEAR_EXT",
+                &Self::HDR10_ST2084_EXT => "HDR10_ST2084_EXT",
+                &Self::DOLBYVISION_EXT => "DOLBYVISION_EXT",
+                &Self::HDR10_HLG_EXT => "HDR10_HLG_EXT",
+                &Self::ADOBERGB_LINEAR_EXT => "ADOBERGB_LINEAR_EXT",
+                &Self::ADOBERGB_NONLINEAR_EXT => "ADOBERGB_NONLINEAR_EXT",
+                &Self::PASS_THROUGH_EXT => "PASS_THROUGH_EXT",
+                &Self::EXTENDED_SRGB_NONLINEAR_EXT => "EXTENDED_SRGB_NONLINEAR_EXT",
+                &Self::DISPLAY_NATIVE_AMD => "DISPLAY_NATIVE_AMD",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_surface`]
@@ -102,16 +101,15 @@ impl CompositeAlphaFlagBitsKHR {
 }
 impl std::fmt::Debug for CompositeAlphaFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OPAQUE_KHR => "OPAQUE_KHR",
-                    &Self::PRE_MULTIPLIED_KHR => "PRE_MULTIPLIED_KHR",
-                    &Self::POST_MULTIPLIED_KHR => "POST_MULTIPLIED_KHR",
-                    &Self::INHERIT_KHR => "INHERIT_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OPAQUE_KHR => "OPAQUE_KHR",
+                &Self::PRE_MULTIPLIED_KHR => "PRE_MULTIPLIED_KHR",
+                &Self::POST_MULTIPLIED_KHR => "POST_MULTIPLIED_KHR",
+                &Self::INHERIT_KHR => "INHERIT_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_surface`]
@@ -128,20 +126,17 @@ impl crate::extensions::khr_surface::CompositeAlphaFlagBitsKHR {
 pub struct PresentModeKHR(pub i32);
 impl std::fmt::Debug for PresentModeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::IMMEDIATE_KHR => "IMMEDIATE_KHR",
-                    &Self::MAILBOX_KHR => "MAILBOX_KHR",
-                    &Self::FIFO_KHR => "FIFO_KHR",
-                    &Self::FIFO_RELAXED_KHR => "FIFO_RELAXED_KHR",
-                    &Self::SHARED_DEMAND_REFRESH_KHR => "SHARED_DEMAND_REFRESH_KHR",
-                    &Self::SHARED_CONTINUOUS_REFRESH_KHR => {
-                        "SHARED_CONTINUOUS_REFRESH_KHR"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::IMMEDIATE_KHR => "IMMEDIATE_KHR",
+                &Self::MAILBOX_KHR => "MAILBOX_KHR",
+                &Self::FIFO_KHR => "FIFO_KHR",
+                &Self::FIFO_RELAXED_KHR => "FIFO_RELAXED_KHR",
+                &Self::SHARED_DEMAND_REFRESH_KHR => "SHARED_DEMAND_REFRESH_KHR",
+                &Self::SHARED_CONTINUOUS_REFRESH_KHR => "SHARED_CONTINUOUS_REFRESH_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_surface`]
@@ -183,27 +178,26 @@ impl SurfaceTransformFlagBitsKHR {
 }
 impl std::fmt::Debug for SurfaceTransformFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::IDENTITY_KHR => "IDENTITY_KHR",
-                    &Self::ROTATE_90_KHR => "ROTATE_90_KHR",
-                    &Self::ROTATE_180_KHR => "ROTATE_180_KHR",
-                    &Self::ROTATE_270_KHR => "ROTATE_270_KHR",
-                    &Self::HORIZONTAL_MIRROR_KHR => "HORIZONTAL_MIRROR_KHR",
-                    &Self::HORIZONTAL_MIRROR_ROTATE_90_KHR => {
-                        "HORIZONTAL_MIRROR_ROTATE_90_KHR"
-                    }
-                    &Self::HORIZONTAL_MIRROR_ROTATE_180_KHR => {
-                        "HORIZONTAL_MIRROR_ROTATE_180_KHR"
-                    }
-                    &Self::HORIZONTAL_MIRROR_ROTATE_270_KHR => {
-                        "HORIZONTAL_MIRROR_ROTATE_270_KHR"
-                    }
-                    &Self::INHERIT_KHR => "INHERIT_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::IDENTITY_KHR => "IDENTITY_KHR",
+                &Self::ROTATE_90_KHR => "ROTATE_90_KHR",
+                &Self::ROTATE_180_KHR => "ROTATE_180_KHR",
+                &Self::ROTATE_270_KHR => "ROTATE_270_KHR",
+                &Self::HORIZONTAL_MIRROR_KHR => "HORIZONTAL_MIRROR_KHR",
+                &Self::HORIZONTAL_MIRROR_ROTATE_90_KHR => {
+                    "HORIZONTAL_MIRROR_ROTATE_90_KHR"
+                }
+                &Self::HORIZONTAL_MIRROR_ROTATE_180_KHR => {
+                    "HORIZONTAL_MIRROR_ROTATE_180_KHR"
+                }
+                &Self::HORIZONTAL_MIRROR_ROTATE_270_KHR => {
+                    "HORIZONTAL_MIRROR_ROTATE_270_KHR"
+                }
+                &Self::INHERIT_KHR => "INHERIT_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_surface`]
@@ -258,7 +252,7 @@ pub type PFN_vkGetPhysicalDeviceSurfacePresentModesKHR = unsafe extern "system" 
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkSurfaceCapabilitiesKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SurfaceCapabilitiesKHR {
     pub min_image_count: u32,
@@ -290,8 +284,7 @@ impl Default for SurfaceCapabilitiesKHR {
 }
 impl std::fmt::Debug for SurfaceCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceCapabilitiesKHR")
+        f.debug_struct("SurfaceCapabilitiesKHR")
             .field("min_image_count", &self.min_image_count)
             .field("max_image_count", &self.max_image_count)
             .field("current_extent", &self.current_extent)
@@ -423,7 +416,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilitiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormatKHR.html) · Structure
 #[doc(alias = "VkSurfaceFormatKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SurfaceFormatKHR {
     pub format: crate::vk1_0::Format,
@@ -439,8 +432,7 @@ impl Default for SurfaceFormatKHR {
 }
 impl std::fmt::Debug for SurfaceFormatKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceFormatKHR")
+        f.debug_struct("SurfaceFormatKHR")
             .field("format", &self.format)
             .field("color_space", &self.color_space)
             .finish()

@@ -31,10 +31,6 @@ pub type PrivateDataSlotCreateFlagsEXT = crate::vk1_3::PrivateDataSlotCreateFlag
 #[doc(alias = "VkPrivateDataSlotEXT")]
 #[allow(non_camel_case_types)]
 pub type PrivateDataSlotEXT = crate::vk1_3::PrivateDataSlot;
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPrivateDataSlotCreateFlagBitsEXT.html) · Alias
-#[doc(alias = "VkPrivateDataSlotCreateFlagBitsEXT")]
-#[allow(non_camel_case_types)]
-pub type PrivateDataSlotCreateFlagBitsEXT = crate::vk1_3::PrivateDataSlotCreateFlagBits;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDevicePrivateDataCreateInfoEXT.html) · Alias
 #[doc(alias = "VkDevicePrivateDataCreateInfoEXT")]
 #[allow(non_camel_case_types)]

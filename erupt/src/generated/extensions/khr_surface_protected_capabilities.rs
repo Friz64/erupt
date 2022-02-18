@@ -21,7 +21,7 @@ for crate::extensions::khr_get_surface_capabilities2::SurfaceCapabilities2KHRBui
 > {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceProtectedCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkSurfaceProtectedCapabilitiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceProtectedCapabilitiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -42,8 +42,7 @@ impl Default for SurfaceProtectedCapabilitiesKHR {
 }
 impl std::fmt::Debug for SurfaceProtectedCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceProtectedCapabilitiesKHR")
+        f.debug_struct("SurfaceProtectedCapabilitiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("supports_protected", &(self.supports_protected != 0))

@@ -28,12 +28,11 @@ impl AccelerationStructureMotionInfoFlagBitsNV {
 }
 impl std::fmt::Debug for AccelerationStructureMotionInfoFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -57,12 +56,11 @@ impl AccelerationStructureMotionInstanceFlagBitsNV {
 }
 impl std::fmt::Debug for AccelerationStructureMotionInstanceFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_ray_tracing_motion_blur`]
@@ -94,15 +92,14 @@ impl crate::extensions::khr_acceleration_structure::AccelerationStructureCreateF
 pub struct AccelerationStructureMotionInstanceTypeNV(pub i32);
 impl std::fmt::Debug for AccelerationStructureMotionInstanceTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::STATIC_NV => "STATIC_NV",
-                    &Self::MATRIX_MOTION_NV => "MATRIX_MOTION_NV",
-                    &Self::SRT_MOTION_NV => "SRT_MOTION_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::STATIC_NV => "STATIC_NV",
+                &Self::MATRIX_MOTION_NV => "MATRIX_MOTION_NV",
+                &Self::SRT_MOTION_NV => "SRT_MOTION_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_ray_tracing_motion_blur`]
@@ -146,7 +143,7 @@ for crate::extensions::khr_acceleration_structure::AccelerationStructureCreateIn
 > {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingMotionBlurFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayTracingMotionBlurFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRayTracingMotionBlurFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -169,8 +166,7 @@ impl Default for PhysicalDeviceRayTracingMotionBlurFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingMotionBlurFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceRayTracingMotionBlurFeaturesNV")
+        f.debug_struct("PhysicalDeviceRayTracingMotionBlurFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ray_tracing_motion_blur", &(self.ray_tracing_motion_blur != 0))
@@ -256,7 +252,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingMotionBlurFeaturesNVBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureGeometryMotionTrianglesDataNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureGeometryMotionTrianglesDataNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureGeometryMotionTrianglesDataNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -277,8 +273,7 @@ impl Default for AccelerationStructureGeometryMotionTrianglesDataNV {
 }
 impl std::fmt::Debug for AccelerationStructureGeometryMotionTrianglesDataNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureGeometryMotionTrianglesDataNV")
+        f.debug_struct("AccelerationStructureGeometryMotionTrianglesDataNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("vertex_data", &self.vertex_data)
@@ -354,7 +349,7 @@ for AccelerationStructureGeometryMotionTrianglesDataNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInfoNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMotionInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureMotionInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -377,8 +372,7 @@ impl Default for AccelerationStructureMotionInfoNV {
 }
 impl std::fmt::Debug for AccelerationStructureMotionInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureMotionInfoNV")
+        f.debug_struct("AccelerationStructureMotionInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_instances", &self.max_instances)
@@ -452,7 +446,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureMotionInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSRTDataNV.html) · Structure
 #[doc(alias = "VkSRTDataNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SRTDataNV {
     pub sx: std::os::raw::c_float,
@@ -496,8 +490,7 @@ impl Default for SRTDataNV {
 }
 impl std::fmt::Debug for SRTDataNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SRTDataNV")
+        f.debug_struct("SRTDataNV")
             .field("sx", &self.sx)
             .field("a", &self.a)
             .field("b", &self.b)
@@ -656,7 +649,7 @@ impl<'a> std::ops::DerefMut for SRTDataNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureSRTMotionInstanceNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureSRTMotionInstanceNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureSRTMotionInstanceNV {
     pub transform_t0: crate::extensions::nv_ray_tracing_motion_blur::SRTDataNV,
@@ -678,8 +671,7 @@ impl Default for AccelerationStructureSRTMotionInstanceNV {
 }
 impl std::fmt::Debug for AccelerationStructureSRTMotionInstanceNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureSRTMotionInstanceNV")
+        f.debug_struct("AccelerationStructureSRTMotionInstanceNV")
             .field("transform_t0", &self.transform_t0)
             .field("transform_t1", &self.transform_t1)
             .field(
@@ -825,7 +817,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureSRTMotionInstanceNVBuilder<
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMatrixMotionInstanceNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMatrixMotionInstanceNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureMatrixMotionInstanceNV {
     pub transform_t0: crate::extensions::khr_acceleration_structure::TransformMatrixKHR,
@@ -847,8 +839,7 @@ impl Default for AccelerationStructureMatrixMotionInstanceNV {
 }
 impl std::fmt::Debug for AccelerationStructureMatrixMotionInstanceNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureMatrixMotionInstanceNV")
+        f.debug_struct("AccelerationStructureMatrixMotionInstanceNV")
             .field("transform_t0", &self.transform_t0)
             .field("transform_t1", &self.transform_t1)
             .field(
@@ -998,7 +989,7 @@ impl<'a> std::ops::DerefMut for AccelerationStructureMatrixMotionInstanceNVBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceDataNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMotionInstanceDataNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub union AccelerationStructureMotionInstanceDataNV {
     pub static_instance: crate::extensions::khr_acceleration_structure::AccelerationStructureInstanceKHR,
@@ -1017,7 +1008,7 @@ impl std::fmt::Debug for AccelerationStructureMotionInstanceDataNV {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccelerationStructureMotionInstanceNV.html) · Structure
 #[doc(alias = "VkAccelerationStructureMotionInstanceNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AccelerationStructureMotionInstanceNV {
     pub _type: crate::extensions::nv_ray_tracing_motion_blur::AccelerationStructureMotionInstanceTypeNV,
@@ -1035,8 +1026,7 @@ impl Default for AccelerationStructureMotionInstanceNV {
 }
 impl std::fmt::Debug for AccelerationStructureMotionInstanceNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AccelerationStructureMotionInstanceNV")
+        f.debug_struct("AccelerationStructureMotionInstanceNV")
             .field("_type", &self._type)
             .field("flags", &self.flags)
             .field("data", &self.data)

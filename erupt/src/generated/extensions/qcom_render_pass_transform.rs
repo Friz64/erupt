@@ -32,7 +32,7 @@ impl<'a> crate::ExtendableFrom<'a, RenderPassTransformBeginInfoQCOMBuilder<'_>>
 for crate::vk1_0::RenderPassBeginInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassTransformBeginInfoQCOM.html) · Structure
 #[doc(alias = "VkRenderPassTransformBeginInfoQCOM")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassTransformBeginInfoQCOM {
     pub s_type: crate::vk1_0::StructureType,
@@ -53,8 +53,7 @@ impl Default for RenderPassTransformBeginInfoQCOM {
 }
 impl std::fmt::Debug for RenderPassTransformBeginInfoQCOM {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderPassTransformBeginInfoQCOM")
+        f.debug_struct("RenderPassTransformBeginInfoQCOM")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("transform", &self.transform)
@@ -121,7 +120,7 @@ impl<'a> std::ops::DerefMut for RenderPassTransformBeginInfoQCOMBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceRenderPassTransformInfoQCOM.html) · Structure
 #[doc(alias = "VkCommandBufferInheritanceRenderPassTransformInfoQCOM")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferInheritanceRenderPassTransformInfoQCOM {
     pub s_type: crate::vk1_0::StructureType,
@@ -144,8 +143,7 @@ impl Default for CommandBufferInheritanceRenderPassTransformInfoQCOM {
 }
 impl std::fmt::Debug for CommandBufferInheritanceRenderPassTransformInfoQCOM {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferInheritanceRenderPassTransformInfoQCOM")
+        f.debug_struct("CommandBufferInheritanceRenderPassTransformInfoQCOM")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("transform", &self.transform)

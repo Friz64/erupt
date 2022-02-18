@@ -171,12 +171,11 @@ impl DescriptorUpdateTemplateCreateFlagBits {
 }
 impl std::fmt::Debug for DescriptorUpdateTemplateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -200,12 +199,11 @@ impl CommandPoolTrimFlagBits {
 }
 impl std::fmt::Debug for CommandPoolTrimFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -407,14 +405,13 @@ impl crate::vk1_0::ObjectType {
 pub struct DescriptorUpdateTemplateType(pub i32);
 impl std::fmt::Debug for DescriptorUpdateTemplateType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DESCRIPTOR_SET => "DESCRIPTOR_SET",
-                    &Self::PUSH_DESCRIPTORS_KHR => "PUSH_DESCRIPTORS_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DESCRIPTOR_SET => "DESCRIPTOR_SET",
+                &Self::PUSH_DESCRIPTORS_KHR => "PUSH_DESCRIPTORS_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -428,14 +425,13 @@ impl crate::vk1_1::DescriptorUpdateTemplateType {
 pub struct PointClippingBehavior(pub i32);
 impl std::fmt::Debug for PointClippingBehavior {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ALL_CLIP_PLANES => "ALL_CLIP_PLANES",
-                    &Self::USER_CLIP_PLANES_ONLY => "USER_CLIP_PLANES_ONLY",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ALL_CLIP_PLANES => "ALL_CLIP_PLANES",
+                &Self::USER_CLIP_PLANES_ONLY => "USER_CLIP_PLANES_ONLY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -467,10 +463,9 @@ bitflags::bitflags! {
     OPAQUE_WIN32_KHR = ExternalMemoryHandleTypeFlagBits::OPAQUE_WIN32_KHR.0; const
     OPAQUE_WIN32_KMT_KHR = ExternalMemoryHandleTypeFlagBits::OPAQUE_WIN32_KMT_KHR.0;
     const D3D11_TEXTURE_KHR = ExternalMemoryHandleTypeFlagBits::D3D11_TEXTURE_KHR.0;
-    const D3D11_TEXTURE_KMT_KHR =
-    ExternalMemoryHandleTypeFlagBits::D3D11_TEXTURE_KMT_KHR.0; const D3D12_HEAP_KHR =
-    ExternalMemoryHandleTypeFlagBits::D3D12_HEAP_KHR.0; const D3D12_RESOURCE_KHR =
-    ExternalMemoryHandleTypeFlagBits::D3D12_RESOURCE_KHR.0; }
+    const D3D11_TEXTURE_KMT_KHR = ExternalMemoryHandleTypeFlagBits::D3D11_TEXTURE_KMT_KHR
+    .0; const D3D12_HEAP_KHR = ExternalMemoryHandleTypeFlagBits::D3D12_HEAP_KHR.0; const
+    D3D12_RESOURCE_KHR = ExternalMemoryHandleTypeFlagBits::D3D12_RESOURCE_KHR.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryHandleTypeFlagBits.html) · Bits enum of [`ExternalMemoryHandleTypeFlags`]
 #[doc(alias = "VkExternalMemoryHandleTypeFlagBits")]
@@ -486,29 +481,26 @@ impl ExternalMemoryHandleTypeFlagBits {
 }
 impl std::fmt::Debug for ExternalMemoryHandleTypeFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OPAQUE_FD => "OPAQUE_FD",
-                    &Self::OPAQUE_WIN32 => "OPAQUE_WIN32",
-                    &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
-                    &Self::D3D11_TEXTURE => "D3D11_TEXTURE",
-                    &Self::D3D11_TEXTURE_KMT => "D3D11_TEXTURE_KMT",
-                    &Self::D3D12_HEAP => "D3D12_HEAP",
-                    &Self::D3D12_RESOURCE => "D3D12_RESOURCE",
-                    &Self::DMA_BUF_EXT => "DMA_BUF_EXT",
-                    &Self::ANDROID_HARDWARE_BUFFER_ANDROID => {
-                        "ANDROID_HARDWARE_BUFFER_ANDROID"
-                    }
-                    &Self::HOST_ALLOCATION_EXT => "HOST_ALLOCATION_EXT",
-                    &Self::HOST_MAPPED_FOREIGN_MEMORY_EXT => {
-                        "HOST_MAPPED_FOREIGN_MEMORY_EXT"
-                    }
-                    &Self::ZIRCON_VMO_FUCHSIA => "ZIRCON_VMO_FUCHSIA",
-                    &Self::RDMA_ADDRESS_NV => "RDMA_ADDRESS_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OPAQUE_FD => "OPAQUE_FD",
+                &Self::OPAQUE_WIN32 => "OPAQUE_WIN32",
+                &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
+                &Self::D3D11_TEXTURE => "D3D11_TEXTURE",
+                &Self::D3D11_TEXTURE_KMT => "D3D11_TEXTURE_KMT",
+                &Self::D3D12_HEAP => "D3D12_HEAP",
+                &Self::D3D12_RESOURCE => "D3D12_RESOURCE",
+                &Self::DMA_BUF_EXT => "DMA_BUF_EXT",
+                &Self::ANDROID_HARDWARE_BUFFER_ANDROID => {
+                    "ANDROID_HARDWARE_BUFFER_ANDROID"
+                }
+                &Self::HOST_ALLOCATION_EXT => "HOST_ALLOCATION_EXT",
+                &Self::HOST_MAPPED_FOREIGN_MEMORY_EXT => "HOST_MAPPED_FOREIGN_MEMORY_EXT",
+                &Self::ZIRCON_VMO_FUCHSIA => "ZIRCON_VMO_FUCHSIA",
+                &Self::RDMA_ADDRESS_NV => "RDMA_ADDRESS_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -547,15 +539,14 @@ impl ExternalMemoryFeatureFlagBits {
 }
 impl std::fmt::Debug for ExternalMemoryFeatureFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEDICATED_ONLY => "DEDICATED_ONLY",
-                    &Self::EXPORTABLE => "EXPORTABLE",
-                    &Self::IMPORTABLE => "IMPORTABLE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEDICATED_ONLY => "DEDICATED_ONLY",
+                &Self::EXPORTABLE => "EXPORTABLE",
+                &Self::IMPORTABLE => "IMPORTABLE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -596,18 +587,17 @@ impl ExternalSemaphoreHandleTypeFlagBits {
 }
 impl std::fmt::Debug for ExternalSemaphoreHandleTypeFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OPAQUE_FD => "OPAQUE_FD",
-                    &Self::OPAQUE_WIN32 => "OPAQUE_WIN32",
-                    &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
-                    &Self::D3D12_FENCE => "D3D12_FENCE",
-                    &Self::SYNC_FD => "SYNC_FD",
-                    &Self::ZIRCON_EVENT_FUCHSIA => "ZIRCON_EVENT_FUCHSIA",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OPAQUE_FD => "OPAQUE_FD",
+                &Self::OPAQUE_WIN32 => "OPAQUE_WIN32",
+                &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
+                &Self::D3D12_FENCE => "D3D12_FENCE",
+                &Self::SYNC_FD => "SYNC_FD",
+                &Self::ZIRCON_EVENT_FUCHSIA => "ZIRCON_EVENT_FUCHSIA",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -643,14 +633,13 @@ impl ExternalSemaphoreFeatureFlagBits {
 }
 impl std::fmt::Debug for ExternalSemaphoreFeatureFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::EXPORTABLE => "EXPORTABLE",
-                    &Self::IMPORTABLE => "IMPORTABLE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::EXPORTABLE => "EXPORTABLE",
+                &Self::IMPORTABLE => "IMPORTABLE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -680,13 +669,12 @@ impl SemaphoreImportFlagBits {
 }
 impl std::fmt::Debug for SemaphoreImportFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::TEMPORARY => "TEMPORARY",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::TEMPORARY => "TEMPORARY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -721,16 +709,15 @@ impl ExternalFenceHandleTypeFlagBits {
 }
 impl std::fmt::Debug for ExternalFenceHandleTypeFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OPAQUE_FD => "OPAQUE_FD",
-                    &Self::OPAQUE_WIN32 => "OPAQUE_WIN32",
-                    &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
-                    &Self::SYNC_FD => "SYNC_FD",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OPAQUE_FD => "OPAQUE_FD",
+                &Self::OPAQUE_WIN32 => "OPAQUE_WIN32",
+                &Self::OPAQUE_WIN32_KMT => "OPAQUE_WIN32_KMT",
+                &Self::SYNC_FD => "SYNC_FD",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -764,14 +751,13 @@ impl ExternalFenceFeatureFlagBits {
 }
 impl std::fmt::Debug for ExternalFenceFeatureFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::EXPORTABLE => "EXPORTABLE",
-                    &Self::IMPORTABLE => "IMPORTABLE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::EXPORTABLE => "EXPORTABLE",
+                &Self::IMPORTABLE => "IMPORTABLE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -800,13 +786,12 @@ impl FenceImportFlagBits {
 }
 impl std::fmt::Debug for FenceImportFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::TEMPORARY => "TEMPORARY",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::TEMPORARY => "TEMPORARY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -841,16 +826,15 @@ impl PeerMemoryFeatureFlagBits {
 }
 impl std::fmt::Debug for PeerMemoryFeatureFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::COPY_SRC => "COPY_SRC",
-                    &Self::COPY_DST => "COPY_DST",
-                    &Self::GENERIC_SRC => "GENERIC_SRC",
-                    &Self::GENERIC_DST => "GENERIC_DST",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::COPY_SRC => "COPY_SRC",
+                &Self::COPY_DST => "COPY_DST",
+                &Self::GENERIC_SRC => "GENERIC_SRC",
+                &Self::GENERIC_DST => "GENERIC_DST",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -886,17 +870,14 @@ impl MemoryAllocateFlagBits {
 }
 impl std::fmt::Debug for MemoryAllocateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEVICE_MASK => "DEVICE_MASK",
-                    &Self::DEVICE_ADDRESS => "DEVICE_ADDRESS",
-                    &Self::DEVICE_ADDRESS_CAPTURE_REPLAY => {
-                        "DEVICE_ADDRESS_CAPTURE_REPLAY"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEVICE_MASK => "DEVICE_MASK",
+                &Self::DEVICE_ADDRESS => "DEVICE_ADDRESS",
+                &Self::DEVICE_ADDRESS_CAPTURE_REPLAY => "DEVICE_ADDRESS_CAPTURE_REPLAY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -909,9 +890,8 @@ bitflags::bitflags! {
     #[doc(alias = "VkSubgroupFeatureFlags")] #[derive(Default)] #[repr(transparent)] pub
     struct SubgroupFeatureFlags : u32 { const BASIC = SubgroupFeatureFlagBits::BASIC.0;
     const VOTE = SubgroupFeatureFlagBits::VOTE.0; const ARITHMETIC =
-    SubgroupFeatureFlagBits::ARITHMETIC.0; const BALLOT =
-    SubgroupFeatureFlagBits::BALLOT.0; const SHUFFLE =
-    SubgroupFeatureFlagBits::SHUFFLE.0; const SHUFFLE_RELATIVE =
+    SubgroupFeatureFlagBits::ARITHMETIC.0; const BALLOT = SubgroupFeatureFlagBits::BALLOT
+    .0; const SHUFFLE = SubgroupFeatureFlagBits::SHUFFLE.0; const SHUFFLE_RELATIVE =
     SubgroupFeatureFlagBits::SHUFFLE_RELATIVE.0; const CLUSTERED =
     SubgroupFeatureFlagBits::CLUSTERED.0; const QUAD = SubgroupFeatureFlagBits::QUAD.0;
     const PARTITIONED_NV = SubgroupFeatureFlagBits::PARTITIONED_NV.0; }
@@ -930,21 +910,20 @@ impl SubgroupFeatureFlagBits {
 }
 impl std::fmt::Debug for SubgroupFeatureFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::BASIC => "BASIC",
-                    &Self::VOTE => "VOTE",
-                    &Self::ARITHMETIC => "ARITHMETIC",
-                    &Self::BALLOT => "BALLOT",
-                    &Self::SHUFFLE => "SHUFFLE",
-                    &Self::SHUFFLE_RELATIVE => "SHUFFLE_RELATIVE",
-                    &Self::CLUSTERED => "CLUSTERED",
-                    &Self::QUAD => "QUAD",
-                    &Self::PARTITIONED_NV => "PARTITIONED_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::BASIC => "BASIC",
+                &Self::VOTE => "VOTE",
+                &Self::ARITHMETIC => "ARITHMETIC",
+                &Self::BALLOT => "BALLOT",
+                &Self::SHUFFLE => "SHUFFLE",
+                &Self::SHUFFLE_RELATIVE => "SHUFFLE_RELATIVE",
+                &Self::CLUSTERED => "CLUSTERED",
+                &Self::QUAD => "QUAD",
+                &Self::PARTITIONED_NV => "PARTITIONED_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -965,14 +944,13 @@ impl crate::vk1_1::SubgroupFeatureFlagBits {
 pub struct TessellationDomainOrigin(pub i32);
 impl std::fmt::Debug for TessellationDomainOrigin {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UPPER_LEFT => "UPPER_LEFT",
-                    &Self::LOWER_LEFT => "LOWER_LEFT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UPPER_LEFT => "UPPER_LEFT",
+                &Self::LOWER_LEFT => "LOWER_LEFT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -987,17 +965,16 @@ impl crate::vk1_1::TessellationDomainOrigin {
 pub struct SamplerYcbcrModelConversion(pub i32);
 impl std::fmt::Debug for SamplerYcbcrModelConversion {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::RGB_IDENTITY => "RGB_IDENTITY",
-                    &Self::YCBCR_IDENTITY => "YCBCR_IDENTITY",
-                    &Self::YCBCR_709 => "YCBCR_709",
-                    &Self::YCBCR_601 => "YCBCR_601",
-                    &Self::YCBCR_2020 => "YCBCR_2020",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::RGB_IDENTITY => "RGB_IDENTITY",
+                &Self::YCBCR_IDENTITY => "YCBCR_IDENTITY",
+                &Self::YCBCR_709 => "YCBCR_709",
+                &Self::YCBCR_601 => "YCBCR_601",
+                &Self::YCBCR_2020 => "YCBCR_2020",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -1015,14 +992,13 @@ impl crate::vk1_1::SamplerYcbcrModelConversion {
 pub struct SamplerYcbcrRange(pub i32);
 impl std::fmt::Debug for SamplerYcbcrRange {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ITU_FULL => "ITU_FULL",
-                    &Self::ITU_NARROW => "ITU_NARROW",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ITU_FULL => "ITU_FULL",
+                &Self::ITU_NARROW => "ITU_NARROW",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -1037,14 +1013,13 @@ impl crate::vk1_1::SamplerYcbcrRange {
 pub struct ChromaLocation(pub i32);
 impl std::fmt::Debug for ChromaLocation {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::COSITED_EVEN => "COSITED_EVEN",
-                    &Self::MIDPOINT => "MIDPOINT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::COSITED_EVEN => "COSITED_EVEN",
+                &Self::MIDPOINT => "MIDPOINT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_1`]
@@ -1363,7 +1338,7 @@ impl<'a> crate::ExtendableFrom<'a, ProtectedSubmitInfoBuilder<'_>>
 for crate::vk1_0::SubmitInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFeatures2.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFeatures2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFeatures2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -1384,8 +1359,7 @@ impl Default for PhysicalDeviceFeatures2 {
 }
 impl std::fmt::Debug for PhysicalDeviceFeatures2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFeatures2")
+        f.debug_struct("PhysicalDeviceFeatures2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("features", &self.features)
@@ -1472,7 +1446,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFeatures2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProperties2.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProperties2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceProperties2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -1493,8 +1467,7 @@ impl Default for PhysicalDeviceProperties2 {
 }
 impl std::fmt::Debug for PhysicalDeviceProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceProperties2")
+        f.debug_struct("PhysicalDeviceProperties2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("properties", &self.properties)
@@ -1582,7 +1555,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProperties2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties2.html) · Structure
 #[doc(alias = "VkFormatProperties2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FormatProperties2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -1603,8 +1576,7 @@ impl Default for FormatProperties2 {
 }
 impl std::fmt::Debug for FormatProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FormatProperties2")
+        f.debug_struct("FormatProperties2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format_properties", &self.format_properties)
@@ -1668,7 +1640,7 @@ impl<'a> std::ops::DerefMut for FormatProperties2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatProperties2.html) · Structure
 #[doc(alias = "VkImageFormatProperties2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageFormatProperties2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -1689,8 +1661,7 @@ impl Default for ImageFormatProperties2 {
 }
 impl std::fmt::Debug for ImageFormatProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageFormatProperties2")
+        f.debug_struct("ImageFormatProperties2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_format_properties", &self.image_format_properties)
@@ -1764,7 +1735,7 @@ impl<'a> std::ops::DerefMut for ImageFormatProperties2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageFormatInfo2.html) · Structure
 #[doc(alias = "VkPhysicalDeviceImageFormatInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceImageFormatInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -1793,8 +1764,7 @@ impl Default for PhysicalDeviceImageFormatInfo2 {
 }
 impl std::fmt::Debug for PhysicalDeviceImageFormatInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceImageFormatInfo2")
+        f.debug_struct("PhysicalDeviceImageFormatInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format", &self.format)
@@ -1890,7 +1860,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageFormatInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyProperties2.html) · Structure
 #[doc(alias = "VkQueueFamilyProperties2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueueFamilyProperties2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -1911,8 +1881,7 @@ impl Default for QueueFamilyProperties2 {
 }
 impl std::fmt::Debug for QueueFamilyProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueueFamilyProperties2")
+        f.debug_struct("QueueFamilyProperties2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("queue_family_properties", &self.queue_family_properties)
@@ -1976,7 +1945,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyProperties2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMemoryProperties2.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMemoryProperties2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMemoryProperties2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -1997,8 +1966,7 @@ impl Default for PhysicalDeviceMemoryProperties2 {
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMemoryProperties2")
+        f.debug_struct("PhysicalDeviceMemoryProperties2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_properties", &self.memory_properties)
@@ -2065,7 +2033,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryProperties2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageFormatProperties2.html) · Structure
 #[doc(alias = "VkSparseImageFormatProperties2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SparseImageFormatProperties2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -2086,8 +2054,7 @@ impl Default for SparseImageFormatProperties2 {
 }
 impl std::fmt::Debug for SparseImageFormatProperties2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseImageFormatProperties2")
+        f.debug_struct("SparseImageFormatProperties2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("properties", &self.properties)
@@ -2151,7 +2118,7 @@ impl<'a> std::ops::DerefMut for SparseImageFormatProperties2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSparseImageFormatInfo2.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSparseImageFormatInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSparseImageFormatInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -2180,8 +2147,7 @@ impl Default for PhysicalDeviceSparseImageFormatInfo2 {
 }
 impl std::fmt::Debug for PhysicalDeviceSparseImageFormatInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSparseImageFormatInfo2")
+        f.debug_struct("PhysicalDeviceSparseImageFormatInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format", &self.format)
@@ -2273,7 +2239,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSparseImageFormatInfo2Builder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVariablePointersFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVariablePointersFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVariablePointersFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -2296,8 +2262,7 @@ impl Default for PhysicalDeviceVariablePointersFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceVariablePointersFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceVariablePointersFeatures")
+        f.debug_struct("PhysicalDeviceVariablePointersFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -2374,7 +2339,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVariablePointersFeaturesBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryProperties.html) · Structure
 #[doc(alias = "VkExternalMemoryProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ExternalMemoryProperties {
     pub external_memory_features: crate::vk1_1::ExternalMemoryFeatureFlags,
@@ -2392,8 +2357,7 @@ impl Default for ExternalMemoryProperties {
 }
 impl std::fmt::Debug for ExternalMemoryProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalMemoryProperties")
+        f.debug_struct("ExternalMemoryProperties")
             .field("external_memory_features", &self.external_memory_features)
             .field(
                 "export_from_imported_handle_types",
@@ -2478,7 +2442,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalImageFormatInfo.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExternalImageFormatInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExternalImageFormatInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -2499,8 +2463,7 @@ impl Default for PhysicalDeviceExternalImageFormatInfo {
 }
 impl std::fmt::Debug for PhysicalDeviceExternalImageFormatInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceExternalImageFormatInfo")
+        f.debug_struct("PhysicalDeviceExternalImageFormatInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -2567,7 +2530,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalImageFormatInfoBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalImageFormatProperties.html) · Structure
 #[doc(alias = "VkExternalImageFormatProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalImageFormatProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -2588,8 +2551,7 @@ impl Default for ExternalImageFormatProperties {
 }
 impl std::fmt::Debug for ExternalImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalImageFormatProperties")
+        f.debug_struct("ExternalImageFormatProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("external_memory_properties", &self.external_memory_properties)
@@ -2656,7 +2618,7 @@ impl<'a> std::ops::DerefMut for ExternalImageFormatPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalBufferInfo.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExternalBufferInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExternalBufferInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -2681,8 +2643,7 @@ impl Default for PhysicalDeviceExternalBufferInfo {
 }
 impl std::fmt::Debug for PhysicalDeviceExternalBufferInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceExternalBufferInfo")
+        f.debug_struct("PhysicalDeviceExternalBufferInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -2763,7 +2724,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalBufferInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalBufferProperties.html) · Structure
 #[doc(alias = "VkExternalBufferProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalBufferProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -2784,8 +2745,7 @@ impl Default for ExternalBufferProperties {
 }
 impl std::fmt::Debug for ExternalBufferProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalBufferProperties")
+        f.debug_struct("ExternalBufferProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("external_memory_properties", &self.external_memory_properties)
@@ -2849,7 +2809,7 @@ impl<'a> std::ops::DerefMut for ExternalBufferPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceIDProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceIDProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceIDProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -2878,8 +2838,7 @@ impl Default for PhysicalDeviceIDProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceIDProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceIDProperties")
+        f.debug_struct("PhysicalDeviceIDProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_uuid", &self.device_uuid)
@@ -2968,7 +2927,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceIDPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryImageCreateInfo.html) · Structure
 #[doc(alias = "VkExternalMemoryImageCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalMemoryImageCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -2989,8 +2948,7 @@ impl Default for ExternalMemoryImageCreateInfo {
 }
 impl std::fmt::Debug for ExternalMemoryImageCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalMemoryImageCreateInfo")
+        f.debug_struct("ExternalMemoryImageCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_types", &self.handle_types)
@@ -3057,7 +3015,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryImageCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryBufferCreateInfo.html) · Structure
 #[doc(alias = "VkExternalMemoryBufferCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalMemoryBufferCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3078,8 +3036,7 @@ impl Default for ExternalMemoryBufferCreateInfo {
 }
 impl std::fmt::Debug for ExternalMemoryBufferCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalMemoryBufferCreateInfo")
+        f.debug_struct("ExternalMemoryBufferCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_types", &self.handle_types)
@@ -3146,7 +3103,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryBufferCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryAllocateInfo.html) · Structure
 #[doc(alias = "VkExportMemoryAllocateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportMemoryAllocateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3167,8 +3124,7 @@ impl Default for ExportMemoryAllocateInfo {
 }
 impl std::fmt::Debug for ExportMemoryAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportMemoryAllocateInfo")
+        f.debug_struct("ExportMemoryAllocateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_types", &self.handle_types)
@@ -3232,7 +3188,7 @@ impl<'a> std::ops::DerefMut for ExportMemoryAllocateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalSemaphoreInfo.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExternalSemaphoreInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExternalSemaphoreInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3253,8 +3209,7 @@ impl Default for PhysicalDeviceExternalSemaphoreInfo {
 }
 impl std::fmt::Debug for PhysicalDeviceExternalSemaphoreInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceExternalSemaphoreInfo")
+        f.debug_struct("PhysicalDeviceExternalSemaphoreInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -3321,7 +3276,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalSemaphoreInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalSemaphoreProperties.html) · Structure
 #[doc(alias = "VkExternalSemaphoreProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalSemaphoreProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -3346,8 +3301,7 @@ impl Default for ExternalSemaphoreProperties {
 }
 impl std::fmt::Debug for ExternalSemaphoreProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalSemaphoreProperties")
+        f.debug_struct("ExternalSemaphoreProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -3436,7 +3390,7 @@ impl<'a> std::ops::DerefMut for ExternalSemaphorePropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportSemaphoreCreateInfo.html) · Structure
 #[doc(alias = "VkExportSemaphoreCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportSemaphoreCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3457,8 +3411,7 @@ impl Default for ExportSemaphoreCreateInfo {
 }
 impl std::fmt::Debug for ExportSemaphoreCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportSemaphoreCreateInfo")
+        f.debug_struct("ExportSemaphoreCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_types", &self.handle_types)
@@ -3522,7 +3475,7 @@ impl<'a> std::ops::DerefMut for ExportSemaphoreCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalFenceInfo.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExternalFenceInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExternalFenceInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3543,8 +3496,7 @@ impl Default for PhysicalDeviceExternalFenceInfo {
 }
 impl std::fmt::Debug for PhysicalDeviceExternalFenceInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceExternalFenceInfo")
+        f.debug_struct("PhysicalDeviceExternalFenceInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -3611,7 +3563,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExternalFenceInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFenceProperties.html) · Structure
 #[doc(alias = "VkExternalFenceProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalFenceProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -3636,8 +3588,7 @@ impl Default for ExternalFenceProperties {
 }
 impl std::fmt::Debug for ExternalFenceProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalFenceProperties")
+        f.debug_struct("ExternalFenceProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -3726,7 +3677,7 @@ impl<'a> std::ops::DerefMut for ExternalFencePropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportFenceCreateInfo.html) · Structure
 #[doc(alias = "VkExportFenceCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportFenceCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3747,8 +3698,7 @@ impl Default for ExportFenceCreateInfo {
 }
 impl std::fmt::Debug for ExportFenceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportFenceCreateInfo")
+        f.debug_struct("ExportFenceCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_types", &self.handle_types)
@@ -3812,7 +3762,7 @@ impl<'a> std::ops::DerefMut for ExportFenceCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiviewFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMultiviewFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMultiviewFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -3837,8 +3787,7 @@ impl Default for PhysicalDeviceMultiviewFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMultiviewFeatures")
+        f.debug_struct("PhysicalDeviceMultiviewFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("multiview", &(self.multiview != 0))
@@ -3922,7 +3871,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMultiviewFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiviewProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMultiviewProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMultiviewProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -3945,8 +3894,7 @@ impl Default for PhysicalDeviceMultiviewProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMultiviewProperties")
+        f.debug_struct("PhysicalDeviceMultiviewProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_multiview_view_count", &self.max_multiview_view_count)
@@ -4020,7 +3968,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMultiviewPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassMultiviewCreateInfo.html) · Structure
 #[doc(alias = "VkRenderPassMultiviewCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassMultiviewCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4051,8 +3999,7 @@ impl Default for RenderPassMultiviewCreateInfo {
 }
 impl std::fmt::Debug for RenderPassMultiviewCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderPassMultiviewCreateInfo")
+        f.debug_struct("RenderPassMultiviewCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("subpass_count", &self.subpass_count)
@@ -4136,7 +4083,7 @@ impl<'a> std::ops::DerefMut for RenderPassMultiviewCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceGroupProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceGroupProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceGroupProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -4161,8 +4108,7 @@ impl Default for PhysicalDeviceGroupProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceGroupProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceGroupProperties")
+        f.debug_struct("PhysicalDeviceGroupProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("physical_device_count", &self.physical_device_count)
@@ -4243,7 +4189,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceGroupPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateFlagsInfo.html) · Structure
 #[doc(alias = "VkMemoryAllocateFlagsInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryAllocateFlagsInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4266,8 +4212,7 @@ impl Default for MemoryAllocateFlagsInfo {
 }
 impl std::fmt::Debug for MemoryAllocateFlagsInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryAllocateFlagsInfo")
+        f.debug_struct("MemoryAllocateFlagsInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -4335,7 +4280,7 @@ impl<'a> std::ops::DerefMut for MemoryAllocateFlagsInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindBufferMemoryInfo.html) · Structure
 #[doc(alias = "VkBindBufferMemoryInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindBufferMemoryInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4360,8 +4305,7 @@ impl Default for BindBufferMemoryInfo {
 }
 impl std::fmt::Debug for BindBufferMemoryInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindBufferMemoryInfo")
+        f.debug_struct("BindBufferMemoryInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("buffer", &self.buffer)
@@ -4440,7 +4384,7 @@ impl<'a> std::ops::DerefMut for BindBufferMemoryInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindBufferMemoryDeviceGroupInfo.html) · Structure
 #[doc(alias = "VkBindBufferMemoryDeviceGroupInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindBufferMemoryDeviceGroupInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4463,8 +4407,7 @@ impl Default for BindBufferMemoryDeviceGroupInfo {
 }
 impl std::fmt::Debug for BindBufferMemoryDeviceGroupInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindBufferMemoryDeviceGroupInfo")
+        f.debug_struct("BindBufferMemoryDeviceGroupInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_index_count", &self.device_index_count)
@@ -4530,7 +4473,7 @@ impl<'a> std::ops::DerefMut for BindBufferMemoryDeviceGroupInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemoryInfo.html) · Structure
 #[doc(alias = "VkBindImageMemoryInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindImageMemoryInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4555,8 +4498,7 @@ impl Default for BindImageMemoryInfo {
 }
 impl std::fmt::Debug for BindImageMemoryInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindImageMemoryInfo")
+        f.debug_struct("BindImageMemoryInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image", &self.image)
@@ -4639,7 +4581,7 @@ impl<'a> std::ops::DerefMut for BindImageMemoryInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemoryDeviceGroupInfo.html) · Structure
 #[doc(alias = "VkBindImageMemoryDeviceGroupInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindImageMemoryDeviceGroupInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4666,8 +4608,7 @@ impl Default for BindImageMemoryDeviceGroupInfo {
 }
 impl std::fmt::Debug for BindImageMemoryDeviceGroupInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindImageMemoryDeviceGroupInfo")
+        f.debug_struct("BindImageMemoryDeviceGroupInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_index_count", &self.device_index_count)
@@ -4748,7 +4689,7 @@ impl<'a> std::ops::DerefMut for BindImageMemoryDeviceGroupInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupRenderPassBeginInfo.html) · Structure
 #[doc(alias = "VkDeviceGroupRenderPassBeginInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupRenderPassBeginInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4773,8 +4714,7 @@ impl Default for DeviceGroupRenderPassBeginInfo {
 }
 impl std::fmt::Debug for DeviceGroupRenderPassBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupRenderPassBeginInfo")
+        f.debug_struct("DeviceGroupRenderPassBeginInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_mask", &self.device_mask)
@@ -4850,7 +4790,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupRenderPassBeginInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupCommandBufferBeginInfo.html) · Structure
 #[doc(alias = "VkDeviceGroupCommandBufferBeginInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupCommandBufferBeginInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4871,8 +4811,7 @@ impl Default for DeviceGroupCommandBufferBeginInfo {
 }
 impl std::fmt::Debug for DeviceGroupCommandBufferBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupCommandBufferBeginInfo")
+        f.debug_struct("DeviceGroupCommandBufferBeginInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_mask", &self.device_mask)
@@ -4936,7 +4875,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupCommandBufferBeginInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupSubmitInfo.html) · Structure
 #[doc(alias = "VkDeviceGroupSubmitInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupSubmitInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -4967,8 +4906,7 @@ impl Default for DeviceGroupSubmitInfo {
 }
 impl std::fmt::Debug for DeviceGroupSubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupSubmitInfo")
+        f.debug_struct("DeviceGroupSubmitInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("wait_semaphore_count", &self.wait_semaphore_count)
@@ -5070,7 +5008,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupSubmitInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupBindSparseInfo.html) · Structure
 #[doc(alias = "VkDeviceGroupBindSparseInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupBindSparseInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -5093,8 +5031,7 @@ impl Default for DeviceGroupBindSparseInfo {
 }
 impl std::fmt::Debug for DeviceGroupBindSparseInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupBindSparseInfo")
+        f.debug_struct("DeviceGroupBindSparseInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("resource_device_index", &self.resource_device_index)
@@ -5162,7 +5099,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupBindSparseInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupDeviceCreateInfo.html) · Structure
 #[doc(alias = "VkDeviceGroupDeviceCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupDeviceCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -5185,8 +5122,7 @@ impl Default for DeviceGroupDeviceCreateInfo {
 }
 impl std::fmt::Debug for DeviceGroupDeviceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupDeviceCreateInfo")
+        f.debug_struct("DeviceGroupDeviceCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("physical_device_count", &self.physical_device_count)
@@ -5252,7 +5188,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupDeviceCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateEntry.html) · Structure
 #[doc(alias = "VkDescriptorUpdateTemplateEntry")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorUpdateTemplateEntry {
     pub dst_binding: u32,
@@ -5276,8 +5212,7 @@ impl Default for DescriptorUpdateTemplateEntry {
 }
 impl std::fmt::Debug for DescriptorUpdateTemplateEntry {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorUpdateTemplateEntry")
+        f.debug_struct("DescriptorUpdateTemplateEntry")
             .field("dst_binding", &self.dst_binding)
             .field("dst_array_element", &self.dst_array_element)
             .field("descriptor_count", &self.descriptor_count)
@@ -5375,7 +5310,7 @@ impl<'a> std::ops::DerefMut for DescriptorUpdateTemplateEntryBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorUpdateTemplateCreateInfo.html) · Structure
 #[doc(alias = "VkDescriptorUpdateTemplateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorUpdateTemplateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -5410,8 +5345,7 @@ impl Default for DescriptorUpdateTemplateCreateInfo {
 }
 impl std::fmt::Debug for DescriptorUpdateTemplateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorUpdateTemplateCreateInfo")
+        f.debug_struct("DescriptorUpdateTemplateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -5537,7 +5471,7 @@ impl<'a> std::ops::DerefMut for DescriptorUpdateTemplateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInputAttachmentAspectReference.html) · Structure
 #[doc(alias = "VkInputAttachmentAspectReference")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct InputAttachmentAspectReference {
     pub subpass: u32,
@@ -5555,8 +5489,7 @@ impl Default for InputAttachmentAspectReference {
 }
 impl std::fmt::Debug for InputAttachmentAspectReference {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("InputAttachmentAspectReference")
+        f.debug_struct("InputAttachmentAspectReference")
             .field("subpass", &self.subpass)
             .field("input_attachment_index", &self.input_attachment_index)
             .field("aspect_mask", &self.aspect_mask)
@@ -5630,7 +5563,7 @@ impl<'a> std::ops::DerefMut for InputAttachmentAspectReferenceBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassInputAttachmentAspectCreateInfo.html) · Structure
 #[doc(alias = "VkRenderPassInputAttachmentAspectCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassInputAttachmentAspectCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -5653,8 +5586,7 @@ impl Default for RenderPassInputAttachmentAspectCreateInfo {
 }
 impl std::fmt::Debug for RenderPassInputAttachmentAspectCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderPassInputAttachmentAspectCreateInfo")
+        f.debug_struct("RenderPassInputAttachmentAspectCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("aspect_reference_count", &self.aspect_reference_count)
@@ -5725,7 +5657,7 @@ impl<'a> std::ops::DerefMut for RenderPassInputAttachmentAspectCreateInfoBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevice16BitStorageFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDevice16BitStorageFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevice16BitStorageFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -5752,8 +5684,7 @@ impl Default for PhysicalDevice16BitStorageFeatures {
 }
 impl std::fmt::Debug for PhysicalDevice16BitStorageFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevice16BitStorageFeatures")
+        f.debug_struct("PhysicalDevice16BitStorageFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -5853,7 +5784,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevice16BitStorageFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubgroupProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSubgroupProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSubgroupProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -5880,8 +5811,7 @@ impl Default for PhysicalDeviceSubgroupProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSubgroupProperties")
+        f.debug_struct("PhysicalDeviceSubgroupProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("subgroup_size", &self.subgroup_size)
@@ -5978,7 +5908,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferMemoryRequirementsInfo2.html) · Structure
 #[doc(alias = "VkBufferMemoryRequirementsInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferMemoryRequirementsInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5999,8 +5929,7 @@ impl Default for BufferMemoryRequirementsInfo2 {
 }
 impl std::fmt::Debug for BufferMemoryRequirementsInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferMemoryRequirementsInfo2")
+        f.debug_struct("BufferMemoryRequirementsInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("buffer", &self.buffer)
@@ -6064,7 +5993,7 @@ impl<'a> std::ops::DerefMut for BufferMemoryRequirementsInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageMemoryRequirementsInfo2.html) · Structure
 #[doc(alias = "VkImageMemoryRequirementsInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageMemoryRequirementsInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6085,8 +6014,7 @@ impl Default for ImageMemoryRequirementsInfo2 {
 }
 impl std::fmt::Debug for ImageMemoryRequirementsInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageMemoryRequirementsInfo2")
+        f.debug_struct("ImageMemoryRequirementsInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image", &self.image)
@@ -6151,7 +6079,7 @@ impl<'a> std::ops::DerefMut for ImageMemoryRequirementsInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSparseMemoryRequirementsInfo2.html) · Structure
 #[doc(alias = "VkImageSparseMemoryRequirementsInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageSparseMemoryRequirementsInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6172,8 +6100,7 @@ impl Default for ImageSparseMemoryRequirementsInfo2 {
 }
 impl std::fmt::Debug for ImageSparseMemoryRequirementsInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageSparseMemoryRequirementsInfo2")
+        f.debug_struct("ImageSparseMemoryRequirementsInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image", &self.image)
@@ -6237,7 +6164,7 @@ impl<'a> std::ops::DerefMut for ImageSparseMemoryRequirementsInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryRequirements2.html) · Structure
 #[doc(alias = "VkMemoryRequirements2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryRequirements2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6258,8 +6185,7 @@ impl Default for MemoryRequirements2 {
 }
 impl std::fmt::Debug for MemoryRequirements2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryRequirements2")
+        f.debug_struct("MemoryRequirements2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_requirements", &self.memory_requirements)
@@ -6327,7 +6253,7 @@ impl<'a> std::ops::DerefMut for MemoryRequirements2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryRequirements2.html) · Structure
 #[doc(alias = "VkSparseImageMemoryRequirements2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SparseImageMemoryRequirements2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6348,8 +6274,7 @@ impl Default for SparseImageMemoryRequirements2 {
 }
 impl std::fmt::Debug for SparseImageMemoryRequirements2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseImageMemoryRequirements2")
+        f.debug_struct("SparseImageMemoryRequirements2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_requirements", &self.memory_requirements)
@@ -6416,7 +6341,7 @@ impl<'a> std::ops::DerefMut for SparseImageMemoryRequirements2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePointClippingProperties.html) · Structure
 #[doc(alias = "VkPhysicalDevicePointClippingProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePointClippingProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -6437,8 +6362,7 @@ impl Default for PhysicalDevicePointClippingProperties {
 }
 impl std::fmt::Debug for PhysicalDevicePointClippingProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePointClippingProperties")
+        f.debug_struct("PhysicalDevicePointClippingProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("point_clipping_behavior", &self.point_clipping_behavior)
@@ -6505,7 +6429,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePointClippingPropertiesBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryDedicatedRequirements.html) · Structure
 #[doc(alias = "VkMemoryDedicatedRequirements")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryDedicatedRequirements {
     pub s_type: crate::vk1_0::StructureType,
@@ -6528,8 +6452,7 @@ impl Default for MemoryDedicatedRequirements {
 }
 impl std::fmt::Debug for MemoryDedicatedRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryDedicatedRequirements")
+        f.debug_struct("MemoryDedicatedRequirements")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -6609,7 +6532,7 @@ impl<'a> std::ops::DerefMut for MemoryDedicatedRequirementsBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryDedicatedAllocateInfo.html) · Structure
 #[doc(alias = "VkMemoryDedicatedAllocateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryDedicatedAllocateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -6632,8 +6555,7 @@ impl Default for MemoryDedicatedAllocateInfo {
 }
 impl std::fmt::Debug for MemoryDedicatedAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryDedicatedAllocateInfo")
+        f.debug_struct("MemoryDedicatedAllocateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image", &self.image)
@@ -6701,7 +6623,7 @@ impl<'a> std::ops::DerefMut for MemoryDedicatedAllocateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewUsageCreateInfo.html) · Structure
 #[doc(alias = "VkImageViewUsageCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageViewUsageCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -6722,8 +6644,7 @@ impl Default for ImageViewUsageCreateInfo {
 }
 impl std::fmt::Debug for ImageViewUsageCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageViewUsageCreateInfo")
+        f.debug_struct("ImageViewUsageCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("usage", &self.usage)
@@ -6784,7 +6705,7 @@ impl<'a> std::ops::DerefMut for ImageViewUsageCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationDomainOriginStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineTessellationDomainOriginStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineTessellationDomainOriginStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -6805,8 +6726,7 @@ impl Default for PipelineTessellationDomainOriginStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineTessellationDomainOriginStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineTessellationDomainOriginStateCreateInfo")
+        f.debug_struct("PipelineTessellationDomainOriginStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("domain_origin", &self.domain_origin)
@@ -6880,7 +6800,7 @@ for PipelineTessellationDomainOriginStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionInfo.html) · Structure
 #[doc(alias = "VkSamplerYcbcrConversionInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SamplerYcbcrConversionInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -6901,8 +6821,7 @@ impl Default for SamplerYcbcrConversionInfo {
 }
 impl std::fmt::Debug for SamplerYcbcrConversionInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SamplerYcbcrConversionInfo")
+        f.debug_struct("SamplerYcbcrConversionInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("conversion", &self.conversion)
@@ -6966,7 +6885,7 @@ impl<'a> std::ops::DerefMut for SamplerYcbcrConversionInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionCreateInfo.html) · Structure
 #[doc(alias = "VkSamplerYcbcrConversionCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SamplerYcbcrConversionCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -7001,8 +6920,7 @@ impl Default for SamplerYcbcrConversionCreateInfo {
 }
 impl std::fmt::Debug for SamplerYcbcrConversionCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SamplerYcbcrConversionCreateInfo")
+        f.debug_struct("SamplerYcbcrConversionCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format", &self.format)
@@ -7130,7 +7048,7 @@ impl<'a> std::ops::DerefMut for SamplerYcbcrConversionCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImagePlaneMemoryInfo.html) · Structure
 #[doc(alias = "VkBindImagePlaneMemoryInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindImagePlaneMemoryInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -7151,8 +7069,7 @@ impl Default for BindImagePlaneMemoryInfo {
 }
 impl std::fmt::Debug for BindImagePlaneMemoryInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindImagePlaneMemoryInfo")
+        f.debug_struct("BindImagePlaneMemoryInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("plane_aspect", &self.plane_aspect)
@@ -7216,7 +7133,7 @@ impl<'a> std::ops::DerefMut for BindImagePlaneMemoryInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImagePlaneMemoryRequirementsInfo.html) · Structure
 #[doc(alias = "VkImagePlaneMemoryRequirementsInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImagePlaneMemoryRequirementsInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -7237,8 +7154,7 @@ impl Default for ImagePlaneMemoryRequirementsInfo {
 }
 impl std::fmt::Debug for ImagePlaneMemoryRequirementsInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImagePlaneMemoryRequirementsInfo")
+        f.debug_struct("ImagePlaneMemoryRequirementsInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("plane_aspect", &self.plane_aspect)
@@ -7305,7 +7221,7 @@ impl<'a> std::ops::DerefMut for ImagePlaneMemoryRequirementsInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSamplerYcbcrConversionFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSamplerYcbcrConversionFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSamplerYcbcrConversionFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -7326,8 +7242,7 @@ impl Default for PhysicalDeviceSamplerYcbcrConversionFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceSamplerYcbcrConversionFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSamplerYcbcrConversionFeatures")
+        f.debug_struct("PhysicalDeviceSamplerYcbcrConversionFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sampler_ycbcr_conversion", &(self.sampler_ycbcr_conversion != 0))
@@ -7397,7 +7312,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSamplerYcbcrConversionFeaturesBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerYcbcrConversionImageFormatProperties.html) · Structure
 #[doc(alias = "VkSamplerYcbcrConversionImageFormatProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SamplerYcbcrConversionImageFormatProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -7418,8 +7333,7 @@ impl Default for SamplerYcbcrConversionImageFormatProperties {
 }
 impl std::fmt::Debug for SamplerYcbcrConversionImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SamplerYcbcrConversionImageFormatProperties")
+        f.debug_struct("SamplerYcbcrConversionImageFormatProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -7498,7 +7412,7 @@ impl<'a> std::ops::DerefMut for SamplerYcbcrConversionImageFormatPropertiesBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkProtectedSubmitInfo.html) · Structure
 #[doc(alias = "VkProtectedSubmitInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ProtectedSubmitInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -7519,8 +7433,7 @@ impl Default for ProtectedSubmitInfo {
 }
 impl std::fmt::Debug for ProtectedSubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ProtectedSubmitInfo")
+        f.debug_struct("ProtectedSubmitInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("protected_submit", &(self.protected_submit != 0))
@@ -7581,7 +7494,7 @@ impl<'a> std::ops::DerefMut for ProtectedSubmitInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProtectedMemoryFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProtectedMemoryFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceProtectedMemoryFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -7602,8 +7515,7 @@ impl Default for PhysicalDeviceProtectedMemoryFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceProtectedMemoryFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceProtectedMemoryFeatures")
+        f.debug_struct("PhysicalDeviceProtectedMemoryFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("protected_memory", &(self.protected_memory != 0))
@@ -7667,7 +7579,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProtectedMemoryFeaturesBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProtectedMemoryProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProtectedMemoryProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceProtectedMemoryProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -7688,8 +7600,7 @@ impl Default for PhysicalDeviceProtectedMemoryProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceProtectedMemoryProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceProtectedMemoryProperties")
+        f.debug_struct("PhysicalDeviceProtectedMemoryProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("protected_no_fault", &(self.protected_no_fault != 0))
@@ -7753,7 +7664,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProtectedMemoryPropertiesBuilder<'
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceQueueInfo2.html) · Structure
 #[doc(alias = "VkDeviceQueueInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceQueueInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -7778,8 +7689,7 @@ impl Default for DeviceQueueInfo2 {
 }
 impl std::fmt::Debug for DeviceQueueInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceQueueInfo2")
+        f.debug_struct("DeviceQueueInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -7854,7 +7764,7 @@ impl<'a> std::ops::DerefMut for DeviceQueueInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMaintenance3Properties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMaintenance3Properties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMaintenance3Properties {
     pub s_type: crate::vk1_0::StructureType,
@@ -7877,8 +7787,7 @@ impl Default for PhysicalDeviceMaintenance3Properties {
 }
 impl std::fmt::Debug for PhysicalDeviceMaintenance3Properties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMaintenance3Properties")
+        f.debug_struct("PhysicalDeviceMaintenance3Properties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_per_set_descriptors", &self.max_per_set_descriptors)
@@ -7952,7 +7861,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMaintenance3PropertiesBuilder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutSupport.html) · Structure
 #[doc(alias = "VkDescriptorSetLayoutSupport")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorSetLayoutSupport {
     pub s_type: crate::vk1_0::StructureType,
@@ -7973,8 +7882,7 @@ impl Default for DescriptorSetLayoutSupport {
 }
 impl std::fmt::Debug for DescriptorSetLayoutSupport {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorSetLayoutSupport")
+        f.debug_struct("DescriptorSetLayoutSupport")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("supported", &(self.supported != 0))
@@ -8035,7 +7943,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetLayoutSupportBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderDrawParametersFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderDrawParametersFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderDrawParametersFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -8056,8 +7964,7 @@ impl Default for PhysicalDeviceShaderDrawParametersFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderDrawParametersFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderDrawParametersFeatures")
+        f.debug_struct("PhysicalDeviceShaderDrawParametersFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_draw_parameters", &(self.shader_draw_parameters != 0))

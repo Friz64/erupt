@@ -33,7 +33,7 @@ impl<'a> crate::ExtendableFrom<'a, SwapchainDisplayNativeHdrCreateInfoAMDBuilder
 for crate::extensions::khr_swapchain::SwapchainCreateInfoKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayNativeHdrSurfaceCapabilitiesAMD.html) · Structure
 #[doc(alias = "VkDisplayNativeHdrSurfaceCapabilitiesAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayNativeHdrSurfaceCapabilitiesAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -54,8 +54,7 @@ impl Default for DisplayNativeHdrSurfaceCapabilitiesAMD {
 }
 impl std::fmt::Debug for DisplayNativeHdrSurfaceCapabilitiesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayNativeHdrSurfaceCapabilitiesAMD")
+        f.debug_struct("DisplayNativeHdrSurfaceCapabilitiesAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("local_dimming_support", &(self.local_dimming_support != 0))
@@ -119,7 +118,7 @@ impl<'a> std::ops::DerefMut for DisplayNativeHdrSurfaceCapabilitiesAMDBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainDisplayNativeHdrCreateInfoAMD.html) · Structure
 #[doc(alias = "VkSwapchainDisplayNativeHdrCreateInfoAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SwapchainDisplayNativeHdrCreateInfoAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -140,8 +139,7 @@ impl Default for SwapchainDisplayNativeHdrCreateInfoAMD {
 }
 impl std::fmt::Debug for SwapchainDisplayNativeHdrCreateInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SwapchainDisplayNativeHdrCreateInfoAMD")
+        f.debug_struct("SwapchainDisplayNativeHdrCreateInfoAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("local_dimming_enable", &(self.local_dimming_enable != 0))

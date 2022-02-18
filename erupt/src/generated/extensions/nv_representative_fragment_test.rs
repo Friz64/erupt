@@ -42,7 +42,7 @@ impl<
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -63,8 +63,7 @@ impl Default for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceRepresentativeFragmentTestFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceRepresentativeFragmentTestFeaturesNV")
+        f.debug_struct("PhysicalDeviceRepresentativeFragmentTestFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -143,7 +142,7 @@ for PhysicalDeviceRepresentativeFragmentTestFeaturesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRepresentativeFragmentTestStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineRepresentativeFragmentTestStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRepresentativeFragmentTestStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -164,8 +163,7 @@ impl Default for PipelineRepresentativeFragmentTestStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineRepresentativeFragmentTestStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRepresentativeFragmentTestStateCreateInfoNV")
+        f.debug_struct("PipelineRepresentativeFragmentTestStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

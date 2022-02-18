@@ -65,7 +65,7 @@ impl<'a> crate::ExtendableFrom<'a, ExternalFormatANDROIDBuilder<'_>>
 for crate::vk1_1::SamplerYcbcrConversionCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportAndroidHardwareBufferInfoANDROID.html) · Structure
 #[doc(alias = "VkImportAndroidHardwareBufferInfoANDROID")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportAndroidHardwareBufferInfoANDROID {
     pub s_type: crate::vk1_0::StructureType,
@@ -86,8 +86,7 @@ impl Default for ImportAndroidHardwareBufferInfoANDROID {
 }
 impl std::fmt::Debug for ImportAndroidHardwareBufferInfoANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportAndroidHardwareBufferInfoANDROID")
+        f.debug_struct("ImportAndroidHardwareBufferInfoANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("buffer", &self.buffer)
@@ -154,7 +153,7 @@ impl<'a> std::ops::DerefMut for ImportAndroidHardwareBufferInfoANDROIDBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferUsageANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferUsageANDROID")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AndroidHardwareBufferUsageANDROID {
     pub s_type: crate::vk1_0::StructureType,
@@ -175,8 +174,7 @@ impl Default for AndroidHardwareBufferUsageANDROID {
 }
 impl std::fmt::Debug for AndroidHardwareBufferUsageANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AndroidHardwareBufferUsageANDROID")
+        f.debug_struct("AndroidHardwareBufferUsageANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("android_hardware_buffer_usage", &self.android_hardware_buffer_usage)
@@ -243,7 +241,7 @@ impl<'a> std::ops::DerefMut for AndroidHardwareBufferUsageANDROIDBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferPropertiesANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferPropertiesANDROID")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AndroidHardwareBufferPropertiesANDROID {
     pub s_type: crate::vk1_0::StructureType,
@@ -266,8 +264,7 @@ impl Default for AndroidHardwareBufferPropertiesANDROID {
 }
 impl std::fmt::Debug for AndroidHardwareBufferPropertiesANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AndroidHardwareBufferPropertiesANDROID")
+        f.debug_struct("AndroidHardwareBufferPropertiesANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("allocation_size", &self.allocation_size)
@@ -358,7 +355,7 @@ impl<'a> std::ops::DerefMut for AndroidHardwareBufferPropertiesANDROIDBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetAndroidHardwareBufferInfoANDROID.html) · Structure
 #[doc(alias = "VkMemoryGetAndroidHardwareBufferInfoANDROID")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryGetAndroidHardwareBufferInfoANDROID {
     pub s_type: crate::vk1_0::StructureType,
@@ -379,8 +376,7 @@ impl Default for MemoryGetAndroidHardwareBufferInfoANDROID {
 }
 impl std::fmt::Debug for MemoryGetAndroidHardwareBufferInfoANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryGetAndroidHardwareBufferInfoANDROID")
+        f.debug_struct("MemoryGetAndroidHardwareBufferInfoANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory", &self.memory)
@@ -446,7 +442,7 @@ impl<'a> std::ops::DerefMut for MemoryGetAndroidHardwareBufferInfoANDROIDBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferFormatPropertiesANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferFormatPropertiesANDROID")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AndroidHardwareBufferFormatPropertiesANDROID {
     pub s_type: crate::vk1_0::StructureType,
@@ -481,8 +477,7 @@ impl Default for AndroidHardwareBufferFormatPropertiesANDROID {
 }
 impl std::fmt::Debug for AndroidHardwareBufferFormatPropertiesANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AndroidHardwareBufferFormatPropertiesANDROID")
+        f.debug_struct("AndroidHardwareBufferFormatPropertiesANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format", &self.format)
@@ -625,7 +620,7 @@ impl<'a> std::ops::DerefMut for AndroidHardwareBufferFormatPropertiesANDROIDBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalFormatANDROID.html) · Structure
 #[doc(alias = "VkExternalFormatANDROID")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalFormatANDROID {
     pub s_type: crate::vk1_0::StructureType,
@@ -646,8 +641,7 @@ impl Default for ExternalFormatANDROID {
 }
 impl std::fmt::Debug for ExternalFormatANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalFormatANDROID")
+        f.debug_struct("ExternalFormatANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("external_format", &self.external_format)
@@ -708,7 +702,7 @@ impl<'a> std::ops::DerefMut for ExternalFormatANDROIDBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidHardwareBufferFormatProperties2ANDROID.html) · Structure
 #[doc(alias = "VkAndroidHardwareBufferFormatProperties2ANDROID")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AndroidHardwareBufferFormatProperties2ANDROID {
     pub s_type: crate::vk1_0::StructureType,
@@ -743,8 +737,7 @@ impl Default for AndroidHardwareBufferFormatProperties2ANDROID {
 }
 impl std::fmt::Debug for AndroidHardwareBufferFormatProperties2ANDROID {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AndroidHardwareBufferFormatProperties2ANDROID")
+        f.debug_struct("AndroidHardwareBufferFormatProperties2ANDROID")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format", &self.format)

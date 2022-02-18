@@ -34,7 +34,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -55,8 +55,7 @@ impl Default for PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT")
+        f.debug_struct("PhysicalDeviceYcbcr2Plane444FormatsFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ycbcr2plane444_formats", &(self.ycbcr2plane444_formats != 0))

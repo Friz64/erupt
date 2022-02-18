@@ -46,7 +46,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVertexInputDynamicStateFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -67,8 +67,7 @@ impl Default for PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceVertexInputDynamicStateFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceVertexInputDynamicStateFeaturesEXT")
+        f.debug_struct("PhysicalDeviceVertexInputDynamicStateFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("vertex_input_dynamic_state", &(self.vertex_input_dynamic_state != 0))
@@ -144,7 +143,7 @@ for PhysicalDeviceVertexInputDynamicStateFeaturesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDescription2EXT.html) · Structure
 #[doc(alias = "VkVertexInputBindingDescription2EXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VertexInputBindingDescription2EXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -171,8 +170,7 @@ impl Default for VertexInputBindingDescription2EXT {
 }
 impl std::fmt::Debug for VertexInputBindingDescription2EXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VertexInputBindingDescription2EXT")
+        f.debug_struct("VertexInputBindingDescription2EXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("binding", &self.binding)
@@ -257,7 +255,7 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDescription2EXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputAttributeDescription2EXT.html) · Structure
 #[doc(alias = "VkVertexInputAttributeDescription2EXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VertexInputAttributeDescription2EXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -284,8 +282,7 @@ impl Default for VertexInputAttributeDescription2EXT {
 }
 impl std::fmt::Debug for VertexInputAttributeDescription2EXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VertexInputAttributeDescription2EXT")
+        f.debug_struct("VertexInputAttributeDescription2EXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("location", &self.location)

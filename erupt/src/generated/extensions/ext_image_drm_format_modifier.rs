@@ -74,7 +74,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceImageFormatInfo2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrmFormatModifierPropertiesListEXT.html) · Structure
 #[doc(alias = "VkDrmFormatModifierPropertiesListEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DrmFormatModifierPropertiesListEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -97,8 +97,7 @@ impl Default for DrmFormatModifierPropertiesListEXT {
 }
 impl std::fmt::Debug for DrmFormatModifierPropertiesListEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DrmFormatModifierPropertiesListEXT")
+        f.debug_struct("DrmFormatModifierPropertiesListEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier_count", &self.drm_format_modifier_count)
@@ -173,7 +172,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesListEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrmFormatModifierPropertiesEXT.html) · Structure
 #[doc(alias = "VkDrmFormatModifierPropertiesEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrmFormatModifierPropertiesEXT {
     pub drm_format_modifier: u64,
@@ -191,8 +190,7 @@ impl Default for DrmFormatModifierPropertiesEXT {
 }
 impl std::fmt::Debug for DrmFormatModifierPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DrmFormatModifierPropertiesEXT")
+        f.debug_struct("DrmFormatModifierPropertiesEXT")
             .field("drm_format_modifier", &self.drm_format_modifier)
             .field(
                 "drm_format_modifier_plane_count",
@@ -281,7 +279,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceImageDrmFormatModifierInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceImageDrmFormatModifierInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -308,8 +306,7 @@ impl Default for PhysicalDeviceImageDrmFormatModifierInfoEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceImageDrmFormatModifierInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceImageDrmFormatModifierInfoEXT")
+        f.debug_struct("PhysicalDeviceImageDrmFormatModifierInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier", &self.drm_format_modifier)
@@ -395,7 +392,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageDrmFormatModifierInfoEXTBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageDrmFormatModifierListCreateInfoEXT.html) · Structure
 #[doc(alias = "VkImageDrmFormatModifierListCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageDrmFormatModifierListCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -418,8 +415,7 @@ impl Default for ImageDrmFormatModifierListCreateInfoEXT {
 }
 impl std::fmt::Debug for ImageDrmFormatModifierListCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageDrmFormatModifierListCreateInfoEXT")
+        f.debug_struct("ImageDrmFormatModifierListCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier_count", &self.drm_format_modifier_count)
@@ -485,7 +481,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierListCreateInfoEXTBuilder<'
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageDrmFormatModifierExplicitCreateInfoEXT.html) · Structure
 #[doc(alias = "VkImageDrmFormatModifierExplicitCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageDrmFormatModifierExplicitCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -510,8 +506,7 @@ impl Default for ImageDrmFormatModifierExplicitCreateInfoEXT {
 }
 impl std::fmt::Debug for ImageDrmFormatModifierExplicitCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageDrmFormatModifierExplicitCreateInfoEXT")
+        f.debug_struct("ImageDrmFormatModifierExplicitCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier", &self.drm_format_modifier)
@@ -596,7 +591,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierExplicitCreateInfoEXTBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageDrmFormatModifierPropertiesEXT.html) · Structure
 #[doc(alias = "VkImageDrmFormatModifierPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageDrmFormatModifierPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -617,8 +612,7 @@ impl Default for ImageDrmFormatModifierPropertiesEXT {
 }
 impl std::fmt::Debug for ImageDrmFormatModifierPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageDrmFormatModifierPropertiesEXT")
+        f.debug_struct("ImageDrmFormatModifierPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier", &self.drm_format_modifier)
@@ -682,7 +676,7 @@ impl<'a> std::ops::DerefMut for ImageDrmFormatModifierPropertiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrmFormatModifierPropertiesList2EXT.html) · Structure
 #[doc(alias = "VkDrmFormatModifierPropertiesList2EXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DrmFormatModifierPropertiesList2EXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -705,8 +699,7 @@ impl Default for DrmFormatModifierPropertiesList2EXT {
 }
 impl std::fmt::Debug for DrmFormatModifierPropertiesList2EXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DrmFormatModifierPropertiesList2EXT")
+        f.debug_struct("DrmFormatModifierPropertiesList2EXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("drm_format_modifier_count", &self.drm_format_modifier_count)
@@ -781,7 +774,7 @@ impl<'a> std::ops::DerefMut for DrmFormatModifierPropertiesList2EXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrmFormatModifierProperties2EXT.html) · Structure
 #[doc(alias = "VkDrmFormatModifierProperties2EXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrmFormatModifierProperties2EXT {
     pub drm_format_modifier: u64,
@@ -799,8 +792,7 @@ impl Default for DrmFormatModifierProperties2EXT {
 }
 impl std::fmt::Debug for DrmFormatModifierProperties2EXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DrmFormatModifierProperties2EXT")
+        f.debug_struct("DrmFormatModifierProperties2EXT")
             .field("drm_format_modifier", &self.drm_format_modifier)
             .field(
                 "drm_format_modifier_plane_count",

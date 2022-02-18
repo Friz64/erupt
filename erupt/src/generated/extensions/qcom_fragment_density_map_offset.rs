@@ -51,7 +51,7 @@ impl<'a> crate::ExtendableFrom<'a, SubpassFragmentDensityMapOffsetEndInfoQCOMBui
 for crate::vk1_2::SubpassEndInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM {
     pub s_type: crate::vk1_0::StructureType,
@@ -72,8 +72,7 @@ impl Default for PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM")
+        f.debug_struct("PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -152,7 +151,7 @@ for PhysicalDeviceFragmentDensityMapOffsetFeaturesQCOMBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM {
     pub s_type: crate::vk1_0::StructureType,
@@ -173,8 +172,7 @@ impl Default for PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM")
+        f.debug_struct("PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOM")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -256,7 +254,7 @@ for PhysicalDeviceFragmentDensityMapOffsetPropertiesQCOMBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassFragmentDensityMapOffsetEndInfoQCOM.html) · Structure
 #[doc(alias = "VkSubpassFragmentDensityMapOffsetEndInfoQCOM")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SubpassFragmentDensityMapOffsetEndInfoQCOM {
     pub s_type: crate::vk1_0::StructureType,
@@ -279,8 +277,7 @@ impl Default for SubpassFragmentDensityMapOffsetEndInfoQCOM {
 }
 impl std::fmt::Debug for SubpassFragmentDensityMapOffsetEndInfoQCOM {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubpassFragmentDensityMapOffsetEndInfoQCOM")
+        f.debug_struct("SubpassFragmentDensityMapOffsetEndInfoQCOM")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("fragment_density_offset_count", &self.fragment_density_offset_count)

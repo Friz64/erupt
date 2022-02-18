@@ -48,7 +48,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMutableDescriptorTypeFeaturesVALVE")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     pub s_type: crate::vk1_0::StructureType,
@@ -69,8 +69,7 @@ impl Default for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
 }
 impl std::fmt::Debug for PhysicalDeviceMutableDescriptorTypeFeaturesVALVE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMutableDescriptorTypeFeaturesVALVE")
+        f.debug_struct("PhysicalDeviceMutableDescriptorTypeFeaturesVALVE")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("mutable_descriptor_type", &(self.mutable_descriptor_type != 0))
@@ -143,7 +142,7 @@ for PhysicalDeviceMutableDescriptorTypeFeaturesVALVEBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeListVALVE.html) · Structure
 #[doc(alias = "VkMutableDescriptorTypeListVALVE")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MutableDescriptorTypeListVALVE {
     pub descriptor_type_count: u32,
@@ -159,8 +158,7 @@ impl Default for MutableDescriptorTypeListVALVE {
 }
 impl std::fmt::Debug for MutableDescriptorTypeListVALVE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MutableDescriptorTypeListVALVE")
+        f.debug_struct("MutableDescriptorTypeListVALVE")
             .field("descriptor_type_count", &self.descriptor_type_count)
             .field("p_descriptor_types", &self.p_descriptor_types)
             .finish()
@@ -227,7 +225,7 @@ impl<'a> std::ops::DerefMut for MutableDescriptorTypeListVALVEBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMutableDescriptorTypeCreateInfoVALVE.html) · Structure
 #[doc(alias = "VkMutableDescriptorTypeCreateInfoVALVE")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MutableDescriptorTypeCreateInfoVALVE {
     pub s_type: crate::vk1_0::StructureType,
@@ -250,8 +248,7 @@ impl Default for MutableDescriptorTypeCreateInfoVALVE {
 }
 impl std::fmt::Debug for MutableDescriptorTypeCreateInfoVALVE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MutableDescriptorTypeCreateInfoVALVE")
+        f.debug_struct("MutableDescriptorTypeCreateInfoVALVE")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

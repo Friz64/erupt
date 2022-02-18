@@ -21,7 +21,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceYcbcrImageArraysFeaturesEXTBuil
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceYcbcrImageArraysFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceYcbcrImageArraysFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -42,8 +42,7 @@ impl Default for PhysicalDeviceYcbcrImageArraysFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceYcbcrImageArraysFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceYcbcrImageArraysFeaturesEXT")
+        f.debug_struct("PhysicalDeviceYcbcrImageArraysFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ycbcr_image_arrays", &(self.ycbcr_image_arrays != 0))

@@ -36,7 +36,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInheritedViewportScissorFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceInheritedViewportScissorFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceInheritedViewportScissorFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -57,8 +57,7 @@ impl Default for PhysicalDeviceInheritedViewportScissorFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceInheritedViewportScissorFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceInheritedViewportScissorFeaturesNV")
+        f.debug_struct("PhysicalDeviceInheritedViewportScissorFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -137,7 +136,7 @@ for PhysicalDeviceInheritedViewportScissorFeaturesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceViewportScissorInfoNV.html) · Structure
 #[doc(alias = "VkCommandBufferInheritanceViewportScissorInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferInheritanceViewportScissorInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -162,8 +161,7 @@ impl Default for CommandBufferInheritanceViewportScissorInfoNV {
 }
 impl std::fmt::Debug for CommandBufferInheritanceViewportScissorInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferInheritanceViewportScissorInfoNV")
+        f.debug_struct("CommandBufferInheritanceViewportScissorInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("viewport_scissor2_d", &(self.viewport_scissor2_d != 0))

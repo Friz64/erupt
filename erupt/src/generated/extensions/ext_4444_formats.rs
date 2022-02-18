@@ -26,7 +26,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDevice4444FormatsFeaturesEXTBuilder<'
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevice4444FormatsFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDevice4444FormatsFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevice4444FormatsFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -49,8 +49,7 @@ impl Default for PhysicalDevice4444FormatsFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDevice4444FormatsFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevice4444FormatsFeaturesEXT")
+        f.debug_struct("PhysicalDevice4444FormatsFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format_a4r4g4b4", &(self.format_a4r4g4b4 != 0))

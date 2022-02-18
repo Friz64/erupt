@@ -36,12 +36,11 @@ impl Win32SurfaceCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for Win32SurfaceCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_win32_surface`]
@@ -64,7 +63,7 @@ pub type PFN_vkGetPhysicalDeviceWin32PresentationSupportKHR = unsafe extern "sys
 ) -> crate::vk1_0::Bool32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWin32SurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkWin32SurfaceCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct Win32SurfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -89,8 +88,7 @@ impl Default for Win32SurfaceCreateInfoKHR {
 }
 impl std::fmt::Debug for Win32SurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("Win32SurfaceCreateInfoKHR")
+        f.debug_struct("Win32SurfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

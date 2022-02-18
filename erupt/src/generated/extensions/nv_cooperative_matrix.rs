@@ -24,16 +24,15 @@ impl crate::vk1_0::StructureType {
 pub struct ScopeNV(pub i32);
 impl std::fmt::Debug for ScopeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEVICE_NV => "DEVICE_NV",
-                    &Self::WORKGROUP_NV => "WORKGROUP_NV",
-                    &Self::SUBGROUP_NV => "SUBGROUP_NV",
-                    &Self::QUEUE_FAMILY_NV => "QUEUE_FAMILY_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEVICE_NV => "DEVICE_NV",
+                &Self::WORKGROUP_NV => "WORKGROUP_NV",
+                &Self::SUBGROUP_NV => "SUBGROUP_NV",
+                &Self::QUEUE_FAMILY_NV => "QUEUE_FAMILY_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_cooperative_matrix`]
@@ -50,23 +49,22 @@ impl crate::extensions::nv_cooperative_matrix::ScopeNV {
 pub struct ComponentTypeNV(pub i32);
 impl std::fmt::Debug for ComponentTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FLOAT16_NV => "FLOAT16_NV",
-                    &Self::FLOAT32_NV => "FLOAT32_NV",
-                    &Self::FLOAT64_NV => "FLOAT64_NV",
-                    &Self::SINT8_NV => "SINT8_NV",
-                    &Self::SINT16_NV => "SINT16_NV",
-                    &Self::SINT32_NV => "SINT32_NV",
-                    &Self::SINT64_NV => "SINT64_NV",
-                    &Self::UINT8_NV => "UINT8_NV",
-                    &Self::UINT16_NV => "UINT16_NV",
-                    &Self::UINT32_NV => "UINT32_NV",
-                    &Self::UINT64_NV => "UINT64_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FLOAT16_NV => "FLOAT16_NV",
+                &Self::FLOAT32_NV => "FLOAT32_NV",
+                &Self::FLOAT64_NV => "FLOAT64_NV",
+                &Self::SINT8_NV => "SINT8_NV",
+                &Self::SINT16_NV => "SINT16_NV",
+                &Self::SINT32_NV => "SINT32_NV",
+                &Self::SINT64_NV => "SINT64_NV",
+                &Self::UINT8_NV => "UINT8_NV",
+                &Self::UINT16_NV => "UINT16_NV",
+                &Self::UINT32_NV => "UINT32_NV",
+                &Self::UINT64_NV => "UINT64_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_cooperative_matrix`]
@@ -106,7 +104,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCooperativeMatrixFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCooperativeMatrixFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCooperativeMatrixFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -129,8 +127,7 @@ impl Default for PhysicalDeviceCooperativeMatrixFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceCooperativeMatrixFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceCooperativeMatrixFeaturesNV")
+        f.debug_struct("PhysicalDeviceCooperativeMatrixFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("cooperative_matrix", &(self.cooperative_matrix != 0))
@@ -212,7 +209,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCooperativeMatrixFeaturesNVBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCooperativeMatrixPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCooperativeMatrixPropertiesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCooperativeMatrixPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -233,8 +230,7 @@ impl Default for PhysicalDeviceCooperativeMatrixPropertiesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceCooperativeMatrixPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceCooperativeMatrixPropertiesNV")
+        f.debug_struct("PhysicalDeviceCooperativeMatrixPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -313,7 +309,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCooperativeMatrixPropertiesNVBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCooperativeMatrixPropertiesNV.html) · Structure
 #[doc(alias = "VkCooperativeMatrixPropertiesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CooperativeMatrixPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -348,8 +344,7 @@ impl Default for CooperativeMatrixPropertiesNV {
 }
 impl std::fmt::Debug for CooperativeMatrixPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CooperativeMatrixPropertiesNV")
+        f.debug_struct("CooperativeMatrixPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("m_size", &self.m_size)

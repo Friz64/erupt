@@ -47,7 +47,7 @@ impl<'a> crate::ExtendableFrom<'a, ExportMemoryWin32HandleInfoKHRBuilder<'_>>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkImportMemoryWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportMemoryWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -72,8 +72,7 @@ impl Default for ImportMemoryWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for ImportMemoryWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportMemoryWin32HandleInfoKHR")
+        f.debug_struct("ImportMemoryWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -154,7 +153,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryWin32HandleInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkExportMemoryWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportMemoryWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -179,8 +178,7 @@ impl Default for ExportMemoryWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for ExportMemoryWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportMemoryWin32HandleInfoKHR")
+        f.debug_struct("ExportMemoryWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_attributes", &self.p_attributes)
@@ -258,7 +256,7 @@ impl<'a> std::ops::DerefMut for ExportMemoryWin32HandleInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryWin32HandlePropertiesKHR.html) · Structure
 #[doc(alias = "VkMemoryWin32HandlePropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryWin32HandlePropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -279,8 +277,7 @@ impl Default for MemoryWin32HandlePropertiesKHR {
 }
 impl std::fmt::Debug for MemoryWin32HandlePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryWin32HandlePropertiesKHR")
+        f.debug_struct("MemoryWin32HandlePropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_type_bits", &self.memory_type_bits)
@@ -344,7 +341,7 @@ impl<'a> std::ops::DerefMut for MemoryWin32HandlePropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkMemoryGetWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryGetWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -367,8 +364,7 @@ impl Default for MemoryGetWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for MemoryGetWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryGetWin32HandleInfoKHR")
+        f.debug_struct("MemoryGetWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory", &self.memory)

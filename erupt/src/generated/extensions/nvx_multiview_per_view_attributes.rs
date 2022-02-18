@@ -28,7 +28,7 @@ impl<
 > for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     pub s_type: crate::vk1_0::StructureType,
@@ -49,8 +49,7 @@ impl Default for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
 }
 impl std::fmt::Debug for PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX")
+        f.debug_struct("PhysicalDeviceMultiviewPerViewAttributesPropertiesNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

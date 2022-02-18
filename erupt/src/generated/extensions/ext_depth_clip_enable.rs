@@ -29,12 +29,11 @@ impl PipelineRasterizationDepthClipStateCreateFlagBitsEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationDepthClipStateCreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_depth_clip_enable`]
@@ -60,7 +59,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDepthClipEnableFeaturesEXTBuild
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDepthClipEnableFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDepthClipEnableFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDepthClipEnableFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -81,8 +80,7 @@ impl Default for PhysicalDeviceDepthClipEnableFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceDepthClipEnableFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDepthClipEnableFeaturesEXT")
+        f.debug_struct("PhysicalDeviceDepthClipEnableFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("depth_clip_enable", &(self.depth_clip_enable != 0))
@@ -148,7 +146,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDepthClipEnableFeaturesEXTBuilder<
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationDepthClipStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationDepthClipStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationDepthClipStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -171,8 +169,7 @@ impl Default for PipelineRasterizationDepthClipStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationDepthClipStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRasterizationDepthClipStateCreateInfoEXT")
+        f.debug_struct("PipelineRasterizationDepthClipStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

@@ -32,12 +32,11 @@ impl IOSSurfaceCreateFlagBitsMVK {
 }
 impl std::fmt::Debug for IOSSurfaceCreateFlagBitsMVK {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::mvk_ios_surface`]
@@ -54,7 +53,7 @@ pub type PFN_vkCreateIOSSurfaceMVK = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIOSSurfaceCreateInfoMVK.html) · Structure
 #[doc(alias = "VkIOSSurfaceCreateInfoMVK")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct IOSSurfaceCreateInfoMVK {
     pub s_type: crate::vk1_0::StructureType,
@@ -77,8 +76,7 @@ impl Default for IOSSurfaceCreateInfoMVK {
 }
 impl std::fmt::Debug for IOSSurfaceCreateInfoMVK {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("IOSSurfaceCreateInfoMVK")
+        f.debug_struct("IOSSurfaceCreateInfoMVK")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

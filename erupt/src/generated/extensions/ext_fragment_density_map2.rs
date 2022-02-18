@@ -40,7 +40,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2FeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMap2FeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -61,8 +61,7 @@ impl Default for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2FeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentDensityMap2FeaturesEXT")
+        f.debug_struct("PhysicalDeviceFragmentDensityMap2FeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -138,7 +137,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentDensityMap2FeaturesEXTBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMap2PropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMap2PropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -165,8 +164,7 @@ impl Default for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMap2PropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentDensityMap2PropertiesEXT")
+        f.debug_struct("PhysicalDeviceFragmentDensityMap2PropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("subsampled_loads", &(self.subsampled_loads != 0))

@@ -31,7 +31,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLinearColorAttachmentFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceLinearColorAttachmentFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceLinearColorAttachmentFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -52,8 +52,7 @@ impl Default for PhysicalDeviceLinearColorAttachmentFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceLinearColorAttachmentFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceLinearColorAttachmentFeaturesNV")
+        f.debug_struct("PhysicalDeviceLinearColorAttachmentFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("linear_color_attachment", &(self.linear_color_attachment != 0))

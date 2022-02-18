@@ -27,7 +27,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -52,8 +52,7 @@ impl Default for PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShaderInterlockFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentShaderInterlockFeaturesEXT")
+        f.debug_struct("PhysicalDeviceFragmentShaderInterlockFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

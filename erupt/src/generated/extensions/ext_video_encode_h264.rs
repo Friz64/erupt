@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION")]
-pub const EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 3;
+pub const EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 5;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H264_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -28,6 +28,7 @@ impl crate::vk1_0::StructureType {
     pub const VIDEO_ENCODE_H264_PROFILE_EXT: Self = Self(1000038008);
     pub const VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT: Self = Self(1000038009);
     pub const VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT: Self = Self(1000038010);
+    pub const VIDEO_ENCODE_H264_REFERENCE_LISTS_EXT: Self = Self(1000038011);
 }
 ///Provided by [`crate::extensions::ext_video_encode_h264`]
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
@@ -38,24 +39,45 @@ bitflags::bitflags! {
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilityFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH264CapabilityFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH264CapabilityFlagsEXT : u32 { const
+    DIRECT_8X8_INFERENCE_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::DIRECT_8X8_INFERENCE_EXT.0; const
+    SEPARATE_COLOUR_PLANE_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::SEPARATE_COLOUR_PLANE_EXT.0; const
+    QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT.0; const
+    SCALING_LISTS_EXT = VideoEncodeH264CapabilityFlagBitsEXT::SCALING_LISTS_EXT.0; const
+    HRD_COMPLIANCE_EXT = VideoEncodeH264CapabilityFlagBitsEXT::HRD_COMPLIANCE_EXT.0;
+    const CHROMA_QP_OFFSET_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::CHROMA_QP_OFFSET_EXT.0; const
+    SECOND_CHROMA_QP_OFFSET_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::SECOND_CHROMA_QP_OFFSET_EXT.0; const
+    PIC_INIT_QP_MINUS26_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::PIC_INIT_QP_MINUS26_EXT.0; const
+    WEIGHTED_PRED_EXT = VideoEncodeH264CapabilityFlagBitsEXT::WEIGHTED_PRED_EXT.0; const
+    WEIGHTED_BIPRED_EXPLICIT_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::WEIGHTED_BIPRED_EXPLICIT_EXT.0; const
+    WEIGHTED_BIPRED_IMPLICIT_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::WEIGHTED_BIPRED_IMPLICIT_EXT.0; const
+    WEIGHTED_PRED_NO_TABLE_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::WEIGHTED_PRED_NO_TABLE_EXT.0; const
+    TRANSFORM_8X8_EXT = VideoEncodeH264CapabilityFlagBitsEXT::TRANSFORM_8X8_EXT.0; const
     CABAC_EXT = VideoEncodeH264CapabilityFlagBitsEXT::CABAC_EXT.0; const CAVLC_EXT =
     VideoEncodeH264CapabilityFlagBitsEXT::CAVLC_EXT.0; const
-    WEIGHTED_BI_PRED_IMPLICIT_EXT =
-    VideoEncodeH264CapabilityFlagBitsEXT::WEIGHTED_BI_PRED_IMPLICIT_EXT.0; const
-    TRANSFORM_8X8_EXT = VideoEncodeH264CapabilityFlagBitsEXT::TRANSFORM_8X8_EXT.0; const
-    CHROMA_QP_OFFSET_EXT = VideoEncodeH264CapabilityFlagBitsEXT::CHROMA_QP_OFFSET_EXT.0;
-    const SECOND_CHROMA_QP_OFFSET_EXT =
-    VideoEncodeH264CapabilityFlagBitsEXT::SECOND_CHROMA_QP_OFFSET_EXT.0; const
     DEBLOCKING_FILTER_DISABLED_EXT =
     VideoEncodeH264CapabilityFlagBitsEXT::DEBLOCKING_FILTER_DISABLED_EXT.0; const
     DEBLOCKING_FILTER_ENABLED_EXT =
     VideoEncodeH264CapabilityFlagBitsEXT::DEBLOCKING_FILTER_ENABLED_EXT.0; const
     DEBLOCKING_FILTER_PARTIAL_EXT =
     VideoEncodeH264CapabilityFlagBitsEXT::DEBLOCKING_FILTER_PARTIAL_EXT.0; const
+    DISABLE_DIRECT_SPATIAL_MV_PRED_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::DISABLE_DIRECT_SPATIAL_MV_PRED_EXT.0; const
     MULTIPLE_SLICE_PER_FRAME_EXT =
     VideoEncodeH264CapabilityFlagBitsEXT::MULTIPLE_SLICE_PER_FRAME_EXT.0; const
-    EVENLY_DISTRIBUTED_SLICE_SIZE_EXT =
-    VideoEncodeH264CapabilityFlagBitsEXT::EVENLY_DISTRIBUTED_SLICE_SIZE_EXT.0; }
+    SLICE_MB_COUNT_EXT = VideoEncodeH264CapabilityFlagBitsEXT::SLICE_MB_COUNT_EXT.0;
+    const ROW_UNALIGNED_SLICE_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::ROW_UNALIGNED_SLICE_EXT.0; const
+    DIFFERENT_SLICE_TYPE_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::DIFFERENT_SLICE_TYPE_EXT.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264CapabilityFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CapabilityFlagsEXT`]
 #[doc(alias = "VkVideoEncodeH264CapabilityFlagBitsEXT")]
@@ -71,48 +93,65 @@ impl VideoEncodeH264CapabilityFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264CapabilityFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::CABAC_EXT => "CABAC_EXT",
-                    &Self::CAVLC_EXT => "CAVLC_EXT",
-                    &Self::WEIGHTED_BI_PRED_IMPLICIT_EXT => {
-                        "WEIGHTED_BI_PRED_IMPLICIT_EXT"
-                    }
-                    &Self::TRANSFORM_8X8_EXT => "TRANSFORM_8X8_EXT",
-                    &Self::CHROMA_QP_OFFSET_EXT => "CHROMA_QP_OFFSET_EXT",
-                    &Self::SECOND_CHROMA_QP_OFFSET_EXT => "SECOND_CHROMA_QP_OFFSET_EXT",
-                    &Self::DEBLOCKING_FILTER_DISABLED_EXT => {
-                        "DEBLOCKING_FILTER_DISABLED_EXT"
-                    }
-                    &Self::DEBLOCKING_FILTER_ENABLED_EXT => {
-                        "DEBLOCKING_FILTER_ENABLED_EXT"
-                    }
-                    &Self::DEBLOCKING_FILTER_PARTIAL_EXT => {
-                        "DEBLOCKING_FILTER_PARTIAL_EXT"
-                    }
-                    &Self::MULTIPLE_SLICE_PER_FRAME_EXT => "MULTIPLE_SLICE_PER_FRAME_EXT",
-                    &Self::EVENLY_DISTRIBUTED_SLICE_SIZE_EXT => {
-                        "EVENLY_DISTRIBUTED_SLICE_SIZE_EXT"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DIRECT_8X8_INFERENCE_EXT => "DIRECT_8X8_INFERENCE_EXT",
+                &Self::SEPARATE_COLOUR_PLANE_EXT => "SEPARATE_COLOUR_PLANE_EXT",
+                &Self::QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT => {
+                    "QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT"
+                }
+                &Self::SCALING_LISTS_EXT => "SCALING_LISTS_EXT",
+                &Self::HRD_COMPLIANCE_EXT => "HRD_COMPLIANCE_EXT",
+                &Self::CHROMA_QP_OFFSET_EXT => "CHROMA_QP_OFFSET_EXT",
+                &Self::SECOND_CHROMA_QP_OFFSET_EXT => "SECOND_CHROMA_QP_OFFSET_EXT",
+                &Self::PIC_INIT_QP_MINUS26_EXT => "PIC_INIT_QP_MINUS26_EXT",
+                &Self::WEIGHTED_PRED_EXT => "WEIGHTED_PRED_EXT",
+                &Self::WEIGHTED_BIPRED_EXPLICIT_EXT => "WEIGHTED_BIPRED_EXPLICIT_EXT",
+                &Self::WEIGHTED_BIPRED_IMPLICIT_EXT => "WEIGHTED_BIPRED_IMPLICIT_EXT",
+                &Self::WEIGHTED_PRED_NO_TABLE_EXT => "WEIGHTED_PRED_NO_TABLE_EXT",
+                &Self::TRANSFORM_8X8_EXT => "TRANSFORM_8X8_EXT",
+                &Self::CABAC_EXT => "CABAC_EXT",
+                &Self::CAVLC_EXT => "CAVLC_EXT",
+                &Self::DEBLOCKING_FILTER_DISABLED_EXT => "DEBLOCKING_FILTER_DISABLED_EXT",
+                &Self::DEBLOCKING_FILTER_ENABLED_EXT => "DEBLOCKING_FILTER_ENABLED_EXT",
+                &Self::DEBLOCKING_FILTER_PARTIAL_EXT => "DEBLOCKING_FILTER_PARTIAL_EXT",
+                &Self::DISABLE_DIRECT_SPATIAL_MV_PRED_EXT => {
+                    "DISABLE_DIRECT_SPATIAL_MV_PRED_EXT"
+                }
+                &Self::MULTIPLE_SLICE_PER_FRAME_EXT => "MULTIPLE_SLICE_PER_FRAME_EXT",
+                &Self::SLICE_MB_COUNT_EXT => "SLICE_MB_COUNT_EXT",
+                &Self::ROW_UNALIGNED_SLICE_EXT => "ROW_UNALIGNED_SLICE_EXT",
+                &Self::DIFFERENT_SLICE_TYPE_EXT => "DIFFERENT_SLICE_TYPE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h264`]
 impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagBitsEXT {
-    pub const CABAC_EXT: Self = Self(1);
-    pub const CAVLC_EXT: Self = Self(2);
-    pub const WEIGHTED_BI_PRED_IMPLICIT_EXT: Self = Self(4);
-    pub const TRANSFORM_8X8_EXT: Self = Self(8);
-    pub const CHROMA_QP_OFFSET_EXT: Self = Self(16);
-    pub const SECOND_CHROMA_QP_OFFSET_EXT: Self = Self(32);
-    pub const DEBLOCKING_FILTER_DISABLED_EXT: Self = Self(64);
-    pub const DEBLOCKING_FILTER_ENABLED_EXT: Self = Self(128);
-    pub const DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(256);
-    pub const MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(512);
-    pub const EVENLY_DISTRIBUTED_SLICE_SIZE_EXT: Self = Self(1024);
+    pub const DIRECT_8X8_INFERENCE_EXT: Self = Self(1);
+    pub const SEPARATE_COLOUR_PLANE_EXT: Self = Self(2);
+    pub const QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT: Self = Self(4);
+    pub const SCALING_LISTS_EXT: Self = Self(8);
+    pub const HRD_COMPLIANCE_EXT: Self = Self(16);
+    pub const CHROMA_QP_OFFSET_EXT: Self = Self(32);
+    pub const SECOND_CHROMA_QP_OFFSET_EXT: Self = Self(64);
+    pub const PIC_INIT_QP_MINUS26_EXT: Self = Self(128);
+    pub const WEIGHTED_PRED_EXT: Self = Self(256);
+    pub const WEIGHTED_BIPRED_EXPLICIT_EXT: Self = Self(512);
+    pub const WEIGHTED_BIPRED_IMPLICIT_EXT: Self = Self(1024);
+    pub const WEIGHTED_PRED_NO_TABLE_EXT: Self = Self(2048);
+    pub const TRANSFORM_8X8_EXT: Self = Self(4096);
+    pub const CABAC_EXT: Self = Self(8192);
+    pub const CAVLC_EXT: Self = Self(16384);
+    pub const DEBLOCKING_FILTER_DISABLED_EXT: Self = Self(32768);
+    pub const DEBLOCKING_FILTER_ENABLED_EXT: Self = Self(65536);
+    pub const DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(131072);
+    pub const DISABLE_DIRECT_SPATIAL_MV_PRED_EXT: Self = Self(262144);
+    pub const MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(524288);
+    pub const SLICE_MB_COUNT_EXT: Self = Self(1048576);
+    pub const ROW_UNALIGNED_SLICE_EXT: Self = Self(2097152);
+    pub const DIFFERENT_SLICE_TYPE_EXT: Self = Self(4194304);
 }
 bitflags::bitflags! {
     #[doc =
@@ -137,15 +176,14 @@ impl VideoEncodeH264InputModeFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264InputModeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FRAME_EXT => "FRAME_EXT",
-                    &Self::SLICE_EXT => "SLICE_EXT",
-                    &Self::NON_VCL_EXT => "NON_VCL_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FRAME_EXT => "FRAME_EXT",
+                &Self::SLICE_EXT => "SLICE_EXT",
+                &Self::NON_VCL_EXT => "NON_VCL_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h264`]
@@ -177,15 +215,14 @@ impl VideoEncodeH264OutputModeFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264OutputModeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FRAME_EXT => "FRAME_EXT",
-                    &Self::SLICE_EXT => "SLICE_EXT",
-                    &Self::NON_VCL_EXT => "NON_VCL_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FRAME_EXT => "FRAME_EXT",
+                &Self::SLICE_EXT => "SLICE_EXT",
+                &Self::NON_VCL_EXT => "NON_VCL_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h264`]
@@ -216,14 +253,13 @@ impl VideoEncodeH264CreateFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264CreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_EXT => "DEFAULT_EXT",
-                    &Self::RESERVED_0_EXT => "RESERVED_0_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_EXT => "DEFAULT_EXT",
+                &Self::RESERVED_0_EXT => "RESERVED_0_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h264`]
@@ -254,15 +290,14 @@ impl VideoEncodeH264RateControlStructureFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264RateControlStructureFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
-                    &Self::FLAT_EXT => "FLAT_EXT",
-                    &Self::DYADIC_EXT => "DYADIC_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
+                &Self::FLAT_EXT => "FLAT_EXT",
+                &Self::DYADIC_EXT => "DYADIC_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h264`]
@@ -295,10 +330,6 @@ impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXT>
 for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264ProfileEXTBuilder<'_>>
 for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264CapabilitiesEXT>
-for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264CapabilitiesEXTBuilder<'_>>
-for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionCreateInfoEXT>
 for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264SessionCreateInfoEXTBuilder<'_>>
@@ -333,9 +364,13 @@ impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264RateControlLayerInfoEXTBuilder
 for crate::extensions::khr_video_encode_queue::VideoEncodeRateControlLayerInfoKHRBuilder<
     'a,
 > {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264CapabilitiesEXT>
+for crate::extensions::khr_video_encode_queue::VideoEncodeCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH264CapabilitiesEXTBuilder<'_>>
+for crate::extensions::khr_video_encode_queue::VideoEncodeCapabilitiesKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264CapabilitiesEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264CapabilitiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264CapabilitiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -343,13 +378,14 @@ pub struct VideoEncodeH264CapabilitiesEXT {
     pub flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagsEXT,
     pub input_mode_flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264InputModeFlagsEXT,
     pub output_mode_flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264OutputModeFlagsEXT,
-    pub min_picture_size_in_mbs: crate::vk1_0::Extent2D,
-    pub max_picture_size_in_mbs: crate::vk1_0::Extent2D,
-    pub input_image_data_alignment: crate::vk1_0::Extent2D,
-    pub max_num_l0_reference_for_p: u8,
-    pub max_num_l0_reference_for_b: u8,
-    pub max_num_l1_reference: u8,
-    pub quality_level_count: u8,
+    pub max_p_picture_l0_reference_count: u8,
+    pub max_b_picture_l0_reference_count: u8,
+    pub max_l1_reference_count: u8,
+    pub motion_vectors_over_pic_boundaries_flag: crate::vk1_0::Bool32,
+    pub max_bytes_per_pic_denom: u32,
+    pub max_bits_per_mb_denom: u32,
+    pub log2_max_mv_length_horizontal: u32,
+    pub log2_max_mv_length_vertical: u32,
     pub std_extension_version: crate::vk1_0::ExtensionProperties,
 }
 impl VideoEncodeH264CapabilitiesEXT {
@@ -363,33 +399,43 @@ impl Default for VideoEncodeH264CapabilitiesEXT {
             flags: Default::default(),
             input_mode_flags: Default::default(),
             output_mode_flags: Default::default(),
-            min_picture_size_in_mbs: Default::default(),
-            max_picture_size_in_mbs: Default::default(),
-            input_image_data_alignment: Default::default(),
-            max_num_l0_reference_for_p: Default::default(),
-            max_num_l0_reference_for_b: Default::default(),
-            max_num_l1_reference: Default::default(),
-            quality_level_count: Default::default(),
+            max_p_picture_l0_reference_count: Default::default(),
+            max_b_picture_l0_reference_count: Default::default(),
+            max_l1_reference_count: Default::default(),
+            motion_vectors_over_pic_boundaries_flag: Default::default(),
+            max_bytes_per_pic_denom: Default::default(),
+            max_bits_per_mb_denom: Default::default(),
+            log2_max_mv_length_horizontal: Default::default(),
+            log2_max_mv_length_vertical: Default::default(),
             std_extension_version: Default::default(),
         }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264CapabilitiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264CapabilitiesEXT")
+        f.debug_struct("VideoEncodeH264CapabilitiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
             .field("input_mode_flags", &self.input_mode_flags)
             .field("output_mode_flags", &self.output_mode_flags)
-            .field("min_picture_size_in_mbs", &self.min_picture_size_in_mbs)
-            .field("max_picture_size_in_mbs", &self.max_picture_size_in_mbs)
-            .field("input_image_data_alignment", &self.input_image_data_alignment)
-            .field("max_num_l0_reference_for_p", &self.max_num_l0_reference_for_p)
-            .field("max_num_l0_reference_for_b", &self.max_num_l0_reference_for_b)
-            .field("max_num_l1_reference", &self.max_num_l1_reference)
-            .field("quality_level_count", &self.quality_level_count)
+            .field(
+                "max_p_picture_l0_reference_count",
+                &self.max_p_picture_l0_reference_count,
+            )
+            .field(
+                "max_b_picture_l0_reference_count",
+                &self.max_b_picture_l0_reference_count,
+            )
+            .field("max_l1_reference_count", &self.max_l1_reference_count)
+            .field(
+                "motion_vectors_over_pic_boundaries_flag",
+                &(self.motion_vectors_over_pic_boundaries_flag != 0),
+            )
+            .field("max_bytes_per_pic_denom", &self.max_bytes_per_pic_denom)
+            .field("max_bits_per_mb_denom", &self.max_bits_per_mb_denom)
+            .field("log2_max_mv_length_horizontal", &self.log2_max_mv_length_horizontal)
+            .field("log2_max_mv_length_vertical", &self.log2_max_mv_length_vertical)
             .field("std_extension_version", &self.std_extension_version)
             .finish()
     }
@@ -444,53 +490,68 @@ impl<'a> VideoEncodeH264CapabilitiesEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn min_picture_size_in_mbs(
+    pub fn max_p_picture_l0_reference_count(
         mut self,
-        min_picture_size_in_mbs: crate::vk1_0::Extent2D,
+        max_p_picture_l0_reference_count: u8,
     ) -> Self {
-        self.0.min_picture_size_in_mbs = min_picture_size_in_mbs as _;
+        self.0.max_p_picture_l0_reference_count = max_p_picture_l0_reference_count as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_picture_size_in_mbs(
+    pub fn max_b_picture_l0_reference_count(
         mut self,
-        max_picture_size_in_mbs: crate::vk1_0::Extent2D,
+        max_b_picture_l0_reference_count: u8,
     ) -> Self {
-        self.0.max_picture_size_in_mbs = max_picture_size_in_mbs as _;
+        self.0.max_b_picture_l0_reference_count = max_b_picture_l0_reference_count as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn input_image_data_alignment(
+    pub fn max_l1_reference_count(mut self, max_l1_reference_count: u8) -> Self {
+        self.0.max_l1_reference_count = max_l1_reference_count as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn motion_vectors_over_pic_boundaries_flag(
         mut self,
-        input_image_data_alignment: crate::vk1_0::Extent2D,
+        motion_vectors_over_pic_boundaries_flag: bool,
     ) -> Self {
-        self.0.input_image_data_alignment = input_image_data_alignment as _;
+        self
+            .0
+            .motion_vectors_over_pic_boundaries_flag = motion_vectors_over_pic_boundaries_flag
+            as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_num_l0_reference_for_p(mut self, max_num_l0_reference_for_p: u8) -> Self {
-        self.0.max_num_l0_reference_for_p = max_num_l0_reference_for_p as _;
+    pub fn max_bytes_per_pic_denom(mut self, max_bytes_per_pic_denom: u32) -> Self {
+        self.0.max_bytes_per_pic_denom = max_bytes_per_pic_denom as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_num_l0_reference_for_b(mut self, max_num_l0_reference_for_b: u8) -> Self {
-        self.0.max_num_l0_reference_for_b = max_num_l0_reference_for_b as _;
+    pub fn max_bits_per_mb_denom(mut self, max_bits_per_mb_denom: u32) -> Self {
+        self.0.max_bits_per_mb_denom = max_bits_per_mb_denom as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_num_l1_reference(mut self, max_num_l1_reference: u8) -> Self {
-        self.0.max_num_l1_reference = max_num_l1_reference as _;
+    pub fn log2_max_mv_length_horizontal(
+        mut self,
+        log2_max_mv_length_horizontal: u32,
+    ) -> Self {
+        self.0.log2_max_mv_length_horizontal = log2_max_mv_length_horizontal as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn quality_level_count(mut self, quality_level_count: u8) -> Self {
-        self.0.quality_level_count = quality_level_count as _;
+    pub fn log2_max_mv_length_vertical(
+        mut self,
+        log2_max_mv_length_vertical: u32,
+    ) -> Self {
+        self.0.log2_max_mv_length_vertical = log2_max_mv_length_vertical as _;
         self
     }
     #[inline]
@@ -532,7 +593,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264CapabilitiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264SessionCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264SessionCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264SessionCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -557,8 +618,7 @@ impl Default for VideoEncodeH264SessionCreateInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264SessionCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264SessionCreateInfoEXT")
+        f.debug_struct("VideoEncodeH264SessionCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -645,7 +705,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264SessionCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264SessionParametersAddInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264SessionParametersAddInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264SessionParametersAddInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -672,8 +732,7 @@ impl Default for VideoEncodeH264SessionParametersAddInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264SessionParametersAddInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264SessionParametersAddInfoEXT")
+        f.debug_struct("VideoEncodeH264SessionParametersAddInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sps_std_count", &self.sps_std_count)
@@ -757,7 +816,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264SessionParametersAddInfoEXTBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264SessionParametersCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264SessionParametersCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264SessionParametersCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -782,8 +841,7 @@ impl Default for VideoEncodeH264SessionParametersCreateInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264SessionParametersCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264SessionParametersCreateInfoEXT")
+        f.debug_struct("VideoEncodeH264SessionParametersCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_sps_std_count", &self.max_sps_std_count)
@@ -871,13 +929,13 @@ for VideoEncodeH264SessionParametersCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264DpbSlotInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264DpbSlotInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264DpbSlotInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub slot_index: i8,
-    pub p_std_picture_info: *const crate::external::vk_video::StdVideoEncodeH264PictureInfo,
+    pub p_std_reference_info: *const crate::external::vk_video::StdVideoEncodeH264ReferenceInfo,
 }
 impl VideoEncodeH264DpbSlotInfoEXT {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT;
@@ -888,18 +946,17 @@ impl Default for VideoEncodeH264DpbSlotInfoEXT {
             s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null(),
             slot_index: Default::default(),
-            p_std_picture_info: std::ptr::null(),
+            p_std_reference_info: std::ptr::null(),
         }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264DpbSlotInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264DpbSlotInfoEXT")
+        f.debug_struct("VideoEncodeH264DpbSlotInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("slot_index", &self.slot_index)
-            .field("p_std_picture_info", &self.p_std_picture_info)
+            .field("p_std_reference_info", &self.p_std_reference_info)
             .finish()
     }
 }
@@ -932,11 +989,11 @@ impl<'a> VideoEncodeH264DpbSlotInfoEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn std_picture_info(
+    pub fn std_reference_info(
         mut self,
-        std_picture_info: &'a crate::external::vk_video::StdVideoEncodeH264PictureInfo,
+        std_reference_info: &'a crate::external::vk_video::StdVideoEncodeH264ReferenceInfo,
     ) -> Self {
-        self.0.p_std_picture_info = std_picture_info as _;
+        self.0.p_std_reference_info = std_reference_info as _;
         self
     }
     #[inline]
@@ -969,18 +1026,15 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264DpbSlotInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264VclFrameInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264VclFrameInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264VclFrameInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub ref_default_final_list0_entry_count: u8,
-    pub p_ref_default_final_list0_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
-    pub ref_default_final_list1_entry_count: u8,
-    pub p_ref_default_final_list1_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
+    pub p_reference_final_lists: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264ReferenceListsEXT,
     pub nalu_slice_entry_count: u32,
     pub p_nalu_slice_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264NaluSliceEXT,
-    pub p_current_picture_info: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
+    pub p_current_picture_info: *const crate::external::vk_video::StdVideoEncodeH264PictureInfo,
 }
 impl VideoEncodeH264VclFrameInfoEXT {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT;
@@ -990,10 +1044,7 @@ impl Default for VideoEncodeH264VclFrameInfoEXT {
         Self {
             s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null(),
-            ref_default_final_list0_entry_count: Default::default(),
-            p_ref_default_final_list0_entries: std::ptr::null(),
-            ref_default_final_list1_entry_count: Default::default(),
-            p_ref_default_final_list1_entries: std::ptr::null(),
+            p_reference_final_lists: std::ptr::null(),
             nalu_slice_entry_count: Default::default(),
             p_nalu_slice_entries: std::ptr::null(),
             p_current_picture_info: std::ptr::null(),
@@ -1002,26 +1053,10 @@ impl Default for VideoEncodeH264VclFrameInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264VclFrameInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264VclFrameInfoEXT")
+        f.debug_struct("VideoEncodeH264VclFrameInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field(
-                "ref_default_final_list0_entry_count",
-                &self.ref_default_final_list0_entry_count,
-            )
-            .field(
-                "p_ref_default_final_list0_entries",
-                &self.p_ref_default_final_list0_entries,
-            )
-            .field(
-                "ref_default_final_list1_entry_count",
-                &self.ref_default_final_list1_entry_count,
-            )
-            .field(
-                "p_ref_default_final_list1_entries",
-                &self.p_ref_default_final_list1_entries,
-            )
+            .field("p_reference_final_lists", &self.p_reference_final_lists)
             .field("nalu_slice_entry_count", &self.nalu_slice_entry_count)
             .field("p_nalu_slice_entries", &self.p_nalu_slice_entries)
             .field("p_current_picture_info", &self.p_current_picture_info)
@@ -1051,34 +1086,11 @@ impl<'a> VideoEncodeH264VclFrameInfoEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn ref_default_final_list0_entries(
+    pub fn reference_final_lists(
         mut self,
-        ref_default_final_list0_entries: &'a [crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXTBuilder],
+        reference_final_lists: &'a crate::extensions::ext_video_encode_h264::VideoEncodeH264ReferenceListsEXT,
     ) -> Self {
-        self
-            .0
-            .p_ref_default_final_list0_entries = ref_default_final_list0_entries.as_ptr()
-            as _;
-        self
-            .0
-            .ref_default_final_list0_entry_count = ref_default_final_list0_entries.len()
-            as _;
-        self
-    }
-    #[inline]
-    #[must_use]
-    pub fn ref_default_final_list1_entries(
-        mut self,
-        ref_default_final_list1_entries: &'a [crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXTBuilder],
-    ) -> Self {
-        self
-            .0
-            .p_ref_default_final_list1_entries = ref_default_final_list1_entries.as_ptr()
-            as _;
-        self
-            .0
-            .ref_default_final_list1_entry_count = ref_default_final_list1_entries.len()
-            as _;
+        self.0.p_reference_final_lists = reference_final_lists as _;
         self
     }
     #[inline]
@@ -1095,7 +1107,7 @@ impl<'a> VideoEncodeH264VclFrameInfoEXTBuilder<'a> {
     #[must_use]
     pub fn current_picture_info(
         mut self,
-        current_picture_info: &'a crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
+        current_picture_info: &'a crate::external::vk_video::StdVideoEncodeH264PictureInfo,
     ) -> Self {
         self.0.p_current_picture_info = current_picture_info as _;
         self
@@ -1128,9 +1140,129 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264VclFrameInfoEXTBuilder<'a> {
         &mut self.0
     }
 }
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264ReferenceListsEXT.html) · Structure
+#[doc(alias = "VkVideoEncodeH264ReferenceListsEXT")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct VideoEncodeH264ReferenceListsEXT {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const std::ffi::c_void,
+    pub reference_list0_entry_count: u8,
+    pub p_reference_list0_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
+    pub reference_list1_entry_count: u8,
+    pub p_reference_list1_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
+    pub p_mem_mgmt_ctrl_operations: *const crate::external::vk_video::StdVideoEncodeH264RefMemMgmtCtrlOperations,
+}
+impl VideoEncodeH264ReferenceListsEXT {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H264_REFERENCE_LISTS_EXT;
+}
+impl Default for VideoEncodeH264ReferenceListsEXT {
+    fn default() -> Self {
+        Self {
+            s_type: Self::STRUCTURE_TYPE,
+            p_next: std::ptr::null(),
+            reference_list0_entry_count: Default::default(),
+            p_reference_list0_entries: std::ptr::null(),
+            reference_list1_entry_count: Default::default(),
+            p_reference_list1_entries: std::ptr::null(),
+            p_mem_mgmt_ctrl_operations: std::ptr::null(),
+        }
+    }
+}
+impl std::fmt::Debug for VideoEncodeH264ReferenceListsEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VideoEncodeH264ReferenceListsEXT")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("reference_list0_entry_count", &self.reference_list0_entry_count)
+            .field("p_reference_list0_entries", &self.p_reference_list0_entries)
+            .field("reference_list1_entry_count", &self.reference_list1_entry_count)
+            .field("p_reference_list1_entries", &self.p_reference_list1_entries)
+            .field("p_mem_mgmt_ctrl_operations", &self.p_mem_mgmt_ctrl_operations)
+            .finish()
+    }
+}
+impl VideoEncodeH264ReferenceListsEXT {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+        VideoEncodeH264ReferenceListsEXTBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264ReferenceListsEXT.html) · Builder of [`VideoEncodeH264ReferenceListsEXT`]
+#[repr(transparent)]
+pub struct VideoEncodeH264ReferenceListsEXTBuilder<'a>(
+    VideoEncodeH264ReferenceListsEXT,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+    #[inline]
+    pub fn new() -> VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+        VideoEncodeH264ReferenceListsEXTBuilder(
+            Default::default(),
+            std::marker::PhantomData,
+        )
+    }
+    #[inline]
+    #[must_use]
+    pub fn reference_list0_entries(
+        mut self,
+        reference_list0_entries: &'a [crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXTBuilder],
+    ) -> Self {
+        self.0.p_reference_list0_entries = reference_list0_entries.as_ptr() as _;
+        self.0.reference_list0_entry_count = reference_list0_entries.len() as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn reference_list1_entries(
+        mut self,
+        reference_list1_entries: &'a [crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXTBuilder],
+    ) -> Self {
+        self.0.p_reference_list1_entries = reference_list1_entries.as_ptr() as _;
+        self.0.reference_list1_entry_count = reference_list1_entries.len() as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn mem_mgmt_ctrl_operations(
+        mut self,
+        mem_mgmt_ctrl_operations: &'a crate::external::vk_video::StdVideoEncodeH264RefMemMgmtCtrlOperations,
+    ) -> Self {
+        self.0.p_mem_mgmt_ctrl_operations = mem_mgmt_ctrl_operations as _;
+        self
+    }
+    #[inline]
+    /// Discards all lifetime information.
+    /// Use the `Deref` and `DerefMut` implementations if possible.
+    pub fn build_dangling(self) -> VideoEncodeH264ReferenceListsEXT {
+        self.0
+    }
+}
+impl<'a> std::default::Default for VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+    fn default() -> VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+    type Target = VideoEncodeH264ReferenceListsEXT;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for VideoEncodeH264ReferenceListsEXTBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264EmitPictureParametersEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264EmitPictureParametersEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264EmitPictureParametersEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1157,8 +1289,7 @@ impl Default for VideoEncodeH264EmitPictureParametersEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264EmitPictureParametersEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264EmitPictureParametersEXT")
+        f.debug_struct("VideoEncodeH264EmitPictureParametersEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sps_id", &self.sps_id)
@@ -1238,7 +1369,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264EmitPictureParametersEXTBuilder<'
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264ProfileEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264ProfileEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264ProfileEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1259,8 +1390,7 @@ impl Default for VideoEncodeH264ProfileEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264ProfileEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264ProfileEXT")
+        f.debug_struct("VideoEncodeH264ProfileEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("std_profile_idc", &self.std_profile_idc)
@@ -1324,17 +1454,14 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264ProfileEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264NaluSliceEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264NaluSliceEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264NaluSliceEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
-    pub p_slice_header_std: *const crate::external::vk_video::StdVideoEncodeH264SliceHeader,
     pub mb_count: u32,
-    pub ref_final_list0_entry_count: u8,
-    pub p_ref_final_list0_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
-    pub ref_final_list1_entry_count: u8,
-    pub p_ref_final_list1_entries: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXT,
+    pub p_reference_final_lists: *const crate::extensions::ext_video_encode_h264::VideoEncodeH264ReferenceListsEXT,
+    pub p_slice_header_std: *const crate::external::vk_video::StdVideoEncodeH264SliceHeader,
 }
 impl VideoEncodeH264NaluSliceEXT {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_H264_NALU_SLICE_EXT;
@@ -1344,27 +1471,20 @@ impl Default for VideoEncodeH264NaluSliceEXT {
         Self {
             s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null(),
-            p_slice_header_std: std::ptr::null(),
             mb_count: Default::default(),
-            ref_final_list0_entry_count: Default::default(),
-            p_ref_final_list0_entries: std::ptr::null(),
-            ref_final_list1_entry_count: Default::default(),
-            p_ref_final_list1_entries: std::ptr::null(),
+            p_reference_final_lists: std::ptr::null(),
+            p_slice_header_std: std::ptr::null(),
         }
     }
 }
 impl std::fmt::Debug for VideoEncodeH264NaluSliceEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264NaluSliceEXT")
+        f.debug_struct("VideoEncodeH264NaluSliceEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
-            .field("p_slice_header_std", &self.p_slice_header_std)
             .field("mb_count", &self.mb_count)
-            .field("ref_final_list0_entry_count", &self.ref_final_list0_entry_count)
-            .field("p_ref_final_list0_entries", &self.p_ref_final_list0_entries)
-            .field("ref_final_list1_entry_count", &self.ref_final_list1_entry_count)
-            .field("p_ref_final_list1_entries", &self.p_ref_final_list1_entries)
+            .field("p_reference_final_lists", &self.p_reference_final_lists)
+            .field("p_slice_header_std", &self.p_slice_header_std)
             .finish()
     }
 }
@@ -1388,37 +1508,26 @@ impl<'a> VideoEncodeH264NaluSliceEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn slice_header_std(
-        mut self,
-        slice_header_std: &'a crate::external::vk_video::StdVideoEncodeH264SliceHeader,
-    ) -> Self {
-        self.0.p_slice_header_std = slice_header_std as _;
-        self
-    }
-    #[inline]
-    #[must_use]
     pub fn mb_count(mut self, mb_count: u32) -> Self {
         self.0.mb_count = mb_count as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn ref_final_list0_entries(
+    pub fn reference_final_lists(
         mut self,
-        ref_final_list0_entries: &'a [crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXTBuilder],
+        reference_final_lists: &'a crate::extensions::ext_video_encode_h264::VideoEncodeH264ReferenceListsEXT,
     ) -> Self {
-        self.0.p_ref_final_list0_entries = ref_final_list0_entries.as_ptr() as _;
-        self.0.ref_final_list0_entry_count = ref_final_list0_entries.len() as _;
+        self.0.p_reference_final_lists = reference_final_lists as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn ref_final_list1_entries(
+    pub fn slice_header_std(
         mut self,
-        ref_final_list1_entries: &'a [crate::extensions::ext_video_encode_h264::VideoEncodeH264DpbSlotInfoEXTBuilder],
+        slice_header_std: &'a crate::external::vk_video::StdVideoEncodeH264SliceHeader,
     ) -> Self {
-        self.0.p_ref_final_list1_entries = ref_final_list1_entries.as_ptr() as _;
-        self.0.ref_final_list1_entry_count = ref_final_list1_entries.len() as _;
+        self.0.p_slice_header_std = slice_header_std as _;
         self
     }
     #[inline]
@@ -1451,7 +1560,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264NaluSliceEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264RateControlInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264RateControlInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264RateControlInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1480,8 +1589,7 @@ impl Default for VideoEncodeH264RateControlInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264RateControlInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264RateControlInfoEXT")
+        f.debug_struct("VideoEncodeH264RateControlInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("gop_frame_count", &self.gop_frame_count)
@@ -1576,7 +1684,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264RateControlInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264QpEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264QpEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VideoEncodeH264QpEXT {
     pub qp_i: i32,
@@ -1594,8 +1702,7 @@ impl Default for VideoEncodeH264QpEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264QpEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264QpEXT")
+        f.debug_struct("VideoEncodeH264QpEXT")
             .field("qp_i", &self.qp_i)
             .field("qp_p", &self.qp_p)
             .field("qp_b", &self.qp_b)
@@ -1666,7 +1773,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264QpEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264FrameSizeEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264FrameSizeEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VideoEncodeH264FrameSizeEXT {
     pub frame_i_size: u32,
@@ -1684,8 +1791,7 @@ impl Default for VideoEncodeH264FrameSizeEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264FrameSizeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264FrameSizeEXT")
+        f.debug_struct("VideoEncodeH264FrameSizeEXT")
             .field("frame_i_size", &self.frame_i_size)
             .field("frame_p_size", &self.frame_p_size)
             .field("frame_b_size", &self.frame_b_size)
@@ -1756,7 +1862,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH264FrameSizeEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264RateControlLayerInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH264RateControlLayerInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH264RateControlLayerInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1793,8 +1899,7 @@ impl Default for VideoEncodeH264RateControlLayerInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH264RateControlLayerInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH264RateControlLayerInfoEXT")
+        f.debug_struct("VideoEncodeH264RateControlLayerInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("temporal_layer_id", &self.temporal_layer_id)

@@ -26,18 +26,15 @@ impl crate::vk1_0::StructureType {
 pub struct TimeDomainEXT(pub i32);
 impl std::fmt::Debug for TimeDomainEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEVICE_EXT => "DEVICE_EXT",
-                    &Self::CLOCK_MONOTONIC_EXT => "CLOCK_MONOTONIC_EXT",
-                    &Self::CLOCK_MONOTONIC_RAW_EXT => "CLOCK_MONOTONIC_RAW_EXT",
-                    &Self::QUERY_PERFORMANCE_COUNTER_EXT => {
-                        "QUERY_PERFORMANCE_COUNTER_EXT"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEVICE_EXT => "DEVICE_EXT",
+                &Self::CLOCK_MONOTONIC_EXT => "CLOCK_MONOTONIC_EXT",
+                &Self::CLOCK_MONOTONIC_RAW_EXT => "CLOCK_MONOTONIC_RAW_EXT",
+                &Self::QUERY_PERFORMANCE_COUNTER_EXT => "QUERY_PERFORMANCE_COUNTER_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_calibrated_timestamps`]
@@ -65,7 +62,7 @@ pub type PFN_vkGetCalibratedTimestampsEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCalibratedTimestampInfoEXT.html) · Structure
 #[doc(alias = "VkCalibratedTimestampInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CalibratedTimestampInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -86,8 +83,7 @@ impl Default for CalibratedTimestampInfoEXT {
 }
 impl std::fmt::Debug for CalibratedTimestampInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CalibratedTimestampInfoEXT")
+        f.debug_struct("CalibratedTimestampInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("time_domain", &self.time_domain)

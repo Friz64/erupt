@@ -30,7 +30,7 @@ pub type PFN_vkCreateSharedSwapchainsKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPresentInfoKHR.html) · Structure
 #[doc(alias = "VkDisplayPresentInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayPresentInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -55,8 +55,7 @@ impl Default for DisplayPresentInfoKHR {
 }
 impl std::fmt::Debug for DisplayPresentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayPresentInfoKHR")
+        f.debug_struct("DisplayPresentInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_rect", &self.src_rect)

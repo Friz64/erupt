@@ -96,16 +96,15 @@ impl DeviceGroupPresentModeFlagBitsKHR {
 }
 impl std::fmt::Debug for DeviceGroupPresentModeFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::LOCAL_KHR => "LOCAL_KHR",
-                    &Self::REMOTE_KHR => "REMOTE_KHR",
-                    &Self::SUM_KHR => "SUM_KHR",
-                    &Self::LOCAL_MULTI_DEVICE_KHR => "LOCAL_MULTI_DEVICE_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::LOCAL_KHR => "LOCAL_KHR",
+                &Self::REMOTE_KHR => "REMOTE_KHR",
+                &Self::SUM_KHR => "SUM_KHR",
+                &Self::LOCAL_MULTI_DEVICE_KHR => "LOCAL_MULTI_DEVICE_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_swapchain`]
@@ -138,17 +137,16 @@ impl SwapchainCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for SwapchainCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SPLIT_INSTANCE_BIND_REGIONS_KHR => {
-                        "SPLIT_INSTANCE_BIND_REGIONS_KHR"
-                    }
-                    &Self::PROTECTED_KHR => "PROTECTED_KHR",
-                    &Self::MUTABLE_FORMAT_KHR => "MUTABLE_FORMAT_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SPLIT_INSTANCE_BIND_REGIONS_KHR => {
+                    "SPLIT_INSTANCE_BIND_REGIONS_KHR"
+                }
+                &Self::PROTECTED_KHR => "PROTECTED_KHR",
+                &Self::MUTABLE_FORMAT_KHR => "MUTABLE_FORMAT_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_swapchain`]
@@ -229,7 +227,7 @@ impl<'a> crate::ExtendableFrom<'a, ImageSwapchainCreateInfoKHRBuilder<'_>>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSwapchainCreateInfoKHR.html) · Structure
 #[doc(alias = "VkSwapchainCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SwapchainCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -280,8 +278,7 @@ impl Default for SwapchainCreateInfoKHR {
 }
 impl std::fmt::Debug for SwapchainCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SwapchainCreateInfoKHR")
+        f.debug_struct("SwapchainCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -470,7 +467,7 @@ impl<'a> std::ops::DerefMut for SwapchainCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentInfoKHR.html) · Structure
 #[doc(alias = "VkPresentInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -501,8 +498,7 @@ impl Default for PresentInfoKHR {
 }
 impl std::fmt::Debug for PresentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PresentInfoKHR")
+        f.debug_struct("PresentInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("wait_semaphore_count", &self.wait_semaphore_count)
@@ -601,7 +597,7 @@ impl<'a> crate::ExtendableFrom<'a, BindImageMemorySwapchainInfoKHRBuilder<'_>>
 for crate::vk1_1::BindImageMemoryInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkDeviceGroupPresentCapabilitiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupPresentCapabilitiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -624,8 +620,7 @@ impl Default for DeviceGroupPresentCapabilitiesKHR {
 }
 impl std::fmt::Debug for DeviceGroupPresentCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupPresentCapabilitiesKHR")
+        f.debug_struct("DeviceGroupPresentCapabilitiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("present_mask", &self.present_mask)
@@ -699,7 +694,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupPresentCapabilitiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSwapchainCreateInfoKHR.html) · Structure
 #[doc(alias = "VkImageSwapchainCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageSwapchainCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -720,8 +715,7 @@ impl Default for ImageSwapchainCreateInfoKHR {
 }
 impl std::fmt::Debug for ImageSwapchainCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageSwapchainCreateInfoKHR")
+        f.debug_struct("ImageSwapchainCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("swapchain", &self.swapchain)
@@ -785,7 +779,7 @@ impl<'a> std::ops::DerefMut for ImageSwapchainCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindImageMemorySwapchainInfoKHR.html) · Structure
 #[doc(alias = "VkBindImageMemorySwapchainInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindImageMemorySwapchainInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -808,8 +802,7 @@ impl Default for BindImageMemorySwapchainInfoKHR {
 }
 impl std::fmt::Debug for BindImageMemorySwapchainInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindImageMemorySwapchainInfoKHR")
+        f.debug_struct("BindImageMemorySwapchainInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("swapchain", &self.swapchain)
@@ -883,7 +876,7 @@ impl<'a> std::ops::DerefMut for BindImageMemorySwapchainInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAcquireNextImageInfoKHR.html) · Structure
 #[doc(alias = "VkAcquireNextImageInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AcquireNextImageInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -912,8 +905,7 @@ impl Default for AcquireNextImageInfoKHR {
 }
 impl std::fmt::Debug for AcquireNextImageInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AcquireNextImageInfoKHR")
+        f.debug_struct("AcquireNextImageInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("swapchain", &self.swapchain)
@@ -1005,7 +997,7 @@ impl<'a> std::ops::DerefMut for AcquireNextImageInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupPresentInfoKHR.html) · Structure
 #[doc(alias = "VkDeviceGroupPresentInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupPresentInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1030,8 +1022,7 @@ impl Default for DeviceGroupPresentInfoKHR {
 }
 impl std::fmt::Debug for DeviceGroupPresentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupPresentInfoKHR")
+        f.debug_struct("DeviceGroupPresentInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("swapchain_count", &self.swapchain_count)
@@ -1104,7 +1095,7 @@ impl<'a> std::ops::DerefMut for DeviceGroupPresentInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceGroupSwapchainCreateInfoKHR.html) · Structure
 #[doc(alias = "VkDeviceGroupSwapchainCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceGroupSwapchainCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1125,8 +1116,7 @@ impl Default for DeviceGroupSwapchainCreateInfoKHR {
 }
 impl std::fmt::Debug for DeviceGroupSwapchainCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceGroupSwapchainCreateInfoKHR")
+        f.debug_struct("DeviceGroupSwapchainCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("modes", &self.modes)

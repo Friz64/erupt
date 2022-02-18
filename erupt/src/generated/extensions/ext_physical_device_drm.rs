@@ -17,7 +17,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDrmPropertiesEXTBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDrmPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDrmPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDrmPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -48,8 +48,7 @@ impl Default for PhysicalDeviceDrmPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceDrmPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDrmPropertiesEXT")
+        f.debug_struct("PhysicalDeviceDrmPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("has_primary", &(self.has_primary != 0))

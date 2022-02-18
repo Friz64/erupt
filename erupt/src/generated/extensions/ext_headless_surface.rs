@@ -32,12 +32,11 @@ impl HeadlessSurfaceCreateFlagBitsEXT {
 }
 impl std::fmt::Debug for HeadlessSurfaceCreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_headless_surface`]
@@ -54,7 +53,7 @@ pub type PFN_vkCreateHeadlessSurfaceEXT = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkHeadlessSurfaceCreateInfoEXT.html) · Structure
 #[doc(alias = "VkHeadlessSurfaceCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct HeadlessSurfaceCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -75,8 +74,7 @@ impl Default for HeadlessSurfaceCreateInfoEXT {
 }
 impl std::fmt::Debug for HeadlessSurfaceCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("HeadlessSurfaceCreateInfoEXT")
+        f.debug_struct("HeadlessSurfaceCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

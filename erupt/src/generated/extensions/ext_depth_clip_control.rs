@@ -30,7 +30,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDepthClipControlFeaturesEXTBuil
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDepthClipControlFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDepthClipControlFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDepthClipControlFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -51,8 +51,7 @@ impl Default for PhysicalDeviceDepthClipControlFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceDepthClipControlFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDepthClipControlFeaturesEXT")
+        f.debug_struct("PhysicalDeviceDepthClipControlFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("depth_clip_control", &(self.depth_clip_control != 0))
@@ -118,7 +117,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDepthClipControlFeaturesEXTBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportDepthClipControlCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineViewportDepthClipControlCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportDepthClipControlCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -139,8 +138,7 @@ impl Default for PipelineViewportDepthClipControlCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineViewportDepthClipControlCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineViewportDepthClipControlCreateInfoEXT")
+        f.debug_struct("PipelineViewportDepthClipControlCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("negative_one_to_one", &(self.negative_one_to_one != 0))

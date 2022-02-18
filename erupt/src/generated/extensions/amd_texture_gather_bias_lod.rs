@@ -17,7 +17,7 @@ impl<'a> crate::ExtendableFrom<'a, TextureLODGatherFormatPropertiesAMDBuilder<'_
 for crate::vk1_1::ImageFormatProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTextureLODGatherFormatPropertiesAMD.html) · Structure
 #[doc(alias = "VkTextureLODGatherFormatPropertiesAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct TextureLODGatherFormatPropertiesAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -38,8 +38,7 @@ impl Default for TextureLODGatherFormatPropertiesAMD {
 }
 impl std::fmt::Debug for TextureLODGatherFormatPropertiesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("TextureLODGatherFormatPropertiesAMD")
+        f.debug_struct("TextureLODGatherFormatPropertiesAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

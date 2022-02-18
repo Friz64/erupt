@@ -21,7 +21,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRayQueryFeaturesKHRBuilder<'_>>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayQueryFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayQueryFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRayQueryFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -42,8 +42,7 @@ impl Default for PhysicalDeviceRayQueryFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceRayQueryFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceRayQueryFeaturesKHR")
+        f.debug_struct("PhysicalDeviceRayQueryFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ray_query", &(self.ray_query != 0))

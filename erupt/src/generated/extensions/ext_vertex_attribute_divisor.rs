@@ -45,7 +45,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDivisorDescriptionEXT.html) · Structure
 #[doc(alias = "VkVertexInputBindingDivisorDescriptionEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VertexInputBindingDivisorDescriptionEXT {
     pub binding: u32,
@@ -61,8 +61,7 @@ impl Default for VertexInputBindingDivisorDescriptionEXT {
 }
 impl std::fmt::Debug for VertexInputBindingDivisorDescriptionEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VertexInputBindingDivisorDescriptionEXT")
+        f.debug_struct("VertexInputBindingDivisorDescriptionEXT")
             .field("binding", &self.binding)
             .field("divisor", &self.divisor)
             .finish()
@@ -129,7 +128,7 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDivisorDescriptionEXTBuilder<'
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputDivisorStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineVertexInputDivisorStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineVertexInputDivisorStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -152,8 +151,7 @@ impl Default for PipelineVertexInputDivisorStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineVertexInputDivisorStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineVertexInputDivisorStateCreateInfoEXT")
+        f.debug_struct("PipelineVertexInputDivisorStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("vertex_binding_divisor_count", &self.vertex_binding_divisor_count)
@@ -228,7 +226,7 @@ impl<'a> std::ops::DerefMut for PipelineVertexInputDivisorStateCreateInfoEXTBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -249,8 +247,7 @@ impl Default for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceVertexAttributeDivisorPropertiesEXT")
+        f.debug_struct("PhysicalDeviceVertexAttributeDivisorPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_vertex_attrib_divisor", &self.max_vertex_attrib_divisor)
@@ -323,7 +320,7 @@ for PhysicalDeviceVertexAttributeDivisorPropertiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -346,8 +343,7 @@ impl Default for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceVertexAttributeDivisorFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceVertexAttributeDivisorFeaturesEXT")
+        f.debug_struct("PhysicalDeviceVertexAttributeDivisorFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

@@ -26,7 +26,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderSMBuiltinsPropertiesNVBui
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderSMBuiltinsPropertiesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -49,8 +49,7 @@ impl Default for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderSMBuiltinsPropertiesNV")
+        f.debug_struct("PhysicalDeviceShaderSMBuiltinsPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_sm_count", &self.shader_sm_count)
@@ -124,7 +123,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceShaderSMBuiltinsPropertiesNVBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderSMBuiltinsFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderSMBuiltinsFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -145,8 +144,7 @@ impl Default for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderSMBuiltinsFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderSMBuiltinsFeaturesNV")
+        f.debug_struct("PhysicalDeviceShaderSMBuiltinsFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_sm_builtins", &(self.shader_sm_builtins != 0))

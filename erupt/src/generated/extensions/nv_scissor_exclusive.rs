@@ -46,7 +46,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceExclusiveScissorFeaturesNVBuild
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExclusiveScissorFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExclusiveScissorFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExclusiveScissorFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -67,8 +67,7 @@ impl Default for PhysicalDeviceExclusiveScissorFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceExclusiveScissorFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceExclusiveScissorFeaturesNV")
+        f.debug_struct("PhysicalDeviceExclusiveScissorFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("exclusive_scissor", &(self.exclusive_scissor != 0))
@@ -134,7 +133,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceExclusiveScissorFeaturesNVBuilder<
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportExclusiveScissorStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineViewportExclusiveScissorStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportExclusiveScissorStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -157,8 +156,7 @@ impl Default for PipelineViewportExclusiveScissorStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineViewportExclusiveScissorStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineViewportExclusiveScissorStateCreateInfoNV")
+        f.debug_struct("PipelineViewportExclusiveScissorStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("exclusive_scissor_count", &self.exclusive_scissor_count)

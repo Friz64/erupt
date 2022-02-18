@@ -26,7 +26,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMemoryPriorityFeaturesEXTBuilde
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMemoryPriorityFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMemoryPriorityFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMemoryPriorityFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -47,8 +47,7 @@ impl Default for PhysicalDeviceMemoryPriorityFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryPriorityFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMemoryPriorityFeaturesEXT")
+        f.debug_struct("PhysicalDeviceMemoryPriorityFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_priority", &(self.memory_priority != 0))
@@ -112,7 +111,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryPriorityFeaturesEXTBuilder<'
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryPriorityAllocateInfoEXT.html) · Structure
 #[doc(alias = "VkMemoryPriorityAllocateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryPriorityAllocateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -133,8 +132,7 @@ impl Default for MemoryPriorityAllocateInfoEXT {
 }
 impl std::fmt::Debug for MemoryPriorityAllocateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryPriorityAllocateInfoEXT")
+        f.debug_struct("MemoryPriorityAllocateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("priority", &self.priority)

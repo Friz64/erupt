@@ -34,7 +34,7 @@ impl<'a> crate::ExtendableFrom<'a, ExportMemoryWin32HandleInfoNVBuilder<'_>>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryWin32HandleInfoNV.html) · Structure
 #[doc(alias = "VkImportMemoryWin32HandleInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportMemoryWin32HandleInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -57,8 +57,7 @@ impl Default for ImportMemoryWin32HandleInfoNV {
 }
 impl std::fmt::Debug for ImportMemoryWin32HandleInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportMemoryWin32HandleInfoNV")
+        f.debug_struct("ImportMemoryWin32HandleInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -132,7 +131,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryWin32HandleInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryWin32HandleInfoNV.html) · Structure
 #[doc(alias = "VkExportMemoryWin32HandleInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportMemoryWin32HandleInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -155,8 +154,7 @@ impl Default for ExportMemoryWin32HandleInfoNV {
 }
 impl std::fmt::Debug for ExportMemoryWin32HandleInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportMemoryWin32HandleInfoNV")
+        f.debug_struct("ExportMemoryWin32HandleInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_attributes", &self.p_attributes)

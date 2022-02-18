@@ -33,7 +33,7 @@ impl<'a> crate::ExtendableFrom<'a, PipelineViewportWScalingStateCreateInfoNVBuil
 for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportWScalingNV.html) · Structure
 #[doc(alias = "VkViewportWScalingNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ViewportWScalingNV {
     pub xcoeff: std::os::raw::c_float,
@@ -49,8 +49,7 @@ impl Default for ViewportWScalingNV {
 }
 impl std::fmt::Debug for ViewportWScalingNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ViewportWScalingNV")
+        f.debug_struct("ViewportWScalingNV")
             .field("xcoeff", &self.xcoeff)
             .field("ycoeff", &self.ycoeff)
             .finish()
@@ -114,7 +113,7 @@ impl<'a> std::ops::DerefMut for ViewportWScalingNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportWScalingStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineViewportWScalingStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportWScalingStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -139,8 +138,7 @@ impl Default for PipelineViewportWScalingStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineViewportWScalingStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineViewportWScalingStateCreateInfoNV")
+        f.debug_struct("PipelineViewportWScalingStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("viewport_w_scaling_enable", &(self.viewport_w_scaling_enable != 0))

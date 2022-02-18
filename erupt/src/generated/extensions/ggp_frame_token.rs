@@ -17,7 +17,7 @@ impl<'a> crate::ExtendableFrom<'a, PresentFrameTokenGGPBuilder<'_>>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentFrameTokenGGP.html) · Structure
 #[doc(alias = "VkPresentFrameTokenGGP")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentFrameTokenGGP {
     pub s_type: crate::vk1_0::StructureType,
@@ -38,8 +38,7 @@ impl Default for PresentFrameTokenGGP {
 }
 impl std::fmt::Debug for PresentFrameTokenGGP {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PresentFrameTokenGGP")
+        f.debug_struct("PresentFrameTokenGGP")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("frame_token", &self.frame_token)

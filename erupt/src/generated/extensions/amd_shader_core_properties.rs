@@ -17,7 +17,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCorePropertiesAMDBuilder<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCorePropertiesAMD.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderCorePropertiesAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderCorePropertiesAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -64,8 +64,7 @@ impl Default for PhysicalDeviceShaderCorePropertiesAMD {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderCorePropertiesAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderCorePropertiesAMD")
+        f.debug_struct("PhysicalDeviceShaderCorePropertiesAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_engine_count", &self.shader_engine_count)

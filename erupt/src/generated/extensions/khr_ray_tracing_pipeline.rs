@@ -90,15 +90,14 @@ impl crate::vk1_0::PipelineStageFlagBits {
 pub struct RayTracingShaderGroupTypeKHR(pub i32);
 impl std::fmt::Debug for RayTracingShaderGroupTypeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::GENERAL_KHR => "GENERAL_KHR",
-                    &Self::TRIANGLES_HIT_GROUP_KHR => "TRIANGLES_HIT_GROUP_KHR",
-                    &Self::PROCEDURAL_HIT_GROUP_KHR => "PROCEDURAL_HIT_GROUP_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::GENERAL_KHR => "GENERAL_KHR",
+                &Self::TRIANGLES_HIT_GROUP_KHR => "TRIANGLES_HIT_GROUP_KHR",
+                &Self::PROCEDURAL_HIT_GROUP_KHR => "PROCEDURAL_HIT_GROUP_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_ray_tracing_pipeline`]
@@ -114,16 +113,15 @@ impl crate::extensions::khr_ray_tracing_pipeline::RayTracingShaderGroupTypeKHR {
 pub struct ShaderGroupShaderKHR(pub i32);
 impl std::fmt::Debug for ShaderGroupShaderKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::GENERAL_KHR => "GENERAL_KHR",
-                    &Self::CLOSEST_HIT_KHR => "CLOSEST_HIT_KHR",
-                    &Self::ANY_HIT_KHR => "ANY_HIT_KHR",
-                    &Self::INTERSECTION_KHR => "INTERSECTION_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::GENERAL_KHR => "GENERAL_KHR",
+                &Self::CLOSEST_HIT_KHR => "CLOSEST_HIT_KHR",
+                &Self::ANY_HIT_KHR => "ANY_HIT_KHR",
+                &Self::INTERSECTION_KHR => "INTERSECTION_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_ray_tracing_pipeline`]
@@ -220,7 +218,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingShaderGroupCreateInfoKHR.html) · Structure
 #[doc(alias = "VkRayTracingShaderGroupCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingShaderGroupCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -251,8 +249,7 @@ impl Default for RayTracingShaderGroupCreateInfoKHR {
 }
 impl std::fmt::Debug for RayTracingShaderGroupCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RayTracingShaderGroupCreateInfoKHR")
+        f.debug_struct("RayTracingShaderGroupCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("_type", &self._type)
@@ -360,7 +357,7 @@ impl<'a> std::ops::DerefMut for RayTracingShaderGroupCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineCreateInfoKHR.html) · Structure
 #[doc(alias = "VkRayTracingPipelineCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingPipelineCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -403,8 +400,7 @@ impl Default for RayTracingPipelineCreateInfoKHR {
 }
 impl std::fmt::Debug for RayTracingPipelineCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RayTracingPipelineCreateInfoKHR")
+        f.debug_struct("RayTracingPipelineCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -559,7 +555,7 @@ impl<'a> std::ops::DerefMut for RayTracingPipelineCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingPipelineFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayTracingPipelineFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRayTracingPipelineFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -588,8 +584,7 @@ impl Default for PhysicalDeviceRayTracingPipelineFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPipelineFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceRayTracingPipelineFeaturesKHR")
+        f.debug_struct("PhysicalDeviceRayTracingPipelineFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ray_tracing_pipeline", &(self.ray_tracing_pipeline != 0))
@@ -721,7 +716,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceRayTracingPipelineFeaturesKHRBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRayTracingPipelinePropertiesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRayTracingPipelinePropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRayTracingPipelinePropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -756,8 +751,7 @@ impl Default for PhysicalDeviceRayTracingPipelinePropertiesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceRayTracingPipelinePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceRayTracingPipelinePropertiesKHR")
+        f.debug_struct("PhysicalDeviceRayTracingPipelinePropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_group_handle_size", &self.shader_group_handle_size)
@@ -903,7 +897,7 @@ for PhysicalDeviceRayTracingPipelinePropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkStridedDeviceAddressRegionKHR.html) · Structure
 #[doc(alias = "VkStridedDeviceAddressRegionKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StridedDeviceAddressRegionKHR {
     pub device_address: crate::vk1_0::DeviceAddress,
@@ -921,8 +915,7 @@ impl Default for StridedDeviceAddressRegionKHR {
 }
 impl std::fmt::Debug for StridedDeviceAddressRegionKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("StridedDeviceAddressRegionKHR")
+        f.debug_struct("StridedDeviceAddressRegionKHR")
             .field("device_address", &self.device_address)
             .field("stride", &self.stride)
             .field("size", &self.size)
@@ -999,7 +992,7 @@ impl<'a> std::ops::DerefMut for StridedDeviceAddressRegionKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkTraceRaysIndirectCommandKHR.html) · Structure
 #[doc(alias = "VkTraceRaysIndirectCommandKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct TraceRaysIndirectCommandKHR {
     pub width: u32,
@@ -1017,8 +1010,7 @@ impl Default for TraceRaysIndirectCommandKHR {
 }
 impl std::fmt::Debug for TraceRaysIndirectCommandKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("TraceRaysIndirectCommandKHR")
+        f.debug_struct("TraceRaysIndirectCommandKHR")
             .field("width", &self.width)
             .field("height", &self.height)
             .field("depth", &self.depth)
@@ -1089,7 +1081,7 @@ impl<'a> std::ops::DerefMut for TraceRaysIndirectCommandKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRayTracingPipelineInterfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkRayTracingPipelineInterfaceCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RayTracingPipelineInterfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1112,8 +1104,7 @@ impl Default for RayTracingPipelineInterfaceCreateInfoKHR {
 }
 impl std::fmt::Debug for RayTracingPipelineInterfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RayTracingPipelineInterfaceCreateInfoKHR")
+        f.debug_struct("RayTracingPipelineInterfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_pipeline_ray_payload_size", &self.max_pipeline_ray_payload_size)

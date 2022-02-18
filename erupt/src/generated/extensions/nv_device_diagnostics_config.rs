@@ -38,17 +38,16 @@ impl DeviceDiagnosticsConfigFlagBitsNV {
 }
 impl std::fmt::Debug for DeviceDiagnosticsConfigFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ENABLE_SHADER_DEBUG_INFO_NV => "ENABLE_SHADER_DEBUG_INFO_NV",
-                    &Self::ENABLE_RESOURCE_TRACKING_NV => "ENABLE_RESOURCE_TRACKING_NV",
-                    &Self::ENABLE_AUTOMATIC_CHECKPOINTS_NV => {
-                        "ENABLE_AUTOMATIC_CHECKPOINTS_NV"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ENABLE_SHADER_DEBUG_INFO_NV => "ENABLE_SHADER_DEBUG_INFO_NV",
+                &Self::ENABLE_RESOURCE_TRACKING_NV => "ENABLE_RESOURCE_TRACKING_NV",
+                &Self::ENABLE_AUTOMATIC_CHECKPOINTS_NV => {
+                    "ENABLE_AUTOMATIC_CHECKPOINTS_NV"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_device_diagnostics_config`]
@@ -71,7 +70,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceDiagnosticsConfigFeaturesNVBuil
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDiagnosticsConfigFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDiagnosticsConfigFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDiagnosticsConfigFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -92,8 +91,7 @@ impl Default for PhysicalDeviceDiagnosticsConfigFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceDiagnosticsConfigFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDiagnosticsConfigFeaturesNV")
+        f.debug_struct("PhysicalDeviceDiagnosticsConfigFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("diagnostics_config", &(self.diagnostics_config != 0))
@@ -159,7 +157,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDiagnosticsConfigFeaturesNVBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceDiagnosticsConfigCreateInfoNV.html) · Structure
 #[doc(alias = "VkDeviceDiagnosticsConfigCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceDiagnosticsConfigCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -180,8 +178,7 @@ impl Default for DeviceDiagnosticsConfigCreateInfoNV {
 }
 impl std::fmt::Debug for DeviceDiagnosticsConfigCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceDiagnosticsConfigCreateInfoNV")
+        f.debug_struct("DeviceDiagnosticsConfigCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

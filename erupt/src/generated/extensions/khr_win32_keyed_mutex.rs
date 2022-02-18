@@ -17,7 +17,7 @@ impl<'a> crate::ExtendableFrom<'a, Win32KeyedMutexAcquireReleaseInfoKHRBuilder<'
 for crate::vk1_0::SubmitInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWin32KeyedMutexAcquireReleaseInfoKHR.html) · Structure
 #[doc(alias = "VkWin32KeyedMutexAcquireReleaseInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct Win32KeyedMutexAcquireReleaseInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -50,8 +50,7 @@ impl Default for Win32KeyedMutexAcquireReleaseInfoKHR {
 }
 impl std::fmt::Debug for Win32KeyedMutexAcquireReleaseInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("Win32KeyedMutexAcquireReleaseInfoKHR")
+        f.debug_struct("Win32KeyedMutexAcquireReleaseInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("acquire_count", &self.acquire_count)

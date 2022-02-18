@@ -91,7 +91,7 @@ pub type PFN_vkCmdCuLaunchKernelNVX = unsafe extern "system" fn(
 ) -> ();
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuModuleCreateInfoNVX.html) · Structure
 #[doc(alias = "VkCuModuleCreateInfoNVX")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CuModuleCreateInfoNVX {
     pub s_type: crate::vk1_0::StructureType,
@@ -114,8 +114,7 @@ impl Default for CuModuleCreateInfoNVX {
 }
 impl std::fmt::Debug for CuModuleCreateInfoNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CuModuleCreateInfoNVX")
+        f.debug_struct("CuModuleCreateInfoNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("data_size", &self.data_size)
@@ -183,7 +182,7 @@ impl<'a> std::ops::DerefMut for CuModuleCreateInfoNVXBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuFunctionCreateInfoNVX.html) · Structure
 #[doc(alias = "VkCuFunctionCreateInfoNVX")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CuFunctionCreateInfoNVX {
     pub s_type: crate::vk1_0::StructureType,
@@ -206,8 +205,7 @@ impl Default for CuFunctionCreateInfoNVX {
 }
 impl std::fmt::Debug for CuFunctionCreateInfoNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CuFunctionCreateInfoNVX")
+        f.debug_struct("CuFunctionCreateInfoNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("module", &self.module)
@@ -278,7 +276,7 @@ impl<'a> std::ops::DerefMut for CuFunctionCreateInfoNVXBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCuLaunchInfoNVX.html) · Structure
 #[doc(alias = "VkCuLaunchInfoNVX")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CuLaunchInfoNVX {
     pub s_type: crate::vk1_0::StructureType,
@@ -321,8 +319,7 @@ impl Default for CuLaunchInfoNVX {
 }
 impl std::fmt::Debug for CuLaunchInfoNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CuLaunchInfoNVX")
+        f.debug_struct("CuLaunchInfoNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("function", &self.function)

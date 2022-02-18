@@ -64,7 +64,7 @@ pub type PFN_vkCmdDebugMarkerInsertEXT = unsafe extern "system" fn(
 ) -> ();
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html) · Structure
 #[doc(alias = "VkDebugMarkerObjectNameInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugMarkerObjectNameInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -89,8 +89,7 @@ impl Default for DebugMarkerObjectNameInfoEXT {
 }
 impl std::fmt::Debug for DebugMarkerObjectNameInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugMarkerObjectNameInfoEXT")
+        f.debug_struct("DebugMarkerObjectNameInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("object_type", &self.object_type)
@@ -168,7 +167,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerObjectNameInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerObjectTagInfoEXT.html) · Structure
 #[doc(alias = "VkDebugMarkerObjectTagInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugMarkerObjectTagInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -197,8 +196,7 @@ impl Default for DebugMarkerObjectTagInfoEXT {
 }
 impl std::fmt::Debug for DebugMarkerObjectTagInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugMarkerObjectTagInfoEXT")
+        f.debug_struct("DebugMarkerObjectTagInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("object_type", &self.object_type)
@@ -290,7 +288,7 @@ impl<'a> std::ops::DerefMut for DebugMarkerObjectTagInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugMarkerMarkerInfoEXT.html) · Structure
 #[doc(alias = "VkDebugMarkerMarkerInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugMarkerMarkerInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -313,8 +311,7 @@ impl Default for DebugMarkerMarkerInfoEXT {
 }
 impl std::fmt::Debug for DebugMarkerMarkerInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugMarkerMarkerInfoEXT")
+        f.debug_struct("DebugMarkerMarkerInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_marker_name", &self.p_marker_name)

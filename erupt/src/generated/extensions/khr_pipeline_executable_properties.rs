@@ -42,16 +42,15 @@ impl crate::vk1_0::StructureType {
 pub struct PipelineExecutableStatisticFormatKHR(pub i32);
 impl std::fmt::Debug for PipelineExecutableStatisticFormatKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::BOOL32_KHR => "BOOL32_KHR",
-                    &Self::INT64_KHR => "INT64_KHR",
-                    &Self::UINT64_KHR => "UINT64_KHR",
-                    &Self::FLOAT64_KHR => "FLOAT64_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::BOOL32_KHR => "BOOL32_KHR",
+                &Self::INT64_KHR => "INT64_KHR",
+                &Self::UINT64_KHR => "UINT64_KHR",
+                &Self::FLOAT64_KHR => "FLOAT64_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_pipeline_executable_properties`]
@@ -103,7 +102,7 @@ impl<
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -124,8 +123,7 @@ impl Default for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePipelineExecutablePropertiesFeaturesKHR")
+        f.debug_struct("PhysicalDevicePipelineExecutablePropertiesFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("pipeline_executable_info", &(self.pipeline_executable_info != 0))
@@ -200,7 +198,7 @@ for PhysicalDevicePipelineExecutablePropertiesFeaturesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineInfoKHR.html) · Structure
 #[doc(alias = "VkPipelineInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -221,8 +219,7 @@ impl Default for PipelineInfoKHR {
 }
 impl std::fmt::Debug for PipelineInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineInfoKHR")
+        f.debug_struct("PipelineInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("pipeline", &self.pipeline)
@@ -280,7 +277,7 @@ impl<'a> std::ops::DerefMut for PipelineInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineExecutablePropertiesKHR.html) · Structure
 #[doc(alias = "VkPipelineExecutablePropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineExecutablePropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -307,8 +304,7 @@ impl Default for PipelineExecutablePropertiesKHR {
 }
 impl std::fmt::Debug for PipelineExecutablePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineExecutablePropertiesKHR")
+        f.debug_struct("PipelineExecutablePropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("stages", &self.stages)
@@ -396,7 +392,7 @@ impl<'a> std::ops::DerefMut for PipelineExecutablePropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineExecutableInfoKHR.html) · Structure
 #[doc(alias = "VkPipelineExecutableInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineExecutableInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -419,8 +415,7 @@ impl Default for PipelineExecutableInfoKHR {
 }
 impl std::fmt::Debug for PipelineExecutableInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineExecutableInfoKHR")
+        f.debug_struct("PipelineExecutableInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("pipeline", &self.pipeline)
@@ -488,7 +483,7 @@ impl<'a> std::ops::DerefMut for PipelineExecutableInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineExecutableStatisticValueKHR.html) · Structure
 #[doc(alias = "VkPipelineExecutableStatisticValueKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub union PipelineExecutableStatisticValueKHR {
     pub b32: crate::vk1_0::Bool32,
@@ -508,7 +503,7 @@ impl std::fmt::Debug for PipelineExecutableStatisticValueKHR {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineExecutableStatisticKHR.html) · Structure
 #[doc(alias = "VkPipelineExecutableStatisticKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineExecutableStatisticKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -535,8 +530,7 @@ impl Default for PipelineExecutableStatisticKHR {
 }
 impl std::fmt::Debug for PipelineExecutableStatisticKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineExecutableStatisticKHR")
+        f.debug_struct("PipelineExecutableStatisticKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
@@ -630,7 +624,7 @@ impl<'a> std::ops::DerefMut for PipelineExecutableStatisticKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineExecutableInternalRepresentationKHR.html) · Structure
 #[doc(alias = "VkPipelineExecutableInternalRepresentationKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineExecutableInternalRepresentationKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -659,8 +653,7 @@ impl Default for PipelineExecutableInternalRepresentationKHR {
 }
 impl std::fmt::Debug for PipelineExecutableInternalRepresentationKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineExecutableInternalRepresentationKHR")
+        f.debug_struct("PipelineExecutableInternalRepresentationKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })

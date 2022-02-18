@@ -75,7 +75,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMeshShaderPropertiesNVBuilder<'
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMeshShaderFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMeshShaderFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMeshShaderFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -98,8 +98,7 @@ impl Default for PhysicalDeviceMeshShaderFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceMeshShaderFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMeshShaderFeaturesNV")
+        f.debug_struct("PhysicalDeviceMeshShaderFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("task_shader", &(self.task_shader != 0))
@@ -170,7 +169,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMeshShaderFeaturesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMeshShaderPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMeshShaderPropertiesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMeshShaderPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -215,8 +214,7 @@ impl Default for PhysicalDeviceMeshShaderPropertiesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceMeshShaderPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMeshShaderPropertiesNV")
+        f.debug_struct("PhysicalDeviceMeshShaderPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_draw_mesh_tasks_count", &self.max_draw_mesh_tasks_count)
@@ -412,7 +410,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMeshShaderPropertiesNVBuilder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrawMeshTasksIndirectCommandNV.html) · Structure
 #[doc(alias = "VkDrawMeshTasksIndirectCommandNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrawMeshTasksIndirectCommandNV {
     pub task_count: u32,
@@ -428,8 +426,7 @@ impl Default for DrawMeshTasksIndirectCommandNV {
 }
 impl std::fmt::Debug for DrawMeshTasksIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DrawMeshTasksIndirectCommandNV")
+        f.debug_struct("DrawMeshTasksIndirectCommandNV")
             .field("task_count", &self.task_count)
             .field("first_task", &self.first_task)
             .finish()

@@ -28,12 +28,11 @@ impl PipelineCoverageToColorStateCreateFlagBitsNV {
 }
 impl std::fmt::Debug for PipelineCoverageToColorStateCreateFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_fragment_coverage_to_color`]
@@ -46,7 +45,7 @@ impl<'a> crate::ExtendableFrom<'a, PipelineCoverageToColorStateCreateInfoNVBuild
 for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageToColorStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineCoverageToColorStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineCoverageToColorStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -71,8 +70,7 @@ impl Default for PipelineCoverageToColorStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineCoverageToColorStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCoverageToColorStateCreateInfoNV")
+        f.debug_struct("PipelineCoverageToColorStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

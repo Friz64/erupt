@@ -35,7 +35,7 @@ pub type PFN_vkGetImageViewAddressNVX = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewHandleInfoNVX.html) · Structure
 #[doc(alias = "VkImageViewHandleInfoNVX")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageViewHandleInfoNVX {
     pub s_type: crate::vk1_0::StructureType,
@@ -60,8 +60,7 @@ impl Default for ImageViewHandleInfoNVX {
 }
 impl std::fmt::Debug for ImageViewHandleInfoNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageViewHandleInfoNVX")
+        f.debug_struct("ImageViewHandleInfoNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_view", &self.image_view)
@@ -139,7 +138,7 @@ impl<'a> std::ops::DerefMut for ImageViewHandleInfoNVXBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewAddressPropertiesNVX.html) · Structure
 #[doc(alias = "VkImageViewAddressPropertiesNVX")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageViewAddressPropertiesNVX {
     pub s_type: crate::vk1_0::StructureType,
@@ -162,8 +161,7 @@ impl Default for ImageViewAddressPropertiesNVX {
 }
 impl std::fmt::Debug for ImageViewAddressPropertiesNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageViewAddressPropertiesNVX")
+        f.debug_struct("ImageViewAddressPropertiesNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_address", &self.device_address)

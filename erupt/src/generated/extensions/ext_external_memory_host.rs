@@ -44,7 +44,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryHostPointerInfoEXT.html) · Structure
 #[doc(alias = "VkImportMemoryHostPointerInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportMemoryHostPointerInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -67,8 +67,7 @@ impl Default for ImportMemoryHostPointerInfoEXT {
 }
 impl std::fmt::Debug for ImportMemoryHostPointerInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportMemoryHostPointerInfoEXT")
+        f.debug_struct("ImportMemoryHostPointerInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -142,7 +141,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryHostPointerInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHostPointerPropertiesEXT.html) · Structure
 #[doc(alias = "VkMemoryHostPointerPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryHostPointerPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -163,8 +162,7 @@ impl Default for MemoryHostPointerPropertiesEXT {
 }
 impl std::fmt::Debug for MemoryHostPointerPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryHostPointerPropertiesEXT")
+        f.debug_struct("MemoryHostPointerPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_type_bits", &self.memory_type_bits)
@@ -228,7 +226,7 @@ impl<'a> std::ops::DerefMut for MemoryHostPointerPropertiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceExternalMemoryHostPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceExternalMemoryHostPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceExternalMemoryHostPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -249,8 +247,7 @@ impl Default for PhysicalDeviceExternalMemoryHostPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceExternalMemoryHostPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceExternalMemoryHostPropertiesEXT")
+        f.debug_struct("PhysicalDeviceExternalMemoryHostPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

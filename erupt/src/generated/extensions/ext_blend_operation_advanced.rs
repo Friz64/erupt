@@ -79,15 +79,14 @@ impl crate::vk1_0::StructureType {
 pub struct BlendOverlapEXT(pub i32);
 impl std::fmt::Debug for BlendOverlapEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UNCORRELATED_EXT => "UNCORRELATED_EXT",
-                    &Self::DISJOINT_EXT => "DISJOINT_EXT",
-                    &Self::CONJOINT_EXT => "CONJOINT_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UNCORRELATED_EXT => "UNCORRELATED_EXT",
+                &Self::DISJOINT_EXT => "DISJOINT_EXT",
+                &Self::CONJOINT_EXT => "CONJOINT_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_blend_operation_advanced`]
@@ -122,7 +121,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -143,8 +142,7 @@ impl Default for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceBlendOperationAdvancedFeaturesEXT")
+        f.debug_struct("PhysicalDeviceBlendOperationAdvancedFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -224,7 +222,7 @@ for PhysicalDeviceBlendOperationAdvancedFeaturesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -255,8 +253,7 @@ impl Default for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceBlendOperationAdvancedPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceBlendOperationAdvancedPropertiesEXT")
+        f.debug_struct("PhysicalDeviceBlendOperationAdvancedPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -411,7 +408,7 @@ for PhysicalDeviceBlendOperationAdvancedPropertiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAdvancedStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineColorBlendAdvancedStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineColorBlendAdvancedStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -436,8 +433,7 @@ impl Default for PipelineColorBlendAdvancedStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineColorBlendAdvancedStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineColorBlendAdvancedStateCreateInfoEXT")
+        f.debug_struct("PipelineColorBlendAdvancedStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_premultiplied", &(self.src_premultiplied != 0))

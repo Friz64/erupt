@@ -34,12 +34,11 @@ impl AndroidSurfaceCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for AndroidSurfaceCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_android_surface`]
@@ -56,7 +55,7 @@ pub type PFN_vkCreateAndroidSurfaceKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAndroidSurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkAndroidSurfaceCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AndroidSurfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -79,8 +78,7 @@ impl Default for AndroidSurfaceCreateInfoKHR {
 }
 impl std::fmt::Debug for AndroidSurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AndroidSurfaceCreateInfoKHR")
+        f.debug_struct("AndroidSurfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

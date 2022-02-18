@@ -40,7 +40,7 @@ impl<'a> crate::ExtendableFrom<'a, PresentTimesInfoGOOGLEBuilder<'_>>
 for crate::extensions::khr_swapchain::PresentInfoKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRefreshCycleDurationGOOGLE.html) · Structure
 #[doc(alias = "VkRefreshCycleDurationGOOGLE")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct RefreshCycleDurationGOOGLE {
     pub refresh_duration: u64,
@@ -54,8 +54,7 @@ impl Default for RefreshCycleDurationGOOGLE {
 }
 impl std::fmt::Debug for RefreshCycleDurationGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RefreshCycleDurationGOOGLE")
+        f.debug_struct("RefreshCycleDurationGOOGLE")
             .field("refresh_duration", &self.refresh_duration)
             .finish()
     }
@@ -112,7 +111,7 @@ impl<'a> std::ops::DerefMut for RefreshCycleDurationGOOGLEBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPastPresentationTimingGOOGLE.html) · Structure
 #[doc(alias = "VkPastPresentationTimingGOOGLE")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PastPresentationTimingGOOGLE {
     pub present_id: u32,
@@ -134,8 +133,7 @@ impl Default for PastPresentationTimingGOOGLE {
 }
 impl std::fmt::Debug for PastPresentationTimingGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PastPresentationTimingGOOGLE")
+        f.debug_struct("PastPresentationTimingGOOGLE")
             .field("present_id", &self.present_id)
             .field("desired_present_time", &self.desired_present_time)
             .field("actual_present_time", &self.actual_present_time)
@@ -220,7 +218,7 @@ impl<'a> std::ops::DerefMut for PastPresentationTimingGOOGLEBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentTimesInfoGOOGLE.html) · Structure
 #[doc(alias = "VkPresentTimesInfoGOOGLE")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentTimesInfoGOOGLE {
     pub s_type: crate::vk1_0::StructureType,
@@ -243,8 +241,7 @@ impl Default for PresentTimesInfoGOOGLE {
 }
 impl std::fmt::Debug for PresentTimesInfoGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PresentTimesInfoGOOGLE")
+        f.debug_struct("PresentTimesInfoGOOGLE")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("swapchain_count", &self.swapchain_count)
@@ -310,7 +307,7 @@ impl<'a> std::ops::DerefMut for PresentTimesInfoGOOGLEBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentTimeGOOGLE.html) · Structure
 #[doc(alias = "VkPresentTimeGOOGLE")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PresentTimeGOOGLE {
     pub present_id: u32,
@@ -326,8 +323,7 @@ impl Default for PresentTimeGOOGLE {
 }
 impl std::fmt::Debug for PresentTimeGOOGLE {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PresentTimeGOOGLE")
+        f.debug_struct("PresentTimeGOOGLE")
             .field("present_id", &self.present_id)
             .field("desired_present_time", &self.desired_present_time)
             .finish()

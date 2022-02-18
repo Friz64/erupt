@@ -26,7 +26,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDevicePresentIdFeaturesKHRBuilder<'_>
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePresentIdFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePresentIdFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePresentIdFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -47,8 +47,7 @@ impl Default for PhysicalDevicePresentIdFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDevicePresentIdFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePresentIdFeaturesKHR")
+        f.debug_struct("PhysicalDevicePresentIdFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("present_id", &(self.present_id != 0))
@@ -112,7 +111,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePresentIdFeaturesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPresentIdKHR.html) · Structure
 #[doc(alias = "VkPresentIdKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PresentIdKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -135,8 +134,7 @@ impl Default for PresentIdKHR {
 }
 impl std::fmt::Debug for PresentIdKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PresentIdKHR")
+        f.debug_struct("PresentIdKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("swapchain_count", &self.swapchain_count)

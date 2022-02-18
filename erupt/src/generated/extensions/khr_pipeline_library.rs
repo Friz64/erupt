@@ -17,7 +17,7 @@ impl crate::vk1_0::StructureType {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLibraryCreateInfoKHR.html) · Structure
 #[doc(alias = "VkPipelineLibraryCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineLibraryCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -40,8 +40,7 @@ impl Default for PipelineLibraryCreateInfoKHR {
 }
 impl std::fmt::Debug for PipelineLibraryCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineLibraryCreateInfoKHR")
+        f.debug_struct("PipelineLibraryCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("library_count", &self.library_count)

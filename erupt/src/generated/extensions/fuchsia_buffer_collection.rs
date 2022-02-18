@@ -53,12 +53,11 @@ impl ImageFormatConstraintsFlagBitsFUCHSIA {
 }
 impl std::fmt::Debug for ImageFormatConstraintsFlagBitsFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::fuchsia_buffer_collection`]
@@ -85,9 +84,8 @@ bitflags::bitflags! {
     #[repr(transparent)] pub struct ImageConstraintsInfoFlagsFUCHSIA : u32 { const
     CPU_READ_RARELY_FUCHSIA =
     ImageConstraintsInfoFlagBitsFUCHSIA::CPU_READ_RARELY_FUCHSIA.0; const
-    CPU_READ_OFTEN_FUCHSIA =
-    ImageConstraintsInfoFlagBitsFUCHSIA::CPU_READ_OFTEN_FUCHSIA.0; const
-    CPU_WRITE_RARELY_FUCHSIA =
+    CPU_READ_OFTEN_FUCHSIA = ImageConstraintsInfoFlagBitsFUCHSIA::CPU_READ_OFTEN_FUCHSIA
+    .0; const CPU_WRITE_RARELY_FUCHSIA =
     ImageConstraintsInfoFlagBitsFUCHSIA::CPU_WRITE_RARELY_FUCHSIA.0; const
     CPU_WRITE_OFTEN_FUCHSIA =
     ImageConstraintsInfoFlagBitsFUCHSIA::CPU_WRITE_OFTEN_FUCHSIA.0; const
@@ -108,17 +106,16 @@ impl ImageConstraintsInfoFlagBitsFUCHSIA {
 }
 impl std::fmt::Debug for ImageConstraintsInfoFlagBitsFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::CPU_READ_RARELY_FUCHSIA => "CPU_READ_RARELY_FUCHSIA",
-                    &Self::CPU_READ_OFTEN_FUCHSIA => "CPU_READ_OFTEN_FUCHSIA",
-                    &Self::CPU_WRITE_RARELY_FUCHSIA => "CPU_WRITE_RARELY_FUCHSIA",
-                    &Self::CPU_WRITE_OFTEN_FUCHSIA => "CPU_WRITE_OFTEN_FUCHSIA",
-                    &Self::PROTECTED_OPTIONAL_FUCHSIA => "PROTECTED_OPTIONAL_FUCHSIA",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::CPU_READ_RARELY_FUCHSIA => "CPU_READ_RARELY_FUCHSIA",
+                &Self::CPU_READ_OFTEN_FUCHSIA => "CPU_READ_OFTEN_FUCHSIA",
+                &Self::CPU_WRITE_RARELY_FUCHSIA => "CPU_WRITE_RARELY_FUCHSIA",
+                &Self::CPU_WRITE_OFTEN_FUCHSIA => "CPU_WRITE_OFTEN_FUCHSIA",
+                &Self::PROTECTED_OPTIONAL_FUCHSIA => "PROTECTED_OPTIONAL_FUCHSIA",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::fuchsia_buffer_collection`]
@@ -183,7 +180,7 @@ impl<'a> crate::ExtendableFrom<'a, BufferCollectionImageCreateInfoFUCHSIABuilder
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryBufferCollectionFUCHSIA.html) · Structure
 #[doc(alias = "VkImportMemoryBufferCollectionFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportMemoryBufferCollectionFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -206,8 +203,7 @@ impl Default for ImportMemoryBufferCollectionFUCHSIA {
 }
 impl std::fmt::Debug for ImportMemoryBufferCollectionFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportMemoryBufferCollectionFUCHSIA")
+        f.debug_struct("ImportMemoryBufferCollectionFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("collection", &self.collection)
@@ -281,7 +277,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryBufferCollectionFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionImageCreateInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionImageCreateInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferCollectionImageCreateInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -304,8 +300,7 @@ impl Default for BufferCollectionImageCreateInfoFUCHSIA {
 }
 impl std::fmt::Debug for BufferCollectionImageCreateInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCollectionImageCreateInfoFUCHSIA")
+        f.debug_struct("BufferCollectionImageCreateInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("collection", &self.collection)
@@ -379,7 +374,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionImageCreateInfoFUCHSIABuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionBufferCreateInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionBufferCreateInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferCollectionBufferCreateInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -402,8 +397,7 @@ impl Default for BufferCollectionBufferCreateInfoFUCHSIA {
 }
 impl std::fmt::Debug for BufferCollectionBufferCreateInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCollectionBufferCreateInfoFUCHSIA")
+        f.debug_struct("BufferCollectionBufferCreateInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("collection", &self.collection)
@@ -477,7 +471,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionBufferCreateInfoFUCHSIABuilder<'
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionCreateInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionCreateInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferCollectionCreateInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -498,8 +492,7 @@ impl Default for BufferCollectionCreateInfoFUCHSIA {
 }
 impl std::fmt::Debug for BufferCollectionCreateInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCollectionCreateInfoFUCHSIA")
+        f.debug_struct("BufferCollectionCreateInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("collection_token", &self.collection_token)
@@ -563,7 +556,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionCreateInfoFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionPropertiesFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionPropertiesFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferCollectionPropertiesFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -604,8 +597,7 @@ impl Default for BufferCollectionPropertiesFUCHSIA {
 }
 impl std::fmt::Debug for BufferCollectionPropertiesFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCollectionPropertiesFUCHSIA")
+        f.debug_struct("BufferCollectionPropertiesFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_type_bits", &self.memory_type_bits)
@@ -766,7 +758,7 @@ impl<'a> std::ops::DerefMut for BufferCollectionPropertiesFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferConstraintsInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferConstraintsInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -791,8 +783,7 @@ impl Default for BufferConstraintsInfoFUCHSIA {
 }
 impl std::fmt::Debug for BufferConstraintsInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferConstraintsInfoFUCHSIA")
+        f.debug_struct("BufferConstraintsInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("create_info", &self.create_info)
@@ -873,7 +864,7 @@ impl<'a> std::ops::DerefMut for BufferConstraintsInfoFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSysmemColorSpaceFUCHSIA.html) · Structure
 #[doc(alias = "VkSysmemColorSpaceFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SysmemColorSpaceFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -894,8 +885,7 @@ impl Default for SysmemColorSpaceFUCHSIA {
 }
 impl std::fmt::Debug for SysmemColorSpaceFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SysmemColorSpaceFUCHSIA")
+        f.debug_struct("SysmemColorSpaceFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("color_space", &self.color_space)
@@ -956,7 +946,7 @@ impl<'a> std::ops::DerefMut for SysmemColorSpaceFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkImageFormatConstraintsInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageFormatConstraintsInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -987,8 +977,7 @@ impl Default for ImageFormatConstraintsInfoFUCHSIA {
 }
 impl std::fmt::Debug for ImageFormatConstraintsInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageFormatConstraintsInfoFUCHSIA")
+        f.debug_struct("ImageFormatConstraintsInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_create_info", &self.image_create_info)
@@ -1094,7 +1083,7 @@ impl<'a> std::ops::DerefMut for ImageFormatConstraintsInfoFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkImageConstraintsInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageConstraintsInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -1121,8 +1110,7 @@ impl Default for ImageConstraintsInfoFUCHSIA {
 }
 impl std::fmt::Debug for ImageConstraintsInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageConstraintsInfoFUCHSIA")
+        f.debug_struct("ImageConstraintsInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format_constraints_count", &self.format_constraints_count)
@@ -1208,7 +1196,7 @@ impl<'a> std::ops::DerefMut for ImageConstraintsInfoFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCollectionConstraintsInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkBufferCollectionConstraintsInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferCollectionConstraintsInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -1237,8 +1225,7 @@ impl Default for BufferCollectionConstraintsInfoFUCHSIA {
 }
 impl std::fmt::Debug for BufferCollectionConstraintsInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCollectionConstraintsInfoFUCHSIA")
+        f.debug_struct("BufferCollectionConstraintsInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("min_buffer_count", &self.min_buffer_count)

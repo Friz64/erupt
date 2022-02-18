@@ -18,14 +18,13 @@ impl crate::vk1_0::StructureType {
 pub struct ValidationCheckEXT(pub i32);
 impl std::fmt::Debug for ValidationCheckEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ALL_EXT => "ALL_EXT",
-                    &Self::SHADERS_EXT => "SHADERS_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ALL_EXT => "ALL_EXT",
+                &Self::SHADERS_EXT => "SHADERS_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_validation_flags`]
@@ -39,7 +38,7 @@ impl<'a> crate::ExtendableFrom<'a, ValidationFlagsEXTBuilder<'_>>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFlagsEXT.html) · Structure
 #[doc(alias = "VkValidationFlagsEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ValidationFlagsEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -62,8 +61,7 @@ impl Default for ValidationFlagsEXT {
 }
 impl std::fmt::Debug for ValidationFlagsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ValidationFlagsEXT")
+        f.debug_struct("ValidationFlagsEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

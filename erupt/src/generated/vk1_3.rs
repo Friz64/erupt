@@ -152,17 +152,44 @@ crate::non_dispatchable_handle!(
 );
 bitflags::bitflags! {
     #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPrivateDataSlotCreateFlags.html) · Bitmask of [`PrivateDataSlotCreateFlagBits`]"]
+    #[doc(alias = "VkPrivateDataSlotCreateFlags")] #[derive(Default)]
+    #[repr(transparent)] pub struct PrivateDataSlotCreateFlags : u32 {
+    #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
+}
+///<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlags`]
+#[doc(alias = "VkPrivateDataSlotCreateFlagBits")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct PrivateDataSlotCreateFlagBits(pub u32);
+impl PrivateDataSlotCreateFlagBits {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> PrivateDataSlotCreateFlags {
+        PrivateDataSlotCreateFlags::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for PrivateDataSlotCreateFlagBits {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+bitflags::bitflags! {
+    #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccessFlags2.html) · Bitmask of [`AccessFlagBits2`]"]
     #[doc(alias = "VkAccessFlags2")] #[derive(Default)] #[repr(transparent)] pub struct
     AccessFlags2 : u64 { const NONE = AccessFlagBits2::NONE.0; const NONE_KHR =
     AccessFlagBits2::NONE_KHR.0; const INDIRECT_COMMAND_READ =
     AccessFlagBits2::INDIRECT_COMMAND_READ.0; const INDIRECT_COMMAND_READ_KHR =
     AccessFlagBits2::INDIRECT_COMMAND_READ_KHR.0; const INDEX_READ =
-    AccessFlagBits2::INDEX_READ.0; const INDEX_READ_KHR =
-    AccessFlagBits2::INDEX_READ_KHR.0; const VERTEX_ATTRIBUTE_READ =
-    AccessFlagBits2::VERTEX_ATTRIBUTE_READ.0; const VERTEX_ATTRIBUTE_READ_KHR =
-    AccessFlagBits2::VERTEX_ATTRIBUTE_READ_KHR.0; const UNIFORM_READ =
-    AccessFlagBits2::UNIFORM_READ.0; const UNIFORM_READ_KHR =
+    AccessFlagBits2::INDEX_READ.0; const INDEX_READ_KHR = AccessFlagBits2::INDEX_READ_KHR
+    .0; const VERTEX_ATTRIBUTE_READ = AccessFlagBits2::VERTEX_ATTRIBUTE_READ.0; const
+    VERTEX_ATTRIBUTE_READ_KHR = AccessFlagBits2::VERTEX_ATTRIBUTE_READ_KHR.0; const
+    UNIFORM_READ = AccessFlagBits2::UNIFORM_READ.0; const UNIFORM_READ_KHR =
     AccessFlagBits2::UNIFORM_READ_KHR.0; const INPUT_ATTACHMENT_READ =
     AccessFlagBits2::INPUT_ATTACHMENT_READ.0; const INPUT_ATTACHMENT_READ_KHR =
     AccessFlagBits2::INPUT_ATTACHMENT_READ_KHR.0; const SHADER_READ =
@@ -183,11 +210,10 @@ bitflags::bitflags! {
     AccessFlagBits2::TRANSFER_READ.0; const TRANSFER_READ_KHR =
     AccessFlagBits2::TRANSFER_READ_KHR.0; const TRANSFER_WRITE =
     AccessFlagBits2::TRANSFER_WRITE.0; const TRANSFER_WRITE_KHR =
-    AccessFlagBits2::TRANSFER_WRITE_KHR.0; const HOST_READ =
-    AccessFlagBits2::HOST_READ.0; const HOST_READ_KHR = AccessFlagBits2::HOST_READ_KHR.0;
-    const HOST_WRITE = AccessFlagBits2::HOST_WRITE.0; const HOST_WRITE_KHR =
-    AccessFlagBits2::HOST_WRITE_KHR.0; const MEMORY_READ =
-    AccessFlagBits2::MEMORY_READ.0; const MEMORY_READ_KHR =
+    AccessFlagBits2::TRANSFER_WRITE_KHR.0; const HOST_READ = AccessFlagBits2::HOST_READ
+    .0; const HOST_READ_KHR = AccessFlagBits2::HOST_READ_KHR.0; const HOST_WRITE =
+    AccessFlagBits2::HOST_WRITE.0; const HOST_WRITE_KHR = AccessFlagBits2::HOST_WRITE_KHR
+    .0; const MEMORY_READ = AccessFlagBits2::MEMORY_READ.0; const MEMORY_READ_KHR =
     AccessFlagBits2::MEMORY_READ_KHR.0; const MEMORY_WRITE =
     AccessFlagBits2::MEMORY_WRITE.0; const MEMORY_WRITE_KHR =
     AccessFlagBits2::MEMORY_WRITE_KHR.0; const SHADER_SAMPLED_READ =
@@ -237,101 +263,90 @@ impl AccessFlagBits2 {
 }
 impl std::fmt::Debug for AccessFlagBits2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NONE => "NONE",
-                    &Self::NONE_KHR => "NONE_KHR",
-                    &Self::INDIRECT_COMMAND_READ => "INDIRECT_COMMAND_READ",
-                    &Self::INDIRECT_COMMAND_READ_KHR => "INDIRECT_COMMAND_READ_KHR",
-                    &Self::INDEX_READ => "INDEX_READ",
-                    &Self::INDEX_READ_KHR => "INDEX_READ_KHR",
-                    &Self::VERTEX_ATTRIBUTE_READ => "VERTEX_ATTRIBUTE_READ",
-                    &Self::VERTEX_ATTRIBUTE_READ_KHR => "VERTEX_ATTRIBUTE_READ_KHR",
-                    &Self::UNIFORM_READ => "UNIFORM_READ",
-                    &Self::UNIFORM_READ_KHR => "UNIFORM_READ_KHR",
-                    &Self::INPUT_ATTACHMENT_READ => "INPUT_ATTACHMENT_READ",
-                    &Self::INPUT_ATTACHMENT_READ_KHR => "INPUT_ATTACHMENT_READ_KHR",
-                    &Self::SHADER_READ => "SHADER_READ",
-                    &Self::SHADER_READ_KHR => "SHADER_READ_KHR",
-                    &Self::SHADER_WRITE => "SHADER_WRITE",
-                    &Self::SHADER_WRITE_KHR => "SHADER_WRITE_KHR",
-                    &Self::COLOR_ATTACHMENT_READ => "COLOR_ATTACHMENT_READ",
-                    &Self::COLOR_ATTACHMENT_READ_KHR => "COLOR_ATTACHMENT_READ_KHR",
-                    &Self::COLOR_ATTACHMENT_WRITE => "COLOR_ATTACHMENT_WRITE",
-                    &Self::COLOR_ATTACHMENT_WRITE_KHR => "COLOR_ATTACHMENT_WRITE_KHR",
-                    &Self::DEPTH_STENCIL_ATTACHMENT_READ => {
-                        "DEPTH_STENCIL_ATTACHMENT_READ"
-                    }
-                    &Self::DEPTH_STENCIL_ATTACHMENT_READ_KHR => {
-                        "DEPTH_STENCIL_ATTACHMENT_READ_KHR"
-                    }
-                    &Self::DEPTH_STENCIL_ATTACHMENT_WRITE => {
-                        "DEPTH_STENCIL_ATTACHMENT_WRITE"
-                    }
-                    &Self::DEPTH_STENCIL_ATTACHMENT_WRITE_KHR => {
-                        "DEPTH_STENCIL_ATTACHMENT_WRITE_KHR"
-                    }
-                    &Self::TRANSFER_READ => "TRANSFER_READ",
-                    &Self::TRANSFER_READ_KHR => "TRANSFER_READ_KHR",
-                    &Self::TRANSFER_WRITE => "TRANSFER_WRITE",
-                    &Self::TRANSFER_WRITE_KHR => "TRANSFER_WRITE_KHR",
-                    &Self::HOST_READ => "HOST_READ",
-                    &Self::HOST_READ_KHR => "HOST_READ_KHR",
-                    &Self::HOST_WRITE => "HOST_WRITE",
-                    &Self::HOST_WRITE_KHR => "HOST_WRITE_KHR",
-                    &Self::MEMORY_READ => "MEMORY_READ",
-                    &Self::MEMORY_READ_KHR => "MEMORY_READ_KHR",
-                    &Self::MEMORY_WRITE => "MEMORY_WRITE",
-                    &Self::MEMORY_WRITE_KHR => "MEMORY_WRITE_KHR",
-                    &Self::SHADER_SAMPLED_READ => "SHADER_SAMPLED_READ",
-                    &Self::SHADER_SAMPLED_READ_KHR => "SHADER_SAMPLED_READ_KHR",
-                    &Self::SHADER_STORAGE_READ => "SHADER_STORAGE_READ",
-                    &Self::SHADER_STORAGE_READ_KHR => "SHADER_STORAGE_READ_KHR",
-                    &Self::SHADER_STORAGE_WRITE => "SHADER_STORAGE_WRITE",
-                    &Self::SHADER_STORAGE_WRITE_KHR => "SHADER_STORAGE_WRITE_KHR",
-                    &Self::VIDEO_DECODE_READ_KHR => "VIDEO_DECODE_READ_KHR",
-                    &Self::VIDEO_DECODE_WRITE_KHR => "VIDEO_DECODE_WRITE_KHR",
-                    &Self::VIDEO_ENCODE_READ_KHR => "VIDEO_ENCODE_READ_KHR",
-                    &Self::VIDEO_ENCODE_WRITE_KHR => "VIDEO_ENCODE_WRITE_KHR",
-                    &Self::TRANSFORM_FEEDBACK_WRITE_EXT => "TRANSFORM_FEEDBACK_WRITE_EXT",
-                    &Self::TRANSFORM_FEEDBACK_COUNTER_READ_EXT => {
-                        "TRANSFORM_FEEDBACK_COUNTER_READ_EXT"
-                    }
-                    &Self::TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT => {
-                        "TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT"
-                    }
-                    &Self::CONDITIONAL_RENDERING_READ_EXT => {
-                        "CONDITIONAL_RENDERING_READ_EXT"
-                    }
-                    &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
-                    &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR"
-                    }
-                    &Self::SHADING_RATE_IMAGE_READ_NV => "SHADING_RATE_IMAGE_READ_NV",
-                    &Self::ACCELERATION_STRUCTURE_READ_KHR => {
-                        "ACCELERATION_STRUCTURE_READ_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_WRITE_KHR => {
-                        "ACCELERATION_STRUCTURE_WRITE_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_READ_NV => {
-                        "ACCELERATION_STRUCTURE_READ_NV"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_WRITE_NV => {
-                        "ACCELERATION_STRUCTURE_WRITE_NV"
-                    }
-                    &Self::FRAGMENT_DENSITY_MAP_READ_EXT => {
-                        "FRAGMENT_DENSITY_MAP_READ_EXT"
-                    }
-                    &Self::COLOR_ATTACHMENT_READ_NONCOHERENT_EXT => {
-                        "COLOR_ATTACHMENT_READ_NONCOHERENT_EXT"
-                    }
-                    &Self::INVOCATION_MASK_READ_HUAWEI => "INVOCATION_MASK_READ_HUAWEI",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NONE => "NONE",
+                &Self::NONE_KHR => "NONE_KHR",
+                &Self::INDIRECT_COMMAND_READ => "INDIRECT_COMMAND_READ",
+                &Self::INDIRECT_COMMAND_READ_KHR => "INDIRECT_COMMAND_READ_KHR",
+                &Self::INDEX_READ => "INDEX_READ",
+                &Self::INDEX_READ_KHR => "INDEX_READ_KHR",
+                &Self::VERTEX_ATTRIBUTE_READ => "VERTEX_ATTRIBUTE_READ",
+                &Self::VERTEX_ATTRIBUTE_READ_KHR => "VERTEX_ATTRIBUTE_READ_KHR",
+                &Self::UNIFORM_READ => "UNIFORM_READ",
+                &Self::UNIFORM_READ_KHR => "UNIFORM_READ_KHR",
+                &Self::INPUT_ATTACHMENT_READ => "INPUT_ATTACHMENT_READ",
+                &Self::INPUT_ATTACHMENT_READ_KHR => "INPUT_ATTACHMENT_READ_KHR",
+                &Self::SHADER_READ => "SHADER_READ",
+                &Self::SHADER_READ_KHR => "SHADER_READ_KHR",
+                &Self::SHADER_WRITE => "SHADER_WRITE",
+                &Self::SHADER_WRITE_KHR => "SHADER_WRITE_KHR",
+                &Self::COLOR_ATTACHMENT_READ => "COLOR_ATTACHMENT_READ",
+                &Self::COLOR_ATTACHMENT_READ_KHR => "COLOR_ATTACHMENT_READ_KHR",
+                &Self::COLOR_ATTACHMENT_WRITE => "COLOR_ATTACHMENT_WRITE",
+                &Self::COLOR_ATTACHMENT_WRITE_KHR => "COLOR_ATTACHMENT_WRITE_KHR",
+                &Self::DEPTH_STENCIL_ATTACHMENT_READ => "DEPTH_STENCIL_ATTACHMENT_READ",
+                &Self::DEPTH_STENCIL_ATTACHMENT_READ_KHR => {
+                    "DEPTH_STENCIL_ATTACHMENT_READ_KHR"
+                }
+                &Self::DEPTH_STENCIL_ATTACHMENT_WRITE => "DEPTH_STENCIL_ATTACHMENT_WRITE",
+                &Self::DEPTH_STENCIL_ATTACHMENT_WRITE_KHR => {
+                    "DEPTH_STENCIL_ATTACHMENT_WRITE_KHR"
+                }
+                &Self::TRANSFER_READ => "TRANSFER_READ",
+                &Self::TRANSFER_READ_KHR => "TRANSFER_READ_KHR",
+                &Self::TRANSFER_WRITE => "TRANSFER_WRITE",
+                &Self::TRANSFER_WRITE_KHR => "TRANSFER_WRITE_KHR",
+                &Self::HOST_READ => "HOST_READ",
+                &Self::HOST_READ_KHR => "HOST_READ_KHR",
+                &Self::HOST_WRITE => "HOST_WRITE",
+                &Self::HOST_WRITE_KHR => "HOST_WRITE_KHR",
+                &Self::MEMORY_READ => "MEMORY_READ",
+                &Self::MEMORY_READ_KHR => "MEMORY_READ_KHR",
+                &Self::MEMORY_WRITE => "MEMORY_WRITE",
+                &Self::MEMORY_WRITE_KHR => "MEMORY_WRITE_KHR",
+                &Self::SHADER_SAMPLED_READ => "SHADER_SAMPLED_READ",
+                &Self::SHADER_SAMPLED_READ_KHR => "SHADER_SAMPLED_READ_KHR",
+                &Self::SHADER_STORAGE_READ => "SHADER_STORAGE_READ",
+                &Self::SHADER_STORAGE_READ_KHR => "SHADER_STORAGE_READ_KHR",
+                &Self::SHADER_STORAGE_WRITE => "SHADER_STORAGE_WRITE",
+                &Self::SHADER_STORAGE_WRITE_KHR => "SHADER_STORAGE_WRITE_KHR",
+                &Self::VIDEO_DECODE_READ_KHR => "VIDEO_DECODE_READ_KHR",
+                &Self::VIDEO_DECODE_WRITE_KHR => "VIDEO_DECODE_WRITE_KHR",
+                &Self::VIDEO_ENCODE_READ_KHR => "VIDEO_ENCODE_READ_KHR",
+                &Self::VIDEO_ENCODE_WRITE_KHR => "VIDEO_ENCODE_WRITE_KHR",
+                &Self::TRANSFORM_FEEDBACK_WRITE_EXT => "TRANSFORM_FEEDBACK_WRITE_EXT",
+                &Self::TRANSFORM_FEEDBACK_COUNTER_READ_EXT => {
+                    "TRANSFORM_FEEDBACK_COUNTER_READ_EXT"
+                }
+                &Self::TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT => {
+                    "TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT"
+                }
+                &Self::CONDITIONAL_RENDERING_READ_EXT => "CONDITIONAL_RENDERING_READ_EXT",
+                &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
+                &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR"
+                }
+                &Self::SHADING_RATE_IMAGE_READ_NV => "SHADING_RATE_IMAGE_READ_NV",
+                &Self::ACCELERATION_STRUCTURE_READ_KHR => {
+                    "ACCELERATION_STRUCTURE_READ_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_WRITE_KHR => {
+                    "ACCELERATION_STRUCTURE_WRITE_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_READ_NV => "ACCELERATION_STRUCTURE_READ_NV",
+                &Self::ACCELERATION_STRUCTURE_WRITE_NV => {
+                    "ACCELERATION_STRUCTURE_WRITE_NV"
+                }
+                &Self::FRAGMENT_DENSITY_MAP_READ_EXT => "FRAGMENT_DENSITY_MAP_READ_EXT",
+                &Self::COLOR_ATTACHMENT_READ_NONCOHERENT_EXT => {
+                    "COLOR_ATTACHMENT_READ_NONCOHERENT_EXT"
+                }
+                &Self::INVOCATION_MASK_READ_HUAWEI => "INVOCATION_MASK_READ_HUAWEI",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_3`]
@@ -422,25 +437,23 @@ bitflags::bitflags! {
     const ALL_GRAPHICS = PipelineStageFlagBits2::ALL_GRAPHICS.0; const ALL_GRAPHICS_KHR =
     PipelineStageFlagBits2::ALL_GRAPHICS_KHR.0; const ALL_COMMANDS =
     PipelineStageFlagBits2::ALL_COMMANDS.0; const ALL_COMMANDS_KHR =
-    PipelineStageFlagBits2::ALL_COMMANDS_KHR.0; const COPY =
-    PipelineStageFlagBits2::COPY.0; const COPY_KHR = PipelineStageFlagBits2::COPY_KHR.0;
-    const RESOLVE = PipelineStageFlagBits2::RESOLVE.0; const RESOLVE_KHR =
+    PipelineStageFlagBits2::ALL_COMMANDS_KHR.0; const COPY = PipelineStageFlagBits2::COPY
+    .0; const COPY_KHR = PipelineStageFlagBits2::COPY_KHR.0; const RESOLVE =
+    PipelineStageFlagBits2::RESOLVE.0; const RESOLVE_KHR =
     PipelineStageFlagBits2::RESOLVE_KHR.0; const BLIT = PipelineStageFlagBits2::BLIT.0;
     const BLIT_KHR = PipelineStageFlagBits2::BLIT_KHR.0; const CLEAR =
-    PipelineStageFlagBits2::CLEAR.0; const CLEAR_KHR =
-    PipelineStageFlagBits2::CLEAR_KHR.0; const INDEX_INPUT =
-    PipelineStageFlagBits2::INDEX_INPUT.0; const INDEX_INPUT_KHR =
-    PipelineStageFlagBits2::INDEX_INPUT_KHR.0; const VERTEX_ATTRIBUTE_INPUT =
+    PipelineStageFlagBits2::CLEAR.0; const CLEAR_KHR = PipelineStageFlagBits2::CLEAR_KHR
+    .0; const INDEX_INPUT = PipelineStageFlagBits2::INDEX_INPUT.0; const INDEX_INPUT_KHR
+    = PipelineStageFlagBits2::INDEX_INPUT_KHR.0; const VERTEX_ATTRIBUTE_INPUT =
     PipelineStageFlagBits2::VERTEX_ATTRIBUTE_INPUT.0; const VERTEX_ATTRIBUTE_INPUT_KHR =
     PipelineStageFlagBits2::VERTEX_ATTRIBUTE_INPUT_KHR.0; const PRE_RASTERIZATION_SHADERS
     = PipelineStageFlagBits2::PRE_RASTERIZATION_SHADERS.0; const
-    PRE_RASTERIZATION_SHADERS_KHR =
-    PipelineStageFlagBits2::PRE_RASTERIZATION_SHADERS_KHR.0; const VIDEO_DECODE_KHR =
-    PipelineStageFlagBits2::VIDEO_DECODE_KHR.0; const VIDEO_ENCODE_KHR =
-    PipelineStageFlagBits2::VIDEO_ENCODE_KHR.0; const TRANSFORM_FEEDBACK_EXT =
-    PipelineStageFlagBits2::TRANSFORM_FEEDBACK_EXT.0; const CONDITIONAL_RENDERING_EXT =
-    PipelineStageFlagBits2::CONDITIONAL_RENDERING_EXT.0; const COMMAND_PREPROCESS_NV =
-    PipelineStageFlagBits2::COMMAND_PREPROCESS_NV.0; const
+    PRE_RASTERIZATION_SHADERS_KHR = PipelineStageFlagBits2::PRE_RASTERIZATION_SHADERS_KHR
+    .0; const VIDEO_DECODE_KHR = PipelineStageFlagBits2::VIDEO_DECODE_KHR.0; const
+    VIDEO_ENCODE_KHR = PipelineStageFlagBits2::VIDEO_ENCODE_KHR.0; const
+    TRANSFORM_FEEDBACK_EXT = PipelineStageFlagBits2::TRANSFORM_FEEDBACK_EXT.0; const
+    CONDITIONAL_RENDERING_EXT = PipelineStageFlagBits2::CONDITIONAL_RENDERING_EXT.0;
+    const COMMAND_PREPROCESS_NV = PipelineStageFlagBits2::COMMAND_PREPROCESS_NV.0; const
     FRAGMENT_SHADING_RATE_ATTACHMENT_KHR =
     PipelineStageFlagBits2::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR.0; const
     SHADING_RATE_IMAGE_NV = PipelineStageFlagBits2::SHADING_RATE_IMAGE_NV.0; const
@@ -450,12 +463,11 @@ bitflags::bitflags! {
     RAY_TRACING_SHADER_NV = PipelineStageFlagBits2::RAY_TRACING_SHADER_NV.0; const
     ACCELERATION_STRUCTURE_BUILD_NV =
     PipelineStageFlagBits2::ACCELERATION_STRUCTURE_BUILD_NV.0; const
-    FRAGMENT_DENSITY_PROCESS_EXT =
-    PipelineStageFlagBits2::FRAGMENT_DENSITY_PROCESS_EXT.0; const TASK_SHADER_NV =
-    PipelineStageFlagBits2::TASK_SHADER_NV.0; const MESH_SHADER_NV =
-    PipelineStageFlagBits2::MESH_SHADER_NV.0; const SUBPASS_SHADING_HUAWEI =
-    PipelineStageFlagBits2::SUBPASS_SHADING_HUAWEI.0; const INVOCATION_MASK_HUAWEI =
-    PipelineStageFlagBits2::INVOCATION_MASK_HUAWEI.0; }
+    FRAGMENT_DENSITY_PROCESS_EXT = PipelineStageFlagBits2::FRAGMENT_DENSITY_PROCESS_EXT
+    .0; const TASK_SHADER_NV = PipelineStageFlagBits2::TASK_SHADER_NV.0; const
+    MESH_SHADER_NV = PipelineStageFlagBits2::MESH_SHADER_NV.0; const
+    SUBPASS_SHADING_HUAWEI = PipelineStageFlagBits2::SUBPASS_SHADING_HUAWEI.0; const
+    INVOCATION_MASK_HUAWEI = PipelineStageFlagBits2::INVOCATION_MASK_HUAWEI.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineStageFlagBits2.html) · Bits enum of [`PipelineStageFlags2`]
 #[doc(alias = "VkPipelineStageFlagBits2")]
@@ -471,94 +483,89 @@ impl PipelineStageFlagBits2 {
 }
 impl std::fmt::Debug for PipelineStageFlagBits2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NONE => "NONE",
-                    &Self::NONE_KHR => "NONE_KHR",
-                    &Self::TOP_OF_PIPE => "TOP_OF_PIPE",
-                    &Self::TOP_OF_PIPE_KHR => "TOP_OF_PIPE_KHR",
-                    &Self::DRAW_INDIRECT => "DRAW_INDIRECT",
-                    &Self::DRAW_INDIRECT_KHR => "DRAW_INDIRECT_KHR",
-                    &Self::VERTEX_INPUT => "VERTEX_INPUT",
-                    &Self::VERTEX_INPUT_KHR => "VERTEX_INPUT_KHR",
-                    &Self::VERTEX_SHADER => "VERTEX_SHADER",
-                    &Self::VERTEX_SHADER_KHR => "VERTEX_SHADER_KHR",
-                    &Self::TESSELLATION_CONTROL_SHADER => "TESSELLATION_CONTROL_SHADER",
-                    &Self::TESSELLATION_CONTROL_SHADER_KHR => {
-                        "TESSELLATION_CONTROL_SHADER_KHR"
-                    }
-                    &Self::TESSELLATION_EVALUATION_SHADER => {
-                        "TESSELLATION_EVALUATION_SHADER"
-                    }
-                    &Self::TESSELLATION_EVALUATION_SHADER_KHR => {
-                        "TESSELLATION_EVALUATION_SHADER_KHR"
-                    }
-                    &Self::GEOMETRY_SHADER => "GEOMETRY_SHADER",
-                    &Self::GEOMETRY_SHADER_KHR => "GEOMETRY_SHADER_KHR",
-                    &Self::FRAGMENT_SHADER => "FRAGMENT_SHADER",
-                    &Self::FRAGMENT_SHADER_KHR => "FRAGMENT_SHADER_KHR",
-                    &Self::EARLY_FRAGMENT_TESTS => "EARLY_FRAGMENT_TESTS",
-                    &Self::EARLY_FRAGMENT_TESTS_KHR => "EARLY_FRAGMENT_TESTS_KHR",
-                    &Self::LATE_FRAGMENT_TESTS => "LATE_FRAGMENT_TESTS",
-                    &Self::LATE_FRAGMENT_TESTS_KHR => "LATE_FRAGMENT_TESTS_KHR",
-                    &Self::COLOR_ATTACHMENT_OUTPUT => "COLOR_ATTACHMENT_OUTPUT",
-                    &Self::COLOR_ATTACHMENT_OUTPUT_KHR => "COLOR_ATTACHMENT_OUTPUT_KHR",
-                    &Self::COMPUTE_SHADER => "COMPUTE_SHADER",
-                    &Self::COMPUTE_SHADER_KHR => "COMPUTE_SHADER_KHR",
-                    &Self::ALL_TRANSFER => "ALL_TRANSFER",
-                    &Self::ALL_TRANSFER_KHR => "ALL_TRANSFER_KHR",
-                    &Self::TRANSFER => "TRANSFER",
-                    &Self::TRANSFER_KHR => "TRANSFER_KHR",
-                    &Self::BOTTOM_OF_PIPE => "BOTTOM_OF_PIPE",
-                    &Self::BOTTOM_OF_PIPE_KHR => "BOTTOM_OF_PIPE_KHR",
-                    &Self::HOST => "HOST",
-                    &Self::HOST_KHR => "HOST_KHR",
-                    &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
-                    &Self::ALL_GRAPHICS_KHR => "ALL_GRAPHICS_KHR",
-                    &Self::ALL_COMMANDS => "ALL_COMMANDS",
-                    &Self::ALL_COMMANDS_KHR => "ALL_COMMANDS_KHR",
-                    &Self::COPY => "COPY",
-                    &Self::COPY_KHR => "COPY_KHR",
-                    &Self::RESOLVE => "RESOLVE",
-                    &Self::RESOLVE_KHR => "RESOLVE_KHR",
-                    &Self::BLIT => "BLIT",
-                    &Self::BLIT_KHR => "BLIT_KHR",
-                    &Self::CLEAR => "CLEAR",
-                    &Self::CLEAR_KHR => "CLEAR_KHR",
-                    &Self::INDEX_INPUT => "INDEX_INPUT",
-                    &Self::INDEX_INPUT_KHR => "INDEX_INPUT_KHR",
-                    &Self::VERTEX_ATTRIBUTE_INPUT => "VERTEX_ATTRIBUTE_INPUT",
-                    &Self::VERTEX_ATTRIBUTE_INPUT_KHR => "VERTEX_ATTRIBUTE_INPUT_KHR",
-                    &Self::PRE_RASTERIZATION_SHADERS => "PRE_RASTERIZATION_SHADERS",
-                    &Self::PRE_RASTERIZATION_SHADERS_KHR => {
-                        "PRE_RASTERIZATION_SHADERS_KHR"
-                    }
-                    &Self::VIDEO_DECODE_KHR => "VIDEO_DECODE_KHR",
-                    &Self::VIDEO_ENCODE_KHR => "VIDEO_ENCODE_KHR",
-                    &Self::TRANSFORM_FEEDBACK_EXT => "TRANSFORM_FEEDBACK_EXT",
-                    &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
-                    &Self::COMMAND_PREPROCESS_NV => "COMMAND_PREPROCESS_NV",
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
-                    }
-                    &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
-                    &Self::ACCELERATION_STRUCTURE_BUILD_KHR => {
-                        "ACCELERATION_STRUCTURE_BUILD_KHR"
-                    }
-                    &Self::RAY_TRACING_SHADER_KHR => "RAY_TRACING_SHADER_KHR",
-                    &Self::RAY_TRACING_SHADER_NV => "RAY_TRACING_SHADER_NV",
-                    &Self::ACCELERATION_STRUCTURE_BUILD_NV => {
-                        "ACCELERATION_STRUCTURE_BUILD_NV"
-                    }
-                    &Self::FRAGMENT_DENSITY_PROCESS_EXT => "FRAGMENT_DENSITY_PROCESS_EXT",
-                    &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
-                    &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
-                    &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
-                    &Self::INVOCATION_MASK_HUAWEI => "INVOCATION_MASK_HUAWEI",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NONE => "NONE",
+                &Self::NONE_KHR => "NONE_KHR",
+                &Self::TOP_OF_PIPE => "TOP_OF_PIPE",
+                &Self::TOP_OF_PIPE_KHR => "TOP_OF_PIPE_KHR",
+                &Self::DRAW_INDIRECT => "DRAW_INDIRECT",
+                &Self::DRAW_INDIRECT_KHR => "DRAW_INDIRECT_KHR",
+                &Self::VERTEX_INPUT => "VERTEX_INPUT",
+                &Self::VERTEX_INPUT_KHR => "VERTEX_INPUT_KHR",
+                &Self::VERTEX_SHADER => "VERTEX_SHADER",
+                &Self::VERTEX_SHADER_KHR => "VERTEX_SHADER_KHR",
+                &Self::TESSELLATION_CONTROL_SHADER => "TESSELLATION_CONTROL_SHADER",
+                &Self::TESSELLATION_CONTROL_SHADER_KHR => {
+                    "TESSELLATION_CONTROL_SHADER_KHR"
+                }
+                &Self::TESSELLATION_EVALUATION_SHADER => "TESSELLATION_EVALUATION_SHADER",
+                &Self::TESSELLATION_EVALUATION_SHADER_KHR => {
+                    "TESSELLATION_EVALUATION_SHADER_KHR"
+                }
+                &Self::GEOMETRY_SHADER => "GEOMETRY_SHADER",
+                &Self::GEOMETRY_SHADER_KHR => "GEOMETRY_SHADER_KHR",
+                &Self::FRAGMENT_SHADER => "FRAGMENT_SHADER",
+                &Self::FRAGMENT_SHADER_KHR => "FRAGMENT_SHADER_KHR",
+                &Self::EARLY_FRAGMENT_TESTS => "EARLY_FRAGMENT_TESTS",
+                &Self::EARLY_FRAGMENT_TESTS_KHR => "EARLY_FRAGMENT_TESTS_KHR",
+                &Self::LATE_FRAGMENT_TESTS => "LATE_FRAGMENT_TESTS",
+                &Self::LATE_FRAGMENT_TESTS_KHR => "LATE_FRAGMENT_TESTS_KHR",
+                &Self::COLOR_ATTACHMENT_OUTPUT => "COLOR_ATTACHMENT_OUTPUT",
+                &Self::COLOR_ATTACHMENT_OUTPUT_KHR => "COLOR_ATTACHMENT_OUTPUT_KHR",
+                &Self::COMPUTE_SHADER => "COMPUTE_SHADER",
+                &Self::COMPUTE_SHADER_KHR => "COMPUTE_SHADER_KHR",
+                &Self::ALL_TRANSFER => "ALL_TRANSFER",
+                &Self::ALL_TRANSFER_KHR => "ALL_TRANSFER_KHR",
+                &Self::TRANSFER => "TRANSFER",
+                &Self::TRANSFER_KHR => "TRANSFER_KHR",
+                &Self::BOTTOM_OF_PIPE => "BOTTOM_OF_PIPE",
+                &Self::BOTTOM_OF_PIPE_KHR => "BOTTOM_OF_PIPE_KHR",
+                &Self::HOST => "HOST",
+                &Self::HOST_KHR => "HOST_KHR",
+                &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
+                &Self::ALL_GRAPHICS_KHR => "ALL_GRAPHICS_KHR",
+                &Self::ALL_COMMANDS => "ALL_COMMANDS",
+                &Self::ALL_COMMANDS_KHR => "ALL_COMMANDS_KHR",
+                &Self::COPY => "COPY",
+                &Self::COPY_KHR => "COPY_KHR",
+                &Self::RESOLVE => "RESOLVE",
+                &Self::RESOLVE_KHR => "RESOLVE_KHR",
+                &Self::BLIT => "BLIT",
+                &Self::BLIT_KHR => "BLIT_KHR",
+                &Self::CLEAR => "CLEAR",
+                &Self::CLEAR_KHR => "CLEAR_KHR",
+                &Self::INDEX_INPUT => "INDEX_INPUT",
+                &Self::INDEX_INPUT_KHR => "INDEX_INPUT_KHR",
+                &Self::VERTEX_ATTRIBUTE_INPUT => "VERTEX_ATTRIBUTE_INPUT",
+                &Self::VERTEX_ATTRIBUTE_INPUT_KHR => "VERTEX_ATTRIBUTE_INPUT_KHR",
+                &Self::PRE_RASTERIZATION_SHADERS => "PRE_RASTERIZATION_SHADERS",
+                &Self::PRE_RASTERIZATION_SHADERS_KHR => "PRE_RASTERIZATION_SHADERS_KHR",
+                &Self::VIDEO_DECODE_KHR => "VIDEO_DECODE_KHR",
+                &Self::VIDEO_ENCODE_KHR => "VIDEO_ENCODE_KHR",
+                &Self::TRANSFORM_FEEDBACK_EXT => "TRANSFORM_FEEDBACK_EXT",
+                &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
+                &Self::COMMAND_PREPROCESS_NV => "COMMAND_PREPROCESS_NV",
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
+                }
+                &Self::SHADING_RATE_IMAGE_NV => "SHADING_RATE_IMAGE_NV",
+                &Self::ACCELERATION_STRUCTURE_BUILD_KHR => {
+                    "ACCELERATION_STRUCTURE_BUILD_KHR"
+                }
+                &Self::RAY_TRACING_SHADER_KHR => "RAY_TRACING_SHADER_KHR",
+                &Self::RAY_TRACING_SHADER_NV => "RAY_TRACING_SHADER_NV",
+                &Self::ACCELERATION_STRUCTURE_BUILD_NV => {
+                    "ACCELERATION_STRUCTURE_BUILD_NV"
+                }
+                &Self::FRAGMENT_DENSITY_PROCESS_EXT => "FRAGMENT_DENSITY_PROCESS_EXT",
+                &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
+                &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
+                &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
+                &Self::INVOCATION_MASK_HUAWEI => "INVOCATION_MASK_HUAWEI",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_3`]
@@ -641,9 +648,8 @@ bitflags::bitflags! {
     FormatFeatureFlagBits2::COLOR_ATTACHMENT_BLEND.0; const COLOR_ATTACHMENT_BLEND_KHR =
     FormatFeatureFlagBits2::COLOR_ATTACHMENT_BLEND_KHR.0; const DEPTH_STENCIL_ATTACHMENT
     = FormatFeatureFlagBits2::DEPTH_STENCIL_ATTACHMENT.0; const
-    DEPTH_STENCIL_ATTACHMENT_KHR =
-    FormatFeatureFlagBits2::DEPTH_STENCIL_ATTACHMENT_KHR.0; const BLIT_SRC =
-    FormatFeatureFlagBits2::BLIT_SRC.0; const BLIT_SRC_KHR =
+    DEPTH_STENCIL_ATTACHMENT_KHR = FormatFeatureFlagBits2::DEPTH_STENCIL_ATTACHMENT_KHR
+    .0; const BLIT_SRC = FormatFeatureFlagBits2::BLIT_SRC.0; const BLIT_SRC_KHR =
     FormatFeatureFlagBits2::BLIT_SRC_KHR.0; const BLIT_DST =
     FormatFeatureFlagBits2::BLIT_DST.0; const BLIT_DST_KHR =
     FormatFeatureFlagBits2::BLIT_DST_KHR.0; const SAMPLED_IMAGE_FILTER_LINEAR =
@@ -667,27 +673,27 @@ bitflags::bitflags! {
     SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR =
     FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR.0; const
     SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER =
-    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR =
-    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT =
-    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR =
-    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE =
-    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR =
-    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR.0;
-    const DISJOINT = FormatFeatureFlagBits2::DISJOINT.0; const DISJOINT_KHR =
+    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR =
+    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT =
+    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR =
+    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE =
+    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR
+    =
+    FormatFeatureFlagBits2::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR
+    .0; const DISJOINT = FormatFeatureFlagBits2::DISJOINT.0; const DISJOINT_KHR =
     FormatFeatureFlagBits2::DISJOINT_KHR.0; const COSITED_CHROMA_SAMPLES =
     FormatFeatureFlagBits2::COSITED_CHROMA_SAMPLES.0; const COSITED_CHROMA_SAMPLES_KHR =
     FormatFeatureFlagBits2::COSITED_CHROMA_SAMPLES_KHR.0; const
     STORAGE_READ_WITHOUT_FORMAT = FormatFeatureFlagBits2::STORAGE_READ_WITHOUT_FORMAT.0;
     const STORAGE_READ_WITHOUT_FORMAT_KHR =
     FormatFeatureFlagBits2::STORAGE_READ_WITHOUT_FORMAT_KHR.0; const
-    STORAGE_WRITE_WITHOUT_FORMAT =
-    FormatFeatureFlagBits2::STORAGE_WRITE_WITHOUT_FORMAT.0; const
-    STORAGE_WRITE_WITHOUT_FORMAT_KHR =
+    STORAGE_WRITE_WITHOUT_FORMAT = FormatFeatureFlagBits2::STORAGE_WRITE_WITHOUT_FORMAT
+    .0; const STORAGE_WRITE_WITHOUT_FORMAT_KHR =
     FormatFeatureFlagBits2::STORAGE_WRITE_WITHOUT_FORMAT_KHR.0; const
     SAMPLED_IMAGE_DEPTH_COMPARISON =
     FormatFeatureFlagBits2::SAMPLED_IMAGE_DEPTH_COMPARISON.0; const
@@ -718,110 +724,105 @@ impl FormatFeatureFlagBits2 {
 }
 impl std::fmt::Debug for FormatFeatureFlagBits2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SAMPLED_IMAGE => "SAMPLED_IMAGE",
-                    &Self::SAMPLED_IMAGE_KHR => "SAMPLED_IMAGE_KHR",
-                    &Self::STORAGE_IMAGE => "STORAGE_IMAGE",
-                    &Self::STORAGE_IMAGE_KHR => "STORAGE_IMAGE_KHR",
-                    &Self::STORAGE_IMAGE_ATOMIC => "STORAGE_IMAGE_ATOMIC",
-                    &Self::STORAGE_IMAGE_ATOMIC_KHR => "STORAGE_IMAGE_ATOMIC_KHR",
-                    &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
-                    &Self::UNIFORM_TEXEL_BUFFER_KHR => "UNIFORM_TEXEL_BUFFER_KHR",
-                    &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
-                    &Self::STORAGE_TEXEL_BUFFER_KHR => "STORAGE_TEXEL_BUFFER_KHR",
-                    &Self::STORAGE_TEXEL_BUFFER_ATOMIC => "STORAGE_TEXEL_BUFFER_ATOMIC",
-                    &Self::STORAGE_TEXEL_BUFFER_ATOMIC_KHR => {
-                        "STORAGE_TEXEL_BUFFER_ATOMIC_KHR"
-                    }
-                    &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
-                    &Self::VERTEX_BUFFER_KHR => "VERTEX_BUFFER_KHR",
-                    &Self::COLOR_ATTACHMENT => "COLOR_ATTACHMENT",
-                    &Self::COLOR_ATTACHMENT_KHR => "COLOR_ATTACHMENT_KHR",
-                    &Self::COLOR_ATTACHMENT_BLEND => "COLOR_ATTACHMENT_BLEND",
-                    &Self::COLOR_ATTACHMENT_BLEND_KHR => "COLOR_ATTACHMENT_BLEND_KHR",
-                    &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
-                    &Self::DEPTH_STENCIL_ATTACHMENT_KHR => "DEPTH_STENCIL_ATTACHMENT_KHR",
-                    &Self::BLIT_SRC => "BLIT_SRC",
-                    &Self::BLIT_SRC_KHR => "BLIT_SRC_KHR",
-                    &Self::BLIT_DST => "BLIT_DST",
-                    &Self::BLIT_DST_KHR => "BLIT_DST_KHR",
-                    &Self::SAMPLED_IMAGE_FILTER_LINEAR => "SAMPLED_IMAGE_FILTER_LINEAR",
-                    &Self::SAMPLED_IMAGE_FILTER_LINEAR_KHR => {
-                        "SAMPLED_IMAGE_FILTER_LINEAR_KHR"
-                    }
-                    &Self::SAMPLED_IMAGE_FILTER_CUBIC => "SAMPLED_IMAGE_FILTER_CUBIC",
-                    &Self::SAMPLED_IMAGE_FILTER_CUBIC_EXT => {
-                        "SAMPLED_IMAGE_FILTER_CUBIC_EXT"
-                    }
-                    &Self::TRANSFER_SRC => "TRANSFER_SRC",
-                    &Self::TRANSFER_SRC_KHR => "TRANSFER_SRC_KHR",
-                    &Self::TRANSFER_DST => "TRANSFER_DST",
-                    &Self::TRANSFER_DST_KHR => "TRANSFER_DST_KHR",
-                    &Self::SAMPLED_IMAGE_FILTER_MINMAX => "SAMPLED_IMAGE_FILTER_MINMAX",
-                    &Self::SAMPLED_IMAGE_FILTER_MINMAX_KHR => {
-                        "SAMPLED_IMAGE_FILTER_MINMAX_KHR"
-                    }
-                    &Self::MIDPOINT_CHROMA_SAMPLES => "MIDPOINT_CHROMA_SAMPLES",
-                    &Self::MIDPOINT_CHROMA_SAMPLES_KHR => "MIDPOINT_CHROMA_SAMPLES_KHR",
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR"
-                    }
-                    &Self::DISJOINT => "DISJOINT",
-                    &Self::DISJOINT_KHR => "DISJOINT_KHR",
-                    &Self::COSITED_CHROMA_SAMPLES => "COSITED_CHROMA_SAMPLES",
-                    &Self::COSITED_CHROMA_SAMPLES_KHR => "COSITED_CHROMA_SAMPLES_KHR",
-                    &Self::STORAGE_READ_WITHOUT_FORMAT => "STORAGE_READ_WITHOUT_FORMAT",
-                    &Self::STORAGE_READ_WITHOUT_FORMAT_KHR => {
-                        "STORAGE_READ_WITHOUT_FORMAT_KHR"
-                    }
-                    &Self::STORAGE_WRITE_WITHOUT_FORMAT => "STORAGE_WRITE_WITHOUT_FORMAT",
-                    &Self::STORAGE_WRITE_WITHOUT_FORMAT_KHR => {
-                        "STORAGE_WRITE_WITHOUT_FORMAT_KHR"
-                    }
-                    &Self::SAMPLED_IMAGE_DEPTH_COMPARISON => {
-                        "SAMPLED_IMAGE_DEPTH_COMPARISON"
-                    }
-                    &Self::SAMPLED_IMAGE_DEPTH_COMPARISON_KHR => {
-                        "SAMPLED_IMAGE_DEPTH_COMPARISON_KHR"
-                    }
-                    &Self::VIDEO_DECODE_OUTPUT_KHR => "VIDEO_DECODE_OUTPUT_KHR",
-                    &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
-                    &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => {
-                        "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR"
-                    }
-                    &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
-                    }
-                    &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
-                    &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
-                    &Self::LINEAR_COLOR_ATTACHMENT_NV => "LINEAR_COLOR_ATTACHMENT_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SAMPLED_IMAGE => "SAMPLED_IMAGE",
+                &Self::SAMPLED_IMAGE_KHR => "SAMPLED_IMAGE_KHR",
+                &Self::STORAGE_IMAGE => "STORAGE_IMAGE",
+                &Self::STORAGE_IMAGE_KHR => "STORAGE_IMAGE_KHR",
+                &Self::STORAGE_IMAGE_ATOMIC => "STORAGE_IMAGE_ATOMIC",
+                &Self::STORAGE_IMAGE_ATOMIC_KHR => "STORAGE_IMAGE_ATOMIC_KHR",
+                &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
+                &Self::UNIFORM_TEXEL_BUFFER_KHR => "UNIFORM_TEXEL_BUFFER_KHR",
+                &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
+                &Self::STORAGE_TEXEL_BUFFER_KHR => "STORAGE_TEXEL_BUFFER_KHR",
+                &Self::STORAGE_TEXEL_BUFFER_ATOMIC => "STORAGE_TEXEL_BUFFER_ATOMIC",
+                &Self::STORAGE_TEXEL_BUFFER_ATOMIC_KHR => {
+                    "STORAGE_TEXEL_BUFFER_ATOMIC_KHR"
+                }
+                &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
+                &Self::VERTEX_BUFFER_KHR => "VERTEX_BUFFER_KHR",
+                &Self::COLOR_ATTACHMENT => "COLOR_ATTACHMENT",
+                &Self::COLOR_ATTACHMENT_KHR => "COLOR_ATTACHMENT_KHR",
+                &Self::COLOR_ATTACHMENT_BLEND => "COLOR_ATTACHMENT_BLEND",
+                &Self::COLOR_ATTACHMENT_BLEND_KHR => "COLOR_ATTACHMENT_BLEND_KHR",
+                &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
+                &Self::DEPTH_STENCIL_ATTACHMENT_KHR => "DEPTH_STENCIL_ATTACHMENT_KHR",
+                &Self::BLIT_SRC => "BLIT_SRC",
+                &Self::BLIT_SRC_KHR => "BLIT_SRC_KHR",
+                &Self::BLIT_DST => "BLIT_DST",
+                &Self::BLIT_DST_KHR => "BLIT_DST_KHR",
+                &Self::SAMPLED_IMAGE_FILTER_LINEAR => "SAMPLED_IMAGE_FILTER_LINEAR",
+                &Self::SAMPLED_IMAGE_FILTER_LINEAR_KHR => {
+                    "SAMPLED_IMAGE_FILTER_LINEAR_KHR"
+                }
+                &Self::SAMPLED_IMAGE_FILTER_CUBIC => "SAMPLED_IMAGE_FILTER_CUBIC",
+                &Self::SAMPLED_IMAGE_FILTER_CUBIC_EXT => "SAMPLED_IMAGE_FILTER_CUBIC_EXT",
+                &Self::TRANSFER_SRC => "TRANSFER_SRC",
+                &Self::TRANSFER_SRC_KHR => "TRANSFER_SRC_KHR",
+                &Self::TRANSFER_DST => "TRANSFER_DST",
+                &Self::TRANSFER_DST_KHR => "TRANSFER_DST_KHR",
+                &Self::SAMPLED_IMAGE_FILTER_MINMAX => "SAMPLED_IMAGE_FILTER_MINMAX",
+                &Self::SAMPLED_IMAGE_FILTER_MINMAX_KHR => {
+                    "SAMPLED_IMAGE_FILTER_MINMAX_KHR"
+                }
+                &Self::MIDPOINT_CHROMA_SAMPLES => "MIDPOINT_CHROMA_SAMPLES",
+                &Self::MIDPOINT_CHROMA_SAMPLES_KHR => "MIDPOINT_CHROMA_SAMPLES_KHR",
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR"
+                }
+                &Self::DISJOINT => "DISJOINT",
+                &Self::DISJOINT_KHR => "DISJOINT_KHR",
+                &Self::COSITED_CHROMA_SAMPLES => "COSITED_CHROMA_SAMPLES",
+                &Self::COSITED_CHROMA_SAMPLES_KHR => "COSITED_CHROMA_SAMPLES_KHR",
+                &Self::STORAGE_READ_WITHOUT_FORMAT => "STORAGE_READ_WITHOUT_FORMAT",
+                &Self::STORAGE_READ_WITHOUT_FORMAT_KHR => {
+                    "STORAGE_READ_WITHOUT_FORMAT_KHR"
+                }
+                &Self::STORAGE_WRITE_WITHOUT_FORMAT => "STORAGE_WRITE_WITHOUT_FORMAT",
+                &Self::STORAGE_WRITE_WITHOUT_FORMAT_KHR => {
+                    "STORAGE_WRITE_WITHOUT_FORMAT_KHR"
+                }
+                &Self::SAMPLED_IMAGE_DEPTH_COMPARISON => "SAMPLED_IMAGE_DEPTH_COMPARISON",
+                &Self::SAMPLED_IMAGE_DEPTH_COMPARISON_KHR => {
+                    "SAMPLED_IMAGE_DEPTH_COMPARISON_KHR"
+                }
+                &Self::VIDEO_DECODE_OUTPUT_KHR => "VIDEO_DECODE_OUTPUT_KHR",
+                &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+                &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => {
+                    "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR"
+                }
+                &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
+                }
+                &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
+                &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
+                &Self::LINEAR_COLOR_ATTACHMENT_NV => "LINEAR_COLOR_ATTACHMENT_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_3`]
@@ -1058,35 +1059,6 @@ impl crate::vk1_0::EventCreateFlagBits {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPrivateDataSlotCreateFlags.html) · Bitmask of [`PrivateDataSlotCreateFlagBits`]"]
-    #[doc(alias = "VkPrivateDataSlotCreateFlags")] #[derive(Default)]
-    #[repr(transparent)] pub struct PrivateDataSlotCreateFlags : u32 {
-    #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
-}
-///<s>Vulkan Manual Page</s> · Bits enum of [`PrivateDataSlotCreateFlags`]
-#[doc(alias = "VkPrivateDataSlotCreateFlagBits")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct PrivateDataSlotCreateFlagBits(pub u32);
-impl PrivateDataSlotCreateFlagBits {
-    #[inline]
-    ///Converts this enum variant to the corresponding bitmask
-    pub const fn bitmask(&self) -> PrivateDataSlotCreateFlags {
-        PrivateDataSlotCreateFlags::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for PrivateDataSlotCreateFlagBits {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
-    }
-}
-bitflags::bitflags! {
-    #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreationFeedbackFlags.html) · Bitmask of [`PipelineCreationFeedbackFlagBits`]"]
     #[doc(alias = "VkPipelineCreationFeedbackFlags")] #[derive(Default)]
     #[repr(transparent)] pub struct PipelineCreationFeedbackFlags : u32 { const VALID =
@@ -1114,17 +1086,14 @@ impl PipelineCreationFeedbackFlagBits {
 }
 impl std::fmt::Debug for PipelineCreationFeedbackFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VALID => "VALID",
-                    &Self::APPLICATION_PIPELINE_CACHE_HIT => {
-                        "APPLICATION_PIPELINE_CACHE_HIT"
-                    }
-                    &Self::BASE_PIPELINE_ACCELERATION => "BASE_PIPELINE_ACCELERATION",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VALID => "VALID",
+                &Self::APPLICATION_PIPELINE_CACHE_HIT => "APPLICATION_PIPELINE_CACHE_HIT",
+                &Self::BASE_PIPELINE_ACCELERATION => "BASE_PIPELINE_ACCELERATION",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_3`]
@@ -1167,19 +1136,18 @@ impl ToolPurposeFlagBits {
 }
 impl std::fmt::Debug for ToolPurposeFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VALIDATION => "VALIDATION",
-                    &Self::PROFILING => "PROFILING",
-                    &Self::TRACING => "TRACING",
-                    &Self::ADDITIONAL_FEATURES => "ADDITIONAL_FEATURES",
-                    &Self::MODIFYING_FEATURES => "MODIFYING_FEATURES",
-                    &Self::DEBUG_REPORTING_EXT => "DEBUG_REPORTING_EXT",
-                    &Self::DEBUG_MARKERS_EXT => "DEBUG_MARKERS_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VALIDATION => "VALIDATION",
+                &Self::PROFILING => "PROFILING",
+                &Self::TRACING => "TRACING",
+                &Self::ADDITIONAL_FEATURES => "ADDITIONAL_FEATURES",
+                &Self::MODIFYING_FEATURES => "MODIFYING_FEATURES",
+                &Self::DEBUG_REPORTING_EXT => "DEBUG_REPORTING_EXT",
+                &Self::DEBUG_MARKERS_EXT => "DEBUG_MARKERS_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_3`]
@@ -1221,17 +1189,16 @@ impl RenderingFlagBits {
 }
 impl std::fmt::Debug for RenderingFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::CONTENTS_SECONDARY_COMMAND_BUFFERS => {
-                        "CONTENTS_SECONDARY_COMMAND_BUFFERS"
-                    }
-                    &Self::SUSPENDING => "SUSPENDING",
-                    &Self::RESUMING => "RESUMING",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::CONTENTS_SECONDARY_COMMAND_BUFFERS => {
+                    "CONTENTS_SECONDARY_COMMAND_BUFFERS"
+                }
+                &Self::SUSPENDING => "SUSPENDING",
+                &Self::RESUMING => "RESUMING",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_3`]
@@ -1264,13 +1231,12 @@ impl SubmitFlagBits {
 }
 impl std::fmt::Debug for SubmitFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::PROTECTED => "PROTECTED",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::PROTECTED => "PROTECTED",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_3`]
@@ -1642,7 +1608,7 @@ impl<'a> crate::ExtendableFrom<'a, CommandBufferInheritanceRenderingInfoBuilder<
 for crate::vk1_0::CommandBufferInheritanceInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDevicePrivateDataCreateInfo.html) · Structure
 #[doc(alias = "VkDevicePrivateDataCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DevicePrivateDataCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -1663,8 +1629,7 @@ impl Default for DevicePrivateDataCreateInfo {
 }
 impl std::fmt::Debug for DevicePrivateDataCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DevicePrivateDataCreateInfo")
+        f.debug_struct("DevicePrivateDataCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -1731,7 +1696,7 @@ impl<'a> std::ops::DerefMut for DevicePrivateDataCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPrivateDataSlotCreateInfo.html) · Structure
 #[doc(alias = "VkPrivateDataSlotCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PrivateDataSlotCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -1752,8 +1717,7 @@ impl Default for PrivateDataSlotCreateInfo {
 }
 impl std::fmt::Debug for PrivateDataSlotCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PrivateDataSlotCreateInfo")
+        f.debug_struct("PrivateDataSlotCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -1814,7 +1778,7 @@ impl<'a> std::ops::DerefMut for PrivateDataSlotCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePrivateDataFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDevicePrivateDataFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePrivateDataFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -1835,8 +1799,7 @@ impl Default for PhysicalDevicePrivateDataFeatures {
 }
 impl std::fmt::Debug for PhysicalDevicePrivateDataFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePrivateDataFeatures")
+        f.debug_struct("PhysicalDevicePrivateDataFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("private_data", &(self.private_data != 0))
@@ -2008,7 +1971,7 @@ impl<'a> crate::ExtendableFrom<'a, FormatProperties3Builder<'_>>
 for crate::vk1_1::FormatProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceBufferMemoryRequirements.html) · Structure
 #[doc(alias = "VkDeviceBufferMemoryRequirements")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceBufferMemoryRequirements {
     pub s_type: crate::vk1_0::StructureType,
@@ -2029,8 +1992,7 @@ impl Default for DeviceBufferMemoryRequirements {
 }
 impl std::fmt::Debug for DeviceBufferMemoryRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceBufferMemoryRequirements")
+        f.debug_struct("DeviceBufferMemoryRequirements")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_create_info", &self.p_create_info)
@@ -2097,7 +2059,7 @@ impl<'a> std::ops::DerefMut for DeviceBufferMemoryRequirementsBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceImageMemoryRequirements.html) · Structure
 #[doc(alias = "VkDeviceImageMemoryRequirements")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceImageMemoryRequirements {
     pub s_type: crate::vk1_0::StructureType,
@@ -2120,8 +2082,7 @@ impl Default for DeviceImageMemoryRequirements {
 }
 impl std::fmt::Debug for DeviceImageMemoryRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceImageMemoryRequirements")
+        f.debug_struct("DeviceImageMemoryRequirements")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_create_info", &self.p_create_info)
@@ -2198,7 +2159,7 @@ impl<'a> std::ops::DerefMut for DeviceImageMemoryRequirementsBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInlineUniformBlockFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceInlineUniformBlockFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceInlineUniformBlockFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -2221,8 +2182,7 @@ impl Default for PhysicalDeviceInlineUniformBlockFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceInlineUniformBlockFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceInlineUniformBlockFeatures")
+        f.debug_struct("PhysicalDeviceInlineUniformBlockFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("inline_uniform_block", &(self.inline_uniform_block != 0))
@@ -2304,7 +2264,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceInlineUniformBlockFeaturesBuilder<
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceInlineUniformBlockProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceInlineUniformBlockProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceInlineUniformBlockProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -2333,8 +2293,7 @@ impl Default for PhysicalDeviceInlineUniformBlockProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceInlineUniformBlockProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceInlineUniformBlockProperties")
+        f.debug_struct("PhysicalDeviceInlineUniformBlockProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_inline_uniform_block_size", &self.max_inline_uniform_block_size)
@@ -2468,7 +2427,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceInlineUniformBlockPropertiesBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWriteDescriptorSetInlineUniformBlock.html) · Structure
 #[doc(alias = "VkWriteDescriptorSetInlineUniformBlock")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct WriteDescriptorSetInlineUniformBlock {
     pub s_type: crate::vk1_0::StructureType,
@@ -2491,8 +2450,7 @@ impl Default for WriteDescriptorSetInlineUniformBlock {
 }
 impl std::fmt::Debug for WriteDescriptorSetInlineUniformBlock {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("WriteDescriptorSetInlineUniformBlock")
+        f.debug_struct("WriteDescriptorSetInlineUniformBlock")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("data_size", &self.data_size)
@@ -2563,7 +2521,7 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetInlineUniformBlockBuilder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolInlineUniformBlockCreateInfo.html) · Structure
 #[doc(alias = "VkDescriptorPoolInlineUniformBlockCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorPoolInlineUniformBlockCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -2584,8 +2542,7 @@ impl Default for DescriptorPoolInlineUniformBlockCreateInfo {
 }
 impl std::fmt::Debug for DescriptorPoolInlineUniformBlockCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorPoolInlineUniformBlockCreateInfo")
+        f.debug_struct("DescriptorPoolInlineUniformBlockCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -2660,7 +2617,7 @@ impl<'a> std::ops::DerefMut for DescriptorPoolInlineUniformBlockCreateInfoBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMaintenance4Features.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMaintenance4Features")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMaintenance4Features {
     pub s_type: crate::vk1_0::StructureType,
@@ -2681,8 +2638,7 @@ impl Default for PhysicalDeviceMaintenance4Features {
 }
 impl std::fmt::Debug for PhysicalDeviceMaintenance4Features {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMaintenance4Features")
+        f.debug_struct("PhysicalDeviceMaintenance4Features")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("maintenance4", &(self.maintenance4 != 0))
@@ -2746,7 +2702,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMaintenance4FeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMaintenance4Properties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMaintenance4Properties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMaintenance4Properties {
     pub s_type: crate::vk1_0::StructureType,
@@ -2767,8 +2723,7 @@ impl Default for PhysicalDeviceMaintenance4Properties {
 }
 impl std::fmt::Debug for PhysicalDeviceMaintenance4Properties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMaintenance4Properties")
+        f.debug_struct("PhysicalDeviceMaintenance4Properties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_buffer_size", &self.max_buffer_size)
@@ -2848,7 +2803,7 @@ for crate::extensions::khr_ray_tracing_pipeline::RayTracingPipelineCreateInfoKHR
 > {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTextureCompressionASTCHDRFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceTextureCompressionASTCHDRFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTextureCompressionASTCHDRFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -2869,8 +2824,7 @@ impl Default for PhysicalDeviceTextureCompressionASTCHDRFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceTextureCompressionASTCHDRFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceTextureCompressionASTCHDRFeatures")
+        f.debug_struct("PhysicalDeviceTextureCompressionASTCHDRFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -2947,7 +2901,7 @@ for PhysicalDeviceTextureCompressionASTCHDRFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreationFeedback.html) · Structure
 #[doc(alias = "VkPipelineCreationFeedback")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PipelineCreationFeedback {
     pub flags: crate::vk1_3::PipelineCreationFeedbackFlags,
@@ -2963,8 +2917,7 @@ impl Default for PipelineCreationFeedback {
 }
 impl std::fmt::Debug for PipelineCreationFeedback {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCreationFeedback")
+        f.debug_struct("PipelineCreationFeedback")
             .field("flags", &self.flags)
             .field("duration", &self.duration)
             .finish()
@@ -3028,7 +2981,7 @@ impl<'a> std::ops::DerefMut for PipelineCreationFeedbackBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCreationFeedbackCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineCreationFeedbackCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineCreationFeedbackCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3053,8 +3006,7 @@ impl Default for PipelineCreationFeedbackCreateInfo {
 }
 impl std::fmt::Debug for PipelineCreationFeedbackCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCreationFeedbackCreateInfo")
+        f.debug_struct("PipelineCreationFeedbackCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_pipeline_creation_feedback", &self.p_pipeline_creation_feedback)
@@ -3145,7 +3097,7 @@ impl<'a> std::ops::DerefMut for PipelineCreationFeedbackCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderDemoteToHelperInvocationFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -3166,8 +3118,7 @@ impl Default for PhysicalDeviceShaderDemoteToHelperInvocationFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderDemoteToHelperInvocationFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderDemoteToHelperInvocationFeatures")
+        f.debug_struct("PhysicalDeviceShaderDemoteToHelperInvocationFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -3249,7 +3200,7 @@ for PhysicalDeviceShaderDemoteToHelperInvocationFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTexelBufferAlignmentProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceTexelBufferAlignmentProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTexelBufferAlignmentProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -3276,8 +3227,7 @@ impl Default for PhysicalDeviceTexelBufferAlignmentProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceTexelBufferAlignmentProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceTexelBufferAlignmentProperties")
+        f.debug_struct("PhysicalDeviceTexelBufferAlignmentProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -3404,7 +3354,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTexelBufferAlignmentPropertiesBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSubgroupSizeControlFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSubgroupSizeControlFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -3427,8 +3377,7 @@ impl Default for PhysicalDeviceSubgroupSizeControlFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSubgroupSizeControlFeatures")
+        f.debug_struct("PhysicalDeviceSubgroupSizeControlFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("subgroup_size_control", &(self.subgroup_size_control != 0))
@@ -3501,7 +3450,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupSizeControlFeaturesBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubgroupSizeControlProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSubgroupSizeControlProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSubgroupSizeControlProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -3528,8 +3477,7 @@ impl Default for PhysicalDeviceSubgroupSizeControlProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceSubgroupSizeControlProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSubgroupSizeControlProperties")
+        f.debug_struct("PhysicalDeviceSubgroupSizeControlProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("min_subgroup_size", &self.min_subgroup_size)
@@ -3629,7 +3577,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubgroupSizeControlPropertiesBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineShaderStageRequiredSubgroupSizeCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineShaderStageRequiredSubgroupSizeCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineShaderStageRequiredSubgroupSizeCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -3650,8 +3598,7 @@ impl Default for PipelineShaderStageRequiredSubgroupSizeCreateInfo {
 }
 impl std::fmt::Debug for PipelineShaderStageRequiredSubgroupSizeCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineShaderStageRequiredSubgroupSizeCreateInfo")
+        f.debug_struct("PipelineShaderStageRequiredSubgroupSizeCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("required_subgroup_size", &self.required_subgroup_size)
@@ -3724,7 +3671,7 @@ for PipelineShaderStageRequiredSubgroupSizeCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePipelineCreationCacheControlFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDevicePipelineCreationCacheControlFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePipelineCreationCacheControlFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -3745,8 +3692,7 @@ impl Default for PhysicalDevicePipelineCreationCacheControlFeatures {
 }
 impl std::fmt::Debug for PhysicalDevicePipelineCreationCacheControlFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePipelineCreationCacheControlFeatures")
+        f.debug_struct("PhysicalDevicePipelineCreationCacheControlFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -3825,7 +3771,7 @@ for PhysicalDevicePipelineCreationCacheControlFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVulkan13Features.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVulkan13Features")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVulkan13Features {
     pub s_type: crate::vk1_0::StructureType,
@@ -3874,8 +3820,7 @@ impl Default for PhysicalDeviceVulkan13Features {
 }
 impl std::fmt::Debug for PhysicalDeviceVulkan13Features {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceVulkan13Features")
+        f.debug_struct("PhysicalDeviceVulkan13Features")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("robust_image_access", &(self.robust_image_access != 0))
@@ -4085,7 +4030,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVulkan13FeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVulkan13Properties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVulkan13Properties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVulkan13Properties {
     pub s_type: crate::vk1_0::StructureType,
@@ -4194,8 +4139,7 @@ impl Default for PhysicalDeviceVulkan13Properties {
 }
 impl std::fmt::Debug for PhysicalDeviceVulkan13Properties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceVulkan13Properties")
+        f.debug_struct("PhysicalDeviceVulkan13Properties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("min_subgroup_size", &self.min_subgroup_size)
@@ -4955,7 +4899,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVulkan13PropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceToolProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceToolProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceToolProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -4984,8 +4928,7 @@ impl Default for PhysicalDeviceToolProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceToolProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceToolProperties")
+        f.debug_struct("PhysicalDeviceToolProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("name", unsafe { &std::ffi::CStr::from_ptr(self.name.as_ptr()) })
@@ -5080,7 +5023,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceToolPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceZeroInitializeWorkgroupMemoryFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -5101,8 +5044,7 @@ impl Default for PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures")
+        f.debug_struct("PhysicalDeviceZeroInitializeWorkgroupMemoryFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -5184,7 +5126,7 @@ for PhysicalDeviceZeroInitializeWorkgroupMemoryFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceImageRobustnessFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceImageRobustnessFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceImageRobustnessFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -5205,8 +5147,7 @@ impl Default for PhysicalDeviceImageRobustnessFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceImageRobustnessFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceImageRobustnessFeatures")
+        f.debug_struct("PhysicalDeviceImageRobustnessFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("robust_image_access", &(self.robust_image_access != 0))
@@ -5270,7 +5211,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceImageRobustnessFeaturesBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy2.html) · Structure
 #[doc(alias = "VkBufferCopy2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferCopy2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5295,8 +5236,7 @@ impl Default for BufferCopy2 {
 }
 impl std::fmt::Debug for BufferCopy2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCopy2")
+        f.debug_struct("BufferCopy2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_offset", &self.src_offset)
@@ -5368,7 +5308,7 @@ impl<'a> std::ops::DerefMut for BufferCopy2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCopy2.html) · Structure
 #[doc(alias = "VkImageCopy2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageCopy2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5397,8 +5337,7 @@ impl Default for ImageCopy2 {
 }
 impl std::fmt::Debug for ImageCopy2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageCopy2")
+        f.debug_struct("ImageCopy2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_subresource", &self.src_subresource)
@@ -5490,7 +5429,7 @@ impl<'a> std::ops::DerefMut for ImageCopy2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageBlit2.html) · Structure
 #[doc(alias = "VkImageBlit2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageBlit2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5517,8 +5456,7 @@ impl Default for ImageBlit2 {
 }
 impl std::fmt::Debug for ImageBlit2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageBlit2")
+        f.debug_struct("ImageBlit2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_subresource", &self.src_subresource)
@@ -5603,7 +5541,7 @@ impl<'a> std::ops::DerefMut for ImageBlit2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferImageCopy2.html) · Structure
 #[doc(alias = "VkBufferImageCopy2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferImageCopy2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5634,8 +5572,7 @@ impl Default for BufferImageCopy2 {
 }
 impl std::fmt::Debug for BufferImageCopy2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferImageCopy2")
+        f.debug_struct("BufferImageCopy2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("buffer_offset", &self.buffer_offset)
@@ -5734,7 +5671,7 @@ impl<'a> std::ops::DerefMut for BufferImageCopy2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageResolve2.html) · Structure
 #[doc(alias = "VkImageResolve2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageResolve2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5763,8 +5700,7 @@ impl Default for ImageResolve2 {
 }
 impl std::fmt::Debug for ImageResolve2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageResolve2")
+        f.debug_struct("ImageResolve2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_subresource", &self.src_subresource)
@@ -5856,7 +5792,7 @@ impl<'a> std::ops::DerefMut for ImageResolve2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyBufferInfo2.html) · Structure
 #[doc(alias = "VkCopyBufferInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyBufferInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5883,8 +5819,7 @@ impl Default for CopyBufferInfo2 {
 }
 impl std::fmt::Debug for CopyBufferInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CopyBufferInfo2")
+        f.debug_struct("CopyBufferInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_buffer", &self.src_buffer)
@@ -5958,7 +5893,7 @@ impl<'a> std::ops::DerefMut for CopyBufferInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyImageInfo2.html) · Structure
 #[doc(alias = "VkCopyImageInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyImageInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -5989,8 +5924,7 @@ impl Default for CopyImageInfo2 {
 }
 impl std::fmt::Debug for CopyImageInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CopyImageInfo2")
+        f.debug_struct("CopyImageInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_image", &self.src_image)
@@ -6084,7 +6018,7 @@ impl<'a> std::ops::DerefMut for CopyImageInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBlitImageInfo2.html) · Structure
 #[doc(alias = "VkBlitImageInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BlitImageInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6117,8 +6051,7 @@ impl Default for BlitImageInfo2 {
 }
 impl std::fmt::Debug for BlitImageInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BlitImageInfo2")
+        f.debug_struct("BlitImageInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_image", &self.src_image)
@@ -6219,7 +6152,7 @@ impl<'a> std::ops::DerefMut for BlitImageInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyBufferToImageInfo2.html) · Structure
 #[doc(alias = "VkCopyBufferToImageInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyBufferToImageInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6248,8 +6181,7 @@ impl Default for CopyBufferToImageInfo2 {
 }
 impl std::fmt::Debug for CopyBufferToImageInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CopyBufferToImageInfo2")
+        f.debug_struct("CopyBufferToImageInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_buffer", &self.src_buffer)
@@ -6339,7 +6271,7 @@ impl<'a> std::ops::DerefMut for CopyBufferToImageInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyImageToBufferInfo2.html) · Structure
 #[doc(alias = "VkCopyImageToBufferInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyImageToBufferInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6368,8 +6300,7 @@ impl Default for CopyImageToBufferInfo2 {
 }
 impl std::fmt::Debug for CopyImageToBufferInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CopyImageToBufferInfo2")
+        f.debug_struct("CopyImageToBufferInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_image", &self.src_image)
@@ -6459,7 +6390,7 @@ impl<'a> std::ops::DerefMut for CopyImageToBufferInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkResolveImageInfo2.html) · Structure
 #[doc(alias = "VkResolveImageInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ResolveImageInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6490,8 +6421,7 @@ impl Default for ResolveImageInfo2 {
 }
 impl std::fmt::Debug for ResolveImageInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ResolveImageInfo2")
+        f.debug_struct("ResolveImageInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_image", &self.src_image)
@@ -6588,7 +6518,7 @@ impl<'a> std::ops::DerefMut for ResolveImageInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderTerminateInvocationFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderTerminateInvocationFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderTerminateInvocationFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -6609,8 +6539,7 @@ impl Default for PhysicalDeviceShaderTerminateInvocationFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderTerminateInvocationFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderTerminateInvocationFeatures")
+        f.debug_struct("PhysicalDeviceShaderTerminateInvocationFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -6687,7 +6616,7 @@ for PhysicalDeviceShaderTerminateInvocationFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryBarrier2.html) · Structure
 #[doc(alias = "VkMemoryBarrier2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryBarrier2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6714,8 +6643,7 @@ impl Default for MemoryBarrier2 {
 }
 impl std::fmt::Debug for MemoryBarrier2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryBarrier2")
+        f.debug_struct("MemoryBarrier2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_stage_mask", &self.src_stage_mask)
@@ -6806,7 +6734,7 @@ impl<'a> std::ops::DerefMut for MemoryBarrier2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageMemoryBarrier2.html) · Structure
 #[doc(alias = "VkImageMemoryBarrier2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageMemoryBarrier2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -6845,8 +6773,7 @@ impl Default for ImageMemoryBarrier2 {
 }
 impl std::fmt::Debug for ImageMemoryBarrier2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageMemoryBarrier2")
+        f.debug_struct("ImageMemoryBarrier2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_stage_mask", &self.src_stage_mask)
@@ -6985,7 +6912,7 @@ impl<'a> std::ops::DerefMut for ImageMemoryBarrier2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferMemoryBarrier2.html) · Structure
 #[doc(alias = "VkBufferMemoryBarrier2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferMemoryBarrier2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -7022,8 +6949,7 @@ impl Default for BufferMemoryBarrier2 {
 }
 impl std::fmt::Debug for BufferMemoryBarrier2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferMemoryBarrier2")
+        f.debug_struct("BufferMemoryBarrier2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_stage_mask", &self.src_stage_mask)
@@ -7152,7 +7078,7 @@ impl<'a> std::ops::DerefMut for BufferMemoryBarrier2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDependencyInfo.html) · Structure
 #[doc(alias = "VkDependencyInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DependencyInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -7185,8 +7111,7 @@ impl Default for DependencyInfo {
 }
 impl std::fmt::Debug for DependencyInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DependencyInfo")
+        f.debug_struct("DependencyInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("dependency_flags", &self.dependency_flags)
@@ -7283,7 +7208,7 @@ impl<'a> std::ops::DerefMut for DependencyInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreSubmitInfo.html) · Structure
 #[doc(alias = "VkSemaphoreSubmitInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SemaphoreSubmitInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -7310,8 +7235,7 @@ impl Default for SemaphoreSubmitInfo {
 }
 impl std::fmt::Debug for SemaphoreSubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SemaphoreSubmitInfo")
+        f.debug_struct("SemaphoreSubmitInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("semaphore", &self.semaphore)
@@ -7393,7 +7317,7 @@ impl<'a> std::ops::DerefMut for SemaphoreSubmitInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferSubmitInfo.html) · Structure
 #[doc(alias = "VkCommandBufferSubmitInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferSubmitInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -7416,8 +7340,7 @@ impl Default for CommandBufferSubmitInfo {
 }
 impl std::fmt::Debug for CommandBufferSubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferSubmitInfo")
+        f.debug_struct("CommandBufferSubmitInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("command_buffer", &self.command_buffer)
@@ -7488,7 +7411,7 @@ impl<'a> std::ops::DerefMut for CommandBufferSubmitInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubmitInfo2.html) · Structure
 #[doc(alias = "VkSubmitInfo2")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SubmitInfo2 {
     pub s_type: crate::vk1_0::StructureType,
@@ -7521,8 +7444,7 @@ impl Default for SubmitInfo2 {
 }
 impl std::fmt::Debug for SubmitInfo2 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubmitInfo2")
+        f.debug_struct("SubmitInfo2")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -7616,7 +7538,7 @@ impl<'a> std::ops::DerefMut for SubmitInfo2Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSynchronization2Features.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSynchronization2Features")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSynchronization2Features {
     pub s_type: crate::vk1_0::StructureType,
@@ -7637,8 +7559,7 @@ impl Default for PhysicalDeviceSynchronization2Features {
 }
 impl std::fmt::Debug for PhysicalDeviceSynchronization2Features {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSynchronization2Features")
+        f.debug_struct("PhysicalDeviceSynchronization2Features")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("synchronization2", &(self.synchronization2 != 0))
@@ -7702,7 +7623,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSynchronization2FeaturesBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderIntegerDotProductFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderIntegerDotProductFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderIntegerDotProductFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -7723,8 +7644,7 @@ impl Default for PhysicalDeviceShaderIntegerDotProductFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderIntegerDotProductFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderIntegerDotProductFeatures")
+        f.debug_struct("PhysicalDeviceShaderIntegerDotProductFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_integer_dot_product", &(self.shader_integer_dot_product != 0))
@@ -7798,7 +7718,7 @@ for PhysicalDeviceShaderIntegerDotProductFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderIntegerDotProductProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderIntegerDotProductProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderIntegerDotProductProperties {
     pub s_type: crate::vk1_0::StructureType,
@@ -7877,8 +7797,7 @@ impl Default for PhysicalDeviceShaderIntegerDotProductProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderIntegerDotProductProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderIntegerDotProductProperties")
+        f.debug_struct("PhysicalDeviceShaderIntegerDotProductProperties")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -8453,7 +8372,7 @@ for PhysicalDeviceShaderIntegerDotProductPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties3.html) · Structure
 #[doc(alias = "VkFormatProperties3")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FormatProperties3 {
     pub s_type: crate::vk1_0::StructureType,
@@ -8478,8 +8397,7 @@ impl Default for FormatProperties3 {
 }
 impl std::fmt::Debug for FormatProperties3 {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FormatProperties3")
+        f.debug_struct("FormatProperties3")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("linear_tiling_features", &self.linear_tiling_features)
@@ -8563,7 +8481,7 @@ impl<'a> std::ops::DerefMut for FormatProperties3Builder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRenderingCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineRenderingCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRenderingCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -8592,8 +8510,7 @@ impl Default for PipelineRenderingCreateInfo {
 }
 impl std::fmt::Debug for PipelineRenderingCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRenderingCreateInfo")
+        f.debug_struct("PipelineRenderingCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("view_mask", &self.view_mask)
@@ -8686,7 +8603,7 @@ impl<'a> std::ops::DerefMut for PipelineRenderingCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderingInfo.html) · Structure
 #[doc(alias = "VkRenderingInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderingInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -8721,8 +8638,7 @@ impl Default for RenderingInfo {
 }
 impl std::fmt::Debug for RenderingInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderingInfo")
+        f.debug_struct("RenderingInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -8833,7 +8749,7 @@ impl<'a> std::ops::DerefMut for RenderingInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderingAttachmentInfo.html) · Structure
 #[doc(alias = "VkRenderingAttachmentInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderingAttachmentInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -8868,8 +8784,7 @@ impl Default for RenderingAttachmentInfo {
 }
 impl std::fmt::Debug for RenderingAttachmentInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderingAttachmentInfo")
+        f.debug_struct("RenderingAttachmentInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_view", &self.image_view)
@@ -8988,7 +8903,7 @@ impl<'a> std::ops::DerefMut for RenderingAttachmentInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDynamicRenderingFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDynamicRenderingFeatures")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDynamicRenderingFeatures {
     pub s_type: crate::vk1_0::StructureType,
@@ -9009,8 +8924,7 @@ impl Default for PhysicalDeviceDynamicRenderingFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceDynamicRenderingFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDynamicRenderingFeatures")
+        f.debug_struct("PhysicalDeviceDynamicRenderingFeatures")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("dynamic_rendering", &(self.dynamic_rendering != 0))
@@ -9074,7 +8988,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDynamicRenderingFeaturesBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceRenderingInfo.html) · Structure
 #[doc(alias = "VkCommandBufferInheritanceRenderingInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferInheritanceRenderingInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -9107,8 +9021,7 @@ impl Default for CommandBufferInheritanceRenderingInfo {
 }
 impl std::fmt::Debug for CommandBufferInheritanceRenderingInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferInheritanceRenderingInfo")
+        f.debug_struct("CommandBufferInheritanceRenderingInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

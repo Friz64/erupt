@@ -34,7 +34,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePortabilitySubsetFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePortabilitySubsetFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePortabilitySubsetFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -83,8 +83,7 @@ impl Default for PhysicalDevicePortabilitySubsetFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDevicePortabilitySubsetFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePortabilitySubsetFeaturesKHR")
+        f.debug_struct("PhysicalDevicePortabilitySubsetFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -291,7 +290,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePortabilitySubsetFeaturesKHRBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePortabilitySubsetPropertiesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePortabilitySubsetPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePortabilitySubsetPropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -312,8 +311,7 @@ impl Default for PhysicalDevicePortabilitySubsetPropertiesKHR {
 }
 impl std::fmt::Debug for PhysicalDevicePortabilitySubsetPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePortabilitySubsetPropertiesKHR")
+        f.debug_struct("PhysicalDevicePortabilitySubsetPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

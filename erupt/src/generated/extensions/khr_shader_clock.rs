@@ -21,7 +21,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderClockFeaturesKHRBuilder<'
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderClockFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderClockFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderClockFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -44,8 +44,7 @@ impl Default for PhysicalDeviceShaderClockFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderClockFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderClockFeaturesKHR")
+        f.debug_struct("PhysicalDeviceShaderClockFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_subgroup_clock", &(self.shader_subgroup_clock != 0))

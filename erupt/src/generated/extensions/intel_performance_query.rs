@@ -84,15 +84,14 @@ impl crate::vk1_0::ObjectType {
 pub struct PerformanceConfigurationTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceConfigurationTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL => {
-                        "COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL => {
+                    "COMMAND_QUEUE_METRICS_DISCOVERY_ACTIVATED_INTEL"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::intel_performance_query`]
@@ -106,13 +105,12 @@ impl crate::extensions::intel_performance_query::PerformanceConfigurationTypeINT
 pub struct QueryPoolSamplingModeINTEL(pub i32);
 impl std::fmt::Debug for QueryPoolSamplingModeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::MANUAL_INTEL => "MANUAL_INTEL",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::MANUAL_INTEL => "MANUAL_INTEL",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::intel_performance_query`]
@@ -126,14 +124,13 @@ impl crate::extensions::intel_performance_query::QueryPoolSamplingModeINTEL {
 pub struct PerformanceOverrideTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceOverrideTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NULL_HARDWARE_INTEL => "NULL_HARDWARE_INTEL",
-                    &Self::FLUSH_GPU_CACHES_INTEL => "FLUSH_GPU_CACHES_INTEL",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NULL_HARDWARE_INTEL => "NULL_HARDWARE_INTEL",
+                &Self::FLUSH_GPU_CACHES_INTEL => "FLUSH_GPU_CACHES_INTEL",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::intel_performance_query`]
@@ -148,16 +145,13 @@ impl crate::extensions::intel_performance_query::PerformanceOverrideTypeINTEL {
 pub struct PerformanceParameterTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceParameterTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::HW_COUNTERS_SUPPORTED_INTEL => "HW_COUNTERS_SUPPORTED_INTEL",
-                    &Self::STREAM_MARKER_VALID_BITS_INTEL => {
-                        "STREAM_MARKER_VALID_BITS_INTEL"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::HW_COUNTERS_SUPPORTED_INTEL => "HW_COUNTERS_SUPPORTED_INTEL",
+                &Self::STREAM_MARKER_VALID_BITS_INTEL => "STREAM_MARKER_VALID_BITS_INTEL",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::intel_performance_query`]
@@ -172,17 +166,16 @@ impl crate::extensions::intel_performance_query::PerformanceParameterTypeINTEL {
 pub struct PerformanceValueTypeINTEL(pub i32);
 impl std::fmt::Debug for PerformanceValueTypeINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UINT32_INTEL => "UINT32_INTEL",
-                    &Self::UINT64_INTEL => "UINT64_INTEL",
-                    &Self::FLOAT_INTEL => "FLOAT_INTEL",
-                    &Self::BOOL_INTEL => "BOOL_INTEL",
-                    &Self::STRING_INTEL => "STRING_INTEL",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UINT32_INTEL => "UINT32_INTEL",
+                &Self::UINT64_INTEL => "UINT64_INTEL",
+                &Self::FLOAT_INTEL => "FLOAT_INTEL",
+                &Self::BOOL_INTEL => "BOOL_INTEL",
+                &Self::STRING_INTEL => "STRING_INTEL",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::intel_performance_query`]
@@ -254,7 +247,7 @@ impl<'a> crate::ExtendableFrom<'a, QueryPoolPerformanceQueryCreateInfoINTELBuild
 for crate::vk1_0::QueryPoolCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceValueDataINTEL.html) · Structure
 #[doc(alias = "VkPerformanceValueDataINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub union PerformanceValueDataINTEL {
     pub value32: u32,
@@ -275,7 +268,7 @@ impl std::fmt::Debug for PerformanceValueDataINTEL {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceValueINTEL.html) · Structure
 #[doc(alias = "VkPerformanceValueINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceValueINTEL {
     pub _type: crate::extensions::intel_performance_query::PerformanceValueTypeINTEL,
@@ -291,8 +284,7 @@ impl Default for PerformanceValueINTEL {
 }
 impl std::fmt::Debug for PerformanceValueINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceValueINTEL")
+        f.debug_struct("PerformanceValueINTEL")
             .field("_type", &self._type)
             .field("data", &self.data)
             .finish()
@@ -362,7 +354,7 @@ impl<'a> std::ops::DerefMut for PerformanceValueINTELBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInitializePerformanceApiInfoINTEL.html) · Structure
 #[doc(alias = "VkInitializePerformanceApiInfoINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct InitializePerformanceApiInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
@@ -383,8 +375,7 @@ impl Default for InitializePerformanceApiInfoINTEL {
 }
 impl std::fmt::Debug for InitializePerformanceApiInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("InitializePerformanceApiInfoINTEL")
+        f.debug_struct("InitializePerformanceApiInfoINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_user_data", &self.p_user_data)
@@ -448,7 +439,7 @@ impl<'a> std::ops::DerefMut for InitializePerformanceApiInfoINTELBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryPoolPerformanceQueryCreateInfoINTEL.html) · Structure
 #[doc(alias = "VkQueryPoolPerformanceQueryCreateInfoINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueryPoolPerformanceQueryCreateInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
@@ -469,8 +460,7 @@ impl Default for QueryPoolPerformanceQueryCreateInfoINTEL {
 }
 impl std::fmt::Debug for QueryPoolPerformanceQueryCreateInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueryPoolPerformanceQueryCreateInfoINTEL")
+        f.debug_struct("QueryPoolPerformanceQueryCreateInfoINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("performance_counters_sampling", &self.performance_counters_sampling)
@@ -539,7 +529,7 @@ impl<'a> std::ops::DerefMut for QueryPoolPerformanceQueryCreateInfoINTELBuilder<
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceMarkerInfoINTEL.html) · Structure
 #[doc(alias = "VkPerformanceMarkerInfoINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceMarkerInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
@@ -560,8 +550,7 @@ impl Default for PerformanceMarkerInfoINTEL {
 }
 impl std::fmt::Debug for PerformanceMarkerInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceMarkerInfoINTEL")
+        f.debug_struct("PerformanceMarkerInfoINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("marker", &self.marker)
@@ -622,7 +611,7 @@ impl<'a> std::ops::DerefMut for PerformanceMarkerInfoINTELBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceStreamMarkerInfoINTEL.html) · Structure
 #[doc(alias = "VkPerformanceStreamMarkerInfoINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceStreamMarkerInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
@@ -643,8 +632,7 @@ impl Default for PerformanceStreamMarkerInfoINTEL {
 }
 impl std::fmt::Debug for PerformanceStreamMarkerInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceStreamMarkerInfoINTEL")
+        f.debug_struct("PerformanceStreamMarkerInfoINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("marker", &self.marker)
@@ -708,7 +696,7 @@ impl<'a> std::ops::DerefMut for PerformanceStreamMarkerInfoINTELBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceOverrideInfoINTEL.html) · Structure
 #[doc(alias = "VkPerformanceOverrideInfoINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceOverrideInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
@@ -733,8 +721,7 @@ impl Default for PerformanceOverrideInfoINTEL {
 }
 impl std::fmt::Debug for PerformanceOverrideInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceOverrideInfoINTEL")
+        f.debug_struct("PerformanceOverrideInfoINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("_type", &self._type)
@@ -812,7 +799,7 @@ impl<'a> std::ops::DerefMut for PerformanceOverrideInfoINTELBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceConfigurationAcquireInfoINTEL.html) · Structure
 #[doc(alias = "VkPerformanceConfigurationAcquireInfoINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceConfigurationAcquireInfoINTEL {
     pub s_type: crate::vk1_0::StructureType,
@@ -833,8 +820,7 @@ impl Default for PerformanceConfigurationAcquireInfoINTEL {
 }
 impl std::fmt::Debug for PerformanceConfigurationAcquireInfoINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceConfigurationAcquireInfoINTEL")
+        f.debug_struct("PerformanceConfigurationAcquireInfoINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("_type", &self._type)

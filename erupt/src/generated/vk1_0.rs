@@ -715,12 +715,11 @@ impl QueryPoolCreateFlagBits {
 }
 impl std::fmt::Debug for QueryPoolCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -744,12 +743,11 @@ impl PipelineLayoutCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineLayoutCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -773,12 +771,11 @@ impl PipelineDynamicStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineDynamicStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -802,12 +799,11 @@ impl PipelineMultisampleStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineMultisampleStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -831,12 +827,11 @@ impl PipelineRasterizationStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineRasterizationStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -860,12 +855,11 @@ impl PipelineViewportStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineViewportStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -889,12 +883,11 @@ impl PipelineTessellationStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineTessellationStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -918,12 +911,11 @@ impl PipelineInputAssemblyStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineInputAssemblyStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -947,12 +939,11 @@ impl PipelineVertexInputStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineVertexInputStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -976,12 +967,11 @@ impl BufferViewCreateFlagBits {
 }
 impl std::fmt::Debug for BufferViewCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1005,12 +995,11 @@ impl InstanceCreateFlagBits {
 }
 impl std::fmt::Debug for InstanceCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1034,12 +1023,11 @@ impl DeviceCreateFlagBits {
 }
 impl std::fmt::Debug for DeviceCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1063,12 +1051,11 @@ impl SemaphoreCreateFlagBits {
 }
 impl std::fmt::Debug for SemaphoreCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1092,12 +1079,11 @@ impl ShaderModuleCreateFlagBits {
 }
 impl std::fmt::Debug for ShaderModuleCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1121,12 +1107,11 @@ impl MemoryMapFlagBits {
 }
 impl std::fmt::Debug for MemoryMapFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1150,12 +1135,11 @@ impl DescriptorPoolResetFlagBits {
 }
 impl std::fmt::Debug for DescriptorPoolResetFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentLoadOp.html) · Enum
@@ -1165,16 +1149,15 @@ impl std::fmt::Debug for DescriptorPoolResetFlagBits {
 pub struct AttachmentLoadOp(pub i32);
 impl std::fmt::Debug for AttachmentLoadOp {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::LOAD => "LOAD",
-                    &Self::CLEAR => "CLEAR",
-                    &Self::DONT_CARE => "DONT_CARE",
-                    &Self::NONE_EXT => "NONE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::LOAD => "LOAD",
+                &Self::CLEAR => "CLEAR",
+                &Self::DONT_CARE => "DONT_CARE",
+                &Self::NONE_EXT => "NONE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1190,15 +1173,14 @@ impl crate::vk1_0::AttachmentLoadOp {
 pub struct AttachmentStoreOp(pub i32);
 impl std::fmt::Debug for AttachmentStoreOp {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::STORE => "STORE",
-                    &Self::DONT_CARE => "DONT_CARE",
-                    &Self::NONE => "NONE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::STORE => "STORE",
+                &Self::DONT_CARE => "DONT_CARE",
+                &Self::NONE => "NONE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1213,31 +1195,30 @@ impl crate::vk1_0::AttachmentStoreOp {
 pub struct BlendFactor(pub i32);
 impl std::fmt::Debug for BlendFactor {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ZERO => "ZERO",
-                    &Self::ONE => "ONE",
-                    &Self::SRC_COLOR => "SRC_COLOR",
-                    &Self::ONE_MINUS_SRC_COLOR => "ONE_MINUS_SRC_COLOR",
-                    &Self::DST_COLOR => "DST_COLOR",
-                    &Self::ONE_MINUS_DST_COLOR => "ONE_MINUS_DST_COLOR",
-                    &Self::SRC_ALPHA => "SRC_ALPHA",
-                    &Self::ONE_MINUS_SRC_ALPHA => "ONE_MINUS_SRC_ALPHA",
-                    &Self::DST_ALPHA => "DST_ALPHA",
-                    &Self::ONE_MINUS_DST_ALPHA => "ONE_MINUS_DST_ALPHA",
-                    &Self::CONSTANT_COLOR => "CONSTANT_COLOR",
-                    &Self::ONE_MINUS_CONSTANT_COLOR => "ONE_MINUS_CONSTANT_COLOR",
-                    &Self::CONSTANT_ALPHA => "CONSTANT_ALPHA",
-                    &Self::ONE_MINUS_CONSTANT_ALPHA => "ONE_MINUS_CONSTANT_ALPHA",
-                    &Self::SRC_ALPHA_SATURATE => "SRC_ALPHA_SATURATE",
-                    &Self::SRC1_COLOR => "SRC1_COLOR",
-                    &Self::ONE_MINUS_SRC1_COLOR => "ONE_MINUS_SRC1_COLOR",
-                    &Self::SRC1_ALPHA => "SRC1_ALPHA",
-                    &Self::ONE_MINUS_SRC1_ALPHA => "ONE_MINUS_SRC1_ALPHA",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ZERO => "ZERO",
+                &Self::ONE => "ONE",
+                &Self::SRC_COLOR => "SRC_COLOR",
+                &Self::ONE_MINUS_SRC_COLOR => "ONE_MINUS_SRC_COLOR",
+                &Self::DST_COLOR => "DST_COLOR",
+                &Self::ONE_MINUS_DST_COLOR => "ONE_MINUS_DST_COLOR",
+                &Self::SRC_ALPHA => "SRC_ALPHA",
+                &Self::ONE_MINUS_SRC_ALPHA => "ONE_MINUS_SRC_ALPHA",
+                &Self::DST_ALPHA => "DST_ALPHA",
+                &Self::ONE_MINUS_DST_ALPHA => "ONE_MINUS_DST_ALPHA",
+                &Self::CONSTANT_COLOR => "CONSTANT_COLOR",
+                &Self::ONE_MINUS_CONSTANT_COLOR => "ONE_MINUS_CONSTANT_COLOR",
+                &Self::CONSTANT_ALPHA => "CONSTANT_ALPHA",
+                &Self::ONE_MINUS_CONSTANT_ALPHA => "ONE_MINUS_CONSTANT_ALPHA",
+                &Self::SRC_ALPHA_SATURATE => "SRC_ALPHA_SATURATE",
+                &Self::SRC1_COLOR => "SRC1_COLOR",
+                &Self::ONE_MINUS_SRC1_COLOR => "ONE_MINUS_SRC1_COLOR",
+                &Self::SRC1_ALPHA => "SRC1_ALPHA",
+                &Self::ONE_MINUS_SRC1_ALPHA => "ONE_MINUS_SRC1_ALPHA",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1269,63 +1250,62 @@ impl crate::vk1_0::BlendFactor {
 pub struct BlendOp(pub i32);
 impl std::fmt::Debug for BlendOp {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ADD => "ADD",
-                    &Self::SUBTRACT => "SUBTRACT",
-                    &Self::REVERSE_SUBTRACT => "REVERSE_SUBTRACT",
-                    &Self::MIN => "MIN",
-                    &Self::MAX => "MAX",
-                    &Self::ZERO_EXT => "ZERO_EXT",
-                    &Self::SRC_EXT => "SRC_EXT",
-                    &Self::DST_EXT => "DST_EXT",
-                    &Self::SRC_OVER_EXT => "SRC_OVER_EXT",
-                    &Self::DST_OVER_EXT => "DST_OVER_EXT",
-                    &Self::SRC_IN_EXT => "SRC_IN_EXT",
-                    &Self::DST_IN_EXT => "DST_IN_EXT",
-                    &Self::SRC_OUT_EXT => "SRC_OUT_EXT",
-                    &Self::DST_OUT_EXT => "DST_OUT_EXT",
-                    &Self::SRC_ATOP_EXT => "SRC_ATOP_EXT",
-                    &Self::DST_ATOP_EXT => "DST_ATOP_EXT",
-                    &Self::XOR_EXT => "XOR_EXT",
-                    &Self::MULTIPLY_EXT => "MULTIPLY_EXT",
-                    &Self::SCREEN_EXT => "SCREEN_EXT",
-                    &Self::OVERLAY_EXT => "OVERLAY_EXT",
-                    &Self::DARKEN_EXT => "DARKEN_EXT",
-                    &Self::LIGHTEN_EXT => "LIGHTEN_EXT",
-                    &Self::COLORDODGE_EXT => "COLORDODGE_EXT",
-                    &Self::COLORBURN_EXT => "COLORBURN_EXT",
-                    &Self::HARDLIGHT_EXT => "HARDLIGHT_EXT",
-                    &Self::SOFTLIGHT_EXT => "SOFTLIGHT_EXT",
-                    &Self::DIFFERENCE_EXT => "DIFFERENCE_EXT",
-                    &Self::EXCLUSION_EXT => "EXCLUSION_EXT",
-                    &Self::INVERT_EXT => "INVERT_EXT",
-                    &Self::INVERT_RGB_EXT => "INVERT_RGB_EXT",
-                    &Self::LINEARDODGE_EXT => "LINEARDODGE_EXT",
-                    &Self::LINEARBURN_EXT => "LINEARBURN_EXT",
-                    &Self::VIVIDLIGHT_EXT => "VIVIDLIGHT_EXT",
-                    &Self::LINEARLIGHT_EXT => "LINEARLIGHT_EXT",
-                    &Self::PINLIGHT_EXT => "PINLIGHT_EXT",
-                    &Self::HARDMIX_EXT => "HARDMIX_EXT",
-                    &Self::HSL_HUE_EXT => "HSL_HUE_EXT",
-                    &Self::HSL_SATURATION_EXT => "HSL_SATURATION_EXT",
-                    &Self::HSL_COLOR_EXT => "HSL_COLOR_EXT",
-                    &Self::HSL_LUMINOSITY_EXT => "HSL_LUMINOSITY_EXT",
-                    &Self::PLUS_EXT => "PLUS_EXT",
-                    &Self::PLUS_CLAMPED_EXT => "PLUS_CLAMPED_EXT",
-                    &Self::PLUS_CLAMPED_ALPHA_EXT => "PLUS_CLAMPED_ALPHA_EXT",
-                    &Self::PLUS_DARKER_EXT => "PLUS_DARKER_EXT",
-                    &Self::MINUS_EXT => "MINUS_EXT",
-                    &Self::MINUS_CLAMPED_EXT => "MINUS_CLAMPED_EXT",
-                    &Self::CONTRAST_EXT => "CONTRAST_EXT",
-                    &Self::INVERT_OVG_EXT => "INVERT_OVG_EXT",
-                    &Self::RED_EXT => "RED_EXT",
-                    &Self::GREEN_EXT => "GREEN_EXT",
-                    &Self::BLUE_EXT => "BLUE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ADD => "ADD",
+                &Self::SUBTRACT => "SUBTRACT",
+                &Self::REVERSE_SUBTRACT => "REVERSE_SUBTRACT",
+                &Self::MIN => "MIN",
+                &Self::MAX => "MAX",
+                &Self::ZERO_EXT => "ZERO_EXT",
+                &Self::SRC_EXT => "SRC_EXT",
+                &Self::DST_EXT => "DST_EXT",
+                &Self::SRC_OVER_EXT => "SRC_OVER_EXT",
+                &Self::DST_OVER_EXT => "DST_OVER_EXT",
+                &Self::SRC_IN_EXT => "SRC_IN_EXT",
+                &Self::DST_IN_EXT => "DST_IN_EXT",
+                &Self::SRC_OUT_EXT => "SRC_OUT_EXT",
+                &Self::DST_OUT_EXT => "DST_OUT_EXT",
+                &Self::SRC_ATOP_EXT => "SRC_ATOP_EXT",
+                &Self::DST_ATOP_EXT => "DST_ATOP_EXT",
+                &Self::XOR_EXT => "XOR_EXT",
+                &Self::MULTIPLY_EXT => "MULTIPLY_EXT",
+                &Self::SCREEN_EXT => "SCREEN_EXT",
+                &Self::OVERLAY_EXT => "OVERLAY_EXT",
+                &Self::DARKEN_EXT => "DARKEN_EXT",
+                &Self::LIGHTEN_EXT => "LIGHTEN_EXT",
+                &Self::COLORDODGE_EXT => "COLORDODGE_EXT",
+                &Self::COLORBURN_EXT => "COLORBURN_EXT",
+                &Self::HARDLIGHT_EXT => "HARDLIGHT_EXT",
+                &Self::SOFTLIGHT_EXT => "SOFTLIGHT_EXT",
+                &Self::DIFFERENCE_EXT => "DIFFERENCE_EXT",
+                &Self::EXCLUSION_EXT => "EXCLUSION_EXT",
+                &Self::INVERT_EXT => "INVERT_EXT",
+                &Self::INVERT_RGB_EXT => "INVERT_RGB_EXT",
+                &Self::LINEARDODGE_EXT => "LINEARDODGE_EXT",
+                &Self::LINEARBURN_EXT => "LINEARBURN_EXT",
+                &Self::VIVIDLIGHT_EXT => "VIVIDLIGHT_EXT",
+                &Self::LINEARLIGHT_EXT => "LINEARLIGHT_EXT",
+                &Self::PINLIGHT_EXT => "PINLIGHT_EXT",
+                &Self::HARDMIX_EXT => "HARDMIX_EXT",
+                &Self::HSL_HUE_EXT => "HSL_HUE_EXT",
+                &Self::HSL_SATURATION_EXT => "HSL_SATURATION_EXT",
+                &Self::HSL_COLOR_EXT => "HSL_COLOR_EXT",
+                &Self::HSL_LUMINOSITY_EXT => "HSL_LUMINOSITY_EXT",
+                &Self::PLUS_EXT => "PLUS_EXT",
+                &Self::PLUS_CLAMPED_EXT => "PLUS_CLAMPED_EXT",
+                &Self::PLUS_CLAMPED_ALPHA_EXT => "PLUS_CLAMPED_ALPHA_EXT",
+                &Self::PLUS_DARKER_EXT => "PLUS_DARKER_EXT",
+                &Self::MINUS_EXT => "MINUS_EXT",
+                &Self::MINUS_CLAMPED_EXT => "MINUS_CLAMPED_EXT",
+                &Self::CONTRAST_EXT => "CONTRAST_EXT",
+                &Self::INVERT_OVG_EXT => "INVERT_OVG_EXT",
+                &Self::RED_EXT => "RED_EXT",
+                &Self::GREEN_EXT => "GREEN_EXT",
+                &Self::BLUE_EXT => "BLUE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1343,20 +1323,19 @@ impl crate::vk1_0::BlendOp {
 pub struct BorderColor(pub i32);
 impl std::fmt::Debug for BorderColor {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FLOAT_TRANSPARENT_BLACK => "FLOAT_TRANSPARENT_BLACK",
-                    &Self::INT_TRANSPARENT_BLACK => "INT_TRANSPARENT_BLACK",
-                    &Self::FLOAT_OPAQUE_BLACK => "FLOAT_OPAQUE_BLACK",
-                    &Self::INT_OPAQUE_BLACK => "INT_OPAQUE_BLACK",
-                    &Self::FLOAT_OPAQUE_WHITE => "FLOAT_OPAQUE_WHITE",
-                    &Self::INT_OPAQUE_WHITE => "INT_OPAQUE_WHITE",
-                    &Self::FLOAT_CUSTOM_EXT => "FLOAT_CUSTOM_EXT",
-                    &Self::INT_CUSTOM_EXT => "INT_CUSTOM_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FLOAT_TRANSPARENT_BLACK => "FLOAT_TRANSPARENT_BLACK",
+                &Self::INT_TRANSPARENT_BLACK => "INT_TRANSPARENT_BLACK",
+                &Self::FLOAT_OPAQUE_BLACK => "FLOAT_OPAQUE_BLACK",
+                &Self::INT_OPAQUE_BLACK => "INT_OPAQUE_BLACK",
+                &Self::FLOAT_OPAQUE_WHITE => "FLOAT_OPAQUE_WHITE",
+                &Self::INT_OPAQUE_WHITE => "INT_OPAQUE_WHITE",
+                &Self::FLOAT_CUSTOM_EXT => "FLOAT_CUSTOM_EXT",
+                &Self::INT_CUSTOM_EXT => "INT_CUSTOM_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1390,13 +1369,12 @@ impl FramebufferCreateFlagBits {
 }
 impl std::fmt::Debug for FramebufferCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::IMAGELESS => "IMAGELESS",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::IMAGELESS => "IMAGELESS",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1420,13 +1398,12 @@ impl RenderPassCreateFlagBits {
 }
 impl std::fmt::Debug for RenderPassCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::TRANSFORM_QCOM => "TRANSFORM_QCOM",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::TRANSFORM_QCOM => "TRANSFORM_QCOM",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1451,16 +1428,15 @@ impl SamplerCreateFlagBits {
 }
 impl std::fmt::Debug for SamplerCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
-                    &Self::SUBSAMPLED_COARSE_RECONSTRUCTION_EXT => {
-                        "SUBSAMPLED_COARSE_RECONSTRUCTION_EXT"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
+                &Self::SUBSAMPLED_COARSE_RECONSTRUCTION_EXT => {
+                    "SUBSAMPLED_COARSE_RECONSTRUCTION_EXT"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCacheHeaderVersion.html) · Enum
@@ -1470,13 +1446,12 @@ impl std::fmt::Debug for SamplerCreateFlagBits {
 pub struct PipelineCacheHeaderVersion(pub i32);
 impl std::fmt::Debug for PipelineCacheHeaderVersion {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ONE => "ONE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ONE => "ONE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1506,13 +1481,12 @@ impl PipelineCacheCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineCacheCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::EXTERNALLY_SYNCHRONIZED => "EXTERNALLY_SYNCHRONIZED",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::EXTERNALLY_SYNCHRONIZED => "EXTERNALLY_SYNCHRONIZED",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1542,14 +1516,13 @@ impl PipelineShaderStageCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineShaderStageCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ALLOW_VARYING_SUBGROUP_SIZE => "ALLOW_VARYING_SUBGROUP_SIZE",
-                    &Self::REQUIRE_FULL_SUBGROUPS => "REQUIRE_FULL_SUBGROUPS",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ALLOW_VARYING_SUBGROUP_SIZE => "ALLOW_VARYING_SUBGROUP_SIZE",
+                &Self::REQUIRE_FULL_SUBGROUPS => "REQUIRE_FULL_SUBGROUPS",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1559,9 +1532,8 @@ bitflags::bitflags! {
     #[repr(transparent)] pub struct DescriptorSetLayoutCreateFlags : u32 { const
     UPDATE_AFTER_BIND_POOL = DescriptorSetLayoutCreateFlagBits::UPDATE_AFTER_BIND_POOL.0;
     const PUSH_DESCRIPTOR_KHR = DescriptorSetLayoutCreateFlagBits::PUSH_DESCRIPTOR_KHR.0;
-    const HOST_ONLY_POOL_VALVE =
-    DescriptorSetLayoutCreateFlagBits::HOST_ONLY_POOL_VALVE.0; const
-    UPDATE_AFTER_BIND_POOL_EXT =
+    const HOST_ONLY_POOL_VALVE = DescriptorSetLayoutCreateFlagBits::HOST_ONLY_POOL_VALVE
+    .0; const UPDATE_AFTER_BIND_POOL_EXT =
     DescriptorSetLayoutCreateFlagBits::UPDATE_AFTER_BIND_POOL_EXT.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutCreateFlagBits.html) · Bits enum of [`DescriptorSetLayoutCreateFlags`]
@@ -1578,15 +1550,14 @@ impl DescriptorSetLayoutCreateFlagBits {
 }
 impl std::fmt::Debug for DescriptorSetLayoutCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UPDATE_AFTER_BIND_POOL => "UPDATE_AFTER_BIND_POOL",
-                    &Self::PUSH_DESCRIPTOR_KHR => "PUSH_DESCRIPTOR_KHR",
-                    &Self::HOST_ONLY_POOL_VALVE => "HOST_ONLY_POOL_VALVE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UPDATE_AFTER_BIND_POOL => "UPDATE_AFTER_BIND_POOL",
+                &Self::PUSH_DESCRIPTOR_KHR => "PUSH_DESCRIPTOR_KHR",
+                &Self::HOST_ONLY_POOL_VALVE => "HOST_ONLY_POOL_VALVE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1610,13 +1581,12 @@ impl DeviceQueueCreateFlagBits {
 }
 impl std::fmt::Debug for DeviceQueueCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::PROTECTED => "PROTECTED",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::PROTECTED => "PROTECTED",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -1648,19 +1618,16 @@ impl BufferCreateFlagBits {
 }
 impl std::fmt::Debug for BufferCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SPARSE_BINDING => "SPARSE_BINDING",
-                    &Self::SPARSE_RESIDENCY => "SPARSE_RESIDENCY",
-                    &Self::SPARSE_ALIASED => "SPARSE_ALIASED",
-                    &Self::PROTECTED => "PROTECTED",
-                    &Self::DEVICE_ADDRESS_CAPTURE_REPLAY => {
-                        "DEVICE_ADDRESS_CAPTURE_REPLAY"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SPARSE_BINDING => "SPARSE_BINDING",
+                &Self::SPARSE_RESIDENCY => "SPARSE_RESIDENCY",
+                &Self::SPARSE_ALIASED => "SPARSE_ALIASED",
+                &Self::PROTECTED => "PROTECTED",
+                &Self::DEVICE_ADDRESS_CAPTURE_REPLAY => "DEVICE_ADDRESS_CAPTURE_REPLAY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1715,40 +1682,37 @@ impl BufferUsageFlagBits {
 }
 impl std::fmt::Debug for BufferUsageFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::TRANSFER_SRC => "TRANSFER_SRC",
-                    &Self::TRANSFER_DST => "TRANSFER_DST",
-                    &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
-                    &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
-                    &Self::UNIFORM_BUFFER => "UNIFORM_BUFFER",
-                    &Self::STORAGE_BUFFER => "STORAGE_BUFFER",
-                    &Self::INDEX_BUFFER => "INDEX_BUFFER",
-                    &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
-                    &Self::INDIRECT_BUFFER => "INDIRECT_BUFFER",
-                    &Self::SHADER_DEVICE_ADDRESS => "SHADER_DEVICE_ADDRESS",
-                    &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
-                    &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
-                    &Self::TRANSFORM_FEEDBACK_BUFFER_EXT => {
-                        "TRANSFORM_FEEDBACK_BUFFER_EXT"
-                    }
-                    &Self::TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT => {
-                        "TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT"
-                    }
-                    &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
-                    &Self::ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR => {
-                        "ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_STORAGE_KHR => {
-                        "ACCELERATION_STRUCTURE_STORAGE_KHR"
-                    }
-                    &Self::SHADER_BINDING_TABLE_KHR => "SHADER_BINDING_TABLE_KHR",
-                    &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
-                    &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::TRANSFER_SRC => "TRANSFER_SRC",
+                &Self::TRANSFER_DST => "TRANSFER_DST",
+                &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
+                &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
+                &Self::UNIFORM_BUFFER => "UNIFORM_BUFFER",
+                &Self::STORAGE_BUFFER => "STORAGE_BUFFER",
+                &Self::INDEX_BUFFER => "INDEX_BUFFER",
+                &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
+                &Self::INDIRECT_BUFFER => "INDIRECT_BUFFER",
+                &Self::SHADER_DEVICE_ADDRESS => "SHADER_DEVICE_ADDRESS",
+                &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+                &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+                &Self::TRANSFORM_FEEDBACK_BUFFER_EXT => "TRANSFORM_FEEDBACK_BUFFER_EXT",
+                &Self::TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT => {
+                    "TRANSFORM_FEEDBACK_COUNTER_BUFFER_EXT"
+                }
+                &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
+                &Self::ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR => {
+                    "ACCELERATION_STRUCTURE_BUILD_INPUT_READ_ONLY_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_STORAGE_KHR => {
+                    "ACCELERATION_STRUCTURE_STORAGE_KHR"
+                }
+                &Self::SHADER_BINDING_TABLE_KHR => "SHADER_BINDING_TABLE_KHR",
+                &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+                &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1785,16 +1749,15 @@ impl ColorComponentFlagBits {
 }
 impl std::fmt::Debug for ColorComponentFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::R => "R",
-                    &Self::G => "G",
-                    &Self::B => "B",
-                    &Self::A => "A",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::R => "R",
+                &Self::G => "G",
+                &Self::B => "B",
+                &Self::A => "A",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1811,19 +1774,18 @@ impl crate::vk1_0::ColorComponentFlagBits {
 pub struct ComponentSwizzle(pub i32);
 impl std::fmt::Debug for ComponentSwizzle {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::IDENTITY => "IDENTITY",
-                    &Self::ZERO => "ZERO",
-                    &Self::ONE => "ONE",
-                    &Self::R => "R",
-                    &Self::G => "G",
-                    &Self::B => "B",
-                    &Self::A => "A",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::IDENTITY => "IDENTITY",
+                &Self::ZERO => "ZERO",
+                &Self::ONE => "ONE",
+                &Self::R => "R",
+                &Self::G => "G",
+                &Self::B => "B",
+                &Self::A => "A",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1859,15 +1821,14 @@ impl CommandPoolCreateFlagBits {
 }
 impl std::fmt::Debug for CommandPoolCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::TRANSIENT => "TRANSIENT",
-                    &Self::RESET_COMMAND_BUFFER => "RESET_COMMAND_BUFFER",
-                    &Self::PROTECTED => "PROTECTED",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::TRANSIENT => "TRANSIENT",
+                &Self::RESET_COMMAND_BUFFER => "RESET_COMMAND_BUFFER",
+                &Self::PROTECTED => "PROTECTED",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1896,13 +1857,12 @@ impl CommandPoolResetFlagBits {
 }
 impl std::fmt::Debug for CommandPoolResetFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::RELEASE_RESOURCES => "RELEASE_RESOURCES",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::RELEASE_RESOURCES => "RELEASE_RESOURCES",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1930,13 +1890,12 @@ impl CommandBufferResetFlagBits {
 }
 impl std::fmt::Debug for CommandBufferResetFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::RELEASE_RESOURCES => "RELEASE_RESOURCES",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::RELEASE_RESOURCES => "RELEASE_RESOURCES",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1950,14 +1909,13 @@ impl crate::vk1_0::CommandBufferResetFlagBits {
 pub struct CommandBufferLevel(pub i32);
 impl std::fmt::Debug for CommandBufferLevel {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::PRIMARY => "PRIMARY",
-                    &Self::SECONDARY => "SECONDARY",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::PRIMARY => "PRIMARY",
+                &Self::SECONDARY => "SECONDARY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -1988,15 +1946,14 @@ impl CommandBufferUsageFlagBits {
 }
 impl std::fmt::Debug for CommandBufferUsageFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ONE_TIME_SUBMIT => "ONE_TIME_SUBMIT",
-                    &Self::RENDER_PASS_CONTINUE => "RENDER_PASS_CONTINUE",
-                    &Self::SIMULTANEOUS_USE => "SIMULTANEOUS_USE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ONE_TIME_SUBMIT => "ONE_TIME_SUBMIT",
+                &Self::RENDER_PASS_CONTINUE => "RENDER_PASS_CONTINUE",
+                &Self::SIMULTANEOUS_USE => "SIMULTANEOUS_USE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2012,20 +1969,19 @@ impl crate::vk1_0::CommandBufferUsageFlagBits {
 pub struct CompareOp(pub i32);
 impl std::fmt::Debug for CompareOp {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NEVER => "NEVER",
-                    &Self::LESS => "LESS",
-                    &Self::EQUAL => "EQUAL",
-                    &Self::LESS_OR_EQUAL => "LESS_OR_EQUAL",
-                    &Self::GREATER => "GREATER",
-                    &Self::NOT_EQUAL => "NOT_EQUAL",
-                    &Self::GREATER_OR_EQUAL => "GREATER_OR_EQUAL",
-                    &Self::ALWAYS => "ALWAYS",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NEVER => "NEVER",
+                &Self::LESS => "LESS",
+                &Self::EQUAL => "EQUAL",
+                &Self::LESS_OR_EQUAL => "LESS_OR_EQUAL",
+                &Self::GREATER => "GREATER",
+                &Self::NOT_EQUAL => "NOT_EQUAL",
+                &Self::GREATER_OR_EQUAL => "GREATER_OR_EQUAL",
+                &Self::ALWAYS => "ALWAYS",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2061,16 +2017,15 @@ impl CullModeFlagBits {
 }
 impl std::fmt::Debug for CullModeFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NONE => "NONE",
-                    &Self::FRONT => "FRONT",
-                    &Self::BACK => "BACK",
-                    &Self::FRONT_AND_BACK => "FRONT_AND_BACK",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NONE => "NONE",
+                &Self::FRONT => "FRONT",
+                &Self::BACK => "BACK",
+                &Self::FRONT_AND_BACK => "FRONT_AND_BACK",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2087,27 +2042,26 @@ impl crate::vk1_0::CullModeFlagBits {
 pub struct DescriptorType(pub i32);
 impl std::fmt::Debug for DescriptorType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SAMPLER => "SAMPLER",
-                    &Self::COMBINED_IMAGE_SAMPLER => "COMBINED_IMAGE_SAMPLER",
-                    &Self::SAMPLED_IMAGE => "SAMPLED_IMAGE",
-                    &Self::STORAGE_IMAGE => "STORAGE_IMAGE",
-                    &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
-                    &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
-                    &Self::UNIFORM_BUFFER => "UNIFORM_BUFFER",
-                    &Self::STORAGE_BUFFER => "STORAGE_BUFFER",
-                    &Self::UNIFORM_BUFFER_DYNAMIC => "UNIFORM_BUFFER_DYNAMIC",
-                    &Self::STORAGE_BUFFER_DYNAMIC => "STORAGE_BUFFER_DYNAMIC",
-                    &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
-                    &Self::INLINE_UNIFORM_BLOCK => "INLINE_UNIFORM_BLOCK",
-                    &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
-                    &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
-                    &Self::MUTABLE_VALVE => "MUTABLE_VALVE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SAMPLER => "SAMPLER",
+                &Self::COMBINED_IMAGE_SAMPLER => "COMBINED_IMAGE_SAMPLER",
+                &Self::SAMPLED_IMAGE => "SAMPLED_IMAGE",
+                &Self::STORAGE_IMAGE => "STORAGE_IMAGE",
+                &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
+                &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
+                &Self::UNIFORM_BUFFER => "UNIFORM_BUFFER",
+                &Self::STORAGE_BUFFER => "STORAGE_BUFFER",
+                &Self::UNIFORM_BUFFER_DYNAMIC => "UNIFORM_BUFFER_DYNAMIC",
+                &Self::STORAGE_BUFFER_DYNAMIC => "STORAGE_BUFFER_DYNAMIC",
+                &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
+                &Self::INLINE_UNIFORM_BLOCK => "INLINE_UNIFORM_BLOCK",
+                &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
+                &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
+                &Self::MUTABLE_VALVE => "MUTABLE_VALVE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2131,55 +2085,54 @@ impl crate::vk1_0::DescriptorType {
 pub struct DynamicState(pub i32);
 impl std::fmt::Debug for DynamicState {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VIEWPORT => "VIEWPORT",
-                    &Self::SCISSOR => "SCISSOR",
-                    &Self::LINE_WIDTH => "LINE_WIDTH",
-                    &Self::DEPTH_BIAS => "DEPTH_BIAS",
-                    &Self::BLEND_CONSTANTS => "BLEND_CONSTANTS",
-                    &Self::DEPTH_BOUNDS => "DEPTH_BOUNDS",
-                    &Self::STENCIL_COMPARE_MASK => "STENCIL_COMPARE_MASK",
-                    &Self::STENCIL_WRITE_MASK => "STENCIL_WRITE_MASK",
-                    &Self::STENCIL_REFERENCE => "STENCIL_REFERENCE",
-                    &Self::CULL_MODE => "CULL_MODE",
-                    &Self::FRONT_FACE => "FRONT_FACE",
-                    &Self::PRIMITIVE_TOPOLOGY => "PRIMITIVE_TOPOLOGY",
-                    &Self::VIEWPORT_WITH_COUNT => "VIEWPORT_WITH_COUNT",
-                    &Self::SCISSOR_WITH_COUNT => "SCISSOR_WITH_COUNT",
-                    &Self::VERTEX_INPUT_BINDING_STRIDE => "VERTEX_INPUT_BINDING_STRIDE",
-                    &Self::DEPTH_TEST_ENABLE => "DEPTH_TEST_ENABLE",
-                    &Self::DEPTH_WRITE_ENABLE => "DEPTH_WRITE_ENABLE",
-                    &Self::DEPTH_COMPARE_OP => "DEPTH_COMPARE_OP",
-                    &Self::DEPTH_BOUNDS_TEST_ENABLE => "DEPTH_BOUNDS_TEST_ENABLE",
-                    &Self::STENCIL_TEST_ENABLE => "STENCIL_TEST_ENABLE",
-                    &Self::STENCIL_OP => "STENCIL_OP",
-                    &Self::RASTERIZER_DISCARD_ENABLE => "RASTERIZER_DISCARD_ENABLE",
-                    &Self::DEPTH_BIAS_ENABLE => "DEPTH_BIAS_ENABLE",
-                    &Self::PRIMITIVE_RESTART_ENABLE => "PRIMITIVE_RESTART_ENABLE",
-                    &Self::VIEWPORT_W_SCALING_NV => "VIEWPORT_W_SCALING_NV",
-                    &Self::DISCARD_RECTANGLE_EXT => "DISCARD_RECTANGLE_EXT",
-                    &Self::SAMPLE_LOCATIONS_EXT => "SAMPLE_LOCATIONS_EXT",
-                    &Self::RAY_TRACING_PIPELINE_STACK_SIZE_KHR => {
-                        "RAY_TRACING_PIPELINE_STACK_SIZE_KHR"
-                    }
-                    &Self::VIEWPORT_SHADING_RATE_PALETTE_NV => {
-                        "VIEWPORT_SHADING_RATE_PALETTE_NV"
-                    }
-                    &Self::VIEWPORT_COARSE_SAMPLE_ORDER_NV => {
-                        "VIEWPORT_COARSE_SAMPLE_ORDER_NV"
-                    }
-                    &Self::EXCLUSIVE_SCISSOR_NV => "EXCLUSIVE_SCISSOR_NV",
-                    &Self::FRAGMENT_SHADING_RATE_KHR => "FRAGMENT_SHADING_RATE_KHR",
-                    &Self::LINE_STIPPLE_EXT => "LINE_STIPPLE_EXT",
-                    &Self::VERTEX_INPUT_EXT => "VERTEX_INPUT_EXT",
-                    &Self::PATCH_CONTROL_POINTS_EXT => "PATCH_CONTROL_POINTS_EXT",
-                    &Self::LOGIC_OP_EXT => "LOGIC_OP_EXT",
-                    &Self::COLOR_WRITE_ENABLE_EXT => "COLOR_WRITE_ENABLE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VIEWPORT => "VIEWPORT",
+                &Self::SCISSOR => "SCISSOR",
+                &Self::LINE_WIDTH => "LINE_WIDTH",
+                &Self::DEPTH_BIAS => "DEPTH_BIAS",
+                &Self::BLEND_CONSTANTS => "BLEND_CONSTANTS",
+                &Self::DEPTH_BOUNDS => "DEPTH_BOUNDS",
+                &Self::STENCIL_COMPARE_MASK => "STENCIL_COMPARE_MASK",
+                &Self::STENCIL_WRITE_MASK => "STENCIL_WRITE_MASK",
+                &Self::STENCIL_REFERENCE => "STENCIL_REFERENCE",
+                &Self::CULL_MODE => "CULL_MODE",
+                &Self::FRONT_FACE => "FRONT_FACE",
+                &Self::PRIMITIVE_TOPOLOGY => "PRIMITIVE_TOPOLOGY",
+                &Self::VIEWPORT_WITH_COUNT => "VIEWPORT_WITH_COUNT",
+                &Self::SCISSOR_WITH_COUNT => "SCISSOR_WITH_COUNT",
+                &Self::VERTEX_INPUT_BINDING_STRIDE => "VERTEX_INPUT_BINDING_STRIDE",
+                &Self::DEPTH_TEST_ENABLE => "DEPTH_TEST_ENABLE",
+                &Self::DEPTH_WRITE_ENABLE => "DEPTH_WRITE_ENABLE",
+                &Self::DEPTH_COMPARE_OP => "DEPTH_COMPARE_OP",
+                &Self::DEPTH_BOUNDS_TEST_ENABLE => "DEPTH_BOUNDS_TEST_ENABLE",
+                &Self::STENCIL_TEST_ENABLE => "STENCIL_TEST_ENABLE",
+                &Self::STENCIL_OP => "STENCIL_OP",
+                &Self::RASTERIZER_DISCARD_ENABLE => "RASTERIZER_DISCARD_ENABLE",
+                &Self::DEPTH_BIAS_ENABLE => "DEPTH_BIAS_ENABLE",
+                &Self::PRIMITIVE_RESTART_ENABLE => "PRIMITIVE_RESTART_ENABLE",
+                &Self::VIEWPORT_W_SCALING_NV => "VIEWPORT_W_SCALING_NV",
+                &Self::DISCARD_RECTANGLE_EXT => "DISCARD_RECTANGLE_EXT",
+                &Self::SAMPLE_LOCATIONS_EXT => "SAMPLE_LOCATIONS_EXT",
+                &Self::RAY_TRACING_PIPELINE_STACK_SIZE_KHR => {
+                    "RAY_TRACING_PIPELINE_STACK_SIZE_KHR"
+                }
+                &Self::VIEWPORT_SHADING_RATE_PALETTE_NV => {
+                    "VIEWPORT_SHADING_RATE_PALETTE_NV"
+                }
+                &Self::VIEWPORT_COARSE_SAMPLE_ORDER_NV => {
+                    "VIEWPORT_COARSE_SAMPLE_ORDER_NV"
+                }
+                &Self::EXCLUSIVE_SCISSOR_NV => "EXCLUSIVE_SCISSOR_NV",
+                &Self::FRAGMENT_SHADING_RATE_KHR => "FRAGMENT_SHADING_RATE_KHR",
+                &Self::LINE_STIPPLE_EXT => "LINE_STIPPLE_EXT",
+                &Self::VERTEX_INPUT_EXT => "VERTEX_INPUT_EXT",
+                &Self::PATCH_CONTROL_POINTS_EXT => "PATCH_CONTROL_POINTS_EXT",
+                &Self::LOGIC_OP_EXT => "LOGIC_OP_EXT",
+                &Self::COLOR_WRITE_ENABLE_EXT => "COLOR_WRITE_ENABLE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2214,13 +2167,12 @@ impl FenceCreateFlagBits {
 }
 impl std::fmt::Debug for FenceCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SIGNALED => "SIGNALED",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SIGNALED => "SIGNALED",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2234,16 +2186,15 @@ impl crate::vk1_0::FenceCreateFlagBits {
 pub struct PolygonMode(pub i32);
 impl std::fmt::Debug for PolygonMode {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FILL => "FILL",
-                    &Self::LINE => "LINE",
-                    &Self::POINT => "POINT",
-                    &Self::FILL_RECTANGLE_NV => "FILL_RECTANGLE_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FILL => "FILL",
+                &Self::LINE => "LINE",
+                &Self::POINT => "POINT",
+                &Self::FILL_RECTANGLE_NV => "FILL_RECTANGLE_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2259,295 +2210,294 @@ impl crate::vk1_0::PolygonMode {
 pub struct Format(pub i32);
 impl std::fmt::Debug for Format {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UNDEFINED => "UNDEFINED",
-                    &Self::R4G4_UNORM_PACK8 => "R4G4_UNORM_PACK8",
-                    &Self::R4G4B4A4_UNORM_PACK16 => "R4G4B4A4_UNORM_PACK16",
-                    &Self::B4G4R4A4_UNORM_PACK16 => "B4G4R4A4_UNORM_PACK16",
-                    &Self::R5G6B5_UNORM_PACK16 => "R5G6B5_UNORM_PACK16",
-                    &Self::B5G6R5_UNORM_PACK16 => "B5G6R5_UNORM_PACK16",
-                    &Self::R5G5B5A1_UNORM_PACK16 => "R5G5B5A1_UNORM_PACK16",
-                    &Self::B5G5R5A1_UNORM_PACK16 => "B5G5R5A1_UNORM_PACK16",
-                    &Self::A1R5G5B5_UNORM_PACK16 => "A1R5G5B5_UNORM_PACK16",
-                    &Self::R8_UNORM => "R8_UNORM",
-                    &Self::R8_SNORM => "R8_SNORM",
-                    &Self::R8_USCALED => "R8_USCALED",
-                    &Self::R8_SSCALED => "R8_SSCALED",
-                    &Self::R8_UINT => "R8_UINT",
-                    &Self::R8_SINT => "R8_SINT",
-                    &Self::R8_SRGB => "R8_SRGB",
-                    &Self::R8G8_UNORM => "R8G8_UNORM",
-                    &Self::R8G8_SNORM => "R8G8_SNORM",
-                    &Self::R8G8_USCALED => "R8G8_USCALED",
-                    &Self::R8G8_SSCALED => "R8G8_SSCALED",
-                    &Self::R8G8_UINT => "R8G8_UINT",
-                    &Self::R8G8_SINT => "R8G8_SINT",
-                    &Self::R8G8_SRGB => "R8G8_SRGB",
-                    &Self::R8G8B8_UNORM => "R8G8B8_UNORM",
-                    &Self::R8G8B8_SNORM => "R8G8B8_SNORM",
-                    &Self::R8G8B8_USCALED => "R8G8B8_USCALED",
-                    &Self::R8G8B8_SSCALED => "R8G8B8_SSCALED",
-                    &Self::R8G8B8_UINT => "R8G8B8_UINT",
-                    &Self::R8G8B8_SINT => "R8G8B8_SINT",
-                    &Self::R8G8B8_SRGB => "R8G8B8_SRGB",
-                    &Self::B8G8R8_UNORM => "B8G8R8_UNORM",
-                    &Self::B8G8R8_SNORM => "B8G8R8_SNORM",
-                    &Self::B8G8R8_USCALED => "B8G8R8_USCALED",
-                    &Self::B8G8R8_SSCALED => "B8G8R8_SSCALED",
-                    &Self::B8G8R8_UINT => "B8G8R8_UINT",
-                    &Self::B8G8R8_SINT => "B8G8R8_SINT",
-                    &Self::B8G8R8_SRGB => "B8G8R8_SRGB",
-                    &Self::R8G8B8A8_UNORM => "R8G8B8A8_UNORM",
-                    &Self::R8G8B8A8_SNORM => "R8G8B8A8_SNORM",
-                    &Self::R8G8B8A8_USCALED => "R8G8B8A8_USCALED",
-                    &Self::R8G8B8A8_SSCALED => "R8G8B8A8_SSCALED",
-                    &Self::R8G8B8A8_UINT => "R8G8B8A8_UINT",
-                    &Self::R8G8B8A8_SINT => "R8G8B8A8_SINT",
-                    &Self::R8G8B8A8_SRGB => "R8G8B8A8_SRGB",
-                    &Self::B8G8R8A8_UNORM => "B8G8R8A8_UNORM",
-                    &Self::B8G8R8A8_SNORM => "B8G8R8A8_SNORM",
-                    &Self::B8G8R8A8_USCALED => "B8G8R8A8_USCALED",
-                    &Self::B8G8R8A8_SSCALED => "B8G8R8A8_SSCALED",
-                    &Self::B8G8R8A8_UINT => "B8G8R8A8_UINT",
-                    &Self::B8G8R8A8_SINT => "B8G8R8A8_SINT",
-                    &Self::B8G8R8A8_SRGB => "B8G8R8A8_SRGB",
-                    &Self::A8B8G8R8_UNORM_PACK32 => "A8B8G8R8_UNORM_PACK32",
-                    &Self::A8B8G8R8_SNORM_PACK32 => "A8B8G8R8_SNORM_PACK32",
-                    &Self::A8B8G8R8_USCALED_PACK32 => "A8B8G8R8_USCALED_PACK32",
-                    &Self::A8B8G8R8_SSCALED_PACK32 => "A8B8G8R8_SSCALED_PACK32",
-                    &Self::A8B8G8R8_UINT_PACK32 => "A8B8G8R8_UINT_PACK32",
-                    &Self::A8B8G8R8_SINT_PACK32 => "A8B8G8R8_SINT_PACK32",
-                    &Self::A8B8G8R8_SRGB_PACK32 => "A8B8G8R8_SRGB_PACK32",
-                    &Self::A2R10G10B10_UNORM_PACK32 => "A2R10G10B10_UNORM_PACK32",
-                    &Self::A2R10G10B10_SNORM_PACK32 => "A2R10G10B10_SNORM_PACK32",
-                    &Self::A2R10G10B10_USCALED_PACK32 => "A2R10G10B10_USCALED_PACK32",
-                    &Self::A2R10G10B10_SSCALED_PACK32 => "A2R10G10B10_SSCALED_PACK32",
-                    &Self::A2R10G10B10_UINT_PACK32 => "A2R10G10B10_UINT_PACK32",
-                    &Self::A2R10G10B10_SINT_PACK32 => "A2R10G10B10_SINT_PACK32",
-                    &Self::A2B10G10R10_UNORM_PACK32 => "A2B10G10R10_UNORM_PACK32",
-                    &Self::A2B10G10R10_SNORM_PACK32 => "A2B10G10R10_SNORM_PACK32",
-                    &Self::A2B10G10R10_USCALED_PACK32 => "A2B10G10R10_USCALED_PACK32",
-                    &Self::A2B10G10R10_SSCALED_PACK32 => "A2B10G10R10_SSCALED_PACK32",
-                    &Self::A2B10G10R10_UINT_PACK32 => "A2B10G10R10_UINT_PACK32",
-                    &Self::A2B10G10R10_SINT_PACK32 => "A2B10G10R10_SINT_PACK32",
-                    &Self::R16_UNORM => "R16_UNORM",
-                    &Self::R16_SNORM => "R16_SNORM",
-                    &Self::R16_USCALED => "R16_USCALED",
-                    &Self::R16_SSCALED => "R16_SSCALED",
-                    &Self::R16_UINT => "R16_UINT",
-                    &Self::R16_SINT => "R16_SINT",
-                    &Self::R16_SFLOAT => "R16_SFLOAT",
-                    &Self::R16G16_UNORM => "R16G16_UNORM",
-                    &Self::R16G16_SNORM => "R16G16_SNORM",
-                    &Self::R16G16_USCALED => "R16G16_USCALED",
-                    &Self::R16G16_SSCALED => "R16G16_SSCALED",
-                    &Self::R16G16_UINT => "R16G16_UINT",
-                    &Self::R16G16_SINT => "R16G16_SINT",
-                    &Self::R16G16_SFLOAT => "R16G16_SFLOAT",
-                    &Self::R16G16B16_UNORM => "R16G16B16_UNORM",
-                    &Self::R16G16B16_SNORM => "R16G16B16_SNORM",
-                    &Self::R16G16B16_USCALED => "R16G16B16_USCALED",
-                    &Self::R16G16B16_SSCALED => "R16G16B16_SSCALED",
-                    &Self::R16G16B16_UINT => "R16G16B16_UINT",
-                    &Self::R16G16B16_SINT => "R16G16B16_SINT",
-                    &Self::R16G16B16_SFLOAT => "R16G16B16_SFLOAT",
-                    &Self::R16G16B16A16_UNORM => "R16G16B16A16_UNORM",
-                    &Self::R16G16B16A16_SNORM => "R16G16B16A16_SNORM",
-                    &Self::R16G16B16A16_USCALED => "R16G16B16A16_USCALED",
-                    &Self::R16G16B16A16_SSCALED => "R16G16B16A16_SSCALED",
-                    &Self::R16G16B16A16_UINT => "R16G16B16A16_UINT",
-                    &Self::R16G16B16A16_SINT => "R16G16B16A16_SINT",
-                    &Self::R16G16B16A16_SFLOAT => "R16G16B16A16_SFLOAT",
-                    &Self::R32_UINT => "R32_UINT",
-                    &Self::R32_SINT => "R32_SINT",
-                    &Self::R32_SFLOAT => "R32_SFLOAT",
-                    &Self::R32G32_UINT => "R32G32_UINT",
-                    &Self::R32G32_SINT => "R32G32_SINT",
-                    &Self::R32G32_SFLOAT => "R32G32_SFLOAT",
-                    &Self::R32G32B32_UINT => "R32G32B32_UINT",
-                    &Self::R32G32B32_SINT => "R32G32B32_SINT",
-                    &Self::R32G32B32_SFLOAT => "R32G32B32_SFLOAT",
-                    &Self::R32G32B32A32_UINT => "R32G32B32A32_UINT",
-                    &Self::R32G32B32A32_SINT => "R32G32B32A32_SINT",
-                    &Self::R32G32B32A32_SFLOAT => "R32G32B32A32_SFLOAT",
-                    &Self::R64_UINT => "R64_UINT",
-                    &Self::R64_SINT => "R64_SINT",
-                    &Self::R64_SFLOAT => "R64_SFLOAT",
-                    &Self::R64G64_UINT => "R64G64_UINT",
-                    &Self::R64G64_SINT => "R64G64_SINT",
-                    &Self::R64G64_SFLOAT => "R64G64_SFLOAT",
-                    &Self::R64G64B64_UINT => "R64G64B64_UINT",
-                    &Self::R64G64B64_SINT => "R64G64B64_SINT",
-                    &Self::R64G64B64_SFLOAT => "R64G64B64_SFLOAT",
-                    &Self::R64G64B64A64_UINT => "R64G64B64A64_UINT",
-                    &Self::R64G64B64A64_SINT => "R64G64B64A64_SINT",
-                    &Self::R64G64B64A64_SFLOAT => "R64G64B64A64_SFLOAT",
-                    &Self::B10G11R11_UFLOAT_PACK32 => "B10G11R11_UFLOAT_PACK32",
-                    &Self::E5B9G9R9_UFLOAT_PACK32 => "E5B9G9R9_UFLOAT_PACK32",
-                    &Self::D16_UNORM => "D16_UNORM",
-                    &Self::X8_D24_UNORM_PACK32 => "X8_D24_UNORM_PACK32",
-                    &Self::D32_SFLOAT => "D32_SFLOAT",
-                    &Self::S8_UINT => "S8_UINT",
-                    &Self::D16_UNORM_S8_UINT => "D16_UNORM_S8_UINT",
-                    &Self::D24_UNORM_S8_UINT => "D24_UNORM_S8_UINT",
-                    &Self::D32_SFLOAT_S8_UINT => "D32_SFLOAT_S8_UINT",
-                    &Self::BC1_RGB_UNORM_BLOCK => "BC1_RGB_UNORM_BLOCK",
-                    &Self::BC1_RGB_SRGB_BLOCK => "BC1_RGB_SRGB_BLOCK",
-                    &Self::BC1_RGBA_UNORM_BLOCK => "BC1_RGBA_UNORM_BLOCK",
-                    &Self::BC1_RGBA_SRGB_BLOCK => "BC1_RGBA_SRGB_BLOCK",
-                    &Self::BC2_UNORM_BLOCK => "BC2_UNORM_BLOCK",
-                    &Self::BC2_SRGB_BLOCK => "BC2_SRGB_BLOCK",
-                    &Self::BC3_UNORM_BLOCK => "BC3_UNORM_BLOCK",
-                    &Self::BC3_SRGB_BLOCK => "BC3_SRGB_BLOCK",
-                    &Self::BC4_UNORM_BLOCK => "BC4_UNORM_BLOCK",
-                    &Self::BC4_SNORM_BLOCK => "BC4_SNORM_BLOCK",
-                    &Self::BC5_UNORM_BLOCK => "BC5_UNORM_BLOCK",
-                    &Self::BC5_SNORM_BLOCK => "BC5_SNORM_BLOCK",
-                    &Self::BC6H_UFLOAT_BLOCK => "BC6H_UFLOAT_BLOCK",
-                    &Self::BC6H_SFLOAT_BLOCK => "BC6H_SFLOAT_BLOCK",
-                    &Self::BC7_UNORM_BLOCK => "BC7_UNORM_BLOCK",
-                    &Self::BC7_SRGB_BLOCK => "BC7_SRGB_BLOCK",
-                    &Self::ETC2_R8G8B8_UNORM_BLOCK => "ETC2_R8G8B8_UNORM_BLOCK",
-                    &Self::ETC2_R8G8B8_SRGB_BLOCK => "ETC2_R8G8B8_SRGB_BLOCK",
-                    &Self::ETC2_R8G8B8A1_UNORM_BLOCK => "ETC2_R8G8B8A1_UNORM_BLOCK",
-                    &Self::ETC2_R8G8B8A1_SRGB_BLOCK => "ETC2_R8G8B8A1_SRGB_BLOCK",
-                    &Self::ETC2_R8G8B8A8_UNORM_BLOCK => "ETC2_R8G8B8A8_UNORM_BLOCK",
-                    &Self::ETC2_R8G8B8A8_SRGB_BLOCK => "ETC2_R8G8B8A8_SRGB_BLOCK",
-                    &Self::EAC_R11_UNORM_BLOCK => "EAC_R11_UNORM_BLOCK",
-                    &Self::EAC_R11_SNORM_BLOCK => "EAC_R11_SNORM_BLOCK",
-                    &Self::EAC_R11G11_UNORM_BLOCK => "EAC_R11G11_UNORM_BLOCK",
-                    &Self::EAC_R11G11_SNORM_BLOCK => "EAC_R11G11_SNORM_BLOCK",
-                    &Self::ASTC_4X4_UNORM_BLOCK => "ASTC_4X4_UNORM_BLOCK",
-                    &Self::ASTC_4X4_SRGB_BLOCK => "ASTC_4X4_SRGB_BLOCK",
-                    &Self::ASTC_5X4_UNORM_BLOCK => "ASTC_5X4_UNORM_BLOCK",
-                    &Self::ASTC_5X4_SRGB_BLOCK => "ASTC_5X4_SRGB_BLOCK",
-                    &Self::ASTC_5X5_UNORM_BLOCK => "ASTC_5X5_UNORM_BLOCK",
-                    &Self::ASTC_5X5_SRGB_BLOCK => "ASTC_5X5_SRGB_BLOCK",
-                    &Self::ASTC_6X5_UNORM_BLOCK => "ASTC_6X5_UNORM_BLOCK",
-                    &Self::ASTC_6X5_SRGB_BLOCK => "ASTC_6X5_SRGB_BLOCK",
-                    &Self::ASTC_6X6_UNORM_BLOCK => "ASTC_6X6_UNORM_BLOCK",
-                    &Self::ASTC_6X6_SRGB_BLOCK => "ASTC_6X6_SRGB_BLOCK",
-                    &Self::ASTC_8X5_UNORM_BLOCK => "ASTC_8X5_UNORM_BLOCK",
-                    &Self::ASTC_8X5_SRGB_BLOCK => "ASTC_8X5_SRGB_BLOCK",
-                    &Self::ASTC_8X6_UNORM_BLOCK => "ASTC_8X6_UNORM_BLOCK",
-                    &Self::ASTC_8X6_SRGB_BLOCK => "ASTC_8X6_SRGB_BLOCK",
-                    &Self::ASTC_8X8_UNORM_BLOCK => "ASTC_8X8_UNORM_BLOCK",
-                    &Self::ASTC_8X8_SRGB_BLOCK => "ASTC_8X8_SRGB_BLOCK",
-                    &Self::ASTC_10X5_UNORM_BLOCK => "ASTC_10X5_UNORM_BLOCK",
-                    &Self::ASTC_10X5_SRGB_BLOCK => "ASTC_10X5_SRGB_BLOCK",
-                    &Self::ASTC_10X6_UNORM_BLOCK => "ASTC_10X6_UNORM_BLOCK",
-                    &Self::ASTC_10X6_SRGB_BLOCK => "ASTC_10X6_SRGB_BLOCK",
-                    &Self::ASTC_10X8_UNORM_BLOCK => "ASTC_10X8_UNORM_BLOCK",
-                    &Self::ASTC_10X8_SRGB_BLOCK => "ASTC_10X8_SRGB_BLOCK",
-                    &Self::ASTC_10X10_UNORM_BLOCK => "ASTC_10X10_UNORM_BLOCK",
-                    &Self::ASTC_10X10_SRGB_BLOCK => "ASTC_10X10_SRGB_BLOCK",
-                    &Self::ASTC_12X10_UNORM_BLOCK => "ASTC_12X10_UNORM_BLOCK",
-                    &Self::ASTC_12X10_SRGB_BLOCK => "ASTC_12X10_SRGB_BLOCK",
-                    &Self::ASTC_12X12_UNORM_BLOCK => "ASTC_12X12_UNORM_BLOCK",
-                    &Self::ASTC_12X12_SRGB_BLOCK => "ASTC_12X12_SRGB_BLOCK",
-                    &Self::G8B8G8R8_422_UNORM => "G8B8G8R8_422_UNORM",
-                    &Self::B8G8R8G8_422_UNORM => "B8G8R8G8_422_UNORM",
-                    &Self::G8_B8_R8_3PLANE_420_UNORM => "G8_B8_R8_3PLANE_420_UNORM",
-                    &Self::G8_B8R8_2PLANE_420_UNORM => "G8_B8R8_2PLANE_420_UNORM",
-                    &Self::G8_B8_R8_3PLANE_422_UNORM => "G8_B8_R8_3PLANE_422_UNORM",
-                    &Self::G8_B8R8_2PLANE_422_UNORM => "G8_B8R8_2PLANE_422_UNORM",
-                    &Self::G8_B8_R8_3PLANE_444_UNORM => "G8_B8_R8_3PLANE_444_UNORM",
-                    &Self::R10X6_UNORM_PACK16 => "R10X6_UNORM_PACK16",
-                    &Self::R10X6G10X6_UNORM_2PACK16 => "R10X6G10X6_UNORM_2PACK16",
-                    &Self::R10X6G10X6B10X6A10X6_UNORM_4PACK16 => {
-                        "R10X6G10X6B10X6A10X6_UNORM_4PACK16"
-                    }
-                    &Self::G10X6B10X6G10X6R10X6_422_UNORM_4PACK16 => {
-                        "G10X6B10X6G10X6R10X6_422_UNORM_4PACK16"
-                    }
-                    &Self::B10X6G10X6R10X6G10X6_422_UNORM_4PACK16 => {
-                        "B10X6G10X6R10X6G10X6_422_UNORM_4PACK16"
-                    }
-                    &Self::G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16 => {
-                        "G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16"
-                    }
-                    &Self::G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16 => {
-                        "G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16"
-                    }
-                    &Self::G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16 => {
-                        "G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16"
-                    }
-                    &Self::G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16 => {
-                        "G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16"
-                    }
-                    &Self::G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16 => {
-                        "G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16"
-                    }
-                    &Self::R12X4_UNORM_PACK16 => "R12X4_UNORM_PACK16",
-                    &Self::R12X4G12X4_UNORM_2PACK16 => "R12X4G12X4_UNORM_2PACK16",
-                    &Self::R12X4G12X4B12X4A12X4_UNORM_4PACK16 => {
-                        "R12X4G12X4B12X4A12X4_UNORM_4PACK16"
-                    }
-                    &Self::G12X4B12X4G12X4R12X4_422_UNORM_4PACK16 => {
-                        "G12X4B12X4G12X4R12X4_422_UNORM_4PACK16"
-                    }
-                    &Self::B12X4G12X4R12X4G12X4_422_UNORM_4PACK16 => {
-                        "B12X4G12X4R12X4G12X4_422_UNORM_4PACK16"
-                    }
-                    &Self::G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16 => {
-                        "G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16"
-                    }
-                    &Self::G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16 => {
-                        "G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16"
-                    }
-                    &Self::G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16 => {
-                        "G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16"
-                    }
-                    &Self::G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16 => {
-                        "G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16"
-                    }
-                    &Self::G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16 => {
-                        "G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16"
-                    }
-                    &Self::G16B16G16R16_422_UNORM => "G16B16G16R16_422_UNORM",
-                    &Self::B16G16R16G16_422_UNORM => "B16G16R16G16_422_UNORM",
-                    &Self::G16_B16_R16_3PLANE_420_UNORM => "G16_B16_R16_3PLANE_420_UNORM",
-                    &Self::G16_B16R16_2PLANE_420_UNORM => "G16_B16R16_2PLANE_420_UNORM",
-                    &Self::G16_B16_R16_3PLANE_422_UNORM => "G16_B16_R16_3PLANE_422_UNORM",
-                    &Self::G16_B16R16_2PLANE_422_UNORM => "G16_B16R16_2PLANE_422_UNORM",
-                    &Self::G16_B16_R16_3PLANE_444_UNORM => "G16_B16_R16_3PLANE_444_UNORM",
-                    &Self::G8_B8R8_2PLANE_444_UNORM => "G8_B8R8_2PLANE_444_UNORM",
-                    &Self::G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16 => {
-                        "G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16"
-                    }
-                    &Self::G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16 => {
-                        "G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16"
-                    }
-                    &Self::G16_B16R16_2PLANE_444_UNORM => "G16_B16R16_2PLANE_444_UNORM",
-                    &Self::A4R4G4B4_UNORM_PACK16 => "A4R4G4B4_UNORM_PACK16",
-                    &Self::A4B4G4R4_UNORM_PACK16 => "A4B4G4R4_UNORM_PACK16",
-                    &Self::ASTC_4X4_SFLOAT_BLOCK => "ASTC_4X4_SFLOAT_BLOCK",
-                    &Self::ASTC_5X4_SFLOAT_BLOCK => "ASTC_5X4_SFLOAT_BLOCK",
-                    &Self::ASTC_5X5_SFLOAT_BLOCK => "ASTC_5X5_SFLOAT_BLOCK",
-                    &Self::ASTC_6X5_SFLOAT_BLOCK => "ASTC_6X5_SFLOAT_BLOCK",
-                    &Self::ASTC_6X6_SFLOAT_BLOCK => "ASTC_6X6_SFLOAT_BLOCK",
-                    &Self::ASTC_8X5_SFLOAT_BLOCK => "ASTC_8X5_SFLOAT_BLOCK",
-                    &Self::ASTC_8X6_SFLOAT_BLOCK => "ASTC_8X6_SFLOAT_BLOCK",
-                    &Self::ASTC_8X8_SFLOAT_BLOCK => "ASTC_8X8_SFLOAT_BLOCK",
-                    &Self::ASTC_10X5_SFLOAT_BLOCK => "ASTC_10X5_SFLOAT_BLOCK",
-                    &Self::ASTC_10X6_SFLOAT_BLOCK => "ASTC_10X6_SFLOAT_BLOCK",
-                    &Self::ASTC_10X8_SFLOAT_BLOCK => "ASTC_10X8_SFLOAT_BLOCK",
-                    &Self::ASTC_10X10_SFLOAT_BLOCK => "ASTC_10X10_SFLOAT_BLOCK",
-                    &Self::ASTC_12X10_SFLOAT_BLOCK => "ASTC_12X10_SFLOAT_BLOCK",
-                    &Self::ASTC_12X12_SFLOAT_BLOCK => "ASTC_12X12_SFLOAT_BLOCK",
-                    &Self::PVRTC1_2BPP_UNORM_BLOCK_IMG => "PVRTC1_2BPP_UNORM_BLOCK_IMG",
-                    &Self::PVRTC1_4BPP_UNORM_BLOCK_IMG => "PVRTC1_4BPP_UNORM_BLOCK_IMG",
-                    &Self::PVRTC2_2BPP_UNORM_BLOCK_IMG => "PVRTC2_2BPP_UNORM_BLOCK_IMG",
-                    &Self::PVRTC2_4BPP_UNORM_BLOCK_IMG => "PVRTC2_4BPP_UNORM_BLOCK_IMG",
-                    &Self::PVRTC1_2BPP_SRGB_BLOCK_IMG => "PVRTC1_2BPP_SRGB_BLOCK_IMG",
-                    &Self::PVRTC1_4BPP_SRGB_BLOCK_IMG => "PVRTC1_4BPP_SRGB_BLOCK_IMG",
-                    &Self::PVRTC2_2BPP_SRGB_BLOCK_IMG => "PVRTC2_2BPP_SRGB_BLOCK_IMG",
-                    &Self::PVRTC2_4BPP_SRGB_BLOCK_IMG => "PVRTC2_4BPP_SRGB_BLOCK_IMG",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UNDEFINED => "UNDEFINED",
+                &Self::R4G4_UNORM_PACK8 => "R4G4_UNORM_PACK8",
+                &Self::R4G4B4A4_UNORM_PACK16 => "R4G4B4A4_UNORM_PACK16",
+                &Self::B4G4R4A4_UNORM_PACK16 => "B4G4R4A4_UNORM_PACK16",
+                &Self::R5G6B5_UNORM_PACK16 => "R5G6B5_UNORM_PACK16",
+                &Self::B5G6R5_UNORM_PACK16 => "B5G6R5_UNORM_PACK16",
+                &Self::R5G5B5A1_UNORM_PACK16 => "R5G5B5A1_UNORM_PACK16",
+                &Self::B5G5R5A1_UNORM_PACK16 => "B5G5R5A1_UNORM_PACK16",
+                &Self::A1R5G5B5_UNORM_PACK16 => "A1R5G5B5_UNORM_PACK16",
+                &Self::R8_UNORM => "R8_UNORM",
+                &Self::R8_SNORM => "R8_SNORM",
+                &Self::R8_USCALED => "R8_USCALED",
+                &Self::R8_SSCALED => "R8_SSCALED",
+                &Self::R8_UINT => "R8_UINT",
+                &Self::R8_SINT => "R8_SINT",
+                &Self::R8_SRGB => "R8_SRGB",
+                &Self::R8G8_UNORM => "R8G8_UNORM",
+                &Self::R8G8_SNORM => "R8G8_SNORM",
+                &Self::R8G8_USCALED => "R8G8_USCALED",
+                &Self::R8G8_SSCALED => "R8G8_SSCALED",
+                &Self::R8G8_UINT => "R8G8_UINT",
+                &Self::R8G8_SINT => "R8G8_SINT",
+                &Self::R8G8_SRGB => "R8G8_SRGB",
+                &Self::R8G8B8_UNORM => "R8G8B8_UNORM",
+                &Self::R8G8B8_SNORM => "R8G8B8_SNORM",
+                &Self::R8G8B8_USCALED => "R8G8B8_USCALED",
+                &Self::R8G8B8_SSCALED => "R8G8B8_SSCALED",
+                &Self::R8G8B8_UINT => "R8G8B8_UINT",
+                &Self::R8G8B8_SINT => "R8G8B8_SINT",
+                &Self::R8G8B8_SRGB => "R8G8B8_SRGB",
+                &Self::B8G8R8_UNORM => "B8G8R8_UNORM",
+                &Self::B8G8R8_SNORM => "B8G8R8_SNORM",
+                &Self::B8G8R8_USCALED => "B8G8R8_USCALED",
+                &Self::B8G8R8_SSCALED => "B8G8R8_SSCALED",
+                &Self::B8G8R8_UINT => "B8G8R8_UINT",
+                &Self::B8G8R8_SINT => "B8G8R8_SINT",
+                &Self::B8G8R8_SRGB => "B8G8R8_SRGB",
+                &Self::R8G8B8A8_UNORM => "R8G8B8A8_UNORM",
+                &Self::R8G8B8A8_SNORM => "R8G8B8A8_SNORM",
+                &Self::R8G8B8A8_USCALED => "R8G8B8A8_USCALED",
+                &Self::R8G8B8A8_SSCALED => "R8G8B8A8_SSCALED",
+                &Self::R8G8B8A8_UINT => "R8G8B8A8_UINT",
+                &Self::R8G8B8A8_SINT => "R8G8B8A8_SINT",
+                &Self::R8G8B8A8_SRGB => "R8G8B8A8_SRGB",
+                &Self::B8G8R8A8_UNORM => "B8G8R8A8_UNORM",
+                &Self::B8G8R8A8_SNORM => "B8G8R8A8_SNORM",
+                &Self::B8G8R8A8_USCALED => "B8G8R8A8_USCALED",
+                &Self::B8G8R8A8_SSCALED => "B8G8R8A8_SSCALED",
+                &Self::B8G8R8A8_UINT => "B8G8R8A8_UINT",
+                &Self::B8G8R8A8_SINT => "B8G8R8A8_SINT",
+                &Self::B8G8R8A8_SRGB => "B8G8R8A8_SRGB",
+                &Self::A8B8G8R8_UNORM_PACK32 => "A8B8G8R8_UNORM_PACK32",
+                &Self::A8B8G8R8_SNORM_PACK32 => "A8B8G8R8_SNORM_PACK32",
+                &Self::A8B8G8R8_USCALED_PACK32 => "A8B8G8R8_USCALED_PACK32",
+                &Self::A8B8G8R8_SSCALED_PACK32 => "A8B8G8R8_SSCALED_PACK32",
+                &Self::A8B8G8R8_UINT_PACK32 => "A8B8G8R8_UINT_PACK32",
+                &Self::A8B8G8R8_SINT_PACK32 => "A8B8G8R8_SINT_PACK32",
+                &Self::A8B8G8R8_SRGB_PACK32 => "A8B8G8R8_SRGB_PACK32",
+                &Self::A2R10G10B10_UNORM_PACK32 => "A2R10G10B10_UNORM_PACK32",
+                &Self::A2R10G10B10_SNORM_PACK32 => "A2R10G10B10_SNORM_PACK32",
+                &Self::A2R10G10B10_USCALED_PACK32 => "A2R10G10B10_USCALED_PACK32",
+                &Self::A2R10G10B10_SSCALED_PACK32 => "A2R10G10B10_SSCALED_PACK32",
+                &Self::A2R10G10B10_UINT_PACK32 => "A2R10G10B10_UINT_PACK32",
+                &Self::A2R10G10B10_SINT_PACK32 => "A2R10G10B10_SINT_PACK32",
+                &Self::A2B10G10R10_UNORM_PACK32 => "A2B10G10R10_UNORM_PACK32",
+                &Self::A2B10G10R10_SNORM_PACK32 => "A2B10G10R10_SNORM_PACK32",
+                &Self::A2B10G10R10_USCALED_PACK32 => "A2B10G10R10_USCALED_PACK32",
+                &Self::A2B10G10R10_SSCALED_PACK32 => "A2B10G10R10_SSCALED_PACK32",
+                &Self::A2B10G10R10_UINT_PACK32 => "A2B10G10R10_UINT_PACK32",
+                &Self::A2B10G10R10_SINT_PACK32 => "A2B10G10R10_SINT_PACK32",
+                &Self::R16_UNORM => "R16_UNORM",
+                &Self::R16_SNORM => "R16_SNORM",
+                &Self::R16_USCALED => "R16_USCALED",
+                &Self::R16_SSCALED => "R16_SSCALED",
+                &Self::R16_UINT => "R16_UINT",
+                &Self::R16_SINT => "R16_SINT",
+                &Self::R16_SFLOAT => "R16_SFLOAT",
+                &Self::R16G16_UNORM => "R16G16_UNORM",
+                &Self::R16G16_SNORM => "R16G16_SNORM",
+                &Self::R16G16_USCALED => "R16G16_USCALED",
+                &Self::R16G16_SSCALED => "R16G16_SSCALED",
+                &Self::R16G16_UINT => "R16G16_UINT",
+                &Self::R16G16_SINT => "R16G16_SINT",
+                &Self::R16G16_SFLOAT => "R16G16_SFLOAT",
+                &Self::R16G16B16_UNORM => "R16G16B16_UNORM",
+                &Self::R16G16B16_SNORM => "R16G16B16_SNORM",
+                &Self::R16G16B16_USCALED => "R16G16B16_USCALED",
+                &Self::R16G16B16_SSCALED => "R16G16B16_SSCALED",
+                &Self::R16G16B16_UINT => "R16G16B16_UINT",
+                &Self::R16G16B16_SINT => "R16G16B16_SINT",
+                &Self::R16G16B16_SFLOAT => "R16G16B16_SFLOAT",
+                &Self::R16G16B16A16_UNORM => "R16G16B16A16_UNORM",
+                &Self::R16G16B16A16_SNORM => "R16G16B16A16_SNORM",
+                &Self::R16G16B16A16_USCALED => "R16G16B16A16_USCALED",
+                &Self::R16G16B16A16_SSCALED => "R16G16B16A16_SSCALED",
+                &Self::R16G16B16A16_UINT => "R16G16B16A16_UINT",
+                &Self::R16G16B16A16_SINT => "R16G16B16A16_SINT",
+                &Self::R16G16B16A16_SFLOAT => "R16G16B16A16_SFLOAT",
+                &Self::R32_UINT => "R32_UINT",
+                &Self::R32_SINT => "R32_SINT",
+                &Self::R32_SFLOAT => "R32_SFLOAT",
+                &Self::R32G32_UINT => "R32G32_UINT",
+                &Self::R32G32_SINT => "R32G32_SINT",
+                &Self::R32G32_SFLOAT => "R32G32_SFLOAT",
+                &Self::R32G32B32_UINT => "R32G32B32_UINT",
+                &Self::R32G32B32_SINT => "R32G32B32_SINT",
+                &Self::R32G32B32_SFLOAT => "R32G32B32_SFLOAT",
+                &Self::R32G32B32A32_UINT => "R32G32B32A32_UINT",
+                &Self::R32G32B32A32_SINT => "R32G32B32A32_SINT",
+                &Self::R32G32B32A32_SFLOAT => "R32G32B32A32_SFLOAT",
+                &Self::R64_UINT => "R64_UINT",
+                &Self::R64_SINT => "R64_SINT",
+                &Self::R64_SFLOAT => "R64_SFLOAT",
+                &Self::R64G64_UINT => "R64G64_UINT",
+                &Self::R64G64_SINT => "R64G64_SINT",
+                &Self::R64G64_SFLOAT => "R64G64_SFLOAT",
+                &Self::R64G64B64_UINT => "R64G64B64_UINT",
+                &Self::R64G64B64_SINT => "R64G64B64_SINT",
+                &Self::R64G64B64_SFLOAT => "R64G64B64_SFLOAT",
+                &Self::R64G64B64A64_UINT => "R64G64B64A64_UINT",
+                &Self::R64G64B64A64_SINT => "R64G64B64A64_SINT",
+                &Self::R64G64B64A64_SFLOAT => "R64G64B64A64_SFLOAT",
+                &Self::B10G11R11_UFLOAT_PACK32 => "B10G11R11_UFLOAT_PACK32",
+                &Self::E5B9G9R9_UFLOAT_PACK32 => "E5B9G9R9_UFLOAT_PACK32",
+                &Self::D16_UNORM => "D16_UNORM",
+                &Self::X8_D24_UNORM_PACK32 => "X8_D24_UNORM_PACK32",
+                &Self::D32_SFLOAT => "D32_SFLOAT",
+                &Self::S8_UINT => "S8_UINT",
+                &Self::D16_UNORM_S8_UINT => "D16_UNORM_S8_UINT",
+                &Self::D24_UNORM_S8_UINT => "D24_UNORM_S8_UINT",
+                &Self::D32_SFLOAT_S8_UINT => "D32_SFLOAT_S8_UINT",
+                &Self::BC1_RGB_UNORM_BLOCK => "BC1_RGB_UNORM_BLOCK",
+                &Self::BC1_RGB_SRGB_BLOCK => "BC1_RGB_SRGB_BLOCK",
+                &Self::BC1_RGBA_UNORM_BLOCK => "BC1_RGBA_UNORM_BLOCK",
+                &Self::BC1_RGBA_SRGB_BLOCK => "BC1_RGBA_SRGB_BLOCK",
+                &Self::BC2_UNORM_BLOCK => "BC2_UNORM_BLOCK",
+                &Self::BC2_SRGB_BLOCK => "BC2_SRGB_BLOCK",
+                &Self::BC3_UNORM_BLOCK => "BC3_UNORM_BLOCK",
+                &Self::BC3_SRGB_BLOCK => "BC3_SRGB_BLOCK",
+                &Self::BC4_UNORM_BLOCK => "BC4_UNORM_BLOCK",
+                &Self::BC4_SNORM_BLOCK => "BC4_SNORM_BLOCK",
+                &Self::BC5_UNORM_BLOCK => "BC5_UNORM_BLOCK",
+                &Self::BC5_SNORM_BLOCK => "BC5_SNORM_BLOCK",
+                &Self::BC6H_UFLOAT_BLOCK => "BC6H_UFLOAT_BLOCK",
+                &Self::BC6H_SFLOAT_BLOCK => "BC6H_SFLOAT_BLOCK",
+                &Self::BC7_UNORM_BLOCK => "BC7_UNORM_BLOCK",
+                &Self::BC7_SRGB_BLOCK => "BC7_SRGB_BLOCK",
+                &Self::ETC2_R8G8B8_UNORM_BLOCK => "ETC2_R8G8B8_UNORM_BLOCK",
+                &Self::ETC2_R8G8B8_SRGB_BLOCK => "ETC2_R8G8B8_SRGB_BLOCK",
+                &Self::ETC2_R8G8B8A1_UNORM_BLOCK => "ETC2_R8G8B8A1_UNORM_BLOCK",
+                &Self::ETC2_R8G8B8A1_SRGB_BLOCK => "ETC2_R8G8B8A1_SRGB_BLOCK",
+                &Self::ETC2_R8G8B8A8_UNORM_BLOCK => "ETC2_R8G8B8A8_UNORM_BLOCK",
+                &Self::ETC2_R8G8B8A8_SRGB_BLOCK => "ETC2_R8G8B8A8_SRGB_BLOCK",
+                &Self::EAC_R11_UNORM_BLOCK => "EAC_R11_UNORM_BLOCK",
+                &Self::EAC_R11_SNORM_BLOCK => "EAC_R11_SNORM_BLOCK",
+                &Self::EAC_R11G11_UNORM_BLOCK => "EAC_R11G11_UNORM_BLOCK",
+                &Self::EAC_R11G11_SNORM_BLOCK => "EAC_R11G11_SNORM_BLOCK",
+                &Self::ASTC_4X4_UNORM_BLOCK => "ASTC_4X4_UNORM_BLOCK",
+                &Self::ASTC_4X4_SRGB_BLOCK => "ASTC_4X4_SRGB_BLOCK",
+                &Self::ASTC_5X4_UNORM_BLOCK => "ASTC_5X4_UNORM_BLOCK",
+                &Self::ASTC_5X4_SRGB_BLOCK => "ASTC_5X4_SRGB_BLOCK",
+                &Self::ASTC_5X5_UNORM_BLOCK => "ASTC_5X5_UNORM_BLOCK",
+                &Self::ASTC_5X5_SRGB_BLOCK => "ASTC_5X5_SRGB_BLOCK",
+                &Self::ASTC_6X5_UNORM_BLOCK => "ASTC_6X5_UNORM_BLOCK",
+                &Self::ASTC_6X5_SRGB_BLOCK => "ASTC_6X5_SRGB_BLOCK",
+                &Self::ASTC_6X6_UNORM_BLOCK => "ASTC_6X6_UNORM_BLOCK",
+                &Self::ASTC_6X6_SRGB_BLOCK => "ASTC_6X6_SRGB_BLOCK",
+                &Self::ASTC_8X5_UNORM_BLOCK => "ASTC_8X5_UNORM_BLOCK",
+                &Self::ASTC_8X5_SRGB_BLOCK => "ASTC_8X5_SRGB_BLOCK",
+                &Self::ASTC_8X6_UNORM_BLOCK => "ASTC_8X6_UNORM_BLOCK",
+                &Self::ASTC_8X6_SRGB_BLOCK => "ASTC_8X6_SRGB_BLOCK",
+                &Self::ASTC_8X8_UNORM_BLOCK => "ASTC_8X8_UNORM_BLOCK",
+                &Self::ASTC_8X8_SRGB_BLOCK => "ASTC_8X8_SRGB_BLOCK",
+                &Self::ASTC_10X5_UNORM_BLOCK => "ASTC_10X5_UNORM_BLOCK",
+                &Self::ASTC_10X5_SRGB_BLOCK => "ASTC_10X5_SRGB_BLOCK",
+                &Self::ASTC_10X6_UNORM_BLOCK => "ASTC_10X6_UNORM_BLOCK",
+                &Self::ASTC_10X6_SRGB_BLOCK => "ASTC_10X6_SRGB_BLOCK",
+                &Self::ASTC_10X8_UNORM_BLOCK => "ASTC_10X8_UNORM_BLOCK",
+                &Self::ASTC_10X8_SRGB_BLOCK => "ASTC_10X8_SRGB_BLOCK",
+                &Self::ASTC_10X10_UNORM_BLOCK => "ASTC_10X10_UNORM_BLOCK",
+                &Self::ASTC_10X10_SRGB_BLOCK => "ASTC_10X10_SRGB_BLOCK",
+                &Self::ASTC_12X10_UNORM_BLOCK => "ASTC_12X10_UNORM_BLOCK",
+                &Self::ASTC_12X10_SRGB_BLOCK => "ASTC_12X10_SRGB_BLOCK",
+                &Self::ASTC_12X12_UNORM_BLOCK => "ASTC_12X12_UNORM_BLOCK",
+                &Self::ASTC_12X12_SRGB_BLOCK => "ASTC_12X12_SRGB_BLOCK",
+                &Self::G8B8G8R8_422_UNORM => "G8B8G8R8_422_UNORM",
+                &Self::B8G8R8G8_422_UNORM => "B8G8R8G8_422_UNORM",
+                &Self::G8_B8_R8_3PLANE_420_UNORM => "G8_B8_R8_3PLANE_420_UNORM",
+                &Self::G8_B8R8_2PLANE_420_UNORM => "G8_B8R8_2PLANE_420_UNORM",
+                &Self::G8_B8_R8_3PLANE_422_UNORM => "G8_B8_R8_3PLANE_422_UNORM",
+                &Self::G8_B8R8_2PLANE_422_UNORM => "G8_B8R8_2PLANE_422_UNORM",
+                &Self::G8_B8_R8_3PLANE_444_UNORM => "G8_B8_R8_3PLANE_444_UNORM",
+                &Self::R10X6_UNORM_PACK16 => "R10X6_UNORM_PACK16",
+                &Self::R10X6G10X6_UNORM_2PACK16 => "R10X6G10X6_UNORM_2PACK16",
+                &Self::R10X6G10X6B10X6A10X6_UNORM_4PACK16 => {
+                    "R10X6G10X6B10X6A10X6_UNORM_4PACK16"
+                }
+                &Self::G10X6B10X6G10X6R10X6_422_UNORM_4PACK16 => {
+                    "G10X6B10X6G10X6R10X6_422_UNORM_4PACK16"
+                }
+                &Self::B10X6G10X6R10X6G10X6_422_UNORM_4PACK16 => {
+                    "B10X6G10X6R10X6G10X6_422_UNORM_4PACK16"
+                }
+                &Self::G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16 => {
+                    "G10X6_B10X6_R10X6_3PLANE_420_UNORM_3PACK16"
+                }
+                &Self::G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16 => {
+                    "G10X6_B10X6R10X6_2PLANE_420_UNORM_3PACK16"
+                }
+                &Self::G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16 => {
+                    "G10X6_B10X6_R10X6_3PLANE_422_UNORM_3PACK16"
+                }
+                &Self::G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16 => {
+                    "G10X6_B10X6R10X6_2PLANE_422_UNORM_3PACK16"
+                }
+                &Self::G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16 => {
+                    "G10X6_B10X6_R10X6_3PLANE_444_UNORM_3PACK16"
+                }
+                &Self::R12X4_UNORM_PACK16 => "R12X4_UNORM_PACK16",
+                &Self::R12X4G12X4_UNORM_2PACK16 => "R12X4G12X4_UNORM_2PACK16",
+                &Self::R12X4G12X4B12X4A12X4_UNORM_4PACK16 => {
+                    "R12X4G12X4B12X4A12X4_UNORM_4PACK16"
+                }
+                &Self::G12X4B12X4G12X4R12X4_422_UNORM_4PACK16 => {
+                    "G12X4B12X4G12X4R12X4_422_UNORM_4PACK16"
+                }
+                &Self::B12X4G12X4R12X4G12X4_422_UNORM_4PACK16 => {
+                    "B12X4G12X4R12X4G12X4_422_UNORM_4PACK16"
+                }
+                &Self::G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16 => {
+                    "G12X4_B12X4_R12X4_3PLANE_420_UNORM_3PACK16"
+                }
+                &Self::G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16 => {
+                    "G12X4_B12X4R12X4_2PLANE_420_UNORM_3PACK16"
+                }
+                &Self::G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16 => {
+                    "G12X4_B12X4_R12X4_3PLANE_422_UNORM_3PACK16"
+                }
+                &Self::G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16 => {
+                    "G12X4_B12X4R12X4_2PLANE_422_UNORM_3PACK16"
+                }
+                &Self::G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16 => {
+                    "G12X4_B12X4_R12X4_3PLANE_444_UNORM_3PACK16"
+                }
+                &Self::G16B16G16R16_422_UNORM => "G16B16G16R16_422_UNORM",
+                &Self::B16G16R16G16_422_UNORM => "B16G16R16G16_422_UNORM",
+                &Self::G16_B16_R16_3PLANE_420_UNORM => "G16_B16_R16_3PLANE_420_UNORM",
+                &Self::G16_B16R16_2PLANE_420_UNORM => "G16_B16R16_2PLANE_420_UNORM",
+                &Self::G16_B16_R16_3PLANE_422_UNORM => "G16_B16_R16_3PLANE_422_UNORM",
+                &Self::G16_B16R16_2PLANE_422_UNORM => "G16_B16R16_2PLANE_422_UNORM",
+                &Self::G16_B16_R16_3PLANE_444_UNORM => "G16_B16_R16_3PLANE_444_UNORM",
+                &Self::G8_B8R8_2PLANE_444_UNORM => "G8_B8R8_2PLANE_444_UNORM",
+                &Self::G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16 => {
+                    "G10X6_B10X6R10X6_2PLANE_444_UNORM_3PACK16"
+                }
+                &Self::G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16 => {
+                    "G12X4_B12X4R12X4_2PLANE_444_UNORM_3PACK16"
+                }
+                &Self::G16_B16R16_2PLANE_444_UNORM => "G16_B16R16_2PLANE_444_UNORM",
+                &Self::A4R4G4B4_UNORM_PACK16 => "A4R4G4B4_UNORM_PACK16",
+                &Self::A4B4G4R4_UNORM_PACK16 => "A4B4G4R4_UNORM_PACK16",
+                &Self::ASTC_4X4_SFLOAT_BLOCK => "ASTC_4X4_SFLOAT_BLOCK",
+                &Self::ASTC_5X4_SFLOAT_BLOCK => "ASTC_5X4_SFLOAT_BLOCK",
+                &Self::ASTC_5X5_SFLOAT_BLOCK => "ASTC_5X5_SFLOAT_BLOCK",
+                &Self::ASTC_6X5_SFLOAT_BLOCK => "ASTC_6X5_SFLOAT_BLOCK",
+                &Self::ASTC_6X6_SFLOAT_BLOCK => "ASTC_6X6_SFLOAT_BLOCK",
+                &Self::ASTC_8X5_SFLOAT_BLOCK => "ASTC_8X5_SFLOAT_BLOCK",
+                &Self::ASTC_8X6_SFLOAT_BLOCK => "ASTC_8X6_SFLOAT_BLOCK",
+                &Self::ASTC_8X8_SFLOAT_BLOCK => "ASTC_8X8_SFLOAT_BLOCK",
+                &Self::ASTC_10X5_SFLOAT_BLOCK => "ASTC_10X5_SFLOAT_BLOCK",
+                &Self::ASTC_10X6_SFLOAT_BLOCK => "ASTC_10X6_SFLOAT_BLOCK",
+                &Self::ASTC_10X8_SFLOAT_BLOCK => "ASTC_10X8_SFLOAT_BLOCK",
+                &Self::ASTC_10X10_SFLOAT_BLOCK => "ASTC_10X10_SFLOAT_BLOCK",
+                &Self::ASTC_12X10_SFLOAT_BLOCK => "ASTC_12X10_SFLOAT_BLOCK",
+                &Self::ASTC_12X12_SFLOAT_BLOCK => "ASTC_12X12_SFLOAT_BLOCK",
+                &Self::PVRTC1_2BPP_UNORM_BLOCK_IMG => "PVRTC1_2BPP_UNORM_BLOCK_IMG",
+                &Self::PVRTC1_4BPP_UNORM_BLOCK_IMG => "PVRTC1_4BPP_UNORM_BLOCK_IMG",
+                &Self::PVRTC2_2BPP_UNORM_BLOCK_IMG => "PVRTC2_2BPP_UNORM_BLOCK_IMG",
+                &Self::PVRTC2_4BPP_UNORM_BLOCK_IMG => "PVRTC2_4BPP_UNORM_BLOCK_IMG",
+                &Self::PVRTC1_2BPP_SRGB_BLOCK_IMG => "PVRTC1_2BPP_SRGB_BLOCK_IMG",
+                &Self::PVRTC1_4BPP_SRGB_BLOCK_IMG => "PVRTC1_4BPP_SRGB_BLOCK_IMG",
+                &Self::PVRTC2_2BPP_SRGB_BLOCK_IMG => "PVRTC2_2BPP_SRGB_BLOCK_IMG",
+                &Self::PVRTC2_4BPP_SRGB_BLOCK_IMG => "PVRTC2_4BPP_SRGB_BLOCK_IMG",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2753,8 +2703,8 @@ bitflags::bitflags! {
     FormatFeatureFlagBits::COLOR_ATTACHMENT.0; const COLOR_ATTACHMENT_BLEND =
     FormatFeatureFlagBits::COLOR_ATTACHMENT_BLEND.0; const DEPTH_STENCIL_ATTACHMENT =
     FormatFeatureFlagBits::DEPTH_STENCIL_ATTACHMENT.0; const BLIT_SRC =
-    FormatFeatureFlagBits::BLIT_SRC.0; const BLIT_DST =
-    FormatFeatureFlagBits::BLIT_DST.0; const SAMPLED_IMAGE_FILTER_LINEAR =
+    FormatFeatureFlagBits::BLIT_SRC.0; const BLIT_DST = FormatFeatureFlagBits::BLIT_DST
+    .0; const SAMPLED_IMAGE_FILTER_LINEAR =
     FormatFeatureFlagBits::SAMPLED_IMAGE_FILTER_LINEAR.0; const TRANSFER_SRC =
     FormatFeatureFlagBits::TRANSFER_SRC.0; const TRANSFER_DST =
     FormatFeatureFlagBits::TRANSFER_DST.0; const MIDPOINT_CHROMA_SAMPLES =
@@ -2762,14 +2712,14 @@ bitflags::bitflags! {
     SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER =
     FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER.0; const
     SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER =
-    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT =
-    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE =
-    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE.0;
-    const DISJOINT = FormatFeatureFlagBits::DISJOINT.0; const COSITED_CHROMA_SAMPLES =
-    FormatFeatureFlagBits::COSITED_CHROMA_SAMPLES.0; const SAMPLED_IMAGE_FILTER_MINMAX =
-    FormatFeatureFlagBits::SAMPLED_IMAGE_FILTER_MINMAX.0; const
+    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT =
+    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE =
+    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE
+    .0; const DISJOINT = FormatFeatureFlagBits::DISJOINT.0; const COSITED_CHROMA_SAMPLES
+    = FormatFeatureFlagBits::COSITED_CHROMA_SAMPLES.0; const SAMPLED_IMAGE_FILTER_MINMAX
+    = FormatFeatureFlagBits::SAMPLED_IMAGE_FILTER_MINMAX.0; const
     SAMPLED_IMAGE_FILTER_CUBIC_IMG =
     FormatFeatureFlagBits::SAMPLED_IMAGE_FILTER_CUBIC_IMG.0; const
     VIDEO_DECODE_OUTPUT_KHR = FormatFeatureFlagBits::VIDEO_DECODE_OUTPUT_KHR.0; const
@@ -2788,12 +2738,13 @@ bitflags::bitflags! {
     const SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR =
     FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER_KHR.0; const
     SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR =
-    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR =
-    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR.0;
-    const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR =
-    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR.0;
-    const DISJOINT_KHR = FormatFeatureFlagBits::DISJOINT_KHR.0; const
+    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER_KHR
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR =
+    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_KHR
+    .0; const SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR
+    =
+    FormatFeatureFlagBits::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE_KHR
+    .0; const DISJOINT_KHR = FormatFeatureFlagBits::DISJOINT_KHR.0; const
     COSITED_CHROMA_SAMPLES_KHR = FormatFeatureFlagBits::COSITED_CHROMA_SAMPLES_KHR.0;
     const SAMPLED_IMAGE_FILTER_CUBIC_EXT =
     FormatFeatureFlagBits::SAMPLED_IMAGE_FILTER_CUBIC_EXT.0; }
@@ -2812,57 +2763,54 @@ impl FormatFeatureFlagBits {
 }
 impl std::fmt::Debug for FormatFeatureFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SAMPLED_IMAGE => "SAMPLED_IMAGE",
-                    &Self::STORAGE_IMAGE => "STORAGE_IMAGE",
-                    &Self::STORAGE_IMAGE_ATOMIC => "STORAGE_IMAGE_ATOMIC",
-                    &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
-                    &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
-                    &Self::STORAGE_TEXEL_BUFFER_ATOMIC => "STORAGE_TEXEL_BUFFER_ATOMIC",
-                    &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
-                    &Self::COLOR_ATTACHMENT => "COLOR_ATTACHMENT",
-                    &Self::COLOR_ATTACHMENT_BLEND => "COLOR_ATTACHMENT_BLEND",
-                    &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
-                    &Self::BLIT_SRC => "BLIT_SRC",
-                    &Self::BLIT_DST => "BLIT_DST",
-                    &Self::SAMPLED_IMAGE_FILTER_LINEAR => "SAMPLED_IMAGE_FILTER_LINEAR",
-                    &Self::TRANSFER_SRC => "TRANSFER_SRC",
-                    &Self::TRANSFER_DST => "TRANSFER_DST",
-                    &Self::MIDPOINT_CHROMA_SAMPLES => "MIDPOINT_CHROMA_SAMPLES",
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT"
-                    }
-                    &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE => {
-                        "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE"
-                    }
-                    &Self::DISJOINT => "DISJOINT",
-                    &Self::COSITED_CHROMA_SAMPLES => "COSITED_CHROMA_SAMPLES",
-                    &Self::SAMPLED_IMAGE_FILTER_MINMAX => "SAMPLED_IMAGE_FILTER_MINMAX",
-                    &Self::SAMPLED_IMAGE_FILTER_CUBIC_IMG => {
-                        "SAMPLED_IMAGE_FILTER_CUBIC_IMG"
-                    }
-                    &Self::VIDEO_DECODE_OUTPUT_KHR => "VIDEO_DECODE_OUTPUT_KHR",
-                    &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
-                    &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => {
-                        "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR"
-                    }
-                    &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
-                    }
-                    &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
-                    &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SAMPLED_IMAGE => "SAMPLED_IMAGE",
+                &Self::STORAGE_IMAGE => "STORAGE_IMAGE",
+                &Self::STORAGE_IMAGE_ATOMIC => "STORAGE_IMAGE_ATOMIC",
+                &Self::UNIFORM_TEXEL_BUFFER => "UNIFORM_TEXEL_BUFFER",
+                &Self::STORAGE_TEXEL_BUFFER => "STORAGE_TEXEL_BUFFER",
+                &Self::STORAGE_TEXEL_BUFFER_ATOMIC => "STORAGE_TEXEL_BUFFER_ATOMIC",
+                &Self::VERTEX_BUFFER => "VERTEX_BUFFER",
+                &Self::COLOR_ATTACHMENT => "COLOR_ATTACHMENT",
+                &Self::COLOR_ATTACHMENT_BLEND => "COLOR_ATTACHMENT_BLEND",
+                &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
+                &Self::BLIT_SRC => "BLIT_SRC",
+                &Self::BLIT_DST => "BLIT_DST",
+                &Self::SAMPLED_IMAGE_FILTER_LINEAR => "SAMPLED_IMAGE_FILTER_LINEAR",
+                &Self::TRANSFER_SRC => "TRANSFER_SRC",
+                &Self::TRANSFER_DST => "TRANSFER_DST",
+                &Self::MIDPOINT_CHROMA_SAMPLES => "MIDPOINT_CHROMA_SAMPLES",
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_LINEAR_FILTER"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_SEPARATE_RECONSTRUCTION_FILTER"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT"
+                }
+                &Self::SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE => {
+                    "SAMPLED_IMAGE_YCBCR_CONVERSION_CHROMA_RECONSTRUCTION_EXPLICIT_FORCEABLE"
+                }
+                &Self::DISJOINT => "DISJOINT",
+                &Self::COSITED_CHROMA_SAMPLES => "COSITED_CHROMA_SAMPLES",
+                &Self::SAMPLED_IMAGE_FILTER_MINMAX => "SAMPLED_IMAGE_FILTER_MINMAX",
+                &Self::SAMPLED_IMAGE_FILTER_CUBIC_IMG => "SAMPLED_IMAGE_FILTER_CUBIC_IMG",
+                &Self::VIDEO_DECODE_OUTPUT_KHR => "VIDEO_DECODE_OUTPUT_KHR",
+                &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+                &Self::ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR => {
+                    "ACCELERATION_STRUCTURE_VERTEX_BUFFER_KHR"
+                }
+                &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
+                }
+                &Self::VIDEO_ENCODE_INPUT_KHR => "VIDEO_ENCODE_INPUT_KHR",
+                &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2888,14 +2836,13 @@ impl crate::vk1_0::FormatFeatureFlagBits {
 pub struct FrontFace(pub i32);
 impl std::fmt::Debug for FrontFace {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::COUNTER_CLOCKWISE => "COUNTER_CLOCKWISE",
-                    &Self::CLOCKWISE => "CLOCKWISE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::COUNTER_CLOCKWISE => "COUNTER_CLOCKWISE",
+                &Self::CLOCKWISE => "CLOCKWISE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2935,24 +2882,23 @@ impl ImageAspectFlagBits {
 }
 impl std::fmt::Debug for ImageAspectFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::COLOR => "COLOR",
-                    &Self::DEPTH => "DEPTH",
-                    &Self::STENCIL => "STENCIL",
-                    &Self::METADATA => "METADATA",
-                    &Self::PLANE_0 => "PLANE_0",
-                    &Self::PLANE_1 => "PLANE_1",
-                    &Self::PLANE_2 => "PLANE_2",
-                    &Self::NONE => "NONE",
-                    &Self::MEMORY_PLANE_0_EXT => "MEMORY_PLANE_0_EXT",
-                    &Self::MEMORY_PLANE_1_EXT => "MEMORY_PLANE_1_EXT",
-                    &Self::MEMORY_PLANE_2_EXT => "MEMORY_PLANE_2_EXT",
-                    &Self::MEMORY_PLANE_3_EXT => "MEMORY_PLANE_3_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::COLOR => "COLOR",
+                &Self::DEPTH => "DEPTH",
+                &Self::STENCIL => "STENCIL",
+                &Self::METADATA => "METADATA",
+                &Self::PLANE_0 => "PLANE_0",
+                &Self::PLANE_1 => "PLANE_1",
+                &Self::PLANE_2 => "PLANE_2",
+                &Self::NONE => "NONE",
+                &Self::MEMORY_PLANE_0_EXT => "MEMORY_PLANE_0_EXT",
+                &Self::MEMORY_PLANE_1_EXT => "MEMORY_PLANE_1_EXT",
+                &Self::MEMORY_PLANE_2_EXT => "MEMORY_PLANE_2_EXT",
+                &Self::MEMORY_PLANE_3_EXT => "MEMORY_PLANE_3_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -2972,11 +2918,10 @@ bitflags::bitflags! {
     ImageCreateFlagBits::SPARSE_ALIASED.0; const MUTABLE_FORMAT =
     ImageCreateFlagBits::MUTABLE_FORMAT.0; const CUBE_COMPATIBLE =
     ImageCreateFlagBits::CUBE_COMPATIBLE.0; const ALIAS = ImageCreateFlagBits::ALIAS.0;
-    const SPLIT_INSTANCE_BIND_REGIONS =
-    ImageCreateFlagBits::SPLIT_INSTANCE_BIND_REGIONS.0; const _2D_ARRAY_COMPATIBLE =
-    ImageCreateFlagBits::_2D_ARRAY_COMPATIBLE.0; const BLOCK_TEXEL_VIEW_COMPATIBLE =
-    ImageCreateFlagBits::BLOCK_TEXEL_VIEW_COMPATIBLE.0; const EXTENDED_USAGE =
-    ImageCreateFlagBits::EXTENDED_USAGE.0; const PROTECTED =
+    const SPLIT_INSTANCE_BIND_REGIONS = ImageCreateFlagBits::SPLIT_INSTANCE_BIND_REGIONS
+    .0; const _2D_ARRAY_COMPATIBLE = ImageCreateFlagBits::_2D_ARRAY_COMPATIBLE.0; const
+    BLOCK_TEXEL_VIEW_COMPATIBLE = ImageCreateFlagBits::BLOCK_TEXEL_VIEW_COMPATIBLE.0;
+    const EXTENDED_USAGE = ImageCreateFlagBits::EXTENDED_USAGE.0; const PROTECTED =
     ImageCreateFlagBits::PROTECTED.0; const DISJOINT = ImageCreateFlagBits::DISJOINT.0;
     const CORNER_SAMPLED_NV = ImageCreateFlagBits::CORNER_SAMPLED_NV.0; const
     SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT =
@@ -2989,8 +2934,8 @@ bitflags::bitflags! {
     BLOCK_TEXEL_VIEW_COMPATIBLE_KHR =
     ImageCreateFlagBits::BLOCK_TEXEL_VIEW_COMPATIBLE_KHR.0; const EXTENDED_USAGE_KHR =
     ImageCreateFlagBits::EXTENDED_USAGE_KHR.0; const DISJOINT_KHR =
-    ImageCreateFlagBits::DISJOINT_KHR.0; const ALIAS_KHR =
-    ImageCreateFlagBits::ALIAS_KHR.0; }
+    ImageCreateFlagBits::DISJOINT_KHR.0; const ALIAS_KHR = ImageCreateFlagBits::ALIAS_KHR
+    .0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCreateFlagBits.html) · Bits enum of [`ImageCreateFlags`]
 #[doc(alias = "VkImageCreateFlagBits")]
@@ -3006,32 +2951,31 @@ impl ImageCreateFlagBits {
 }
 impl std::fmt::Debug for ImageCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SPARSE_BINDING => "SPARSE_BINDING",
-                    &Self::SPARSE_RESIDENCY => "SPARSE_RESIDENCY",
-                    &Self::SPARSE_ALIASED => "SPARSE_ALIASED",
-                    &Self::MUTABLE_FORMAT => "MUTABLE_FORMAT",
-                    &Self::CUBE_COMPATIBLE => "CUBE_COMPATIBLE",
-                    &Self::ALIAS => "ALIAS",
-                    &Self::SPLIT_INSTANCE_BIND_REGIONS => "SPLIT_INSTANCE_BIND_REGIONS",
-                    &Self::_2D_ARRAY_COMPATIBLE => "2D_ARRAY_COMPATIBLE",
-                    &Self::BLOCK_TEXEL_VIEW_COMPATIBLE => "BLOCK_TEXEL_VIEW_COMPATIBLE",
-                    &Self::EXTENDED_USAGE => "EXTENDED_USAGE",
-                    &Self::PROTECTED => "PROTECTED",
-                    &Self::DISJOINT => "DISJOINT",
-                    &Self::CORNER_SAMPLED_NV => "CORNER_SAMPLED_NV",
-                    &Self::SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT => {
-                        "SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT"
-                    }
-                    &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
-                    &Self::FRAGMENT_DENSITY_MAP_OFFSET_QCOM => {
-                        "FRAGMENT_DENSITY_MAP_OFFSET_QCOM"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SPARSE_BINDING => "SPARSE_BINDING",
+                &Self::SPARSE_RESIDENCY => "SPARSE_RESIDENCY",
+                &Self::SPARSE_ALIASED => "SPARSE_ALIASED",
+                &Self::MUTABLE_FORMAT => "MUTABLE_FORMAT",
+                &Self::CUBE_COMPATIBLE => "CUBE_COMPATIBLE",
+                &Self::ALIAS => "ALIAS",
+                &Self::SPLIT_INSTANCE_BIND_REGIONS => "SPLIT_INSTANCE_BIND_REGIONS",
+                &Self::_2D_ARRAY_COMPATIBLE => "2D_ARRAY_COMPATIBLE",
+                &Self::BLOCK_TEXEL_VIEW_COMPATIBLE => "BLOCK_TEXEL_VIEW_COMPATIBLE",
+                &Self::EXTENDED_USAGE => "EXTENDED_USAGE",
+                &Self::PROTECTED => "PROTECTED",
+                &Self::DISJOINT => "DISJOINT",
+                &Self::CORNER_SAMPLED_NV => "CORNER_SAMPLED_NV",
+                &Self::SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT => {
+                    "SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT"
+                }
+                &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
+                &Self::FRAGMENT_DENSITY_MAP_OFFSET_QCOM => {
+                    "FRAGMENT_DENSITY_MAP_OFFSET_QCOM"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3049,51 +2993,50 @@ impl crate::vk1_0::ImageCreateFlagBits {
 pub struct ImageLayout(pub i32);
 impl std::fmt::Debug for ImageLayout {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UNDEFINED => "UNDEFINED",
-                    &Self::GENERAL => "GENERAL",
-                    &Self::COLOR_ATTACHMENT_OPTIMAL => "COLOR_ATTACHMENT_OPTIMAL",
-                    &Self::DEPTH_STENCIL_ATTACHMENT_OPTIMAL => {
-                        "DEPTH_STENCIL_ATTACHMENT_OPTIMAL"
-                    }
-                    &Self::DEPTH_STENCIL_READ_ONLY_OPTIMAL => {
-                        "DEPTH_STENCIL_READ_ONLY_OPTIMAL"
-                    }
-                    &Self::SHADER_READ_ONLY_OPTIMAL => "SHADER_READ_ONLY_OPTIMAL",
-                    &Self::TRANSFER_SRC_OPTIMAL => "TRANSFER_SRC_OPTIMAL",
-                    &Self::TRANSFER_DST_OPTIMAL => "TRANSFER_DST_OPTIMAL",
-                    &Self::PREINITIALIZED => "PREINITIALIZED",
-                    &Self::DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL => {
-                        "DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL"
-                    }
-                    &Self::DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL => {
-                        "DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL"
-                    }
-                    &Self::DEPTH_ATTACHMENT_OPTIMAL => "DEPTH_ATTACHMENT_OPTIMAL",
-                    &Self::DEPTH_READ_ONLY_OPTIMAL => "DEPTH_READ_ONLY_OPTIMAL",
-                    &Self::STENCIL_ATTACHMENT_OPTIMAL => "STENCIL_ATTACHMENT_OPTIMAL",
-                    &Self::STENCIL_READ_ONLY_OPTIMAL => "STENCIL_READ_ONLY_OPTIMAL",
-                    &Self::READ_ONLY_OPTIMAL => "READ_ONLY_OPTIMAL",
-                    &Self::ATTACHMENT_OPTIMAL => "ATTACHMENT_OPTIMAL",
-                    &Self::PRESENT_SRC_KHR => "PRESENT_SRC_KHR",
-                    &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
-                    &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
-                    &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
-                    &Self::SHARED_PRESENT_KHR => "SHARED_PRESENT_KHR",
-                    &Self::FRAGMENT_DENSITY_MAP_OPTIMAL_EXT => {
-                        "FRAGMENT_DENSITY_MAP_OPTIMAL_EXT"
-                    }
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR"
-                    }
-                    &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
-                    &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
-                    &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UNDEFINED => "UNDEFINED",
+                &Self::GENERAL => "GENERAL",
+                &Self::COLOR_ATTACHMENT_OPTIMAL => "COLOR_ATTACHMENT_OPTIMAL",
+                &Self::DEPTH_STENCIL_ATTACHMENT_OPTIMAL => {
+                    "DEPTH_STENCIL_ATTACHMENT_OPTIMAL"
+                }
+                &Self::DEPTH_STENCIL_READ_ONLY_OPTIMAL => {
+                    "DEPTH_STENCIL_READ_ONLY_OPTIMAL"
+                }
+                &Self::SHADER_READ_ONLY_OPTIMAL => "SHADER_READ_ONLY_OPTIMAL",
+                &Self::TRANSFER_SRC_OPTIMAL => "TRANSFER_SRC_OPTIMAL",
+                &Self::TRANSFER_DST_OPTIMAL => "TRANSFER_DST_OPTIMAL",
+                &Self::PREINITIALIZED => "PREINITIALIZED",
+                &Self::DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL => {
+                    "DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL"
+                }
+                &Self::DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL => {
+                    "DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL"
+                }
+                &Self::DEPTH_ATTACHMENT_OPTIMAL => "DEPTH_ATTACHMENT_OPTIMAL",
+                &Self::DEPTH_READ_ONLY_OPTIMAL => "DEPTH_READ_ONLY_OPTIMAL",
+                &Self::STENCIL_ATTACHMENT_OPTIMAL => "STENCIL_ATTACHMENT_OPTIMAL",
+                &Self::STENCIL_READ_ONLY_OPTIMAL => "STENCIL_READ_ONLY_OPTIMAL",
+                &Self::READ_ONLY_OPTIMAL => "READ_ONLY_OPTIMAL",
+                &Self::ATTACHMENT_OPTIMAL => "ATTACHMENT_OPTIMAL",
+                &Self::PRESENT_SRC_KHR => "PRESENT_SRC_KHR",
+                &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+                &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+                &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+                &Self::SHARED_PRESENT_KHR => "SHARED_PRESENT_KHR",
+                &Self::FRAGMENT_DENSITY_MAP_OPTIMAL_EXT => {
+                    "FRAGMENT_DENSITY_MAP_OPTIMAL_EXT"
+                }
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_OPTIMAL_KHR"
+                }
+                &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+                &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+                &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3115,15 +3058,14 @@ impl crate::vk1_0::ImageLayout {
 pub struct ImageTiling(pub i32);
 impl std::fmt::Debug for ImageTiling {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OPTIMAL => "OPTIMAL",
-                    &Self::LINEAR => "LINEAR",
-                    &Self::DRM_FORMAT_MODIFIER_EXT => "DRM_FORMAT_MODIFIER_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OPTIMAL => "OPTIMAL",
+                &Self::LINEAR => "LINEAR",
+                &Self::DRM_FORMAT_MODIFIER_EXT => "DRM_FORMAT_MODIFIER_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3138,15 +3080,14 @@ impl crate::vk1_0::ImageTiling {
 pub struct ImageType(pub i32);
 impl std::fmt::Debug for ImageType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::_1D => "1D",
-                    &Self::_2D => "2D",
-                    &Self::_3D => "3D",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::_1D => "1D",
+                &Self::_2D => "2D",
+                &Self::_3D => "3D",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3159,15 +3100,14 @@ bitflags::bitflags! {
     #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageUsageFlags.html) · Bitmask of [`ImageUsageFlagBits`]"]
     #[doc(alias = "VkImageUsageFlags")] #[derive(Default)] #[repr(transparent)] pub
-    struct ImageUsageFlags : u32 { const TRANSFER_SRC =
-    ImageUsageFlagBits::TRANSFER_SRC.0; const TRANSFER_DST =
-    ImageUsageFlagBits::TRANSFER_DST.0; const SAMPLED = ImageUsageFlagBits::SAMPLED.0;
-    const STORAGE = ImageUsageFlagBits::STORAGE.0; const COLOR_ATTACHMENT =
-    ImageUsageFlagBits::COLOR_ATTACHMENT.0; const DEPTH_STENCIL_ATTACHMENT =
-    ImageUsageFlagBits::DEPTH_STENCIL_ATTACHMENT.0; const TRANSIENT_ATTACHMENT =
-    ImageUsageFlagBits::TRANSIENT_ATTACHMENT.0; const INPUT_ATTACHMENT =
-    ImageUsageFlagBits::INPUT_ATTACHMENT.0; const VIDEO_DECODE_DST_KHR =
-    ImageUsageFlagBits::VIDEO_DECODE_DST_KHR.0; const VIDEO_DECODE_SRC_KHR =
+    struct ImageUsageFlags : u32 { const TRANSFER_SRC = ImageUsageFlagBits::TRANSFER_SRC
+    .0; const TRANSFER_DST = ImageUsageFlagBits::TRANSFER_DST.0; const SAMPLED =
+    ImageUsageFlagBits::SAMPLED.0; const STORAGE = ImageUsageFlagBits::STORAGE.0; const
+    COLOR_ATTACHMENT = ImageUsageFlagBits::COLOR_ATTACHMENT.0; const
+    DEPTH_STENCIL_ATTACHMENT = ImageUsageFlagBits::DEPTH_STENCIL_ATTACHMENT.0; const
+    TRANSIENT_ATTACHMENT = ImageUsageFlagBits::TRANSIENT_ATTACHMENT.0; const
+    INPUT_ATTACHMENT = ImageUsageFlagBits::INPUT_ATTACHMENT.0; const VIDEO_DECODE_DST_KHR
+    = ImageUsageFlagBits::VIDEO_DECODE_DST_KHR.0; const VIDEO_DECODE_SRC_KHR =
     ImageUsageFlagBits::VIDEO_DECODE_SRC_KHR.0; const VIDEO_DECODE_DPB_KHR =
     ImageUsageFlagBits::VIDEO_DECODE_DPB_KHR.0; const FRAGMENT_DENSITY_MAP_EXT =
     ImageUsageFlagBits::FRAGMENT_DENSITY_MAP_EXT.0; const
@@ -3193,31 +3133,30 @@ impl ImageUsageFlagBits {
 }
 impl std::fmt::Debug for ImageUsageFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::TRANSFER_SRC => "TRANSFER_SRC",
-                    &Self::TRANSFER_DST => "TRANSFER_DST",
-                    &Self::SAMPLED => "SAMPLED",
-                    &Self::STORAGE => "STORAGE",
-                    &Self::COLOR_ATTACHMENT => "COLOR_ATTACHMENT",
-                    &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
-                    &Self::TRANSIENT_ATTACHMENT => "TRANSIENT_ATTACHMENT",
-                    &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
-                    &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
-                    &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
-                    &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
-                    &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
-                    }
-                    &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
-                    &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
-                    &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
-                    &Self::INVOCATION_MASK_HUAWEI => "INVOCATION_MASK_HUAWEI",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::TRANSFER_SRC => "TRANSFER_SRC",
+                &Self::TRANSFER_DST => "TRANSFER_DST",
+                &Self::SAMPLED => "SAMPLED",
+                &Self::STORAGE => "STORAGE",
+                &Self::COLOR_ATTACHMENT => "COLOR_ATTACHMENT",
+                &Self::DEPTH_STENCIL_ATTACHMENT => "DEPTH_STENCIL_ATTACHMENT",
+                &Self::TRANSIENT_ATTACHMENT => "TRANSIENT_ATTACHMENT",
+                &Self::INPUT_ATTACHMENT => "INPUT_ATTACHMENT",
+                &Self::VIDEO_DECODE_DST_KHR => "VIDEO_DECODE_DST_KHR",
+                &Self::VIDEO_DECODE_SRC_KHR => "VIDEO_DECODE_SRC_KHR",
+                &Self::VIDEO_DECODE_DPB_KHR => "VIDEO_DECODE_DPB_KHR",
+                &Self::FRAGMENT_DENSITY_MAP_EXT => "FRAGMENT_DENSITY_MAP_EXT",
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
+                }
+                &Self::VIDEO_ENCODE_DST_KHR => "VIDEO_ENCODE_DST_KHR",
+                &Self::VIDEO_ENCODE_SRC_KHR => "VIDEO_ENCODE_SRC_KHR",
+                &Self::VIDEO_ENCODE_DPB_KHR => "VIDEO_ENCODE_DPB_KHR",
+                &Self::INVOCATION_MASK_HUAWEI => "INVOCATION_MASK_HUAWEI",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3254,18 +3193,17 @@ impl ImageViewCreateFlagBits {
 }
 impl std::fmt::Debug for ImageViewCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FRAGMENT_DENSITY_MAP_DYNAMIC_EXT => {
-                        "FRAGMENT_DENSITY_MAP_DYNAMIC_EXT"
-                    }
-                    &Self::FRAGMENT_DENSITY_MAP_DEFERRED_EXT => {
-                        "FRAGMENT_DENSITY_MAP_DEFERRED_EXT"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FRAGMENT_DENSITY_MAP_DYNAMIC_EXT => {
+                    "FRAGMENT_DENSITY_MAP_DYNAMIC_EXT"
+                }
+                &Self::FRAGMENT_DENSITY_MAP_DEFERRED_EXT => {
+                    "FRAGMENT_DENSITY_MAP_DEFERRED_EXT"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewType.html) · Enum
@@ -3275,19 +3213,18 @@ impl std::fmt::Debug for ImageViewCreateFlagBits {
 pub struct ImageViewType(pub i32);
 impl std::fmt::Debug for ImageViewType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::_1D => "1D",
-                    &Self::_2D => "2D",
-                    &Self::_3D => "3D",
-                    &Self::CUBE => "CUBE",
-                    &Self::_1D_ARRAY => "1D_ARRAY",
-                    &Self::_2D_ARRAY => "2D_ARRAY",
-                    &Self::CUBE_ARRAY => "CUBE_ARRAY",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::_1D => "1D",
+                &Self::_2D => "2D",
+                &Self::_3D => "3D",
+                &Self::CUBE => "CUBE",
+                &Self::_1D_ARRAY => "1D_ARRAY",
+                &Self::_2D_ARRAY => "2D_ARRAY",
+                &Self::CUBE_ARRAY => "CUBE_ARRAY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3307,14 +3244,13 @@ impl crate::vk1_0::ImageViewType {
 pub struct SharingMode(pub i32);
 impl std::fmt::Debug for SharingMode {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::EXCLUSIVE => "EXCLUSIVE",
-                    &Self::CONCURRENT => "CONCURRENT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::EXCLUSIVE => "EXCLUSIVE",
+                &Self::CONCURRENT => "CONCURRENT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3329,16 +3265,15 @@ impl crate::vk1_0::SharingMode {
 pub struct IndexType(pub i32);
 impl std::fmt::Debug for IndexType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UINT16 => "UINT16",
-                    &Self::UINT32 => "UINT32",
-                    &Self::NONE_KHR => "NONE_KHR",
-                    &Self::UINT8_EXT => "UINT8_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UINT16 => "UINT16",
+                &Self::UINT32 => "UINT32",
+                &Self::NONE_KHR => "NONE_KHR",
+                &Self::UINT8_EXT => "UINT8_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3353,28 +3288,27 @@ impl crate::vk1_0::IndexType {
 pub struct LogicOp(pub i32);
 impl std::fmt::Debug for LogicOp {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::CLEAR => "CLEAR",
-                    &Self::AND => "AND",
-                    &Self::AND_REVERSE => "AND_REVERSE",
-                    &Self::COPY => "COPY",
-                    &Self::AND_INVERTED => "AND_INVERTED",
-                    &Self::NO_OP => "NO_OP",
-                    &Self::XOR => "XOR",
-                    &Self::OR => "OR",
-                    &Self::NOR => "NOR",
-                    &Self::EQUIVALENT => "EQUIVALENT",
-                    &Self::INVERT => "INVERT",
-                    &Self::OR_REVERSE => "OR_REVERSE",
-                    &Self::COPY_INVERTED => "COPY_INVERTED",
-                    &Self::OR_INVERTED => "OR_INVERTED",
-                    &Self::NAND => "NAND",
-                    &Self::SET => "SET",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::CLEAR => "CLEAR",
+                &Self::AND => "AND",
+                &Self::AND_REVERSE => "AND_REVERSE",
+                &Self::COPY => "COPY",
+                &Self::AND_INVERTED => "AND_INVERTED",
+                &Self::NO_OP => "NO_OP",
+                &Self::XOR => "XOR",
+                &Self::OR => "OR",
+                &Self::NOR => "NOR",
+                &Self::EQUIVALENT => "EQUIVALENT",
+                &Self::INVERT => "INVERT",
+                &Self::OR_REVERSE => "OR_REVERSE",
+                &Self::COPY_INVERTED => "COPY_INVERTED",
+                &Self::OR_INVERTED => "OR_INVERTED",
+                &Self::NAND => "NAND",
+                &Self::SET => "SET",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3400,10 +3334,9 @@ bitflags::bitflags! {
     #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHeapFlags.html) · Bitmask of [`MemoryHeapFlagBits`]"]
     #[doc(alias = "VkMemoryHeapFlags")] #[derive(Default)] #[repr(transparent)] pub
-    struct MemoryHeapFlags : u32 { const DEVICE_LOCAL =
-    MemoryHeapFlagBits::DEVICE_LOCAL.0; const MULTI_INSTANCE =
-    MemoryHeapFlagBits::MULTI_INSTANCE.0; const MULTI_INSTANCE_KHR =
-    MemoryHeapFlagBits::MULTI_INSTANCE_KHR.0; }
+    struct MemoryHeapFlags : u32 { const DEVICE_LOCAL = MemoryHeapFlagBits::DEVICE_LOCAL
+    .0; const MULTI_INSTANCE = MemoryHeapFlagBits::MULTI_INSTANCE.0; const
+    MULTI_INSTANCE_KHR = MemoryHeapFlagBits::MULTI_INSTANCE_KHR.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHeapFlagBits.html) · Bits enum of [`MemoryHeapFlags`]
 #[doc(alias = "VkMemoryHeapFlagBits")]
@@ -3419,14 +3352,13 @@ impl MemoryHeapFlagBits {
 }
 impl std::fmt::Debug for MemoryHeapFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEVICE_LOCAL => "DEVICE_LOCAL",
-                    &Self::MULTI_INSTANCE => "MULTI_INSTANCE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEVICE_LOCAL => "DEVICE_LOCAL",
+                &Self::MULTI_INSTANCE => "MULTI_INSTANCE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3447,9 +3379,8 @@ bitflags::bitflags! {
     const COLOR_ATTACHMENT_READ = AccessFlagBits::COLOR_ATTACHMENT_READ.0; const
     COLOR_ATTACHMENT_WRITE = AccessFlagBits::COLOR_ATTACHMENT_WRITE.0; const
     DEPTH_STENCIL_ATTACHMENT_READ = AccessFlagBits::DEPTH_STENCIL_ATTACHMENT_READ.0;
-    const DEPTH_STENCIL_ATTACHMENT_WRITE =
-    AccessFlagBits::DEPTH_STENCIL_ATTACHMENT_WRITE.0; const TRANSFER_READ =
-    AccessFlagBits::TRANSFER_READ.0; const TRANSFER_WRITE =
+    const DEPTH_STENCIL_ATTACHMENT_WRITE = AccessFlagBits::DEPTH_STENCIL_ATTACHMENT_WRITE
+    .0; const TRANSFER_READ = AccessFlagBits::TRANSFER_READ.0; const TRANSFER_WRITE =
     AccessFlagBits::TRANSFER_WRITE.0; const HOST_READ = AccessFlagBits::HOST_READ.0;
     const HOST_WRITE = AccessFlagBits::HOST_WRITE.0; const MEMORY_READ =
     AccessFlagBits::MEMORY_READ.0; const MEMORY_WRITE = AccessFlagBits::MEMORY_WRITE.0;
@@ -3490,61 +3421,52 @@ impl AccessFlagBits {
 }
 impl std::fmt::Debug for AccessFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INDIRECT_COMMAND_READ => "INDIRECT_COMMAND_READ",
-                    &Self::INDEX_READ => "INDEX_READ",
-                    &Self::VERTEX_ATTRIBUTE_READ => "VERTEX_ATTRIBUTE_READ",
-                    &Self::UNIFORM_READ => "UNIFORM_READ",
-                    &Self::INPUT_ATTACHMENT_READ => "INPUT_ATTACHMENT_READ",
-                    &Self::SHADER_READ => "SHADER_READ",
-                    &Self::SHADER_WRITE => "SHADER_WRITE",
-                    &Self::COLOR_ATTACHMENT_READ => "COLOR_ATTACHMENT_READ",
-                    &Self::COLOR_ATTACHMENT_WRITE => "COLOR_ATTACHMENT_WRITE",
-                    &Self::DEPTH_STENCIL_ATTACHMENT_READ => {
-                        "DEPTH_STENCIL_ATTACHMENT_READ"
-                    }
-                    &Self::DEPTH_STENCIL_ATTACHMENT_WRITE => {
-                        "DEPTH_STENCIL_ATTACHMENT_WRITE"
-                    }
-                    &Self::TRANSFER_READ => "TRANSFER_READ",
-                    &Self::TRANSFER_WRITE => "TRANSFER_WRITE",
-                    &Self::HOST_READ => "HOST_READ",
-                    &Self::HOST_WRITE => "HOST_WRITE",
-                    &Self::MEMORY_READ => "MEMORY_READ",
-                    &Self::MEMORY_WRITE => "MEMORY_WRITE",
-                    &Self::NONE => "NONE",
-                    &Self::TRANSFORM_FEEDBACK_WRITE_EXT => "TRANSFORM_FEEDBACK_WRITE_EXT",
-                    &Self::TRANSFORM_FEEDBACK_COUNTER_READ_EXT => {
-                        "TRANSFORM_FEEDBACK_COUNTER_READ_EXT"
-                    }
-                    &Self::TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT => {
-                        "TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT"
-                    }
-                    &Self::CONDITIONAL_RENDERING_READ_EXT => {
-                        "CONDITIONAL_RENDERING_READ_EXT"
-                    }
-                    &Self::COLOR_ATTACHMENT_READ_NONCOHERENT_EXT => {
-                        "COLOR_ATTACHMENT_READ_NONCOHERENT_EXT"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_READ_KHR => {
-                        "ACCELERATION_STRUCTURE_READ_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_WRITE_KHR => {
-                        "ACCELERATION_STRUCTURE_WRITE_KHR"
-                    }
-                    &Self::FRAGMENT_DENSITY_MAP_READ_EXT => {
-                        "FRAGMENT_DENSITY_MAP_READ_EXT"
-                    }
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR"
-                    }
-                    &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
-                    &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INDIRECT_COMMAND_READ => "INDIRECT_COMMAND_READ",
+                &Self::INDEX_READ => "INDEX_READ",
+                &Self::VERTEX_ATTRIBUTE_READ => "VERTEX_ATTRIBUTE_READ",
+                &Self::UNIFORM_READ => "UNIFORM_READ",
+                &Self::INPUT_ATTACHMENT_READ => "INPUT_ATTACHMENT_READ",
+                &Self::SHADER_READ => "SHADER_READ",
+                &Self::SHADER_WRITE => "SHADER_WRITE",
+                &Self::COLOR_ATTACHMENT_READ => "COLOR_ATTACHMENT_READ",
+                &Self::COLOR_ATTACHMENT_WRITE => "COLOR_ATTACHMENT_WRITE",
+                &Self::DEPTH_STENCIL_ATTACHMENT_READ => "DEPTH_STENCIL_ATTACHMENT_READ",
+                &Self::DEPTH_STENCIL_ATTACHMENT_WRITE => "DEPTH_STENCIL_ATTACHMENT_WRITE",
+                &Self::TRANSFER_READ => "TRANSFER_READ",
+                &Self::TRANSFER_WRITE => "TRANSFER_WRITE",
+                &Self::HOST_READ => "HOST_READ",
+                &Self::HOST_WRITE => "HOST_WRITE",
+                &Self::MEMORY_READ => "MEMORY_READ",
+                &Self::MEMORY_WRITE => "MEMORY_WRITE",
+                &Self::NONE => "NONE",
+                &Self::TRANSFORM_FEEDBACK_WRITE_EXT => "TRANSFORM_FEEDBACK_WRITE_EXT",
+                &Self::TRANSFORM_FEEDBACK_COUNTER_READ_EXT => {
+                    "TRANSFORM_FEEDBACK_COUNTER_READ_EXT"
+                }
+                &Self::TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT => {
+                    "TRANSFORM_FEEDBACK_COUNTER_WRITE_EXT"
+                }
+                &Self::CONDITIONAL_RENDERING_READ_EXT => "CONDITIONAL_RENDERING_READ_EXT",
+                &Self::COLOR_ATTACHMENT_READ_NONCOHERENT_EXT => {
+                    "COLOR_ATTACHMENT_READ_NONCOHERENT_EXT"
+                }
+                &Self::ACCELERATION_STRUCTURE_READ_KHR => {
+                    "ACCELERATION_STRUCTURE_READ_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_WRITE_KHR => {
+                    "ACCELERATION_STRUCTURE_WRITE_KHR"
+                }
+                &Self::FRAGMENT_DENSITY_MAP_READ_EXT => "FRAGMENT_DENSITY_MAP_READ_EXT",
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_READ_KHR"
+                }
+                &Self::COMMAND_PREPROCESS_READ_NV => "COMMAND_PREPROCESS_READ_NV",
+                &Self::COMMAND_PREPROCESS_WRITE_NV => "COMMAND_PREPROCESS_WRITE_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3596,21 +3518,20 @@ impl MemoryPropertyFlagBits {
 }
 impl std::fmt::Debug for MemoryPropertyFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEVICE_LOCAL => "DEVICE_LOCAL",
-                    &Self::HOST_VISIBLE => "HOST_VISIBLE",
-                    &Self::HOST_COHERENT => "HOST_COHERENT",
-                    &Self::HOST_CACHED => "HOST_CACHED",
-                    &Self::LAZILY_ALLOCATED => "LAZILY_ALLOCATED",
-                    &Self::PROTECTED => "PROTECTED",
-                    &Self::DEVICE_COHERENT_AMD => "DEVICE_COHERENT_AMD",
-                    &Self::DEVICE_UNCACHED_AMD => "DEVICE_UNCACHED_AMD",
-                    &Self::RDMA_CAPABLE_NV => "RDMA_CAPABLE_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEVICE_LOCAL => "DEVICE_LOCAL",
+                &Self::HOST_VISIBLE => "HOST_VISIBLE",
+                &Self::HOST_COHERENT => "HOST_COHERENT",
+                &Self::HOST_CACHED => "HOST_CACHED",
+                &Self::LAZILY_ALLOCATED => "LAZILY_ALLOCATED",
+                &Self::PROTECTED => "PROTECTED",
+                &Self::DEVICE_COHERENT_AMD => "DEVICE_COHERENT_AMD",
+                &Self::DEVICE_UNCACHED_AMD => "DEVICE_UNCACHED_AMD",
+                &Self::RDMA_CAPABLE_NV => "RDMA_CAPABLE_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3628,17 +3549,16 @@ impl crate::vk1_0::MemoryPropertyFlagBits {
 pub struct PhysicalDeviceType(pub i32);
 impl std::fmt::Debug for PhysicalDeviceType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OTHER => "OTHER",
-                    &Self::INTEGRATED_GPU => "INTEGRATED_GPU",
-                    &Self::DISCRETE_GPU => "DISCRETE_GPU",
-                    &Self::VIRTUAL_GPU => "VIRTUAL_GPU",
-                    &Self::CPU => "CPU",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OTHER => "OTHER",
+                &Self::INTEGRATED_GPU => "INTEGRATED_GPU",
+                &Self::DISCRETE_GPU => "DISCRETE_GPU",
+                &Self::VIRTUAL_GPU => "VIRTUAL_GPU",
+                &Self::CPU => "CPU",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3656,16 +3576,15 @@ impl crate::vk1_0::PhysicalDeviceType {
 pub struct PipelineBindPoint(pub i32);
 impl std::fmt::Debug for PipelineBindPoint {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::GRAPHICS => "GRAPHICS",
-                    &Self::COMPUTE => "COMPUTE",
-                    &Self::RAY_TRACING_KHR => "RAY_TRACING_KHR",
-                    &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::GRAPHICS => "GRAPHICS",
+                &Self::COMPUTE => "COMPUTE",
+                &Self::RAY_TRACING_KHR => "RAY_TRACING_KHR",
+                &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3711,11 +3630,11 @@ bitflags::bitflags! {
     RAY_TRACING_ALLOW_MOTION_NV = PipelineCreateFlagBits::RAY_TRACING_ALLOW_MOTION_NV.0;
     #[allow(deprecated)] #[deprecated] const
     PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR =
-    PipelineCreateFlagBits::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR.0;
-    #[allow(deprecated)] #[deprecated] const
+    PipelineCreateFlagBits::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR
+    .0; #[allow(deprecated)] #[deprecated] const
     PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT =
-    PipelineCreateFlagBits::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT.0;
-    const VIEW_INDEX_FROM_DEVICE_INDEX_KHR =
+    PipelineCreateFlagBits::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT
+    .0; const VIEW_INDEX_FROM_DEVICE_INDEX_KHR =
     PipelineCreateFlagBits::VIEW_INDEX_FROM_DEVICE_INDEX_KHR.0; const DISPATCH_BASE_KHR =
     PipelineCreateFlagBits::DISPATCH_BASE_KHR.0; const
     FAIL_ON_PIPELINE_COMPILE_REQUIRED_EXT =
@@ -3737,54 +3656,51 @@ impl PipelineCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DISABLE_OPTIMIZATION => "DISABLE_OPTIMIZATION",
-                    &Self::ALLOW_DERIVATIVES => "ALLOW_DERIVATIVES",
-                    &Self::DERIVATIVE => "DERIVATIVE",
-                    &Self::VIEW_INDEX_FROM_DEVICE_INDEX => "VIEW_INDEX_FROM_DEVICE_INDEX",
-                    &Self::DISPATCH_BASE => "DISPATCH_BASE",
-                    &Self::FAIL_ON_PIPELINE_COMPILE_REQUIRED => {
-                        "FAIL_ON_PIPELINE_COMPILE_REQUIRED"
-                    }
-                    &Self::EARLY_RETURN_ON_FAILURE => "EARLY_RETURN_ON_FAILURE",
-                    &Self::RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
-                        "RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
-                    }
-                    &Self::RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT => {
-                        "RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT"
-                    }
-                    &Self::RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR => {
-                        "RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR"
-                    }
-                    &Self::RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR => {
-                        "RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR"
-                    }
-                    &Self::RAY_TRACING_NO_NULL_MISS_SHADERS_KHR => {
-                        "RAY_TRACING_NO_NULL_MISS_SHADERS_KHR"
-                    }
-                    &Self::RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR => {
-                        "RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR"
-                    }
-                    &Self::RAY_TRACING_SKIP_TRIANGLES_KHR => {
-                        "RAY_TRACING_SKIP_TRIANGLES_KHR"
-                    }
-                    &Self::RAY_TRACING_SKIP_AABBS_KHR => "RAY_TRACING_SKIP_AABBS_KHR",
-                    &Self::RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR => {
-                        "RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR"
-                    }
-                    &Self::DEFER_COMPILE_NV => "DEFER_COMPILE_NV",
-                    &Self::CAPTURE_STATISTICS_KHR => "CAPTURE_STATISTICS_KHR",
-                    &Self::CAPTURE_INTERNAL_REPRESENTATIONS_KHR => {
-                        "CAPTURE_INTERNAL_REPRESENTATIONS_KHR"
-                    }
-                    &Self::INDIRECT_BINDABLE_NV => "INDIRECT_BINDABLE_NV",
-                    &Self::LIBRARY_KHR => "LIBRARY_KHR",
-                    &Self::RAY_TRACING_ALLOW_MOTION_NV => "RAY_TRACING_ALLOW_MOTION_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DISABLE_OPTIMIZATION => "DISABLE_OPTIMIZATION",
+                &Self::ALLOW_DERIVATIVES => "ALLOW_DERIVATIVES",
+                &Self::DERIVATIVE => "DERIVATIVE",
+                &Self::VIEW_INDEX_FROM_DEVICE_INDEX => "VIEW_INDEX_FROM_DEVICE_INDEX",
+                &Self::DISPATCH_BASE => "DISPATCH_BASE",
+                &Self::FAIL_ON_PIPELINE_COMPILE_REQUIRED => {
+                    "FAIL_ON_PIPELINE_COMPILE_REQUIRED"
+                }
+                &Self::EARLY_RETURN_ON_FAILURE => "EARLY_RETURN_ON_FAILURE",
+                &Self::RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
+                    "RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
+                }
+                &Self::RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT => {
+                    "RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_EXT"
+                }
+                &Self::RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR => {
+                    "RAY_TRACING_NO_NULL_ANY_HIT_SHADERS_KHR"
+                }
+                &Self::RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR => {
+                    "RAY_TRACING_NO_NULL_CLOSEST_HIT_SHADERS_KHR"
+                }
+                &Self::RAY_TRACING_NO_NULL_MISS_SHADERS_KHR => {
+                    "RAY_TRACING_NO_NULL_MISS_SHADERS_KHR"
+                }
+                &Self::RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR => {
+                    "RAY_TRACING_NO_NULL_INTERSECTION_SHADERS_KHR"
+                }
+                &Self::RAY_TRACING_SKIP_TRIANGLES_KHR => "RAY_TRACING_SKIP_TRIANGLES_KHR",
+                &Self::RAY_TRACING_SKIP_AABBS_KHR => "RAY_TRACING_SKIP_AABBS_KHR",
+                &Self::RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR => {
+                    "RAY_TRACING_SHADER_GROUP_HANDLE_CAPTURE_REPLAY_KHR"
+                }
+                &Self::DEFER_COMPILE_NV => "DEFER_COMPILE_NV",
+                &Self::CAPTURE_STATISTICS_KHR => "CAPTURE_STATISTICS_KHR",
+                &Self::CAPTURE_INTERNAL_REPRESENTATIONS_KHR => {
+                    "CAPTURE_INTERNAL_REPRESENTATIONS_KHR"
+                }
+                &Self::INDIRECT_BINDABLE_NV => "INDIRECT_BINDABLE_NV",
+                &Self::LIBRARY_KHR => "LIBRARY_KHR",
+                &Self::RAY_TRACING_ALLOW_MOTION_NV => "RAY_TRACING_ALLOW_MOTION_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3800,25 +3716,22 @@ impl crate::vk1_0::PipelineCreateFlagBits {
 pub struct PrimitiveTopology(pub i32);
 impl std::fmt::Debug for PrimitiveTopology {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::POINT_LIST => "POINT_LIST",
-                    &Self::LINE_LIST => "LINE_LIST",
-                    &Self::LINE_STRIP => "LINE_STRIP",
-                    &Self::TRIANGLE_LIST => "TRIANGLE_LIST",
-                    &Self::TRIANGLE_STRIP => "TRIANGLE_STRIP",
-                    &Self::TRIANGLE_FAN => "TRIANGLE_FAN",
-                    &Self::LINE_LIST_WITH_ADJACENCY => "LINE_LIST_WITH_ADJACENCY",
-                    &Self::LINE_STRIP_WITH_ADJACENCY => "LINE_STRIP_WITH_ADJACENCY",
-                    &Self::TRIANGLE_LIST_WITH_ADJACENCY => "TRIANGLE_LIST_WITH_ADJACENCY",
-                    &Self::TRIANGLE_STRIP_WITH_ADJACENCY => {
-                        "TRIANGLE_STRIP_WITH_ADJACENCY"
-                    }
-                    &Self::PATCH_LIST => "PATCH_LIST",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::POINT_LIST => "POINT_LIST",
+                &Self::LINE_LIST => "LINE_LIST",
+                &Self::LINE_STRIP => "LINE_STRIP",
+                &Self::TRIANGLE_LIST => "TRIANGLE_LIST",
+                &Self::TRIANGLE_STRIP => "TRIANGLE_STRIP",
+                &Self::TRIANGLE_FAN => "TRIANGLE_FAN",
+                &Self::LINE_LIST_WITH_ADJACENCY => "LINE_LIST_WITH_ADJACENCY",
+                &Self::LINE_STRIP_WITH_ADJACENCY => "LINE_STRIP_WITH_ADJACENCY",
+                &Self::TRIANGLE_LIST_WITH_ADJACENCY => "TRIANGLE_LIST_WITH_ADJACENCY",
+                &Self::TRIANGLE_STRIP_WITH_ADJACENCY => "TRIANGLE_STRIP_WITH_ADJACENCY",
+                &Self::PATCH_LIST => "PATCH_LIST",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3855,13 +3768,12 @@ impl QueryControlFlagBits {
 }
 impl std::fmt::Debug for QueryControlFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::PRECISE => "PRECISE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::PRECISE => "PRECISE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3876,9 +3788,8 @@ bitflags::bitflags! {
     INPUT_ASSEMBLY_VERTICES = QueryPipelineStatisticFlagBits::INPUT_ASSEMBLY_VERTICES.0;
     const INPUT_ASSEMBLY_PRIMITIVES =
     QueryPipelineStatisticFlagBits::INPUT_ASSEMBLY_PRIMITIVES.0; const
-    VERTEX_SHADER_INVOCATIONS =
-    QueryPipelineStatisticFlagBits::VERTEX_SHADER_INVOCATIONS.0; const
-    GEOMETRY_SHADER_INVOCATIONS =
+    VERTEX_SHADER_INVOCATIONS = QueryPipelineStatisticFlagBits::VERTEX_SHADER_INVOCATIONS
+    .0; const GEOMETRY_SHADER_INVOCATIONS =
     QueryPipelineStatisticFlagBits::GEOMETRY_SHADER_INVOCATIONS.0; const
     GEOMETRY_SHADER_PRIMITIVES =
     QueryPipelineStatisticFlagBits::GEOMETRY_SHADER_PRIMITIVES.0; const
@@ -3907,27 +3818,26 @@ impl QueryPipelineStatisticFlagBits {
 }
 impl std::fmt::Debug for QueryPipelineStatisticFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INPUT_ASSEMBLY_VERTICES => "INPUT_ASSEMBLY_VERTICES",
-                    &Self::INPUT_ASSEMBLY_PRIMITIVES => "INPUT_ASSEMBLY_PRIMITIVES",
-                    &Self::VERTEX_SHADER_INVOCATIONS => "VERTEX_SHADER_INVOCATIONS",
-                    &Self::GEOMETRY_SHADER_INVOCATIONS => "GEOMETRY_SHADER_INVOCATIONS",
-                    &Self::GEOMETRY_SHADER_PRIMITIVES => "GEOMETRY_SHADER_PRIMITIVES",
-                    &Self::CLIPPING_INVOCATIONS => "CLIPPING_INVOCATIONS",
-                    &Self::CLIPPING_PRIMITIVES => "CLIPPING_PRIMITIVES",
-                    &Self::FRAGMENT_SHADER_INVOCATIONS => "FRAGMENT_SHADER_INVOCATIONS",
-                    &Self::TESSELLATION_CONTROL_SHADER_PATCHES => {
-                        "TESSELLATION_CONTROL_SHADER_PATCHES"
-                    }
-                    &Self::TESSELLATION_EVALUATION_SHADER_INVOCATIONS => {
-                        "TESSELLATION_EVALUATION_SHADER_INVOCATIONS"
-                    }
-                    &Self::COMPUTE_SHADER_INVOCATIONS => "COMPUTE_SHADER_INVOCATIONS",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INPUT_ASSEMBLY_VERTICES => "INPUT_ASSEMBLY_VERTICES",
+                &Self::INPUT_ASSEMBLY_PRIMITIVES => "INPUT_ASSEMBLY_PRIMITIVES",
+                &Self::VERTEX_SHADER_INVOCATIONS => "VERTEX_SHADER_INVOCATIONS",
+                &Self::GEOMETRY_SHADER_INVOCATIONS => "GEOMETRY_SHADER_INVOCATIONS",
+                &Self::GEOMETRY_SHADER_PRIMITIVES => "GEOMETRY_SHADER_PRIMITIVES",
+                &Self::CLIPPING_INVOCATIONS => "CLIPPING_INVOCATIONS",
+                &Self::CLIPPING_PRIMITIVES => "CLIPPING_PRIMITIVES",
+                &Self::FRAGMENT_SHADER_INVOCATIONS => "FRAGMENT_SHADER_INVOCATIONS",
+                &Self::TESSELLATION_CONTROL_SHADER_PATCHES => {
+                    "TESSELLATION_CONTROL_SHADER_PATCHES"
+                }
+                &Self::TESSELLATION_EVALUATION_SHADER_INVOCATIONS => {
+                    "TESSELLATION_EVALUATION_SHADER_INVOCATIONS"
+                }
+                &Self::COMPUTE_SHADER_INVOCATIONS => "COMPUTE_SHADER_INVOCATIONS",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3968,17 +3878,16 @@ impl QueryResultFlagBits {
 }
 impl std::fmt::Debug for QueryResultFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::_64 => "64",
-                    &Self::WAIT => "WAIT",
-                    &Self::WITH_AVAILABILITY => "WITH_AVAILABILITY",
-                    &Self::PARTIAL => "PARTIAL",
-                    &Self::WITH_STATUS_KHR => "WITH_STATUS_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::_64 => "64",
+                &Self::WAIT => "WAIT",
+                &Self::WITH_AVAILABILITY => "WITH_AVAILABILITY",
+                &Self::PARTIAL => "PARTIAL",
+                &Self::WITH_STATUS_KHR => "WITH_STATUS_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -3995,33 +3904,30 @@ impl crate::vk1_0::QueryResultFlagBits {
 pub struct QueryType(pub i32);
 impl std::fmt::Debug for QueryType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OCCLUSION => "OCCLUSION",
-                    &Self::PIPELINE_STATISTICS => "PIPELINE_STATISTICS",
-                    &Self::TIMESTAMP => "TIMESTAMP",
-                    &Self::RESULT_STATUS_ONLY_KHR => "RESULT_STATUS_ONLY_KHR",
-                    &Self::TRANSFORM_FEEDBACK_STREAM_EXT => {
-                        "TRANSFORM_FEEDBACK_STREAM_EXT"
-                    }
-                    &Self::PERFORMANCE_QUERY_KHR => "PERFORMANCE_QUERY_KHR",
-                    &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR => {
-                        "ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR => {
-                        "ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV => {
-                        "ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV"
-                    }
-                    &Self::PERFORMANCE_QUERY_INTEL => "PERFORMANCE_QUERY_INTEL",
-                    &Self::VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR => {
-                        "VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OCCLUSION => "OCCLUSION",
+                &Self::PIPELINE_STATISTICS => "PIPELINE_STATISTICS",
+                &Self::TIMESTAMP => "TIMESTAMP",
+                &Self::RESULT_STATUS_ONLY_KHR => "RESULT_STATUS_ONLY_KHR",
+                &Self::TRANSFORM_FEEDBACK_STREAM_EXT => "TRANSFORM_FEEDBACK_STREAM_EXT",
+                &Self::PERFORMANCE_QUERY_KHR => "PERFORMANCE_QUERY_KHR",
+                &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR => {
+                    "ACCELERATION_STRUCTURE_COMPACTED_SIZE_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR => {
+                    "ACCELERATION_STRUCTURE_SERIALIZATION_SIZE_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV => {
+                    "ACCELERATION_STRUCTURE_COMPACTED_SIZE_NV"
+                }
+                &Self::PERFORMANCE_QUERY_INTEL => "PERFORMANCE_QUERY_INTEL",
+                &Self::VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR => {
+                    "VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4037,9 +3943,8 @@ bitflags::bitflags! {
     QueueFlags : u32 { const GRAPHICS = QueueFlagBits::GRAPHICS.0; const COMPUTE =
     QueueFlagBits::COMPUTE.0; const TRANSFER = QueueFlagBits::TRANSFER.0; const
     SPARSE_BINDING = QueueFlagBits::SPARSE_BINDING.0; const PROTECTED =
-    QueueFlagBits::PROTECTED.0; const VIDEO_DECODE_KHR =
-    QueueFlagBits::VIDEO_DECODE_KHR.0; const VIDEO_ENCODE_KHR =
-    QueueFlagBits::VIDEO_ENCODE_KHR.0; }
+    QueueFlagBits::PROTECTED.0; const VIDEO_DECODE_KHR = QueueFlagBits::VIDEO_DECODE_KHR
+    .0; const VIDEO_ENCODE_KHR = QueueFlagBits::VIDEO_ENCODE_KHR.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFlagBits.html) · Bits enum of [`QueueFlags`]
 #[doc(alias = "VkQueueFlagBits")]
@@ -4055,19 +3960,18 @@ impl QueueFlagBits {
 }
 impl std::fmt::Debug for QueueFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::GRAPHICS => "GRAPHICS",
-                    &Self::COMPUTE => "COMPUTE",
-                    &Self::TRANSFER => "TRANSFER",
-                    &Self::SPARSE_BINDING => "SPARSE_BINDING",
-                    &Self::PROTECTED => "PROTECTED",
-                    &Self::VIDEO_DECODE_KHR => "VIDEO_DECODE_KHR",
-                    &Self::VIDEO_ENCODE_KHR => "VIDEO_ENCODE_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::GRAPHICS => "GRAPHICS",
+                &Self::COMPUTE => "COMPUTE",
+                &Self::TRANSFER => "TRANSFER",
+                &Self::SPARSE_BINDING => "SPARSE_BINDING",
+                &Self::PROTECTED => "PROTECTED",
+                &Self::VIDEO_DECODE_KHR => "VIDEO_DECODE_KHR",
+                &Self::VIDEO_ENCODE_KHR => "VIDEO_ENCODE_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4084,14 +3988,13 @@ impl crate::vk1_0::QueueFlagBits {
 pub struct SubpassContents(pub i32);
 impl std::fmt::Debug for SubpassContents {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INLINE => "INLINE",
-                    &Self::SECONDARY_COMMAND_BUFFERS => "SECONDARY_COMMAND_BUFFERS",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INLINE => "INLINE",
+                &Self::SECONDARY_COMMAND_BUFFERS => "SECONDARY_COMMAND_BUFFERS",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4106,62 +4009,55 @@ impl crate::vk1_0::SubpassContents {
 pub struct Result(pub i32);
 impl std::fmt::Debug for Result {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SUCCESS => "SUCCESS",
-                    &Self::NOT_READY => "NOT_READY",
-                    &Self::TIMEOUT => "TIMEOUT",
-                    &Self::EVENT_SET => "EVENT_SET",
-                    &Self::EVENT_RESET => "EVENT_RESET",
-                    &Self::INCOMPLETE => "INCOMPLETE",
-                    &Self::ERROR_OUT_OF_HOST_MEMORY => "ERROR_OUT_OF_HOST_MEMORY",
-                    &Self::ERROR_OUT_OF_DEVICE_MEMORY => "ERROR_OUT_OF_DEVICE_MEMORY",
-                    &Self::ERROR_INITIALIZATION_FAILED => "ERROR_INITIALIZATION_FAILED",
-                    &Self::ERROR_DEVICE_LOST => "ERROR_DEVICE_LOST",
-                    &Self::ERROR_MEMORY_MAP_FAILED => "ERROR_MEMORY_MAP_FAILED",
-                    &Self::ERROR_LAYER_NOT_PRESENT => "ERROR_LAYER_NOT_PRESENT",
-                    &Self::ERROR_EXTENSION_NOT_PRESENT => "ERROR_EXTENSION_NOT_PRESENT",
-                    &Self::ERROR_FEATURE_NOT_PRESENT => "ERROR_FEATURE_NOT_PRESENT",
-                    &Self::ERROR_INCOMPATIBLE_DRIVER => "ERROR_INCOMPATIBLE_DRIVER",
-                    &Self::ERROR_TOO_MANY_OBJECTS => "ERROR_TOO_MANY_OBJECTS",
-                    &Self::ERROR_FORMAT_NOT_SUPPORTED => "ERROR_FORMAT_NOT_SUPPORTED",
-                    &Self::ERROR_FRAGMENTED_POOL => "ERROR_FRAGMENTED_POOL",
-                    &Self::ERROR_UNKNOWN => "ERROR_UNKNOWN",
-                    &Self::ERROR_OUT_OF_POOL_MEMORY => "ERROR_OUT_OF_POOL_MEMORY",
-                    &Self::ERROR_INVALID_EXTERNAL_HANDLE => {
-                        "ERROR_INVALID_EXTERNAL_HANDLE"
-                    }
-                    &Self::ERROR_FRAGMENTATION => "ERROR_FRAGMENTATION",
-                    &Self::ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS => {
-                        "ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS"
-                    }
-                    &Self::PIPELINE_COMPILE_REQUIRED => "PIPELINE_COMPILE_REQUIRED",
-                    &Self::ERROR_SURFACE_LOST_KHR => "ERROR_SURFACE_LOST_KHR",
-                    &Self::ERROR_NATIVE_WINDOW_IN_USE_KHR => {
-                        "ERROR_NATIVE_WINDOW_IN_USE_KHR"
-                    }
-                    &Self::SUBOPTIMAL_KHR => "SUBOPTIMAL_KHR",
-                    &Self::ERROR_OUT_OF_DATE_KHR => "ERROR_OUT_OF_DATE_KHR",
-                    &Self::ERROR_INCOMPATIBLE_DISPLAY_KHR => {
-                        "ERROR_INCOMPATIBLE_DISPLAY_KHR"
-                    }
-                    &Self::ERROR_VALIDATION_FAILED_EXT => "ERROR_VALIDATION_FAILED_EXT",
-                    &Self::ERROR_INVALID_SHADER_NV => "ERROR_INVALID_SHADER_NV",
-                    &Self::ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT => {
-                        "ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT"
-                    }
-                    &Self::ERROR_NOT_PERMITTED_KHR => "ERROR_NOT_PERMITTED_KHR",
-                    &Self::ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT => {
-                        "ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT"
-                    }
-                    &Self::THREAD_IDLE_KHR => "THREAD_IDLE_KHR",
-                    &Self::THREAD_DONE_KHR => "THREAD_DONE_KHR",
-                    &Self::OPERATION_DEFERRED_KHR => "OPERATION_DEFERRED_KHR",
-                    &Self::OPERATION_NOT_DEFERRED_KHR => "OPERATION_NOT_DEFERRED_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SUCCESS => "SUCCESS",
+                &Self::NOT_READY => "NOT_READY",
+                &Self::TIMEOUT => "TIMEOUT",
+                &Self::EVENT_SET => "EVENT_SET",
+                &Self::EVENT_RESET => "EVENT_RESET",
+                &Self::INCOMPLETE => "INCOMPLETE",
+                &Self::ERROR_OUT_OF_HOST_MEMORY => "ERROR_OUT_OF_HOST_MEMORY",
+                &Self::ERROR_OUT_OF_DEVICE_MEMORY => "ERROR_OUT_OF_DEVICE_MEMORY",
+                &Self::ERROR_INITIALIZATION_FAILED => "ERROR_INITIALIZATION_FAILED",
+                &Self::ERROR_DEVICE_LOST => "ERROR_DEVICE_LOST",
+                &Self::ERROR_MEMORY_MAP_FAILED => "ERROR_MEMORY_MAP_FAILED",
+                &Self::ERROR_LAYER_NOT_PRESENT => "ERROR_LAYER_NOT_PRESENT",
+                &Self::ERROR_EXTENSION_NOT_PRESENT => "ERROR_EXTENSION_NOT_PRESENT",
+                &Self::ERROR_FEATURE_NOT_PRESENT => "ERROR_FEATURE_NOT_PRESENT",
+                &Self::ERROR_INCOMPATIBLE_DRIVER => "ERROR_INCOMPATIBLE_DRIVER",
+                &Self::ERROR_TOO_MANY_OBJECTS => "ERROR_TOO_MANY_OBJECTS",
+                &Self::ERROR_FORMAT_NOT_SUPPORTED => "ERROR_FORMAT_NOT_SUPPORTED",
+                &Self::ERROR_FRAGMENTED_POOL => "ERROR_FRAGMENTED_POOL",
+                &Self::ERROR_UNKNOWN => "ERROR_UNKNOWN",
+                &Self::ERROR_OUT_OF_POOL_MEMORY => "ERROR_OUT_OF_POOL_MEMORY",
+                &Self::ERROR_INVALID_EXTERNAL_HANDLE => "ERROR_INVALID_EXTERNAL_HANDLE",
+                &Self::ERROR_FRAGMENTATION => "ERROR_FRAGMENTATION",
+                &Self::ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS => {
+                    "ERROR_INVALID_OPAQUE_CAPTURE_ADDRESS"
+                }
+                &Self::PIPELINE_COMPILE_REQUIRED => "PIPELINE_COMPILE_REQUIRED",
+                &Self::ERROR_SURFACE_LOST_KHR => "ERROR_SURFACE_LOST_KHR",
+                &Self::ERROR_NATIVE_WINDOW_IN_USE_KHR => "ERROR_NATIVE_WINDOW_IN_USE_KHR",
+                &Self::SUBOPTIMAL_KHR => "SUBOPTIMAL_KHR",
+                &Self::ERROR_OUT_OF_DATE_KHR => "ERROR_OUT_OF_DATE_KHR",
+                &Self::ERROR_INCOMPATIBLE_DISPLAY_KHR => "ERROR_INCOMPATIBLE_DISPLAY_KHR",
+                &Self::ERROR_VALIDATION_FAILED_EXT => "ERROR_VALIDATION_FAILED_EXT",
+                &Self::ERROR_INVALID_SHADER_NV => "ERROR_INVALID_SHADER_NV",
+                &Self::ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT => {
+                    "ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT"
+                }
+                &Self::ERROR_NOT_PERMITTED_KHR => "ERROR_NOT_PERMITTED_KHR",
+                &Self::ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT => {
+                    "ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT"
+                }
+                &Self::THREAD_IDLE_KHR => "THREAD_IDLE_KHR",
+                &Self::THREAD_DONE_KHR => "THREAD_DONE_KHR",
+                &Self::OPERATION_DEFERRED_KHR => "OPERATION_DEFERRED_KHR",
+                &Self::OPERATION_NOT_DEFERRED_KHR => "OPERATION_NOT_DEFERRED_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4204,9 +4100,8 @@ bitflags::bitflags! {
     ShaderStageFlagBits::CALLABLE_KHR.0; const TASK_NV = ShaderStageFlagBits::TASK_NV.0;
     const MESH_NV = ShaderStageFlagBits::MESH_NV.0; const SUBPASS_SHADING_HUAWEI =
     ShaderStageFlagBits::SUBPASS_SHADING_HUAWEI.0; const RAYGEN_NV =
-    ShaderStageFlagBits::RAYGEN_NV.0; const ANY_HIT_NV =
-    ShaderStageFlagBits::ANY_HIT_NV.0; const CLOSEST_HIT_NV =
-    ShaderStageFlagBits::CLOSEST_HIT_NV.0; const MISS_NV =
+    ShaderStageFlagBits::RAYGEN_NV.0; const ANY_HIT_NV = ShaderStageFlagBits::ANY_HIT_NV
+    .0; const CLOSEST_HIT_NV = ShaderStageFlagBits::CLOSEST_HIT_NV.0; const MISS_NV =
     ShaderStageFlagBits::MISS_NV.0; const INTERSECTION_NV =
     ShaderStageFlagBits::INTERSECTION_NV.0; const CALLABLE_NV =
     ShaderStageFlagBits::CALLABLE_NV.0; }
@@ -4225,29 +4120,28 @@ impl ShaderStageFlagBits {
 }
 impl std::fmt::Debug for ShaderStageFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VERTEX => "VERTEX",
-                    &Self::TESSELLATION_CONTROL => "TESSELLATION_CONTROL",
-                    &Self::TESSELLATION_EVALUATION => "TESSELLATION_EVALUATION",
-                    &Self::GEOMETRY => "GEOMETRY",
-                    &Self::FRAGMENT => "FRAGMENT",
-                    &Self::COMPUTE => "COMPUTE",
-                    &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
-                    &Self::ALL => "ALL",
-                    &Self::RAYGEN_KHR => "RAYGEN_KHR",
-                    &Self::ANY_HIT_KHR => "ANY_HIT_KHR",
-                    &Self::CLOSEST_HIT_KHR => "CLOSEST_HIT_KHR",
-                    &Self::MISS_KHR => "MISS_KHR",
-                    &Self::INTERSECTION_KHR => "INTERSECTION_KHR",
-                    &Self::CALLABLE_KHR => "CALLABLE_KHR",
-                    &Self::TASK_NV => "TASK_NV",
-                    &Self::MESH_NV => "MESH_NV",
-                    &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VERTEX => "VERTEX",
+                &Self::TESSELLATION_CONTROL => "TESSELLATION_CONTROL",
+                &Self::TESSELLATION_EVALUATION => "TESSELLATION_EVALUATION",
+                &Self::GEOMETRY => "GEOMETRY",
+                &Self::FRAGMENT => "FRAGMENT",
+                &Self::COMPUTE => "COMPUTE",
+                &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
+                &Self::ALL => "ALL",
+                &Self::RAYGEN_KHR => "RAYGEN_KHR",
+                &Self::ANY_HIT_KHR => "ANY_HIT_KHR",
+                &Self::CLOSEST_HIT_KHR => "CLOSEST_HIT_KHR",
+                &Self::MISS_KHR => "MISS_KHR",
+                &Self::INTERSECTION_KHR => "INTERSECTION_KHR",
+                &Self::CALLABLE_KHR => "CALLABLE_KHR",
+                &Self::TASK_NV => "TASK_NV",
+                &Self::MESH_NV => "MESH_NV",
+                &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4282,13 +4176,12 @@ impl SparseMemoryBindFlagBits {
 }
 impl std::fmt::Debug for SparseMemoryBindFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::METADATA => "METADATA",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::METADATA => "METADATA",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4318,15 +4211,14 @@ impl StencilFaceFlagBits {
 }
 impl std::fmt::Debug for StencilFaceFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FRONT => "FRONT",
-                    &Self::BACK => "BACK",
-                    &Self::FRONT_AND_BACK => "FRONT_AND_BACK",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FRONT => "FRONT",
+                &Self::BACK => "BACK",
+                &Self::FRONT_AND_BACK => "FRONT_AND_BACK",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4344,20 +4236,19 @@ impl crate::vk1_0::StencilFaceFlagBits {
 pub struct StencilOp(pub i32);
 impl std::fmt::Debug for StencilOp {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::KEEP => "KEEP",
-                    &Self::ZERO => "ZERO",
-                    &Self::REPLACE => "REPLACE",
-                    &Self::INCREMENT_AND_CLAMP => "INCREMENT_AND_CLAMP",
-                    &Self::DECREMENT_AND_CLAMP => "DECREMENT_AND_CLAMP",
-                    &Self::INVERT => "INVERT",
-                    &Self::INCREMENT_AND_WRAP => "INCREMENT_AND_WRAP",
-                    &Self::DECREMENT_AND_WRAP => "DECREMENT_AND_WRAP",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::KEEP => "KEEP",
+                &Self::ZERO => "ZERO",
+                &Self::REPLACE => "REPLACE",
+                &Self::INCREMENT_AND_CLAMP => "INCREMENT_AND_CLAMP",
+                &Self::DECREMENT_AND_CLAMP => "DECREMENT_AND_CLAMP",
+                &Self::INVERT => "INVERT",
+                &Self::INCREMENT_AND_WRAP => "INCREMENT_AND_WRAP",
+                &Self::DECREMENT_AND_WRAP => "DECREMENT_AND_WRAP",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -4378,1596 +4269,1539 @@ impl crate::vk1_0::StencilOp {
 pub struct StructureType(pub i32);
 impl std::fmt::Debug for StructureType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::APPLICATION_INFO => "APPLICATION_INFO",
-                    &Self::INSTANCE_CREATE_INFO => "INSTANCE_CREATE_INFO",
-                    &Self::DEVICE_QUEUE_CREATE_INFO => "DEVICE_QUEUE_CREATE_INFO",
-                    &Self::DEVICE_CREATE_INFO => "DEVICE_CREATE_INFO",
-                    &Self::SUBMIT_INFO => "SUBMIT_INFO",
-                    &Self::MEMORY_ALLOCATE_INFO => "MEMORY_ALLOCATE_INFO",
-                    &Self::MAPPED_MEMORY_RANGE => "MAPPED_MEMORY_RANGE",
-                    &Self::BIND_SPARSE_INFO => "BIND_SPARSE_INFO",
-                    &Self::FENCE_CREATE_INFO => "FENCE_CREATE_INFO",
-                    &Self::SEMAPHORE_CREATE_INFO => "SEMAPHORE_CREATE_INFO",
-                    &Self::EVENT_CREATE_INFO => "EVENT_CREATE_INFO",
-                    &Self::QUERY_POOL_CREATE_INFO => "QUERY_POOL_CREATE_INFO",
-                    &Self::BUFFER_CREATE_INFO => "BUFFER_CREATE_INFO",
-                    &Self::BUFFER_VIEW_CREATE_INFO => "BUFFER_VIEW_CREATE_INFO",
-                    &Self::IMAGE_CREATE_INFO => "IMAGE_CREATE_INFO",
-                    &Self::IMAGE_VIEW_CREATE_INFO => "IMAGE_VIEW_CREATE_INFO",
-                    &Self::SHADER_MODULE_CREATE_INFO => "SHADER_MODULE_CREATE_INFO",
-                    &Self::PIPELINE_CACHE_CREATE_INFO => "PIPELINE_CACHE_CREATE_INFO",
-                    &Self::PIPELINE_SHADER_STAGE_CREATE_INFO => {
-                        "PIPELINE_SHADER_STAGE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO => {
-                        "PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO => {
-                        "PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_TESSELLATION_STATE_CREATE_INFO => {
-                        "PIPELINE_TESSELLATION_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_VIEWPORT_STATE_CREATE_INFO => {
-                        "PIPELINE_VIEWPORT_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_RASTERIZATION_STATE_CREATE_INFO => {
-                        "PIPELINE_RASTERIZATION_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_MULTISAMPLE_STATE_CREATE_INFO => {
-                        "PIPELINE_MULTISAMPLE_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO => {
-                        "PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO => {
-                        "PIPELINE_COLOR_BLEND_STATE_CREATE_INFO"
-                    }
-                    &Self::PIPELINE_DYNAMIC_STATE_CREATE_INFO => {
-                        "PIPELINE_DYNAMIC_STATE_CREATE_INFO"
-                    }
-                    &Self::GRAPHICS_PIPELINE_CREATE_INFO => {
-                        "GRAPHICS_PIPELINE_CREATE_INFO"
-                    }
-                    &Self::COMPUTE_PIPELINE_CREATE_INFO => "COMPUTE_PIPELINE_CREATE_INFO",
-                    &Self::PIPELINE_LAYOUT_CREATE_INFO => "PIPELINE_LAYOUT_CREATE_INFO",
-                    &Self::SAMPLER_CREATE_INFO => "SAMPLER_CREATE_INFO",
-                    &Self::DESCRIPTOR_SET_LAYOUT_CREATE_INFO => {
-                        "DESCRIPTOR_SET_LAYOUT_CREATE_INFO"
-                    }
-                    &Self::DESCRIPTOR_POOL_CREATE_INFO => "DESCRIPTOR_POOL_CREATE_INFO",
-                    &Self::DESCRIPTOR_SET_ALLOCATE_INFO => "DESCRIPTOR_SET_ALLOCATE_INFO",
-                    &Self::WRITE_DESCRIPTOR_SET => "WRITE_DESCRIPTOR_SET",
-                    &Self::COPY_DESCRIPTOR_SET => "COPY_DESCRIPTOR_SET",
-                    &Self::FRAMEBUFFER_CREATE_INFO => "FRAMEBUFFER_CREATE_INFO",
-                    &Self::RENDER_PASS_CREATE_INFO => "RENDER_PASS_CREATE_INFO",
-                    &Self::COMMAND_POOL_CREATE_INFO => "COMMAND_POOL_CREATE_INFO",
-                    &Self::COMMAND_BUFFER_ALLOCATE_INFO => "COMMAND_BUFFER_ALLOCATE_INFO",
-                    &Self::COMMAND_BUFFER_INHERITANCE_INFO => {
-                        "COMMAND_BUFFER_INHERITANCE_INFO"
-                    }
-                    &Self::COMMAND_BUFFER_BEGIN_INFO => "COMMAND_BUFFER_BEGIN_INFO",
-                    &Self::RENDER_PASS_BEGIN_INFO => "RENDER_PASS_BEGIN_INFO",
-                    &Self::BUFFER_MEMORY_BARRIER => "BUFFER_MEMORY_BARRIER",
-                    &Self::IMAGE_MEMORY_BARRIER => "IMAGE_MEMORY_BARRIER",
-                    &Self::MEMORY_BARRIER => "MEMORY_BARRIER",
-                    &Self::LOADER_INSTANCE_CREATE_INFO => "LOADER_INSTANCE_CREATE_INFO",
-                    &Self::LOADER_DEVICE_CREATE_INFO => "LOADER_DEVICE_CREATE_INFO",
-                    &Self::PHYSICAL_DEVICE_SUBGROUP_PROPERTIES => {
-                        "PHYSICAL_DEVICE_SUBGROUP_PROPERTIES"
-                    }
-                    &Self::BIND_BUFFER_MEMORY_INFO => "BIND_BUFFER_MEMORY_INFO",
-                    &Self::BIND_IMAGE_MEMORY_INFO => "BIND_IMAGE_MEMORY_INFO",
-                    &Self::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES => {
-                        "PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES"
-                    }
-                    &Self::MEMORY_DEDICATED_REQUIREMENTS => {
-                        "MEMORY_DEDICATED_REQUIREMENTS"
-                    }
-                    &Self::MEMORY_DEDICATED_ALLOCATE_INFO => {
-                        "MEMORY_DEDICATED_ALLOCATE_INFO"
-                    }
-                    &Self::MEMORY_ALLOCATE_FLAGS_INFO => "MEMORY_ALLOCATE_FLAGS_INFO",
-                    &Self::DEVICE_GROUP_RENDER_PASS_BEGIN_INFO => {
-                        "DEVICE_GROUP_RENDER_PASS_BEGIN_INFO"
-                    }
-                    &Self::DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO => {
-                        "DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO"
-                    }
-                    &Self::DEVICE_GROUP_SUBMIT_INFO => "DEVICE_GROUP_SUBMIT_INFO",
-                    &Self::DEVICE_GROUP_BIND_SPARSE_INFO => {
-                        "DEVICE_GROUP_BIND_SPARSE_INFO"
-                    }
-                    &Self::BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO => {
-                        "BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO"
-                    }
-                    &Self::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO => {
-                        "BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_GROUP_PROPERTIES => {
-                        "PHYSICAL_DEVICE_GROUP_PROPERTIES"
-                    }
-                    &Self::DEVICE_GROUP_DEVICE_CREATE_INFO => {
-                        "DEVICE_GROUP_DEVICE_CREATE_INFO"
-                    }
-                    &Self::BUFFER_MEMORY_REQUIREMENTS_INFO_2 => {
-                        "BUFFER_MEMORY_REQUIREMENTS_INFO_2"
-                    }
-                    &Self::IMAGE_MEMORY_REQUIREMENTS_INFO_2 => {
-                        "IMAGE_MEMORY_REQUIREMENTS_INFO_2"
-                    }
-                    &Self::IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2 => {
-                        "IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2"
-                    }
-                    &Self::MEMORY_REQUIREMENTS_2 => "MEMORY_REQUIREMENTS_2",
-                    &Self::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2 => {
-                        "SPARSE_IMAGE_MEMORY_REQUIREMENTS_2"
-                    }
-                    &Self::PHYSICAL_DEVICE_FEATURES_2 => "PHYSICAL_DEVICE_FEATURES_2",
-                    &Self::PHYSICAL_DEVICE_PROPERTIES_2 => "PHYSICAL_DEVICE_PROPERTIES_2",
-                    &Self::FORMAT_PROPERTIES_2 => "FORMAT_PROPERTIES_2",
-                    &Self::IMAGE_FORMAT_PROPERTIES_2 => "IMAGE_FORMAT_PROPERTIES_2",
-                    &Self::PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2 => {
-                        "PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2"
-                    }
-                    &Self::QUEUE_FAMILY_PROPERTIES_2 => "QUEUE_FAMILY_PROPERTIES_2",
-                    &Self::PHYSICAL_DEVICE_MEMORY_PROPERTIES_2 => {
-                        "PHYSICAL_DEVICE_MEMORY_PROPERTIES_2"
-                    }
-                    &Self::SPARSE_IMAGE_FORMAT_PROPERTIES_2 => {
-                        "SPARSE_IMAGE_FORMAT_PROPERTIES_2"
-                    }
-                    &Self::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2 => {
-                        "PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2"
-                    }
-                    &Self::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES => {
-                        "PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES"
-                    }
-                    &Self::RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO => {
-                        "RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO"
-                    }
-                    &Self::IMAGE_VIEW_USAGE_CREATE_INFO => "IMAGE_VIEW_USAGE_CREATE_INFO",
-                    &Self::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO => {
-                        "PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO"
-                    }
-                    &Self::RENDER_PASS_MULTIVIEW_CREATE_INFO => {
-                        "RENDER_PASS_MULTIVIEW_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_MULTIVIEW_FEATURES => {
-                        "PHYSICAL_DEVICE_MULTIVIEW_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES => {
-                        "PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES"
-                    }
-                    &Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES => {
-                        "PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES"
-                    }
-                    &Self::PROTECTED_SUBMIT_INFO => "PROTECTED_SUBMIT_INFO",
-                    &Self::PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES => {
-                        "PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES => {
-                        "PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES"
-                    }
-                    &Self::DEVICE_QUEUE_INFO_2 => "DEVICE_QUEUE_INFO_2",
-                    &Self::SAMPLER_YCBCR_CONVERSION_CREATE_INFO => {
-                        "SAMPLER_YCBCR_CONVERSION_CREATE_INFO"
-                    }
-                    &Self::SAMPLER_YCBCR_CONVERSION_INFO => {
-                        "SAMPLER_YCBCR_CONVERSION_INFO"
-                    }
-                    &Self::BIND_IMAGE_PLANE_MEMORY_INFO => "BIND_IMAGE_PLANE_MEMORY_INFO",
-                    &Self::IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO => {
-                        "IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES => {
-                        "PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES"
-                    }
-                    &Self::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES => {
-                        "SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES"
-                    }
-                    &Self::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO => {
-                        "DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO => {
-                        "PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO"
-                    }
-                    &Self::EXTERNAL_IMAGE_FORMAT_PROPERTIES => {
-                        "EXTERNAL_IMAGE_FORMAT_PROPERTIES"
-                    }
-                    &Self::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO => {
-                        "PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO"
-                    }
-                    &Self::EXTERNAL_BUFFER_PROPERTIES => "EXTERNAL_BUFFER_PROPERTIES",
-                    &Self::PHYSICAL_DEVICE_ID_PROPERTIES => {
-                        "PHYSICAL_DEVICE_ID_PROPERTIES"
-                    }
-                    &Self::EXTERNAL_MEMORY_BUFFER_CREATE_INFO => {
-                        "EXTERNAL_MEMORY_BUFFER_CREATE_INFO"
-                    }
-                    &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO => {
-                        "EXTERNAL_MEMORY_IMAGE_CREATE_INFO"
-                    }
-                    &Self::EXPORT_MEMORY_ALLOCATE_INFO => "EXPORT_MEMORY_ALLOCATE_INFO",
-                    &Self::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO => {
-                        "PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO"
-                    }
-                    &Self::EXTERNAL_FENCE_PROPERTIES => "EXTERNAL_FENCE_PROPERTIES",
-                    &Self::EXPORT_FENCE_CREATE_INFO => "EXPORT_FENCE_CREATE_INFO",
-                    &Self::EXPORT_SEMAPHORE_CREATE_INFO => "EXPORT_SEMAPHORE_CREATE_INFO",
-                    &Self::PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO => {
-                        "PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO"
-                    }
-                    &Self::EXTERNAL_SEMAPHORE_PROPERTIES => {
-                        "EXTERNAL_SEMAPHORE_PROPERTIES"
-                    }
-                    &Self::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES => {
-                        "PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES"
-                    }
-                    &Self::DESCRIPTOR_SET_LAYOUT_SUPPORT => {
-                        "DESCRIPTOR_SET_LAYOUT_SUPPORT"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES => {
-                        "PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES => {
-                        "PHYSICAL_DEVICE_VULKAN_1_1_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES => {
-                        "PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES"
-                    }
-                    &Self::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES => {
-                        "PHYSICAL_DEVICE_VULKAN_1_2_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES => {
-                        "PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES"
-                    }
-                    &Self::IMAGE_FORMAT_LIST_CREATE_INFO => {
-                        "IMAGE_FORMAT_LIST_CREATE_INFO"
-                    }
-                    &Self::ATTACHMENT_DESCRIPTION_2 => "ATTACHMENT_DESCRIPTION_2",
-                    &Self::ATTACHMENT_REFERENCE_2 => "ATTACHMENT_REFERENCE_2",
-                    &Self::SUBPASS_DESCRIPTION_2 => "SUBPASS_DESCRIPTION_2",
-                    &Self::SUBPASS_DEPENDENCY_2 => "SUBPASS_DEPENDENCY_2",
-                    &Self::RENDER_PASS_CREATE_INFO_2 => "RENDER_PASS_CREATE_INFO_2",
-                    &Self::SUBPASS_BEGIN_INFO => "SUBPASS_BEGIN_INFO",
-                    &Self::SUBPASS_END_INFO => "SUBPASS_END_INFO",
-                    &Self::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES => {
-                        "PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_DRIVER_PROPERTIES => {
-                        "PHYSICAL_DEVICE_DRIVER_PROPERTIES"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES => {
-                        "PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES => {
-                        "PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES => {
-                        "PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES"
-                    }
-                    &Self::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO => {
-                        "DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES => {
-                        "PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES => {
-                        "PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES"
-                    }
-                    &Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO => {
-                        "DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO"
-                    }
-                    &Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT => {
-                        "DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT"
-                    }
-                    &Self::PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES => {
-                        "PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES"
-                    }
-                    &Self::SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE => {
-                        "SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE"
-                    }
-                    &Self::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES => {
-                        "PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES"
-                    }
-                    &Self::IMAGE_STENCIL_USAGE_CREATE_INFO => {
-                        "IMAGE_STENCIL_USAGE_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES => {
-                        "PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES"
-                    }
-                    &Self::SAMPLER_REDUCTION_MODE_CREATE_INFO => {
-                        "SAMPLER_REDUCTION_MODE_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES => {
-                        "PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES => {
-                        "PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES"
-                    }
-                    &Self::FRAMEBUFFER_ATTACHMENTS_CREATE_INFO => {
-                        "FRAMEBUFFER_ATTACHMENTS_CREATE_INFO"
-                    }
-                    &Self::FRAMEBUFFER_ATTACHMENT_IMAGE_INFO => {
-                        "FRAMEBUFFER_ATTACHMENT_IMAGE_INFO"
-                    }
-                    &Self::RENDER_PASS_ATTACHMENT_BEGIN_INFO => {
-                        "RENDER_PASS_ATTACHMENT_BEGIN_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES => {
-                        "PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES => {
-                        "PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES => {
-                        "PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES"
-                    }
-                    &Self::ATTACHMENT_REFERENCE_STENCIL_LAYOUT => {
-                        "ATTACHMENT_REFERENCE_STENCIL_LAYOUT"
-                    }
-                    &Self::ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT => {
-                        "ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT"
-                    }
-                    &Self::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES => {
-                        "PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES => {
-                        "PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES => {
-                        "PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES"
-                    }
-                    &Self::SEMAPHORE_TYPE_CREATE_INFO => "SEMAPHORE_TYPE_CREATE_INFO",
-                    &Self::TIMELINE_SEMAPHORE_SUBMIT_INFO => {
-                        "TIMELINE_SEMAPHORE_SUBMIT_INFO"
-                    }
-                    &Self::SEMAPHORE_WAIT_INFO => "SEMAPHORE_WAIT_INFO",
-                    &Self::SEMAPHORE_SIGNAL_INFO => "SEMAPHORE_SIGNAL_INFO",
-                    &Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES => {
-                        "PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES"
-                    }
-                    &Self::BUFFER_DEVICE_ADDRESS_INFO => "BUFFER_DEVICE_ADDRESS_INFO",
-                    &Self::BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO => {
-                        "BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO"
-                    }
-                    &Self::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO => {
-                        "MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO"
-                    }
-                    &Self::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO => {
-                        "DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_VULKAN_1_3_FEATURES => {
-                        "PHYSICAL_DEVICE_VULKAN_1_3_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_VULKAN_1_3_PROPERTIES => {
-                        "PHYSICAL_DEVICE_VULKAN_1_3_PROPERTIES"
-                    }
-                    &Self::PIPELINE_CREATION_FEEDBACK_CREATE_INFO => {
-                        "PIPELINE_CREATION_FEEDBACK_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES => {
-                        "PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_TOOL_PROPERTIES => {
-                        "PHYSICAL_DEVICE_TOOL_PROPERTIES"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES => {
-                        "PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES => {
-                        "PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES"
-                    }
-                    &Self::DEVICE_PRIVATE_DATA_CREATE_INFO => {
-                        "DEVICE_PRIVATE_DATA_CREATE_INFO"
-                    }
-                    &Self::PRIVATE_DATA_SLOT_CREATE_INFO => {
-                        "PRIVATE_DATA_SLOT_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES => {
-                        "PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES"
-                    }
-                    &Self::MEMORY_BARRIER_2 => "MEMORY_BARRIER_2",
-                    &Self::BUFFER_MEMORY_BARRIER_2 => "BUFFER_MEMORY_BARRIER_2",
-                    &Self::IMAGE_MEMORY_BARRIER_2 => "IMAGE_MEMORY_BARRIER_2",
-                    &Self::DEPENDENCY_INFO => "DEPENDENCY_INFO",
-                    &Self::SUBMIT_INFO_2 => "SUBMIT_INFO_2",
-                    &Self::SEMAPHORE_SUBMIT_INFO => "SEMAPHORE_SUBMIT_INFO",
-                    &Self::COMMAND_BUFFER_SUBMIT_INFO => "COMMAND_BUFFER_SUBMIT_INFO",
-                    &Self::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES => {
-                        "PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES => {
-                        "PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES => {
-                        "PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES"
-                    }
-                    &Self::COPY_BUFFER_INFO_2 => "COPY_BUFFER_INFO_2",
-                    &Self::COPY_IMAGE_INFO_2 => "COPY_IMAGE_INFO_2",
-                    &Self::COPY_BUFFER_TO_IMAGE_INFO_2 => "COPY_BUFFER_TO_IMAGE_INFO_2",
-                    &Self::COPY_IMAGE_TO_BUFFER_INFO_2 => "COPY_IMAGE_TO_BUFFER_INFO_2",
-                    &Self::BLIT_IMAGE_INFO_2 => "BLIT_IMAGE_INFO_2",
-                    &Self::RESOLVE_IMAGE_INFO_2 => "RESOLVE_IMAGE_INFO_2",
-                    &Self::BUFFER_COPY_2 => "BUFFER_COPY_2",
-                    &Self::IMAGE_COPY_2 => "IMAGE_COPY_2",
-                    &Self::IMAGE_BLIT_2 => "IMAGE_BLIT_2",
-                    &Self::BUFFER_IMAGE_COPY_2 => "BUFFER_IMAGE_COPY_2",
-                    &Self::IMAGE_RESOLVE_2 => "IMAGE_RESOLVE_2",
-                    &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES => {
-                        "PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES"
-                    }
-                    &Self::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO => {
-                        "PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES => {
-                        "PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES => {
-                        "PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES => {
-                        "PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES"
-                    }
-                    &Self::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK => {
-                        "WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK"
-                    }
-                    &Self::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO => {
-                        "DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES => {
-                        "PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES"
-                    }
-                    &Self::RENDERING_INFO => "RENDERING_INFO",
-                    &Self::RENDERING_ATTACHMENT_INFO => "RENDERING_ATTACHMENT_INFO",
-                    &Self::PIPELINE_RENDERING_CREATE_INFO => {
-                        "PIPELINE_RENDERING_CREATE_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES => {
-                        "PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES"
-                    }
-                    &Self::COMMAND_BUFFER_INHERITANCE_RENDERING_INFO => {
-                        "COMMAND_BUFFER_INHERITANCE_RENDERING_INFO"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES => {
-                        "PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_PROPERTIES => {
-                        "PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_PROPERTIES"
-                    }
-                    &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES => {
-                        "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES"
-                    }
-                    &Self::FORMAT_PROPERTIES_3 => "FORMAT_PROPERTIES_3",
-                    &Self::PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES => {
-                        "PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES"
-                    }
-                    &Self::PHYSICAL_DEVICE_MAINTENANCE_4_PROPERTIES => {
-                        "PHYSICAL_DEVICE_MAINTENANCE_4_PROPERTIES"
-                    }
-                    &Self::DEVICE_BUFFER_MEMORY_REQUIREMENTS => {
-                        "DEVICE_BUFFER_MEMORY_REQUIREMENTS"
-                    }
-                    &Self::DEVICE_IMAGE_MEMORY_REQUIREMENTS => {
-                        "DEVICE_IMAGE_MEMORY_REQUIREMENTS"
-                    }
-                    &Self::SWAPCHAIN_CREATE_INFO_KHR => "SWAPCHAIN_CREATE_INFO_KHR",
-                    &Self::PRESENT_INFO_KHR => "PRESENT_INFO_KHR",
-                    &Self::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR => {
-                        "DEVICE_GROUP_PRESENT_CAPABILITIES_KHR"
-                    }
-                    &Self::IMAGE_SWAPCHAIN_CREATE_INFO_KHR => {
-                        "IMAGE_SWAPCHAIN_CREATE_INFO_KHR"
-                    }
-                    &Self::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR => {
-                        "BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR"
-                    }
-                    &Self::ACQUIRE_NEXT_IMAGE_INFO_KHR => "ACQUIRE_NEXT_IMAGE_INFO_KHR",
-                    &Self::DEVICE_GROUP_PRESENT_INFO_KHR => {
-                        "DEVICE_GROUP_PRESENT_INFO_KHR"
-                    }
-                    &Self::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR => {
-                        "DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR"
-                    }
-                    &Self::DISPLAY_MODE_CREATE_INFO_KHR => "DISPLAY_MODE_CREATE_INFO_KHR",
-                    &Self::DISPLAY_SURFACE_CREATE_INFO_KHR => {
-                        "DISPLAY_SURFACE_CREATE_INFO_KHR"
-                    }
-                    &Self::DISPLAY_PRESENT_INFO_KHR => "DISPLAY_PRESENT_INFO_KHR",
-                    &Self::XLIB_SURFACE_CREATE_INFO_KHR => "XLIB_SURFACE_CREATE_INFO_KHR",
-                    &Self::XCB_SURFACE_CREATE_INFO_KHR => "XCB_SURFACE_CREATE_INFO_KHR",
-                    &Self::WAYLAND_SURFACE_CREATE_INFO_KHR => {
-                        "WAYLAND_SURFACE_CREATE_INFO_KHR"
-                    }
-                    &Self::ANDROID_SURFACE_CREATE_INFO_KHR => {
-                        "ANDROID_SURFACE_CREATE_INFO_KHR"
-                    }
-                    &Self::WIN32_SURFACE_CREATE_INFO_KHR => {
-                        "WIN32_SURFACE_CREATE_INFO_KHR"
-                    }
-                    &Self::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT => {
-                        "DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT"
-                    }
-                    &Self::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD => {
-                        "PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD"
-                    }
-                    &Self::DEBUG_MARKER_OBJECT_NAME_INFO_EXT => {
-                        "DEBUG_MARKER_OBJECT_NAME_INFO_EXT"
-                    }
-                    &Self::DEBUG_MARKER_OBJECT_TAG_INFO_EXT => {
-                        "DEBUG_MARKER_OBJECT_TAG_INFO_EXT"
-                    }
-                    &Self::DEBUG_MARKER_MARKER_INFO_EXT => "DEBUG_MARKER_MARKER_INFO_EXT",
-                    &Self::VIDEO_PROFILE_KHR => "VIDEO_PROFILE_KHR",
-                    &Self::VIDEO_CAPABILITIES_KHR => "VIDEO_CAPABILITIES_KHR",
-                    &Self::VIDEO_PICTURE_RESOURCE_KHR => "VIDEO_PICTURE_RESOURCE_KHR",
-                    &Self::VIDEO_GET_MEMORY_PROPERTIES_KHR => {
-                        "VIDEO_GET_MEMORY_PROPERTIES_KHR"
-                    }
-                    &Self::VIDEO_BIND_MEMORY_KHR => "VIDEO_BIND_MEMORY_KHR",
-                    &Self::VIDEO_SESSION_CREATE_INFO_KHR => {
-                        "VIDEO_SESSION_CREATE_INFO_KHR"
-                    }
-                    &Self::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR => {
-                        "VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR"
-                    }
-                    &Self::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR => {
-                        "VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR"
-                    }
-                    &Self::VIDEO_BEGIN_CODING_INFO_KHR => "VIDEO_BEGIN_CODING_INFO_KHR",
-                    &Self::VIDEO_END_CODING_INFO_KHR => "VIDEO_END_CODING_INFO_KHR",
-                    &Self::VIDEO_CODING_CONTROL_INFO_KHR => {
-                        "VIDEO_CODING_CONTROL_INFO_KHR"
-                    }
-                    &Self::VIDEO_REFERENCE_SLOT_KHR => "VIDEO_REFERENCE_SLOT_KHR",
-                    &Self::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR => {
-                        "VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR"
-                    }
-                    &Self::VIDEO_PROFILES_KHR => "VIDEO_PROFILES_KHR",
-                    &Self::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR => {
-                        "PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR"
-                    }
-                    &Self::VIDEO_FORMAT_PROPERTIES_KHR => "VIDEO_FORMAT_PROPERTIES_KHR",
-                    &Self::QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_2_KHR => {
-                        "QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_2_KHR"
-                    }
-                    &Self::VIDEO_DECODE_INFO_KHR => "VIDEO_DECODE_INFO_KHR",
-                    &Self::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV => {
-                        "DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV"
-                    }
-                    &Self::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV => {
-                        "DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV"
-                    }
-                    &Self::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV => {
-                        "DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT"
-                    }
-                    &Self::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT => {
-                        "PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT"
-                    }
-                    &Self::CU_MODULE_CREATE_INFO_NVX => "CU_MODULE_CREATE_INFO_NVX",
-                    &Self::CU_FUNCTION_CREATE_INFO_NVX => "CU_FUNCTION_CREATE_INFO_NVX",
-                    &Self::CU_LAUNCH_INFO_NVX => "CU_LAUNCH_INFO_NVX",
-                    &Self::IMAGE_VIEW_HANDLE_INFO_NVX => "IMAGE_VIEW_HANDLE_INFO_NVX",
-                    &Self::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX => {
-                        "IMAGE_VIEW_ADDRESS_PROPERTIES_NVX"
-                    }
-                    &Self::VIDEO_ENCODE_H264_CAPABILITIES_EXT => {
-                        "VIDEO_ENCODE_H264_CAPABILITIES_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT => {
-                        "VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => {
-                        "VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => {
-                        "VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT => {
-                        "VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT => {
-                        "VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_NALU_SLICE_EXT => {
-                        "VIDEO_ENCODE_H264_NALU_SLICE_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT => {
-                        "VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_PROFILE_EXT => {
-                        "VIDEO_ENCODE_H264_PROFILE_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT => {
-                        "VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT => {
-                        "VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_CAPABILITIES_EXT => {
-                        "VIDEO_ENCODE_H265_CAPABILITIES_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT => {
-                        "VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => {
-                        "VIDEO_ENCODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT => {
-                        "VIDEO_ENCODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT => {
-                        "VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT => {
-                        "VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT => {
-                        "VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT => {
-                        "VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_PROFILE_EXT => {
-                        "VIDEO_ENCODE_H265_PROFILE_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_REFERENCE_LISTS_EXT => {
-                        "VIDEO_ENCODE_H265_REFERENCE_LISTS_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_RATE_CONTROL_INFO_EXT => {
-                        "VIDEO_ENCODE_H265_RATE_CONTROL_INFO_EXT"
-                    }
-                    &Self::VIDEO_ENCODE_H265_RATE_CONTROL_LAYER_INFO_EXT => {
-                        "VIDEO_ENCODE_H265_RATE_CONTROL_LAYER_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H264_CAPABILITIES_EXT => {
-                        "VIDEO_DECODE_H264_CAPABILITIES_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT => {
-                        "VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H264_PICTURE_INFO_EXT => {
-                        "VIDEO_DECODE_H264_PICTURE_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H264_MVC_EXT => "VIDEO_DECODE_H264_MVC_EXT",
-                    &Self::VIDEO_DECODE_H264_PROFILE_EXT => {
-                        "VIDEO_DECODE_H264_PROFILE_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => {
-                        "VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => {
-                        "VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT => {
-                        "VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT"
-                    }
-                    &Self::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD => {
-                        "TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD"
-                    }
-                    &Self::RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => {
-                        "RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR"
-                    }
-                    &Self::RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_INFO_EXT => {
-                        "RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_INFO_EXT"
-                    }
-                    &Self::ATTACHMENT_SAMPLE_COUNT_INFO_AMD => {
-                        "ATTACHMENT_SAMPLE_COUNT_INFO_AMD"
-                    }
-                    &Self::MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX => {
-                        "MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX"
-                    }
-                    &Self::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP => {
-                        "STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP"
-                    }
-                    &Self::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV"
-                    }
-                    &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV => {
-                        "EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV"
-                    }
-                    &Self::EXPORT_MEMORY_ALLOCATE_INFO_NV => {
-                        "EXPORT_MEMORY_ALLOCATE_INFO_NV"
-                    }
-                    &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV => {
-                        "IMPORT_MEMORY_WIN32_HANDLE_INFO_NV"
-                    }
-                    &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV => {
-                        "EXPORT_MEMORY_WIN32_HANDLE_INFO_NV"
-                    }
-                    &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV => {
-                        "WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV"
-                    }
-                    &Self::VALIDATION_FLAGS_EXT => "VALIDATION_FLAGS_EXT",
-                    &Self::VI_SURFACE_CREATE_INFO_NN => "VI_SURFACE_CREATE_INFO_NN",
-                    &Self::IMAGE_VIEW_ASTC_DECODE_MODE_EXT => {
-                        "IMAGE_VIEW_ASTC_DECODE_MODE_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT"
-                    }
-                    &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR => {
-                        "IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR => {
-                        "EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::MEMORY_WIN32_HANDLE_PROPERTIES_KHR => {
-                        "MEMORY_WIN32_HANDLE_PROPERTIES_KHR"
-                    }
-                    &Self::MEMORY_GET_WIN32_HANDLE_INFO_KHR => {
-                        "MEMORY_GET_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::IMPORT_MEMORY_FD_INFO_KHR => "IMPORT_MEMORY_FD_INFO_KHR",
-                    &Self::MEMORY_FD_PROPERTIES_KHR => "MEMORY_FD_PROPERTIES_KHR",
-                    &Self::MEMORY_GET_FD_INFO_KHR => "MEMORY_GET_FD_INFO_KHR",
-                    &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR => {
-                        "WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR"
-                    }
-                    &Self::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => {
-                        "IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => {
-                        "EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::D3D12_FENCE_SUBMIT_INFO_KHR => "D3D12_FENCE_SUBMIT_INFO_KHR",
-                    &Self::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR => {
-                        "SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::IMPORT_SEMAPHORE_FD_INFO_KHR => "IMPORT_SEMAPHORE_FD_INFO_KHR",
-                    &Self::SEMAPHORE_GET_FD_INFO_KHR => "SEMAPHORE_GET_FD_INFO_KHR",
-                    &Self::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR => {
-                        "PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR"
-                    }
-                    &Self::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT => {
-                        "COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT"
-                    }
-                    &Self::CONDITIONAL_RENDERING_BEGIN_INFO_EXT => {
-                        "CONDITIONAL_RENDERING_BEGIN_INFO_EXT"
-                    }
-                    &Self::PRESENT_REGIONS_KHR => "PRESENT_REGIONS_KHR",
-                    &Self::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::SURFACE_CAPABILITIES_2_EXT => "SURFACE_CAPABILITIES_2_EXT",
-                    &Self::DISPLAY_POWER_INFO_EXT => "DISPLAY_POWER_INFO_EXT",
-                    &Self::DEVICE_EVENT_INFO_EXT => "DEVICE_EVENT_INFO_EXT",
-                    &Self::DISPLAY_EVENT_INFO_EXT => "DISPLAY_EVENT_INFO_EXT",
-                    &Self::SWAPCHAIN_COUNTER_CREATE_INFO_EXT => {
-                        "SWAPCHAIN_COUNTER_CREATE_INFO_EXT"
-                    }
-                    &Self::PRESENT_TIMES_INFO_GOOGLE => "PRESENT_TIMES_INFO_GOOGLE",
-                    &Self::PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX => {
-                        "PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX"
-                    }
-                    &Self::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT"
-                    }
-                    &Self::PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT"
-                    }
-                    &Self::PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT"
-                    }
-                    &Self::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::HDR_METADATA_EXT => "HDR_METADATA_EXT",
-                    &Self::SHARED_PRESENT_SURFACE_CAPABILITIES_KHR => {
-                        "SHARED_PRESENT_SURFACE_CAPABILITIES_KHR"
-                    }
-                    &Self::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR => {
-                        "IMPORT_FENCE_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR => {
-                        "EXPORT_FENCE_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::FENCE_GET_WIN32_HANDLE_INFO_KHR => {
-                        "FENCE_GET_WIN32_HANDLE_INFO_KHR"
-                    }
-                    &Self::IMPORT_FENCE_FD_INFO_KHR => "IMPORT_FENCE_FD_INFO_KHR",
-                    &Self::FENCE_GET_FD_INFO_KHR => "FENCE_GET_FD_INFO_KHR",
-                    &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR => {
-                        "PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR"
-                    }
-                    &Self::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR => {
-                        "QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR"
-                    }
-                    &Self::PERFORMANCE_QUERY_SUBMIT_INFO_KHR => {
-                        "PERFORMANCE_QUERY_SUBMIT_INFO_KHR"
-                    }
-                    &Self::ACQUIRE_PROFILING_LOCK_INFO_KHR => {
-                        "ACQUIRE_PROFILING_LOCK_INFO_KHR"
-                    }
-                    &Self::PERFORMANCE_COUNTER_KHR => "PERFORMANCE_COUNTER_KHR",
-                    &Self::PERFORMANCE_COUNTER_DESCRIPTION_KHR => {
-                        "PERFORMANCE_COUNTER_DESCRIPTION_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_SURFACE_INFO_2_KHR => {
-                        "PHYSICAL_DEVICE_SURFACE_INFO_2_KHR"
-                    }
-                    &Self::SURFACE_CAPABILITIES_2_KHR => "SURFACE_CAPABILITIES_2_KHR",
-                    &Self::SURFACE_FORMAT_2_KHR => "SURFACE_FORMAT_2_KHR",
-                    &Self::DISPLAY_PROPERTIES_2_KHR => "DISPLAY_PROPERTIES_2_KHR",
-                    &Self::DISPLAY_PLANE_PROPERTIES_2_KHR => {
-                        "DISPLAY_PLANE_PROPERTIES_2_KHR"
-                    }
-                    &Self::DISPLAY_MODE_PROPERTIES_2_KHR => {
-                        "DISPLAY_MODE_PROPERTIES_2_KHR"
-                    }
-                    &Self::DISPLAY_PLANE_INFO_2_KHR => "DISPLAY_PLANE_INFO_2_KHR",
-                    &Self::DISPLAY_PLANE_CAPABILITIES_2_KHR => {
-                        "DISPLAY_PLANE_CAPABILITIES_2_KHR"
-                    }
-                    &Self::IOS_SURFACE_CREATE_INFO_MVK => "IOS_SURFACE_CREATE_INFO_MVK",
-                    &Self::MACOS_SURFACE_CREATE_INFO_MVK => {
-                        "MACOS_SURFACE_CREATE_INFO_MVK"
-                    }
-                    &Self::DEBUG_UTILS_OBJECT_NAME_INFO_EXT => {
-                        "DEBUG_UTILS_OBJECT_NAME_INFO_EXT"
-                    }
-                    &Self::DEBUG_UTILS_OBJECT_TAG_INFO_EXT => {
-                        "DEBUG_UTILS_OBJECT_TAG_INFO_EXT"
-                    }
-                    &Self::DEBUG_UTILS_LABEL_EXT => "DEBUG_UTILS_LABEL_EXT",
-                    &Self::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT => {
-                        "DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT"
-                    }
-                    &Self::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT => {
-                        "DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT"
-                    }
-                    &Self::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID => {
-                        "ANDROID_HARDWARE_BUFFER_USAGE_ANDROID"
-                    }
-                    &Self::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID => {
-                        "ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID"
-                    }
-                    &Self::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID => {
-                        "ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID"
-                    }
-                    &Self::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => {
-                        "IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID"
-                    }
-                    &Self::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => {
-                        "MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID"
-                    }
-                    &Self::EXTERNAL_FORMAT_ANDROID => "EXTERNAL_FORMAT_ANDROID",
-                    &Self::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_2_ANDROID => {
-                        "ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_2_ANDROID"
-                    }
-                    &Self::SAMPLE_LOCATIONS_INFO_EXT => "SAMPLE_LOCATIONS_INFO_EXT",
-                    &Self::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT => {
-                        "RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT"
-                    }
-                    &Self::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT"
-                    }
-                    &Self::MULTISAMPLE_PROPERTIES_EXT => "MULTISAMPLE_PROPERTIES_EXT",
-                    &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT"
-                    }
-                    &Self::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR => {
-                        "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR => {
-                        "ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR => {
-                        "ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR => {
-                        "ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR => {
-                        "ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR => {
-                        "ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_GEOMETRY_KHR => {
-                        "ACCELERATION_STRUCTURE_GEOMETRY_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_VERSION_INFO_KHR => {
-                        "ACCELERATION_STRUCTURE_VERSION_INFO_KHR"
-                    }
-                    &Self::COPY_ACCELERATION_STRUCTURE_INFO_KHR => {
-                        "COPY_ACCELERATION_STRUCTURE_INFO_KHR"
-                    }
-                    &Self::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR => {
-                        "COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR"
-                    }
-                    &Self::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR => {
-                        "COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR => {
-                        "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_CREATE_INFO_KHR => {
-                        "ACCELERATION_STRUCTURE_CREATE_INFO_KHR"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR => {
-                        "ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR => {
-                        "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR"
-                    }
-                    &Self::RAY_TRACING_PIPELINE_CREATE_INFO_KHR => {
-                        "RAY_TRACING_PIPELINE_CREATE_INFO_KHR"
-                    }
-                    &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR => {
-                        "RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR"
-                    }
-                    &Self::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR => {
-                        "RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR"
-                    }
-                    &Self::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV => {
-                        "PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV"
-                    }
-                    &Self::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT => {
-                        "DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT => {
-                        "PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT"
-                    }
-                    &Self::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT => {
-                        "IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT"
-                    }
-                    &Self::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT => {
-                        "IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT"
-                    }
-                    &Self::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT => {
-                        "IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT"
-                    }
-                    &Self::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_2_EXT => {
-                        "DRM_FORMAT_MODIFIER_PROPERTIES_LIST_2_EXT"
-                    }
-                    &Self::VALIDATION_CACHE_CREATE_INFO_EXT => {
-                        "VALIDATION_CACHE_CREATE_INFO_EXT"
-                    }
-                    &Self::SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT => {
-                        "SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR => {
-                        "PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR"
-                    }
-                    &Self::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV => {
-                        "PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV"
-                    }
-                    &Self::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::RAY_TRACING_PIPELINE_CREATE_INFO_NV => {
-                        "RAY_TRACING_PIPELINE_CREATE_INFO_NV"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_CREATE_INFO_NV => {
-                        "ACCELERATION_STRUCTURE_CREATE_INFO_NV"
-                    }
-                    &Self::GEOMETRY_NV => "GEOMETRY_NV",
-                    &Self::GEOMETRY_TRIANGLES_NV => "GEOMETRY_TRIANGLES_NV",
-                    &Self::GEOMETRY_AABB_NV => "GEOMETRY_AABB_NV",
-                    &Self::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV => {
-                        "BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV"
-                    }
-                    &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV => {
-                        "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV => {
-                        "ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV => {
-                        "PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV"
-                    }
-                    &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV => {
-                        "RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_INFO_NV => {
-                        "ACCELERATION_STRUCTURE_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV"
-                    }
-                    &Self::PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT => {
-                        "PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT"
-                    }
-                    &Self::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT => {
-                        "FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT"
-                    }
-                    &Self::IMPORT_MEMORY_HOST_POINTER_INFO_EXT => {
-                        "IMPORT_MEMORY_HOST_POINTER_INFO_EXT"
-                    }
-                    &Self::MEMORY_HOST_POINTER_PROPERTIES_EXT => {
-                        "MEMORY_HOST_POINTER_PROPERTIES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR"
-                    }
-                    &Self::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD => {
-                        "PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD"
-                    }
-                    &Self::CALIBRATED_TIMESTAMP_INFO_EXT => {
-                        "CALIBRATED_TIMESTAMP_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD => {
-                        "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD"
-                    }
-                    &Self::VIDEO_DECODE_H265_CAPABILITIES_EXT => {
-                        "VIDEO_DECODE_H265_CAPABILITIES_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT => {
-                        "VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => {
-                        "VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT => {
-                        "VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H265_PROFILE_EXT => {
-                        "VIDEO_DECODE_H265_PROFILE_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H265_PICTURE_INFO_EXT => {
-                        "VIDEO_DECODE_H265_PICTURE_INFO_EXT"
-                    }
-                    &Self::VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT => {
-                        "VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT"
-                    }
-                    &Self::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_KHR => {
-                        "DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_KHR"
-                    }
-                    &Self::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_KHR => {
-                        "QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_KHR"
-                    }
-                    &Self::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD => {
-                        "DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD"
-                    }
-                    &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT"
-                    }
-                    &Self::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT"
-                    }
-                    &Self::PRESENT_FRAME_TOKEN_GGP => "PRESENT_FRAME_TOKEN_GGP",
-                    &Self::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV => {
-                        "PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV"
-                    }
-                    &Self::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV"
-                    }
-                    &Self::CHECKPOINT_DATA_NV => "CHECKPOINT_DATA_NV",
-                    &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV => {
-                        "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL => {
-                        "PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL"
-                    }
-                    &Self::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL => {
-                        "QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL"
-                    }
-                    &Self::INITIALIZE_PERFORMANCE_API_INFO_INTEL => {
-                        "INITIALIZE_PERFORMANCE_API_INFO_INTEL"
-                    }
-                    &Self::PERFORMANCE_MARKER_INFO_INTEL => {
-                        "PERFORMANCE_MARKER_INFO_INTEL"
-                    }
-                    &Self::PERFORMANCE_STREAM_MARKER_INFO_INTEL => {
-                        "PERFORMANCE_STREAM_MARKER_INFO_INTEL"
-                    }
-                    &Self::PERFORMANCE_OVERRIDE_INFO_INTEL => {
-                        "PERFORMANCE_OVERRIDE_INFO_INTEL"
-                    }
-                    &Self::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL => {
-                        "PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL"
-                    }
-                    &Self::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT"
-                    }
-                    &Self::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD => {
-                        "DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD"
-                    }
-                    &Self::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD => {
-                        "SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD"
-                    }
-                    &Self::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA => {
-                        "IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA"
-                    }
-                    &Self::METAL_SURFACE_CREATE_INFO_EXT => {
-                        "METAL_SURFACE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT"
-                    }
-                    &Self::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT => {
-                        "RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT"
-                    }
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR"
-                    }
-                    &Self::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR => {
-                        "PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR => {
-                        "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR => {
-                        "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD => {
-                        "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD"
-                    }
-                    &Self::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD => {
-                        "PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT"
-                    }
-                    &Self::MEMORY_PRIORITY_ALLOCATE_INFO_EXT => {
-                        "MEMORY_PRIORITY_ALLOCATE_INFO_EXT"
-                    }
-                    &Self::SURFACE_PROTECTED_CAPABILITIES_KHR => {
-                        "SURFACE_PROTECTED_CAPABILITIES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT"
-                    }
-                    &Self::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT => {
-                        "BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT"
-                    }
-                    &Self::VALIDATION_FEATURES_EXT => "VALIDATION_FEATURES_EXT",
-                    &Self::PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV"
-                    }
-                    &Self::COOPERATIVE_MATRIX_PROPERTIES_NV => {
-                        "COOPERATIVE_MATRIX_PROPERTIES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV => {
-                        "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV"
-                    }
-                    &Self::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV => {
-                        "FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT"
-                    }
-                    &Self::PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT"
-                    }
-                    &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT => {
-                        "SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT"
-                    }
-                    &Self::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT => {
-                        "SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT"
-                    }
-                    &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT => {
-                        "SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT"
-                    }
-                    &Self::HEADLESS_SURFACE_CREATE_INFO_EXT => {
-                        "HEADLESS_SURFACE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT"
-                    }
-                    &Self::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT => {
-                        "PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR"
-                    }
-                    &Self::PIPELINE_INFO_KHR => "PIPELINE_INFO_KHR",
-                    &Self::PIPELINE_EXECUTABLE_PROPERTIES_KHR => {
-                        "PIPELINE_EXECUTABLE_PROPERTIES_KHR"
-                    }
-                    &Self::PIPELINE_EXECUTABLE_INFO_KHR => "PIPELINE_EXECUTABLE_INFO_KHR",
-                    &Self::PIPELINE_EXECUTABLE_STATISTIC_KHR => {
-                        "PIPELINE_EXECUTABLE_STATISTIC_KHR"
-                    }
-                    &Self::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR => {
-                        "PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV => {
-                        "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV"
-                    }
-                    &Self::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV => {
-                        "GRAPHICS_SHADER_GROUP_CREATE_INFO_NV"
-                    }
-                    &Self::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV => {
-                        "GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV"
-                    }
-                    &Self::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV => {
-                        "INDIRECT_COMMANDS_LAYOUT_TOKEN_NV"
-                    }
-                    &Self::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV => {
-                        "INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV"
-                    }
-                    &Self::GENERATED_COMMANDS_INFO_NV => "GENERATED_COMMANDS_INFO_NV",
-                    &Self::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV => {
-                        "GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV"
-                    }
-                    &Self::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV => {
-                        "COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT"
-                    }
-                    &Self::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM => {
-                        "COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM"
-                    }
-                    &Self::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM => {
-                        "RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM"
-                    }
-                    &Self::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT"
-                    }
-                    &Self::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT => {
-                        "DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT"
-                    }
-                    &Self::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT => {
-                        "DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT"
-                    }
-                    &Self::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT => {
-                        "SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT"
-                    }
-                    &Self::PIPELINE_LIBRARY_CREATE_INFO_KHR => {
-                        "PIPELINE_LIBRARY_CREATE_INFO_KHR"
-                    }
-                    &Self::PRESENT_ID_KHR => "PRESENT_ID_KHR",
-                    &Self::PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR"
-                    }
-                    &Self::VIDEO_ENCODE_INFO_KHR => "VIDEO_ENCODE_INFO_KHR",
-                    &Self::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR => {
-                        "VIDEO_ENCODE_RATE_CONTROL_INFO_KHR"
-                    }
-                    &Self::VIDEO_ENCODE_RATE_CONTROL_LAYER_INFO_KHR => {
-                        "VIDEO_ENCODE_RATE_CONTROL_LAYER_INFO_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV"
-                    }
-                    &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => {
-                        "DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV"
-                    }
-                    &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV => {
-                        "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV"
-                    }
-                    &Self::CHECKPOINT_DATA_2_NV => "CHECKPOINT_DATA_2_NV",
-                    &Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV => {
-                        "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV"
-                    }
-                    &Self::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV => {
-                        "PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV => {
-                        "ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV"
-                    }
-                    &Self::ACCELERATION_STRUCTURE_MOTION_INFO_NV => {
-                        "ACCELERATION_STRUCTURE_MOTION_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT"
-                    }
-                    &Self::COPY_COMMAND_TRANSFORM_INFO_QCOM => {
-                        "COPY_COMMAND_TRANSFORM_INFO_QCOM"
-                    }
-                    &Self::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR => {
-                        "PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR"
-                    }
-                    &Self::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM => {
-                        "PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM"
-                    }
-                    &Self::PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT"
-                    }
-                    &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => {
-                        "DIRECTFB_SURFACE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => {
-                        "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE"
-                    }
-                    &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => {
-                        "MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE"
-                    }
-                    &Self::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT"
-                    }
-                    &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => {
-                        "VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT"
-                    }
-                    &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => {
-                        "VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_DRM_PROPERTIES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT"
-                    }
-                    &Self::PIPELINE_VIEWPORT_DEPTH_CLIP_CONTROL_CREATE_INFO_EXT => {
-                        "PIPELINE_VIEWPORT_DEPTH_CLIP_CONTROL_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT"
-                    }
-                    &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => {
-                        "IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA"
-                    }
-                    &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => {
-                        "MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA"
-                    }
-                    &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => {
-                        "MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA"
-                    }
-                    &Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => {
-                        "IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA"
-                    }
-                    &Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => {
-                        "SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA"
-                    }
-                    &Self::BUFFER_COLLECTION_CREATE_INFO_FUCHSIA => {
-                        "BUFFER_COLLECTION_CREATE_INFO_FUCHSIA"
-                    }
-                    &Self::IMPORT_MEMORY_BUFFER_COLLECTION_FUCHSIA => {
-                        "IMPORT_MEMORY_BUFFER_COLLECTION_FUCHSIA"
-                    }
-                    &Self::BUFFER_COLLECTION_IMAGE_CREATE_INFO_FUCHSIA => {
-                        "BUFFER_COLLECTION_IMAGE_CREATE_INFO_FUCHSIA"
-                    }
-                    &Self::BUFFER_COLLECTION_PROPERTIES_FUCHSIA => {
-                        "BUFFER_COLLECTION_PROPERTIES_FUCHSIA"
-                    }
-                    &Self::BUFFER_CONSTRAINTS_INFO_FUCHSIA => {
-                        "BUFFER_CONSTRAINTS_INFO_FUCHSIA"
-                    }
-                    &Self::BUFFER_COLLECTION_BUFFER_CREATE_INFO_FUCHSIA => {
-                        "BUFFER_COLLECTION_BUFFER_CREATE_INFO_FUCHSIA"
-                    }
-                    &Self::IMAGE_CONSTRAINTS_INFO_FUCHSIA => {
-                        "IMAGE_CONSTRAINTS_INFO_FUCHSIA"
-                    }
-                    &Self::IMAGE_FORMAT_CONSTRAINTS_INFO_FUCHSIA => {
-                        "IMAGE_FORMAT_CONSTRAINTS_INFO_FUCHSIA"
-                    }
-                    &Self::SYSMEM_COLOR_SPACE_FUCHSIA => "SYSMEM_COLOR_SPACE_FUCHSIA",
-                    &Self::BUFFER_COLLECTION_CONSTRAINTS_INFO_FUCHSIA => {
-                        "BUFFER_COLLECTION_CONSTRAINTS_INFO_FUCHSIA"
-                    }
-                    &Self::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => {
-                        "SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI"
-                    }
-                    &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => {
-                        "PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI"
-                    }
-                    &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI => {
-                        "PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI"
-                    }
-                    &Self::PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI => {
-                        "PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI"
-                    }
-                    &Self::MEMORY_GET_REMOTE_ADDRESS_INFO_NV => {
-                        "MEMORY_GET_REMOTE_ADDRESS_INFO_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV"
-                    }
-                    &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT"
-                    }
-                    &Self::SCREEN_SURFACE_CREATE_INFO_QNX => {
-                        "SCREEN_SURFACE_CREATE_INFO_QNX"
-                    }
-                    &Self::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT"
-                    }
-                    &Self::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT => {
-                        "PIPELINE_COLOR_WRITE_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT"
-                    }
-                    &Self::IMAGE_VIEW_MIN_LOD_CREATE_INFO_EXT => {
-                        "IMAGE_VIEW_MIN_LOD_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT => {
-                        "PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT"
-                    }
-                    &Self::SAMPLER_BORDER_COLOR_COMPONENT_MAPPING_CREATE_INFO_EXT => {
-                        "SAMPLER_BORDER_COLOR_COMPONENT_MAPPING_CREATE_INFO_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT => {
-                        "PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM => {
-                        "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM"
-                    }
-                    &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_PROPERTIES_QCOM => {
-                        "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_PROPERTIES_QCOM"
-                    }
-                    &Self::SUBPASS_FRAGMENT_DENSITY_MAP_OFFSET_END_INFO_QCOM => {
-                        "SUBPASS_FRAGMENT_DENSITY_MAP_OFFSET_END_INFO_QCOM"
-                    }
-                    &Self::PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV => {
-                        "PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::APPLICATION_INFO => "APPLICATION_INFO",
+                &Self::INSTANCE_CREATE_INFO => "INSTANCE_CREATE_INFO",
+                &Self::DEVICE_QUEUE_CREATE_INFO => "DEVICE_QUEUE_CREATE_INFO",
+                &Self::DEVICE_CREATE_INFO => "DEVICE_CREATE_INFO",
+                &Self::SUBMIT_INFO => "SUBMIT_INFO",
+                &Self::MEMORY_ALLOCATE_INFO => "MEMORY_ALLOCATE_INFO",
+                &Self::MAPPED_MEMORY_RANGE => "MAPPED_MEMORY_RANGE",
+                &Self::BIND_SPARSE_INFO => "BIND_SPARSE_INFO",
+                &Self::FENCE_CREATE_INFO => "FENCE_CREATE_INFO",
+                &Self::SEMAPHORE_CREATE_INFO => "SEMAPHORE_CREATE_INFO",
+                &Self::EVENT_CREATE_INFO => "EVENT_CREATE_INFO",
+                &Self::QUERY_POOL_CREATE_INFO => "QUERY_POOL_CREATE_INFO",
+                &Self::BUFFER_CREATE_INFO => "BUFFER_CREATE_INFO",
+                &Self::BUFFER_VIEW_CREATE_INFO => "BUFFER_VIEW_CREATE_INFO",
+                &Self::IMAGE_CREATE_INFO => "IMAGE_CREATE_INFO",
+                &Self::IMAGE_VIEW_CREATE_INFO => "IMAGE_VIEW_CREATE_INFO",
+                &Self::SHADER_MODULE_CREATE_INFO => "SHADER_MODULE_CREATE_INFO",
+                &Self::PIPELINE_CACHE_CREATE_INFO => "PIPELINE_CACHE_CREATE_INFO",
+                &Self::PIPELINE_SHADER_STAGE_CREATE_INFO => {
+                    "PIPELINE_SHADER_STAGE_CREATE_INFO"
+                }
+                &Self::PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO => {
+                    "PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO => {
+                    "PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_TESSELLATION_STATE_CREATE_INFO => {
+                    "PIPELINE_TESSELLATION_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_VIEWPORT_STATE_CREATE_INFO => {
+                    "PIPELINE_VIEWPORT_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_RASTERIZATION_STATE_CREATE_INFO => {
+                    "PIPELINE_RASTERIZATION_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_MULTISAMPLE_STATE_CREATE_INFO => {
+                    "PIPELINE_MULTISAMPLE_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO => {
+                    "PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_COLOR_BLEND_STATE_CREATE_INFO => {
+                    "PIPELINE_COLOR_BLEND_STATE_CREATE_INFO"
+                }
+                &Self::PIPELINE_DYNAMIC_STATE_CREATE_INFO => {
+                    "PIPELINE_DYNAMIC_STATE_CREATE_INFO"
+                }
+                &Self::GRAPHICS_PIPELINE_CREATE_INFO => "GRAPHICS_PIPELINE_CREATE_INFO",
+                &Self::COMPUTE_PIPELINE_CREATE_INFO => "COMPUTE_PIPELINE_CREATE_INFO",
+                &Self::PIPELINE_LAYOUT_CREATE_INFO => "PIPELINE_LAYOUT_CREATE_INFO",
+                &Self::SAMPLER_CREATE_INFO => "SAMPLER_CREATE_INFO",
+                &Self::DESCRIPTOR_SET_LAYOUT_CREATE_INFO => {
+                    "DESCRIPTOR_SET_LAYOUT_CREATE_INFO"
+                }
+                &Self::DESCRIPTOR_POOL_CREATE_INFO => "DESCRIPTOR_POOL_CREATE_INFO",
+                &Self::DESCRIPTOR_SET_ALLOCATE_INFO => "DESCRIPTOR_SET_ALLOCATE_INFO",
+                &Self::WRITE_DESCRIPTOR_SET => "WRITE_DESCRIPTOR_SET",
+                &Self::COPY_DESCRIPTOR_SET => "COPY_DESCRIPTOR_SET",
+                &Self::FRAMEBUFFER_CREATE_INFO => "FRAMEBUFFER_CREATE_INFO",
+                &Self::RENDER_PASS_CREATE_INFO => "RENDER_PASS_CREATE_INFO",
+                &Self::COMMAND_POOL_CREATE_INFO => "COMMAND_POOL_CREATE_INFO",
+                &Self::COMMAND_BUFFER_ALLOCATE_INFO => "COMMAND_BUFFER_ALLOCATE_INFO",
+                &Self::COMMAND_BUFFER_INHERITANCE_INFO => {
+                    "COMMAND_BUFFER_INHERITANCE_INFO"
+                }
+                &Self::COMMAND_BUFFER_BEGIN_INFO => "COMMAND_BUFFER_BEGIN_INFO",
+                &Self::RENDER_PASS_BEGIN_INFO => "RENDER_PASS_BEGIN_INFO",
+                &Self::BUFFER_MEMORY_BARRIER => "BUFFER_MEMORY_BARRIER",
+                &Self::IMAGE_MEMORY_BARRIER => "IMAGE_MEMORY_BARRIER",
+                &Self::MEMORY_BARRIER => "MEMORY_BARRIER",
+                &Self::LOADER_INSTANCE_CREATE_INFO => "LOADER_INSTANCE_CREATE_INFO",
+                &Self::LOADER_DEVICE_CREATE_INFO => "LOADER_DEVICE_CREATE_INFO",
+                &Self::PHYSICAL_DEVICE_SUBGROUP_PROPERTIES => {
+                    "PHYSICAL_DEVICE_SUBGROUP_PROPERTIES"
+                }
+                &Self::BIND_BUFFER_MEMORY_INFO => "BIND_BUFFER_MEMORY_INFO",
+                &Self::BIND_IMAGE_MEMORY_INFO => "BIND_IMAGE_MEMORY_INFO",
+                &Self::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES => {
+                    "PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES"
+                }
+                &Self::MEMORY_DEDICATED_REQUIREMENTS => "MEMORY_DEDICATED_REQUIREMENTS",
+                &Self::MEMORY_DEDICATED_ALLOCATE_INFO => "MEMORY_DEDICATED_ALLOCATE_INFO",
+                &Self::MEMORY_ALLOCATE_FLAGS_INFO => "MEMORY_ALLOCATE_FLAGS_INFO",
+                &Self::DEVICE_GROUP_RENDER_PASS_BEGIN_INFO => {
+                    "DEVICE_GROUP_RENDER_PASS_BEGIN_INFO"
+                }
+                &Self::DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO => {
+                    "DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO"
+                }
+                &Self::DEVICE_GROUP_SUBMIT_INFO => "DEVICE_GROUP_SUBMIT_INFO",
+                &Self::DEVICE_GROUP_BIND_SPARSE_INFO => "DEVICE_GROUP_BIND_SPARSE_INFO",
+                &Self::BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO => {
+                    "BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO"
+                }
+                &Self::BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO => {
+                    "BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_GROUP_PROPERTIES => {
+                    "PHYSICAL_DEVICE_GROUP_PROPERTIES"
+                }
+                &Self::DEVICE_GROUP_DEVICE_CREATE_INFO => {
+                    "DEVICE_GROUP_DEVICE_CREATE_INFO"
+                }
+                &Self::BUFFER_MEMORY_REQUIREMENTS_INFO_2 => {
+                    "BUFFER_MEMORY_REQUIREMENTS_INFO_2"
+                }
+                &Self::IMAGE_MEMORY_REQUIREMENTS_INFO_2 => {
+                    "IMAGE_MEMORY_REQUIREMENTS_INFO_2"
+                }
+                &Self::IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2 => {
+                    "IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2"
+                }
+                &Self::MEMORY_REQUIREMENTS_2 => "MEMORY_REQUIREMENTS_2",
+                &Self::SPARSE_IMAGE_MEMORY_REQUIREMENTS_2 => {
+                    "SPARSE_IMAGE_MEMORY_REQUIREMENTS_2"
+                }
+                &Self::PHYSICAL_DEVICE_FEATURES_2 => "PHYSICAL_DEVICE_FEATURES_2",
+                &Self::PHYSICAL_DEVICE_PROPERTIES_2 => "PHYSICAL_DEVICE_PROPERTIES_2",
+                &Self::FORMAT_PROPERTIES_2 => "FORMAT_PROPERTIES_2",
+                &Self::IMAGE_FORMAT_PROPERTIES_2 => "IMAGE_FORMAT_PROPERTIES_2",
+                &Self::PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2 => {
+                    "PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2"
+                }
+                &Self::QUEUE_FAMILY_PROPERTIES_2 => "QUEUE_FAMILY_PROPERTIES_2",
+                &Self::PHYSICAL_DEVICE_MEMORY_PROPERTIES_2 => {
+                    "PHYSICAL_DEVICE_MEMORY_PROPERTIES_2"
+                }
+                &Self::SPARSE_IMAGE_FORMAT_PROPERTIES_2 => {
+                    "SPARSE_IMAGE_FORMAT_PROPERTIES_2"
+                }
+                &Self::PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2 => {
+                    "PHYSICAL_DEVICE_SPARSE_IMAGE_FORMAT_INFO_2"
+                }
+                &Self::PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES => {
+                    "PHYSICAL_DEVICE_POINT_CLIPPING_PROPERTIES"
+                }
+                &Self::RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO => {
+                    "RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO"
+                }
+                &Self::IMAGE_VIEW_USAGE_CREATE_INFO => "IMAGE_VIEW_USAGE_CREATE_INFO",
+                &Self::PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO => {
+                    "PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO"
+                }
+                &Self::RENDER_PASS_MULTIVIEW_CREATE_INFO => {
+                    "RENDER_PASS_MULTIVIEW_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_MULTIVIEW_FEATURES => {
+                    "PHYSICAL_DEVICE_MULTIVIEW_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES => {
+                    "PHYSICAL_DEVICE_MULTIVIEW_PROPERTIES"
+                }
+                &Self::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES => {
+                    "PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES"
+                }
+                &Self::PROTECTED_SUBMIT_INFO => "PROTECTED_SUBMIT_INFO",
+                &Self::PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES => {
+                    "PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES => {
+                    "PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES"
+                }
+                &Self::DEVICE_QUEUE_INFO_2 => "DEVICE_QUEUE_INFO_2",
+                &Self::SAMPLER_YCBCR_CONVERSION_CREATE_INFO => {
+                    "SAMPLER_YCBCR_CONVERSION_CREATE_INFO"
+                }
+                &Self::SAMPLER_YCBCR_CONVERSION_INFO => "SAMPLER_YCBCR_CONVERSION_INFO",
+                &Self::BIND_IMAGE_PLANE_MEMORY_INFO => "BIND_IMAGE_PLANE_MEMORY_INFO",
+                &Self::IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO => {
+                    "IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES => {
+                    "PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES"
+                }
+                &Self::SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES => {
+                    "SAMPLER_YCBCR_CONVERSION_IMAGE_FORMAT_PROPERTIES"
+                }
+                &Self::DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO => {
+                    "DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO => {
+                    "PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO"
+                }
+                &Self::EXTERNAL_IMAGE_FORMAT_PROPERTIES => {
+                    "EXTERNAL_IMAGE_FORMAT_PROPERTIES"
+                }
+                &Self::PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO => {
+                    "PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO"
+                }
+                &Self::EXTERNAL_BUFFER_PROPERTIES => "EXTERNAL_BUFFER_PROPERTIES",
+                &Self::PHYSICAL_DEVICE_ID_PROPERTIES => "PHYSICAL_DEVICE_ID_PROPERTIES",
+                &Self::EXTERNAL_MEMORY_BUFFER_CREATE_INFO => {
+                    "EXTERNAL_MEMORY_BUFFER_CREATE_INFO"
+                }
+                &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO => {
+                    "EXTERNAL_MEMORY_IMAGE_CREATE_INFO"
+                }
+                &Self::EXPORT_MEMORY_ALLOCATE_INFO => "EXPORT_MEMORY_ALLOCATE_INFO",
+                &Self::PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO => {
+                    "PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO"
+                }
+                &Self::EXTERNAL_FENCE_PROPERTIES => "EXTERNAL_FENCE_PROPERTIES",
+                &Self::EXPORT_FENCE_CREATE_INFO => "EXPORT_FENCE_CREATE_INFO",
+                &Self::EXPORT_SEMAPHORE_CREATE_INFO => "EXPORT_SEMAPHORE_CREATE_INFO",
+                &Self::PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO => {
+                    "PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO"
+                }
+                &Self::EXTERNAL_SEMAPHORE_PROPERTIES => "EXTERNAL_SEMAPHORE_PROPERTIES",
+                &Self::PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES => {
+                    "PHYSICAL_DEVICE_MAINTENANCE_3_PROPERTIES"
+                }
+                &Self::DESCRIPTOR_SET_LAYOUT_SUPPORT => "DESCRIPTOR_SET_LAYOUT_SUPPORT",
+                &Self::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES => {
+                    "PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES => {
+                    "PHYSICAL_DEVICE_VULKAN_1_1_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES => {
+                    "PHYSICAL_DEVICE_VULKAN_1_1_PROPERTIES"
+                }
+                &Self::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES => {
+                    "PHYSICAL_DEVICE_VULKAN_1_2_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES => {
+                    "PHYSICAL_DEVICE_VULKAN_1_2_PROPERTIES"
+                }
+                &Self::IMAGE_FORMAT_LIST_CREATE_INFO => "IMAGE_FORMAT_LIST_CREATE_INFO",
+                &Self::ATTACHMENT_DESCRIPTION_2 => "ATTACHMENT_DESCRIPTION_2",
+                &Self::ATTACHMENT_REFERENCE_2 => "ATTACHMENT_REFERENCE_2",
+                &Self::SUBPASS_DESCRIPTION_2 => "SUBPASS_DESCRIPTION_2",
+                &Self::SUBPASS_DEPENDENCY_2 => "SUBPASS_DEPENDENCY_2",
+                &Self::RENDER_PASS_CREATE_INFO_2 => "RENDER_PASS_CREATE_INFO_2",
+                &Self::SUBPASS_BEGIN_INFO => "SUBPASS_BEGIN_INFO",
+                &Self::SUBPASS_END_INFO => "SUBPASS_END_INFO",
+                &Self::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES => {
+                    "PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_DRIVER_PROPERTIES => {
+                    "PHYSICAL_DEVICE_DRIVER_PROPERTIES"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES => {
+                    "PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES => {
+                    "PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES => {
+                    "PHYSICAL_DEVICE_FLOAT_CONTROLS_PROPERTIES"
+                }
+                &Self::DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO => {
+                    "DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES => {
+                    "PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES => {
+                    "PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES"
+                }
+                &Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO => {
+                    "DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO"
+                }
+                &Self::DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT => {
+                    "DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_LAYOUT_SUPPORT"
+                }
+                &Self::PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES => {
+                    "PHYSICAL_DEVICE_DEPTH_STENCIL_RESOLVE_PROPERTIES"
+                }
+                &Self::SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE => {
+                    "SUBPASS_DESCRIPTION_DEPTH_STENCIL_RESOLVE"
+                }
+                &Self::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES => {
+                    "PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES"
+                }
+                &Self::IMAGE_STENCIL_USAGE_CREATE_INFO => {
+                    "IMAGE_STENCIL_USAGE_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES => {
+                    "PHYSICAL_DEVICE_SAMPLER_FILTER_MINMAX_PROPERTIES"
+                }
+                &Self::SAMPLER_REDUCTION_MODE_CREATE_INFO => {
+                    "SAMPLER_REDUCTION_MODE_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES => {
+                    "PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES => {
+                    "PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES"
+                }
+                &Self::FRAMEBUFFER_ATTACHMENTS_CREATE_INFO => {
+                    "FRAMEBUFFER_ATTACHMENTS_CREATE_INFO"
+                }
+                &Self::FRAMEBUFFER_ATTACHMENT_IMAGE_INFO => {
+                    "FRAMEBUFFER_ATTACHMENT_IMAGE_INFO"
+                }
+                &Self::RENDER_PASS_ATTACHMENT_BEGIN_INFO => {
+                    "RENDER_PASS_ATTACHMENT_BEGIN_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES => {
+                    "PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES => {
+                    "PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES => {
+                    "PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES"
+                }
+                &Self::ATTACHMENT_REFERENCE_STENCIL_LAYOUT => {
+                    "ATTACHMENT_REFERENCE_STENCIL_LAYOUT"
+                }
+                &Self::ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT => {
+                    "ATTACHMENT_DESCRIPTION_STENCIL_LAYOUT"
+                }
+                &Self::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES => {
+                    "PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES => {
+                    "PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES => {
+                    "PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_PROPERTIES"
+                }
+                &Self::SEMAPHORE_TYPE_CREATE_INFO => "SEMAPHORE_TYPE_CREATE_INFO",
+                &Self::TIMELINE_SEMAPHORE_SUBMIT_INFO => "TIMELINE_SEMAPHORE_SUBMIT_INFO",
+                &Self::SEMAPHORE_WAIT_INFO => "SEMAPHORE_WAIT_INFO",
+                &Self::SEMAPHORE_SIGNAL_INFO => "SEMAPHORE_SIGNAL_INFO",
+                &Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES => {
+                    "PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES"
+                }
+                &Self::BUFFER_DEVICE_ADDRESS_INFO => "BUFFER_DEVICE_ADDRESS_INFO",
+                &Self::BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO => {
+                    "BUFFER_OPAQUE_CAPTURE_ADDRESS_CREATE_INFO"
+                }
+                &Self::MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO => {
+                    "MEMORY_OPAQUE_CAPTURE_ADDRESS_ALLOCATE_INFO"
+                }
+                &Self::DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO => {
+                    "DEVICE_MEMORY_OPAQUE_CAPTURE_ADDRESS_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_VULKAN_1_3_FEATURES => {
+                    "PHYSICAL_DEVICE_VULKAN_1_3_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_VULKAN_1_3_PROPERTIES => {
+                    "PHYSICAL_DEVICE_VULKAN_1_3_PROPERTIES"
+                }
+                &Self::PIPELINE_CREATION_FEEDBACK_CREATE_INFO => {
+                    "PIPELINE_CREATION_FEEDBACK_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES => {
+                    "PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_TOOL_PROPERTIES => {
+                    "PHYSICAL_DEVICE_TOOL_PROPERTIES"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES => {
+                    "PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES => {
+                    "PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES"
+                }
+                &Self::DEVICE_PRIVATE_DATA_CREATE_INFO => {
+                    "DEVICE_PRIVATE_DATA_CREATE_INFO"
+                }
+                &Self::PRIVATE_DATA_SLOT_CREATE_INFO => "PRIVATE_DATA_SLOT_CREATE_INFO",
+                &Self::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES => {
+                    "PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES"
+                }
+                &Self::MEMORY_BARRIER_2 => "MEMORY_BARRIER_2",
+                &Self::BUFFER_MEMORY_BARRIER_2 => "BUFFER_MEMORY_BARRIER_2",
+                &Self::IMAGE_MEMORY_BARRIER_2 => "IMAGE_MEMORY_BARRIER_2",
+                &Self::DEPENDENCY_INFO => "DEPENDENCY_INFO",
+                &Self::SUBMIT_INFO_2 => "SUBMIT_INFO_2",
+                &Self::SEMAPHORE_SUBMIT_INFO => "SEMAPHORE_SUBMIT_INFO",
+                &Self::COMMAND_BUFFER_SUBMIT_INFO => "COMMAND_BUFFER_SUBMIT_INFO",
+                &Self::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES => {
+                    "PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES => {
+                    "PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES => {
+                    "PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES"
+                }
+                &Self::COPY_BUFFER_INFO_2 => "COPY_BUFFER_INFO_2",
+                &Self::COPY_IMAGE_INFO_2 => "COPY_IMAGE_INFO_2",
+                &Self::COPY_BUFFER_TO_IMAGE_INFO_2 => "COPY_BUFFER_TO_IMAGE_INFO_2",
+                &Self::COPY_IMAGE_TO_BUFFER_INFO_2 => "COPY_IMAGE_TO_BUFFER_INFO_2",
+                &Self::BLIT_IMAGE_INFO_2 => "BLIT_IMAGE_INFO_2",
+                &Self::RESOLVE_IMAGE_INFO_2 => "RESOLVE_IMAGE_INFO_2",
+                &Self::BUFFER_COPY_2 => "BUFFER_COPY_2",
+                &Self::IMAGE_COPY_2 => "IMAGE_COPY_2",
+                &Self::IMAGE_BLIT_2 => "IMAGE_BLIT_2",
+                &Self::BUFFER_IMAGE_COPY_2 => "BUFFER_IMAGE_COPY_2",
+                &Self::IMAGE_RESOLVE_2 => "IMAGE_RESOLVE_2",
+                &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES => {
+                    "PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_PROPERTIES"
+                }
+                &Self::PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO => {
+                    "PIPELINE_SHADER_STAGE_REQUIRED_SUBGROUP_SIZE_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES => {
+                    "PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES => {
+                    "PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES => {
+                    "PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_PROPERTIES"
+                }
+                &Self::WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK => {
+                    "WRITE_DESCRIPTOR_SET_INLINE_UNIFORM_BLOCK"
+                }
+                &Self::DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO => {
+                    "DESCRIPTOR_POOL_INLINE_UNIFORM_BLOCK_CREATE_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES => {
+                    "PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES"
+                }
+                &Self::RENDERING_INFO => "RENDERING_INFO",
+                &Self::RENDERING_ATTACHMENT_INFO => "RENDERING_ATTACHMENT_INFO",
+                &Self::PIPELINE_RENDERING_CREATE_INFO => "PIPELINE_RENDERING_CREATE_INFO",
+                &Self::PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES => {
+                    "PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES"
+                }
+                &Self::COMMAND_BUFFER_INHERITANCE_RENDERING_INFO => {
+                    "COMMAND_BUFFER_INHERITANCE_RENDERING_INFO"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES => {
+                    "PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_PROPERTIES => {
+                    "PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_PROPERTIES"
+                }
+                &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES => {
+                    "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_PROPERTIES"
+                }
+                &Self::FORMAT_PROPERTIES_3 => "FORMAT_PROPERTIES_3",
+                &Self::PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES => {
+                    "PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES"
+                }
+                &Self::PHYSICAL_DEVICE_MAINTENANCE_4_PROPERTIES => {
+                    "PHYSICAL_DEVICE_MAINTENANCE_4_PROPERTIES"
+                }
+                &Self::DEVICE_BUFFER_MEMORY_REQUIREMENTS => {
+                    "DEVICE_BUFFER_MEMORY_REQUIREMENTS"
+                }
+                &Self::DEVICE_IMAGE_MEMORY_REQUIREMENTS => {
+                    "DEVICE_IMAGE_MEMORY_REQUIREMENTS"
+                }
+                &Self::SWAPCHAIN_CREATE_INFO_KHR => "SWAPCHAIN_CREATE_INFO_KHR",
+                &Self::PRESENT_INFO_KHR => "PRESENT_INFO_KHR",
+                &Self::DEVICE_GROUP_PRESENT_CAPABILITIES_KHR => {
+                    "DEVICE_GROUP_PRESENT_CAPABILITIES_KHR"
+                }
+                &Self::IMAGE_SWAPCHAIN_CREATE_INFO_KHR => {
+                    "IMAGE_SWAPCHAIN_CREATE_INFO_KHR"
+                }
+                &Self::BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR => {
+                    "BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR"
+                }
+                &Self::ACQUIRE_NEXT_IMAGE_INFO_KHR => "ACQUIRE_NEXT_IMAGE_INFO_KHR",
+                &Self::DEVICE_GROUP_PRESENT_INFO_KHR => "DEVICE_GROUP_PRESENT_INFO_KHR",
+                &Self::DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR => {
+                    "DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR"
+                }
+                &Self::DISPLAY_MODE_CREATE_INFO_KHR => "DISPLAY_MODE_CREATE_INFO_KHR",
+                &Self::DISPLAY_SURFACE_CREATE_INFO_KHR => {
+                    "DISPLAY_SURFACE_CREATE_INFO_KHR"
+                }
+                &Self::DISPLAY_PRESENT_INFO_KHR => "DISPLAY_PRESENT_INFO_KHR",
+                &Self::XLIB_SURFACE_CREATE_INFO_KHR => "XLIB_SURFACE_CREATE_INFO_KHR",
+                &Self::XCB_SURFACE_CREATE_INFO_KHR => "XCB_SURFACE_CREATE_INFO_KHR",
+                &Self::WAYLAND_SURFACE_CREATE_INFO_KHR => {
+                    "WAYLAND_SURFACE_CREATE_INFO_KHR"
+                }
+                &Self::ANDROID_SURFACE_CREATE_INFO_KHR => {
+                    "ANDROID_SURFACE_CREATE_INFO_KHR"
+                }
+                &Self::WIN32_SURFACE_CREATE_INFO_KHR => "WIN32_SURFACE_CREATE_INFO_KHR",
+                &Self::DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT => {
+                    "DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT"
+                }
+                &Self::PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD => {
+                    "PIPELINE_RASTERIZATION_STATE_RASTERIZATION_ORDER_AMD"
+                }
+                &Self::DEBUG_MARKER_OBJECT_NAME_INFO_EXT => {
+                    "DEBUG_MARKER_OBJECT_NAME_INFO_EXT"
+                }
+                &Self::DEBUG_MARKER_OBJECT_TAG_INFO_EXT => {
+                    "DEBUG_MARKER_OBJECT_TAG_INFO_EXT"
+                }
+                &Self::DEBUG_MARKER_MARKER_INFO_EXT => "DEBUG_MARKER_MARKER_INFO_EXT",
+                &Self::VIDEO_PROFILE_KHR => "VIDEO_PROFILE_KHR",
+                &Self::VIDEO_CAPABILITIES_KHR => "VIDEO_CAPABILITIES_KHR",
+                &Self::VIDEO_PICTURE_RESOURCE_KHR => "VIDEO_PICTURE_RESOURCE_KHR",
+                &Self::VIDEO_GET_MEMORY_PROPERTIES_KHR => {
+                    "VIDEO_GET_MEMORY_PROPERTIES_KHR"
+                }
+                &Self::VIDEO_BIND_MEMORY_KHR => "VIDEO_BIND_MEMORY_KHR",
+                &Self::VIDEO_SESSION_CREATE_INFO_KHR => "VIDEO_SESSION_CREATE_INFO_KHR",
+                &Self::VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR => {
+                    "VIDEO_SESSION_PARAMETERS_CREATE_INFO_KHR"
+                }
+                &Self::VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR => {
+                    "VIDEO_SESSION_PARAMETERS_UPDATE_INFO_KHR"
+                }
+                &Self::VIDEO_BEGIN_CODING_INFO_KHR => "VIDEO_BEGIN_CODING_INFO_KHR",
+                &Self::VIDEO_END_CODING_INFO_KHR => "VIDEO_END_CODING_INFO_KHR",
+                &Self::VIDEO_CODING_CONTROL_INFO_KHR => "VIDEO_CODING_CONTROL_INFO_KHR",
+                &Self::VIDEO_REFERENCE_SLOT_KHR => "VIDEO_REFERENCE_SLOT_KHR",
+                &Self::VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR => {
+                    "VIDEO_QUEUE_FAMILY_PROPERTIES_2_KHR"
+                }
+                &Self::VIDEO_PROFILES_KHR => "VIDEO_PROFILES_KHR",
+                &Self::PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR => {
+                    "PHYSICAL_DEVICE_VIDEO_FORMAT_INFO_KHR"
+                }
+                &Self::VIDEO_FORMAT_PROPERTIES_KHR => "VIDEO_FORMAT_PROPERTIES_KHR",
+                &Self::QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_2_KHR => {
+                    "QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_2_KHR"
+                }
+                &Self::VIDEO_DECODE_INFO_KHR => "VIDEO_DECODE_INFO_KHR",
+                &Self::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV => {
+                    "DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV"
+                }
+                &Self::DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV => {
+                    "DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV"
+                }
+                &Self::DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV => {
+                    "DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_PROPERTIES_EXT"
+                }
+                &Self::PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT => {
+                    "PIPELINE_RASTERIZATION_STATE_STREAM_CREATE_INFO_EXT"
+                }
+                &Self::CU_MODULE_CREATE_INFO_NVX => "CU_MODULE_CREATE_INFO_NVX",
+                &Self::CU_FUNCTION_CREATE_INFO_NVX => "CU_FUNCTION_CREATE_INFO_NVX",
+                &Self::CU_LAUNCH_INFO_NVX => "CU_LAUNCH_INFO_NVX",
+                &Self::IMAGE_VIEW_HANDLE_INFO_NVX => "IMAGE_VIEW_HANDLE_INFO_NVX",
+                &Self::IMAGE_VIEW_ADDRESS_PROPERTIES_NVX => {
+                    "IMAGE_VIEW_ADDRESS_PROPERTIES_NVX"
+                }
+                &Self::VIDEO_ENCODE_H264_CAPABILITIES_EXT => {
+                    "VIDEO_ENCODE_H264_CAPABILITIES_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT => {
+                    "VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => {
+                    "VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => {
+                    "VIDEO_ENCODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT => {
+                    "VIDEO_ENCODE_H264_VCL_FRAME_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT => {
+                    "VIDEO_ENCODE_H264_DPB_SLOT_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_NALU_SLICE_EXT => {
+                    "VIDEO_ENCODE_H264_NALU_SLICE_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT => {
+                    "VIDEO_ENCODE_H264_EMIT_PICTURE_PARAMETERS_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_PROFILE_EXT => "VIDEO_ENCODE_H264_PROFILE_EXT",
+                &Self::VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT => {
+                    "VIDEO_ENCODE_H264_RATE_CONTROL_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT => {
+                    "VIDEO_ENCODE_H264_RATE_CONTROL_LAYER_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H264_REFERENCE_LISTS_EXT => {
+                    "VIDEO_ENCODE_H264_REFERENCE_LISTS_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_CAPABILITIES_EXT => {
+                    "VIDEO_ENCODE_H265_CAPABILITIES_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT => {
+                    "VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => {
+                    "VIDEO_ENCODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT => {
+                    "VIDEO_ENCODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT => {
+                    "VIDEO_ENCODE_H265_VCL_FRAME_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT => {
+                    "VIDEO_ENCODE_H265_DPB_SLOT_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT => {
+                    "VIDEO_ENCODE_H265_NALU_SLICE_SEGMENT_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT => {
+                    "VIDEO_ENCODE_H265_EMIT_PICTURE_PARAMETERS_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_PROFILE_EXT => "VIDEO_ENCODE_H265_PROFILE_EXT",
+                &Self::VIDEO_ENCODE_H265_REFERENCE_LISTS_EXT => {
+                    "VIDEO_ENCODE_H265_REFERENCE_LISTS_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_RATE_CONTROL_INFO_EXT => {
+                    "VIDEO_ENCODE_H265_RATE_CONTROL_INFO_EXT"
+                }
+                &Self::VIDEO_ENCODE_H265_RATE_CONTROL_LAYER_INFO_EXT => {
+                    "VIDEO_ENCODE_H265_RATE_CONTROL_LAYER_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H264_CAPABILITIES_EXT => {
+                    "VIDEO_DECODE_H264_CAPABILITIES_EXT"
+                }
+                &Self::VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT => {
+                    "VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H264_PICTURE_INFO_EXT => {
+                    "VIDEO_DECODE_H264_PICTURE_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H264_MVC_EXT => "VIDEO_DECODE_H264_MVC_EXT",
+                &Self::VIDEO_DECODE_H264_PROFILE_EXT => "VIDEO_DECODE_H264_PROFILE_EXT",
+                &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => {
+                    "VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT => {
+                    "VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT => {
+                    "VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT"
+                }
+                &Self::TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD => {
+                    "TEXTURE_LOD_GATHER_FORMAT_PROPERTIES_AMD"
+                }
+                &Self::RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => {
+                    "RENDERING_FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR"
+                }
+                &Self::RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_INFO_EXT => {
+                    "RENDERING_FRAGMENT_DENSITY_MAP_ATTACHMENT_INFO_EXT"
+                }
+                &Self::ATTACHMENT_SAMPLE_COUNT_INFO_AMD => {
+                    "ATTACHMENT_SAMPLE_COUNT_INFO_AMD"
+                }
+                &Self::MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX => {
+                    "MULTIVIEW_PER_VIEW_ATTRIBUTES_INFO_NVX"
+                }
+                &Self::STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP => {
+                    "STREAM_DESCRIPTOR_SURFACE_CREATE_INFO_GGP"
+                }
+                &Self::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV"
+                }
+                &Self::EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV => {
+                    "EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV"
+                }
+                &Self::EXPORT_MEMORY_ALLOCATE_INFO_NV => "EXPORT_MEMORY_ALLOCATE_INFO_NV",
+                &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_NV => {
+                    "IMPORT_MEMORY_WIN32_HANDLE_INFO_NV"
+                }
+                &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_NV => {
+                    "EXPORT_MEMORY_WIN32_HANDLE_INFO_NV"
+                }
+                &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV => {
+                    "WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_NV"
+                }
+                &Self::VALIDATION_FLAGS_EXT => "VALIDATION_FLAGS_EXT",
+                &Self::VI_SURFACE_CREATE_INFO_NN => "VI_SURFACE_CREATE_INFO_NN",
+                &Self::IMAGE_VIEW_ASTC_DECODE_MODE_EXT => {
+                    "IMAGE_VIEW_ASTC_DECODE_MODE_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT"
+                }
+                &Self::IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR => {
+                    "IMPORT_MEMORY_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR => {
+                    "EXPORT_MEMORY_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::MEMORY_WIN32_HANDLE_PROPERTIES_KHR => {
+                    "MEMORY_WIN32_HANDLE_PROPERTIES_KHR"
+                }
+                &Self::MEMORY_GET_WIN32_HANDLE_INFO_KHR => {
+                    "MEMORY_GET_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::IMPORT_MEMORY_FD_INFO_KHR => "IMPORT_MEMORY_FD_INFO_KHR",
+                &Self::MEMORY_FD_PROPERTIES_KHR => "MEMORY_FD_PROPERTIES_KHR",
+                &Self::MEMORY_GET_FD_INFO_KHR => "MEMORY_GET_FD_INFO_KHR",
+                &Self::WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR => {
+                    "WIN32_KEYED_MUTEX_ACQUIRE_RELEASE_INFO_KHR"
+                }
+                &Self::IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => {
+                    "IMPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR => {
+                    "EXPORT_SEMAPHORE_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::D3D12_FENCE_SUBMIT_INFO_KHR => "D3D12_FENCE_SUBMIT_INFO_KHR",
+                &Self::SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR => {
+                    "SEMAPHORE_GET_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::IMPORT_SEMAPHORE_FD_INFO_KHR => "IMPORT_SEMAPHORE_FD_INFO_KHR",
+                &Self::SEMAPHORE_GET_FD_INFO_KHR => "SEMAPHORE_GET_FD_INFO_KHR",
+                &Self::PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR => {
+                    "PHYSICAL_DEVICE_PUSH_DESCRIPTOR_PROPERTIES_KHR"
+                }
+                &Self::COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT => {
+                    "COMMAND_BUFFER_INHERITANCE_CONDITIONAL_RENDERING_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT"
+                }
+                &Self::CONDITIONAL_RENDERING_BEGIN_INFO_EXT => {
+                    "CONDITIONAL_RENDERING_BEGIN_INFO_EXT"
+                }
+                &Self::PRESENT_REGIONS_KHR => "PRESENT_REGIONS_KHR",
+                &Self::PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV"
+                }
+                &Self::SURFACE_CAPABILITIES_2_EXT => "SURFACE_CAPABILITIES_2_EXT",
+                &Self::DISPLAY_POWER_INFO_EXT => "DISPLAY_POWER_INFO_EXT",
+                &Self::DEVICE_EVENT_INFO_EXT => "DEVICE_EVENT_INFO_EXT",
+                &Self::DISPLAY_EVENT_INFO_EXT => "DISPLAY_EVENT_INFO_EXT",
+                &Self::SWAPCHAIN_COUNTER_CREATE_INFO_EXT => {
+                    "SWAPCHAIN_COUNTER_CREATE_INFO_EXT"
+                }
+                &Self::PRESENT_TIMES_INFO_GOOGLE => "PRESENT_TIMES_INFO_GOOGLE",
+                &Self::PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX => {
+                    "PHYSICAL_DEVICE_MULTIVIEW_PER_VIEW_ATTRIBUTES_PROPERTIES_NVX"
+                }
+                &Self::PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_DISCARD_RECTANGLE_PROPERTIES_EXT"
+                }
+                &Self::PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_CONSERVATIVE_RASTERIZATION_PROPERTIES_EXT"
+                }
+                &Self::PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT"
+                }
+                &Self::PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_RASTERIZATION_DEPTH_CLIP_STATE_CREATE_INFO_EXT"
+                }
+                &Self::HDR_METADATA_EXT => "HDR_METADATA_EXT",
+                &Self::SHARED_PRESENT_SURFACE_CAPABILITIES_KHR => {
+                    "SHARED_PRESENT_SURFACE_CAPABILITIES_KHR"
+                }
+                &Self::IMPORT_FENCE_WIN32_HANDLE_INFO_KHR => {
+                    "IMPORT_FENCE_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::EXPORT_FENCE_WIN32_HANDLE_INFO_KHR => {
+                    "EXPORT_FENCE_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::FENCE_GET_WIN32_HANDLE_INFO_KHR => {
+                    "FENCE_GET_WIN32_HANDLE_INFO_KHR"
+                }
+                &Self::IMPORT_FENCE_FD_INFO_KHR => "IMPORT_FENCE_FD_INFO_KHR",
+                &Self::FENCE_GET_FD_INFO_KHR => "FENCE_GET_FD_INFO_KHR",
+                &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR => {
+                    "PHYSICAL_DEVICE_PERFORMANCE_QUERY_PROPERTIES_KHR"
+                }
+                &Self::QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR => {
+                    "QUERY_POOL_PERFORMANCE_CREATE_INFO_KHR"
+                }
+                &Self::PERFORMANCE_QUERY_SUBMIT_INFO_KHR => {
+                    "PERFORMANCE_QUERY_SUBMIT_INFO_KHR"
+                }
+                &Self::ACQUIRE_PROFILING_LOCK_INFO_KHR => {
+                    "ACQUIRE_PROFILING_LOCK_INFO_KHR"
+                }
+                &Self::PERFORMANCE_COUNTER_KHR => "PERFORMANCE_COUNTER_KHR",
+                &Self::PERFORMANCE_COUNTER_DESCRIPTION_KHR => {
+                    "PERFORMANCE_COUNTER_DESCRIPTION_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_SURFACE_INFO_2_KHR => {
+                    "PHYSICAL_DEVICE_SURFACE_INFO_2_KHR"
+                }
+                &Self::SURFACE_CAPABILITIES_2_KHR => "SURFACE_CAPABILITIES_2_KHR",
+                &Self::SURFACE_FORMAT_2_KHR => "SURFACE_FORMAT_2_KHR",
+                &Self::DISPLAY_PROPERTIES_2_KHR => "DISPLAY_PROPERTIES_2_KHR",
+                &Self::DISPLAY_PLANE_PROPERTIES_2_KHR => "DISPLAY_PLANE_PROPERTIES_2_KHR",
+                &Self::DISPLAY_MODE_PROPERTIES_2_KHR => "DISPLAY_MODE_PROPERTIES_2_KHR",
+                &Self::DISPLAY_PLANE_INFO_2_KHR => "DISPLAY_PLANE_INFO_2_KHR",
+                &Self::DISPLAY_PLANE_CAPABILITIES_2_KHR => {
+                    "DISPLAY_PLANE_CAPABILITIES_2_KHR"
+                }
+                &Self::IOS_SURFACE_CREATE_INFO_MVK => "IOS_SURFACE_CREATE_INFO_MVK",
+                &Self::MACOS_SURFACE_CREATE_INFO_MVK => "MACOS_SURFACE_CREATE_INFO_MVK",
+                &Self::DEBUG_UTILS_OBJECT_NAME_INFO_EXT => {
+                    "DEBUG_UTILS_OBJECT_NAME_INFO_EXT"
+                }
+                &Self::DEBUG_UTILS_OBJECT_TAG_INFO_EXT => {
+                    "DEBUG_UTILS_OBJECT_TAG_INFO_EXT"
+                }
+                &Self::DEBUG_UTILS_LABEL_EXT => "DEBUG_UTILS_LABEL_EXT",
+                &Self::DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT => {
+                    "DEBUG_UTILS_MESSENGER_CALLBACK_DATA_EXT"
+                }
+                &Self::DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT => {
+                    "DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT"
+                }
+                &Self::ANDROID_HARDWARE_BUFFER_USAGE_ANDROID => {
+                    "ANDROID_HARDWARE_BUFFER_USAGE_ANDROID"
+                }
+                &Self::ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID => {
+                    "ANDROID_HARDWARE_BUFFER_PROPERTIES_ANDROID"
+                }
+                &Self::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID => {
+                    "ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_ANDROID"
+                }
+                &Self::IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => {
+                    "IMPORT_ANDROID_HARDWARE_BUFFER_INFO_ANDROID"
+                }
+                &Self::MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID => {
+                    "MEMORY_GET_ANDROID_HARDWARE_BUFFER_INFO_ANDROID"
+                }
+                &Self::EXTERNAL_FORMAT_ANDROID => "EXTERNAL_FORMAT_ANDROID",
+                &Self::ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_2_ANDROID => {
+                    "ANDROID_HARDWARE_BUFFER_FORMAT_PROPERTIES_2_ANDROID"
+                }
+                &Self::SAMPLE_LOCATIONS_INFO_EXT => "SAMPLE_LOCATIONS_INFO_EXT",
+                &Self::RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT => {
+                    "RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT"
+                }
+                &Self::PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_SAMPLE_LOCATIONS_PROPERTIES_EXT"
+                }
+                &Self::MULTISAMPLE_PROPERTIES_EXT => "MULTISAMPLE_PROPERTIES_EXT",
+                &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_PROPERTIES_EXT"
+                }
+                &Self::PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT"
+                }
+                &Self::PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV"
+                }
+                &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR => {
+                    "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR => {
+                    "ACCELERATION_STRUCTURE_BUILD_GEOMETRY_INFO_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR => {
+                    "ACCELERATION_STRUCTURE_DEVICE_ADDRESS_INFO_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR => {
+                    "ACCELERATION_STRUCTURE_GEOMETRY_AABBS_DATA_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR => {
+                    "ACCELERATION_STRUCTURE_GEOMETRY_INSTANCES_DATA_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR => {
+                    "ACCELERATION_STRUCTURE_GEOMETRY_TRIANGLES_DATA_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_GEOMETRY_KHR => {
+                    "ACCELERATION_STRUCTURE_GEOMETRY_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_VERSION_INFO_KHR => {
+                    "ACCELERATION_STRUCTURE_VERSION_INFO_KHR"
+                }
+                &Self::COPY_ACCELERATION_STRUCTURE_INFO_KHR => {
+                    "COPY_ACCELERATION_STRUCTURE_INFO_KHR"
+                }
+                &Self::COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR => {
+                    "COPY_ACCELERATION_STRUCTURE_TO_MEMORY_INFO_KHR"
+                }
+                &Self::COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR => {
+                    "COPY_MEMORY_TO_ACCELERATION_STRUCTURE_INFO_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR => {
+                    "PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_CREATE_INFO_KHR => {
+                    "ACCELERATION_STRUCTURE_CREATE_INFO_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR => {
+                    "ACCELERATION_STRUCTURE_BUILD_SIZES_INFO_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR => {
+                    "PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_PROPERTIES_KHR"
+                }
+                &Self::RAY_TRACING_PIPELINE_CREATE_INFO_KHR => {
+                    "RAY_TRACING_PIPELINE_CREATE_INFO_KHR"
+                }
+                &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR => {
+                    "RAY_TRACING_SHADER_GROUP_CREATE_INFO_KHR"
+                }
+                &Self::RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR => {
+                    "RAY_TRACING_PIPELINE_INTERFACE_CREATE_INFO_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR"
+                }
+                &Self::PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV => {
+                    "PHYSICAL_DEVICE_SHADER_SM_BUILTINS_PROPERTIES_NV"
+                }
+                &Self::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT => {
+                    "DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT => {
+                    "PHYSICAL_DEVICE_IMAGE_DRM_FORMAT_MODIFIER_INFO_EXT"
+                }
+                &Self::IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT => {
+                    "IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT"
+                }
+                &Self::IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT => {
+                    "IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT"
+                }
+                &Self::IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT => {
+                    "IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT"
+                }
+                &Self::DRM_FORMAT_MODIFIER_PROPERTIES_LIST_2_EXT => {
+                    "DRM_FORMAT_MODIFIER_PROPERTIES_LIST_2_EXT"
+                }
+                &Self::VALIDATION_CACHE_CREATE_INFO_EXT => {
+                    "VALIDATION_CACHE_CREATE_INFO_EXT"
+                }
+                &Self::SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT => {
+                    "SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR => {
+                    "PHYSICAL_DEVICE_PORTABILITY_SUBSET_PROPERTIES_KHR"
+                }
+                &Self::PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_VIEWPORT_SHADING_RATE_IMAGE_STATE_CREATE_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV => {
+                    "PHYSICAL_DEVICE_SHADING_RATE_IMAGE_PROPERTIES_NV"
+                }
+                &Self::PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_VIEWPORT_COARSE_SAMPLE_ORDER_STATE_CREATE_INFO_NV"
+                }
+                &Self::RAY_TRACING_PIPELINE_CREATE_INFO_NV => {
+                    "RAY_TRACING_PIPELINE_CREATE_INFO_NV"
+                }
+                &Self::ACCELERATION_STRUCTURE_CREATE_INFO_NV => {
+                    "ACCELERATION_STRUCTURE_CREATE_INFO_NV"
+                }
+                &Self::GEOMETRY_NV => "GEOMETRY_NV",
+                &Self::GEOMETRY_TRIANGLES_NV => "GEOMETRY_TRIANGLES_NV",
+                &Self::GEOMETRY_AABB_NV => "GEOMETRY_AABB_NV",
+                &Self::BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV => {
+                    "BIND_ACCELERATION_STRUCTURE_MEMORY_INFO_NV"
+                }
+                &Self::WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV => {
+                    "WRITE_DESCRIPTOR_SET_ACCELERATION_STRUCTURE_NV"
+                }
+                &Self::ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV => {
+                    "ACCELERATION_STRUCTURE_MEMORY_REQUIREMENTS_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV => {
+                    "PHYSICAL_DEVICE_RAY_TRACING_PROPERTIES_NV"
+                }
+                &Self::RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV => {
+                    "RAY_TRACING_SHADER_GROUP_CREATE_INFO_NV"
+                }
+                &Self::ACCELERATION_STRUCTURE_INFO_NV => "ACCELERATION_STRUCTURE_INFO_NV",
+                &Self::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV"
+                }
+                &Self::PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_REPRESENTATIVE_FRAGMENT_TEST_STATE_CREATE_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT => {
+                    "PHYSICAL_DEVICE_IMAGE_VIEW_IMAGE_FORMAT_INFO_EXT"
+                }
+                &Self::FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT => {
+                    "FILTER_CUBIC_IMAGE_VIEW_IMAGE_FORMAT_PROPERTIES_EXT"
+                }
+                &Self::IMPORT_MEMORY_HOST_POINTER_INFO_EXT => {
+                    "IMPORT_MEMORY_HOST_POINTER_INFO_EXT"
+                }
+                &Self::MEMORY_HOST_POINTER_PROPERTIES_EXT => {
+                    "MEMORY_HOST_POINTER_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_EXTERNAL_MEMORY_HOST_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR"
+                }
+                &Self::PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD => {
+                    "PIPELINE_COMPILER_CONTROL_CREATE_INFO_AMD"
+                }
+                &Self::CALIBRATED_TIMESTAMP_INFO_EXT => "CALIBRATED_TIMESTAMP_INFO_EXT",
+                &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD => {
+                    "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_AMD"
+                }
+                &Self::VIDEO_DECODE_H265_CAPABILITIES_EXT => {
+                    "VIDEO_DECODE_H265_CAPABILITIES_EXT"
+                }
+                &Self::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT => {
+                    "VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => {
+                    "VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT => {
+                    "VIDEO_DECODE_H265_SESSION_PARAMETERS_ADD_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H265_PROFILE_EXT => "VIDEO_DECODE_H265_PROFILE_EXT",
+                &Self::VIDEO_DECODE_H265_PICTURE_INFO_EXT => {
+                    "VIDEO_DECODE_H265_PICTURE_INFO_EXT"
+                }
+                &Self::VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT => {
+                    "VIDEO_DECODE_H265_DPB_SLOT_INFO_EXT"
+                }
+                &Self::DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_KHR => {
+                    "DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_KHR"
+                }
+                &Self::QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_KHR => {
+                    "QUEUE_FAMILY_GLOBAL_PRIORITY_PROPERTIES_KHR"
+                }
+                &Self::DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD => {
+                    "DEVICE_MEMORY_OVERALLOCATION_CREATE_INFO_AMD"
+                }
+                &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_PROPERTIES_EXT"
+                }
+                &Self::PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT"
+                }
+                &Self::PRESENT_FRAME_TOKEN_GGP => "PRESENT_FRAME_TOKEN_GGP",
+                &Self::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV => {
+                    "PHYSICAL_DEVICE_MESH_SHADER_PROPERTIES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV"
+                }
+                &Self::PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_VIEWPORT_EXCLUSIVE_SCISSOR_STATE_CREATE_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV"
+                }
+                &Self::CHECKPOINT_DATA_NV => "CHECKPOINT_DATA_NV",
+                &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV => {
+                    "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL => {
+                    "PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL"
+                }
+                &Self::QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL => {
+                    "QUERY_POOL_PERFORMANCE_QUERY_CREATE_INFO_INTEL"
+                }
+                &Self::INITIALIZE_PERFORMANCE_API_INFO_INTEL => {
+                    "INITIALIZE_PERFORMANCE_API_INFO_INTEL"
+                }
+                &Self::PERFORMANCE_MARKER_INFO_INTEL => "PERFORMANCE_MARKER_INFO_INTEL",
+                &Self::PERFORMANCE_STREAM_MARKER_INFO_INTEL => {
+                    "PERFORMANCE_STREAM_MARKER_INFO_INTEL"
+                }
+                &Self::PERFORMANCE_OVERRIDE_INFO_INTEL => {
+                    "PERFORMANCE_OVERRIDE_INFO_INTEL"
+                }
+                &Self::PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL => {
+                    "PERFORMANCE_CONFIGURATION_ACQUIRE_INFO_INTEL"
+                }
+                &Self::PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_PCI_BUS_INFO_PROPERTIES_EXT"
+                }
+                &Self::DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD => {
+                    "DISPLAY_NATIVE_HDR_SURFACE_CAPABILITIES_AMD"
+                }
+                &Self::SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD => {
+                    "SWAPCHAIN_DISPLAY_NATIVE_HDR_CREATE_INFO_AMD"
+                }
+                &Self::IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA => {
+                    "IMAGEPIPE_SURFACE_CREATE_INFO_FUCHSIA"
+                }
+                &Self::METAL_SURFACE_CREATE_INFO_EXT => "METAL_SURFACE_CREATE_INFO_EXT",
+                &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_PROPERTIES_EXT"
+                }
+                &Self::RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT => {
+                    "RENDER_PASS_FRAGMENT_DENSITY_MAP_CREATE_INFO_EXT"
+                }
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_INFO_KHR"
+                }
+                &Self::PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR => {
+                    "PIPELINE_FRAGMENT_SHADING_RATE_STATE_CREATE_INFO_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR => {
+                    "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_PROPERTIES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR => {
+                    "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD => {
+                    "PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_2_AMD"
+                }
+                &Self::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD => {
+                    "PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_MEMORY_BUDGET_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT"
+                }
+                &Self::MEMORY_PRIORITY_ALLOCATE_INFO_EXT => {
+                    "MEMORY_PRIORITY_ALLOCATE_INFO_EXT"
+                }
+                &Self::SURFACE_PROTECTED_CAPABILITIES_KHR => {
+                    "SURFACE_PROTECTED_CAPABILITIES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT"
+                }
+                &Self::BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT => {
+                    "BUFFER_DEVICE_ADDRESS_CREATE_INFO_EXT"
+                }
+                &Self::VALIDATION_FEATURES_EXT => "VALIDATION_FEATURES_EXT",
+                &Self::PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV"
+                }
+                &Self::COOPERATIVE_MATRIX_PROPERTIES_NV => {
+                    "COOPERATIVE_MATRIX_PROPERTIES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV => {
+                    "PHYSICAL_DEVICE_COOPERATIVE_MATRIX_PROPERTIES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV"
+                }
+                &Self::PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_COVERAGE_REDUCTION_STATE_CREATE_INFO_NV"
+                }
+                &Self::FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV => {
+                    "FRAMEBUFFER_MIXED_SAMPLES_COMBINATION_NV"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT"
+                }
+                &Self::PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_RASTERIZATION_PROVOKING_VERTEX_STATE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_PROVOKING_VERTEX_PROPERTIES_EXT"
+                }
+                &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT => {
+                    "SURFACE_FULL_SCREEN_EXCLUSIVE_INFO_EXT"
+                }
+                &Self::SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT => {
+                    "SURFACE_CAPABILITIES_FULL_SCREEN_EXCLUSIVE_EXT"
+                }
+                &Self::SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT => {
+                    "SURFACE_FULL_SCREEN_EXCLUSIVE_WIN32_INFO_EXT"
+                }
+                &Self::HEADLESS_SURFACE_CREATE_INFO_EXT => {
+                    "HEADLESS_SURFACE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT"
+                }
+                &Self::PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT => {
+                    "PIPELINE_RASTERIZATION_LINE_STATE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_LINE_RASTERIZATION_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR"
+                }
+                &Self::PIPELINE_INFO_KHR => "PIPELINE_INFO_KHR",
+                &Self::PIPELINE_EXECUTABLE_PROPERTIES_KHR => {
+                    "PIPELINE_EXECUTABLE_PROPERTIES_KHR"
+                }
+                &Self::PIPELINE_EXECUTABLE_INFO_KHR => "PIPELINE_EXECUTABLE_INFO_KHR",
+                &Self::PIPELINE_EXECUTABLE_STATISTIC_KHR => {
+                    "PIPELINE_EXECUTABLE_STATISTIC_KHR"
+                }
+                &Self::PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR => {
+                    "PIPELINE_EXECUTABLE_INTERNAL_REPRESENTATION_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV => {
+                    "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_PROPERTIES_NV"
+                }
+                &Self::GRAPHICS_SHADER_GROUP_CREATE_INFO_NV => {
+                    "GRAPHICS_SHADER_GROUP_CREATE_INFO_NV"
+                }
+                &Self::GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV => {
+                    "GRAPHICS_PIPELINE_SHADER_GROUPS_CREATE_INFO_NV"
+                }
+                &Self::INDIRECT_COMMANDS_LAYOUT_TOKEN_NV => {
+                    "INDIRECT_COMMANDS_LAYOUT_TOKEN_NV"
+                }
+                &Self::INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV => {
+                    "INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NV"
+                }
+                &Self::GENERATED_COMMANDS_INFO_NV => "GENERATED_COMMANDS_INFO_NV",
+                &Self::GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV => {
+                    "GENERATED_COMMANDS_MEMORY_REQUIREMENTS_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV"
+                }
+                &Self::COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV => {
+                    "COMMAND_BUFFER_INHERITANCE_VIEWPORT_SCISSOR_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT"
+                }
+                &Self::COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM => {
+                    "COMMAND_BUFFER_INHERITANCE_RENDER_PASS_TRANSFORM_INFO_QCOM"
+                }
+                &Self::RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM => {
+                    "RENDER_PASS_TRANSFORM_BEGIN_INFO_QCOM"
+                }
+                &Self::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT"
+                }
+                &Self::DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT => {
+                    "DEVICE_DEVICE_MEMORY_REPORT_CREATE_INFO_EXT"
+                }
+                &Self::DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT => {
+                    "DEVICE_MEMORY_REPORT_CALLBACK_DATA_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_ROBUSTNESS_2_PROPERTIES_EXT"
+                }
+                &Self::SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT => {
+                    "SAMPLER_CUSTOM_BORDER_COLOR_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT"
+                }
+                &Self::PIPELINE_LIBRARY_CREATE_INFO_KHR => {
+                    "PIPELINE_LIBRARY_CREATE_INFO_KHR"
+                }
+                &Self::PRESENT_ID_KHR => "PRESENT_ID_KHR",
+                &Self::PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR"
+                }
+                &Self::VIDEO_ENCODE_INFO_KHR => "VIDEO_ENCODE_INFO_KHR",
+                &Self::VIDEO_ENCODE_RATE_CONTROL_INFO_KHR => {
+                    "VIDEO_ENCODE_RATE_CONTROL_INFO_KHR"
+                }
+                &Self::VIDEO_ENCODE_RATE_CONTROL_LAYER_INFO_KHR => {
+                    "VIDEO_ENCODE_RATE_CONTROL_LAYER_INFO_KHR"
+                }
+                &Self::VIDEO_ENCODE_CAPABILITIES_KHR => "VIDEO_ENCODE_CAPABILITIES_KHR",
+                &Self::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV"
+                }
+                &Self::DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV => {
+                    "DEVICE_DIAGNOSTICS_CONFIG_CREATE_INFO_NV"
+                }
+                &Self::QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV => {
+                    "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV"
+                }
+                &Self::CHECKPOINT_DATA_2_NV => "CHECKPOINT_DATA_2_NV",
+                &Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV => {
+                    "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_PROPERTIES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV"
+                }
+                &Self::PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV => {
+                    "PIPELINE_FRAGMENT_SHADING_RATE_ENUM_STATE_CREATE_INFO_NV"
+                }
+                &Self::ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV => {
+                    "ACCELERATION_STRUCTURE_GEOMETRY_MOTION_TRIANGLES_DATA_NV"
+                }
+                &Self::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV"
+                }
+                &Self::ACCELERATION_STRUCTURE_MOTION_INFO_NV => {
+                    "ACCELERATION_STRUCTURE_MOTION_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_PROPERTIES_EXT"
+                }
+                &Self::COPY_COMMAND_TRANSFORM_INFO_QCOM => {
+                    "COPY_COMMAND_TRANSFORM_INFO_QCOM"
+                }
+                &Self::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR"
+                }
+                &Self::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM => {
+                    "PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM"
+                }
+                &Self::PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT"
+                }
+                &Self::DIRECTFB_SURFACE_CREATE_INFO_EXT => {
+                    "DIRECTFB_SURFACE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => {
+                    "PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE"
+                }
+                &Self::MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE => {
+                    "MUTABLE_DESCRIPTOR_TYPE_CREATE_INFO_VALVE"
+                }
+                &Self::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT"
+                }
+                &Self::VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT => {
+                    "VERTEX_INPUT_BINDING_DESCRIPTION_2_EXT"
+                }
+                &Self::VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT => {
+                    "VERTEX_INPUT_ATTRIBUTE_DESCRIPTION_2_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_DRM_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_DRM_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT"
+                }
+                &Self::PIPELINE_VIEWPORT_DEPTH_CLIP_CONTROL_CREATE_INFO_EXT => {
+                    "PIPELINE_VIEWPORT_DEPTH_CLIP_CONTROL_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT"
+                }
+                &Self::IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                    "IMPORT_MEMORY_ZIRCON_HANDLE_INFO_FUCHSIA"
+                }
+                &Self::MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA => {
+                    "MEMORY_ZIRCON_HANDLE_PROPERTIES_FUCHSIA"
+                }
+                &Self::MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                    "MEMORY_GET_ZIRCON_HANDLE_INFO_FUCHSIA"
+                }
+                &Self::IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                    "IMPORT_SEMAPHORE_ZIRCON_HANDLE_INFO_FUCHSIA"
+                }
+                &Self::SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA => {
+                    "SEMAPHORE_GET_ZIRCON_HANDLE_INFO_FUCHSIA"
+                }
+                &Self::BUFFER_COLLECTION_CREATE_INFO_FUCHSIA => {
+                    "BUFFER_COLLECTION_CREATE_INFO_FUCHSIA"
+                }
+                &Self::IMPORT_MEMORY_BUFFER_COLLECTION_FUCHSIA => {
+                    "IMPORT_MEMORY_BUFFER_COLLECTION_FUCHSIA"
+                }
+                &Self::BUFFER_COLLECTION_IMAGE_CREATE_INFO_FUCHSIA => {
+                    "BUFFER_COLLECTION_IMAGE_CREATE_INFO_FUCHSIA"
+                }
+                &Self::BUFFER_COLLECTION_PROPERTIES_FUCHSIA => {
+                    "BUFFER_COLLECTION_PROPERTIES_FUCHSIA"
+                }
+                &Self::BUFFER_CONSTRAINTS_INFO_FUCHSIA => {
+                    "BUFFER_CONSTRAINTS_INFO_FUCHSIA"
+                }
+                &Self::BUFFER_COLLECTION_BUFFER_CREATE_INFO_FUCHSIA => {
+                    "BUFFER_COLLECTION_BUFFER_CREATE_INFO_FUCHSIA"
+                }
+                &Self::IMAGE_CONSTRAINTS_INFO_FUCHSIA => "IMAGE_CONSTRAINTS_INFO_FUCHSIA",
+                &Self::IMAGE_FORMAT_CONSTRAINTS_INFO_FUCHSIA => {
+                    "IMAGE_FORMAT_CONSTRAINTS_INFO_FUCHSIA"
+                }
+                &Self::SYSMEM_COLOR_SPACE_FUCHSIA => "SYSMEM_COLOR_SPACE_FUCHSIA",
+                &Self::BUFFER_COLLECTION_CONSTRAINTS_INFO_FUCHSIA => {
+                    "BUFFER_COLLECTION_CONSTRAINTS_INFO_FUCHSIA"
+                }
+                &Self::SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI => {
+                    "SUBPASS_SHADING_PIPELINE_CREATE_INFO_HUAWEI"
+                }
+                &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => {
+                    "PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI"
+                }
+                &Self::PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI => {
+                    "PHYSICAL_DEVICE_SUBPASS_SHADING_PROPERTIES_HUAWEI"
+                }
+                &Self::PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI => {
+                    "PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI"
+                }
+                &Self::MEMORY_GET_REMOTE_ADDRESS_INFO_NV => {
+                    "MEMORY_GET_REMOTE_ADDRESS_INFO_NV"
+                }
+                &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT"
+                }
+                &Self::SCREEN_SURFACE_CREATE_INFO_QNX => "SCREEN_SURFACE_CREATE_INFO_QNX",
+                &Self::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT"
+                }
+                &Self::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT => {
+                    "PIPELINE_COLOR_WRITE_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT"
+                }
+                &Self::IMAGE_VIEW_MIN_LOD_CREATE_INFO_EXT => {
+                    "IMAGE_VIEW_MIN_LOD_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT"
+                }
+                &Self::SAMPLER_BORDER_COLOR_COMPONENT_MAPPING_CREATE_INFO_EXT => {
+                    "SAMPLER_BORDER_COLOR_COMPONENT_MAPPING_CREATE_INFO_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM => {
+                    "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM"
+                }
+                &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_PROPERTIES_QCOM => {
+                    "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_PROPERTIES_QCOM"
+                }
+                &Self::SUBPASS_FRAGMENT_DENSITY_MAP_OFFSET_END_INFO_QCOM => {
+                    "SUBPASS_FRAGMENT_DENSITY_MAP_OFFSET_END_INFO_QCOM"
+                }
+                &Self::PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV => {
+                    "PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6029,17 +5863,16 @@ impl crate::vk1_0::StructureType {
 pub struct SystemAllocationScope(pub i32);
 impl std::fmt::Debug for SystemAllocationScope {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::COMMAND => "COMMAND",
-                    &Self::OBJECT => "OBJECT",
-                    &Self::CACHE => "CACHE",
-                    &Self::DEVICE => "DEVICE",
-                    &Self::INSTANCE => "INSTANCE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::COMMAND => "COMMAND",
+                &Self::OBJECT => "OBJECT",
+                &Self::CACHE => "CACHE",
+                &Self::DEVICE => "DEVICE",
+                &Self::INSTANCE => "INSTANCE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6057,13 +5890,12 @@ impl crate::vk1_0::SystemAllocationScope {
 pub struct InternalAllocationType(pub i32);
 impl std::fmt::Debug for InternalAllocationType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::EXECUTABLE => "EXECUTABLE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::EXECUTABLE => "EXECUTABLE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6077,17 +5909,16 @@ impl crate::vk1_0::InternalAllocationType {
 pub struct SamplerAddressMode(pub i32);
 impl std::fmt::Debug for SamplerAddressMode {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::REPEAT => "REPEAT",
-                    &Self::MIRRORED_REPEAT => "MIRRORED_REPEAT",
-                    &Self::CLAMP_TO_EDGE => "CLAMP_TO_EDGE",
-                    &Self::CLAMP_TO_BORDER => "CLAMP_TO_BORDER",
-                    &Self::MIRROR_CLAMP_TO_EDGE => "MIRROR_CLAMP_TO_EDGE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::REPEAT => "REPEAT",
+                &Self::MIRRORED_REPEAT => "MIRRORED_REPEAT",
+                &Self::CLAMP_TO_EDGE => "CLAMP_TO_EDGE",
+                &Self::CLAMP_TO_BORDER => "CLAMP_TO_BORDER",
+                &Self::MIRROR_CLAMP_TO_EDGE => "MIRROR_CLAMP_TO_EDGE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6104,15 +5935,14 @@ impl crate::vk1_0::SamplerAddressMode {
 pub struct Filter(pub i32);
 impl std::fmt::Debug for Filter {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NEAREST => "NEAREST",
-                    &Self::LINEAR => "LINEAR",
-                    &Self::CUBIC_IMG => "CUBIC_IMG",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NEAREST => "NEAREST",
+                &Self::LINEAR => "LINEAR",
+                &Self::CUBIC_IMG => "CUBIC_IMG",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6127,14 +5957,13 @@ impl crate::vk1_0::Filter {
 pub struct SamplerMipmapMode(pub i32);
 impl std::fmt::Debug for SamplerMipmapMode {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NEAREST => "NEAREST",
-                    &Self::LINEAR => "LINEAR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NEAREST => "NEAREST",
+                &Self::LINEAR => "LINEAR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6149,14 +5978,13 @@ impl crate::vk1_0::SamplerMipmapMode {
 pub struct VertexInputRate(pub i32);
 impl std::fmt::Debug for VertexInputRate {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VERTEX => "VERTEX",
-                    &Self::INSTANCE => "INSTANCE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VERTEX => "VERTEX",
+                &Self::INSTANCE => "INSTANCE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6217,45 +6045,42 @@ impl PipelineStageFlagBits {
 }
 impl std::fmt::Debug for PipelineStageFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::TOP_OF_PIPE => "TOP_OF_PIPE",
-                    &Self::DRAW_INDIRECT => "DRAW_INDIRECT",
-                    &Self::VERTEX_INPUT => "VERTEX_INPUT",
-                    &Self::VERTEX_SHADER => "VERTEX_SHADER",
-                    &Self::TESSELLATION_CONTROL_SHADER => "TESSELLATION_CONTROL_SHADER",
-                    &Self::TESSELLATION_EVALUATION_SHADER => {
-                        "TESSELLATION_EVALUATION_SHADER"
-                    }
-                    &Self::GEOMETRY_SHADER => "GEOMETRY_SHADER",
-                    &Self::FRAGMENT_SHADER => "FRAGMENT_SHADER",
-                    &Self::EARLY_FRAGMENT_TESTS => "EARLY_FRAGMENT_TESTS",
-                    &Self::LATE_FRAGMENT_TESTS => "LATE_FRAGMENT_TESTS",
-                    &Self::COLOR_ATTACHMENT_OUTPUT => "COLOR_ATTACHMENT_OUTPUT",
-                    &Self::COMPUTE_SHADER => "COMPUTE_SHADER",
-                    &Self::TRANSFER => "TRANSFER",
-                    &Self::BOTTOM_OF_PIPE => "BOTTOM_OF_PIPE",
-                    &Self::HOST => "HOST",
-                    &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
-                    &Self::ALL_COMMANDS => "ALL_COMMANDS",
-                    &Self::NONE => "NONE",
-                    &Self::TRANSFORM_FEEDBACK_EXT => "TRANSFORM_FEEDBACK_EXT",
-                    &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
-                    &Self::ACCELERATION_STRUCTURE_BUILD_KHR => {
-                        "ACCELERATION_STRUCTURE_BUILD_KHR"
-                    }
-                    &Self::RAY_TRACING_SHADER_KHR => "RAY_TRACING_SHADER_KHR",
-                    &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
-                    &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
-                    &Self::FRAGMENT_DENSITY_PROCESS_EXT => "FRAGMENT_DENSITY_PROCESS_EXT",
-                    &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
-                        "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
-                    }
-                    &Self::COMMAND_PREPROCESS_NV => "COMMAND_PREPROCESS_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::TOP_OF_PIPE => "TOP_OF_PIPE",
+                &Self::DRAW_INDIRECT => "DRAW_INDIRECT",
+                &Self::VERTEX_INPUT => "VERTEX_INPUT",
+                &Self::VERTEX_SHADER => "VERTEX_SHADER",
+                &Self::TESSELLATION_CONTROL_SHADER => "TESSELLATION_CONTROL_SHADER",
+                &Self::TESSELLATION_EVALUATION_SHADER => "TESSELLATION_EVALUATION_SHADER",
+                &Self::GEOMETRY_SHADER => "GEOMETRY_SHADER",
+                &Self::FRAGMENT_SHADER => "FRAGMENT_SHADER",
+                &Self::EARLY_FRAGMENT_TESTS => "EARLY_FRAGMENT_TESTS",
+                &Self::LATE_FRAGMENT_TESTS => "LATE_FRAGMENT_TESTS",
+                &Self::COLOR_ATTACHMENT_OUTPUT => "COLOR_ATTACHMENT_OUTPUT",
+                &Self::COMPUTE_SHADER => "COMPUTE_SHADER",
+                &Self::TRANSFER => "TRANSFER",
+                &Self::BOTTOM_OF_PIPE => "BOTTOM_OF_PIPE",
+                &Self::HOST => "HOST",
+                &Self::ALL_GRAPHICS => "ALL_GRAPHICS",
+                &Self::ALL_COMMANDS => "ALL_COMMANDS",
+                &Self::NONE => "NONE",
+                &Self::TRANSFORM_FEEDBACK_EXT => "TRANSFORM_FEEDBACK_EXT",
+                &Self::CONDITIONAL_RENDERING_EXT => "CONDITIONAL_RENDERING_EXT",
+                &Self::ACCELERATION_STRUCTURE_BUILD_KHR => {
+                    "ACCELERATION_STRUCTURE_BUILD_KHR"
+                }
+                &Self::RAY_TRACING_SHADER_KHR => "RAY_TRACING_SHADER_KHR",
+                &Self::TASK_SHADER_NV => "TASK_SHADER_NV",
+                &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
+                &Self::FRAGMENT_DENSITY_PROCESS_EXT => "FRAGMENT_DENSITY_PROCESS_EXT",
+                &Self::FRAGMENT_SHADING_RATE_ATTACHMENT_KHR => {
+                    "FRAGMENT_SHADING_RATE_ATTACHMENT_KHR"
+                }
+                &Self::COMMAND_PREPROCESS_NV => "COMMAND_PREPROCESS_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6301,15 +6126,14 @@ impl SparseImageFormatFlagBits {
 }
 impl std::fmt::Debug for SparseImageFormatFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SINGLE_MIPTAIL => "SINGLE_MIPTAIL",
-                    &Self::ALIGNED_MIP_SIZE => "ALIGNED_MIP_SIZE",
-                    &Self::NONSTANDARD_BLOCK_SIZE => "NONSTANDARD_BLOCK_SIZE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SINGLE_MIPTAIL => "SINGLE_MIPTAIL",
+                &Self::ALIGNED_MIP_SIZE => "ALIGNED_MIP_SIZE",
+                &Self::NONSTANDARD_BLOCK_SIZE => "NONSTANDARD_BLOCK_SIZE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6341,19 +6165,18 @@ impl SampleCountFlagBits {
 }
 impl std::fmt::Debug for SampleCountFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::_1 => "1",
-                    &Self::_2 => "2",
-                    &Self::_4 => "4",
-                    &Self::_8 => "8",
-                    &Self::_16 => "16",
-                    &Self::_32 => "32",
-                    &Self::_64 => "64",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::_1 => "1",
+                &Self::_2 => "2",
+                &Self::_4 => "4",
+                &Self::_8 => "8",
+                &Self::_16 => "16",
+                &Self::_32 => "32",
+                &Self::_64 => "64",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6387,13 +6210,12 @@ impl AttachmentDescriptionFlagBits {
 }
 impl std::fmt::Debug for AttachmentDescriptionFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::MAY_ALIAS => "MAY_ALIAS",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::MAY_ALIAS => "MAY_ALIAS",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6424,15 +6246,14 @@ impl DescriptorPoolCreateFlagBits {
 }
 impl std::fmt::Debug for DescriptorPoolCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FREE_DESCRIPTOR_SET => "FREE_DESCRIPTOR_SET",
-                    &Self::UPDATE_AFTER_BIND => "UPDATE_AFTER_BIND",
-                    &Self::HOST_ONLY_VALVE => "HOST_ONLY_VALVE",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FREE_DESCRIPTOR_SET => "FREE_DESCRIPTOR_SET",
+                &Self::UPDATE_AFTER_BIND => "UPDATE_AFTER_BIND",
+                &Self::HOST_ONLY_VALVE => "HOST_ONLY_VALVE",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6463,15 +6284,14 @@ impl DependencyFlagBits {
 }
 impl std::fmt::Debug for DependencyFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::BY_REGION => "BY_REGION",
-                    &Self::DEVICE_GROUP => "DEVICE_GROUP",
-                    &Self::VIEW_LOCAL => "VIEW_LOCAL",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::BY_REGION => "BY_REGION",
+                &Self::DEVICE_GROUP => "DEVICE_GROUP",
+                &Self::VIEW_LOCAL => "VIEW_LOCAL",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6485,60 +6305,59 @@ impl crate::vk1_0::DependencyFlagBits {
 pub struct ObjectType(pub i32);
 impl std::fmt::Debug for ObjectType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UNKNOWN => "UNKNOWN",
-                    &Self::INSTANCE => "INSTANCE",
-                    &Self::PHYSICAL_DEVICE => "PHYSICAL_DEVICE",
-                    &Self::DEVICE => "DEVICE",
-                    &Self::QUEUE => "QUEUE",
-                    &Self::SEMAPHORE => "SEMAPHORE",
-                    &Self::COMMAND_BUFFER => "COMMAND_BUFFER",
-                    &Self::FENCE => "FENCE",
-                    &Self::DEVICE_MEMORY => "DEVICE_MEMORY",
-                    &Self::BUFFER => "BUFFER",
-                    &Self::IMAGE => "IMAGE",
-                    &Self::EVENT => "EVENT",
-                    &Self::QUERY_POOL => "QUERY_POOL",
-                    &Self::BUFFER_VIEW => "BUFFER_VIEW",
-                    &Self::IMAGE_VIEW => "IMAGE_VIEW",
-                    &Self::SHADER_MODULE => "SHADER_MODULE",
-                    &Self::PIPELINE_CACHE => "PIPELINE_CACHE",
-                    &Self::PIPELINE_LAYOUT => "PIPELINE_LAYOUT",
-                    &Self::RENDER_PASS => "RENDER_PASS",
-                    &Self::PIPELINE => "PIPELINE",
-                    &Self::DESCRIPTOR_SET_LAYOUT => "DESCRIPTOR_SET_LAYOUT",
-                    &Self::SAMPLER => "SAMPLER",
-                    &Self::DESCRIPTOR_POOL => "DESCRIPTOR_POOL",
-                    &Self::DESCRIPTOR_SET => "DESCRIPTOR_SET",
-                    &Self::FRAMEBUFFER => "FRAMEBUFFER",
-                    &Self::COMMAND_POOL => "COMMAND_POOL",
-                    &Self::SAMPLER_YCBCR_CONVERSION => "SAMPLER_YCBCR_CONVERSION",
-                    &Self::DESCRIPTOR_UPDATE_TEMPLATE => "DESCRIPTOR_UPDATE_TEMPLATE",
-                    &Self::PRIVATE_DATA_SLOT => "PRIVATE_DATA_SLOT",
-                    &Self::SURFACE_KHR => "SURFACE_KHR",
-                    &Self::SWAPCHAIN_KHR => "SWAPCHAIN_KHR",
-                    &Self::DISPLAY_KHR => "DISPLAY_KHR",
-                    &Self::DISPLAY_MODE_KHR => "DISPLAY_MODE_KHR",
-                    &Self::DEBUG_REPORT_CALLBACK_EXT => "DEBUG_REPORT_CALLBACK_EXT",
-                    &Self::VIDEO_SESSION_KHR => "VIDEO_SESSION_KHR",
-                    &Self::VIDEO_SESSION_PARAMETERS_KHR => "VIDEO_SESSION_PARAMETERS_KHR",
-                    &Self::CU_MODULE_NVX => "CU_MODULE_NVX",
-                    &Self::CU_FUNCTION_NVX => "CU_FUNCTION_NVX",
-                    &Self::DEBUG_UTILS_MESSENGER_EXT => "DEBUG_UTILS_MESSENGER_EXT",
-                    &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
-                    &Self::VALIDATION_CACHE_EXT => "VALIDATION_CACHE_EXT",
-                    &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
-                    &Self::PERFORMANCE_CONFIGURATION_INTEL => {
-                        "PERFORMANCE_CONFIGURATION_INTEL"
-                    }
-                    &Self::DEFERRED_OPERATION_KHR => "DEFERRED_OPERATION_KHR",
-                    &Self::INDIRECT_COMMANDS_LAYOUT_NV => "INDIRECT_COMMANDS_LAYOUT_NV",
-                    &Self::BUFFER_COLLECTION_FUCHSIA => "BUFFER_COLLECTION_FUCHSIA",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UNKNOWN => "UNKNOWN",
+                &Self::INSTANCE => "INSTANCE",
+                &Self::PHYSICAL_DEVICE => "PHYSICAL_DEVICE",
+                &Self::DEVICE => "DEVICE",
+                &Self::QUEUE => "QUEUE",
+                &Self::SEMAPHORE => "SEMAPHORE",
+                &Self::COMMAND_BUFFER => "COMMAND_BUFFER",
+                &Self::FENCE => "FENCE",
+                &Self::DEVICE_MEMORY => "DEVICE_MEMORY",
+                &Self::BUFFER => "BUFFER",
+                &Self::IMAGE => "IMAGE",
+                &Self::EVENT => "EVENT",
+                &Self::QUERY_POOL => "QUERY_POOL",
+                &Self::BUFFER_VIEW => "BUFFER_VIEW",
+                &Self::IMAGE_VIEW => "IMAGE_VIEW",
+                &Self::SHADER_MODULE => "SHADER_MODULE",
+                &Self::PIPELINE_CACHE => "PIPELINE_CACHE",
+                &Self::PIPELINE_LAYOUT => "PIPELINE_LAYOUT",
+                &Self::RENDER_PASS => "RENDER_PASS",
+                &Self::PIPELINE => "PIPELINE",
+                &Self::DESCRIPTOR_SET_LAYOUT => "DESCRIPTOR_SET_LAYOUT",
+                &Self::SAMPLER => "SAMPLER",
+                &Self::DESCRIPTOR_POOL => "DESCRIPTOR_POOL",
+                &Self::DESCRIPTOR_SET => "DESCRIPTOR_SET",
+                &Self::FRAMEBUFFER => "FRAMEBUFFER",
+                &Self::COMMAND_POOL => "COMMAND_POOL",
+                &Self::SAMPLER_YCBCR_CONVERSION => "SAMPLER_YCBCR_CONVERSION",
+                &Self::DESCRIPTOR_UPDATE_TEMPLATE => "DESCRIPTOR_UPDATE_TEMPLATE",
+                &Self::PRIVATE_DATA_SLOT => "PRIVATE_DATA_SLOT",
+                &Self::SURFACE_KHR => "SURFACE_KHR",
+                &Self::SWAPCHAIN_KHR => "SWAPCHAIN_KHR",
+                &Self::DISPLAY_KHR => "DISPLAY_KHR",
+                &Self::DISPLAY_MODE_KHR => "DISPLAY_MODE_KHR",
+                &Self::DEBUG_REPORT_CALLBACK_EXT => "DEBUG_REPORT_CALLBACK_EXT",
+                &Self::VIDEO_SESSION_KHR => "VIDEO_SESSION_KHR",
+                &Self::VIDEO_SESSION_PARAMETERS_KHR => "VIDEO_SESSION_PARAMETERS_KHR",
+                &Self::CU_MODULE_NVX => "CU_MODULE_NVX",
+                &Self::CU_FUNCTION_NVX => "CU_FUNCTION_NVX",
+                &Self::DEBUG_UTILS_MESSENGER_EXT => "DEBUG_UTILS_MESSENGER_EXT",
+                &Self::ACCELERATION_STRUCTURE_KHR => "ACCELERATION_STRUCTURE_KHR",
+                &Self::VALIDATION_CACHE_EXT => "VALIDATION_CACHE_EXT",
+                &Self::ACCELERATION_STRUCTURE_NV => "ACCELERATION_STRUCTURE_NV",
+                &Self::PERFORMANCE_CONFIGURATION_INTEL => {
+                    "PERFORMANCE_CONFIGURATION_INTEL"
+                }
+                &Self::DEFERRED_OPERATION_KHR => "DEFERRED_OPERATION_KHR",
+                &Self::INDIRECT_COMMANDS_LAYOUT_NV => "INDIRECT_COMMANDS_LAYOUT_NV",
+                &Self::BUFFER_COLLECTION_FUCHSIA => "BUFFER_COLLECTION_FUCHSIA",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -6574,9 +6393,8 @@ bitflags::bitflags! {
     #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlags.html) · Bitmask of [`EventCreateFlagBits`]"]
     #[doc(alias = "VkEventCreateFlags")] #[derive(Default)] #[repr(transparent)] pub
-    struct EventCreateFlags : u32 { const DEVICE_ONLY =
-    EventCreateFlagBits::DEVICE_ONLY.0; const DEVICE_ONLY_KHR =
-    EventCreateFlagBits::DEVICE_ONLY_KHR.0; }
+    struct EventCreateFlags : u32 { const DEVICE_ONLY = EventCreateFlagBits::DEVICE_ONLY
+    .0; const DEVICE_ONLY_KHR = EventCreateFlagBits::DEVICE_ONLY_KHR.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateFlagBits.html) · Bits enum of [`EventCreateFlags`]
 #[doc(alias = "VkEventCreateFlagBits")]
@@ -6592,13 +6410,12 @@ impl EventCreateFlagBits {
 }
 impl std::fmt::Debug for EventCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEVICE_ONLY => "DEVICE_ONLY",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEVICE_ONLY => "DEVICE_ONLY",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -6632,25 +6449,24 @@ impl SubpassDescriptionFlagBits {
 }
 impl std::fmt::Debug for SubpassDescriptionFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::PER_VIEW_ATTRIBUTES_NVX => "PER_VIEW_ATTRIBUTES_NVX",
-                    &Self::PER_VIEW_POSITION_X_ONLY_NVX => "PER_VIEW_POSITION_X_ONLY_NVX",
-                    &Self::FRAGMENT_REGION_QCOM => "FRAGMENT_REGION_QCOM",
-                    &Self::SHADER_RESOLVE_QCOM => "SHADER_RESOLVE_QCOM",
-                    &Self::RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM => {
-                        "RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM"
-                    }
-                    &Self::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM => {
-                        "RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM"
-                    }
-                    &Self::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM => {
-                        "RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::PER_VIEW_ATTRIBUTES_NVX => "PER_VIEW_ATTRIBUTES_NVX",
+                &Self::PER_VIEW_POSITION_X_ONLY_NVX => "PER_VIEW_POSITION_X_ONLY_NVX",
+                &Self::FRAGMENT_REGION_QCOM => "FRAGMENT_REGION_QCOM",
+                &Self::SHADER_RESOLVE_QCOM => "SHADER_RESOLVE_QCOM",
+                &Self::RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM => {
+                    "RASTERIZATION_ORDER_ATTACHMENT_COLOR_ACCESS_ARM"
+                }
+                &Self::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM => {
+                    "RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM"
+                }
+                &Self::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM => {
+                    "RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -6659,10 +6475,10 @@ bitflags::bitflags! {
     #[doc(alias = "VkPipelineDepthStencilStateCreateFlags")] #[derive(Default)]
     #[repr(transparent)] pub struct PipelineDepthStencilStateCreateFlags : u32 { const
     RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM =
-    PipelineDepthStencilStateCreateFlagBits::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM.0;
-    const RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM =
-    PipelineDepthStencilStateCreateFlagBits::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM.0;
-    }
+    PipelineDepthStencilStateCreateFlagBits::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM
+    .0; const RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM =
+    PipelineDepthStencilStateCreateFlagBits::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM
+    .0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateFlagBits.html) · Bits enum of [`PipelineDepthStencilStateCreateFlags`]
 #[doc(alias = "VkPipelineDepthStencilStateCreateFlagBits")]
@@ -6678,18 +6494,17 @@ impl PipelineDepthStencilStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineDepthStencilStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM => {
-                        "RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM"
-                    }
-                    &Self::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM => {
-                        "RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM => {
+                    "RASTERIZATION_ORDER_ATTACHMENT_DEPTH_ACCESS_ARM"
+                }
+                &Self::RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM => {
+                    "RASTERIZATION_ORDER_ATTACHMENT_STENCIL_ACCESS_ARM"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -6714,15 +6529,14 @@ impl PipelineColorBlendStateCreateFlagBits {
 }
 impl std::fmt::Debug for PipelineColorBlendStateCreateFlagBits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM => {
-                        "RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM => {
+                    "RASTERIZATION_ORDER_ATTACHMENT_ACCESS_ARM"
+                }
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVendorId.html) · Enum
@@ -6732,18 +6546,17 @@ impl std::fmt::Debug for PipelineColorBlendStateCreateFlagBits {
 pub struct VendorId(pub i32);
 impl std::fmt::Debug for VendorId {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VIV => "VIV",
-                    &Self::VSI => "VSI",
-                    &Self::KAZAN => "KAZAN",
-                    &Self::CODEPLAY => "CODEPLAY",
-                    &Self::MESA => "MESA",
-                    &Self::POCL => "POCL",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VIV => "VIV",
+                &Self::VSI => "VSI",
+                &Self::KAZAN => "KAZAN",
+                &Self::CODEPLAY => "CODEPLAY",
+                &Self::MESA => "MESA",
+                &Self::POCL => "POCL",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::vk1_0`]
@@ -7870,7 +7683,7 @@ pub type PFN_vkFreeFunction = unsafe extern "system" fn(
 pub type PFN_vkVoidFunction = unsafe extern "system" fn() -> ();
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBaseOutStructure.html) · Structure
 #[doc(alias = "VkBaseOutStructure")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BaseOutStructure {
     pub s_type: crate::vk1_0::StructureType,
@@ -7886,8 +7699,7 @@ impl Default for BaseOutStructure {
 }
 impl std::fmt::Debug for BaseOutStructure {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BaseOutStructure")
+        f.debug_struct("BaseOutStructure")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .finish()
@@ -7947,7 +7759,7 @@ impl<'a> std::ops::DerefMut for BaseOutStructureBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBaseInStructure.html) · Structure
 #[doc(alias = "VkBaseInStructure")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BaseInStructure {
     pub s_type: crate::vk1_0::StructureType,
@@ -7963,8 +7775,7 @@ impl Default for BaseInStructure {
 }
 impl std::fmt::Debug for BaseInStructure {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BaseInStructure")
+        f.debug_struct("BaseInStructure")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .finish()
@@ -8021,7 +7832,7 @@ impl<'a> std::ops::DerefMut for BaseInStructureBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOffset2D.html) · Structure
 #[doc(alias = "VkOffset2D")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Offset2D {
     pub x: i32,
@@ -8095,7 +7906,7 @@ impl<'a> std::ops::DerefMut for Offset2DBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkOffset3D.html) · Structure
 #[doc(alias = "VkOffset3D")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Offset3D {
     pub x: i32,
@@ -8113,8 +7924,7 @@ impl Default for Offset3D {
 }
 impl std::fmt::Debug for Offset3D {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("Offset3D")
+        f.debug_struct("Offset3D")
             .field("x", &self.x)
             .field("y", &self.y)
             .field("z", &self.z)
@@ -8182,7 +7992,7 @@ impl<'a> std::ops::DerefMut for Offset3DBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent2D.html) · Structure
 #[doc(alias = "VkExtent2D")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Extent2D {
     pub width: u32,
@@ -8198,8 +8008,7 @@ impl Default for Extent2D {
 }
 impl std::fmt::Debug for Extent2D {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("Extent2D")
+        f.debug_struct("Extent2D")
             .field("width", &self.width)
             .field("height", &self.height)
             .finish()
@@ -8260,7 +8069,7 @@ impl<'a> std::ops::DerefMut for Extent2DBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtent3D.html) · Structure
 #[doc(alias = "VkExtent3D")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Extent3D {
     pub width: u32,
@@ -8278,8 +8087,7 @@ impl Default for Extent3D {
 }
 impl std::fmt::Debug for Extent3D {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("Extent3D")
+        f.debug_struct("Extent3D")
             .field("width", &self.width)
             .field("height", &self.height)
             .field("depth", &self.depth)
@@ -8347,7 +8155,7 @@ impl<'a> std::ops::DerefMut for Extent3DBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewport.html) · Structure
 #[doc(alias = "VkViewport")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct Viewport {
     pub x: std::os::raw::c_float,
@@ -8371,8 +8179,7 @@ impl Default for Viewport {
 }
 impl std::fmt::Debug for Viewport {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("Viewport")
+        f.debug_struct("Viewport")
             .field("x", &self.x)
             .field("y", &self.y)
             .field("width", &self.width)
@@ -8461,7 +8268,7 @@ impl<'a> std::ops::DerefMut for ViewportBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRect2D.html) · Structure
 #[doc(alias = "VkRect2D")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct Rect2D {
     pub offset: crate::vk1_0::Offset2D,
@@ -8477,8 +8284,7 @@ impl Default for Rect2D {
 }
 impl std::fmt::Debug for Rect2D {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("Rect2D")
+        f.debug_struct("Rect2D")
             .field("offset", &self.offset)
             .field("extent", &self.extent)
             .finish()
@@ -8539,7 +8345,7 @@ impl<'a> std::ops::DerefMut for Rect2DBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkClearRect.html) · Structure
 #[doc(alias = "VkClearRect")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ClearRect {
     pub rect: crate::vk1_0::Rect2D,
@@ -8557,8 +8363,7 @@ impl Default for ClearRect {
 }
 impl std::fmt::Debug for ClearRect {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ClearRect")
+        f.debug_struct("ClearRect")
             .field("rect", &self.rect)
             .field("base_array_layer", &self.base_array_layer)
             .field("layer_count", &self.layer_count)
@@ -8626,7 +8431,7 @@ impl<'a> std::ops::DerefMut for ClearRectBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComponentMapping.html) · Structure
 #[doc(alias = "VkComponentMapping")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ComponentMapping {
     pub r: crate::vk1_0::ComponentSwizzle,
@@ -8646,8 +8451,7 @@ impl Default for ComponentMapping {
 }
 impl std::fmt::Debug for ComponentMapping {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ComponentMapping")
+        f.debug_struct("ComponentMapping")
             .field("r", &self.r)
             .field("g", &self.g)
             .field("b", &self.b)
@@ -8725,7 +8529,7 @@ impl<'a> std::ops::DerefMut for ComponentMappingBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProperties")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceProperties {
     pub api_version: u32,
@@ -8755,8 +8559,7 @@ impl Default for PhysicalDeviceProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceProperties")
+        f.debug_struct("PhysicalDeviceProperties")
             .field("api_version", &self.api_version)
             .field("driver_version", &self.driver_version)
             .field("vendor_id", &self.vendor_id)
@@ -8875,7 +8678,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExtensionProperties.html) · Structure
 #[doc(alias = "VkExtensionProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ExtensionProperties {
     pub extension_name: [std::os::raw::c_char; 256],
@@ -8891,8 +8694,7 @@ impl Default for ExtensionProperties {
 }
 impl std::fmt::Debug for ExtensionProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExtensionProperties")
+        f.debug_struct("ExtensionProperties")
             .field(
                 "extension_name",
                 unsafe { &std::ffi::CStr::from_ptr(self.extension_name.as_ptr()) },
@@ -8962,7 +8764,7 @@ impl<'a> std::ops::DerefMut for ExtensionPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkLayerProperties.html) · Structure
 #[doc(alias = "VkLayerProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct LayerProperties {
     pub layer_name: [std::os::raw::c_char; 256],
@@ -8982,8 +8784,7 @@ impl Default for LayerProperties {
 }
 impl std::fmt::Debug for LayerProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("LayerProperties")
+        f.debug_struct("LayerProperties")
             .field(
                 "layer_name",
                 unsafe { &std::ffi::CStr::from_ptr(self.layer_name.as_ptr()) },
@@ -9064,7 +8865,7 @@ impl<'a> std::ops::DerefMut for LayerPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkApplicationInfo.html) · Structure
 #[doc(alias = "VkApplicationInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ApplicationInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -9093,8 +8894,7 @@ impl Default for ApplicationInfo {
 }
 impl std::fmt::Debug for ApplicationInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ApplicationInfo")
+        f.debug_struct("ApplicationInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_application_name", &self.p_application_name)
@@ -9180,7 +8980,7 @@ impl<'a> std::ops::DerefMut for ApplicationInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAllocationCallbacks.html) · Structure
 #[doc(alias = "VkAllocationCallbacks")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AllocationCallbacks {
     pub p_user_data: *mut std::ffi::c_void,
@@ -9206,8 +9006,7 @@ impl Default for AllocationCallbacks {
 }
 impl std::fmt::Debug for AllocationCallbacks {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AllocationCallbacks")
+        f.debug_struct("AllocationCallbacks")
             .field("p_user_data", &self.p_user_data)
             .field(
                 "pfn_allocation",
@@ -9335,7 +9134,7 @@ impl<'a> std::ops::DerefMut for AllocationCallbacksBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceQueueCreateInfo.html) · Structure
 #[doc(alias = "VkDeviceQueueCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceQueueCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -9362,8 +9161,7 @@ impl Default for DeviceQueueCreateInfo {
 }
 impl std::fmt::Debug for DeviceQueueCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceQueueCreateInfo")
+        f.debug_struct("DeviceQueueCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -9443,7 +9241,7 @@ impl<'a> std::ops::DerefMut for DeviceQueueCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceCreateInfo.html) · Structure
 #[doc(alias = "VkDeviceCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -9478,8 +9276,7 @@ impl Default for DeviceCreateInfo {
 }
 impl std::fmt::Debug for DeviceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceCreateInfo")
+        f.debug_struct("DeviceCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -9586,7 +9383,7 @@ impl<'a> std::ops::DerefMut for DeviceCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstanceCreateInfo.html) · Structure
 #[doc(alias = "VkInstanceCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct InstanceCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -9617,8 +9414,7 @@ impl Default for InstanceCreateInfo {
 }
 impl std::fmt::Debug for InstanceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("InstanceCreateInfo")
+        f.debug_struct("InstanceCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -9713,7 +9509,7 @@ impl<'a> std::ops::DerefMut for InstanceCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyProperties.html) · Structure
 #[doc(alias = "VkQueueFamilyProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct QueueFamilyProperties {
     pub queue_flags: crate::vk1_0::QueueFlags,
@@ -9733,8 +9529,7 @@ impl Default for QueueFamilyProperties {
 }
 impl std::fmt::Debug for QueueFamilyProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueueFamilyProperties")
+        f.debug_struct("QueueFamilyProperties")
             .field("queue_flags", &self.queue_flags)
             .field("queue_count", &self.queue_count)
             .field("timestamp_valid_bits", &self.timestamp_valid_bits)
@@ -9818,7 +9613,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMemoryProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMemoryProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PhysicalDeviceMemoryProperties {
     pub memory_type_count: u32,
@@ -9838,8 +9633,7 @@ impl Default for PhysicalDeviceMemoryProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceMemoryProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMemoryProperties")
+        f.debug_struct("PhysicalDeviceMemoryProperties")
             .field("memory_type_count", &self.memory_type_count)
             .field("memory_types", &self.memory_types)
             .field("memory_heap_count", &self.memory_heap_count)
@@ -9920,7 +9714,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceMemoryPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryAllocateInfo.html) · Structure
 #[doc(alias = "VkMemoryAllocateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryAllocateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -9943,8 +9737,7 @@ impl Default for MemoryAllocateInfo {
 }
 impl std::fmt::Debug for MemoryAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryAllocateInfo")
+        f.debug_struct("MemoryAllocateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("allocation_size", &self.allocation_size)
@@ -10012,7 +9805,7 @@ impl<'a> std::ops::DerefMut for MemoryAllocateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryRequirements.html) · Structure
 #[doc(alias = "VkMemoryRequirements")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MemoryRequirements {
     pub size: crate::vk1_0::DeviceSize,
@@ -10030,8 +9823,7 @@ impl Default for MemoryRequirements {
 }
 impl std::fmt::Debug for MemoryRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryRequirements")
+        f.debug_struct("MemoryRequirements")
             .field("size", &self.size)
             .field("alignment", &self.alignment)
             .field("memory_type_bits", &self.memory_type_bits)
@@ -10102,7 +9894,7 @@ impl<'a> std::ops::DerefMut for MemoryRequirementsBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageFormatProperties.html) · Structure
 #[doc(alias = "VkSparseImageFormatProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseImageFormatProperties {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -10120,8 +9912,7 @@ impl Default for SparseImageFormatProperties {
 }
 impl std::fmt::Debug for SparseImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseImageFormatProperties")
+        f.debug_struct("SparseImageFormatProperties")
             .field("aspect_mask", &self.aspect_mask)
             .field("image_granularity", &self.image_granularity)
             .field("flags", &self.flags)
@@ -10195,7 +9986,7 @@ impl<'a> std::ops::DerefMut for SparseImageFormatPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryRequirements.html) · Structure
 #[doc(alias = "VkSparseImageMemoryRequirements")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseImageMemoryRequirements {
     pub format_properties: crate::vk1_0::SparseImageFormatProperties,
@@ -10217,8 +10008,7 @@ impl Default for SparseImageMemoryRequirements {
 }
 impl std::fmt::Debug for SparseImageMemoryRequirements {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseImageMemoryRequirements")
+        f.debug_struct("SparseImageMemoryRequirements")
             .field("format_properties", &self.format_properties)
             .field("image_mip_tail_first_lod", &self.image_mip_tail_first_lod)
             .field("image_mip_tail_size", &self.image_mip_tail_size)
@@ -10318,7 +10108,7 @@ impl<'a> std::ops::DerefMut for SparseImageMemoryRequirementsBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryType.html) · Structure
 #[doc(alias = "VkMemoryType")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MemoryType {
     pub property_flags: crate::vk1_0::MemoryPropertyFlags,
@@ -10334,8 +10124,7 @@ impl Default for MemoryType {
 }
 impl std::fmt::Debug for MemoryType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryType")
+        f.debug_struct("MemoryType")
             .field("property_flags", &self.property_flags)
             .field("heap_index", &self.heap_index)
             .finish()
@@ -10399,7 +10188,7 @@ impl<'a> std::ops::DerefMut for MemoryTypeBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryHeap.html) · Structure
 #[doc(alias = "VkMemoryHeap")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MemoryHeap {
     pub size: crate::vk1_0::DeviceSize,
@@ -10415,8 +10204,7 @@ impl Default for MemoryHeap {
 }
 impl std::fmt::Debug for MemoryHeap {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryHeap")
+        f.debug_struct("MemoryHeap")
             .field("size", &self.size)
             .field("flags", &self.flags)
             .finish()
@@ -10477,7 +10265,7 @@ impl<'a> std::ops::DerefMut for MemoryHeapBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMappedMemoryRange.html) · Structure
 #[doc(alias = "VkMappedMemoryRange")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MappedMemoryRange {
     pub s_type: crate::vk1_0::StructureType,
@@ -10502,8 +10290,7 @@ impl Default for MappedMemoryRange {
 }
 impl std::fmt::Debug for MappedMemoryRange {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MappedMemoryRange")
+        f.debug_struct("MappedMemoryRange")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory", &self.memory)
@@ -10578,7 +10365,7 @@ impl<'a> std::ops::DerefMut for MappedMemoryRangeBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFormatProperties.html) · Structure
 #[doc(alias = "VkFormatProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct FormatProperties {
     pub linear_tiling_features: crate::vk1_0::FormatFeatureFlags,
@@ -10596,8 +10383,7 @@ impl Default for FormatProperties {
 }
 impl std::fmt::Debug for FormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FormatProperties")
+        f.debug_struct("FormatProperties")
             .field("linear_tiling_features", &self.linear_tiling_features)
             .field("optimal_tiling_features", &self.optimal_tiling_features)
             .field("buffer_features", &self.buffer_features)
@@ -10677,7 +10463,7 @@ impl<'a> std::ops::DerefMut for FormatPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageFormatProperties.html) · Structure
 #[doc(alias = "VkImageFormatProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageFormatProperties {
     pub max_extent: crate::vk1_0::Extent3D,
@@ -10699,8 +10485,7 @@ impl Default for ImageFormatProperties {
 }
 impl std::fmt::Debug for ImageFormatProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageFormatProperties")
+        f.debug_struct("ImageFormatProperties")
             .field("max_extent", &self.max_extent)
             .field("max_mip_levels", &self.max_mip_levels)
             .field("max_array_layers", &self.max_array_layers)
@@ -10791,7 +10576,7 @@ impl<'a> std::ops::DerefMut for ImageFormatPropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorBufferInfo.html) · Structure
 #[doc(alias = "VkDescriptorBufferInfo")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorBufferInfo {
     pub buffer: crate::vk1_0::Buffer,
@@ -10809,8 +10594,7 @@ impl Default for DescriptorBufferInfo {
 }
 impl std::fmt::Debug for DescriptorBufferInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorBufferInfo")
+        f.debug_struct("DescriptorBufferInfo")
             .field("buffer", &self.buffer)
             .field("offset", &self.offset)
             .field("range", &self.range)
@@ -10881,7 +10665,7 @@ impl<'a> std::ops::DerefMut for DescriptorBufferInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorImageInfo.html) · Structure
 #[doc(alias = "VkDescriptorImageInfo")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorImageInfo {
     pub sampler: crate::vk1_0::Sampler,
@@ -10899,8 +10683,7 @@ impl Default for DescriptorImageInfo {
 }
 impl std::fmt::Debug for DescriptorImageInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorImageInfo")
+        f.debug_struct("DescriptorImageInfo")
             .field("sampler", &self.sampler)
             .field("image_view", &self.image_view)
             .field("image_layout", &self.image_layout)
@@ -10971,7 +10754,7 @@ impl<'a> std::ops::DerefMut for DescriptorImageInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkWriteDescriptorSet.html) · Structure
 #[doc(alias = "VkWriteDescriptorSet")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct WriteDescriptorSet {
     pub s_type: crate::vk1_0::StructureType,
@@ -11006,8 +10789,7 @@ impl Default for WriteDescriptorSet {
 }
 impl std::fmt::Debug for WriteDescriptorSet {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("WriteDescriptorSet")
+        f.debug_struct("WriteDescriptorSet")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("dst_set", &self.dst_set)
@@ -11126,7 +10908,7 @@ impl<'a> std::ops::DerefMut for WriteDescriptorSetBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCopyDescriptorSet.html) · Structure
 #[doc(alias = "VkCopyDescriptorSet")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CopyDescriptorSet {
     pub s_type: crate::vk1_0::StructureType,
@@ -11159,8 +10941,7 @@ impl Default for CopyDescriptorSet {
 }
 impl std::fmt::Debug for CopyDescriptorSet {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CopyDescriptorSet")
+        f.debug_struct("CopyDescriptorSet")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_set", &self.src_set)
@@ -11263,7 +11044,7 @@ impl<'a> std::ops::DerefMut for CopyDescriptorSetBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCreateInfo.html) · Structure
 #[doc(alias = "VkBufferCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -11294,8 +11075,7 @@ impl Default for BufferCreateInfo {
 }
 impl std::fmt::Debug for BufferCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCreateInfo")
+        f.debug_struct("BufferCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -11386,7 +11166,7 @@ impl<'a> std::ops::DerefMut for BufferCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferViewCreateInfo.html) · Structure
 #[doc(alias = "VkBufferViewCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferViewCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -11415,8 +11195,7 @@ impl Default for BufferViewCreateInfo {
 }
 impl std::fmt::Debug for BufferViewCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferViewCreateInfo")
+        f.debug_struct("BufferViewCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -11505,7 +11284,7 @@ impl<'a> std::ops::DerefMut for BufferViewCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSubresource.html) · Structure
 #[doc(alias = "VkImageSubresource")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageSubresource {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -11523,8 +11302,7 @@ impl Default for ImageSubresource {
 }
 impl std::fmt::Debug for ImageSubresource {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageSubresource")
+        f.debug_struct("ImageSubresource")
             .field("aspect_mask", &self.aspect_mask)
             .field("mip_level", &self.mip_level)
             .field("array_layer", &self.array_layer)
@@ -11595,7 +11373,7 @@ impl<'a> std::ops::DerefMut for ImageSubresourceBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSubresourceLayers.html) · Structure
 #[doc(alias = "VkImageSubresourceLayers")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageSubresourceLayers {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -11615,8 +11393,7 @@ impl Default for ImageSubresourceLayers {
 }
 impl std::fmt::Debug for ImageSubresourceLayers {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageSubresourceLayers")
+        f.debug_struct("ImageSubresourceLayers")
             .field("aspect_mask", &self.aspect_mask)
             .field("mip_level", &self.mip_level)
             .field("base_array_layer", &self.base_array_layer)
@@ -11694,7 +11471,7 @@ impl<'a> std::ops::DerefMut for ImageSubresourceLayersBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageSubresourceRange.html) · Structure
 #[doc(alias = "VkImageSubresourceRange")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageSubresourceRange {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -11716,8 +11493,7 @@ impl Default for ImageSubresourceRange {
 }
 impl std::fmt::Debug for ImageSubresourceRange {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageSubresourceRange")
+        f.debug_struct("ImageSubresourceRange")
             .field("aspect_mask", &self.aspect_mask)
             .field("base_mip_level", &self.base_mip_level)
             .field("level_count", &self.level_count)
@@ -11802,7 +11578,7 @@ impl<'a> std::ops::DerefMut for ImageSubresourceRangeBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryBarrier.html) · Structure
 #[doc(alias = "VkMemoryBarrier")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryBarrier {
     pub s_type: crate::vk1_0::StructureType,
@@ -11825,8 +11601,7 @@ impl Default for MemoryBarrier {
 }
 impl std::fmt::Debug for MemoryBarrier {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryBarrier")
+        f.debug_struct("MemoryBarrier")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_access_mask", &self.src_access_mask)
@@ -11897,7 +11672,7 @@ impl<'a> std::ops::DerefMut for MemoryBarrierBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferMemoryBarrier.html) · Structure
 #[doc(alias = "VkBufferMemoryBarrier")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BufferMemoryBarrier {
     pub s_type: crate::vk1_0::StructureType,
@@ -11930,8 +11705,7 @@ impl Default for BufferMemoryBarrier {
 }
 impl std::fmt::Debug for BufferMemoryBarrier {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferMemoryBarrier")
+        f.debug_struct("BufferMemoryBarrier")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_access_mask", &self.src_access_mask)
@@ -12040,7 +11814,7 @@ impl<'a> std::ops::DerefMut for BufferMemoryBarrierBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageMemoryBarrier.html) · Structure
 #[doc(alias = "VkImageMemoryBarrier")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageMemoryBarrier {
     pub s_type: crate::vk1_0::StructureType,
@@ -12075,8 +11849,7 @@ impl Default for ImageMemoryBarrier {
 }
 impl std::fmt::Debug for ImageMemoryBarrier {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageMemoryBarrier")
+        f.debug_struct("ImageMemoryBarrier")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("src_access_mask", &self.src_access_mask)
@@ -12195,7 +11968,7 @@ impl<'a> std::ops::DerefMut for ImageMemoryBarrierBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCreateInfo.html) · Structure
 #[doc(alias = "VkImageCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -12240,8 +12013,7 @@ impl Default for ImageCreateInfo {
 }
 impl std::fmt::Debug for ImageCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageCreateInfo")
+        f.debug_struct("ImageCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -12378,7 +12150,7 @@ impl<'a> std::ops::DerefMut for ImageCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubresourceLayout.html) · Structure
 #[doc(alias = "VkSubresourceLayout")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SubresourceLayout {
     pub offset: crate::vk1_0::DeviceSize,
@@ -12400,8 +12172,7 @@ impl Default for SubresourceLayout {
 }
 impl std::fmt::Debug for SubresourceLayout {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubresourceLayout")
+        f.debug_struct("SubresourceLayout")
             .field("offset", &self.offset)
             .field("size", &self.size)
             .field("row_pitch", &self.row_pitch)
@@ -12486,7 +12257,7 @@ impl<'a> std::ops::DerefMut for SubresourceLayoutBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageViewCreateInfo.html) · Structure
 #[doc(alias = "VkImageViewCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImageViewCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -12517,8 +12288,7 @@ impl Default for ImageViewCreateInfo {
 }
 impl std::fmt::Debug for ImageViewCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageViewCreateInfo")
+        f.debug_struct("ImageViewCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -12617,7 +12387,7 @@ impl<'a> std::ops::DerefMut for ImageViewCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferCopy.html) · Structure
 #[doc(alias = "VkBufferCopy")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BufferCopy {
     pub src_offset: crate::vk1_0::DeviceSize,
@@ -12635,8 +12405,7 @@ impl Default for BufferCopy {
 }
 impl std::fmt::Debug for BufferCopy {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferCopy")
+        f.debug_struct("BufferCopy")
             .field("src_offset", &self.src_offset)
             .field("dst_offset", &self.dst_offset)
             .field("size", &self.size)
@@ -12704,7 +12473,7 @@ impl<'a> std::ops::DerefMut for BufferCopyBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseMemoryBind.html) · Structure
 #[doc(alias = "VkSparseMemoryBind")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseMemoryBind {
     pub resource_offset: crate::vk1_0::DeviceSize,
@@ -12726,8 +12495,7 @@ impl Default for SparseMemoryBind {
 }
 impl std::fmt::Debug for SparseMemoryBind {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseMemoryBind")
+        f.debug_struct("SparseMemoryBind")
             .field("resource_offset", &self.resource_offset)
             .field("size", &self.size)
             .field("memory", &self.memory)
@@ -12812,7 +12580,7 @@ impl<'a> std::ops::DerefMut for SparseMemoryBindBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryBind.html) · Structure
 #[doc(alias = "VkSparseImageMemoryBind")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SparseImageMemoryBind {
     pub subresource: crate::vk1_0::ImageSubresource,
@@ -12836,8 +12604,7 @@ impl Default for SparseImageMemoryBind {
 }
 impl std::fmt::Debug for SparseImageMemoryBind {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseImageMemoryBind")
+        f.debug_struct("SparseImageMemoryBind")
             .field("subresource", &self.subresource)
             .field("offset", &self.offset)
             .field("extent", &self.extent)
@@ -12929,7 +12696,7 @@ impl<'a> std::ops::DerefMut for SparseImageMemoryBindBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseBufferMemoryBindInfo.html) · Structure
 #[doc(alias = "VkSparseBufferMemoryBindInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SparseBufferMemoryBindInfo {
     pub buffer: crate::vk1_0::Buffer,
@@ -12947,8 +12714,7 @@ impl Default for SparseBufferMemoryBindInfo {
 }
 impl std::fmt::Debug for SparseBufferMemoryBindInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseBufferMemoryBindInfo")
+        f.debug_struct("SparseBufferMemoryBindInfo")
             .field("buffer", &self.buffer)
             .field("bind_count", &self.bind_count)
             .field("p_binds", &self.p_binds)
@@ -13016,7 +12782,7 @@ impl<'a> std::ops::DerefMut for SparseBufferMemoryBindInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageOpaqueMemoryBindInfo.html) · Structure
 #[doc(alias = "VkSparseImageOpaqueMemoryBindInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SparseImageOpaqueMemoryBindInfo {
     pub image: crate::vk1_0::Image,
@@ -13034,8 +12800,7 @@ impl Default for SparseImageOpaqueMemoryBindInfo {
 }
 impl std::fmt::Debug for SparseImageOpaqueMemoryBindInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseImageOpaqueMemoryBindInfo")
+        f.debug_struct("SparseImageOpaqueMemoryBindInfo")
             .field("image", &self.image)
             .field("bind_count", &self.bind_count)
             .field("p_binds", &self.p_binds)
@@ -13106,7 +12871,7 @@ impl<'a> std::ops::DerefMut for SparseImageOpaqueMemoryBindInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSparseImageMemoryBindInfo.html) · Structure
 #[doc(alias = "VkSparseImageMemoryBindInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SparseImageMemoryBindInfo {
     pub image: crate::vk1_0::Image,
@@ -13124,8 +12889,7 @@ impl Default for SparseImageMemoryBindInfo {
 }
 impl std::fmt::Debug for SparseImageMemoryBindInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SparseImageMemoryBindInfo")
+        f.debug_struct("SparseImageMemoryBindInfo")
             .field("image", &self.image)
             .field("bind_count", &self.bind_count)
             .field("p_binds", &self.p_binds)
@@ -13196,7 +12960,7 @@ impl<'a> std::ops::DerefMut for SparseImageMemoryBindInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindSparseInfo.html) · Structure
 #[doc(alias = "VkBindSparseInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct BindSparseInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -13235,8 +12999,7 @@ impl Default for BindSparseInfo {
 }
 impl std::fmt::Debug for BindSparseInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindSparseInfo")
+        f.debug_struct("BindSparseInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("wait_semaphore_count", &self.wait_semaphore_count)
@@ -13347,7 +13110,7 @@ impl<'a> std::ops::DerefMut for BindSparseInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageCopy.html) · Structure
 #[doc(alias = "VkImageCopy")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageCopy {
     pub src_subresource: crate::vk1_0::ImageSubresourceLayers,
@@ -13369,8 +13132,7 @@ impl Default for ImageCopy {
 }
 impl std::fmt::Debug for ImageCopy {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageCopy")
+        f.debug_struct("ImageCopy")
             .field("src_subresource", &self.src_subresource)
             .field("src_offset", &self.src_offset)
             .field("dst_subresource", &self.dst_subresource)
@@ -13458,7 +13220,7 @@ impl<'a> std::ops::DerefMut for ImageCopyBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageBlit.html) · Structure
 #[doc(alias = "VkImageBlit")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageBlit {
     pub src_subresource: crate::vk1_0::ImageSubresourceLayers,
@@ -13478,8 +13240,7 @@ impl Default for ImageBlit {
 }
 impl std::fmt::Debug for ImageBlit {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageBlit")
+        f.debug_struct("ImageBlit")
             .field("src_subresource", &self.src_subresource)
             .field("src_offsets", &self.src_offsets)
             .field("dst_subresource", &self.dst_subresource)
@@ -13560,7 +13321,7 @@ impl<'a> std::ops::DerefMut for ImageBlitBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBufferImageCopy.html) · Structure
 #[doc(alias = "VkBufferImageCopy")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BufferImageCopy {
     pub buffer_offset: crate::vk1_0::DeviceSize,
@@ -13584,8 +13345,7 @@ impl Default for BufferImageCopy {
 }
 impl std::fmt::Debug for BufferImageCopy {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BufferImageCopy")
+        f.debug_struct("BufferImageCopy")
             .field("buffer_offset", &self.buffer_offset)
             .field("buffer_row_length", &self.buffer_row_length)
             .field("buffer_image_height", &self.buffer_image_height)
@@ -13677,7 +13437,7 @@ impl<'a> std::ops::DerefMut for BufferImageCopyBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImageResolve.html) · Structure
 #[doc(alias = "VkImageResolve")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ImageResolve {
     pub src_subresource: crate::vk1_0::ImageSubresourceLayers,
@@ -13699,8 +13459,7 @@ impl Default for ImageResolve {
 }
 impl std::fmt::Debug for ImageResolve {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImageResolve")
+        f.debug_struct("ImageResolve")
             .field("src_subresource", &self.src_subresource)
             .field("src_offset", &self.src_offset)
             .field("dst_subresource", &self.dst_subresource)
@@ -13788,7 +13547,7 @@ impl<'a> std::ops::DerefMut for ImageResolveBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModuleCreateInfo.html) · Structure
 #[doc(alias = "VkShaderModuleCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ShaderModuleCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -13813,8 +13572,7 @@ impl Default for ShaderModuleCreateInfo {
 }
 impl std::fmt::Debug for ShaderModuleCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ShaderModuleCreateInfo")
+        f.debug_struct("ShaderModuleCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -13884,7 +13642,7 @@ impl<'a> std::ops::DerefMut for ShaderModuleCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutBinding.html) · Structure
 #[doc(alias = "VkDescriptorSetLayoutBinding")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorSetLayoutBinding {
     pub binding: u32,
@@ -13906,8 +13664,7 @@ impl Default for DescriptorSetLayoutBinding {
 }
 impl std::fmt::Debug for DescriptorSetLayoutBinding {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorSetLayoutBinding")
+        f.debug_struct("DescriptorSetLayoutBinding")
             .field("binding", &self.binding)
             .field("descriptor_type", &self.descriptor_type)
             .field("descriptor_count", &self.descriptor_count)
@@ -14001,7 +13758,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetLayoutBindingBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetLayoutCreateInfo.html) · Structure
 #[doc(alias = "VkDescriptorSetLayoutCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorSetLayoutCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -14026,8 +13783,7 @@ impl Default for DescriptorSetLayoutCreateInfo {
 }
 impl std::fmt::Debug for DescriptorSetLayoutCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorSetLayoutCreateInfo")
+        f.debug_struct("DescriptorSetLayoutCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -14103,7 +13859,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetLayoutCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolSize.html) · Structure
 #[doc(alias = "VkDescriptorPoolSize")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DescriptorPoolSize {
     pub _type: crate::vk1_0::DescriptorType,
@@ -14119,8 +13875,7 @@ impl Default for DescriptorPoolSize {
 }
 impl std::fmt::Debug for DescriptorPoolSize {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorPoolSize")
+        f.debug_struct("DescriptorPoolSize")
             .field("_type", &self._type)
             .field("descriptor_count", &self.descriptor_count)
             .finish()
@@ -14184,7 +13939,7 @@ impl<'a> std::ops::DerefMut for DescriptorPoolSizeBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorPoolCreateInfo.html) · Structure
 #[doc(alias = "VkDescriptorPoolCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorPoolCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -14211,8 +13966,7 @@ impl Default for DescriptorPoolCreateInfo {
 }
 impl std::fmt::Debug for DescriptorPoolCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorPoolCreateInfo")
+        f.debug_struct("DescriptorPoolCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -14292,7 +14046,7 @@ impl<'a> std::ops::DerefMut for DescriptorPoolCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDescriptorSetAllocateInfo.html) · Structure
 #[doc(alias = "VkDescriptorSetAllocateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DescriptorSetAllocateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -14317,8 +14071,7 @@ impl Default for DescriptorSetAllocateInfo {
 }
 impl std::fmt::Debug for DescriptorSetAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DescriptorSetAllocateInfo")
+        f.debug_struct("DescriptorSetAllocateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("descriptor_pool", &self.descriptor_pool)
@@ -14394,7 +14147,7 @@ impl<'a> std::ops::DerefMut for DescriptorSetAllocateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSpecializationMapEntry.html) · Structure
 #[doc(alias = "VkSpecializationMapEntry")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SpecializationMapEntry {
     pub constant_id: u32,
@@ -14412,8 +14165,7 @@ impl Default for SpecializationMapEntry {
 }
 impl std::fmt::Debug for SpecializationMapEntry {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SpecializationMapEntry")
+        f.debug_struct("SpecializationMapEntry")
             .field("constant_id", &self.constant_id)
             .field("offset", &self.offset)
             .field("size", &self.size)
@@ -14484,7 +14236,7 @@ impl<'a> std::ops::DerefMut for SpecializationMapEntryBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSpecializationInfo.html) · Structure
 #[doc(alias = "VkSpecializationInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SpecializationInfo {
     pub map_entry_count: u32,
@@ -14504,8 +14256,7 @@ impl Default for SpecializationInfo {
 }
 impl std::fmt::Debug for SpecializationInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SpecializationInfo")
+        f.debug_struct("SpecializationInfo")
             .field("map_entry_count", &self.map_entry_count)
             .field("p_map_entries", &self.p_map_entries)
             .field("data_size", &self.data_size)
@@ -14583,7 +14334,7 @@ impl<'a> std::ops::DerefMut for SpecializationInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineShaderStageCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineShaderStageCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineShaderStageCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -14612,8 +14363,7 @@ impl Default for PipelineShaderStageCreateInfo {
 }
 impl std::fmt::Debug for PipelineShaderStageCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineShaderStageCreateInfo")
+        f.debug_struct("PipelineShaderStageCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -14708,7 +14458,7 @@ impl<'a> std::ops::DerefMut for PipelineShaderStageCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkComputePipelineCreateInfo.html) · Structure
 #[doc(alias = "VkComputePipelineCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ComputePipelineCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -14737,8 +14487,7 @@ impl Default for ComputePipelineCreateInfo {
 }
 impl std::fmt::Debug for ComputePipelineCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ComputePipelineCreateInfo")
+        f.debug_struct("ComputePipelineCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -14830,7 +14579,7 @@ impl<'a> std::ops::DerefMut for ComputePipelineCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputBindingDescription.html) · Structure
 #[doc(alias = "VkVertexInputBindingDescription")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VertexInputBindingDescription {
     pub binding: u32,
@@ -14848,8 +14597,7 @@ impl Default for VertexInputBindingDescription {
 }
 impl std::fmt::Debug for VertexInputBindingDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VertexInputBindingDescription")
+        f.debug_struct("VertexInputBindingDescription")
             .field("binding", &self.binding)
             .field("stride", &self.stride)
             .field("input_rate", &self.input_rate)
@@ -14923,7 +14671,7 @@ impl<'a> std::ops::DerefMut for VertexInputBindingDescriptionBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVertexInputAttributeDescription.html) · Structure
 #[doc(alias = "VkVertexInputAttributeDescription")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VertexInputAttributeDescription {
     pub location: u32,
@@ -14943,8 +14691,7 @@ impl Default for VertexInputAttributeDescription {
 }
 impl std::fmt::Debug for VertexInputAttributeDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VertexInputAttributeDescription")
+        f.debug_struct("VertexInputAttributeDescription")
             .field("location", &self.location)
             .field("binding", &self.binding)
             .field("format", &self.format)
@@ -15025,7 +14772,7 @@ impl<'a> std::ops::DerefMut for VertexInputAttributeDescriptionBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineVertexInputStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineVertexInputStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineVertexInputStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -15054,8 +14801,7 @@ impl Default for PipelineVertexInputStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineVertexInputStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineVertexInputStateCreateInfo")
+        f.debug_struct("PipelineVertexInputStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -15161,7 +14907,7 @@ impl<'a> std::ops::DerefMut for PipelineVertexInputStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineInputAssemblyStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineInputAssemblyStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineInputAssemblyStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -15186,8 +14932,7 @@ impl Default for PipelineInputAssemblyStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineInputAssemblyStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineInputAssemblyStateCreateInfo")
+        f.debug_struct("PipelineInputAssemblyStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -15268,7 +15013,7 @@ impl<'a> std::ops::DerefMut for PipelineInputAssemblyStateCreateInfoBuilder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineTessellationStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineTessellationStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineTessellationStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -15291,8 +15036,7 @@ impl Default for PipelineTessellationStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineTessellationStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineTessellationStateCreateInfo")
+        f.debug_struct("PipelineTessellationStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -15366,7 +15110,7 @@ impl<'a> std::ops::DerefMut for PipelineTessellationStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineViewportStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -15395,8 +15139,7 @@ impl Default for PipelineViewportStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineViewportStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineViewportStateCreateInfo")
+        f.debug_struct("PipelineViewportStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -15493,7 +15236,7 @@ impl<'a> std::ops::DerefMut for PipelineViewportStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineRasterizationStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -15534,8 +15277,7 @@ impl Default for PipelineRasterizationStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineRasterizationStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRasterizationStateCreateInfo")
+        f.debug_struct("PipelineRasterizationStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -15678,7 +15420,7 @@ impl<'a> std::ops::DerefMut for PipelineRasterizationStateCreateInfoBuilder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineMultisampleStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineMultisampleStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -15711,8 +15453,7 @@ impl Default for PipelineMultisampleStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineMultisampleStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineMultisampleStateCreateInfo")
+        f.debug_struct("PipelineMultisampleStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -15833,7 +15574,7 @@ impl<'a> std::ops::DerefMut for PipelineMultisampleStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendAttachmentState.html) · Structure
 #[doc(alias = "VkPipelineColorBlendAttachmentState")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PipelineColorBlendAttachmentState {
     pub blend_enable: crate::vk1_0::Bool32,
@@ -15861,8 +15602,7 @@ impl Default for PipelineColorBlendAttachmentState {
 }
 impl std::fmt::Debug for PipelineColorBlendAttachmentState {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineColorBlendAttachmentState")
+        f.debug_struct("PipelineColorBlendAttachmentState")
             .field("blend_enable", &(self.blend_enable != 0))
             .field("src_color_blend_factor", &self.src_color_blend_factor)
             .field("dst_color_blend_factor", &self.dst_color_blend_factor)
@@ -15986,7 +15726,7 @@ impl<'a> std::ops::DerefMut for PipelineColorBlendAttachmentStateBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineColorBlendStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineColorBlendStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineColorBlendStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -16017,8 +15757,7 @@ impl Default for PipelineColorBlendStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineColorBlendStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineColorBlendStateCreateInfo")
+        f.debug_struct("PipelineColorBlendStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -16121,7 +15860,7 @@ impl<'a> std::ops::DerefMut for PipelineColorBlendStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDynamicStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineDynamicStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineDynamicStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -16146,8 +15885,7 @@ impl Default for PipelineDynamicStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineDynamicStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineDynamicStateCreateInfo")
+        f.debug_struct("PipelineDynamicStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -16226,7 +15964,7 @@ impl<'a> std::ops::DerefMut for PipelineDynamicStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkStencilOpState.html) · Structure
 #[doc(alias = "VkStencilOpState")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct StencilOpState {
     pub fail_op: crate::vk1_0::StencilOp,
@@ -16252,8 +15990,7 @@ impl Default for StencilOpState {
 }
 impl std::fmt::Debug for StencilOpState {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("StencilOpState")
+        f.debug_struct("StencilOpState")
             .field("fail_op", &self.fail_op)
             .field("pass_op", &self.pass_op)
             .field("depth_fail_op", &self.depth_fail_op)
@@ -16349,7 +16086,7 @@ impl<'a> std::ops::DerefMut for StencilOpStateBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineDepthStencilStateCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineDepthStencilStateCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -16388,8 +16125,7 @@ impl Default for PipelineDepthStencilStateCreateInfo {
 }
 impl std::fmt::Debug for PipelineDepthStencilStateCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineDepthStencilStateCreateInfo")
+        f.debug_struct("PipelineDepthStencilStateCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -16522,7 +16258,7 @@ impl<'a> std::ops::DerefMut for PipelineDepthStencilStateCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineCreateInfo.html) · Structure
 #[doc(alias = "VkGraphicsPipelineCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GraphicsPipelineCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -16575,8 +16311,7 @@ impl Default for GraphicsPipelineCreateInfo {
 }
 impl std::fmt::Debug for GraphicsPipelineCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GraphicsPipelineCreateInfo")
+        f.debug_struct("GraphicsPipelineCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -16777,7 +16512,7 @@ impl<'a> std::ops::DerefMut for GraphicsPipelineCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCacheCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineCacheCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineCacheCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -16802,8 +16537,7 @@ impl Default for PipelineCacheCreateInfo {
 }
 impl std::fmt::Debug for PipelineCacheCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCacheCreateInfo")
+        f.debug_struct("PipelineCacheCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -16878,7 +16612,7 @@ impl<'a> std::ops::DerefMut for PipelineCacheCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCacheHeaderVersionOne.html) · Structure
 #[doc(alias = "VkPipelineCacheHeaderVersionOne")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PipelineCacheHeaderVersionOne {
     pub header_size: u32,
@@ -16900,8 +16634,7 @@ impl Default for PipelineCacheHeaderVersionOne {
 }
 impl std::fmt::Debug for PipelineCacheHeaderVersionOne {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCacheHeaderVersionOne")
+        f.debug_struct("PipelineCacheHeaderVersionOne")
             .field("header_size", &self.header_size)
             .field("header_version", &self.header_version)
             .field("vendor_id", &self.vendor_id)
@@ -16992,7 +16725,7 @@ impl<'a> std::ops::DerefMut for PipelineCacheHeaderVersionOneBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPushConstantRange.html) · Structure
 #[doc(alias = "VkPushConstantRange")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PushConstantRange {
     pub stage_flags: crate::vk1_0::ShaderStageFlags,
@@ -17010,8 +16743,7 @@ impl Default for PushConstantRange {
 }
 impl std::fmt::Debug for PushConstantRange {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PushConstantRange")
+        f.debug_struct("PushConstantRange")
             .field("stage_flags", &self.stage_flags)
             .field("offset", &self.offset)
             .field("size", &self.size)
@@ -17082,7 +16814,7 @@ impl<'a> std::ops::DerefMut for PushConstantRangeBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLayoutCreateInfo.html) · Structure
 #[doc(alias = "VkPipelineLayoutCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineLayoutCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -17111,8 +16843,7 @@ impl Default for PipelineLayoutCreateInfo {
 }
 impl std::fmt::Debug for PipelineLayoutCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineLayoutCreateInfo")
+        f.debug_struct("PipelineLayoutCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -17197,7 +16928,7 @@ impl<'a> std::ops::DerefMut for PipelineLayoutCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerCreateInfo.html) · Structure
 #[doc(alias = "VkSamplerCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SamplerCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -17248,8 +16979,7 @@ impl Default for SamplerCreateInfo {
 }
 impl std::fmt::Debug for SamplerCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SamplerCreateInfo")
+        f.debug_struct("SamplerCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -17424,7 +17154,7 @@ impl<'a> std::ops::DerefMut for SamplerCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandPoolCreateInfo.html) · Structure
 #[doc(alias = "VkCommandPoolCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandPoolCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -17447,8 +17177,7 @@ impl Default for CommandPoolCreateInfo {
 }
 impl std::fmt::Debug for CommandPoolCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandPoolCreateInfo")
+        f.debug_struct("CommandPoolCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -17516,7 +17245,7 @@ impl<'a> std::ops::DerefMut for CommandPoolCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferAllocateInfo.html) · Structure
 #[doc(alias = "VkCommandBufferAllocateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferAllocateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -17541,8 +17270,7 @@ impl Default for CommandBufferAllocateInfo {
 }
 impl std::fmt::Debug for CommandBufferAllocateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferAllocateInfo")
+        f.debug_struct("CommandBufferAllocateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("command_pool", &self.command_pool)
@@ -17617,7 +17345,7 @@ impl<'a> std::ops::DerefMut for CommandBufferAllocateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferInheritanceInfo.html) · Structure
 #[doc(alias = "VkCommandBufferInheritanceInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferInheritanceInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -17648,8 +17376,7 @@ impl Default for CommandBufferInheritanceInfo {
 }
 impl std::fmt::Debug for CommandBufferInheritanceInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferInheritanceInfo")
+        f.debug_struct("CommandBufferInheritanceInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("render_pass", &self.render_pass)
@@ -17748,7 +17475,7 @@ impl<'a> std::ops::DerefMut for CommandBufferInheritanceInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCommandBufferBeginInfo.html) · Structure
 #[doc(alias = "VkCommandBufferBeginInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CommandBufferBeginInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -17771,8 +17498,7 @@ impl Default for CommandBufferBeginInfo {
 }
 impl std::fmt::Debug for CommandBufferBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CommandBufferBeginInfo")
+        f.debug_struct("CommandBufferBeginInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -17843,7 +17569,7 @@ impl<'a> std::ops::DerefMut for CommandBufferBeginInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassBeginInfo.html) · Structure
 #[doc(alias = "VkRenderPassBeginInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassBeginInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -17872,8 +17598,7 @@ impl Default for RenderPassBeginInfo {
 }
 impl std::fmt::Debug for RenderPassBeginInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderPassBeginInfo")
+        f.debug_struct("RenderPassBeginInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("render_pass", &self.render_pass)
@@ -17957,7 +17682,7 @@ impl<'a> std::ops::DerefMut for RenderPassBeginInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkClearColorValue.html) · Structure
 #[doc(alias = "VkClearColorValue")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub union ClearColorValue {
     pub float32: [std::os::raw::c_float; 4],
@@ -17976,7 +17701,7 @@ impl std::fmt::Debug for ClearColorValue {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkClearDepthStencilValue.html) · Structure
 #[doc(alias = "VkClearDepthStencilValue")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ClearDepthStencilValue {
     pub depth: std::os::raw::c_float,
@@ -17992,8 +17717,7 @@ impl Default for ClearDepthStencilValue {
 }
 impl std::fmt::Debug for ClearDepthStencilValue {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ClearDepthStencilValue")
+        f.debug_struct("ClearDepthStencilValue")
             .field("depth", &self.depth)
             .field("stencil", &self.stencil)
             .finish()
@@ -18057,7 +17781,7 @@ impl<'a> std::ops::DerefMut for ClearDepthStencilValueBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkClearValue.html) · Structure
 #[doc(alias = "VkClearValue")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub union ClearValue {
     pub color: crate::vk1_0::ClearColorValue,
@@ -18075,7 +17799,7 @@ impl std::fmt::Debug for ClearValue {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkClearAttachment.html) · Structure
 #[doc(alias = "VkClearAttachment")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ClearAttachment {
     pub aspect_mask: crate::vk1_0::ImageAspectFlags,
@@ -18093,8 +17817,7 @@ impl Default for ClearAttachment {
 }
 impl std::fmt::Debug for ClearAttachment {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ClearAttachment")
+        f.debug_struct("ClearAttachment")
             .field("aspect_mask", &self.aspect_mask)
             .field("color_attachment", &self.color_attachment)
             .field("clear_value", &self.clear_value)
@@ -18162,7 +17885,7 @@ impl<'a> std::ops::DerefMut for ClearAttachmentBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentDescription.html) · Structure
 #[doc(alias = "VkAttachmentDescription")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct AttachmentDescription {
     pub flags: crate::vk1_0::AttachmentDescriptionFlags,
@@ -18192,8 +17915,7 @@ impl Default for AttachmentDescription {
 }
 impl std::fmt::Debug for AttachmentDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AttachmentDescription")
+        f.debug_struct("AttachmentDescription")
             .field("flags", &self.flags)
             .field("format", &self.format)
             .field("samples", &self.samples)
@@ -18312,7 +18034,7 @@ impl<'a> std::ops::DerefMut for AttachmentDescriptionBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentReference.html) · Structure
 #[doc(alias = "VkAttachmentReference")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct AttachmentReference {
     pub attachment: u32,
@@ -18328,8 +18050,7 @@ impl Default for AttachmentReference {
 }
 impl std::fmt::Debug for AttachmentReference {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AttachmentReference")
+        f.debug_struct("AttachmentReference")
             .field("attachment", &self.attachment)
             .field("layout", &self.layout)
             .finish()
@@ -18393,7 +18114,7 @@ impl<'a> std::ops::DerefMut for AttachmentReferenceBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassDescription.html) · Structure
 #[doc(alias = "VkSubpassDescription")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SubpassDescription {
     pub flags: crate::vk1_0::SubpassDescriptionFlags,
@@ -18425,8 +18146,7 @@ impl Default for SubpassDescription {
 }
 impl std::fmt::Debug for SubpassDescription {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubpassDescription")
+        f.debug_struct("SubpassDescription")
             .field("flags", &self.flags)
             .field("pipeline_bind_point", &self.pipeline_bind_point)
             .field("input_attachment_count", &self.input_attachment_count)
@@ -18549,7 +18269,7 @@ impl<'a> std::ops::DerefMut for SubpassDescriptionBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassDependency.html) · Structure
 #[doc(alias = "VkSubpassDependency")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SubpassDependency {
     pub src_subpass: u32,
@@ -18575,8 +18295,7 @@ impl Default for SubpassDependency {
 }
 impl std::fmt::Debug for SubpassDependency {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubpassDependency")
+        f.debug_struct("SubpassDependency")
             .field("src_subpass", &self.src_subpass)
             .field("dst_subpass", &self.dst_subpass)
             .field("src_stage_mask", &self.src_stage_mask)
@@ -18690,7 +18409,7 @@ impl<'a> std::ops::DerefMut for SubpassDependencyBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassCreateInfo.html) · Structure
 #[doc(alias = "VkRenderPassCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -18723,8 +18442,7 @@ impl Default for RenderPassCreateInfo {
 }
 impl std::fmt::Debug for RenderPassCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderPassCreateInfo")
+        f.debug_struct("RenderPassCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -18821,7 +18539,7 @@ impl<'a> std::ops::DerefMut for RenderPassCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkEventCreateInfo.html) · Structure
 #[doc(alias = "VkEventCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct EventCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -18842,8 +18560,7 @@ impl Default for EventCreateInfo {
 }
 impl std::fmt::Debug for EventCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("EventCreateInfo")
+        f.debug_struct("EventCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -18901,7 +18618,7 @@ impl<'a> std::ops::DerefMut for EventCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFenceCreateInfo.html) · Structure
 #[doc(alias = "VkFenceCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FenceCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -18922,8 +18639,7 @@ impl Default for FenceCreateInfo {
 }
 impl std::fmt::Debug for FenceCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FenceCreateInfo")
+        f.debug_struct("FenceCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -18981,7 +18697,7 @@ impl<'a> std::ops::DerefMut for FenceCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFeatures.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFeatures")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PhysicalDeviceFeatures {
     pub robust_buffer_access: crate::vk1_0::Bool32,
@@ -19103,8 +18819,7 @@ impl Default for PhysicalDeviceFeatures {
 }
 impl std::fmt::Debug for PhysicalDeviceFeatures {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFeatures")
+        f.debug_struct("PhysicalDeviceFeatures")
             .field("robust_buffer_access", &(self.robust_buffer_access != 0))
             .field("full_draw_index_uint32", &(self.full_draw_index_uint32 != 0))
             .field("image_cube_array", &(self.image_cube_array != 0))
@@ -19653,7 +19368,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFeaturesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSparseProperties.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSparseProperties")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct PhysicalDeviceSparseProperties {
     pub residency_standard2_d_block_shape: crate::vk1_0::Bool32,
@@ -19675,8 +19390,7 @@ impl Default for PhysicalDeviceSparseProperties {
 }
 impl std::fmt::Debug for PhysicalDeviceSparseProperties {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSparseProperties")
+        f.debug_struct("PhysicalDeviceSparseProperties")
             .field(
                 "residency_standard2_d_block_shape",
                 &(self.residency_standard2_d_block_shape != 0),
@@ -19798,7 +19512,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSparsePropertiesBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLimits.html) · Structure
 #[doc(alias = "VkPhysicalDeviceLimits")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceLimits {
     pub max_image_dimension1_d: u32,
@@ -20022,8 +19736,7 @@ impl Default for PhysicalDeviceLimits {
 }
 impl std::fmt::Debug for PhysicalDeviceLimits {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceLimits")
+        f.debug_struct("PhysicalDeviceLimits")
             .field("max_image_dimension1_d", &self.max_image_dimension1_d)
             .field("max_image_dimension2_d", &self.max_image_dimension2_d)
             .field("max_image_dimension3_d", &self.max_image_dimension3_d)
@@ -21270,7 +20983,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLimitsBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreCreateInfo.html) · Structure
 #[doc(alias = "VkSemaphoreCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SemaphoreCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -21291,8 +21004,7 @@ impl Default for SemaphoreCreateInfo {
 }
 impl std::fmt::Debug for SemaphoreCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SemaphoreCreateInfo")
+        f.debug_struct("SemaphoreCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -21353,7 +21065,7 @@ impl<'a> std::ops::DerefMut for SemaphoreCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryPoolCreateInfo.html) · Structure
 #[doc(alias = "VkQueryPoolCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueryPoolCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -21380,8 +21092,7 @@ impl Default for QueryPoolCreateInfo {
 }
 impl std::fmt::Debug for QueryPoolCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueryPoolCreateInfo")
+        f.debug_struct("QueryPoolCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -21466,7 +21177,7 @@ impl<'a> std::ops::DerefMut for QueryPoolCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFramebufferCreateInfo.html) · Structure
 #[doc(alias = "VkFramebufferCreateInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FramebufferCreateInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -21499,8 +21210,7 @@ impl Default for FramebufferCreateInfo {
 }
 impl std::fmt::Debug for FramebufferCreateInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FramebufferCreateInfo")
+        f.debug_struct("FramebufferCreateInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -21604,7 +21314,7 @@ impl<'a> std::ops::DerefMut for FramebufferCreateInfoBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrawIndirectCommand.html) · Structure
 #[doc(alias = "VkDrawIndirectCommand")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrawIndirectCommand {
     pub vertex_count: u32,
@@ -21624,8 +21334,7 @@ impl Default for DrawIndirectCommand {
 }
 impl std::fmt::Debug for DrawIndirectCommand {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DrawIndirectCommand")
+        f.debug_struct("DrawIndirectCommand")
             .field("vertex_count", &self.vertex_count)
             .field("instance_count", &self.instance_count)
             .field("first_vertex", &self.first_vertex)
@@ -21703,7 +21412,7 @@ impl<'a> std::ops::DerefMut for DrawIndirectCommandBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDrawIndexedIndirectCommand.html) · Structure
 #[doc(alias = "VkDrawIndexedIndirectCommand")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DrawIndexedIndirectCommand {
     pub index_count: u32,
@@ -21725,8 +21434,7 @@ impl Default for DrawIndexedIndirectCommand {
 }
 impl std::fmt::Debug for DrawIndexedIndirectCommand {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DrawIndexedIndirectCommand")
+        f.debug_struct("DrawIndexedIndirectCommand")
             .field("index_count", &self.index_count)
             .field("instance_count", &self.instance_count)
             .field("first_index", &self.first_index)
@@ -21811,7 +21519,7 @@ impl<'a> std::ops::DerefMut for DrawIndexedIndirectCommandBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDispatchIndirectCommand.html) · Structure
 #[doc(alias = "VkDispatchIndirectCommand")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DispatchIndirectCommand {
     pub x: u32,
@@ -21829,8 +21537,7 @@ impl Default for DispatchIndirectCommand {
 }
 impl std::fmt::Debug for DispatchIndirectCommand {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DispatchIndirectCommand")
+        f.debug_struct("DispatchIndirectCommand")
             .field("x", &self.x)
             .field("y", &self.y)
             .field("z", &self.z)
@@ -21901,7 +21608,7 @@ impl<'a> std::ops::DerefMut for DispatchIndirectCommandBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubmitInfo.html) · Structure
 #[doc(alias = "VkSubmitInfo")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SubmitInfo {
     pub s_type: crate::vk1_0::StructureType,
@@ -21934,8 +21641,7 @@ impl Default for SubmitInfo {
 }
 impl std::fmt::Debug for SubmitInfo {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubmitInfo")
+        f.debug_struct("SubmitInfo")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("wait_semaphore_count", &self.wait_semaphore_count)
@@ -22094,10 +21800,10 @@ pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION.html) · Define
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 205u32;
+pub const HEADER_VERSION: u32 = 206u32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 205u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 206u32);
 ///Provided by [`crate::vk1_0`]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

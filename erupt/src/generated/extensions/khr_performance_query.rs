@@ -44,15 +44,14 @@ impl crate::vk1_0::StructureType {
 pub struct PerformanceCounterScopeKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterScopeKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::COMMAND_BUFFER_KHR => "COMMAND_BUFFER_KHR",
-                    &Self::RENDER_PASS_KHR => "RENDER_PASS_KHR",
-                    &Self::COMMAND_KHR => "COMMAND_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::COMMAND_BUFFER_KHR => "COMMAND_BUFFER_KHR",
+                &Self::RENDER_PASS_KHR => "RENDER_PASS_KHR",
+                &Self::COMMAND_KHR => "COMMAND_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_performance_query`]
@@ -74,23 +73,22 @@ impl crate::extensions::khr_performance_query::PerformanceCounterScopeKHR {
 pub struct PerformanceCounterUnitKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterUnitKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::GENERIC_KHR => "GENERIC_KHR",
-                    &Self::PERCENTAGE_KHR => "PERCENTAGE_KHR",
-                    &Self::NANOSECONDS_KHR => "NANOSECONDS_KHR",
-                    &Self::BYTES_KHR => "BYTES_KHR",
-                    &Self::BYTES_PER_SECOND_KHR => "BYTES_PER_SECOND_KHR",
-                    &Self::KELVIN_KHR => "KELVIN_KHR",
-                    &Self::WATTS_KHR => "WATTS_KHR",
-                    &Self::VOLTS_KHR => "VOLTS_KHR",
-                    &Self::AMPS_KHR => "AMPS_KHR",
-                    &Self::HERTZ_KHR => "HERTZ_KHR",
-                    &Self::CYCLES_KHR => "CYCLES_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::GENERIC_KHR => "GENERIC_KHR",
+                &Self::PERCENTAGE_KHR => "PERCENTAGE_KHR",
+                &Self::NANOSECONDS_KHR => "NANOSECONDS_KHR",
+                &Self::BYTES_KHR => "BYTES_KHR",
+                &Self::BYTES_PER_SECOND_KHR => "BYTES_PER_SECOND_KHR",
+                &Self::KELVIN_KHR => "KELVIN_KHR",
+                &Self::WATTS_KHR => "WATTS_KHR",
+                &Self::VOLTS_KHR => "VOLTS_KHR",
+                &Self::AMPS_KHR => "AMPS_KHR",
+                &Self::HERTZ_KHR => "HERTZ_KHR",
+                &Self::CYCLES_KHR => "CYCLES_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_performance_query`]
@@ -114,18 +112,17 @@ impl crate::extensions::khr_performance_query::PerformanceCounterUnitKHR {
 pub struct PerformanceCounterStorageKHR(pub i32);
 impl std::fmt::Debug for PerformanceCounterStorageKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INT32_KHR => "INT32_KHR",
-                    &Self::INT64_KHR => "INT64_KHR",
-                    &Self::UINT32_KHR => "UINT32_KHR",
-                    &Self::UINT64_KHR => "UINT64_KHR",
-                    &Self::FLOAT32_KHR => "FLOAT32_KHR",
-                    &Self::FLOAT64_KHR => "FLOAT64_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INT32_KHR => "INT32_KHR",
+                &Self::INT64_KHR => "INT64_KHR",
+                &Self::UINT32_KHR => "UINT32_KHR",
+                &Self::UINT64_KHR => "UINT64_KHR",
+                &Self::FLOAT32_KHR => "FLOAT32_KHR",
+                &Self::FLOAT64_KHR => "FLOAT64_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_performance_query`]
@@ -161,14 +158,13 @@ impl PerformanceCounterDescriptionFlagBitsKHR {
 }
 impl std::fmt::Debug for PerformanceCounterDescriptionFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::PERFORMANCE_IMPACTING_KHR => "PERFORMANCE_IMPACTING_KHR",
-                    &Self::CONCURRENTLY_IMPACTED_KHR => "CONCURRENTLY_IMPACTED_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::PERFORMANCE_IMPACTING_KHR => "PERFORMANCE_IMPACTING_KHR",
+                &Self::CONCURRENTLY_IMPACTED_KHR => "CONCURRENTLY_IMPACTED_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_performance_query`]
@@ -197,12 +193,11 @@ impl AcquireProfilingLockFlagBitsKHR {
 }
 impl std::fmt::Debug for AcquireProfilingLockFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR.html) · Function
@@ -256,7 +251,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePerformanceQueryFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePerformanceQueryFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePerformanceQueryFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -279,8 +274,7 @@ impl Default for PhysicalDevicePerformanceQueryFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDevicePerformanceQueryFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePerformanceQueryFeaturesKHR")
+        f.debug_struct("PhysicalDevicePerformanceQueryFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -368,7 +362,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePerformanceQueryFeaturesKHRBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDevicePerformanceQueryPropertiesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDevicePerformanceQueryPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDevicePerformanceQueryPropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -389,8 +383,7 @@ impl Default for PhysicalDevicePerformanceQueryPropertiesKHR {
 }
 impl std::fmt::Debug for PhysicalDevicePerformanceQueryPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDevicePerformanceQueryPropertiesKHR")
+        f.debug_struct("PhysicalDevicePerformanceQueryPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -468,7 +461,7 @@ impl<'a> std::ops::DerefMut for PhysicalDevicePerformanceQueryPropertiesKHRBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceCounterKHR.html) · Structure
 #[doc(alias = "VkPerformanceCounterKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceCounterKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -495,8 +488,7 @@ impl Default for PerformanceCounterKHR {
 }
 impl std::fmt::Debug for PerformanceCounterKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceCounterKHR")
+        f.debug_struct("PerformanceCounterKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("unit", &self.unit)
@@ -587,7 +579,7 @@ impl<'a> std::ops::DerefMut for PerformanceCounterKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceCounterDescriptionKHR.html) · Structure
 #[doc(alias = "VkPerformanceCounterDescriptionKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceCounterDescriptionKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -614,8 +606,7 @@ impl Default for PerformanceCounterDescriptionKHR {
 }
 impl std::fmt::Debug for PerformanceCounterDescriptionKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceCounterDescriptionKHR")
+        f.debug_struct("PerformanceCounterDescriptionKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -709,7 +700,7 @@ impl<'a> std::ops::DerefMut for PerformanceCounterDescriptionKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueryPoolPerformanceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkQueryPoolPerformanceCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueryPoolPerformanceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -734,8 +725,7 @@ impl Default for QueryPoolPerformanceCreateInfoKHR {
 }
 impl std::fmt::Debug for QueryPoolPerformanceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueryPoolPerformanceCreateInfoKHR")
+        f.debug_struct("QueryPoolPerformanceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("queue_family_index", &self.queue_family_index)
@@ -808,7 +798,7 @@ impl<'a> std::ops::DerefMut for QueryPoolPerformanceCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceCounterResultKHR.html) · Structure
 #[doc(alias = "VkPerformanceCounterResultKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub union PerformanceCounterResultKHR {
     pub int32: i32,
@@ -830,7 +820,7 @@ impl std::fmt::Debug for PerformanceCounterResultKHR {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAcquireProfilingLockInfoKHR.html) · Structure
 #[doc(alias = "VkAcquireProfilingLockInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AcquireProfilingLockInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -853,8 +843,7 @@ impl Default for AcquireProfilingLockInfoKHR {
 }
 impl std::fmt::Debug for AcquireProfilingLockInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AcquireProfilingLockInfoKHR")
+        f.debug_struct("AcquireProfilingLockInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -925,7 +914,7 @@ impl<'a> std::ops::DerefMut for AcquireProfilingLockInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPerformanceQuerySubmitInfoKHR.html) · Structure
 #[doc(alias = "VkPerformanceQuerySubmitInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PerformanceQuerySubmitInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -946,8 +935,7 @@ impl Default for PerformanceQuerySubmitInfoKHR {
 }
 impl std::fmt::Debug for PerformanceQuerySubmitInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PerformanceQuerySubmitInfoKHR")
+        f.debug_struct("PerformanceQuerySubmitInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("counter_pass_index", &self.counter_pass_index)

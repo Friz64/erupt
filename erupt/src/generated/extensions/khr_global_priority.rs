@@ -29,16 +29,15 @@ impl crate::vk1_0::StructureType {
 pub struct QueueGlobalPriorityKHR(pub i32);
 impl std::fmt::Debug for QueueGlobalPriorityKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::LOW_KHR => "LOW_KHR",
-                    &Self::MEDIUM_KHR => "MEDIUM_KHR",
-                    &Self::HIGH_KHR => "HIGH_KHR",
-                    &Self::REALTIME_KHR => "REALTIME_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::LOW_KHR => "LOW_KHR",
+                &Self::MEDIUM_KHR => "MEDIUM_KHR",
+                &Self::HIGH_KHR => "HIGH_KHR",
+                &Self::REALTIME_KHR => "REALTIME_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_global_priority`]
@@ -74,7 +73,7 @@ impl<'a> crate::ExtendableFrom<'a, QueueFamilyGlobalPriorityPropertiesKHRBuilder
 for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceQueueGlobalPriorityCreateInfoKHR.html) · Structure
 #[doc(alias = "VkDeviceQueueGlobalPriorityCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DeviceQueueGlobalPriorityCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -95,8 +94,7 @@ impl Default for DeviceQueueGlobalPriorityCreateInfoKHR {
 }
 impl std::fmt::Debug for DeviceQueueGlobalPriorityCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DeviceQueueGlobalPriorityCreateInfoKHR")
+        f.debug_struct("DeviceQueueGlobalPriorityCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("global_priority", &self.global_priority)
@@ -163,7 +161,7 @@ impl<'a> std::ops::DerefMut for DeviceQueueGlobalPriorityCreateInfoKHRBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceGlobalPriorityQueryFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceGlobalPriorityQueryFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -184,8 +182,7 @@ impl Default for PhysicalDeviceGlobalPriorityQueryFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceGlobalPriorityQueryFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceGlobalPriorityQueryFeaturesKHR")
+        f.debug_struct("PhysicalDeviceGlobalPriorityQueryFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("global_priority_query", &(self.global_priority_query != 0))
@@ -255,7 +252,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceGlobalPriorityQueryFeaturesKHRBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyGlobalPriorityPropertiesKHR.html) · Structure
 #[doc(alias = "VkQueueFamilyGlobalPriorityPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueueFamilyGlobalPriorityPropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -278,8 +275,7 @@ impl Default for QueueFamilyGlobalPriorityPropertiesKHR {
 }
 impl std::fmt::Debug for QueueFamilyGlobalPriorityPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueueFamilyGlobalPriorityPropertiesKHR")
+        f.debug_struct("QueueFamilyGlobalPriorityPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("priority_count", &self.priority_count)

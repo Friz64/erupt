@@ -40,7 +40,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSamplerCustomBorderColorCreateInfoEXT.html) · Structure
 #[doc(alias = "VkSamplerCustomBorderColorCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SamplerCustomBorderColorCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -63,8 +63,7 @@ impl Default for SamplerCustomBorderColorCreateInfoEXT {
 }
 impl std::fmt::Debug for SamplerCustomBorderColorCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SamplerCustomBorderColorCreateInfoEXT")
+        f.debug_struct("SamplerCustomBorderColorCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("custom_border_color", &self.custom_border_color)
@@ -138,7 +137,7 @@ impl<'a> std::ops::DerefMut for SamplerCustomBorderColorCreateInfoEXTBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCustomBorderColorPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCustomBorderColorPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCustomBorderColorPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -159,8 +158,7 @@ impl Default for PhysicalDeviceCustomBorderColorPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceCustomBorderColorPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceCustomBorderColorPropertiesEXT")
+        f.debug_struct("PhysicalDeviceCustomBorderColorPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -236,7 +234,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceCustomBorderColorPropertiesEXTBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceCustomBorderColorFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceCustomBorderColorFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceCustomBorderColorFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -259,8 +257,7 @@ impl Default for PhysicalDeviceCustomBorderColorFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceCustomBorderColorFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceCustomBorderColorFeaturesEXT")
+        f.debug_struct("PhysicalDeviceCustomBorderColorFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("custom_border_colors", &(self.custom_border_colors != 0))

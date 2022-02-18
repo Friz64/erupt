@@ -22,7 +22,7 @@ impl<'a> crate::ExtendableFrom<'a, ExternalMemoryImageCreateInfoNVBuilder<'_>>
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalMemoryImageCreateInfoNV.html) · Structure
 #[doc(alias = "VkExternalMemoryImageCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExternalMemoryImageCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -43,8 +43,7 @@ impl Default for ExternalMemoryImageCreateInfoNV {
 }
 impl std::fmt::Debug for ExternalMemoryImageCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalMemoryImageCreateInfoNV")
+        f.debug_struct("ExternalMemoryImageCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_types", &self.handle_types)
@@ -111,7 +110,7 @@ impl<'a> std::ops::DerefMut for ExternalMemoryImageCreateInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportMemoryAllocateInfoNV.html) · Structure
 #[doc(alias = "VkExportMemoryAllocateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportMemoryAllocateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -132,8 +131,7 @@ impl Default for ExportMemoryAllocateInfoNV {
 }
 impl std::fmt::Debug for ExportMemoryAllocateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportMemoryAllocateInfoNV")
+        f.debug_struct("ExportMemoryAllocateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_types", &self.handle_types)

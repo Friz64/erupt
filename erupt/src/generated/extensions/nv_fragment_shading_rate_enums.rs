@@ -30,36 +30,35 @@ impl crate::vk1_0::StructureType {
 pub struct FragmentShadingRateNV(pub i32);
 impl std::fmt::Debug for FragmentShadingRateNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::_1_INVOCATION_PER_PIXEL_NV => "1_INVOCATION_PER_PIXEL_NV",
-                    &Self::_1_INVOCATION_PER_1X2_PIXELS_NV => {
-                        "1_INVOCATION_PER_1X2_PIXELS_NV"
-                    }
-                    &Self::_1_INVOCATION_PER_2X1_PIXELS_NV => {
-                        "1_INVOCATION_PER_2X1_PIXELS_NV"
-                    }
-                    &Self::_1_INVOCATION_PER_2X2_PIXELS_NV => {
-                        "1_INVOCATION_PER_2X2_PIXELS_NV"
-                    }
-                    &Self::_1_INVOCATION_PER_2X4_PIXELS_NV => {
-                        "1_INVOCATION_PER_2X4_PIXELS_NV"
-                    }
-                    &Self::_1_INVOCATION_PER_4X2_PIXELS_NV => {
-                        "1_INVOCATION_PER_4X2_PIXELS_NV"
-                    }
-                    &Self::_1_INVOCATION_PER_4X4_PIXELS_NV => {
-                        "1_INVOCATION_PER_4X4_PIXELS_NV"
-                    }
-                    &Self::_2_INVOCATIONS_PER_PIXEL_NV => "2_INVOCATIONS_PER_PIXEL_NV",
-                    &Self::_4_INVOCATIONS_PER_PIXEL_NV => "4_INVOCATIONS_PER_PIXEL_NV",
-                    &Self::_8_INVOCATIONS_PER_PIXEL_NV => "8_INVOCATIONS_PER_PIXEL_NV",
-                    &Self::_16_INVOCATIONS_PER_PIXEL_NV => "16_INVOCATIONS_PER_PIXEL_NV",
-                    &Self::NO_INVOCATIONS_NV => "NO_INVOCATIONS_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::_1_INVOCATION_PER_PIXEL_NV => "1_INVOCATION_PER_PIXEL_NV",
+                &Self::_1_INVOCATION_PER_1X2_PIXELS_NV => {
+                    "1_INVOCATION_PER_1X2_PIXELS_NV"
+                }
+                &Self::_1_INVOCATION_PER_2X1_PIXELS_NV => {
+                    "1_INVOCATION_PER_2X1_PIXELS_NV"
+                }
+                &Self::_1_INVOCATION_PER_2X2_PIXELS_NV => {
+                    "1_INVOCATION_PER_2X2_PIXELS_NV"
+                }
+                &Self::_1_INVOCATION_PER_2X4_PIXELS_NV => {
+                    "1_INVOCATION_PER_2X4_PIXELS_NV"
+                }
+                &Self::_1_INVOCATION_PER_4X2_PIXELS_NV => {
+                    "1_INVOCATION_PER_4X2_PIXELS_NV"
+                }
+                &Self::_1_INVOCATION_PER_4X4_PIXELS_NV => {
+                    "1_INVOCATION_PER_4X4_PIXELS_NV"
+                }
+                &Self::_2_INVOCATIONS_PER_PIXEL_NV => "2_INVOCATIONS_PER_PIXEL_NV",
+                &Self::_4_INVOCATIONS_PER_PIXEL_NV => "4_INVOCATIONS_PER_PIXEL_NV",
+                &Self::_8_INVOCATIONS_PER_PIXEL_NV => "8_INVOCATIONS_PER_PIXEL_NV",
+                &Self::_16_INVOCATIONS_PER_PIXEL_NV => "16_INVOCATIONS_PER_PIXEL_NV",
+                &Self::NO_INVOCATIONS_NV => "NO_INVOCATIONS_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]
@@ -84,14 +83,13 @@ impl crate::extensions::nv_fragment_shading_rate_enums::FragmentShadingRateNV {
 pub struct FragmentShadingRateTypeNV(pub i32);
 impl std::fmt::Debug for FragmentShadingRateTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FRAGMENT_SIZE_NV => "FRAGMENT_SIZE_NV",
-                    &Self::ENUMS_NV => "ENUMS_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FRAGMENT_SIZE_NV => "FRAGMENT_SIZE_NV",
+                &Self::ENUMS_NV => "ENUMS_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_fragment_shading_rate_enums`]
@@ -134,7 +132,7 @@ impl<
 > for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -159,8 +157,7 @@ impl Default for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateEnumsFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentShadingRateEnumsFeaturesNV")
+        f.debug_struct("PhysicalDeviceFragmentShadingRateEnumsFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -271,7 +268,7 @@ for PhysicalDeviceFragmentShadingRateEnumsFeaturesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateEnumsPropertiesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -292,8 +289,7 @@ impl Default for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateEnumsPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentShadingRateEnumsPropertiesNV")
+        f.debug_struct("PhysicalDeviceFragmentShadingRateEnumsPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -375,7 +371,7 @@ for PhysicalDeviceFragmentShadingRateEnumsPropertiesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineFragmentShadingRateEnumStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineFragmentShadingRateEnumStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineFragmentShadingRateEnumStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -400,8 +396,7 @@ impl Default for PipelineFragmentShadingRateEnumStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineFragmentShadingRateEnumStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineFragmentShadingRateEnumStateCreateInfoNV")
+        f.debug_struct("PipelineFragmentShadingRateEnumStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shading_rate_type", &self.shading_rate_type)

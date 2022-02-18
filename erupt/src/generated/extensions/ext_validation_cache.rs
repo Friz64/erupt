@@ -49,12 +49,11 @@ impl ValidationCacheCreateFlagBitsEXT {
 }
 impl std::fmt::Debug for ValidationCacheCreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_validation_cache`]
@@ -73,13 +72,12 @@ impl crate::vk1_0::ObjectType {
 pub struct ValidationCacheHeaderVersionEXT(pub i32);
 impl std::fmt::Debug for ValidationCacheHeaderVersionEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ONE_EXT => "ONE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ONE_EXT => "ONE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_validation_cache`]
@@ -123,7 +121,7 @@ impl<'a> crate::ExtendableFrom<'a, ShaderModuleValidationCacheCreateInfoEXTBuild
 for crate::vk1_0::ShaderModuleCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationCacheCreateInfoEXT.html) · Structure
 #[doc(alias = "VkValidationCacheCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ValidationCacheCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -148,8 +146,7 @@ impl Default for ValidationCacheCreateInfoEXT {
 }
 impl std::fmt::Debug for ValidationCacheCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ValidationCacheCreateInfoEXT")
+        f.debug_struct("ValidationCacheCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -227,7 +224,7 @@ impl<'a> std::ops::DerefMut for ValidationCacheCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderModuleValidationCacheCreateInfoEXT.html) · Structure
 #[doc(alias = "VkShaderModuleValidationCacheCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ShaderModuleValidationCacheCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -248,8 +245,7 @@ impl Default for ShaderModuleValidationCacheCreateInfoEXT {
 }
 impl std::fmt::Debug for ShaderModuleValidationCacheCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ShaderModuleValidationCacheCreateInfoEXT")
+        f.debug_struct("ShaderModuleValidationCacheCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("validation_cache", &self.validation_cache)

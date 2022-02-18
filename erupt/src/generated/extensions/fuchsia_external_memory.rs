@@ -46,7 +46,7 @@ impl<'a> crate::ExtendableFrom<'a, ImportMemoryZirconHandleInfoFUCHSIABuilder<'_
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryZirconHandleInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkImportMemoryZirconHandleInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportMemoryZirconHandleInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -69,8 +69,7 @@ impl Default for ImportMemoryZirconHandleInfoFUCHSIA {
 }
 impl std::fmt::Debug for ImportMemoryZirconHandleInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportMemoryZirconHandleInfoFUCHSIA")
+        f.debug_struct("ImportMemoryZirconHandleInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -144,7 +143,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryZirconHandleInfoFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryZirconHandlePropertiesFUCHSIA.html) · Structure
 #[doc(alias = "VkMemoryZirconHandlePropertiesFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryZirconHandlePropertiesFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -165,8 +164,7 @@ impl Default for MemoryZirconHandlePropertiesFUCHSIA {
 }
 impl std::fmt::Debug for MemoryZirconHandlePropertiesFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryZirconHandlePropertiesFUCHSIA")
+        f.debug_struct("MemoryZirconHandlePropertiesFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_type_bits", &self.memory_type_bits)
@@ -230,7 +228,7 @@ impl<'a> std::ops::DerefMut for MemoryZirconHandlePropertiesFUCHSIABuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetZirconHandleInfoFUCHSIA.html) · Structure
 #[doc(alias = "VkMemoryGetZirconHandleInfoFUCHSIA")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryGetZirconHandleInfoFUCHSIA {
     pub s_type: crate::vk1_0::StructureType,
@@ -253,8 +251,7 @@ impl Default for MemoryGetZirconHandleInfoFUCHSIA {
 }
 impl std::fmt::Debug for MemoryGetZirconHandleInfoFUCHSIA {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryGetZirconHandleInfoFUCHSIA")
+        f.debug_struct("MemoryGetZirconHandleInfoFUCHSIA")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory", &self.memory)

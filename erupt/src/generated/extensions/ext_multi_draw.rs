@@ -47,7 +47,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiDrawFeaturesEXTBuilder<'_>
 for crate::vk1_0::DeviceCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultiDrawInfoEXT.html) · Structure
 #[doc(alias = "VkMultiDrawInfoEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MultiDrawInfoEXT {
     pub first_vertex: u32,
@@ -63,8 +63,7 @@ impl Default for MultiDrawInfoEXT {
 }
 impl std::fmt::Debug for MultiDrawInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MultiDrawInfoEXT")
+        f.debug_struct("MultiDrawInfoEXT")
             .field("first_vertex", &self.first_vertex)
             .field("vertex_count", &self.vertex_count)
             .finish()
@@ -128,7 +127,7 @@ impl<'a> std::ops::DerefMut for MultiDrawInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultiDrawIndexedInfoEXT.html) · Structure
 #[doc(alias = "VkMultiDrawIndexedInfoEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct MultiDrawIndexedInfoEXT {
     pub first_index: u32,
@@ -146,8 +145,7 @@ impl Default for MultiDrawIndexedInfoEXT {
 }
 impl std::fmt::Debug for MultiDrawIndexedInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MultiDrawIndexedInfoEXT")
+        f.debug_struct("MultiDrawIndexedInfoEXT")
             .field("first_index", &self.first_index)
             .field("index_count", &self.index_count)
             .field("vertex_offset", &self.vertex_offset)
@@ -218,7 +216,7 @@ impl<'a> std::ops::DerefMut for MultiDrawIndexedInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiDrawPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMultiDrawPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMultiDrawPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -239,8 +237,7 @@ impl Default for PhysicalDeviceMultiDrawPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceMultiDrawPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMultiDrawPropertiesEXT")
+        f.debug_struct("PhysicalDeviceMultiDrawPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_multi_draw_count", &self.max_multi_draw_count)
@@ -312,7 +309,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceMultiDrawPropertiesEXTBuilder<'
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceMultiDrawFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceMultiDrawFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceMultiDrawFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -333,8 +330,7 @@ impl Default for PhysicalDeviceMultiDrawFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceMultiDrawFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceMultiDrawFeaturesEXT")
+        f.debug_struct("PhysicalDeviceMultiDrawFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("multi_draw", &(self.multi_draw != 0))

@@ -7,41 +7,12 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H265_SPEC_VERSION")]
-pub const EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 4;
+pub const EXT_VIDEO_ENCODE_H265_SPEC_VERSION: u32 = 5;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H265_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H265_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_EXT_video_encode_h265"
 );
-bitflags::bitflags! {
-    #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH265CapabilityFlagBitsEXT`]"]
-    #[doc(alias = "VkVideoEncodeH265CapabilityFlagsEXT")] #[derive(Default)]
-    #[repr(transparent)] pub struct VideoEncodeH265CapabilityFlagsEXT : u32 {
-    #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
-}
-///<s>Vulkan Manual Page</s> · Bits enum of [`VideoEncodeH265CapabilityFlagsEXT`]
-#[doc(alias = "VkVideoEncodeH265CapabilityFlagBitsEXT")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct VideoEncodeH265CapabilityFlagBitsEXT(pub u32);
-impl VideoEncodeH265CapabilityFlagBitsEXT {
-    #[inline]
-    ///Converts this enum variant to the corresponding bitmask
-    pub const fn bitmask(&self) -> VideoEncodeH265CapabilityFlagsEXT {
-        VideoEncodeH265CapabilityFlagsEXT::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for VideoEncodeH265CapabilityFlagBitsEXT {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
-    }
-}
 bitflags::bitflags! {
     #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CreateFlagsEXT.html) · Bitmask of [`VideoEncodeH265CreateFlagBitsEXT`]"]
@@ -63,12 +34,11 @@ impl VideoEncodeH265CreateFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265CreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h265`]
@@ -94,6 +64,138 @@ impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
 }
 bitflags::bitflags! {
     #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH265CapabilityFlagBitsEXT`]"]
+    #[doc(alias = "VkVideoEncodeH265CapabilityFlagsEXT")] #[derive(Default)]
+    #[repr(transparent)] pub struct VideoEncodeH265CapabilityFlagsEXT : u32 { const
+    SEPARATE_COLOUR_PLANE_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::SEPARATE_COLOUR_PLANE_EXT.0; const
+    SCALING_LISTS_EXT = VideoEncodeH265CapabilityFlagBitsEXT::SCALING_LISTS_EXT.0; const
+    SAMPLE_ADAPTIVE_OFFSET_ENABLED_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::SAMPLE_ADAPTIVE_OFFSET_ENABLED_EXT.0; const
+    PCM_ENABLE_EXT = VideoEncodeH265CapabilityFlagBitsEXT::PCM_ENABLE_EXT.0; const
+    SPS_TEMPORAL_MVP_ENABLED_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::SPS_TEMPORAL_MVP_ENABLED_EXT.0; const
+    HRD_COMPLIANCE_EXT = VideoEncodeH265CapabilityFlagBitsEXT::HRD_COMPLIANCE_EXT.0;
+    const INIT_QP_MINUS26_EXT = VideoEncodeH265CapabilityFlagBitsEXT::INIT_QP_MINUS26_EXT
+    .0; const LOG2_PARALLEL_MERGE_LEVEL_MINUS2_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::LOG2_PARALLEL_MERGE_LEVEL_MINUS2_EXT.0; const
+    SIGN_DATA_HIDING_ENABLED_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::SIGN_DATA_HIDING_ENABLED_EXT.0; const
+    TRANSFORM_SKIP_ENABLED_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::TRANSFORM_SKIP_ENABLED_EXT.0; const
+    PPS_SLICE_CHROMA_QP_OFFSETS_PRESENT_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::PPS_SLICE_CHROMA_QP_OFFSETS_PRESENT_EXT.0;
+    const WEIGHTED_PRED_EXT = VideoEncodeH265CapabilityFlagBitsEXT::WEIGHTED_PRED_EXT.0;
+    const WEIGHTED_BIPRED_EXT = VideoEncodeH265CapabilityFlagBitsEXT::WEIGHTED_BIPRED_EXT
+    .0; const WEIGHTED_PRED_NO_TABLE_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::WEIGHTED_PRED_NO_TABLE_EXT.0; const
+    TRANSQUANT_BYPASS_ENABLED_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::TRANSQUANT_BYPASS_ENABLED_EXT.0; const
+    ENTROPY_CODING_SYNC_ENABLED_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::ENTROPY_CODING_SYNC_ENABLED_EXT.0; const
+    DEBLOCKING_FILTER_OVERRIDE_ENABLED_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::DEBLOCKING_FILTER_OVERRIDE_ENABLED_EXT.0; const
+    MULTIPLE_TILE_PER_FRAME_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::MULTIPLE_TILE_PER_FRAME_EXT.0; const
+    MULTIPLE_SLICE_PER_TILE_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::MULTIPLE_SLICE_PER_TILE_EXT.0; const
+    MULTIPLE_TILE_PER_SLICE_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::MULTIPLE_TILE_PER_SLICE_EXT.0; const
+    SLICE_SEGMENT_CTB_COUNT_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::SLICE_SEGMENT_CTB_COUNT_EXT.0; const
+    ROW_UNALIGNED_SLICE_SEGMENT_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::ROW_UNALIGNED_SLICE_SEGMENT_EXT.0; const
+    DEPENDENT_SLICE_SEGMENT_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::DEPENDENT_SLICE_SEGMENT_EXT.0; const
+    DIFFERENT_SLICE_TYPE_EXT =
+    VideoEncodeH265CapabilityFlagBitsEXT::DIFFERENT_SLICE_TYPE_EXT.0; }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CapabilityFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265CapabilityFlagsEXT`]
+#[doc(alias = "VkVideoEncodeH265CapabilityFlagBitsEXT")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct VideoEncodeH265CapabilityFlagBitsEXT(pub u32);
+impl VideoEncodeH265CapabilityFlagBitsEXT {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> VideoEncodeH265CapabilityFlagsEXT {
+        VideoEncodeH265CapabilityFlagsEXT::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for VideoEncodeH265CapabilityFlagBitsEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                &Self::SEPARATE_COLOUR_PLANE_EXT => "SEPARATE_COLOUR_PLANE_EXT",
+                &Self::SCALING_LISTS_EXT => "SCALING_LISTS_EXT",
+                &Self::SAMPLE_ADAPTIVE_OFFSET_ENABLED_EXT => {
+                    "SAMPLE_ADAPTIVE_OFFSET_ENABLED_EXT"
+                }
+                &Self::PCM_ENABLE_EXT => "PCM_ENABLE_EXT",
+                &Self::SPS_TEMPORAL_MVP_ENABLED_EXT => "SPS_TEMPORAL_MVP_ENABLED_EXT",
+                &Self::HRD_COMPLIANCE_EXT => "HRD_COMPLIANCE_EXT",
+                &Self::INIT_QP_MINUS26_EXT => "INIT_QP_MINUS26_EXT",
+                &Self::LOG2_PARALLEL_MERGE_LEVEL_MINUS2_EXT => {
+                    "LOG2_PARALLEL_MERGE_LEVEL_MINUS2_EXT"
+                }
+                &Self::SIGN_DATA_HIDING_ENABLED_EXT => "SIGN_DATA_HIDING_ENABLED_EXT",
+                &Self::TRANSFORM_SKIP_ENABLED_EXT => "TRANSFORM_SKIP_ENABLED_EXT",
+                &Self::PPS_SLICE_CHROMA_QP_OFFSETS_PRESENT_EXT => {
+                    "PPS_SLICE_CHROMA_QP_OFFSETS_PRESENT_EXT"
+                }
+                &Self::WEIGHTED_PRED_EXT => "WEIGHTED_PRED_EXT",
+                &Self::WEIGHTED_BIPRED_EXT => "WEIGHTED_BIPRED_EXT",
+                &Self::WEIGHTED_PRED_NO_TABLE_EXT => "WEIGHTED_PRED_NO_TABLE_EXT",
+                &Self::TRANSQUANT_BYPASS_ENABLED_EXT => "TRANSQUANT_BYPASS_ENABLED_EXT",
+                &Self::ENTROPY_CODING_SYNC_ENABLED_EXT => {
+                    "ENTROPY_CODING_SYNC_ENABLED_EXT"
+                }
+                &Self::DEBLOCKING_FILTER_OVERRIDE_ENABLED_EXT => {
+                    "DEBLOCKING_FILTER_OVERRIDE_ENABLED_EXT"
+                }
+                &Self::MULTIPLE_TILE_PER_FRAME_EXT => "MULTIPLE_TILE_PER_FRAME_EXT",
+                &Self::MULTIPLE_SLICE_PER_TILE_EXT => "MULTIPLE_SLICE_PER_TILE_EXT",
+                &Self::MULTIPLE_TILE_PER_SLICE_EXT => "MULTIPLE_TILE_PER_SLICE_EXT",
+                &Self::SLICE_SEGMENT_CTB_COUNT_EXT => "SLICE_SEGMENT_CTB_COUNT_EXT",
+                &Self::ROW_UNALIGNED_SLICE_SEGMENT_EXT => {
+                    "ROW_UNALIGNED_SLICE_SEGMENT_EXT"
+                }
+                &Self::DEPENDENT_SLICE_SEGMENT_EXT => "DEPENDENT_SLICE_SEGMENT_EXT",
+                &Self::DIFFERENT_SLICE_TYPE_EXT => "DIFFERENT_SLICE_TYPE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+///Provided by [`crate::extensions::ext_video_encode_h265`]
+impl crate::extensions::ext_video_encode_h265::VideoEncodeH265CapabilityFlagBitsEXT {
+    pub const SEPARATE_COLOUR_PLANE_EXT: Self = Self(1);
+    pub const SCALING_LISTS_EXT: Self = Self(2);
+    pub const SAMPLE_ADAPTIVE_OFFSET_ENABLED_EXT: Self = Self(4);
+    pub const PCM_ENABLE_EXT: Self = Self(8);
+    pub const SPS_TEMPORAL_MVP_ENABLED_EXT: Self = Self(16);
+    pub const HRD_COMPLIANCE_EXT: Self = Self(32);
+    pub const INIT_QP_MINUS26_EXT: Self = Self(64);
+    pub const LOG2_PARALLEL_MERGE_LEVEL_MINUS2_EXT: Self = Self(128);
+    pub const SIGN_DATA_HIDING_ENABLED_EXT: Self = Self(256);
+    pub const TRANSFORM_SKIP_ENABLED_EXT: Self = Self(512);
+    pub const PPS_SLICE_CHROMA_QP_OFFSETS_PRESENT_EXT: Self = Self(1024);
+    pub const WEIGHTED_PRED_EXT: Self = Self(2048);
+    pub const WEIGHTED_BIPRED_EXT: Self = Self(4096);
+    pub const WEIGHTED_PRED_NO_TABLE_EXT: Self = Self(8192);
+    pub const TRANSQUANT_BYPASS_ENABLED_EXT: Self = Self(16384);
+    pub const ENTROPY_CODING_SYNC_ENABLED_EXT: Self = Self(32768);
+    pub const DEBLOCKING_FILTER_OVERRIDE_ENABLED_EXT: Self = Self(65536);
+    pub const MULTIPLE_TILE_PER_FRAME_EXT: Self = Self(131072);
+    pub const MULTIPLE_SLICE_PER_TILE_EXT: Self = Self(262144);
+    pub const MULTIPLE_TILE_PER_SLICE_EXT: Self = Self(524288);
+    pub const SLICE_SEGMENT_CTB_COUNT_EXT: Self = Self(1048576);
+    pub const ROW_UNALIGNED_SLICE_SEGMENT_EXT: Self = Self(2097152);
+    pub const DEPENDENT_SLICE_SEGMENT_EXT: Self = Self(4194304);
+    pub const DIFFERENT_SLICE_TYPE_EXT: Self = Self(8388608);
+}
+bitflags::bitflags! {
+    #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265InputModeFlagsEXT.html) · Bitmask of [`VideoEncodeH265InputModeFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH265InputModeFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH265InputModeFlagsEXT : u32 { const
@@ -115,15 +217,14 @@ impl VideoEncodeH265InputModeFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265InputModeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FRAME_EXT => "FRAME_EXT",
-                    &Self::SLICE_SEGMENT_EXT => "SLICE_SEGMENT_EXT",
-                    &Self::NON_VCL_EXT => "NON_VCL_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FRAME_EXT => "FRAME_EXT",
+                &Self::SLICE_SEGMENT_EXT => "SLICE_SEGMENT_EXT",
+                &Self::NON_VCL_EXT => "NON_VCL_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h265`]
@@ -155,15 +256,14 @@ impl VideoEncodeH265OutputModeFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265OutputModeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FRAME_EXT => "FRAME_EXT",
-                    &Self::SLICE_SEGMENT_EXT => "SLICE_SEGMENT_EXT",
-                    &Self::NON_VCL_EXT => "NON_VCL_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FRAME_EXT => "FRAME_EXT",
+                &Self::SLICE_SEGMENT_EXT => "SLICE_SEGMENT_EXT",
+                &Self::NON_VCL_EXT => "NON_VCL_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h265`]
@@ -171,49 +271,6 @@ impl crate::extensions::ext_video_encode_h265::VideoEncodeH265OutputModeFlagBits
     pub const FRAME_EXT: Self = Self(1);
     pub const SLICE_SEGMENT_EXT: Self = Self(2);
     pub const NON_VCL_EXT: Self = Self(4);
-}
-bitflags::bitflags! {
-    #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CtbSizeFlagsEXT.html) · Bitmask of [`VideoEncodeH265CtbSizeFlagBitsEXT`]"]
-    #[doc(alias = "VkVideoEncodeH265CtbSizeFlagsEXT")] #[derive(Default)]
-    #[repr(transparent)] pub struct VideoEncodeH265CtbSizeFlagsEXT : u32 { const _8_EXT =
-    VideoEncodeH265CtbSizeFlagBitsEXT::_8_EXT.0; const _16_EXT =
-    VideoEncodeH265CtbSizeFlagBitsEXT::_16_EXT.0; const _32_EXT =
-    VideoEncodeH265CtbSizeFlagBitsEXT::_32_EXT.0; const _64_EXT =
-    VideoEncodeH265CtbSizeFlagBitsEXT::_64_EXT.0; }
-}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CtbSizeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265CtbSizeFlagsEXT`]
-#[doc(alias = "VkVideoEncodeH265CtbSizeFlagBitsEXT")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct VideoEncodeH265CtbSizeFlagBitsEXT(pub u32);
-impl VideoEncodeH265CtbSizeFlagBitsEXT {
-    #[inline]
-    ///Converts this enum variant to the corresponding bitmask
-    pub const fn bitmask(&self) -> VideoEncodeH265CtbSizeFlagsEXT {
-        VideoEncodeH265CtbSizeFlagsEXT::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for VideoEncodeH265CtbSizeFlagBitsEXT {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::_8_EXT => "8_EXT",
-                    &Self::_16_EXT => "16_EXT",
-                    &Self::_32_EXT => "32_EXT",
-                    &Self::_64_EXT => "64_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
-    }
-}
-///Provided by [`crate::extensions::ext_video_encode_h265`]
-impl crate::extensions::ext_video_encode_h265::VideoEncodeH265CtbSizeFlagBitsEXT {
-    pub const _8_EXT: Self = Self(1);
-    pub const _16_EXT: Self = Self(2);
-    pub const _32_EXT: Self = Self(4);
-    pub const _64_EXT: Self = Self(8);
 }
 bitflags::bitflags! {
     #[doc =
@@ -238,15 +295,14 @@ impl VideoEncodeH265RateControlStructureFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265RateControlStructureFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
-                    &Self::FLAT_EXT => "FLAT_EXT",
-                    &Self::DYADIC_EXT => "DYADIC_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::UNKNOWN_EXT => "UNKNOWN_EXT",
+                &Self::FLAT_EXT => "FLAT_EXT",
+                &Self::DYADIC_EXT => "DYADIC_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_encode_h265`]
@@ -255,6 +311,87 @@ impl crate::extensions::ext_video_encode_h265::VideoEncodeH265RateControlStructu
     pub const FLAT_EXT: Self = Self(1);
     pub const DYADIC_EXT: Self = Self(2);
 }
+bitflags::bitflags! {
+    #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CtbSizeFlagsEXT.html) · Bitmask of [`VideoEncodeH265CtbSizeFlagBitsEXT`]"]
+    #[doc(alias = "VkVideoEncodeH265CtbSizeFlagsEXT")] #[derive(Default)]
+    #[repr(transparent)] pub struct VideoEncodeH265CtbSizeFlagsEXT : u32 { const _16_EXT
+    = VideoEncodeH265CtbSizeFlagBitsEXT::_16_EXT.0; const _32_EXT =
+    VideoEncodeH265CtbSizeFlagBitsEXT::_32_EXT.0; const _64_EXT =
+    VideoEncodeH265CtbSizeFlagBitsEXT::_64_EXT.0; }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CtbSizeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265CtbSizeFlagsEXT`]
+#[doc(alias = "VkVideoEncodeH265CtbSizeFlagBitsEXT")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct VideoEncodeH265CtbSizeFlagBitsEXT(pub u32);
+impl VideoEncodeH265CtbSizeFlagBitsEXT {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> VideoEncodeH265CtbSizeFlagsEXT {
+        VideoEncodeH265CtbSizeFlagsEXT::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for VideoEncodeH265CtbSizeFlagBitsEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                &Self::_16_EXT => "16_EXT",
+                &Self::_32_EXT => "32_EXT",
+                &Self::_64_EXT => "64_EXT",
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+///Provided by [`crate::extensions::ext_video_encode_h265`]
+impl crate::extensions::ext_video_encode_h265::VideoEncodeH265CtbSizeFlagBitsEXT {
+    pub const _16_EXT: Self = Self(1);
+    pub const _32_EXT: Self = Self(2);
+    pub const _64_EXT: Self = Self(4);
+}
+bitflags::bitflags! {
+    #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265TransformBlockSizeFlagsEXT.html) · Bitmask of [`VideoEncodeH265TransformBlockSizeFlagBitsEXT`]"]
+    #[doc(alias = "VkVideoEncodeH265TransformBlockSizeFlagsEXT")] #[derive(Default)]
+    #[repr(transparent)] pub struct VideoEncodeH265TransformBlockSizeFlagsEXT : u32 {
+    const _4_EXT = VideoEncodeH265TransformBlockSizeFlagBitsEXT::_4_EXT.0; const _8_EXT =
+    VideoEncodeH265TransformBlockSizeFlagBitsEXT::_8_EXT.0; const _16_EXT =
+    VideoEncodeH265TransformBlockSizeFlagBitsEXT::_16_EXT.0; const _32_EXT =
+    VideoEncodeH265TransformBlockSizeFlagBitsEXT::_32_EXT.0; }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265TransformBlockSizeFlagBitsEXT.html) · Bits enum of [`VideoEncodeH265TransformBlockSizeFlagsEXT`]
+#[doc(alias = "VkVideoEncodeH265TransformBlockSizeFlagBitsEXT")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct VideoEncodeH265TransformBlockSizeFlagBitsEXT(pub u32);
+impl VideoEncodeH265TransformBlockSizeFlagBitsEXT {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> VideoEncodeH265TransformBlockSizeFlagsEXT {
+        VideoEncodeH265TransformBlockSizeFlagsEXT::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for VideoEncodeH265TransformBlockSizeFlagBitsEXT {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                &Self::_4_EXT => "4_EXT",
+                &Self::_8_EXT => "8_EXT",
+                &Self::_16_EXT => "16_EXT",
+                &Self::_32_EXT => "32_EXT",
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+///Provided by [`crate::extensions::ext_video_encode_h265`]
+impl crate::extensions::ext_video_encode_h265::VideoEncodeH265TransformBlockSizeFlagBitsEXT {
+    pub const _4_EXT: Self = Self(1);
+    pub const _8_EXT: Self = Self(2);
+    pub const _16_EXT: Self = Self(4);
+    pub const _32_EXT: Self = Self(8);
+}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT>
 for crate::vk1_0::BufferCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>>
@@ -279,10 +416,6 @@ impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXT>
 for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265ProfileEXTBuilder<'_>>
 for crate::extensions::khr_video_queue::VideoProfileKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265CapabilitiesEXT>
-for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265CapabilitiesEXTBuilder<'_>>
-for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265SessionCreateInfoEXT>
 for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265SessionCreateInfoEXTBuilder<'_>>
@@ -317,9 +450,13 @@ impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265RateControlLayerInfoEXTBuilder
 for crate::extensions::khr_video_encode_queue::VideoEncodeRateControlLayerInfoKHRBuilder<
     'a,
 > {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265CapabilitiesEXT>
+for crate::extensions::khr_video_encode_queue::VideoEncodeCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeH265CapabilitiesEXTBuilder<'_>>
+for crate::extensions::khr_video_encode_queue::VideoEncodeCapabilitiesKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265CapabilitiesEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265CapabilitiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265CapabilitiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -328,12 +465,22 @@ pub struct VideoEncodeH265CapabilitiesEXT {
     pub input_mode_flags: crate::extensions::ext_video_encode_h265::VideoEncodeH265InputModeFlagsEXT,
     pub output_mode_flags: crate::extensions::ext_video_encode_h265::VideoEncodeH265OutputModeFlagsEXT,
     pub ctb_sizes: crate::extensions::ext_video_encode_h265::VideoEncodeH265CtbSizeFlagsEXT,
-    pub input_image_data_alignment: crate::vk1_0::Extent2D,
-    pub max_num_l0_reference_for_p: u8,
-    pub max_num_l0_reference_for_b: u8,
-    pub max_num_l1_reference: u8,
-    pub max_num_sub_layers: u8,
-    pub quality_level_count: u8,
+    pub transform_block_sizes: crate::extensions::ext_video_encode_h265::VideoEncodeH265TransformBlockSizeFlagsEXT,
+    pub max_p_picture_l0_reference_count: u8,
+    pub max_b_picture_l0_reference_count: u8,
+    pub max_l1_reference_count: u8,
+    pub max_sub_layers_count: u8,
+    pub min_log2_min_luma_coding_block_size_minus3: u8,
+    pub max_log2_min_luma_coding_block_size_minus3: u8,
+    pub min_log2_min_luma_transform_block_size_minus2: u8,
+    pub max_log2_min_luma_transform_block_size_minus2: u8,
+    pub min_max_transform_hierarchy_depth_inter: u8,
+    pub max_max_transform_hierarchy_depth_inter: u8,
+    pub min_max_transform_hierarchy_depth_intra: u8,
+    pub max_max_transform_hierarchy_depth_intra: u8,
+    pub max_diff_cu_qp_delta_depth: u8,
+    pub min_max_num_merge_cand: u8,
+    pub max_max_num_merge_cand: u8,
     pub std_extension_version: crate::vk1_0::ExtensionProperties,
 }
 impl VideoEncodeH265CapabilitiesEXT {
@@ -348,32 +495,81 @@ impl Default for VideoEncodeH265CapabilitiesEXT {
             input_mode_flags: Default::default(),
             output_mode_flags: Default::default(),
             ctb_sizes: Default::default(),
-            input_image_data_alignment: Default::default(),
-            max_num_l0_reference_for_p: Default::default(),
-            max_num_l0_reference_for_b: Default::default(),
-            max_num_l1_reference: Default::default(),
-            max_num_sub_layers: Default::default(),
-            quality_level_count: Default::default(),
+            transform_block_sizes: Default::default(),
+            max_p_picture_l0_reference_count: Default::default(),
+            max_b_picture_l0_reference_count: Default::default(),
+            max_l1_reference_count: Default::default(),
+            max_sub_layers_count: Default::default(),
+            min_log2_min_luma_coding_block_size_minus3: Default::default(),
+            max_log2_min_luma_coding_block_size_minus3: Default::default(),
+            min_log2_min_luma_transform_block_size_minus2: Default::default(),
+            max_log2_min_luma_transform_block_size_minus2: Default::default(),
+            min_max_transform_hierarchy_depth_inter: Default::default(),
+            max_max_transform_hierarchy_depth_inter: Default::default(),
+            min_max_transform_hierarchy_depth_intra: Default::default(),
+            max_max_transform_hierarchy_depth_intra: Default::default(),
+            max_diff_cu_qp_delta_depth: Default::default(),
+            min_max_num_merge_cand: Default::default(),
+            max_max_num_merge_cand: Default::default(),
             std_extension_version: Default::default(),
         }
     }
 }
 impl std::fmt::Debug for VideoEncodeH265CapabilitiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265CapabilitiesEXT")
+        f.debug_struct("VideoEncodeH265CapabilitiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
             .field("input_mode_flags", &self.input_mode_flags)
             .field("output_mode_flags", &self.output_mode_flags)
             .field("ctb_sizes", &self.ctb_sizes)
-            .field("input_image_data_alignment", &self.input_image_data_alignment)
-            .field("max_num_l0_reference_for_p", &self.max_num_l0_reference_for_p)
-            .field("max_num_l0_reference_for_b", &self.max_num_l0_reference_for_b)
-            .field("max_num_l1_reference", &self.max_num_l1_reference)
-            .field("max_num_sub_layers", &self.max_num_sub_layers)
-            .field("quality_level_count", &self.quality_level_count)
+            .field("transform_block_sizes", &self.transform_block_sizes)
+            .field(
+                "max_p_picture_l0_reference_count",
+                &self.max_p_picture_l0_reference_count,
+            )
+            .field(
+                "max_b_picture_l0_reference_count",
+                &self.max_b_picture_l0_reference_count,
+            )
+            .field("max_l1_reference_count", &self.max_l1_reference_count)
+            .field("max_sub_layers_count", &self.max_sub_layers_count)
+            .field(
+                "min_log2_min_luma_coding_block_size_minus3",
+                &self.min_log2_min_luma_coding_block_size_minus3,
+            )
+            .field(
+                "max_log2_min_luma_coding_block_size_minus3",
+                &self.max_log2_min_luma_coding_block_size_minus3,
+            )
+            .field(
+                "min_log2_min_luma_transform_block_size_minus2",
+                &self.min_log2_min_luma_transform_block_size_minus2,
+            )
+            .field(
+                "max_log2_min_luma_transform_block_size_minus2",
+                &self.max_log2_min_luma_transform_block_size_minus2,
+            )
+            .field(
+                "min_max_transform_hierarchy_depth_inter",
+                &self.min_max_transform_hierarchy_depth_inter,
+            )
+            .field(
+                "max_max_transform_hierarchy_depth_inter",
+                &self.max_max_transform_hierarchy_depth_inter,
+            )
+            .field(
+                "min_max_transform_hierarchy_depth_intra",
+                &self.min_max_transform_hierarchy_depth_intra,
+            )
+            .field(
+                "max_max_transform_hierarchy_depth_intra",
+                &self.max_max_transform_hierarchy_depth_intra,
+            )
+            .field("max_diff_cu_qp_delta_depth", &self.max_diff_cu_qp_delta_depth)
+            .field("min_max_num_merge_cand", &self.min_max_num_merge_cand)
+            .field("max_max_num_merge_cand", &self.max_max_num_merge_cand)
             .field("std_extension_version", &self.std_extension_version)
             .finish()
     }
@@ -437,41 +633,155 @@ impl<'a> VideoEncodeH265CapabilitiesEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn input_image_data_alignment(
+    pub fn transform_block_sizes(
         mut self,
-        input_image_data_alignment: crate::vk1_0::Extent2D,
+        transform_block_sizes: crate::extensions::ext_video_encode_h265::VideoEncodeH265TransformBlockSizeFlagsEXT,
     ) -> Self {
-        self.0.input_image_data_alignment = input_image_data_alignment as _;
+        self.0.transform_block_sizes = transform_block_sizes as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_num_l0_reference_for_p(mut self, max_num_l0_reference_for_p: u8) -> Self {
-        self.0.max_num_l0_reference_for_p = max_num_l0_reference_for_p as _;
+    pub fn max_p_picture_l0_reference_count(
+        mut self,
+        max_p_picture_l0_reference_count: u8,
+    ) -> Self {
+        self.0.max_p_picture_l0_reference_count = max_p_picture_l0_reference_count as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_num_l0_reference_for_b(mut self, max_num_l0_reference_for_b: u8) -> Self {
-        self.0.max_num_l0_reference_for_b = max_num_l0_reference_for_b as _;
+    pub fn max_b_picture_l0_reference_count(
+        mut self,
+        max_b_picture_l0_reference_count: u8,
+    ) -> Self {
+        self.0.max_b_picture_l0_reference_count = max_b_picture_l0_reference_count as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_num_l1_reference(mut self, max_num_l1_reference: u8) -> Self {
-        self.0.max_num_l1_reference = max_num_l1_reference as _;
+    pub fn max_l1_reference_count(mut self, max_l1_reference_count: u8) -> Self {
+        self.0.max_l1_reference_count = max_l1_reference_count as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn max_num_sub_layers(mut self, max_num_sub_layers: u8) -> Self {
-        self.0.max_num_sub_layers = max_num_sub_layers as _;
+    pub fn max_sub_layers_count(mut self, max_sub_layers_count: u8) -> Self {
+        self.0.max_sub_layers_count = max_sub_layers_count as _;
         self
     }
     #[inline]
     #[must_use]
-    pub fn quality_level_count(mut self, quality_level_count: u8) -> Self {
-        self.0.quality_level_count = quality_level_count as _;
+    pub fn min_log2_min_luma_coding_block_size_minus3(
+        mut self,
+        min_log2_min_luma_coding_block_size_minus3: u8,
+    ) -> Self {
+        self
+            .0
+            .min_log2_min_luma_coding_block_size_minus3 = min_log2_min_luma_coding_block_size_minus3
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn max_log2_min_luma_coding_block_size_minus3(
+        mut self,
+        max_log2_min_luma_coding_block_size_minus3: u8,
+    ) -> Self {
+        self
+            .0
+            .max_log2_min_luma_coding_block_size_minus3 = max_log2_min_luma_coding_block_size_minus3
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn min_log2_min_luma_transform_block_size_minus2(
+        mut self,
+        min_log2_min_luma_transform_block_size_minus2: u8,
+    ) -> Self {
+        self
+            .0
+            .min_log2_min_luma_transform_block_size_minus2 = min_log2_min_luma_transform_block_size_minus2
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn max_log2_min_luma_transform_block_size_minus2(
+        mut self,
+        max_log2_min_luma_transform_block_size_minus2: u8,
+    ) -> Self {
+        self
+            .0
+            .max_log2_min_luma_transform_block_size_minus2 = max_log2_min_luma_transform_block_size_minus2
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn min_max_transform_hierarchy_depth_inter(
+        mut self,
+        min_max_transform_hierarchy_depth_inter: u8,
+    ) -> Self {
+        self
+            .0
+            .min_max_transform_hierarchy_depth_inter = min_max_transform_hierarchy_depth_inter
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn max_max_transform_hierarchy_depth_inter(
+        mut self,
+        max_max_transform_hierarchy_depth_inter: u8,
+    ) -> Self {
+        self
+            .0
+            .max_max_transform_hierarchy_depth_inter = max_max_transform_hierarchy_depth_inter
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn min_max_transform_hierarchy_depth_intra(
+        mut self,
+        min_max_transform_hierarchy_depth_intra: u8,
+    ) -> Self {
+        self
+            .0
+            .min_max_transform_hierarchy_depth_intra = min_max_transform_hierarchy_depth_intra
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn max_max_transform_hierarchy_depth_intra(
+        mut self,
+        max_max_transform_hierarchy_depth_intra: u8,
+    ) -> Self {
+        self
+            .0
+            .max_max_transform_hierarchy_depth_intra = max_max_transform_hierarchy_depth_intra
+            as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn max_diff_cu_qp_delta_depth(mut self, max_diff_cu_qp_delta_depth: u8) -> Self {
+        self.0.max_diff_cu_qp_delta_depth = max_diff_cu_qp_delta_depth as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn min_max_num_merge_cand(mut self, min_max_num_merge_cand: u8) -> Self {
+        self.0.min_max_num_merge_cand = min_max_num_merge_cand as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn max_max_num_merge_cand(mut self, max_max_num_merge_cand: u8) -> Self {
+        self.0.max_max_num_merge_cand = max_max_num_merge_cand as _;
         self
     }
     #[inline]
@@ -513,7 +823,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265CapabilitiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265SessionCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265SessionCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -536,8 +846,7 @@ impl Default for VideoEncodeH265SessionCreateInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265SessionCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265SessionCreateInfoEXT")
+        f.debug_struct("VideoEncodeH265SessionCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -614,7 +923,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265SessionCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionParametersAddInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265SessionParametersAddInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265SessionParametersAddInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -645,8 +954,7 @@ impl Default for VideoEncodeH265SessionParametersAddInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265SessionParametersAddInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265SessionParametersAddInfoEXT")
+        f.debug_struct("VideoEncodeH265SessionParametersAddInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("vps_std_count", &self.vps_std_count)
@@ -742,7 +1050,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265SessionParametersAddInfoEXTBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265SessionParametersCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265SessionParametersCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265SessionParametersCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -769,8 +1077,7 @@ impl Default for VideoEncodeH265SessionParametersCreateInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265SessionParametersCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265SessionParametersCreateInfoEXT")
+        f.debug_struct("VideoEncodeH265SessionParametersCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_vps_std_count", &self.max_vps_std_count)
@@ -865,7 +1172,7 @@ for VideoEncodeH265SessionParametersCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265VclFrameInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265VclFrameInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265VclFrameInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -892,8 +1199,7 @@ impl Default for VideoEncodeH265VclFrameInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265VclFrameInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265VclFrameInfoEXT")
+        f.debug_struct("VideoEncodeH265VclFrameInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_reference_final_lists", &self.p_reference_final_lists)
@@ -985,7 +1291,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265VclFrameInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265EmitPictureParametersEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265EmitPictureParametersEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265EmitPictureParametersEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1016,8 +1322,7 @@ impl Default for VideoEncodeH265EmitPictureParametersEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265EmitPictureParametersEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265EmitPictureParametersEXT")
+        f.debug_struct("VideoEncodeH265EmitPictureParametersEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("vps_id", &self.vps_id)
@@ -1111,7 +1416,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265EmitPictureParametersEXTBuilder<'
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265NaluSliceSegmentEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265NaluSliceSegmentEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265NaluSliceSegmentEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1136,8 +1441,7 @@ impl Default for VideoEncodeH265NaluSliceSegmentEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265NaluSliceSegmentEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265NaluSliceSegmentEXT")
+        f.debug_struct("VideoEncodeH265NaluSliceSegmentEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("ctb_count", &self.ctb_count)
@@ -1221,7 +1525,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265NaluSliceSegmentEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265RateControlInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265RateControlInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1250,8 +1554,7 @@ impl Default for VideoEncodeH265RateControlInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265RateControlInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265RateControlInfoEXT")
+        f.debug_struct("VideoEncodeH265RateControlInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("gop_frame_count", &self.gop_frame_count)
@@ -1346,7 +1649,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265RateControlInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265QpEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265QpEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VideoEncodeH265QpEXT {
     pub qp_i: i32,
@@ -1364,8 +1667,7 @@ impl Default for VideoEncodeH265QpEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265QpEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265QpEXT")
+        f.debug_struct("VideoEncodeH265QpEXT")
             .field("qp_i", &self.qp_i)
             .field("qp_p", &self.qp_p)
             .field("qp_b", &self.qp_b)
@@ -1436,7 +1738,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265QpEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265FrameSizeEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265FrameSizeEXT")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct VideoEncodeH265FrameSizeEXT {
     pub frame_i_size: u32,
@@ -1454,8 +1756,7 @@ impl Default for VideoEncodeH265FrameSizeEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265FrameSizeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265FrameSizeEXT")
+        f.debug_struct("VideoEncodeH265FrameSizeEXT")
             .field("frame_i_size", &self.frame_i_size)
             .field("frame_p_size", &self.frame_p_size)
             .field("frame_b_size", &self.frame_b_size)
@@ -1526,7 +1827,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265FrameSizeEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265RateControlLayerInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265RateControlLayerInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265RateControlLayerInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1563,8 +1864,7 @@ impl Default for VideoEncodeH265RateControlLayerInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265RateControlLayerInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265RateControlLayerInfoEXT")
+        f.debug_struct("VideoEncodeH265RateControlLayerInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("temporal_id", &self.temporal_id)
@@ -1696,7 +1996,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265RateControlLayerInfoEXTBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265ProfileEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265ProfileEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265ProfileEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1717,8 +2017,7 @@ impl Default for VideoEncodeH265ProfileEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265ProfileEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265ProfileEXT")
+        f.debug_struct("VideoEncodeH265ProfileEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("std_profile_idc", &self.std_profile_idc)
@@ -1782,7 +2081,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265ProfileEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265DpbSlotInfoEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265DpbSlotInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265DpbSlotInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1805,8 +2104,7 @@ impl Default for VideoEncodeH265DpbSlotInfoEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265DpbSlotInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265DpbSlotInfoEXT")
+        f.debug_struct("VideoEncodeH265DpbSlotInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("slot_index", &self.slot_index)
@@ -1880,7 +2178,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeH265DpbSlotInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH265ReferenceListsEXT.html) · Structure
 #[doc(alias = "VkVideoEncodeH265ReferenceListsEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeH265ReferenceListsEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -1909,8 +2207,7 @@ impl Default for VideoEncodeH265ReferenceListsEXT {
 }
 impl std::fmt::Debug for VideoEncodeH265ReferenceListsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeH265ReferenceListsEXT")
+        f.debug_struct("VideoEncodeH265ReferenceListsEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("reference_list0_entry_count", &self.reference_list0_entry_count)

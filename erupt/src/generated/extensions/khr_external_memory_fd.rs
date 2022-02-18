@@ -42,7 +42,7 @@ impl<'a> crate::ExtendableFrom<'a, ImportMemoryFdInfoKHRBuilder<'_>>
 for crate::vk1_0::MemoryAllocateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportMemoryFdInfoKHR.html) · Structure
 #[doc(alias = "VkImportMemoryFdInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportMemoryFdInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -65,8 +65,7 @@ impl Default for ImportMemoryFdInfoKHR {
 }
 impl std::fmt::Debug for ImportMemoryFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportMemoryFdInfoKHR")
+        f.debug_struct("ImportMemoryFdInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("handle_type", &self.handle_type)
@@ -137,7 +136,7 @@ impl<'a> std::ops::DerefMut for ImportMemoryFdInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryFdPropertiesKHR.html) · Structure
 #[doc(alias = "VkMemoryFdPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryFdPropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -158,8 +157,7 @@ impl Default for MemoryFdPropertiesKHR {
 }
 impl std::fmt::Debug for MemoryFdPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryFdPropertiesKHR")
+        f.debug_struct("MemoryFdPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_type_bits", &self.memory_type_bits)
@@ -220,7 +218,7 @@ impl<'a> std::ops::DerefMut for MemoryFdPropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMemoryGetFdInfoKHR.html) · Structure
 #[doc(alias = "VkMemoryGetFdInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MemoryGetFdInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -243,8 +241,7 @@ impl Default for MemoryGetFdInfoKHR {
 }
 impl std::fmt::Debug for MemoryGetFdInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MemoryGetFdInfoKHR")
+        f.debug_struct("MemoryGetFdInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory", &self.memory)

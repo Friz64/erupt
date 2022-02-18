@@ -64,17 +64,16 @@ impl crate::vk1_0::PipelineStageFlagBits {
 pub struct FragmentShadingRateCombinerOpKHR(pub i32);
 impl std::fmt::Debug for FragmentShadingRateCombinerOpKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::KEEP_KHR => "KEEP_KHR",
-                    &Self::REPLACE_KHR => "REPLACE_KHR",
-                    &Self::MIN_KHR => "MIN_KHR",
-                    &Self::MAX_KHR => "MAX_KHR",
-                    &Self::MUL_KHR => "MUL_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::KEEP_KHR => "KEEP_KHR",
+                &Self::REPLACE_KHR => "REPLACE_KHR",
+                &Self::MIN_KHR => "MIN_KHR",
+                &Self::MAX_KHR => "MAX_KHR",
+                &Self::MUL_KHR => "MUL_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_fragment_shading_rate`]
@@ -129,7 +128,7 @@ impl<'a> crate::ExtendableFrom<'a, FragmentShadingRateAttachmentInfoKHRBuilder<'
 for crate::vk1_2::SubpassDescription2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkFragmentShadingRateAttachmentInfoKHR.html) · Structure
 #[doc(alias = "VkFragmentShadingRateAttachmentInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct FragmentShadingRateAttachmentInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -152,8 +151,7 @@ impl Default for FragmentShadingRateAttachmentInfoKHR {
 }
 impl std::fmt::Debug for FragmentShadingRateAttachmentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("FragmentShadingRateAttachmentInfoKHR")
+        f.debug_struct("FragmentShadingRateAttachmentInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -241,7 +239,7 @@ impl<'a> std::ops::DerefMut for FragmentShadingRateAttachmentInfoKHRBuilder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineFragmentShadingRateStateCreateInfoKHR.html) · Structure
 #[doc(alias = "VkPipelineFragmentShadingRateStateCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineFragmentShadingRateStateCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -264,8 +262,7 @@ impl Default for PipelineFragmentShadingRateStateCreateInfoKHR {
 }
 impl std::fmt::Debug for PipelineFragmentShadingRateStateCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineFragmentShadingRateStateCreateInfoKHR")
+        f.debug_struct("PipelineFragmentShadingRateStateCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("fragment_size", &self.fragment_size)
@@ -346,7 +343,7 @@ for PipelineFragmentShadingRateStateCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateFeaturesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateFeaturesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShadingRateFeaturesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -371,8 +368,7 @@ impl Default for PhysicalDeviceFragmentShadingRateFeaturesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateFeaturesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentShadingRateFeaturesKHR")
+        f.debug_struct("PhysicalDeviceFragmentShadingRateFeaturesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -474,7 +470,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentShadingRateFeaturesKHRBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRatePropertiesKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRatePropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShadingRatePropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -527,8 +523,7 @@ impl Default for PhysicalDeviceFragmentShadingRatePropertiesKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRatePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentShadingRatePropertiesKHR")
+        f.debug_struct("PhysicalDeviceFragmentShadingRatePropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -852,7 +847,7 @@ for PhysicalDeviceFragmentShadingRatePropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentShadingRateKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentShadingRateKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentShadingRateKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -875,8 +870,7 @@ impl Default for PhysicalDeviceFragmentShadingRateKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentShadingRateKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentShadingRateKHR")
+        f.debug_struct("PhysicalDeviceFragmentShadingRateKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sample_counts", &self.sample_counts)

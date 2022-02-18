@@ -65,7 +65,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassShadingPipelineCreateInfoHUAWEI.html) · Structure
 #[doc(alias = "VkSubpassShadingPipelineCreateInfoHUAWEI")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SubpassShadingPipelineCreateInfoHUAWEI {
     pub s_type: crate::vk1_0::StructureType,
@@ -88,8 +88,7 @@ impl Default for SubpassShadingPipelineCreateInfoHUAWEI {
 }
 impl std::fmt::Debug for SubpassShadingPipelineCreateInfoHUAWEI {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubpassShadingPipelineCreateInfoHUAWEI")
+        f.debug_struct("SubpassShadingPipelineCreateInfoHUAWEI")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("render_pass", &self.render_pass)
@@ -160,7 +159,7 @@ impl<'a> std::ops::DerefMut for SubpassShadingPipelineCreateInfoHUAWEIBuilder<'a
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingPropertiesHUAWEI.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSubpassShadingPropertiesHUAWEI")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSubpassShadingPropertiesHUAWEI {
     pub s_type: crate::vk1_0::StructureType,
@@ -181,8 +180,7 @@ impl Default for PhysicalDeviceSubpassShadingPropertiesHUAWEI {
 }
 impl std::fmt::Debug for PhysicalDeviceSubpassShadingPropertiesHUAWEI {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSubpassShadingPropertiesHUAWEI")
+        f.debug_struct("PhysicalDeviceSubpassShadingPropertiesHUAWEI")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -261,7 +259,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSubpassShadingPropertiesHUAWEIBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSubpassShadingFeaturesHUAWEI.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSubpassShadingFeaturesHUAWEI")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSubpassShadingFeaturesHUAWEI {
     pub s_type: crate::vk1_0::StructureType,
@@ -282,8 +280,7 @@ impl Default for PhysicalDeviceSubpassShadingFeaturesHUAWEI {
 }
 impl std::fmt::Debug for PhysicalDeviceSubpassShadingFeaturesHUAWEI {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSubpassShadingFeaturesHUAWEI")
+        f.debug_struct("PhysicalDeviceSubpassShadingFeaturesHUAWEI")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("subpass_shading", &(self.subpass_shading != 0))

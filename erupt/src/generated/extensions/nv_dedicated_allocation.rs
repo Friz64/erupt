@@ -27,7 +27,7 @@ impl<'a> crate::ExtendableFrom<'a, DedicatedAllocationImageCreateInfoNVBuilder<'
 for crate::vk1_0::ImageCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationImageCreateInfoNV.html) · Structure
 #[doc(alias = "VkDedicatedAllocationImageCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DedicatedAllocationImageCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -48,8 +48,7 @@ impl Default for DedicatedAllocationImageCreateInfoNV {
 }
 impl std::fmt::Debug for DedicatedAllocationImageCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DedicatedAllocationImageCreateInfoNV")
+        f.debug_struct("DedicatedAllocationImageCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("dedicated_allocation", &(self.dedicated_allocation != 0))
@@ -113,7 +112,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationImageCreateInfoNVBuilder<'a> 
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationBufferCreateInfoNV.html) · Structure
 #[doc(alias = "VkDedicatedAllocationBufferCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DedicatedAllocationBufferCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -134,8 +133,7 @@ impl Default for DedicatedAllocationBufferCreateInfoNV {
 }
 impl std::fmt::Debug for DedicatedAllocationBufferCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DedicatedAllocationBufferCreateInfoNV")
+        f.debug_struct("DedicatedAllocationBufferCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("dedicated_allocation", &(self.dedicated_allocation != 0))
@@ -199,7 +197,7 @@ impl<'a> std::ops::DerefMut for DedicatedAllocationBufferCreateInfoNVBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDedicatedAllocationMemoryAllocateInfoNV.html) · Structure
 #[doc(alias = "VkDedicatedAllocationMemoryAllocateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DedicatedAllocationMemoryAllocateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -222,8 +220,7 @@ impl Default for DedicatedAllocationMemoryAllocateInfoNV {
 }
 impl std::fmt::Debug for DedicatedAllocationMemoryAllocateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DedicatedAllocationMemoryAllocateInfoNV")
+        f.debug_struct("DedicatedAllocationMemoryAllocateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image", &self.image)

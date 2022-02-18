@@ -28,12 +28,11 @@ impl PipelineViewportSwizzleStateCreateFlagBitsNV {
 }
 impl std::fmt::Debug for PipelineViewportSwizzleStateCreateFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_viewport_swizzle`]
@@ -47,20 +46,19 @@ impl crate::vk1_0::StructureType {
 pub struct ViewportCoordinateSwizzleNV(pub i32);
 impl std::fmt::Debug for ViewportCoordinateSwizzleNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::POSITIVE_X_NV => "POSITIVE_X_NV",
-                    &Self::NEGATIVE_X_NV => "NEGATIVE_X_NV",
-                    &Self::POSITIVE_Y_NV => "POSITIVE_Y_NV",
-                    &Self::NEGATIVE_Y_NV => "NEGATIVE_Y_NV",
-                    &Self::POSITIVE_Z_NV => "POSITIVE_Z_NV",
-                    &Self::NEGATIVE_Z_NV => "NEGATIVE_Z_NV",
-                    &Self::POSITIVE_W_NV => "POSITIVE_W_NV",
-                    &Self::NEGATIVE_W_NV => "NEGATIVE_W_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::POSITIVE_X_NV => "POSITIVE_X_NV",
+                &Self::NEGATIVE_X_NV => "NEGATIVE_X_NV",
+                &Self::POSITIVE_Y_NV => "POSITIVE_Y_NV",
+                &Self::NEGATIVE_Y_NV => "NEGATIVE_Y_NV",
+                &Self::POSITIVE_Z_NV => "POSITIVE_Z_NV",
+                &Self::NEGATIVE_Z_NV => "NEGATIVE_Z_NV",
+                &Self::POSITIVE_W_NV => "POSITIVE_W_NV",
+                &Self::NEGATIVE_W_NV => "NEGATIVE_W_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_viewport_swizzle`]
@@ -80,7 +78,7 @@ impl<'a> crate::ExtendableFrom<'a, PipelineViewportSwizzleStateCreateInfoNVBuild
 for crate::vk1_0::PipelineViewportStateCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkViewportSwizzleNV.html) · Structure
 #[doc(alias = "VkViewportSwizzleNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ViewportSwizzleNV {
     pub x: crate::extensions::nv_viewport_swizzle::ViewportCoordinateSwizzleNV,
@@ -100,8 +98,7 @@ impl Default for ViewportSwizzleNV {
 }
 impl std::fmt::Debug for ViewportSwizzleNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ViewportSwizzleNV")
+        f.debug_struct("ViewportSwizzleNV")
             .field("x", &self.x)
             .field("y", &self.y)
             .field("z", &self.z)
@@ -191,7 +188,7 @@ impl<'a> std::ops::DerefMut for ViewportSwizzleNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineViewportSwizzleStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineViewportSwizzleStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineViewportSwizzleStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -216,8 +213,7 @@ impl Default for PipelineViewportSwizzleStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineViewportSwizzleStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineViewportSwizzleStateCreateInfoNV")
+        f.debug_struct("PipelineViewportSwizzleStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

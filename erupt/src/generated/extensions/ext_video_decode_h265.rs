@@ -34,12 +34,11 @@ impl VideoDecodeH265CreateFlagBitsEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265CreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_video_decode_h265`]
@@ -96,7 +95,7 @@ impl<'a> crate::ExtendableFrom<'a, VideoDecodeH265PictureInfoEXTBuilder<'_>>
 for crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH265ProfileEXT.html) · Structure
 #[doc(alias = "VkVideoDecodeH265ProfileEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoDecodeH265ProfileEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -117,8 +116,7 @@ impl Default for VideoDecodeH265ProfileEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265ProfileEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoDecodeH265ProfileEXT")
+        f.debug_struct("VideoDecodeH265ProfileEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("std_profile_idc", &self.std_profile_idc)
@@ -182,7 +180,7 @@ impl<'a> std::ops::DerefMut for VideoDecodeH265ProfileEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH265CapabilitiesEXT.html) · Structure
 #[doc(alias = "VkVideoDecodeH265CapabilitiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoDecodeH265CapabilitiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -205,8 +203,7 @@ impl Default for VideoDecodeH265CapabilitiesEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265CapabilitiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoDecodeH265CapabilitiesEXT")
+        f.debug_struct("VideoDecodeH265CapabilitiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_level", &self.max_level)
@@ -280,7 +277,7 @@ impl<'a> std::ops::DerefMut for VideoDecodeH265CapabilitiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH265SessionCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoDecodeH265SessionCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoDecodeH265SessionCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -303,8 +300,7 @@ impl Default for VideoDecodeH265SessionCreateInfoEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265SessionCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoDecodeH265SessionCreateInfoEXT")
+        f.debug_struct("VideoDecodeH265SessionCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -381,7 +377,7 @@ impl<'a> std::ops::DerefMut for VideoDecodeH265SessionCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH265SessionParametersAddInfoEXT.html) · Structure
 #[doc(alias = "VkVideoDecodeH265SessionParametersAddInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoDecodeH265SessionParametersAddInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -408,8 +404,7 @@ impl Default for VideoDecodeH265SessionParametersAddInfoEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265SessionParametersAddInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoDecodeH265SessionParametersAddInfoEXT")
+        f.debug_struct("VideoDecodeH265SessionParametersAddInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sps_std_count", &self.sps_std_count)
@@ -493,7 +488,7 @@ impl<'a> std::ops::DerefMut for VideoDecodeH265SessionParametersAddInfoEXTBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH265SessionParametersCreateInfoEXT.html) · Structure
 #[doc(alias = "VkVideoDecodeH265SessionParametersCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoDecodeH265SessionParametersCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -518,8 +513,7 @@ impl Default for VideoDecodeH265SessionParametersCreateInfoEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265SessionParametersCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoDecodeH265SessionParametersCreateInfoEXT")
+        f.debug_struct("VideoDecodeH265SessionParametersCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_sps_std_count", &self.max_sps_std_count)
@@ -607,7 +601,7 @@ for VideoDecodeH265SessionParametersCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH265PictureInfoEXT.html) · Structure
 #[doc(alias = "VkVideoDecodeH265PictureInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoDecodeH265PictureInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -632,8 +626,7 @@ impl Default for VideoDecodeH265PictureInfoEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265PictureInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoDecodeH265PictureInfoEXT")
+        f.debug_struct("VideoDecodeH265PictureInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_std_picture_info", &self.p_std_picture_info)
@@ -709,7 +702,7 @@ impl<'a> std::ops::DerefMut for VideoDecodeH265PictureInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH265DpbSlotInfoEXT.html) · Structure
 #[doc(alias = "VkVideoDecodeH265DpbSlotInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoDecodeH265DpbSlotInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -730,8 +723,7 @@ impl Default for VideoDecodeH265DpbSlotInfoEXT {
 }
 impl std::fmt::Debug for VideoDecodeH265DpbSlotInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoDecodeH265DpbSlotInfoEXT")
+        f.debug_struct("VideoDecodeH265DpbSlotInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_std_reference_info", &self.p_std_reference_info)

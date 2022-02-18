@@ -32,12 +32,11 @@ impl ShaderCorePropertiesFlagBitsAMD {
 }
 impl std::fmt::Debug for ShaderCorePropertiesFlagBitsAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCoreProperties2AMD>
@@ -46,7 +45,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceShaderCoreProperties2AMDBuilder
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderCoreProperties2AMD.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderCoreProperties2AMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderCoreProperties2AMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -69,8 +68,7 @@ impl Default for PhysicalDeviceShaderCoreProperties2AMD {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderCoreProperties2AMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderCoreProperties2AMD")
+        f.debug_struct("PhysicalDeviceShaderCoreProperties2AMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_core_features", &self.shader_core_features)

@@ -62,7 +62,7 @@ pub type PFN_vkGetDisplayPlaneCapabilities2KHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayProperties2KHR.html) · Structure
 #[doc(alias = "VkDisplayProperties2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayProperties2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -83,8 +83,7 @@ impl Default for DisplayProperties2KHR {
 }
 impl std::fmt::Debug for DisplayProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayProperties2KHR")
+        f.debug_struct("DisplayProperties2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("display_properties", &self.display_properties)
@@ -148,7 +147,7 @@ impl<'a> std::ops::DerefMut for DisplayProperties2KHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneProperties2KHR.html) · Structure
 #[doc(alias = "VkDisplayPlaneProperties2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayPlaneProperties2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -169,8 +168,7 @@ impl Default for DisplayPlaneProperties2KHR {
 }
 impl std::fmt::Debug for DisplayPlaneProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayPlaneProperties2KHR")
+        f.debug_struct("DisplayPlaneProperties2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("display_plane_properties", &self.display_plane_properties)
@@ -234,7 +232,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneProperties2KHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeProperties2KHR.html) · Structure
 #[doc(alias = "VkDisplayModeProperties2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayModeProperties2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -255,8 +253,7 @@ impl Default for DisplayModeProperties2KHR {
 }
 impl std::fmt::Debug for DisplayModeProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayModeProperties2KHR")
+        f.debug_struct("DisplayModeProperties2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("display_mode_properties", &self.display_mode_properties)
@@ -320,7 +317,7 @@ impl<'a> std::ops::DerefMut for DisplayModeProperties2KHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneInfo2KHR.html) · Structure
 #[doc(alias = "VkDisplayPlaneInfo2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayPlaneInfo2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -343,8 +340,7 @@ impl Default for DisplayPlaneInfo2KHR {
 }
 impl std::fmt::Debug for DisplayPlaneInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayPlaneInfo2KHR")
+        f.debug_struct("DisplayPlaneInfo2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("mode", &self.mode)
@@ -412,7 +408,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneInfo2KHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneCapabilities2KHR.html) · Structure
 #[doc(alias = "VkDisplayPlaneCapabilities2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayPlaneCapabilities2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -433,8 +429,7 @@ impl Default for DisplayPlaneCapabilities2KHR {
 }
 impl std::fmt::Debug for DisplayPlaneCapabilities2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayPlaneCapabilities2KHR")
+        f.debug_struct("DisplayPlaneCapabilities2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("capabilities", &self.capabilities)

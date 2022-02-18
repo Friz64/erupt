@@ -242,7 +242,7 @@ impl<'a> crate::ExtendableFrom<'a, QueueFamilyCheckpointProperties2NVBuilder<'_>
 for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyCheckpointProperties2NV.html) · Structure
 #[doc(alias = "VkQueueFamilyCheckpointProperties2NV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueueFamilyCheckpointProperties2NV {
     pub s_type: crate::vk1_0::StructureType,
@@ -263,8 +263,7 @@ impl Default for QueueFamilyCheckpointProperties2NV {
 }
 impl std::fmt::Debug for QueueFamilyCheckpointProperties2NV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueueFamilyCheckpointProperties2NV")
+        f.debug_struct("QueueFamilyCheckpointProperties2NV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -334,7 +333,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyCheckpointProperties2NVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkCheckpointData2NV.html) · Structure
 #[doc(alias = "VkCheckpointData2NV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct CheckpointData2NV {
     pub s_type: crate::vk1_0::StructureType,
@@ -357,8 +356,7 @@ impl Default for CheckpointData2NV {
 }
 impl std::fmt::Debug for CheckpointData2NV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("CheckpointData2NV")
+        f.debug_struct("CheckpointData2NV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("stage", &self.stage)

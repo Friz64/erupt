@@ -32,12 +32,11 @@ impl PipelineDiscardRectangleStateCreateFlagBitsEXT {
 }
 impl std::fmt::Debug for PipelineDiscardRectangleStateCreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_discard_rectangles`]
@@ -56,14 +55,13 @@ impl crate::vk1_0::StructureType {
 pub struct DiscardRectangleModeEXT(pub i32);
 impl std::fmt::Debug for DiscardRectangleModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INCLUSIVE_EXT => "INCLUSIVE_EXT",
-                    &Self::EXCLUSIVE_EXT => "EXCLUSIVE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INCLUSIVE_EXT => "INCLUSIVE_EXT",
+                &Self::EXCLUSIVE_EXT => "EXCLUSIVE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_discard_rectangles`]
@@ -91,7 +89,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDiscardRectanglePropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDiscardRectanglePropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDiscardRectanglePropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -112,8 +110,7 @@ impl Default for PhysicalDeviceDiscardRectanglePropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceDiscardRectanglePropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDiscardRectanglePropertiesEXT")
+        f.debug_struct("PhysicalDeviceDiscardRectanglePropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_discard_rectangles", &self.max_discard_rectangles)
@@ -183,7 +180,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceDiscardRectanglePropertiesEXTBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDiscardRectangleStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineDiscardRectangleStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineDiscardRectangleStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -210,8 +207,7 @@ impl Default for PipelineDiscardRectangleStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineDiscardRectangleStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineDiscardRectangleStateCreateInfoEXT")
+        f.debug_struct("PipelineDiscardRectangleStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

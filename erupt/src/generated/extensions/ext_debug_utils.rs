@@ -77,12 +77,11 @@ impl DebugUtilsMessengerCreateFlagBitsEXT {
 }
 impl std::fmt::Debug for DebugUtilsMessengerCreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -106,12 +105,11 @@ impl DebugUtilsMessengerCallbackDataFlagBitsEXT {
 }
 impl std::fmt::Debug for DebugUtilsMessengerCallbackDataFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_debug_utils`]
@@ -150,16 +148,15 @@ impl DebugUtilsMessageSeverityFlagBitsEXT {
 }
 impl std::fmt::Debug for DebugUtilsMessageSeverityFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::VERBOSE_EXT => "VERBOSE_EXT",
-                    &Self::INFO_EXT => "INFO_EXT",
-                    &Self::WARNING_EXT => "WARNING_EXT",
-                    &Self::ERROR_EXT => "ERROR_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::VERBOSE_EXT => "VERBOSE_EXT",
+                &Self::INFO_EXT => "INFO_EXT",
+                &Self::WARNING_EXT => "WARNING_EXT",
+                &Self::ERROR_EXT => "ERROR_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_debug_utils`]
@@ -192,15 +189,14 @@ impl DebugUtilsMessageTypeFlagBitsEXT {
 }
 impl std::fmt::Debug for DebugUtilsMessageTypeFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::GENERAL_EXT => "GENERAL_EXT",
-                    &Self::VALIDATION_EXT => "VALIDATION_EXT",
-                    &Self::PERFORMANCE_EXT => "PERFORMANCE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::GENERAL_EXT => "GENERAL_EXT",
+                &Self::VALIDATION_EXT => "VALIDATION_EXT",
+                &Self::PERFORMANCE_EXT => "PERFORMANCE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_debug_utils`]
@@ -292,7 +288,7 @@ impl<'a> crate::ExtendableFrom<'a, DebugUtilsMessengerCreateInfoEXTBuilder<'_>>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Structure
 #[doc(alias = "VkDebugUtilsObjectNameInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsObjectNameInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -317,8 +313,7 @@ impl Default for DebugUtilsObjectNameInfoEXT {
 }
 impl std::fmt::Debug for DebugUtilsObjectNameInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugUtilsObjectNameInfoEXT")
+        f.debug_struct("DebugUtilsObjectNameInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("object_type", &self.object_type)
@@ -393,7 +388,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsObjectNameInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectTagInfoEXT.html) · Structure
 #[doc(alias = "VkDebugUtilsObjectTagInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsObjectTagInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -422,8 +417,7 @@ impl Default for DebugUtilsObjectTagInfoEXT {
 }
 impl std::fmt::Debug for DebugUtilsObjectTagInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugUtilsObjectTagInfoEXT")
+        f.debug_struct("DebugUtilsObjectTagInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("object_type", &self.object_type)
@@ -512,7 +506,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsObjectTagInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsLabelEXT.html) · Structure
 #[doc(alias = "VkDebugUtilsLabelEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsLabelEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -535,8 +529,7 @@ impl Default for DebugUtilsLabelEXT {
 }
 impl std::fmt::Debug for DebugUtilsLabelEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugUtilsLabelEXT")
+        f.debug_struct("DebugUtilsLabelEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_label_name", &self.p_label_name)
@@ -604,7 +597,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsLabelEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsMessengerCreateInfoEXT.html) · Structure
 #[doc(alias = "VkDebugUtilsMessengerCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsMessengerCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -635,8 +628,7 @@ impl Default for DebugUtilsMessengerCreateInfoEXT {
 }
 impl std::fmt::Debug for DebugUtilsMessengerCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugUtilsMessengerCreateInfoEXT")
+        f.debug_struct("DebugUtilsMessengerCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -745,7 +737,7 @@ impl<'a> std::ops::DerefMut for DebugUtilsMessengerCreateInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsMessengerCallbackDataEXT.html) · Structure
 #[doc(alias = "VkDebugUtilsMessengerCallbackDataEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DebugUtilsMessengerCallbackDataEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -784,8 +776,7 @@ impl Default for DebugUtilsMessengerCallbackDataEXT {
 }
 impl std::fmt::Debug for DebugUtilsMessengerCallbackDataEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DebugUtilsMessengerCallbackDataEXT")
+        f.debug_struct("DebugUtilsMessengerCallbackDataEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

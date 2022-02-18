@@ -52,12 +52,11 @@ impl PipelineRasterizationStateStreamCreateFlagBitsEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationStateStreamCreateFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_transform_feedback`]
@@ -165,7 +164,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTransformFeedbackFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceTransformFeedbackFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTransformFeedbackFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -188,8 +187,7 @@ impl Default for PhysicalDeviceTransformFeedbackFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceTransformFeedbackFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceTransformFeedbackFeaturesEXT")
+        f.debug_struct("PhysicalDeviceTransformFeedbackFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("transform_feedback", &(self.transform_feedback != 0))
@@ -263,7 +261,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackFeaturesEXTBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceTransformFeedbackPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceTransformFeedbackPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceTransformFeedbackPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -302,8 +300,7 @@ impl Default for PhysicalDeviceTransformFeedbackPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceTransformFeedbackPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceTransformFeedbackPropertiesEXT")
+        f.debug_struct("PhysicalDeviceTransformFeedbackPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -505,7 +502,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceTransformFeedbackPropertiesEXTBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateStreamCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationStateStreamCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationStateStreamCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -528,8 +525,7 @@ impl Default for PipelineRasterizationStateStreamCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationStateStreamCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRasterizationStateStreamCreateInfoEXT")
+        f.debug_struct("PipelineRasterizationStateStreamCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

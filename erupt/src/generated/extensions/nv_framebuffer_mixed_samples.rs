@@ -28,12 +28,11 @@ impl PipelineCoverageModulationStateCreateFlagBitsNV {
 }
 impl std::fmt::Debug for PipelineCoverageModulationStateCreateFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_framebuffer_mixed_samples`]
@@ -47,16 +46,15 @@ impl crate::vk1_0::StructureType {
 pub struct CoverageModulationModeNV(pub i32);
 impl std::fmt::Debug for CoverageModulationModeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NONE_NV => "NONE_NV",
-                    &Self::RGB_NV => "RGB_NV",
-                    &Self::ALPHA_NV => "ALPHA_NV",
-                    &Self::RGBA_NV => "RGBA_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NONE_NV => "NONE_NV",
+                &Self::RGB_NV => "RGB_NV",
+                &Self::ALPHA_NV => "ALPHA_NV",
+                &Self::RGBA_NV => "RGBA_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_framebuffer_mixed_samples`]
@@ -74,7 +72,7 @@ impl<
 for crate::vk1_0::PipelineMultisampleStateCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineCoverageModulationStateCreateInfoNV.html) · Structure
 #[doc(alias = "VkPipelineCoverageModulationStateCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineCoverageModulationStateCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -103,8 +101,7 @@ impl Default for PipelineCoverageModulationStateCreateInfoNV {
 }
 impl std::fmt::Debug for PipelineCoverageModulationStateCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineCoverageModulationStateCreateInfoNV")
+        f.debug_struct("PipelineCoverageModulationStateCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

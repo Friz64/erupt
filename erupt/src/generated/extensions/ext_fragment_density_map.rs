@@ -80,7 +80,7 @@ impl<'a> crate::ExtendableFrom<'a, RenderPassFragmentDensityMapCreateInfoEXTBuil
 for crate::vk1_2::RenderPassCreateInfo2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMapFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -105,8 +105,7 @@ impl Default for PhysicalDeviceFragmentDensityMapFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentDensityMapFeaturesEXT")
+        f.debug_struct("PhysicalDeviceFragmentDensityMapFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("fragment_density_map", &(self.fragment_density_map != 0))
@@ -205,7 +204,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceFragmentDensityMapFeaturesEXTBuild
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceFragmentDensityMapPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceFragmentDensityMapPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceFragmentDensityMapPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -230,8 +229,7 @@ impl Default for PhysicalDeviceFragmentDensityMapPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceFragmentDensityMapPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceFragmentDensityMapPropertiesEXT")
+        f.debug_struct("PhysicalDeviceFragmentDensityMapPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -334,7 +332,7 @@ for PhysicalDeviceFragmentDensityMapPropertiesEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassFragmentDensityMapCreateInfoEXT.html) · Structure
 #[doc(alias = "VkRenderPassFragmentDensityMapCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassFragmentDensityMapCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -355,8 +353,7 @@ impl Default for RenderPassFragmentDensityMapCreateInfoEXT {
 }
 impl std::fmt::Debug for RenderPassFragmentDensityMapCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderPassFragmentDensityMapCreateInfoEXT")
+        f.debug_struct("RenderPassFragmentDensityMapCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

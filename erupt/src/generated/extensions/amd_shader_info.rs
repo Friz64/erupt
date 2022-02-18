@@ -18,15 +18,14 @@ pub const FN_GET_SHADER_INFO_AMD: *const std::os::raw::c_char = crate::cstr!(
 pub struct ShaderInfoTypeAMD(pub i32);
 impl std::fmt::Debug for ShaderInfoTypeAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::STATISTICS_AMD => "STATISTICS_AMD",
-                    &Self::BINARY_AMD => "BINARY_AMD",
-                    &Self::DISASSEMBLY_AMD => "DISASSEMBLY_AMD",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::STATISTICS_AMD => "STATISTICS_AMD",
+                &Self::BINARY_AMD => "BINARY_AMD",
+                &Self::DISASSEMBLY_AMD => "DISASSEMBLY_AMD",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::amd_shader_info`]
@@ -47,7 +46,7 @@ pub type PFN_vkGetShaderInfoAMD = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderResourceUsageAMD.html) · Structure
 #[doc(alias = "VkShaderResourceUsageAMD")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ShaderResourceUsageAMD {
     pub num_used_vgprs: u32,
@@ -69,8 +68,7 @@ impl Default for ShaderResourceUsageAMD {
 }
 impl std::fmt::Debug for ShaderResourceUsageAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ShaderResourceUsageAMD")
+        f.debug_struct("ShaderResourceUsageAMD")
             .field("num_used_vgprs", &self.num_used_vgprs)
             .field("num_used_sgprs", &self.num_used_sgprs)
             .field("lds_size_per_local_work_group", &self.lds_size_per_local_work_group)
@@ -161,7 +159,7 @@ impl<'a> std::ops::DerefMut for ShaderResourceUsageAMDBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkShaderStatisticsInfoAMD.html) · Structure
 #[doc(alias = "VkShaderStatisticsInfoAMD")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ShaderStatisticsInfoAMD {
     pub shader_stage_mask: crate::vk1_0::ShaderStageFlags,
@@ -187,8 +185,7 @@ impl Default for ShaderStatisticsInfoAMD {
 }
 impl std::fmt::Debug for ShaderStatisticsInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ShaderStatisticsInfoAMD")
+        f.debug_struct("ShaderStatisticsInfoAMD")
             .field("shader_stage_mask", &self.shader_stage_mask)
             .field("resource_usage", &self.resource_usage)
             .field("num_physical_vgprs", &self.num_physical_vgprs)

@@ -22,14 +22,13 @@ impl crate::vk1_0::StructureType {
 pub struct ProvokingVertexModeEXT(pub i32);
 impl std::fmt::Debug for ProvokingVertexModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FIRST_VERTEX_EXT => "FIRST_VERTEX_EXT",
-                    &Self::LAST_VERTEX_EXT => "LAST_VERTEX_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FIRST_VERTEX_EXT => "FIRST_VERTEX_EXT",
+                &Self::LAST_VERTEX_EXT => "LAST_VERTEX_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_provoking_vertex`]
@@ -61,7 +60,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceProvokingVertexPropertiesEXTBui
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProvokingVertexFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceProvokingVertexFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -84,8 +83,7 @@ impl Default for PhysicalDeviceProvokingVertexFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceProvokingVertexFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceProvokingVertexFeaturesEXT")
+        f.debug_struct("PhysicalDeviceProvokingVertexFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("provoking_vertex_last", &(self.provoking_vertex_last != 0))
@@ -167,7 +165,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProvokingVertexFeaturesEXTBuilder<
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceProvokingVertexPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceProvokingVertexPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceProvokingVertexPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -190,8 +188,7 @@ impl Default for PhysicalDeviceProvokingVertexPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceProvokingVertexPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceProvokingVertexPropertiesEXT")
+        f.debug_struct("PhysicalDeviceProvokingVertexPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -283,7 +280,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceProvokingVertexPropertiesEXTBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationProvokingVertexStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationProvokingVertexStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationProvokingVertexStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -304,8 +301,7 @@ impl Default for PipelineRasterizationProvokingVertexStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationProvokingVertexStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRasterizationProvokingVertexStateCreateInfoEXT")
+        f.debug_struct("PipelineRasterizationProvokingVertexStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("provoking_vertex_mode", &self.provoking_vertex_mode)

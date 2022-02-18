@@ -45,7 +45,7 @@ impl<'a> crate::ExtendableFrom<'a, D3D12FenceSubmitInfoKHRBuilder<'_>>
 for crate::vk1_0::SubmitInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkImportSemaphoreWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkImportSemaphoreWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ImportSemaphoreWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -74,8 +74,7 @@ impl Default for ImportSemaphoreWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for ImportSemaphoreWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ImportSemaphoreWin32HandleInfoKHR")
+        f.debug_struct("ImportSemaphoreWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("semaphore", &self.semaphore)
@@ -170,7 +169,7 @@ impl<'a> std::ops::DerefMut for ImportSemaphoreWin32HandleInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExportSemaphoreWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkExportSemaphoreWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ExportSemaphoreWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -195,8 +194,7 @@ impl Default for ExportSemaphoreWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for ExportSemaphoreWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExportSemaphoreWin32HandleInfoKHR")
+        f.debug_struct("ExportSemaphoreWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("p_attributes", &self.p_attributes)
@@ -274,7 +272,7 @@ impl<'a> std::ops::DerefMut for ExportSemaphoreWin32HandleInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkD3D12FenceSubmitInfoKHR.html) · Structure
 #[doc(alias = "VkD3D12FenceSubmitInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct D3D12FenceSubmitInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -301,8 +299,7 @@ impl Default for D3D12FenceSubmitInfoKHR {
 }
 impl std::fmt::Debug for D3D12FenceSubmitInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("D3D12FenceSubmitInfoKHR")
+        f.debug_struct("D3D12FenceSubmitInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("wait_semaphore_values_count", &self.wait_semaphore_values_count)
@@ -377,7 +374,7 @@ impl<'a> std::ops::DerefMut for D3D12FenceSubmitInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSemaphoreGetWin32HandleInfoKHR.html) · Structure
 #[doc(alias = "VkSemaphoreGetWin32HandleInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SemaphoreGetWin32HandleInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -400,8 +397,7 @@ impl Default for SemaphoreGetWin32HandleInfoKHR {
 }
 impl std::fmt::Debug for SemaphoreGetWin32HandleInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SemaphoreGetWin32HandleInfoKHR")
+        f.debug_struct("SemaphoreGetWin32HandleInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("semaphore", &self.semaphore)

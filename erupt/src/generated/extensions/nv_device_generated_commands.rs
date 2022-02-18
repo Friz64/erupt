@@ -93,15 +93,14 @@ impl IndirectCommandsLayoutUsageFlagBitsNV {
 }
 impl std::fmt::Debug for IndirectCommandsLayoutUsageFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::EXPLICIT_PREPROCESS_NV => "EXPLICIT_PREPROCESS_NV",
-                    &Self::INDEXED_SEQUENCES_NV => "INDEXED_SEQUENCES_NV",
-                    &Self::UNORDERED_SEQUENCES_NV => "UNORDERED_SEQUENCES_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::EXPLICIT_PREPROCESS_NV => "EXPLICIT_PREPROCESS_NV",
+                &Self::INDEXED_SEQUENCES_NV => "INDEXED_SEQUENCES_NV",
+                &Self::UNORDERED_SEQUENCES_NV => "UNORDERED_SEQUENCES_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_device_generated_commands`]
@@ -117,20 +116,19 @@ impl crate::extensions::nv_device_generated_commands::IndirectCommandsLayoutUsag
 pub struct IndirectCommandsTokenTypeNV(pub i32);
 impl std::fmt::Debug for IndirectCommandsTokenTypeNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::SHADER_GROUP_NV => "SHADER_GROUP_NV",
-                    &Self::STATE_FLAGS_NV => "STATE_FLAGS_NV",
-                    &Self::INDEX_BUFFER_NV => "INDEX_BUFFER_NV",
-                    &Self::VERTEX_BUFFER_NV => "VERTEX_BUFFER_NV",
-                    &Self::PUSH_CONSTANT_NV => "PUSH_CONSTANT_NV",
-                    &Self::DRAW_INDEXED_NV => "DRAW_INDEXED_NV",
-                    &Self::DRAW_NV => "DRAW_NV",
-                    &Self::DRAW_TASKS_NV => "DRAW_TASKS_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::SHADER_GROUP_NV => "SHADER_GROUP_NV",
+                &Self::STATE_FLAGS_NV => "STATE_FLAGS_NV",
+                &Self::INDEX_BUFFER_NV => "INDEX_BUFFER_NV",
+                &Self::VERTEX_BUFFER_NV => "VERTEX_BUFFER_NV",
+                &Self::PUSH_CONSTANT_NV => "PUSH_CONSTANT_NV",
+                &Self::DRAW_INDEXED_NV => "DRAW_INDEXED_NV",
+                &Self::DRAW_NV => "DRAW_NV",
+                &Self::DRAW_TASKS_NV => "DRAW_TASKS_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_device_generated_commands`]
@@ -165,13 +163,12 @@ impl IndirectStateFlagBitsNV {
 }
 impl std::fmt::Debug for IndirectStateFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::FLAG_FRONTFACE_NV => "FLAG_FRONTFACE_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::FLAG_FRONTFACE_NV => "FLAG_FRONTFACE_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_device_generated_commands`]
@@ -233,7 +230,7 @@ impl<'a> crate::ExtendableFrom<'a, GraphicsPipelineShaderGroupsCreateInfoNVBuild
 for crate::vk1_0::GraphicsPipelineCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -254,8 +251,7 @@ impl Default for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDeviceGeneratedCommandsFeaturesNV")
+        f.debug_struct("PhysicalDeviceDeviceGeneratedCommandsFeaturesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("device_generated_commands", &(self.device_generated_commands != 0))
@@ -326,7 +322,7 @@ for PhysicalDeviceDeviceGeneratedCommandsFeaturesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV.html) · Structure
 #[doc(alias = "VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -363,8 +359,7 @@ impl Default for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
 }
 impl std::fmt::Debug for PhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceDeviceGeneratedCommandsPropertiesNV")
+        f.debug_struct("PhysicalDeviceDeviceGeneratedCommandsPropertiesNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -564,7 +559,7 @@ for PhysicalDeviceDeviceGeneratedCommandsPropertiesNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsShaderGroupCreateInfoNV.html) · Structure
 #[doc(alias = "VkGraphicsShaderGroupCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GraphicsShaderGroupCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -591,8 +586,7 @@ impl Default for GraphicsShaderGroupCreateInfoNV {
 }
 impl std::fmt::Debug for GraphicsShaderGroupCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GraphicsShaderGroupCreateInfoNV")
+        f.debug_struct("GraphicsShaderGroupCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("stage_count", &self.stage_count)
@@ -681,7 +675,7 @@ impl<'a> std::ops::DerefMut for GraphicsShaderGroupCreateInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGraphicsPipelineShaderGroupsCreateInfoNV.html) · Structure
 #[doc(alias = "VkGraphicsPipelineShaderGroupsCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GraphicsPipelineShaderGroupsCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -708,8 +702,7 @@ impl Default for GraphicsPipelineShaderGroupsCreateInfoNV {
 }
 impl std::fmt::Debug for GraphicsPipelineShaderGroupsCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GraphicsPipelineShaderGroupsCreateInfoNV")
+        f.debug_struct("GraphicsPipelineShaderGroupsCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("group_count", &self.group_count)
@@ -789,7 +782,7 @@ impl<'a> std::ops::DerefMut for GraphicsPipelineShaderGroupsCreateInfoNVBuilder<
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindShaderGroupIndirectCommandNV.html) · Structure
 #[doc(alias = "VkBindShaderGroupIndirectCommandNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BindShaderGroupIndirectCommandNV {
     pub group_index: u32,
@@ -803,8 +796,7 @@ impl Default for BindShaderGroupIndirectCommandNV {
 }
 impl std::fmt::Debug for BindShaderGroupIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindShaderGroupIndirectCommandNV")
+        f.debug_struct("BindShaderGroupIndirectCommandNV")
             .field("group_index", &self.group_index)
             .finish()
     }
@@ -864,7 +856,7 @@ impl<'a> std::ops::DerefMut for BindShaderGroupIndirectCommandNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindIndexBufferIndirectCommandNV.html) · Structure
 #[doc(alias = "VkBindIndexBufferIndirectCommandNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BindIndexBufferIndirectCommandNV {
     pub buffer_address: crate::vk1_0::DeviceAddress,
@@ -882,8 +874,7 @@ impl Default for BindIndexBufferIndirectCommandNV {
 }
 impl std::fmt::Debug for BindIndexBufferIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindIndexBufferIndirectCommandNV")
+        f.debug_struct("BindIndexBufferIndirectCommandNV")
             .field("buffer_address", &self.buffer_address)
             .field("size", &self.size)
             .field("index_type", &self.index_type)
@@ -960,7 +951,7 @@ impl<'a> std::ops::DerefMut for BindIndexBufferIndirectCommandNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkBindVertexBufferIndirectCommandNV.html) · Structure
 #[doc(alias = "VkBindVertexBufferIndirectCommandNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct BindVertexBufferIndirectCommandNV {
     pub buffer_address: crate::vk1_0::DeviceAddress,
@@ -978,8 +969,7 @@ impl Default for BindVertexBufferIndirectCommandNV {
 }
 impl std::fmt::Debug for BindVertexBufferIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("BindVertexBufferIndirectCommandNV")
+        f.debug_struct("BindVertexBufferIndirectCommandNV")
             .field("buffer_address", &self.buffer_address)
             .field("size", &self.size)
             .field("stride", &self.stride)
@@ -1056,7 +1046,7 @@ impl<'a> std::ops::DerefMut for BindVertexBufferIndirectCommandNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSetStateFlagsIndirectCommandNV.html) · Structure
 #[doc(alias = "VkSetStateFlagsIndirectCommandNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct SetStateFlagsIndirectCommandNV {
     pub data: u32,
@@ -1068,8 +1058,7 @@ impl Default for SetStateFlagsIndirectCommandNV {
 }
 impl std::fmt::Debug for SetStateFlagsIndirectCommandNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SetStateFlagsIndirectCommandNV")
+        f.debug_struct("SetStateFlagsIndirectCommandNV")
             .field("data", &self.data)
             .finish()
     }
@@ -1129,7 +1118,7 @@ impl<'a> std::ops::DerefMut for SetStateFlagsIndirectCommandNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsStreamNV.html) · Structure
 #[doc(alias = "VkIndirectCommandsStreamNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct IndirectCommandsStreamNV {
     pub buffer: crate::vk1_0::Buffer,
@@ -1145,8 +1134,7 @@ impl Default for IndirectCommandsStreamNV {
 }
 impl std::fmt::Debug for IndirectCommandsStreamNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("IndirectCommandsStreamNV")
+        f.debug_struct("IndirectCommandsStreamNV")
             .field("buffer", &self.buffer)
             .field("offset", &self.offset)
             .finish()
@@ -1210,7 +1198,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsStreamNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutTokenNV.html) · Structure
 #[doc(alias = "VkIndirectCommandsLayoutTokenNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct IndirectCommandsLayoutTokenNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1255,8 +1243,7 @@ impl Default for IndirectCommandsLayoutTokenNV {
 }
 impl std::fmt::Debug for IndirectCommandsLayoutTokenNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("IndirectCommandsLayoutTokenNV")
+        f.debug_struct("IndirectCommandsLayoutTokenNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("token_type", &self.token_type)
@@ -1415,7 +1402,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutTokenNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNV.html) · Structure
 #[doc(alias = "VkIndirectCommandsLayoutCreateInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct IndirectCommandsLayoutCreateInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1446,8 +1433,7 @@ impl Default for IndirectCommandsLayoutCreateInfoNV {
 }
 impl std::fmt::Debug for IndirectCommandsLayoutCreateInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("IndirectCommandsLayoutCreateInfoNV")
+        f.debug_struct("IndirectCommandsLayoutCreateInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -1545,7 +1531,7 @@ impl<'a> std::ops::DerefMut for IndirectCommandsLayoutCreateInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeneratedCommandsInfoNV.html) · Structure
 #[doc(alias = "VkGeneratedCommandsInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GeneratedCommandsInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1590,8 +1576,7 @@ impl Default for GeneratedCommandsInfoNV {
 }
 impl std::fmt::Debug for GeneratedCommandsInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GeneratedCommandsInfoNV")
+        f.debug_struct("GeneratedCommandsInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("pipeline_bind_point", &self.pipeline_bind_point)
@@ -1755,7 +1740,7 @@ impl<'a> std::ops::DerefMut for GeneratedCommandsInfoNVBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkGeneratedCommandsMemoryRequirementsInfoNV.html) · Structure
 #[doc(alias = "VkGeneratedCommandsMemoryRequirementsInfoNV")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct GeneratedCommandsMemoryRequirementsInfoNV {
     pub s_type: crate::vk1_0::StructureType,
@@ -1782,8 +1767,7 @@ impl Default for GeneratedCommandsMemoryRequirementsInfoNV {
 }
 impl std::fmt::Debug for GeneratedCommandsMemoryRequirementsInfoNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("GeneratedCommandsMemoryRequirementsInfoNV")
+        f.debug_struct("GeneratedCommandsMemoryRequirementsInfoNV")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("pipeline_bind_point", &self.pipeline_bind_point)

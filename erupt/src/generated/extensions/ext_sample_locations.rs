@@ -62,7 +62,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceSampleLocationsPropertiesEXTBui
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampleLocationEXT.html) · Structure
 #[doc(alias = "VkSampleLocationEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SampleLocationEXT {
     pub x: std::os::raw::c_float,
@@ -78,8 +78,7 @@ impl Default for SampleLocationEXT {
 }
 impl std::fmt::Debug for SampleLocationEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SampleLocationEXT")
+        f.debug_struct("SampleLocationEXT")
             .field("x", &self.x)
             .field("y", &self.y)
             .finish()
@@ -143,7 +142,7 @@ impl<'a> std::ops::DerefMut for SampleLocationEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSampleLocationsInfoEXT.html) · Structure
 #[doc(alias = "VkSampleLocationsInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SampleLocationsInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -170,8 +169,7 @@ impl Default for SampleLocationsInfoEXT {
 }
 impl std::fmt::Debug for SampleLocationsInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SampleLocationsInfoEXT")
+        f.debug_struct("SampleLocationsInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sample_locations_per_pixel", &self.sample_locations_per_pixel)
@@ -257,7 +255,7 @@ impl<'a> std::ops::DerefMut for SampleLocationsInfoEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentSampleLocationsEXT.html) · Structure
 #[doc(alias = "VkAttachmentSampleLocationsEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AttachmentSampleLocationsEXT {
     pub attachment_index: u32,
@@ -273,8 +271,7 @@ impl Default for AttachmentSampleLocationsEXT {
 }
 impl std::fmt::Debug for AttachmentSampleLocationsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AttachmentSampleLocationsEXT")
+        f.debug_struct("AttachmentSampleLocationsEXT")
             .field("attachment_index", &self.attachment_index)
             .field("sample_locations_info", &self.sample_locations_info)
             .finish()
@@ -341,7 +338,7 @@ impl<'a> std::ops::DerefMut for AttachmentSampleLocationsEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSubpassSampleLocationsEXT.html) · Structure
 #[doc(alias = "VkSubpassSampleLocationsEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SubpassSampleLocationsEXT {
     pub subpass_index: u32,
@@ -357,8 +354,7 @@ impl Default for SubpassSampleLocationsEXT {
 }
 impl std::fmt::Debug for SubpassSampleLocationsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SubpassSampleLocationsEXT")
+        f.debug_struct("SubpassSampleLocationsEXT")
             .field("subpass_index", &self.subpass_index)
             .field("sample_locations_info", &self.sample_locations_info)
             .finish()
@@ -425,7 +421,7 @@ impl<'a> std::ops::DerefMut for SubpassSampleLocationsEXTBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderPassSampleLocationsBeginInfoEXT.html) · Structure
 #[doc(alias = "VkRenderPassSampleLocationsBeginInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderPassSampleLocationsBeginInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -452,8 +448,7 @@ impl Default for RenderPassSampleLocationsBeginInfoEXT {
 }
 impl std::fmt::Debug for RenderPassSampleLocationsBeginInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderPassSampleLocationsBeginInfoEXT")
+        f.debug_struct("RenderPassSampleLocationsBeginInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -558,7 +553,7 @@ impl<'a> std::ops::DerefMut for RenderPassSampleLocationsBeginInfoEXTBuilder<'a>
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineSampleLocationsStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineSampleLocationsStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineSampleLocationsStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -581,8 +576,7 @@ impl Default for PipelineSampleLocationsStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineSampleLocationsStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineSampleLocationsStateCreateInfoEXT")
+        f.debug_struct("PipelineSampleLocationsStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sample_locations_enable", &(self.sample_locations_enable != 0))
@@ -658,7 +652,7 @@ impl<'a> std::ops::DerefMut for PipelineSampleLocationsStateCreateInfoEXTBuilder
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSampleLocationsPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSampleLocationsPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSampleLocationsPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -687,8 +681,7 @@ impl Default for PhysicalDeviceSampleLocationsPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceSampleLocationsPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSampleLocationsPropertiesEXT")
+        f.debug_struct("PhysicalDeviceSampleLocationsPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("sample_location_sample_counts", &self.sample_location_sample_counts)
@@ -801,7 +794,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSampleLocationsPropertiesEXTBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultisamplePropertiesEXT.html) · Structure
 #[doc(alias = "VkMultisamplePropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MultisamplePropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -822,8 +815,7 @@ impl Default for MultisamplePropertiesEXT {
 }
 impl std::fmt::Debug for MultisamplePropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MultisamplePropertiesEXT")
+        f.debug_struct("MultisamplePropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("max_sample_location_grid_size", &self.max_sample_location_grid_size)

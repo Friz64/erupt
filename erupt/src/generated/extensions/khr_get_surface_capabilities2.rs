@@ -38,7 +38,7 @@ pub type PFN_vkGetPhysicalDeviceSurfaceFormats2KHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceSurfaceInfo2KHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceSurfaceInfo2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceSurfaceInfo2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -59,8 +59,7 @@ impl Default for PhysicalDeviceSurfaceInfo2KHR {
 }
 impl std::fmt::Debug for PhysicalDeviceSurfaceInfo2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceSurfaceInfo2KHR")
+        f.debug_struct("PhysicalDeviceSurfaceInfo2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("surface", &self.surface)
@@ -127,7 +126,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceSurfaceInfo2KHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceCapabilities2KHR.html) · Structure
 #[doc(alias = "VkSurfaceCapabilities2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceCapabilities2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -148,8 +147,7 @@ impl Default for SurfaceCapabilities2KHR {
 }
 impl std::fmt::Debug for SurfaceCapabilities2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceCapabilities2KHR")
+        f.debug_struct("SurfaceCapabilities2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("surface_capabilities", &self.surface_capabilities)
@@ -213,7 +211,7 @@ impl<'a> std::ops::DerefMut for SurfaceCapabilities2KHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkSurfaceFormat2KHR.html) · Structure
 #[doc(alias = "VkSurfaceFormat2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct SurfaceFormat2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -234,8 +232,7 @@ impl Default for SurfaceFormat2KHR {
 }
 impl std::fmt::Debug for SurfaceFormat2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("SurfaceFormat2KHR")
+        f.debug_struct("SurfaceFormat2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("surface_format", &self.surface_format)

@@ -20,14 +20,13 @@ impl crate::vk1_0::StructureType {
 pub struct RasterizationOrderAMD(pub i32);
 impl std::fmt::Debug for RasterizationOrderAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::STRICT_AMD => "STRICT_AMD",
-                    &Self::RELAXED_AMD => "RELAXED_AMD",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::STRICT_AMD => "STRICT_AMD",
+                &Self::RELAXED_AMD => "RELAXED_AMD",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::amd_rasterization_order`]
@@ -43,7 +42,7 @@ impl<
 for crate::vk1_0::PipelineRasterizationStateCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationStateRasterizationOrderAMD.html) · Structure
 #[doc(alias = "VkPipelineRasterizationStateRasterizationOrderAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationStateRasterizationOrderAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -64,8 +63,7 @@ impl Default for PipelineRasterizationStateRasterizationOrderAMD {
 }
 impl std::fmt::Debug for PipelineRasterizationStateRasterizationOrderAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRasterizationStateRasterizationOrderAMD")
+        f.debug_struct("PipelineRasterizationStateRasterizationOrderAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("rasterization_order", &self.rasterization_order)

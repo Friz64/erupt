@@ -18,21 +18,18 @@ impl crate::vk1_0::StructureType {
 pub struct ValidationFeatureEnableEXT(pub i32);
 impl std::fmt::Debug for ValidationFeatureEnableEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::GPU_ASSISTED_EXT => "GPU_ASSISTED_EXT",
-                    &Self::GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT => {
-                        "GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT"
-                    }
-                    &Self::BEST_PRACTICES_EXT => "BEST_PRACTICES_EXT",
-                    &Self::DEBUG_PRINTF_EXT => "DEBUG_PRINTF_EXT",
-                    &Self::SYNCHRONIZATION_VALIDATION_EXT => {
-                        "SYNCHRONIZATION_VALIDATION_EXT"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::GPU_ASSISTED_EXT => "GPU_ASSISTED_EXT",
+                &Self::GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT => {
+                    "GPU_ASSISTED_RESERVE_BINDING_SLOT_EXT"
+                }
+                &Self::BEST_PRACTICES_EXT => "BEST_PRACTICES_EXT",
+                &Self::DEBUG_PRINTF_EXT => "DEBUG_PRINTF_EXT",
+                &Self::SYNCHRONIZATION_VALIDATION_EXT => "SYNCHRONIZATION_VALIDATION_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_validation_features`]
@@ -50,20 +47,19 @@ impl crate::extensions::ext_validation_features::ValidationFeatureEnableEXT {
 pub struct ValidationFeatureDisableEXT(pub i32);
 impl std::fmt::Debug for ValidationFeatureDisableEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ALL_EXT => "ALL_EXT",
-                    &Self::SHADERS_EXT => "SHADERS_EXT",
-                    &Self::THREAD_SAFETY_EXT => "THREAD_SAFETY_EXT",
-                    &Self::API_PARAMETERS_EXT => "API_PARAMETERS_EXT",
-                    &Self::OBJECT_LIFETIMES_EXT => "OBJECT_LIFETIMES_EXT",
-                    &Self::CORE_CHECKS_EXT => "CORE_CHECKS_EXT",
-                    &Self::UNIQUE_HANDLES_EXT => "UNIQUE_HANDLES_EXT",
-                    &Self::SHADER_VALIDATION_CACHE_EXT => "SHADER_VALIDATION_CACHE_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ALL_EXT => "ALL_EXT",
+                &Self::SHADERS_EXT => "SHADERS_EXT",
+                &Self::THREAD_SAFETY_EXT => "THREAD_SAFETY_EXT",
+                &Self::API_PARAMETERS_EXT => "API_PARAMETERS_EXT",
+                &Self::OBJECT_LIFETIMES_EXT => "OBJECT_LIFETIMES_EXT",
+                &Self::CORE_CHECKS_EXT => "CORE_CHECKS_EXT",
+                &Self::UNIQUE_HANDLES_EXT => "UNIQUE_HANDLES_EXT",
+                &Self::SHADER_VALIDATION_CACHE_EXT => "SHADER_VALIDATION_CACHE_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_validation_features`]
@@ -83,7 +79,7 @@ impl<'a> crate::ExtendableFrom<'a, ValidationFeaturesEXTBuilder<'_>>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkValidationFeaturesEXT.html) · Structure
 #[doc(alias = "VkValidationFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct ValidationFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -110,8 +106,7 @@ impl Default for ValidationFeaturesEXT {
 }
 impl std::fmt::Debug for ValidationFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ValidationFeaturesEXT")
+        f.debug_struct("ValidationFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

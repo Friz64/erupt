@@ -28,16 +28,15 @@ impl crate::vk1_0::StructureType {
 pub struct LineRasterizationModeEXT(pub i32);
 impl std::fmt::Debug for LineRasterizationModeEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_EXT => "DEFAULT_EXT",
-                    &Self::RECTANGULAR_EXT => "RECTANGULAR_EXT",
-                    &Self::BRESENHAM_EXT => "BRESENHAM_EXT",
-                    &Self::RECTANGULAR_SMOOTH_EXT => "RECTANGULAR_SMOOTH_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_EXT => "DEFAULT_EXT",
+                &Self::RECTANGULAR_EXT => "RECTANGULAR_EXT",
+                &Self::BRESENHAM_EXT => "BRESENHAM_EXT",
+                &Self::RECTANGULAR_SMOOTH_EXT => "RECTANGULAR_SMOOTH_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::ext_line_rasterization`]
@@ -76,7 +75,7 @@ impl<
 for crate::vk1_1::PhysicalDeviceProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceLineRasterizationFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceLineRasterizationFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -107,8 +106,7 @@ impl Default for PhysicalDeviceLineRasterizationFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceLineRasterizationFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceLineRasterizationFeaturesEXT")
+        f.debug_struct("PhysicalDeviceLineRasterizationFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("rectangular_lines", &(self.rectangular_lines != 0))
@@ -213,7 +211,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationFeaturesEXTBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceLineRasterizationPropertiesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceLineRasterizationPropertiesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceLineRasterizationPropertiesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -234,8 +232,7 @@ impl Default for PhysicalDeviceLineRasterizationPropertiesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceLineRasterizationPropertiesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceLineRasterizationPropertiesEXT")
+        f.debug_struct("PhysicalDeviceLineRasterizationPropertiesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("line_sub_pixel_precision_bits", &self.line_sub_pixel_precision_bits)
@@ -308,7 +305,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceLineRasterizationPropertiesEXTBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineRasterizationLineStateCreateInfoEXT.html) · Structure
 #[doc(alias = "VkPipelineRasterizationLineStateCreateInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PipelineRasterizationLineStateCreateInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -335,8 +332,7 @@ impl Default for PipelineRasterizationLineStateCreateInfoEXT {
 }
 impl std::fmt::Debug for PipelineRasterizationLineStateCreateInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PipelineRasterizationLineStateCreateInfoEXT")
+        f.debug_struct("PipelineRasterizationLineStateCreateInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("line_rasterization_mode", &self.line_rasterization_mode)

@@ -92,12 +92,11 @@ impl VideoBeginCodingFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoBeginCodingFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -121,12 +120,11 @@ impl VideoEndCodingFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoEndCodingFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -187,17 +185,16 @@ impl VideoCodecOperationFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoCodecOperationFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INVALID_KHR => "INVALID_KHR",
-                    &Self::ENCODE_H264_EXT => "ENCODE_H264_EXT",
-                    &Self::ENCODE_H265_EXT => "ENCODE_H265_EXT",
-                    &Self::DECODE_H264_EXT => "DECODE_H264_EXT",
-                    &Self::DECODE_H265_EXT => "DECODE_H265_EXT",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INVALID_KHR => "INVALID_KHR",
+                &Self::ENCODE_H264_EXT => "ENCODE_H264_EXT",
+                &Self::ENCODE_H265_EXT => "ENCODE_H265_EXT",
+                &Self::DECODE_H264_EXT => "DECODE_H264_EXT",
+                &Self::DECODE_H265_EXT => "DECODE_H265_EXT",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -229,17 +226,16 @@ impl VideoChromaSubsamplingFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoChromaSubsamplingFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INVALID_KHR => "INVALID_KHR",
-                    &Self::MONOCHROME_KHR => "MONOCHROME_KHR",
-                    &Self::_420_KHR => "420_KHR",
-                    &Self::_422_KHR => "422_KHR",
-                    &Self::_444_KHR => "444_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INVALID_KHR => "INVALID_KHR",
+                &Self::MONOCHROME_KHR => "MONOCHROME_KHR",
+                &Self::_420_KHR => "420_KHR",
+                &Self::_422_KHR => "422_KHR",
+                &Self::_444_KHR => "444_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -274,16 +270,15 @@ impl VideoComponentBitDepthFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoComponentBitDepthFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::INVALID_KHR => "INVALID_KHR",
-                    &Self::_8_KHR => "8_KHR",
-                    &Self::_10_KHR => "10_KHR",
-                    &Self::_12_KHR => "12_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::INVALID_KHR => "INVALID_KHR",
+                &Self::_8_KHR => "8_KHR",
+                &Self::_10_KHR => "10_KHR",
+                &Self::_12_KHR => "12_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -316,16 +311,13 @@ impl VideoCapabilityFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoCapabilityFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::PROTECTED_CONTENT_KHR => "PROTECTED_CONTENT_KHR",
-                    &Self::SEPARATE_REFERENCE_IMAGES_KHR => {
-                        "SEPARATE_REFERENCE_IMAGES_KHR"
-                    }
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::PROTECTED_CONTENT_KHR => "PROTECTED_CONTENT_KHR",
+                &Self::SEPARATE_REFERENCE_IMAGES_KHR => "SEPARATE_REFERENCE_IMAGES_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -355,14 +347,13 @@ impl VideoSessionCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoSessionCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_KHR => "DEFAULT_KHR",
-                    &Self::PROTECTED_CONTENT_KHR => "PROTECTED_CONTENT_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_KHR => "DEFAULT_KHR",
+                &Self::PROTECTED_CONTENT_KHR => "PROTECTED_CONTENT_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -393,15 +384,14 @@ impl VideoCodingQualityPresetFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoCodingQualityPresetFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NORMAL_KHR => "NORMAL_KHR",
-                    &Self::POWER_KHR => "POWER_KHR",
-                    &Self::QUALITY_KHR => "QUALITY_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NORMAL_KHR => "NORMAL_KHR",
+                &Self::POWER_KHR => "POWER_KHR",
+                &Self::QUALITY_KHR => "QUALITY_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -432,14 +422,13 @@ impl VideoCodingControlFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoCodingControlFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_KHR => "DEFAULT_KHR",
-                    &Self::RESET_KHR => "RESET_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_KHR => "DEFAULT_KHR",
+                &Self::RESET_KHR => "RESET_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -454,15 +443,14 @@ impl crate::extensions::khr_video_queue::VideoCodingControlFlagBitsKHR {
 pub struct QueryResultStatusKHR(pub i32);
 impl std::fmt::Debug for QueryResultStatusKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::ERROR_KHR => "ERROR_KHR",
-                    &Self::NOT_READY_KHR => "NOT_READY_KHR",
-                    &Self::COMPLETE_KHR => "COMPLETE_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::ERROR_KHR => "ERROR_KHR",
+                &Self::NOT_READY_KHR => "NOT_READY_KHR",
+                &Self::COMPLETE_KHR => "COMPLETE_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_queue`]
@@ -603,7 +591,7 @@ impl<'a> crate::ExtendableFrom<'a, QueueFamilyQueryResultStatusProperties2KHRBui
 for crate::vk1_1::QueueFamilyProperties2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoQueueFamilyProperties2KHR.html) · Structure
 #[doc(alias = "VkVideoQueueFamilyProperties2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoQueueFamilyProperties2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -624,8 +612,7 @@ impl Default for VideoQueueFamilyProperties2KHR {
 }
 impl std::fmt::Debug for VideoQueueFamilyProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoQueueFamilyProperties2KHR")
+        f.debug_struct("VideoQueueFamilyProperties2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("video_codec_operations", &self.video_codec_operations)
@@ -692,7 +679,7 @@ impl<'a> std::ops::DerefMut for VideoQueueFamilyProperties2KHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkQueueFamilyQueryResultStatusProperties2KHR.html) · Structure
 #[doc(alias = "VkQueueFamilyQueryResultStatusProperties2KHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct QueueFamilyQueryResultStatusProperties2KHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -713,8 +700,7 @@ impl Default for QueueFamilyQueryResultStatusProperties2KHR {
 }
 impl std::fmt::Debug for QueueFamilyQueryResultStatusProperties2KHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("QueueFamilyQueryResultStatusProperties2KHR")
+        f.debug_struct("QueueFamilyQueryResultStatusProperties2KHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("supported", &(self.supported != 0))
@@ -781,7 +767,7 @@ impl<'a> std::ops::DerefMut for QueueFamilyQueryResultStatusProperties2KHRBuilde
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfilesKHR.html) · Structure
 #[doc(alias = "VkVideoProfilesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoProfilesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -804,8 +790,7 @@ impl Default for VideoProfilesKHR {
 }
 impl std::fmt::Debug for VideoProfilesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoProfilesKHR")
+        f.debug_struct("VideoProfilesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("profile_count", &self.profile_count)
@@ -876,7 +861,7 @@ impl<'a> std::ops::DerefMut for VideoProfilesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceVideoFormatInfoKHR.html) · Structure
 #[doc(alias = "VkPhysicalDeviceVideoFormatInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceVideoFormatInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -899,8 +884,7 @@ impl Default for PhysicalDeviceVideoFormatInfoKHR {
 }
 impl std::fmt::Debug for PhysicalDeviceVideoFormatInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceVideoFormatInfoKHR")
+        f.debug_struct("PhysicalDeviceVideoFormatInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_usage", &self.image_usage)
@@ -974,7 +958,7 @@ impl<'a> std::ops::DerefMut for PhysicalDeviceVideoFormatInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoFormatPropertiesKHR.html) · Structure
 #[doc(alias = "VkVideoFormatPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoFormatPropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -995,8 +979,7 @@ impl Default for VideoFormatPropertiesKHR {
 }
 impl std::fmt::Debug for VideoFormatPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoFormatPropertiesKHR")
+        f.debug_struct("VideoFormatPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("format", &self.format)
@@ -1057,7 +1040,7 @@ impl<'a> std::ops::DerefMut for VideoFormatPropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoProfileKHR.html) · Structure
 #[doc(alias = "VkVideoProfileKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoProfileKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1084,8 +1067,7 @@ impl Default for VideoProfileKHR {
 }
 impl std::fmt::Debug for VideoProfileKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoProfileKHR")
+        f.debug_struct("VideoProfileKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("video_codec_operation", &self.video_codec_operation)
@@ -1176,7 +1158,7 @@ impl<'a> std::ops::DerefMut for VideoProfileKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkVideoCapabilitiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoCapabilitiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1211,8 +1193,7 @@ impl Default for VideoCapabilitiesKHR {
 }
 impl std::fmt::Debug for VideoCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoCapabilitiesKHR")
+        f.debug_struct("VideoCapabilitiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("capability_flags", &self.capability_flags)
@@ -1367,7 +1348,7 @@ impl<'a> std::ops::DerefMut for VideoCapabilitiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoGetMemoryPropertiesKHR.html) · Structure
 #[doc(alias = "VkVideoGetMemoryPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoGetMemoryPropertiesKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1390,8 +1371,7 @@ impl Default for VideoGetMemoryPropertiesKHR {
 }
 impl std::fmt::Debug for VideoGetMemoryPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoGetMemoryPropertiesKHR")
+        f.debug_struct("VideoGetMemoryPropertiesKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_bind_index", &self.memory_bind_index)
@@ -1462,7 +1442,7 @@ impl<'a> std::ops::DerefMut for VideoGetMemoryPropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoBindMemoryKHR.html) · Structure
 #[doc(alias = "VkVideoBindMemoryKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoBindMemoryKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1489,8 +1469,7 @@ impl Default for VideoBindMemoryKHR {
 }
 impl std::fmt::Debug for VideoBindMemoryKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoBindMemoryKHR")
+        f.debug_struct("VideoBindMemoryKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("memory_bind_index", &self.memory_bind_index)
@@ -1572,7 +1551,7 @@ impl<'a> std::ops::DerefMut for VideoBindMemoryKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoPictureResourceKHR.html) · Structure
 #[doc(alias = "VkVideoPictureResourceKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoPictureResourceKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1599,8 +1578,7 @@ impl Default for VideoPictureResourceKHR {
 }
 impl std::fmt::Debug for VideoPictureResourceKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoPictureResourceKHR")
+        f.debug_struct("VideoPictureResourceKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("coded_offset", &self.coded_offset)
@@ -1685,7 +1663,7 @@ impl<'a> std::ops::DerefMut for VideoPictureResourceKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoReferenceSlotKHR.html) · Structure
 #[doc(alias = "VkVideoReferenceSlotKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoReferenceSlotKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1708,8 +1686,7 @@ impl Default for VideoReferenceSlotKHR {
 }
 impl std::fmt::Debug for VideoReferenceSlotKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoReferenceSlotKHR")
+        f.debug_struct("VideoReferenceSlotKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("slot_index", &self.slot_index)
@@ -1780,7 +1757,7 @@ impl<'a> std::ops::DerefMut for VideoReferenceSlotKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionCreateInfoKHR.html) · Structure
 #[doc(alias = "VkVideoSessionCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoSessionCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1815,8 +1792,7 @@ impl Default for VideoSessionCreateInfoKHR {
 }
 impl std::fmt::Debug for VideoSessionCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoSessionCreateInfoKHR")
+        f.debug_struct("VideoSessionCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("queue_family_index", &self.queue_family_index)
@@ -1953,7 +1929,7 @@ impl<'a> std::ops::DerefMut for VideoSessionCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionParametersCreateInfoKHR.html) · Structure
 #[doc(alias = "VkVideoSessionParametersCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoSessionParametersCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -1976,8 +1952,7 @@ impl Default for VideoSessionParametersCreateInfoKHR {
 }
 impl std::fmt::Debug for VideoSessionParametersCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoSessionParametersCreateInfoKHR")
+        f.debug_struct("VideoSessionParametersCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(
@@ -2059,7 +2034,7 @@ impl<'a> std::ops::DerefMut for VideoSessionParametersCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoSessionParametersUpdateInfoKHR.html) · Structure
 #[doc(alias = "VkVideoSessionParametersUpdateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoSessionParametersUpdateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -2080,8 +2055,7 @@ impl Default for VideoSessionParametersUpdateInfoKHR {
 }
 impl std::fmt::Debug for VideoSessionParametersUpdateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoSessionParametersUpdateInfoKHR")
+        f.debug_struct("VideoSessionParametersUpdateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("update_sequence_count", &self.update_sequence_count)
@@ -2145,7 +2119,7 @@ impl<'a> std::ops::DerefMut for VideoSessionParametersUpdateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoBeginCodingInfoKHR.html) · Structure
 #[doc(alias = "VkVideoBeginCodingInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoBeginCodingInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -2176,8 +2150,7 @@ impl Default for VideoBeginCodingInfoKHR {
 }
 impl std::fmt::Debug for VideoBeginCodingInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoBeginCodingInfoKHR")
+        f.debug_struct("VideoBeginCodingInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -2283,7 +2256,7 @@ impl<'a> std::ops::DerefMut for VideoBeginCodingInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEndCodingInfoKHR.html) · Structure
 #[doc(alias = "VkVideoEndCodingInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEndCodingInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -2304,8 +2277,7 @@ impl Default for VideoEndCodingInfoKHR {
 }
 impl std::fmt::Debug for VideoEndCodingInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEndCodingInfoKHR")
+        f.debug_struct("VideoEndCodingInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -2369,7 +2341,7 @@ impl<'a> std::ops::DerefMut for VideoEndCodingInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoCodingControlInfoKHR.html) · Structure
 #[doc(alias = "VkVideoCodingControlInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoCodingControlInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -2390,8 +2362,7 @@ impl Default for VideoCodingControlInfoKHR {
 }
 impl std::fmt::Debug for VideoCodingControlInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoCodingControlInfoKHR")
+        f.debug_struct("VideoCodingControlInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

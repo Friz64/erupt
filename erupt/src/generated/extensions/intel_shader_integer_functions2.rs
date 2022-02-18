@@ -31,7 +31,7 @@ impl<
 > for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL.html) · Structure
 #[doc(alias = "VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     pub s_type: crate::vk1_0::StructureType,
@@ -52,8 +52,7 @@ impl Default for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
 }
 impl std::fmt::Debug for PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")
+        f.debug_struct("PhysicalDeviceShaderIntegerFunctions2FeaturesINTEL")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("shader_integer_functions2", &(self.shader_integer_functions2 != 0))

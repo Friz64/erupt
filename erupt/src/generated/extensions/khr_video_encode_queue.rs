@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION")]
-pub const KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION: u32 = 3;
+pub const KHR_VIDEO_ENCODE_QUEUE_SPEC_VERSION: u32 = 4;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME")]
 pub const KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -66,6 +66,7 @@ impl crate::vk1_0::StructureType {
     pub const VIDEO_ENCODE_INFO_KHR: Self = Self(1000299000);
     pub const VIDEO_ENCODE_RATE_CONTROL_INFO_KHR: Self = Self(1000299001);
     pub const VIDEO_ENCODE_RATE_CONTROL_LAYER_INFO_KHR: Self = Self(1000299002);
+    pub const VIDEO_ENCODE_CAPABILITIES_KHR: Self = Self(1000299003);
 }
 bitflags::bitflags! {
     #[doc =
@@ -89,20 +90,58 @@ impl VideoEncodeFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoEncodeFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_KHR => "DEFAULT_KHR",
-                    &Self::RESERVED_0_KHR => "RESERVED_0_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_KHR => "DEFAULT_KHR",
+                &Self::RESERVED_0_KHR => "RESERVED_0_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_encode_queue`]
 impl crate::extensions::khr_video_encode_queue::VideoEncodeFlagBitsKHR {
     pub const DEFAULT_KHR: Self = Self(0);
     pub const RESERVED_0_KHR: Self = Self(1);
+}
+bitflags::bitflags! {
+    #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeCapabilityFlagsKHR.html) · Bitmask of [`VideoEncodeCapabilityFlagBitsKHR`]"]
+    #[doc(alias = "VkVideoEncodeCapabilityFlagsKHR")] #[derive(Default)]
+    #[repr(transparent)] pub struct VideoEncodeCapabilityFlagsKHR : u32 { const
+    DEFAULT_KHR = VideoEncodeCapabilityFlagBitsKHR::DEFAULT_KHR.0; const
+    PRECEDING_EXTERNALLY_ENCODED_BYTES_KHR =
+    VideoEncodeCapabilityFlagBitsKHR::PRECEDING_EXTERNALLY_ENCODED_BYTES_KHR.0; }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeCapabilityFlagBitsKHR.html) · Bits enum of [`VideoEncodeCapabilityFlagsKHR`]
+#[doc(alias = "VkVideoEncodeCapabilityFlagBitsKHR")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct VideoEncodeCapabilityFlagBitsKHR(pub u32);
+impl VideoEncodeCapabilityFlagBitsKHR {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> VideoEncodeCapabilityFlagsKHR {
+        VideoEncodeCapabilityFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for VideoEncodeCapabilityFlagBitsKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                &Self::DEFAULT_KHR => "DEFAULT_KHR",
+                &Self::PRECEDING_EXTERNALLY_ENCODED_BYTES_KHR => {
+                    "PRECEDING_EXTERNALLY_ENCODED_BYTES_KHR"
+                }
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+///Provided by [`crate::extensions::khr_video_encode_queue`]
+impl crate::extensions::khr_video_encode_queue::VideoEncodeCapabilityFlagBitsKHR {
+    pub const DEFAULT_KHR: Self = Self(0);
+    pub const PRECEDING_EXTERNALLY_ENCODED_BYTES_KHR: Self = Self(1);
 }
 bitflags::bitflags! {
     #[doc =
@@ -126,14 +165,13 @@ impl VideoEncodeRateControlFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoEncodeRateControlFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEFAULT_KHR => "DEFAULT_KHR",
-                    &Self::RESERVED_0_KHR => "RESERVED_0_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEFAULT_KHR => "DEFAULT_KHR",
+                &Self::RESERVED_0_KHR => "RESERVED_0_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_encode_queue`]
@@ -164,15 +202,14 @@ impl VideoEncodeRateControlModeFlagBitsKHR {
 }
 impl std::fmt::Debug for VideoEncodeRateControlModeFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::NONE_KHR => "NONE_KHR",
-                    &Self::CBR_KHR => "CBR_KHR",
-                    &Self::VBR_KHR => "VBR_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::NONE_KHR => "NONE_KHR",
+                &Self::CBR_KHR => "CBR_KHR",
+                &Self::VBR_KHR => "VBR_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_video_encode_queue`]
@@ -187,6 +224,10 @@ pub type PFN_vkCmdEncodeVideoKHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_encode_info: *const crate::extensions::khr_video_encode_queue::VideoEncodeInfoKHR,
 ) -> ();
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeCapabilitiesKHR>
+for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoEncodeCapabilitiesKHRBuilder<'_>>
+for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeRateControlInfoKHR>
 for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoEncodeRateControlInfoKHRBuilder<'_>>
@@ -197,7 +238,7 @@ impl<'a> crate::ExtendableFrom<'a, VideoEncodeRateControlLayerInfoKHRBuilder<'_>
 for crate::extensions::khr_video_queue::VideoCodingControlInfoKHRBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeInfoKHR.html) · Structure
 #[doc(alias = "VkVideoEncodeInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -238,8 +279,7 @@ impl Default for VideoEncodeInfoKHR {
 }
 impl std::fmt::Debug for VideoEncodeInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeInfoKHR")
+        f.debug_struct("VideoEncodeInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -398,7 +438,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeRateControlInfoKHR.html) · Structure
 #[doc(alias = "VkVideoEncodeRateControlInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeRateControlInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -425,8 +465,7 @@ impl Default for VideoEncodeRateControlInfoKHR {
 }
 impl std::fmt::Debug for VideoEncodeRateControlInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeRateControlInfoKHR")
+        f.debug_struct("VideoEncodeRateControlInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -515,7 +554,7 @@ impl<'a> std::ops::DerefMut for VideoEncodeRateControlInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeRateControlLayerInfoKHR.html) · Structure
 #[doc(alias = "VkVideoEncodeRateControlLayerInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct VideoEncodeRateControlLayerInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -546,8 +585,7 @@ impl Default for VideoEncodeRateControlLayerInfoKHR {
 }
 impl std::fmt::Debug for VideoEncodeRateControlLayerInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("VideoEncodeRateControlLayerInfoKHR")
+        f.debug_struct("VideoEncodeRateControlLayerInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("average_bitrate", &self.average_bitrate)
@@ -648,6 +686,136 @@ impl<'a> std::ops::Deref for VideoEncodeRateControlLayerInfoKHRBuilder<'a> {
     }
 }
 impl<'a> std::ops::DerefMut for VideoEncodeRateControlLayerInfoKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeCapabilitiesKHR.html) · Structure
+#[doc(alias = "VkVideoEncodeCapabilitiesKHR")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct VideoEncodeCapabilitiesKHR {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *const std::ffi::c_void,
+    pub flags: crate::extensions::khr_video_encode_queue::VideoEncodeCapabilityFlagsKHR,
+    pub rate_control_modes: crate::extensions::khr_video_encode_queue::VideoEncodeRateControlModeFlagsKHR,
+    pub rate_control_layer_count: u8,
+    pub quality_level_count: u8,
+    pub input_image_data_fill_alignment: crate::vk1_0::Extent2D,
+}
+impl VideoEncodeCapabilitiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_ENCODE_CAPABILITIES_KHR;
+}
+impl Default for VideoEncodeCapabilitiesKHR {
+    fn default() -> Self {
+        Self {
+            s_type: Self::STRUCTURE_TYPE,
+            p_next: std::ptr::null(),
+            flags: Default::default(),
+            rate_control_modes: Default::default(),
+            rate_control_layer_count: Default::default(),
+            quality_level_count: Default::default(),
+            input_image_data_fill_alignment: Default::default(),
+        }
+    }
+}
+impl std::fmt::Debug for VideoEncodeCapabilitiesKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VideoEncodeCapabilitiesKHR")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("flags", &self.flags)
+            .field("rate_control_modes", &self.rate_control_modes)
+            .field("rate_control_layer_count", &self.rate_control_layer_count)
+            .field("quality_level_count", &self.quality_level_count)
+            .field(
+                "input_image_data_fill_alignment",
+                &self.input_image_data_fill_alignment,
+            )
+            .finish()
+    }
+}
+impl VideoEncodeCapabilitiesKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VideoEncodeCapabilitiesKHRBuilder<'a> {
+        VideoEncodeCapabilitiesKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeCapabilitiesKHR.html) · Builder of [`VideoEncodeCapabilitiesKHR`]
+#[repr(transparent)]
+pub struct VideoEncodeCapabilitiesKHRBuilder<'a>(
+    VideoEncodeCapabilitiesKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> VideoEncodeCapabilitiesKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> VideoEncodeCapabilitiesKHRBuilder<'a> {
+        VideoEncodeCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    #[must_use]
+    pub fn flags(
+        mut self,
+        flags: crate::extensions::khr_video_encode_queue::VideoEncodeCapabilityFlagsKHR,
+    ) -> Self {
+        self.0.flags = flags as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn rate_control_modes(
+        mut self,
+        rate_control_modes: crate::extensions::khr_video_encode_queue::VideoEncodeRateControlModeFlagsKHR,
+    ) -> Self {
+        self.0.rate_control_modes = rate_control_modes as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn rate_control_layer_count(mut self, rate_control_layer_count: u8) -> Self {
+        self.0.rate_control_layer_count = rate_control_layer_count as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn quality_level_count(mut self, quality_level_count: u8) -> Self {
+        self.0.quality_level_count = quality_level_count as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn input_image_data_fill_alignment(
+        mut self,
+        input_image_data_fill_alignment: crate::vk1_0::Extent2D,
+    ) -> Self {
+        self.0.input_image_data_fill_alignment = input_image_data_fill_alignment as _;
+        self
+    }
+    #[inline]
+    /// Discards all lifetime information.
+    /// Use the `Deref` and `DerefMut` implementations if possible.
+    pub fn build_dangling(self) -> VideoEncodeCapabilitiesKHR {
+        self.0
+    }
+}
+impl<'a> std::default::Default for VideoEncodeCapabilitiesKHRBuilder<'a> {
+    fn default() -> VideoEncodeCapabilitiesKHRBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for VideoEncodeCapabilitiesKHRBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for VideoEncodeCapabilitiesKHRBuilder<'a> {
+    type Target = VideoEncodeCapabilitiesKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for VideoEncodeCapabilitiesKHRBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }

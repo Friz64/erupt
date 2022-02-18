@@ -35,16 +35,15 @@ impl ExternalMemoryHandleTypeFlagBitsNV {
 }
 impl std::fmt::Debug for ExternalMemoryHandleTypeFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OPAQUE_WIN32_NV => "OPAQUE_WIN32_NV",
-                    &Self::OPAQUE_WIN32_KMT_NV => "OPAQUE_WIN32_KMT_NV",
-                    &Self::D3D11_IMAGE_NV => "D3D11_IMAGE_NV",
-                    &Self::D3D11_IMAGE_KMT_NV => "D3D11_IMAGE_KMT_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OPAQUE_WIN32_NV => "OPAQUE_WIN32_NV",
+                &Self::OPAQUE_WIN32_KMT_NV => "OPAQUE_WIN32_KMT_NV",
+                &Self::D3D11_IMAGE_NV => "D3D11_IMAGE_NV",
+                &Self::D3D11_IMAGE_KMT_NV => "D3D11_IMAGE_KMT_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_external_memory_capabilities`]
@@ -77,15 +76,14 @@ impl ExternalMemoryFeatureFlagBitsNV {
 }
 impl std::fmt::Debug for ExternalMemoryFeatureFlagBitsNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::DEDICATED_ONLY_NV => "DEDICATED_ONLY_NV",
-                    &Self::EXPORTABLE_NV => "EXPORTABLE_NV",
-                    &Self::IMPORTABLE_NV => "IMPORTABLE_NV",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::DEDICATED_ONLY_NV => "DEDICATED_ONLY_NV",
+                &Self::EXPORTABLE_NV => "EXPORTABLE_NV",
+                &Self::IMPORTABLE_NV => "IMPORTABLE_NV",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::nv_external_memory_capabilities`]
@@ -108,7 +106,7 @@ pub type PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV = unsafe extern 
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkExternalImageFormatPropertiesNV.html) · Structure
 #[doc(alias = "VkExternalImageFormatPropertiesNV")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct ExternalImageFormatPropertiesNV {
     pub image_format_properties: crate::vk1_0::ImageFormatProperties,
@@ -128,8 +126,7 @@ impl Default for ExternalImageFormatPropertiesNV {
 }
 impl std::fmt::Debug for ExternalImageFormatPropertiesNV {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("ExternalImageFormatPropertiesNV")
+        f.debug_struct("ExternalImageFormatPropertiesNV")
             .field("image_format_properties", &self.image_format_properties)
             .field("external_memory_features", &self.external_memory_features)
             .field(

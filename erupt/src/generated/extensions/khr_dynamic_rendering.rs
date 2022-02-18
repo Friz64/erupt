@@ -151,7 +151,7 @@ impl<'a> crate::ExtendableFrom<'a, MultiviewPerViewAttributesInfoNVXBuilder<'_>>
 for crate::vk1_3::RenderingInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderingFragmentShadingRateAttachmentInfoKHR.html) · Structure
 #[doc(alias = "VkRenderingFragmentShadingRateAttachmentInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderingFragmentShadingRateAttachmentInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -176,8 +176,7 @@ impl Default for RenderingFragmentShadingRateAttachmentInfoKHR {
 }
 impl std::fmt::Debug for RenderingFragmentShadingRateAttachmentInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderingFragmentShadingRateAttachmentInfoKHR")
+        f.debug_struct("RenderingFragmentShadingRateAttachmentInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_view", &self.image_view)
@@ -271,7 +270,7 @@ for RenderingFragmentShadingRateAttachmentInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkRenderingFragmentDensityMapAttachmentInfoEXT.html) · Structure
 #[doc(alias = "VkRenderingFragmentDensityMapAttachmentInfoEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct RenderingFragmentDensityMapAttachmentInfoEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -294,8 +293,7 @@ impl Default for RenderingFragmentDensityMapAttachmentInfoEXT {
 }
 impl std::fmt::Debug for RenderingFragmentDensityMapAttachmentInfoEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("RenderingFragmentDensityMapAttachmentInfoEXT")
+        f.debug_struct("RenderingFragmentDensityMapAttachmentInfoEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("image_view", &self.image_view)
@@ -372,7 +370,7 @@ impl<'a> std::ops::DerefMut for RenderingFragmentDensityMapAttachmentInfoEXTBuil
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAttachmentSampleCountInfoAMD.html) · Structure
 #[doc(alias = "VkAttachmentSampleCountInfoAMD")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct AttachmentSampleCountInfoAMD {
     pub s_type: crate::vk1_0::StructureType,
@@ -397,8 +395,7 @@ impl Default for AttachmentSampleCountInfoAMD {
 }
 impl std::fmt::Debug for AttachmentSampleCountInfoAMD {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("AttachmentSampleCountInfoAMD")
+        f.debug_struct("AttachmentSampleCountInfoAMD")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("color_attachment_count", &self.color_attachment_count)
@@ -477,7 +474,7 @@ impl<'a> std::ops::DerefMut for AttachmentSampleCountInfoAMDBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkMultiviewPerViewAttributesInfoNVX.html) · Structure
 #[doc(alias = "VkMultiviewPerViewAttributesInfoNVX")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct MultiviewPerViewAttributesInfoNVX {
     pub s_type: crate::vk1_0::StructureType,
@@ -500,8 +497,7 @@ impl Default for MultiviewPerViewAttributesInfoNVX {
 }
 impl std::fmt::Debug for MultiviewPerViewAttributesInfoNVX {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("MultiviewPerViewAttributesInfoNVX")
+        f.debug_struct("MultiviewPerViewAttributesInfoNVX")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("per_view_attributes", &(self.per_view_attributes != 0))

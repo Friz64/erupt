@@ -66,12 +66,11 @@ impl DisplayModeCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for DisplayModeCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 bitflags::bitflags! {
@@ -95,12 +94,11 @@ impl DisplaySurfaceCreateFlagBitsKHR {
 }
 impl std::fmt::Debug for DisplaySurfaceCreateFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_display`]
@@ -137,16 +135,15 @@ impl DisplayPlaneAlphaFlagBitsKHR {
 }
 impl std::fmt::Debug for DisplayPlaneAlphaFlagBitsKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .write_str(
-                match self {
-                    &Self::OPAQUE_KHR => "OPAQUE_KHR",
-                    &Self::GLOBAL_KHR => "GLOBAL_KHR",
-                    &Self::PER_PIXEL_KHR => "PER_PIXEL_KHR",
-                    &Self::PER_PIXEL_PREMULTIPLIED_KHR => "PER_PIXEL_PREMULTIPLIED_KHR",
-                    _ => "(unknown variant)",
-                },
-            )
+        f.write_str(
+            match self {
+                &Self::OPAQUE_KHR => "OPAQUE_KHR",
+                &Self::GLOBAL_KHR => "GLOBAL_KHR",
+                &Self::PER_PIXEL_KHR => "PER_PIXEL_KHR",
+                &Self::PER_PIXEL_PREMULTIPLIED_KHR => "PER_PIXEL_PREMULTIPLIED_KHR",
+                _ => "(unknown variant)",
+            },
+        )
     }
 }
 ///Provided by [`crate::extensions::khr_display`]
@@ -213,7 +210,7 @@ pub type PFN_vkCreateDisplayPlaneSurfaceKHR = unsafe extern "system" fn(
 ) -> crate::vk1_0::Result;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPropertiesKHR.html) · Structure
 #[doc(alias = "VkDisplayPropertiesKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayPropertiesKHR {
     pub display: crate::extensions::khr_display::DisplayKHR,
@@ -239,8 +236,7 @@ impl Default for DisplayPropertiesKHR {
 }
 impl std::fmt::Debug for DisplayPropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayPropertiesKHR")
+        f.debug_struct("DisplayPropertiesKHR")
             .field("display", &self.display)
             .field("display_name", &self.display_name)
             .field("physical_dimensions", &self.physical_dimensions)
@@ -353,7 +349,7 @@ impl<'a> std::ops::DerefMut for DisplayPropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlanePropertiesKHR.html) · Structure
 #[doc(alias = "VkDisplayPlanePropertiesKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayPlanePropertiesKHR {
     pub current_display: crate::extensions::khr_display::DisplayKHR,
@@ -369,8 +365,7 @@ impl Default for DisplayPlanePropertiesKHR {
 }
 impl std::fmt::Debug for DisplayPlanePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayPlanePropertiesKHR")
+        f.debug_struct("DisplayPlanePropertiesKHR")
             .field("current_display", &self.current_display)
             .field("current_stack_index", &self.current_stack_index)
             .finish()
@@ -437,7 +432,7 @@ impl<'a> std::ops::DerefMut for DisplayPlanePropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeParametersKHR.html) · Structure
 #[doc(alias = "VkDisplayModeParametersKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayModeParametersKHR {
     pub visible_region: crate::vk1_0::Extent2D,
@@ -453,8 +448,7 @@ impl Default for DisplayModeParametersKHR {
 }
 impl std::fmt::Debug for DisplayModeParametersKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayModeParametersKHR")
+        f.debug_struct("DisplayModeParametersKHR")
             .field("visible_region", &self.visible_region)
             .field("refresh_rate", &self.refresh_rate)
             .finish()
@@ -518,7 +512,7 @@ impl<'a> std::ops::DerefMut for DisplayModeParametersKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModePropertiesKHR.html) · Structure
 #[doc(alias = "VkDisplayModePropertiesKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayModePropertiesKHR {
     pub display_mode: crate::extensions::khr_display::DisplayModeKHR,
@@ -534,8 +528,7 @@ impl Default for DisplayModePropertiesKHR {
 }
 impl std::fmt::Debug for DisplayModePropertiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayModePropertiesKHR")
+        f.debug_struct("DisplayModePropertiesKHR")
             .field("display_mode", &self.display_mode)
             .field("parameters", &self.parameters)
             .finish()
@@ -605,7 +598,7 @@ impl<'a> std::ops::DerefMut for DisplayModePropertiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayModeCreateInfoKHR.html) · Structure
 #[doc(alias = "VkDisplayModeCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplayModeCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -628,8 +621,7 @@ impl Default for DisplayModeCreateInfoKHR {
 }
 impl std::fmt::Debug for DisplayModeCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayModeCreateInfoKHR")
+        f.debug_struct("DisplayModeCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
@@ -703,7 +695,7 @@ impl<'a> std::ops::DerefMut for DisplayModeCreateInfoKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html) · Structure
 #[doc(alias = "VkDisplayPlaneCapabilitiesKHR")]
-#[derive(Copy, Clone, Hash, PartialEq, Eq, )]
+#[derive(Copy, Clone, Hash, PartialEq, Eq)]
 #[repr(C)]
 pub struct DisplayPlaneCapabilitiesKHR {
     pub supported_alpha: crate::extensions::khr_display::DisplayPlaneAlphaFlagsKHR,
@@ -733,8 +725,7 @@ impl Default for DisplayPlaneCapabilitiesKHR {
 }
 impl std::fmt::Debug for DisplayPlaneCapabilitiesKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplayPlaneCapabilitiesKHR")
+        f.debug_struct("DisplayPlaneCapabilitiesKHR")
             .field("supported_alpha", &self.supported_alpha)
             .field("min_src_position", &self.min_src_position)
             .field("max_src_position", &self.max_src_position)
@@ -850,7 +841,7 @@ impl<'a> std::ops::DerefMut for DisplayPlaneCapabilitiesKHRBuilder<'a> {
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDisplaySurfaceCreateInfoKHR.html) · Structure
 #[doc(alias = "VkDisplaySurfaceCreateInfoKHR")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct DisplaySurfaceCreateInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
@@ -885,8 +876,7 @@ impl Default for DisplaySurfaceCreateInfoKHR {
 }
 impl std::fmt::Debug for DisplaySurfaceCreateInfoKHR {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("DisplaySurfaceCreateInfoKHR")
+        f.debug_struct("DisplaySurfaceCreateInfoKHR")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)

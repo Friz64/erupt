@@ -21,7 +21,7 @@ impl<'a> crate::ExtendableFrom<'a, PhysicalDeviceRGBA10X6FormatsFeaturesEXTBuild
 for crate::vk1_1::PhysicalDeviceFeatures2Builder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT.html) · Structure
 #[doc(alias = "VkPhysicalDeviceRGBA10X6FormatsFeaturesEXT")]
-#[derive(Copy, Clone, )]
+#[derive(Copy, Clone)]
 #[repr(C)]
 pub struct PhysicalDeviceRGBA10X6FormatsFeaturesEXT {
     pub s_type: crate::vk1_0::StructureType,
@@ -42,8 +42,7 @@ impl Default for PhysicalDeviceRGBA10X6FormatsFeaturesEXT {
 }
 impl std::fmt::Debug for PhysicalDeviceRGBA10X6FormatsFeaturesEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f
-            .debug_struct("PhysicalDeviceRGBA10X6FormatsFeaturesEXT")
+        f.debug_struct("PhysicalDeviceRGBA10X6FormatsFeaturesEXT")
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field(

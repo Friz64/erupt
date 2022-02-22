@@ -376,12 +376,10 @@ impl<T> Debug for CustomEntryLoader<T> {
 /// Builder for an instance loader.
 pub struct InstanceLoaderBuilder<'a> {
     create_instance_fn: Option<
-        Box<
-            dyn FnOnce(
-                &vk1_0::InstanceCreateInfo,
-                Option<&vk1_0::AllocationCallbacks>,
-            ) -> utils::VulkanResult<vk1_0::Instance>,
-        >,
+        &'a mut dyn FnMut(
+            &vk1_0::InstanceCreateInfo,
+            Option<&vk1_0::AllocationCallbacks>,
+        ) -> utils::VulkanResult<vk1_0::Instance>,
     >,
     symbol_fn: Option<
         &'a mut dyn FnMut(
@@ -408,12 +406,10 @@ impl<'a> InstanceLoaderBuilder<'a> {
     /// This may be useful when creating the instance using e.g. OpenXR.
     pub fn create_instance_fn(
         mut self,
-        create_instance: Box<
-            dyn FnOnce(
-                &vk1_0::InstanceCreateInfo,
-                Option<&vk1_0::AllocationCallbacks>,
-            ) -> utils::VulkanResult<vk1_0::Instance>,
-        >,
+        create_instance: &'a mut dyn FnMut(
+            &vk1_0::InstanceCreateInfo,
+            Option<&vk1_0::AllocationCallbacks>,
+        ) -> utils::VulkanResult<vk1_0::Instance>,
     ) -> Self {
         self.create_instance_fn = Some(create_instance);
         self
@@ -590,13 +586,11 @@ impl Debug for InstanceLoader {
 /// Builder for an device loader.
 pub struct DeviceLoaderBuilder<'a> {
     create_device_fn: Option<
-        Box<
-            dyn FnOnce(
-                vk1_0::PhysicalDevice,
-                &vk1_0::DeviceCreateInfo,
-                Option<&vk1_0::AllocationCallbacks>,
-            ) -> utils::VulkanResult<vk1_0::Device>,
-        >,
+        &'a mut dyn FnMut(
+            vk1_0::PhysicalDevice,
+            &vk1_0::DeviceCreateInfo,
+            Option<&vk1_0::AllocationCallbacks>,
+        ) -> utils::VulkanResult<vk1_0::Device>,
     >,
     symbol_fn: Option<
         &'a mut dyn FnMut(
@@ -623,13 +617,11 @@ impl<'a> DeviceLoaderBuilder<'a> {
     /// This may be useful when creating the device using e.g. OpenXR.
     pub fn create_device_fn(
         mut self,
-        create_device: Box<
-            dyn FnOnce(
-                vk1_0::PhysicalDevice,
-                &vk1_0::DeviceCreateInfo,
-                Option<&vk1_0::AllocationCallbacks>,
-            ) -> utils::VulkanResult<vk1_0::Device>,
-        >,
+        create_device: &'a mut dyn FnMut(
+            vk1_0::PhysicalDevice,
+            &vk1_0::DeviceCreateInfo,
+            Option<&vk1_0::AllocationCallbacks>,
+        ) -> utils::VulkanResult<vk1_0::Device>,
     ) -> Self {
         self.create_device_fn = Some(create_device);
         self
@@ -695,7 +687,7 @@ impl<'a> DeviceLoaderBuilder<'a> {
         physical_device: vk1_0::PhysicalDevice,
         create_info: &vk1_0::DeviceCreateInfo,
     ) -> Result<DeviceLoader, LoaderError> {
-        let device = match self.create_device_fn.take() {
+        let device = match &mut self.create_device_fn {
             Some(create_device) => {
                 create_device(physical_device, create_info, self.allocation_callbacks)
             }

@@ -43,10 +43,9 @@ fn main() {
 
     let instance = Arc::new(unsafe {
         InstanceLoaderBuilder::new()
-            .create_instance_fn(Box::new({
-                let entry = entry.clone(); // make use of the Arc
-                move |create_info, allocator| entry.create_instance(create_info, allocator)
-            }))
+            .create_instance_fn(&mut |create_info, allocator| {
+                entry.create_instance(create_info, allocator)
+            })
             .symbol_fn(&mut |instance, name| (entry.get_instance_proc_addr)(instance, name))
             .build(&entry, &instance_info)
             .expect("failed to create instance")
@@ -58,12 +57,9 @@ fn main() {
     let device_info = vk::DeviceCreateInfoBuilder::new();
     let device = Arc::new(unsafe {
         DeviceLoaderBuilder::new()
-            .create_device_fn(Box::new({
-                let instance = instance.clone(); // make use of the Arc
-                move |physical_device, create_info, allocator| {
-                    instance.create_device(physical_device, create_info, allocator)
-                }
-            }))
+            .create_device_fn(&mut |physical_device, create_info, allocator| {
+                instance.create_device(physical_device, create_info, allocator)
+            })
             .symbol_fn(&mut |device, name| (instance.get_device_proc_addr)(device, name))
             .build(&instance, physical_device, &device_info)
             .expect("failed to create device")

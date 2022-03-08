@@ -4794,6 +4794,7 @@ impl std::fmt::Debug for StructureType {
                     "QUEUE_FAMILY_QUERY_RESULT_STATUS_PROPERTIES_2_KHR"
                 }
                 &Self::VIDEO_DECODE_INFO_KHR => "VIDEO_DECODE_INFO_KHR",
+                &Self::VIDEO_DECODE_CAPABILITIES_KHR => "VIDEO_DECODE_CAPABILITIES_KHR",
                 &Self::DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV => {
                     "DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV"
                 }
@@ -5786,6 +5787,15 @@ impl std::fmt::Debug for StructureType {
                 }
                 &Self::PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT => {
                     "PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_DESCRIPTOR_SET_HOST_MAPPING_FEATURES_VALVE => {
+                    "PHYSICAL_DEVICE_DESCRIPTOR_SET_HOST_MAPPING_FEATURES_VALVE"
+                }
+                &Self::DESCRIPTOR_SET_BINDING_REFERENCE_VALVE => {
+                    "DESCRIPTOR_SET_BINDING_REFERENCE_VALVE"
+                }
+                &Self::DESCRIPTOR_SET_LAYOUT_HOST_MAPPING_INFO_VALVE => {
+                    "DESCRIPTOR_SET_LAYOUT_HOST_MAPPING_INFO_VALVE"
                 }
                 &Self::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM => {
                     "PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM"
@@ -21800,10 +21810,10 @@ pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION.html) · Define
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 206u32;
+pub const HEADER_VERSION: u32 = 207u32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 206u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 207u32);
 ///Provided by [`crate::vk1_0`]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 206
+- Update Vulkan Headers to version 207
 - Change from `Box` to reference in `create_{instance,device}_fn`
 
 ## [0.22.0+204] - 2022-01-25

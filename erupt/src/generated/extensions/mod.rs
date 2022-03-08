@@ -541,5 +541,7 @@ pub mod qcom_render_pass_transform;
 pub mod qcom_rotated_copy_commands;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_QNX_screen_surface.html) · Vulkan extension
 pub mod qnx_screen_surface;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_VALVE_descriptor_set_host_mapping.html) · Vulkan extension
+pub mod valve_descriptor_set_host_mapping;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_VALVE_mutable_descriptor_type.html) · Vulkan extension
 pub mod valve_mutable_descriptor_type;

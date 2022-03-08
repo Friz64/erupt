@@ -1565,6 +1565,7 @@ pub struct DeviceEnabled {
     pub ext_pageable_device_local_memory: bool,
     pub khr_present_wait: bool,
     pub fuchsia_buffer_collection: bool,
+    pub valve_descriptor_set_host_mapping: bool,
     pub ext_host_query_reset: bool,
     pub khr_maintenance1: bool,
     pub khr_device_group: bool,
@@ -1785,6 +1786,9 @@ impl DeviceEnabled {
             ),
             fuchsia_buffer_collection: enabled_extension(
                 crate::extensions::fuchsia_buffer_collection::FUCHSIA_BUFFER_COLLECTION_EXTENSION_NAME,
+            ),
+            valve_descriptor_set_host_mapping: enabled_extension(
+                crate::extensions::valve_descriptor_set_host_mapping::VALVE_DESCRIPTOR_SET_HOST_MAPPING_EXTENSION_NAME,
             ),
             ext_host_query_reset: enabled_extension(
                 crate::extensions::ext_host_query_reset::EXT_HOST_QUERY_RESET_EXTENSION_NAME,
@@ -2626,6 +2630,12 @@ pub struct DeviceLoader {
     >,
     pub cmd_begin_rendering: Option<vk1_3::PFN_vkCmdBeginRendering>,
     pub cmd_end_rendering: Option<vk1_3::PFN_vkCmdEndRendering>,
+    pub get_descriptor_set_layout_host_mapping_info_valve: Option<
+        extensions::valve_descriptor_set_host_mapping::PFN_vkGetDescriptorSetLayoutHostMappingInfoVALVE,
+    >,
+    pub get_descriptor_set_host_mapping_valve: Option<
+        extensions::valve_descriptor_set_host_mapping::PFN_vkGetDescriptorSetHostMappingVALVE,
+    >,
     pub reset_query_pool_ext: Option<
         extensions::ext_host_query_reset::PFN_vkResetQueryPoolEXT,
     >,
@@ -5304,6 +5314,28 @@ impl DeviceLoader {
             },
             cmd_end_rendering: if instance_enabled.vk1_3 {
                 std::mem::transmute(symbol(crate::vk1_3::FN_CMD_END_RENDERING))
+            } else {
+                None
+            },
+            get_descriptor_set_layout_host_mapping_info_valve: if device_enabled
+                .valve_descriptor_set_host_mapping
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::valve_descriptor_set_host_mapping::FN_GET_DESCRIPTOR_SET_LAYOUT_HOST_MAPPING_INFO_VALVE,
+                    ),
+                )
+            } else {
+                None
+            },
+            get_descriptor_set_host_mapping_valve: if device_enabled
+                .valve_descriptor_set_host_mapping
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::valve_descriptor_set_host_mapping::FN_GET_DESCRIPTOR_SET_HOST_MAPPING_VALVE,
+                    ),
+                )
             } else {
                 None
             },

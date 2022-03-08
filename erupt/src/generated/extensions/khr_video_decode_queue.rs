@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION")]
-pub const KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION: u32 = 2;
+pub const KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION: u32 = 3;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME")]
 pub const KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -60,6 +60,48 @@ impl crate::vk1_0::QueueFlagBits {
 ///Provided by [`crate::extensions::khr_video_decode_queue`]
 impl crate::vk1_0::StructureType {
     pub const VIDEO_DECODE_INFO_KHR: Self = Self(1000024000);
+    pub const VIDEO_DECODE_CAPABILITIES_KHR: Self = Self(1000024001);
+}
+bitflags::bitflags! {
+    #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeCapabilityFlagsKHR.html) · Bitmask of [`VideoDecodeCapabilityFlagBitsKHR`]"]
+    #[doc(alias = "VkVideoDecodeCapabilityFlagsKHR")] #[derive(Default)]
+    #[repr(transparent)] pub struct VideoDecodeCapabilityFlagsKHR : u32 { const
+    DEFAULT_KHR = VideoDecodeCapabilityFlagBitsKHR::DEFAULT_KHR.0; const
+    DPB_AND_OUTPUT_COINCIDE_KHR =
+    VideoDecodeCapabilityFlagBitsKHR::DPB_AND_OUTPUT_COINCIDE_KHR.0; const
+    DPB_AND_OUTPUT_DISTINCT_KHR =
+    VideoDecodeCapabilityFlagBitsKHR::DPB_AND_OUTPUT_DISTINCT_KHR.0; }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeCapabilityFlagBitsKHR.html) · Bits enum of [`VideoDecodeCapabilityFlagsKHR`]
+#[doc(alias = "VkVideoDecodeCapabilityFlagBitsKHR")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct VideoDecodeCapabilityFlagBitsKHR(pub u32);
+impl VideoDecodeCapabilityFlagBitsKHR {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> VideoDecodeCapabilityFlagsKHR {
+        VideoDecodeCapabilityFlagsKHR::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for VideoDecodeCapabilityFlagBitsKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                &Self::DEFAULT_KHR => "DEFAULT_KHR",
+                &Self::DPB_AND_OUTPUT_COINCIDE_KHR => "DPB_AND_OUTPUT_COINCIDE_KHR",
+                &Self::DPB_AND_OUTPUT_DISTINCT_KHR => "DPB_AND_OUTPUT_DISTINCT_KHR",
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+///Provided by [`crate::extensions::khr_video_decode_queue`]
+impl crate::extensions::khr_video_decode_queue::VideoDecodeCapabilityFlagBitsKHR {
+    pub const DEFAULT_KHR: Self = Self(0);
+    pub const DPB_AND_OUTPUT_COINCIDE_KHR: Self = Self(1);
+    pub const DPB_AND_OUTPUT_DISTINCT_KHR: Self = Self(2);
 }
 bitflags::bitflags! {
     #[doc =
@@ -103,6 +145,95 @@ pub type PFN_vkCmdDecodeVideoKHR = unsafe extern "system" fn(
     command_buffer: crate::vk1_0::CommandBuffer,
     p_frame_info: *const crate::extensions::khr_video_decode_queue::VideoDecodeInfoKHR,
 ) -> ();
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeCapabilitiesKHR>
+for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, VideoDecodeCapabilitiesKHRBuilder<'_>>
+for crate::extensions::khr_video_queue::VideoCapabilitiesKHRBuilder<'a> {}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeCapabilitiesKHR.html) · Structure
+#[doc(alias = "VkVideoDecodeCapabilitiesKHR")]
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct VideoDecodeCapabilitiesKHR {
+    pub s_type: crate::vk1_0::StructureType,
+    pub p_next: *mut std::ffi::c_void,
+    pub flags: crate::extensions::khr_video_decode_queue::VideoDecodeCapabilityFlagsKHR,
+}
+impl VideoDecodeCapabilitiesKHR {
+    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_CAPABILITIES_KHR;
+}
+impl Default for VideoDecodeCapabilitiesKHR {
+    fn default() -> Self {
+        Self {
+            s_type: Self::STRUCTURE_TYPE,
+            p_next: std::ptr::null_mut(),
+            flags: Default::default(),
+        }
+    }
+}
+impl std::fmt::Debug for VideoDecodeCapabilitiesKHR {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("VideoDecodeCapabilitiesKHR")
+            .field("s_type", &self.s_type)
+            .field("p_next", &self.p_next)
+            .field("flags", &self.flags)
+            .finish()
+    }
+}
+impl VideoDecodeCapabilitiesKHR {
+    #[inline]
+    pub fn into_builder<'a>(self) -> VideoDecodeCapabilitiesKHRBuilder<'a> {
+        VideoDecodeCapabilitiesKHRBuilder(self, std::marker::PhantomData)
+    }
+}
+#[derive(Copy, Clone)]
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeCapabilitiesKHR.html) · Builder of [`VideoDecodeCapabilitiesKHR`]
+#[repr(transparent)]
+pub struct VideoDecodeCapabilitiesKHRBuilder<'a>(
+    VideoDecodeCapabilitiesKHR,
+    std::marker::PhantomData<&'a ()>,
+);
+impl<'a> VideoDecodeCapabilitiesKHRBuilder<'a> {
+    #[inline]
+    pub fn new() -> VideoDecodeCapabilitiesKHRBuilder<'a> {
+        VideoDecodeCapabilitiesKHRBuilder(Default::default(), std::marker::PhantomData)
+    }
+    #[inline]
+    #[must_use]
+    pub fn flags(
+        mut self,
+        flags: crate::extensions::khr_video_decode_queue::VideoDecodeCapabilityFlagsKHR,
+    ) -> Self {
+        self.0.flags = flags as _;
+        self
+    }
+    #[inline]
+    /// Discards all lifetime information.
+    /// Use the `Deref` and `DerefMut` implementations if possible.
+    pub fn build_dangling(self) -> VideoDecodeCapabilitiesKHR {
+        self.0
+    }
+}
+impl<'a> std::default::Default for VideoDecodeCapabilitiesKHRBuilder<'a> {
+    fn default() -> VideoDecodeCapabilitiesKHRBuilder<'a> {
+        Self::new()
+    }
+}
+impl<'a> std::fmt::Debug for VideoDecodeCapabilitiesKHRBuilder<'a> {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        std::fmt::Debug::fmt(&self.0, f)
+    }
+}
+impl<'a> std::ops::Deref for VideoDecodeCapabilitiesKHRBuilder<'a> {
+    type Target = VideoDecodeCapabilitiesKHR;
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl<'a> std::ops::DerefMut for VideoDecodeCapabilitiesKHRBuilder<'a> {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeInfoKHR.html) · Structure
 #[doc(alias = "VkVideoDecodeInfoKHR")]
 #[derive(Copy, Clone)]

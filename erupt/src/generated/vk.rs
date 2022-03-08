@@ -550,4 +550,6 @@ pub use crate::extensions::qcom_rotated_copy_commands::*;
 #[doc(no_inline)]
 pub use crate::extensions::qnx_screen_surface::*;
 #[doc(no_inline)]
+pub use crate::extensions::valve_descriptor_set_host_mapping::*;
+#[doc(no_inline)]
 pub use crate::extensions::valve_mutable_descriptor_type::*;

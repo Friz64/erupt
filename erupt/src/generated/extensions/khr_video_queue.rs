@@ -818,17 +818,12 @@ impl<'a> VideoProfilesKHRBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn profile_count(mut self, profile_count: u32) -> Self {
-        self.0.profile_count = profile_count as _;
-        self
-    }
-    #[inline]
-    #[must_use]
     pub fn profiles(
         mut self,
-        profiles: &'a crate::extensions::khr_video_queue::VideoProfileKHR,
+        profiles: &'a [crate::extensions::khr_video_queue::VideoProfileKHRBuilder],
     ) -> Self {
-        self.0.p_profiles = profiles as _;
+        self.0.p_profiles = profiles.as_ptr() as _;
+        self.0.profile_count = profiles.len() as _;
         self
     }
     #[inline]

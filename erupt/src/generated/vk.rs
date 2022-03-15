@@ -368,6 +368,8 @@ pub use crate::extensions::khr_pipeline_executable_properties::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_pipeline_library::*;
 #[doc(no_inline)]
+pub use crate::extensions::khr_portability_enumeration::*;
+#[doc(no_inline)]
 pub use crate::extensions::khr_portability_subset::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_present_id::*;

@@ -359,6 +359,8 @@ pub mod khr_performance_query;
 pub mod khr_pipeline_executable_properties;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_pipeline_library.html) · Vulkan extension
 pub mod khr_pipeline_library;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_enumeration.html) · Vulkan extension
+pub mod khr_portability_enumeration;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_portability_subset.html) · Vulkan extension
 pub mod khr_portability_subset;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_present_id.html) · Vulkan extension

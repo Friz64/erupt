@@ -976,34 +976,6 @@ impl std::fmt::Debug for BufferViewCreateFlagBits {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstanceCreateFlags.html) · Bitmask of [`InstanceCreateFlagBits`]"]
-    #[doc(alias = "VkInstanceCreateFlags")] #[derive(Default)] #[repr(transparent)] pub
-    struct InstanceCreateFlags : u32 { #[cfg(empty_bitflag_workaround)] const
-    EMPTY_BITFLAG_WORKAROUND = 0; }
-}
-///<s>Vulkan Manual Page</s> · Bits enum of [`InstanceCreateFlags`]
-#[doc(alias = "VkInstanceCreateFlagBits")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct InstanceCreateFlagBits(pub u32);
-impl InstanceCreateFlagBits {
-    #[inline]
-    ///Converts this enum variant to the corresponding bitmask
-    pub const fn bitmask(&self) -> InstanceCreateFlags {
-        InstanceCreateFlags::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for InstanceCreateFlagBits {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(
-            match self {
-                _ => "(unknown variant)",
-            },
-        )
-    }
-}
-bitflags::bitflags! {
-    #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDeviceCreateFlags.html) · Bitmask of [`DeviceCreateFlagBits`]"]
     #[doc(alias = "VkDeviceCreateFlags")] #[derive(Default)] #[repr(transparent)] pub
     struct DeviceCreateFlags : u32 { #[cfg(empty_bitflag_workaround)] const
@@ -1555,6 +1527,35 @@ impl std::fmt::Debug for DescriptorSetLayoutCreateFlagBits {
                 &Self::UPDATE_AFTER_BIND_POOL => "UPDATE_AFTER_BIND_POOL",
                 &Self::PUSH_DESCRIPTOR_KHR => "PUSH_DESCRIPTOR_KHR",
                 &Self::HOST_ONLY_POOL_VALVE => "HOST_ONLY_POOL_VALVE",
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+bitflags::bitflags! {
+    #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstanceCreateFlags.html) · Bitmask of [`InstanceCreateFlagBits`]"]
+    #[doc(alias = "VkInstanceCreateFlags")] #[derive(Default)] #[repr(transparent)] pub
+    struct InstanceCreateFlags : u32 { const ENUMERATE_PORTABILITY_KHR =
+    InstanceCreateFlagBits::ENUMERATE_PORTABILITY_KHR.0; }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkInstanceCreateFlagBits.html) · Bits enum of [`InstanceCreateFlags`]
+#[doc(alias = "VkInstanceCreateFlagBits")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct InstanceCreateFlagBits(pub u32);
+impl InstanceCreateFlagBits {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> InstanceCreateFlags {
+        InstanceCreateFlags::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for InstanceCreateFlagBits {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                &Self::ENUMERATE_PORTABILITY_KHR => "ENUMERATE_PORTABILITY_KHR",
                 _ => "(unknown variant)",
             },
         )
@@ -21810,10 +21811,10 @@ pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION.html) · Define
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 207u32;
+pub const HEADER_VERSION: u32 = 208u32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 207u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 208u32);
 ///Provided by [`crate::vk1_0`]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

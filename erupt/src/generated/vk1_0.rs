@@ -4824,9 +4824,6 @@ impl std::fmt::Debug for StructureType {
                 &Self::VIDEO_ENCODE_H264_CAPABILITIES_EXT => {
                     "VIDEO_ENCODE_H264_CAPABILITIES_EXT"
                 }
-                &Self::VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT => {
-                    "VIDEO_ENCODE_H264_SESSION_CREATE_INFO_EXT"
-                }
                 &Self::VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT => {
                     "VIDEO_ENCODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT"
                 }
@@ -4858,9 +4855,6 @@ impl std::fmt::Debug for StructureType {
                 &Self::VIDEO_ENCODE_H265_CAPABILITIES_EXT => {
                     "VIDEO_ENCODE_H265_CAPABILITIES_EXT"
                 }
-                &Self::VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT => {
-                    "VIDEO_ENCODE_H265_SESSION_CREATE_INFO_EXT"
-                }
                 &Self::VIDEO_ENCODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => {
                     "VIDEO_ENCODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT"
                 }
@@ -4891,9 +4885,6 @@ impl std::fmt::Debug for StructureType {
                 }
                 &Self::VIDEO_DECODE_H264_CAPABILITIES_EXT => {
                     "VIDEO_DECODE_H264_CAPABILITIES_EXT"
-                }
-                &Self::VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT => {
-                    "VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT"
                 }
                 &Self::VIDEO_DECODE_H264_PICTURE_INFO_EXT => {
                     "VIDEO_DECODE_H264_PICTURE_INFO_EXT"
@@ -5304,9 +5295,6 @@ impl std::fmt::Debug for StructureType {
                 }
                 &Self::VIDEO_DECODE_H265_CAPABILITIES_EXT => {
                     "VIDEO_DECODE_H265_CAPABILITIES_EXT"
-                }
-                &Self::VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT => {
-                    "VIDEO_DECODE_H265_SESSION_CREATE_INFO_EXT"
                 }
                 &Self::VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT => {
                     "VIDEO_DECODE_H265_SESSION_PARAMETERS_CREATE_INFO_EXT"
@@ -21811,10 +21799,10 @@ pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION.html) · Define
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 208u32;
+pub const HEADER_VERSION: u32 = 209u32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 208u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 209u32);
 ///Provided by [`crate::vk1_0`]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

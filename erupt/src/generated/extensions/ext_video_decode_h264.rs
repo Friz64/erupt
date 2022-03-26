@@ -7,52 +7,23 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_DECODE_H264_SPEC_VERSION")]
-pub const EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 3;
+pub const EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 4;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME")]
 pub const EXT_VIDEO_DECODE_H264_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
     "VK_EXT_video_decode_h264"
 );
-bitflags::bitflags! {
-    #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH264CreateFlagsEXT.html) · Bitmask of [`VideoDecodeH264CreateFlagBitsEXT`]"]
-    #[doc(alias = "VkVideoDecodeH264CreateFlagsEXT")] #[derive(Default)]
-    #[repr(transparent)] pub struct VideoDecodeH264CreateFlagsEXT : u32 {
-    #[cfg(empty_bitflag_workaround)] const EMPTY_BITFLAG_WORKAROUND = 0; }
-}
-///<s>Vulkan Manual Page</s> · Bits enum of [`VideoDecodeH264CreateFlagsEXT`]
-#[doc(alias = "VkVideoDecodeH264CreateFlagBitsEXT")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct VideoDecodeH264CreateFlagBitsEXT(pub u32);
-impl VideoDecodeH264CreateFlagBitsEXT {
-    #[inline]
-    ///Converts this enum variant to the corresponding bitmask
-    pub const fn bitmask(&self) -> VideoDecodeH264CreateFlagsEXT {
-        VideoDecodeH264CreateFlagsEXT::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for VideoDecodeH264CreateFlagBitsEXT {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(
-            match self {
-                _ => "(unknown variant)",
-            },
-        )
-    }
-}
 ///Provided by [`crate::extensions::ext_video_decode_h264`]
 impl crate::vk1_0::StructureType {
     pub const VIDEO_DECODE_H264_CAPABILITIES_EXT: Self = Self(1000040000);
-    pub const VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT: Self = Self(1000040001);
-    pub const VIDEO_DECODE_H264_PICTURE_INFO_EXT: Self = Self(1000040002);
-    pub const VIDEO_DECODE_H264_MVC_EXT: Self = Self(1000040003);
-    pub const VIDEO_DECODE_H264_PROFILE_EXT: Self = Self(1000040004);
+    pub const VIDEO_DECODE_H264_PICTURE_INFO_EXT: Self = Self(1000040001);
+    pub const VIDEO_DECODE_H264_MVC_EXT: Self = Self(1000040002);
+    pub const VIDEO_DECODE_H264_PROFILE_EXT: Self = Self(1000040003);
     pub const VIDEO_DECODE_H264_SESSION_PARAMETERS_CREATE_INFO_EXT: Self = Self(
-        1000040005,
+        1000040004,
     );
-    pub const VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000040006);
-    pub const VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT: Self = Self(1000040007);
+    pub const VIDEO_DECODE_H264_SESSION_PARAMETERS_ADD_INFO_EXT: Self = Self(1000040005);
+    pub const VIDEO_DECODE_H264_DPB_SLOT_INFO_EXT: Self = Self(1000040006);
 }
 ///Provided by [`crate::extensions::ext_video_decode_h264`]
 impl crate::extensions::khr_video_queue::VideoCodecOperationFlagBitsKHR {
@@ -243,7 +214,6 @@ pub struct VideoDecodeH264CapabilitiesEXT {
     pub p_next: *mut std::ffi::c_void,
     pub max_level: u32,
     pub field_offset_granularity: crate::vk1_0::Offset2D,
-    pub std_extension_version: crate::vk1_0::ExtensionProperties,
 }
 impl VideoDecodeH264CapabilitiesEXT {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H264_CAPABILITIES_EXT;
@@ -255,7 +225,6 @@ impl Default for VideoDecodeH264CapabilitiesEXT {
             p_next: std::ptr::null_mut(),
             max_level: Default::default(),
             field_offset_granularity: Default::default(),
-            std_extension_version: Default::default(),
         }
     }
 }
@@ -266,7 +235,6 @@ impl std::fmt::Debug for VideoDecodeH264CapabilitiesEXT {
             .field("p_next", &self.p_next)
             .field("max_level", &self.max_level)
             .field("field_offset_granularity", &self.field_offset_granularity)
-            .field("std_extension_version", &self.std_extension_version)
             .finish()
     }
 }
@@ -307,15 +275,6 @@ impl<'a> VideoDecodeH264CapabilitiesEXTBuilder<'a> {
         self
     }
     #[inline]
-    #[must_use]
-    pub fn std_extension_version(
-        mut self,
-        std_extension_version: crate::vk1_0::ExtensionProperties,
-    ) -> Self {
-        self.0.std_extension_version = std_extension_version as _;
-        self
-    }
-    #[inline]
     /// Discards all lifetime information.
     /// Use the `Deref` and `DerefMut` implementations if possible.
     pub fn build_dangling(self) -> VideoDecodeH264CapabilitiesEXT {
@@ -339,106 +298,6 @@ impl<'a> std::ops::Deref for VideoDecodeH264CapabilitiesEXTBuilder<'a> {
     }
 }
 impl<'a> std::ops::DerefMut for VideoDecodeH264CapabilitiesEXTBuilder<'a> {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH264SessionCreateInfoEXT.html) · Structure
-#[doc(alias = "VkVideoDecodeH264SessionCreateInfoEXT")]
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct VideoDecodeH264SessionCreateInfoEXT {
-    pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
-    pub flags: crate::extensions::ext_video_decode_h264::VideoDecodeH264CreateFlagsEXT,
-    pub p_std_extension_version: *const crate::vk1_0::ExtensionProperties,
-}
-impl VideoDecodeH264SessionCreateInfoEXT {
-    pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_DECODE_H264_SESSION_CREATE_INFO_EXT;
-}
-impl Default for VideoDecodeH264SessionCreateInfoEXT {
-    fn default() -> Self {
-        Self {
-            s_type: Self::STRUCTURE_TYPE,
-            p_next: std::ptr::null(),
-            flags: Default::default(),
-            p_std_extension_version: std::ptr::null(),
-        }
-    }
-}
-impl std::fmt::Debug for VideoDecodeH264SessionCreateInfoEXT {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.debug_struct("VideoDecodeH264SessionCreateInfoEXT")
-            .field("s_type", &self.s_type)
-            .field("p_next", &self.p_next)
-            .field("flags", &self.flags)
-            .field("p_std_extension_version", &self.p_std_extension_version)
-            .finish()
-    }
-}
-impl VideoDecodeH264SessionCreateInfoEXT {
-    #[inline]
-    pub fn into_builder<'a>(self) -> VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
-        VideoDecodeH264SessionCreateInfoEXTBuilder(self, std::marker::PhantomData)
-    }
-}
-#[derive(Copy, Clone)]
-///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoDecodeH264SessionCreateInfoEXT.html) · Builder of [`VideoDecodeH264SessionCreateInfoEXT`]
-#[repr(transparent)]
-pub struct VideoDecodeH264SessionCreateInfoEXTBuilder<'a>(
-    VideoDecodeH264SessionCreateInfoEXT,
-    std::marker::PhantomData<&'a ()>,
-);
-impl<'a> VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
-    #[inline]
-    pub fn new() -> VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
-        VideoDecodeH264SessionCreateInfoEXTBuilder(
-            Default::default(),
-            std::marker::PhantomData,
-        )
-    }
-    #[inline]
-    #[must_use]
-    pub fn flags(
-        mut self,
-        flags: crate::extensions::ext_video_decode_h264::VideoDecodeH264CreateFlagsEXT,
-    ) -> Self {
-        self.0.flags = flags as _;
-        self
-    }
-    #[inline]
-    #[must_use]
-    pub fn std_extension_version(
-        mut self,
-        std_extension_version: &'a crate::vk1_0::ExtensionProperties,
-    ) -> Self {
-        self.0.p_std_extension_version = std_extension_version as _;
-        self
-    }
-    #[inline]
-    /// Discards all lifetime information.
-    /// Use the `Deref` and `DerefMut` implementations if possible.
-    pub fn build_dangling(self) -> VideoDecodeH264SessionCreateInfoEXT {
-        self.0
-    }
-}
-impl<'a> std::default::Default for VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
-    fn default() -> VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
-        Self::new()
-    }
-}
-impl<'a> std::fmt::Debug for VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        std::fmt::Debug::fmt(&self.0, f)
-    }
-}
-impl<'a> std::ops::Deref for VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
-    type Target = VideoDecodeH264SessionCreateInfoEXT;
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl<'a> std::ops::DerefMut for VideoDecodeH264SessionCreateInfoEXTBuilder<'a> {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
     }
@@ -945,10 +804,6 @@ impl<'a> std::ops::DerefMut for VideoDecodeH264MvcEXTBuilder<'a> {
         &mut self.0
     }
 }
-impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionCreateInfoEXT>
-for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
-impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionCreateInfoEXTBuilder<'_>>
-for crate::extensions::khr_video_queue::VideoSessionCreateInfoKHRBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, VideoDecodeH264SessionParametersCreateInfoEXT>
 for crate::extensions::khr_video_queue::VideoSessionParametersCreateInfoKHRBuilder<'a> {}
 impl<

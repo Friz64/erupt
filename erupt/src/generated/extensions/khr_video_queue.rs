@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_QUEUE_SPEC_VERSION")]
-pub const KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 2;
+pub const KHR_VIDEO_QUEUE_SPEC_VERSION: u32 = 3;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_QUEUE_EXTENSION_NAME")]
 pub const KHR_VIDEO_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -1166,6 +1166,7 @@ pub struct VideoCapabilitiesKHR {
     pub max_extent: crate::vk1_0::Extent2D,
     pub max_reference_pictures_slots_count: u32,
     pub max_reference_pictures_active_count: u32,
+    pub std_header_version: crate::vk1_0::ExtensionProperties,
 }
 impl VideoCapabilitiesKHR {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_CAPABILITIES_KHR;
@@ -1183,6 +1184,7 @@ impl Default for VideoCapabilitiesKHR {
             max_extent: Default::default(),
             max_reference_pictures_slots_count: Default::default(),
             max_reference_pictures_active_count: Default::default(),
+            std_header_version: Default::default(),
         }
     }
 }
@@ -1214,6 +1216,7 @@ impl std::fmt::Debug for VideoCapabilitiesKHR {
                 "max_reference_pictures_active_count",
                 &self.max_reference_pictures_active_count,
             )
+            .field("std_header_version", &self.std_header_version)
             .finish()
     }
 }
@@ -1311,6 +1314,15 @@ impl<'a> VideoCapabilitiesKHRBuilder<'a> {
             .0
             .max_reference_pictures_active_count = max_reference_pictures_active_count
             as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn std_header_version(
+        mut self,
+        std_header_version: crate::vk1_0::ExtensionProperties,
+    ) -> Self {
+        self.0.std_header_version = std_header_version as _;
         self
     }
     #[inline]
@@ -1765,6 +1777,7 @@ pub struct VideoSessionCreateInfoKHR {
     pub reference_pictures_format: crate::vk1_0::Format,
     pub max_reference_pictures_slots_count: u32,
     pub max_reference_pictures_active_count: u32,
+    pub p_std_header_version: *const crate::vk1_0::ExtensionProperties,
 }
 impl VideoSessionCreateInfoKHR {
     pub const STRUCTURE_TYPE: crate::vk1_0::StructureType = crate::vk1_0::StructureType::VIDEO_SESSION_CREATE_INFO_KHR;
@@ -1782,6 +1795,7 @@ impl Default for VideoSessionCreateInfoKHR {
             reference_pictures_format: Default::default(),
             max_reference_pictures_slots_count: Default::default(),
             max_reference_pictures_active_count: Default::default(),
+            p_std_header_version: std::ptr::null(),
         }
     }
 }
@@ -1804,6 +1818,7 @@ impl std::fmt::Debug for VideoSessionCreateInfoKHR {
                 "max_reference_pictures_active_count",
                 &self.max_reference_pictures_active_count,
             )
+            .field("p_std_header_version", &self.p_std_header_version)
             .finish()
     }
 }
@@ -1892,6 +1907,15 @@ impl<'a> VideoSessionCreateInfoKHRBuilder<'a> {
             .0
             .max_reference_pictures_active_count = max_reference_pictures_active_count
             as _;
+        self
+    }
+    #[inline]
+    #[must_use]
+    pub fn std_header_version(
+        mut self,
+        std_header_version: &'a crate::vk1_0::ExtensionProperties,
+    ) -> Self {
+        self.0.p_std_header_version = std_header_version as _;
         self
     }
     #[inline]

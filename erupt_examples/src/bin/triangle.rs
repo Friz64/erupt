@@ -484,7 +484,6 @@ fn main() {
     let in_flight_fences: Vec<_> = (0..FRAMES_IN_FLIGHT)
         .map(|_| unsafe { device.create_fence(&fence_info, None) }.unwrap())
         .collect();
-    let mut images_in_flight: Vec<_> = swapchain_images.iter().map(|_| vk::Fence::null()).collect();
 
     let mut frame = 0;
     #[allow(clippy::collapsible_match, clippy::single_match)]
@@ -525,12 +524,6 @@ fn main() {
                 )
             }
             .unwrap();
-
-            let image_in_flight = images_in_flight[image_index as usize];
-            if !image_in_flight.is_null() {
-                unsafe { device.wait_for_fences(&[image_in_flight], true, u64::MAX) }.unwrap();
-            }
-            images_in_flight[image_index as usize] = in_flight_fences[frame];
 
             let wait_semaphores = vec![image_available_semaphores[frame]];
             let command_buffers = vec![cmd_bufs[image_index as usize]];

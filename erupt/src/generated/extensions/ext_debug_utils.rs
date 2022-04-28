@@ -286,6 +286,10 @@ impl<'a> crate::ExtendableFrom<'a, DebugUtilsMessengerCreateInfoEXT>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
 impl<'a> crate::ExtendableFrom<'a, DebugUtilsMessengerCreateInfoEXTBuilder<'_>>
 for crate::vk1_0::InstanceCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DebugUtilsObjectNameInfoEXT>
+for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, DebugUtilsObjectNameInfoEXTBuilder<'_>>
+for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkDebugUtilsObjectNameInfoEXT.html) · Structure
 #[doc(alias = "VkDebugUtilsObjectNameInfoEXT")]
 #[derive(Copy, Clone)]

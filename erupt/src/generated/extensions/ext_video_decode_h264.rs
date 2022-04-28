@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_DECODE_H264_SPEC_VERSION")]
-pub const EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 4;
+pub const EXT_VIDEO_DECODE_H264_SPEC_VERSION: u32 = 5;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME")]
 pub const EXT_VIDEO_DECODE_H264_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -212,7 +212,7 @@ impl<'a> std::ops::DerefMut for VideoDecodeH264ProfileEXTBuilder<'a> {
 pub struct VideoDecodeH264CapabilitiesEXT {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *mut std::ffi::c_void,
-    pub max_level: u32,
+    pub max_level: crate::external::vk_video::StdVideoH264Level,
     pub field_offset_granularity: crate::vk1_0::Offset2D,
 }
 impl VideoDecodeH264CapabilitiesEXT {
@@ -261,7 +261,10 @@ impl<'a> VideoDecodeH264CapabilitiesEXTBuilder<'a> {
     }
     #[inline]
     #[must_use]
-    pub fn max_level(mut self, max_level: u32) -> Self {
+    pub fn max_level(
+        mut self,
+        max_level: crate::external::vk_video::StdVideoH264Level,
+    ) -> Self {
         self.0.max_level = max_level as _;
         self
     }

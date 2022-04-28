@@ -117,12 +117,16 @@ pub mod ext_full_screen_exclusive;
 pub mod ext_global_priority;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_global_priority_query.html) · Vulkan extension
 pub mod ext_global_priority_query;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_graphics_pipeline_library.html) · Vulkan extension
+pub mod ext_graphics_pipeline_library;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_hdr_metadata.html) · Vulkan extension
 pub mod ext_hdr_metadata;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_headless_surface.html) · Vulkan extension
 pub mod ext_headless_surface;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_host_query_reset.html) · Vulkan extension
 pub mod ext_host_query_reset;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_2d_view_of_3d.html) · Vulkan extension
+pub mod ext_image_2d_view_of_3d;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_drm_format_modifier.html) · Vulkan extension
 pub mod ext_image_drm_format_modifier;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_robustness.html) · Vulkan extension
@@ -159,6 +163,8 @@ pub mod ext_pipeline_creation_feedback;
 pub mod ext_post_depth_coverage;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_primitive_topology_list_restart.html) · Vulkan extension
 pub mod ext_primitive_topology_list_restart;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_primitives_generated_query.html) · Vulkan extension
+pub mod ext_primitives_generated_query;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_private_data.html) · Vulkan extension
 pub mod ext_private_data;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_provoking_vertex.html) · Vulkan extension

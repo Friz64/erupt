@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION")]
-pub const KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION: u32 = 3;
+pub const KHR_VIDEO_DECODE_QUEUE_SPEC_VERSION: u32 = 4;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME")]
 pub const KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -242,8 +242,6 @@ pub struct VideoDecodeInfoKHR {
     pub s_type: crate::vk1_0::StructureType,
     pub p_next: *const std::ffi::c_void,
     pub flags: crate::extensions::khr_video_decode_queue::VideoDecodeFlagsKHR,
-    pub coded_offset: crate::vk1_0::Offset2D,
-    pub coded_extent: crate::vk1_0::Extent2D,
     pub src_buffer: crate::vk1_0::Buffer,
     pub src_buffer_offset: crate::vk1_0::DeviceSize,
     pub src_buffer_range: crate::vk1_0::DeviceSize,
@@ -261,8 +259,6 @@ impl Default for VideoDecodeInfoKHR {
             s_type: Self::STRUCTURE_TYPE,
             p_next: std::ptr::null(),
             flags: Default::default(),
-            coded_offset: Default::default(),
-            coded_extent: Default::default(),
             src_buffer: Default::default(),
             src_buffer_offset: Default::default(),
             src_buffer_range: Default::default(),
@@ -279,8 +275,6 @@ impl std::fmt::Debug for VideoDecodeInfoKHR {
             .field("s_type", &self.s_type)
             .field("p_next", &self.p_next)
             .field("flags", &self.flags)
-            .field("coded_offset", &self.coded_offset)
-            .field("coded_extent", &self.coded_extent)
             .field("src_buffer", &self.src_buffer)
             .field("src_buffer_offset", &self.src_buffer_offset)
             .field("src_buffer_range", &self.src_buffer_range)
@@ -316,18 +310,6 @@ impl<'a> VideoDecodeInfoKHRBuilder<'a> {
         flags: crate::extensions::khr_video_decode_queue::VideoDecodeFlagsKHR,
     ) -> Self {
         self.0.flags = flags as _;
-        self
-    }
-    #[inline]
-    #[must_use]
-    pub fn coded_offset(mut self, coded_offset: crate::vk1_0::Offset2D) -> Self {
-        self.0.coded_offset = coded_offset as _;
-        self
-    }
-    #[inline]
-    #[must_use]
-    pub fn coded_extent(mut self, coded_extent: crate::vk1_0::Extent2D) -> Self {
-        self.0.coded_extent = coded_extent as _;
         self
     }
     #[inline]

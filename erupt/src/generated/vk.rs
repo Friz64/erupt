@@ -126,11 +126,15 @@ pub use crate::extensions::ext_global_priority::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_global_priority_query::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_graphics_pipeline_library::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_hdr_metadata::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_headless_surface::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_host_query_reset::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_image_2d_view_of_3d::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_image_drm_format_modifier::*;
 #[doc(no_inline)]
@@ -167,6 +171,8 @@ pub use crate::extensions::ext_pipeline_creation_feedback::*;
 pub use crate::extensions::ext_post_depth_coverage::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_primitive_topology_list_restart::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_primitives_generated_query::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_private_data::*;
 #[doc(no_inline)]

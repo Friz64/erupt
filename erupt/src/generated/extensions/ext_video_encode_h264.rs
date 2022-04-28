@@ -7,7 +7,7 @@
 //! before final release of a non-provisional version of this extension.
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H264_SPEC_VERSION")]
-pub const EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 6;
+pub const EXT_VIDEO_ENCODE_H264_SPEC_VERSION: u32 = 7;
 ///<s>Vulkan Manual Page</s> · Constant
 #[doc(alias = "VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME")]
 pub const EXT_VIDEO_ENCODE_H264_EXTENSION_NAME: *const std::os::raw::c_char = crate::cstr!(
@@ -38,8 +38,10 @@ bitflags::bitflags! {
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264CapabilityFlagsEXT.html) · Bitmask of [`VideoEncodeH264CapabilityFlagBitsEXT`]"]
     #[doc(alias = "VkVideoEncodeH264CapabilityFlagsEXT")] #[derive(Default)]
     #[repr(transparent)] pub struct VideoEncodeH264CapabilityFlagsEXT : u32 { const
-    DIRECT_8X8_INFERENCE_EXT =
-    VideoEncodeH264CapabilityFlagBitsEXT::DIRECT_8X8_INFERENCE_EXT.0; const
+    DIRECT_8X8_INFERENCE_ENABLED_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::DIRECT_8X8_INFERENCE_ENABLED_EXT.0; const
+    DIRECT_8X8_INFERENCE_DISABLED_EXT =
+    VideoEncodeH264CapabilityFlagBitsEXT::DIRECT_8X8_INFERENCE_DISABLED_EXT.0; const
     SEPARATE_COLOUR_PLANE_EXT =
     VideoEncodeH264CapabilityFlagBitsEXT::SEPARATE_COLOUR_PLANE_EXT.0; const
     QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT =
@@ -76,7 +78,9 @@ bitflags::bitflags! {
     const ROW_UNALIGNED_SLICE_EXT =
     VideoEncodeH264CapabilityFlagBitsEXT::ROW_UNALIGNED_SLICE_EXT.0; const
     DIFFERENT_SLICE_TYPE_EXT =
-    VideoEncodeH264CapabilityFlagBitsEXT::DIFFERENT_SLICE_TYPE_EXT.0; }
+    VideoEncodeH264CapabilityFlagBitsEXT::DIFFERENT_SLICE_TYPE_EXT.0; const
+    B_FRAME_IN_L1_LIST_EXT = VideoEncodeH264CapabilityFlagBitsEXT::B_FRAME_IN_L1_LIST_EXT
+    .0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkVideoEncodeH264CapabilityFlagBitsEXT.html) · Bits enum of [`VideoEncodeH264CapabilityFlagsEXT`]
 #[doc(alias = "VkVideoEncodeH264CapabilityFlagBitsEXT")]
@@ -94,7 +98,12 @@ impl std::fmt::Debug for VideoEncodeH264CapabilityFlagBitsEXT {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         f.write_str(
             match self {
-                &Self::DIRECT_8X8_INFERENCE_EXT => "DIRECT_8X8_INFERENCE_EXT",
+                &Self::DIRECT_8X8_INFERENCE_ENABLED_EXT => {
+                    "DIRECT_8X8_INFERENCE_ENABLED_EXT"
+                }
+                &Self::DIRECT_8X8_INFERENCE_DISABLED_EXT => {
+                    "DIRECT_8X8_INFERENCE_DISABLED_EXT"
+                }
                 &Self::SEPARATE_COLOUR_PLANE_EXT => "SEPARATE_COLOUR_PLANE_EXT",
                 &Self::QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT => {
                     "QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT"
@@ -121,6 +130,7 @@ impl std::fmt::Debug for VideoEncodeH264CapabilityFlagBitsEXT {
                 &Self::SLICE_MB_COUNT_EXT => "SLICE_MB_COUNT_EXT",
                 &Self::ROW_UNALIGNED_SLICE_EXT => "ROW_UNALIGNED_SLICE_EXT",
                 &Self::DIFFERENT_SLICE_TYPE_EXT => "DIFFERENT_SLICE_TYPE_EXT",
+                &Self::B_FRAME_IN_L1_LIST_EXT => "B_FRAME_IN_L1_LIST_EXT",
                 _ => "(unknown variant)",
             },
         )
@@ -128,29 +138,31 @@ impl std::fmt::Debug for VideoEncodeH264CapabilityFlagBitsEXT {
 }
 ///Provided by [`crate::extensions::ext_video_encode_h264`]
 impl crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagBitsEXT {
-    pub const DIRECT_8X8_INFERENCE_EXT: Self = Self(1);
-    pub const SEPARATE_COLOUR_PLANE_EXT: Self = Self(2);
-    pub const QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT: Self = Self(4);
-    pub const SCALING_LISTS_EXT: Self = Self(8);
-    pub const HRD_COMPLIANCE_EXT: Self = Self(16);
-    pub const CHROMA_QP_OFFSET_EXT: Self = Self(32);
-    pub const SECOND_CHROMA_QP_OFFSET_EXT: Self = Self(64);
-    pub const PIC_INIT_QP_MINUS26_EXT: Self = Self(128);
-    pub const WEIGHTED_PRED_EXT: Self = Self(256);
-    pub const WEIGHTED_BIPRED_EXPLICIT_EXT: Self = Self(512);
-    pub const WEIGHTED_BIPRED_IMPLICIT_EXT: Self = Self(1024);
-    pub const WEIGHTED_PRED_NO_TABLE_EXT: Self = Self(2048);
-    pub const TRANSFORM_8X8_EXT: Self = Self(4096);
-    pub const CABAC_EXT: Self = Self(8192);
-    pub const CAVLC_EXT: Self = Self(16384);
-    pub const DEBLOCKING_FILTER_DISABLED_EXT: Self = Self(32768);
-    pub const DEBLOCKING_FILTER_ENABLED_EXT: Self = Self(65536);
-    pub const DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(131072);
-    pub const DISABLE_DIRECT_SPATIAL_MV_PRED_EXT: Self = Self(262144);
-    pub const MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(524288);
-    pub const SLICE_MB_COUNT_EXT: Self = Self(1048576);
-    pub const ROW_UNALIGNED_SLICE_EXT: Self = Self(2097152);
-    pub const DIFFERENT_SLICE_TYPE_EXT: Self = Self(4194304);
+    pub const DIRECT_8X8_INFERENCE_ENABLED_EXT: Self = Self(1);
+    pub const DIRECT_8X8_INFERENCE_DISABLED_EXT: Self = Self(2);
+    pub const SEPARATE_COLOUR_PLANE_EXT: Self = Self(4);
+    pub const QPPRIME_Y_ZERO_TRANSFORM_BYPASS_EXT: Self = Self(8);
+    pub const SCALING_LISTS_EXT: Self = Self(16);
+    pub const HRD_COMPLIANCE_EXT: Self = Self(32);
+    pub const CHROMA_QP_OFFSET_EXT: Self = Self(64);
+    pub const SECOND_CHROMA_QP_OFFSET_EXT: Self = Self(128);
+    pub const PIC_INIT_QP_MINUS26_EXT: Self = Self(256);
+    pub const WEIGHTED_PRED_EXT: Self = Self(512);
+    pub const WEIGHTED_BIPRED_EXPLICIT_EXT: Self = Self(1024);
+    pub const WEIGHTED_BIPRED_IMPLICIT_EXT: Self = Self(2048);
+    pub const WEIGHTED_PRED_NO_TABLE_EXT: Self = Self(4096);
+    pub const TRANSFORM_8X8_EXT: Self = Self(8192);
+    pub const CABAC_EXT: Self = Self(16384);
+    pub const CAVLC_EXT: Self = Self(32768);
+    pub const DEBLOCKING_FILTER_DISABLED_EXT: Self = Self(65536);
+    pub const DEBLOCKING_FILTER_ENABLED_EXT: Self = Self(131072);
+    pub const DEBLOCKING_FILTER_PARTIAL_EXT: Self = Self(262144);
+    pub const DISABLE_DIRECT_SPATIAL_MV_PRED_EXT: Self = Self(524288);
+    pub const MULTIPLE_SLICE_PER_FRAME_EXT: Self = Self(1048576);
+    pub const SLICE_MB_COUNT_EXT: Self = Self(2097152);
+    pub const ROW_UNALIGNED_SLICE_EXT: Self = Self(4194304);
+    pub const DIFFERENT_SLICE_TYPE_EXT: Self = Self(8388608);
+    pub const B_FRAME_IN_L1_LIST_EXT: Self = Self(16777216);
 }
 bitflags::bitflags! {
     #[doc =
@@ -333,7 +345,7 @@ for crate::extensions::khr_video_encode_queue::VideoEncodeCapabilitiesKHRBuilder
 #[repr(C)]
 pub struct VideoEncodeH264CapabilitiesEXT {
     pub s_type: crate::vk1_0::StructureType,
-    pub p_next: *const std::ffi::c_void,
+    pub p_next: *mut std::ffi::c_void,
     pub flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264CapabilityFlagsEXT,
     pub input_mode_flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264InputModeFlagsEXT,
     pub output_mode_flags: crate::extensions::ext_video_encode_h264::VideoEncodeH264OutputModeFlagsEXT,
@@ -353,7 +365,7 @@ impl Default for VideoEncodeH264CapabilitiesEXT {
     fn default() -> Self {
         Self {
             s_type: Self::STRUCTURE_TYPE,
-            p_next: std::ptr::null(),
+            p_next: std::ptr::null_mut(),
             flags: Default::default(),
             input_mode_flags: Default::default(),
             output_mode_flags: Default::default(),

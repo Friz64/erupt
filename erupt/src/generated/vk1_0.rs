@@ -724,34 +724,6 @@ impl std::fmt::Debug for QueryPoolCreateFlagBits {
 }
 bitflags::bitflags! {
     #[doc =
-    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLayoutCreateFlags.html) · Bitmask of [`PipelineLayoutCreateFlagBits`]"]
-    #[doc(alias = "VkPipelineLayoutCreateFlags")] #[derive(Default)] #[repr(transparent)]
-    pub struct PipelineLayoutCreateFlags : u32 { #[cfg(empty_bitflag_workaround)] const
-    EMPTY_BITFLAG_WORKAROUND = 0; }
-}
-///<s>Vulkan Manual Page</s> · Bits enum of [`PipelineLayoutCreateFlags`]
-#[doc(alias = "VkPipelineLayoutCreateFlagBits")]
-#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
-#[repr(transparent)]
-pub struct PipelineLayoutCreateFlagBits(pub u32);
-impl PipelineLayoutCreateFlagBits {
-    #[inline]
-    ///Converts this enum variant to the corresponding bitmask
-    pub const fn bitmask(&self) -> PipelineLayoutCreateFlags {
-        PipelineLayoutCreateFlags::from_bits_truncate(self.0)
-    }
-}
-impl std::fmt::Debug for PipelineLayoutCreateFlagBits {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        f.write_str(
-            match self {
-                _ => "(unknown variant)",
-            },
-        )
-    }
-}
-bitflags::bitflags! {
-    #[doc =
     "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineDynamicStateCreateFlags.html) · Bitmask of [`PipelineDynamicStateCreateFlagBits`]"]
     #[doc(alias = "VkPipelineDynamicStateCreateFlags")] #[derive(Default)]
     #[repr(transparent)] pub struct PipelineDynamicStateCreateFlags : u32 {
@@ -2927,7 +2899,9 @@ bitflags::bitflags! {
     const CORNER_SAMPLED_NV = ImageCreateFlagBits::CORNER_SAMPLED_NV.0; const
     SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT =
     ImageCreateFlagBits::SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT.0; const SUBSAMPLED_EXT =
-    ImageCreateFlagBits::SUBSAMPLED_EXT.0; const FRAGMENT_DENSITY_MAP_OFFSET_QCOM =
+    ImageCreateFlagBits::SUBSAMPLED_EXT.0; const _2D_VIEW_COMPATIBLE_EXT =
+    ImageCreateFlagBits::_2D_VIEW_COMPATIBLE_EXT.0; const
+    FRAGMENT_DENSITY_MAP_OFFSET_QCOM =
     ImageCreateFlagBits::FRAGMENT_DENSITY_MAP_OFFSET_QCOM.0; const
     SPLIT_INSTANCE_BIND_REGIONS_KHR =
     ImageCreateFlagBits::SPLIT_INSTANCE_BIND_REGIONS_KHR.0; const
@@ -2971,6 +2945,7 @@ impl std::fmt::Debug for ImageCreateFlagBits {
                     "SAMPLE_LOCATIONS_COMPATIBLE_DEPTH_EXT"
                 }
                 &Self::SUBSAMPLED_EXT => "SUBSAMPLED_EXT",
+                &Self::_2D_VIEW_COMPATIBLE_EXT => "2D_VIEW_COMPATIBLE_EXT",
                 &Self::FRAGMENT_DENSITY_MAP_OFFSET_QCOM => {
                     "FRAGMENT_DENSITY_MAP_OFFSET_QCOM"
                 }
@@ -3628,8 +3603,12 @@ bitflags::bitflags! {
     PipelineCreateFlagBits::CAPTURE_INTERNAL_REPRESENTATIONS_KHR.0; const
     INDIRECT_BINDABLE_NV = PipelineCreateFlagBits::INDIRECT_BINDABLE_NV.0; const
     LIBRARY_KHR = PipelineCreateFlagBits::LIBRARY_KHR.0; const
-    RAY_TRACING_ALLOW_MOTION_NV = PipelineCreateFlagBits::RAY_TRACING_ALLOW_MOTION_NV.0;
-    #[allow(deprecated)] #[deprecated] const
+    RETAIN_LINK_TIME_OPTIMIZATION_INFO_EXT =
+    PipelineCreateFlagBits::RETAIN_LINK_TIME_OPTIMIZATION_INFO_EXT.0; const
+    LINK_TIME_OPTIMIZATION_EXT = PipelineCreateFlagBits::LINK_TIME_OPTIMIZATION_EXT.0;
+    const RAY_TRACING_ALLOW_MOTION_NV =
+    PipelineCreateFlagBits::RAY_TRACING_ALLOW_MOTION_NV.0; #[allow(deprecated)]
+    #[deprecated] const
     PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR =
     PipelineCreateFlagBits::PIPELINE_RASTERIZATION_STATE_CREATE_FRAGMENT_SHADING_RATE_ATTACHMENT_KHR
     .0; #[allow(deprecated)] #[deprecated] const
@@ -3698,6 +3677,10 @@ impl std::fmt::Debug for PipelineCreateFlagBits {
                 }
                 &Self::INDIRECT_BINDABLE_NV => "INDIRECT_BINDABLE_NV",
                 &Self::LIBRARY_KHR => "LIBRARY_KHR",
+                &Self::RETAIN_LINK_TIME_OPTIMIZATION_INFO_EXT => {
+                    "RETAIN_LINK_TIME_OPTIMIZATION_INFO_EXT"
+                }
+                &Self::LINK_TIME_OPTIMIZATION_EXT => "LINK_TIME_OPTIMIZATION_EXT",
                 &Self::RAY_TRACING_ALLOW_MOTION_NV => "RAY_TRACING_ALLOW_MOTION_NV",
                 _ => "(unknown variant)",
             },
@@ -3926,6 +3909,7 @@ impl std::fmt::Debug for QueryType {
                 &Self::VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR => {
                     "VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR"
                 }
+                &Self::PRIMITIVES_GENERATED_EXT => "PRIMITIVES_GENERATED_EXT",
                 _ => "(unknown variant)",
             },
         )
@@ -5612,6 +5596,15 @@ impl std::fmt::Debug for StructureType {
                     "QUEUE_FAMILY_CHECKPOINT_PROPERTIES_2_NV"
                 }
                 &Self::CHECKPOINT_DATA_2_NV => "CHECKPOINT_DATA_2_NV",
+                &Self::PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_PROPERTIES_EXT => {
+                    "PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_PROPERTIES_EXT"
+                }
+                &Self::GRAPHICS_PIPELINE_LIBRARY_CREATE_INFO_EXT => {
+                    "GRAPHICS_PIPELINE_LIBRARY_CREATE_INFO_EXT"
+                }
                 &Self::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR => {
                     "PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR"
                 }
@@ -5756,6 +5749,9 @@ impl std::fmt::Debug for StructureType {
                 &Self::PIPELINE_COLOR_WRITE_CREATE_INFO_EXT => {
                     "PIPELINE_COLOR_WRITE_CREATE_INFO_EXT"
                 }
+                &Self::PHYSICAL_DEVICE_PRIMITIVES_GENERATED_QUERY_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_PRIMITIVES_GENERATED_QUERY_FEATURES_EXT"
+                }
                 &Self::PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT => {
                     "PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT"
                 }
@@ -5767,6 +5763,9 @@ impl std::fmt::Debug for StructureType {
                 }
                 &Self::PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT => {
                     "PHYSICAL_DEVICE_MULTI_DRAW_PROPERTIES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_IMAGE_2D_VIEW_OF_3D_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_IMAGE_2D_VIEW_OF_3D_FEATURES_EXT"
                 }
                 &Self::PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT => {
                     "PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT"
@@ -6412,6 +6411,35 @@ impl std::fmt::Debug for EventCreateFlagBits {
         f.write_str(
             match self {
                 &Self::DEVICE_ONLY => "DEVICE_ONLY",
+                _ => "(unknown variant)",
+            },
+        )
+    }
+}
+bitflags::bitflags! {
+    #[doc =
+    "[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLayoutCreateFlags.html) · Bitmask of [`PipelineLayoutCreateFlagBits`]"]
+    #[doc(alias = "VkPipelineLayoutCreateFlags")] #[derive(Default)] #[repr(transparent)]
+    pub struct PipelineLayoutCreateFlags : u32 { const INDEPENDENT_SETS_EXT =
+    PipelineLayoutCreateFlagBits::INDEPENDENT_SETS_EXT.0; }
+}
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineLayoutCreateFlagBits.html) · Bits enum of [`PipelineLayoutCreateFlags`]
+#[doc(alias = "VkPipelineLayoutCreateFlagBits")]
+#[derive(Copy, Clone, PartialEq, Eq, Hash, Default, Ord, PartialOrd)]
+#[repr(transparent)]
+pub struct PipelineLayoutCreateFlagBits(pub u32);
+impl PipelineLayoutCreateFlagBits {
+    #[inline]
+    ///Converts this enum variant to the corresponding bitmask
+    pub const fn bitmask(&self) -> PipelineLayoutCreateFlags {
+        PipelineLayoutCreateFlags::from_bits_truncate(self.0)
+    }
+}
+impl std::fmt::Debug for PipelineLayoutCreateFlagBits {
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.write_str(
+            match self {
+                &Self::INDEPENDENT_SETS_EXT => "INDEPENDENT_SETS_EXT",
                 _ => "(unknown variant)",
             },
         )
@@ -14379,6 +14407,10 @@ impl PipelineShaderStageCreateInfo {
         PipelineShaderStageCreateInfoBuilder(self, std::marker::PhantomData)
     }
 }
+impl<'a> crate::ExtendableFrom<'a, ShaderModuleCreateInfo>
+for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
+impl<'a> crate::ExtendableFrom<'a, ShaderModuleCreateInfoBuilder<'_>>
+for crate::vk1_0::PipelineShaderStageCreateInfoBuilder<'a> {}
 #[derive(Copy, Clone)]
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineShaderStageCreateInfo.html) · Builder of [`PipelineShaderStageCreateInfo`]
 #[repr(transparent)]
@@ -21799,10 +21831,10 @@ pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION.html) · Define
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 209u32;
+pub const HEADER_VERSION: u32 = 212u32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 209u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 212u32);
 ///Provided by [`crate::vk1_0`]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

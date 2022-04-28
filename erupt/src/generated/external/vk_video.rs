@@ -3187,7 +3187,6 @@ pub struct StdVideoH265SequenceParameterSet {
     pub bit_depth_luma_minus8: u8,
     pub bit_depth_chroma_minus8: u8,
     pub log2_max_pic_order_cnt_lsb_minus4: u8,
-    pub sps_max_dec_pic_buffering_minus1: [u8; 8],
     pub log2_min_luma_coding_block_size_minus3: u8,
     pub log2_diff_max_min_luma_coding_block_size: u8,
     pub log2_min_luma_transform_block_size_minus2: u8,
@@ -3228,7 +3227,6 @@ impl Default for StdVideoH265SequenceParameterSet {
             bit_depth_luma_minus8: Default::default(),
             bit_depth_chroma_minus8: Default::default(),
             log2_max_pic_order_cnt_lsb_minus4: Default::default(),
-            sps_max_dec_pic_buffering_minus1: unsafe { std::mem::zeroed() },
             log2_min_luma_coding_block_size_minus3: Default::default(),
             log2_diff_max_min_luma_coding_block_size: Default::default(),
             log2_min_luma_transform_block_size_minus2: Default::default(),
@@ -3273,10 +3271,6 @@ impl std::fmt::Debug for StdVideoH265SequenceParameterSet {
             .field(
                 "log2_max_pic_order_cnt_lsb_minus4",
                 &self.log2_max_pic_order_cnt_lsb_minus4,
-            )
-            .field(
-                "sps_max_dec_pic_buffering_minus1",
-                &self.sps_max_dec_pic_buffering_minus1,
             )
             .field(
                 "log2_min_luma_coding_block_size_minus3",
@@ -3452,15 +3446,6 @@ impl<'a> StdVideoH265SequenceParameterSetBuilder<'a> {
         self
             .0
             .log2_max_pic_order_cnt_lsb_minus4 = log2_max_pic_order_cnt_lsb_minus4 as _;
-        self
-    }
-    #[inline]
-    #[must_use]
-    pub fn sps_max_dec_pic_buffering_minus1(
-        mut self,
-        sps_max_dec_pic_buffering_minus1: [u8; 8],
-    ) -> Self {
-        self.0.sps_max_dec_pic_buffering_minus1 = sps_max_dec_pic_buffering_minus1 as _;
         self
     }
     #[inline]

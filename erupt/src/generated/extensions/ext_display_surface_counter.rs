@@ -254,24 +254,16 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         surface: crate::extensions::khr_surface::SurfaceKHR,
-        surface_capabilities: Option<
-            crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
-        > {
+        surface_capabilities: &mut crate::extensions::ext_display_surface_counter::SurfaceCapabilities2EXT,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_physical_device_surface_capabilities2_ext
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut surface_capabilities = match surface_capabilities {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             physical_device as _,
             surface as _,
-            &mut surface_capabilities,
+            surface_capabilities as _,
         );
-        crate::utils::VulkanResult::new(_return, surface_capabilities)
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

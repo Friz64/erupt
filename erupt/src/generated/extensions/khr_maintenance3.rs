@@ -58,16 +58,12 @@ impl crate::DeviceLoader {
     pub unsafe fn get_descriptor_set_layout_support_khr(
         &self,
         create_info: &crate::vk1_0::DescriptorSetLayoutCreateInfo,
-        support: Option<crate::vk1_1::DescriptorSetLayoutSupport>,
-    ) -> crate::vk1_1::DescriptorSetLayoutSupport {
+        support: &mut crate::vk1_1::DescriptorSetLayoutSupport,
+    ) -> () {
         let _function = self
             .get_descriptor_set_layout_support_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut support = match support {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, create_info as _, &mut support);
-        support
+        let _return = _function(self.handle, create_info as _, support as _);
+        ()
     }
 }

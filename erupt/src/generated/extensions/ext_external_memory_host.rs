@@ -335,25 +335,17 @@ impl crate::DeviceLoader {
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
         host_pointer: *const std::ffi::c_void,
-        memory_host_pointer_properties: Option<
-            crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
-        > {
+        memory_host_pointer_properties: &mut crate::extensions::ext_external_memory_host::MemoryHostPointerPropertiesEXT,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_memory_host_pointer_properties_ext
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut memory_host_pointer_properties = match memory_host_pointer_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             self.handle,
             handle_type as _,
             host_pointer,
-            &mut memory_host_pointer_properties,
+            memory_host_pointer_properties as _,
         );
-        crate::utils::VulkanResult::new(_return, memory_host_pointer_properties)
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

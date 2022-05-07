@@ -909,22 +909,16 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         samples: crate::vk1_0::SampleCountFlagBits,
-        multisample_properties: Option<
-            crate::extensions::ext_sample_locations::MultisamplePropertiesEXT,
-        >,
-    ) -> crate::extensions::ext_sample_locations::MultisamplePropertiesEXT {
+        multisample_properties: &mut crate::extensions::ext_sample_locations::MultisamplePropertiesEXT,
+    ) -> () {
         let _function = self
             .get_physical_device_multisample_properties_ext
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut multisample_properties = match multisample_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             physical_device as _,
             samples as _,
-            &mut multisample_properties,
+            multisample_properties as _,
         );
-        multisample_properties
+        ()
     }
 }

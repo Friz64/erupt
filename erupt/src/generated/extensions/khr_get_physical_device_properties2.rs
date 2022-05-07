@@ -165,17 +165,13 @@ impl crate::InstanceLoader {
     pub unsafe fn get_physical_device_features2_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        features: Option<crate::vk1_1::PhysicalDeviceFeatures2>,
-    ) -> crate::vk1_1::PhysicalDeviceFeatures2 {
+        features: &mut crate::vk1_1::PhysicalDeviceFeatures2,
+    ) -> () {
         let _function = self
             .get_physical_device_features2_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut features = match features {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(physical_device as _, &mut features);
-        features
+        let _return = _function(physical_device as _, features as _);
+        ()
     }
     #[inline]
     #[track_caller]
@@ -184,17 +180,13 @@ impl crate::InstanceLoader {
     pub unsafe fn get_physical_device_properties2_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        properties: Option<crate::vk1_1::PhysicalDeviceProperties2>,
-    ) -> crate::vk1_1::PhysicalDeviceProperties2 {
+        properties: &mut crate::vk1_1::PhysicalDeviceProperties2,
+    ) -> () {
         let _function = self
             .get_physical_device_properties2_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut properties = match properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(physical_device as _, &mut properties);
-        properties
+        let _return = _function(physical_device as _, properties as _);
+        ()
     }
     #[inline]
     #[track_caller]
@@ -204,21 +196,17 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         format: crate::vk1_0::Format,
-        format_properties: Option<crate::vk1_1::FormatProperties2>,
-    ) -> crate::vk1_1::FormatProperties2 {
+        format_properties: &mut crate::vk1_1::FormatProperties2,
+    ) -> () {
         let _function = self
             .get_physical_device_format_properties2_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut format_properties = match format_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             physical_device as _,
             format as _,
-            &mut format_properties,
+            format_properties as _,
         );
-        format_properties
+        ()
     }
     #[inline]
     #[track_caller]
@@ -228,21 +216,17 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         image_format_info: &crate::vk1_1::PhysicalDeviceImageFormatInfo2,
-        image_format_properties: Option<crate::vk1_1::ImageFormatProperties2>,
-    ) -> crate::utils::VulkanResult<crate::vk1_1::ImageFormatProperties2> {
+        image_format_properties: &mut crate::vk1_1::ImageFormatProperties2,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_physical_device_image_format_properties2_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut image_format_properties = match image_format_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             physical_device as _,
             image_format_info as _,
-            &mut image_format_properties,
+            image_format_properties as _,
         );
-        crate::utils::VulkanResult::new(_return, image_format_properties)
+        crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[track_caller]
@@ -287,17 +271,13 @@ impl crate::InstanceLoader {
     pub unsafe fn get_physical_device_memory_properties2_khr(
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
-        memory_properties: Option<crate::vk1_1::PhysicalDeviceMemoryProperties2>,
-    ) -> crate::vk1_1::PhysicalDeviceMemoryProperties2 {
+        memory_properties: &mut crate::vk1_1::PhysicalDeviceMemoryProperties2,
+    ) -> () {
         let _function = self
             .get_physical_device_memory_properties2_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut memory_properties = match memory_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(physical_device as _, &mut memory_properties);
-        memory_properties
+        let _return = _function(physical_device as _, memory_properties as _);
+        ()
     }
     #[inline]
     #[track_caller]

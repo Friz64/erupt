@@ -634,24 +634,16 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         display_plane_info: &crate::extensions::khr_get_display_properties2::DisplayPlaneInfo2KHR,
-        capabilities: Option<
-            crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR,
-        > {
+        capabilities: &mut crate::extensions::khr_get_display_properties2::DisplayPlaneCapabilities2KHR,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_display_plane_capabilities2_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut capabilities = match capabilities {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             physical_device as _,
             display_plane_info as _,
-            &mut capabilities,
+            capabilities as _,
         );
-        crate::utils::VulkanResult::new(_return, capabilities)
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

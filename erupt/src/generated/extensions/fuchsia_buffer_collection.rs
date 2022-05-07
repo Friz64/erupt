@@ -1430,20 +1430,12 @@ impl crate::DeviceLoader {
     pub unsafe fn get_buffer_collection_properties_fuchsia(
         &self,
         collection: crate::extensions::fuchsia_buffer_collection::BufferCollectionFUCHSIA,
-        properties: Option<
-            crate::extensions::fuchsia_buffer_collection::BufferCollectionPropertiesFUCHSIA,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::fuchsia_buffer_collection::BufferCollectionPropertiesFUCHSIA,
-        > {
+        properties: &mut crate::extensions::fuchsia_buffer_collection::BufferCollectionPropertiesFUCHSIA,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_buffer_collection_properties_fuchsia
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut properties = match properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, collection as _, &mut properties);
-        crate::utils::VulkanResult::new(_return, properties)
+        let _return = _function(self.handle, collection as _, properties as _);
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

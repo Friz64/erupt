@@ -9141,17 +9141,13 @@ impl crate::DeviceLoader {
     pub unsafe fn get_device_buffer_memory_requirements(
         &self,
         info: &crate::vk1_3::DeviceBufferMemoryRequirements,
-        memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
-    ) -> crate::vk1_1::MemoryRequirements2 {
+        memory_requirements: &mut crate::vk1_1::MemoryRequirements2,
+    ) -> () {
         let _function = self
             .get_device_buffer_memory_requirements
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut memory_requirements = match memory_requirements {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, info as _, &mut memory_requirements);
-        memory_requirements
+        let _return = _function(self.handle, info as _, memory_requirements as _);
+        ()
     }
     #[inline]
     #[track_caller]
@@ -9160,17 +9156,13 @@ impl crate::DeviceLoader {
     pub unsafe fn get_device_image_memory_requirements(
         &self,
         info: &crate::vk1_3::DeviceImageMemoryRequirements,
-        memory_requirements: Option<crate::vk1_1::MemoryRequirements2>,
-    ) -> crate::vk1_1::MemoryRequirements2 {
+        memory_requirements: &mut crate::vk1_1::MemoryRequirements2,
+    ) -> () {
         let _function = self
             .get_device_image_memory_requirements
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut memory_requirements = match memory_requirements {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, info as _, &mut memory_requirements);
-        memory_requirements
+        let _return = _function(self.handle, info as _, memory_requirements as _);
+        ()
     }
     #[inline]
     #[track_caller]

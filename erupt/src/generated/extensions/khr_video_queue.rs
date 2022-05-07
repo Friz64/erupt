@@ -2453,23 +2453,17 @@ impl crate::InstanceLoader {
         &self,
         physical_device: crate::vk1_0::PhysicalDevice,
         video_profile: &crate::extensions::khr_video_queue::VideoProfileKHR,
-        capabilities: Option<crate::extensions::khr_video_queue::VideoCapabilitiesKHR>,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::khr_video_queue::VideoCapabilitiesKHR,
-        > {
+        capabilities: &mut crate::extensions::khr_video_queue::VideoCapabilitiesKHR,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_physical_device_video_capabilities_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut capabilities = match capabilities {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             physical_device as _,
             video_profile as _,
-            &mut capabilities,
+            capabilities as _,
         );
-        crate::utils::VulkanResult::new(_return, capabilities)
+        crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[track_caller]

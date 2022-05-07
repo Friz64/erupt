@@ -1297,21 +1297,13 @@ impl crate::DeviceLoader {
     #[doc(alias = "vkGetDeviceGroupPresentCapabilitiesKHR")]
     pub unsafe fn get_device_group_present_capabilities_khr(
         &self,
-        device_group_present_capabilities: Option<
-            crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR,
-        > {
+        device_group_present_capabilities: &mut crate::extensions::khr_swapchain::DeviceGroupPresentCapabilitiesKHR,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_device_group_present_capabilities_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut device_group_present_capabilities = match device_group_present_capabilities {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, &mut device_group_present_capabilities);
-        crate::utils::VulkanResult::new(_return, device_group_present_capabilities)
+        let _return = _function(self.handle, device_group_present_capabilities as _);
+        crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[track_caller]

@@ -352,25 +352,17 @@ impl crate::DeviceLoader {
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
         zircon_handle: *mut std::ffi::c_void,
-        memory_zircon_handle_properties: Option<
-            crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA,
-        > {
+        memory_zircon_handle_properties: &mut crate::extensions::fuchsia_external_memory::MemoryZirconHandlePropertiesFUCHSIA,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_memory_zircon_handle_properties_fuchsia
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut memory_zircon_handle_properties = match memory_zircon_handle_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             self.handle,
             handle_type as _,
             zircon_handle,
-            &mut memory_zircon_handle_properties,
+            memory_zircon_handle_properties as _,
         );
-        crate::utils::VulkanResult::new(_return, memory_zircon_handle_properties)
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

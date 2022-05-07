@@ -254,20 +254,12 @@ impl crate::DeviceLoader {
     pub unsafe fn get_image_view_address_nvx(
         &self,
         image_view: crate::vk1_0::ImageView,
-        properties: Option<
-            crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
-        > {
+        properties: &mut crate::extensions::nvx_image_view_handle::ImageViewAddressPropertiesNVX,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_image_view_address_nvx
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut properties = match properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, image_view as _, &mut properties);
-        crate::utils::VulkanResult::new(_return, properties)
+        let _return = _function(self.handle, image_view as _, properties as _);
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

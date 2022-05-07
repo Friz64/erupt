@@ -888,20 +888,12 @@ impl crate::DeviceLoader {
     pub unsafe fn get_image_drm_format_modifier_properties_ext(
         &self,
         image: crate::vk1_0::Image,
-        properties: Option<
-            crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
-        > {
+        properties: &mut crate::extensions::ext_image_drm_format_modifier::ImageDrmFormatModifierPropertiesEXT,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_image_drm_format_modifier_properties_ext
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut properties = match properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, image as _, &mut properties);
-        crate::utils::VulkanResult::new(_return, properties)
+        let _return = _function(self.handle, image as _, properties as _);
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

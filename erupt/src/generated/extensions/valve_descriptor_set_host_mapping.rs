@@ -353,19 +353,13 @@ impl crate::DeviceLoader {
     pub unsafe fn get_descriptor_set_layout_host_mapping_info_valve(
         &self,
         binding_reference: &crate::extensions::valve_descriptor_set_host_mapping::DescriptorSetBindingReferenceVALVE,
-        host_mapping: Option<
-            crate::extensions::valve_descriptor_set_host_mapping::DescriptorSetLayoutHostMappingInfoVALVE,
-        >,
-    ) -> crate::extensions::valve_descriptor_set_host_mapping::DescriptorSetLayoutHostMappingInfoVALVE {
+        host_mapping: &mut crate::extensions::valve_descriptor_set_host_mapping::DescriptorSetLayoutHostMappingInfoVALVE,
+    ) -> () {
         let _function = self
             .get_descriptor_set_layout_host_mapping_info_valve
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut host_mapping = match host_mapping {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, binding_reference as _, &mut host_mapping);
-        host_mapping
+        let _return = _function(self.handle, binding_reference as _, host_mapping as _);
+        ()
     }
     #[inline]
     #[track_caller]

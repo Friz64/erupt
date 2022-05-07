@@ -888,21 +888,13 @@ impl crate::DeviceLoader {
     pub unsafe fn get_android_hardware_buffer_properties_android(
         &self,
         buffer: &crate::extensions::android_external_memory_android_hardware_buffer::AHardwareBuffer,
-        properties: Option<
-            crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID,
-        > {
+        properties: &mut crate::extensions::android_external_memory_android_hardware_buffer::AndroidHardwareBufferPropertiesANDROID,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_android_hardware_buffer_properties_android
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut properties = match properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
-        let _return = _function(self.handle, buffer as _, &mut properties);
-        crate::utils::VulkanResult::new(_return, properties)
+        let _return = _function(self.handle, buffer as _, properties as _);
+        crate::utils::VulkanResult::new(_return, ())
     }
     #[inline]
     #[track_caller]

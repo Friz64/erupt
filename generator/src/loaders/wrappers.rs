@@ -21,9 +21,6 @@ enum ParameterKind {
     ValueWrittenTo {
         inner: Type,
     },
-    ValueWrittenToChained {
-        inner: Type,
-    },
     ArrayWrittenTo {
         inner: Type,
         length: String,
@@ -119,9 +116,7 @@ impl ParameterKind {
                             if let Type::Named(Name::Type(type_name)) = &**to {
                                 if let Some(structure) = source.find_structure(type_name) {
                                     if structure.has_p_next(Mutability::Mut) {
-                                        *param_kind = Some(ParameterKind::ValueWrittenToChained {
-                                            inner: (**to).clone(),
-                                        });
+                                        *param_kind = Some(ParameterKind::Regular);
                                     }
                                 }
                             }
@@ -267,26 +262,6 @@ impl Function {
 
                     return_init.extend(quote! {
                         let mut #cleaned_ident = #default;
-                    });
-
-                    return_values.push(Value::new(quote! { #cleaned_ident }, inner).map_bool());
-
-                    quote! { &mut #cleaned_ident }
-                }
-                ParameterKind::ValueWrittenToChained { inner } => {
-                    let mut user_param = param.clone();
-                    user_param.ty = Type::Option(Box::new(inner.clone()));
-                    user_params.push(user_param);
-
-                    let mut inner_declaration = param;
-                    inner_declaration.ty = inner.clone();
-                    let default = inner_declaration.default_impl(source);
-
-                    return_init.extend(quote! {
-                        let mut #cleaned_ident = match #cleaned_ident {
-                            Some(v) => v,
-                            None => #default,
-                        };
                     });
 
                     return_values.push(Value::new(quote! { #cleaned_ident }, inner).map_bool());

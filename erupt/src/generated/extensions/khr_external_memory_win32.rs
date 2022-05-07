@@ -458,25 +458,17 @@ impl crate::DeviceLoader {
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
         handle: *mut std::ffi::c_void,
-        memory_win32_handle_properties: Option<
-            crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
-        > {
+        memory_win32_handle_properties: &mut crate::extensions::khr_external_memory_win32::MemoryWin32HandlePropertiesKHR,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_memory_win32_handle_properties_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut memory_win32_handle_properties = match memory_win32_handle_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             self.handle,
             handle_type as _,
             handle,
-            &mut memory_win32_handle_properties,
+            memory_win32_handle_properties as _,
         );
-        crate::utils::VulkanResult::new(_return, memory_win32_handle_properties)
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

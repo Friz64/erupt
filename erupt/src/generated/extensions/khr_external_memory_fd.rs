@@ -333,25 +333,17 @@ impl crate::DeviceLoader {
         &self,
         handle_type: crate::vk1_1::ExternalMemoryHandleTypeFlagBits,
         fd: std::os::raw::c_int,
-        memory_fd_properties: Option<
-            crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR,
-        >,
-    ) -> crate::utils::VulkanResult<
-            crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR,
-        > {
+        memory_fd_properties: &mut crate::extensions::khr_external_memory_fd::MemoryFdPropertiesKHR,
+    ) -> crate::utils::VulkanResult<()> {
         let _function = self
             .get_memory_fd_properties_khr
             .expect(crate::NOT_LOADED_MESSAGE);
-        let mut memory_fd_properties = match memory_fd_properties {
-            Some(v) => v,
-            None => Default::default(),
-        };
         let _return = _function(
             self.handle,
             handle_type as _,
             fd as _,
-            &mut memory_fd_properties,
+            memory_fd_properties as _,
         );
-        crate::utils::VulkanResult::new(_return, memory_fd_properties)
+        crate::utils::VulkanResult::new(_return, ())
     }
 }

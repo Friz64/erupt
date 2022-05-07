@@ -33,22 +33,19 @@ fn main() {
             let mut vk1_2features = vk::PhysicalDeviceVulkan12FeaturesBuilder::new();
             let mut vk1_3features = vk::PhysicalDeviceVulkan13FeaturesBuilder::new();
 
-            let mut device_features2_builder =
+            let mut device_features2 =
                 vk::PhysicalDeviceFeatures2Builder::new().extend_from(&mut vk1_1features);
 
             if vk1_2 {
-                device_features2_builder = device_features2_builder.extend_from(&mut vk1_2features);
+                device_features2 = device_features2.extend_from(&mut vk1_2features);
             }
 
             if vk1_3 {
-                device_features2_builder = device_features2_builder.extend_from(&mut vk1_3features);
+                device_features2 = device_features2.extend_from(&mut vk1_3features);
             }
 
-            let device_features2 = unsafe {
-                instance.get_physical_device_features2(
-                    physical_device,
-                    Some(device_features2_builder.build_dangling()),
-                )
+            unsafe {
+                instance.get_physical_device_features2(physical_device, &mut device_features2)
             };
 
             println!("Vulkan 1.0 Features: {:?}", device_features2.features);

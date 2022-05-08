@@ -785,23 +785,8 @@ unsafe fn insert_ptr_chain(
 
 #[cfg(test)]
 mod tests {
-    use super::{vk, ExtendableFrom};
-    use std::{iter, ptr};
-
-    // safety: assumes all pointers in the pointer chain are valid
-    unsafe fn iterate_ptr_chain(
-        mut item: *mut vk::BaseOutStructure,
-    ) -> impl Iterator<Item = *mut vk::BaseOutStructure> {
-        iter::from_fn(move || unsafe {
-            if item.is_null() {
-                None
-            } else {
-                let current_item = item;
-                item = (*item).p_next;
-                Some(current_item)
-            }
-        })
-    }
+    use super::*;
+    use std::ptr;
 
     #[test]
     fn ptr_chain_simple() {
@@ -852,7 +837,8 @@ mod tests {
             super::insert_ptr_chain(s1, s6);
         }
 
-        let mut iter = unsafe { iterate_ptr_chain(s1) }.map(|item| unsafe { (*item).s_type.0 });
+        let mut iter =
+            unsafe { utils::iterate_ptr_chain(s1) }.map(|item| unsafe { (*item).s_type.0 });
         assert_eq!(iter.next(), Some(1));
         assert_eq!(iter.next(), Some(6));
         assert_eq!(iter.next(), Some(5));
@@ -911,7 +897,8 @@ mod tests {
             super::insert_ptr_chain(s1, s4);
         }
 
-        let mut iter = unsafe { iterate_ptr_chain(s1) }.map(|item| unsafe { (*item).s_type.0 });
+        let mut iter =
+            unsafe { utils::iterate_ptr_chain(s1) }.map(|item| unsafe { (*item).s_type.0 });
         assert_eq!(iter.next(), Some(1));
         assert_eq!(iter.next(), Some(4));
         assert_eq!(iter.next(), Some(5));
@@ -930,7 +917,8 @@ mod tests {
             .extend_from(&mut vk1_2features);
 
         let base_ptr = ptr::addr_of_mut!(features) as *mut vk::BaseOutStructure;
-        let mut iter = unsafe { iterate_ptr_chain(base_ptr) }.map(|item| unsafe { (*item).s_type });
+        let mut iter =
+            unsafe { utils::iterate_ptr_chain(base_ptr) }.map(|item| unsafe { (*item).s_type });
         assert_eq!(
             iter.next(),
             Some(vk::StructureType::PHYSICAL_DEVICE_FEATURES_2)

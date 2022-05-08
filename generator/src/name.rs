@@ -205,6 +205,14 @@ impl TypeName {
         TypeName::new("VkBool32")
     }
 
+    pub fn physical_device_features() -> TypeName {
+        TypeName::new("VkPhysicalDeviceFeatures")
+    }
+
+    pub fn physical_device_features2() -> TypeName {
+        TypeName::new("VkPhysicalDeviceFeatures2")
+    }
+
     pub fn command_buffer() -> TypeName {
         TypeName::new("VkCommandBuffer")
     }

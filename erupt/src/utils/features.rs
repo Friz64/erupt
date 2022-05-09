@@ -13,6 +13,8 @@ use std::{
 /// [`vk::BaseOutStructure`](crate::vk1_0::BaseOutStructure) of
 /// [`vk::PhysicalDeviceFeatures2`](crate::vk1_1::PhysicalDeviceFeatures2)
 /// or any of the structs extending it.
+///
+/// Returns `None` if the structure type is not a known features struct.
 pub fn features2_bool_count(structure_type: crate::vk1_0::StructureType) -> Option<usize> {
     crate::features2_bool_count(structure_type)
 }
@@ -29,7 +31,7 @@ pub struct AbstractFeaturesNode {
     /// the next node in the chain.
     pub base: vk::BaseOutStructure,
     /// A list of 4-byte Vulkan booleans for every feature. The length of this
-    /// array is stored in the reference/pointer to this struct but can always
+    /// array is stored in the reference/pointer to this struct but can also
     /// be determined with [`features2_bool_count`].
     pub bools: [vk::Bool32],
 }
@@ -79,6 +81,9 @@ impl AbstractFeaturesNode {
     }
 
     /// Returns the layout for the structure type along with its bool count.
+    ///
+    /// Errors: [`AbstractFeaturesNodeError::UnknownFeaturesStruct`],
+    /// [`AbstractFeaturesNodeError::MemoryAllocationFailed`]
     pub unsafe fn layout(
         s_type: vk::StructureType,
     ) -> Result<(Layout, usize), AbstractFeaturesNodeError> {
@@ -185,6 +190,7 @@ pub unsafe fn supported(
             .zip((*supported_node).bools.iter())
             .all(|(query, supported)| *query == 0 || *supported != 0)
         {
+            AbstractFeaturesNode::free_chain(copied)?;
             return Ok(false);
         }
     }

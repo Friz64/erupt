@@ -44,6 +44,7 @@ instance.destroy_instance(None);
 
 - [triangle](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/triangle.rs)
 - [pointer_chain](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/pointer_chain.rs)
+- [features](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/features.rs)
 - [version](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/version.rs)
 - [custom_loaders](https://gitlab.com/Friz64/erupt/-/blob/main/erupt_examples/src/bin/custom_loaders.rs)
 

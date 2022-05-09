@@ -3,7 +3,7 @@
 use erupt::{
     cstr,
     utils::{self, surface},
-    vk, DeviceLoader, EntryLoader, InstanceLoader,
+    vk, DeviceLoader, EntryLoader, InstanceLoader, ObjectHandle,
 };
 use std::{
     ffi::{c_void, CStr, CString},

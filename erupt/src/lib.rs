@@ -181,26 +181,15 @@ macro_rules! non_dispatchable_handle {
         #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy, Hash, Default)]
         pub struct $name(pub u64);
 
-        impl $name {
-            /// The [`vk::ObjectType`](`crate::vk1_0::ObjectType`) of this handle.
-            pub const TYPE: $crate::vk1_0::ObjectType = $crate::vk1_0::ObjectType::$ty;
+        impl $crate::ObjectHandle for $name {
+            const TYPE: $crate::vk1_0::ObjectType = $crate::vk1_0::ObjectType::$ty;
 
-            /// Returns a null handle.
-            pub const fn null() -> $name {
-                $name(0)
-            }
-
-            /// Returns `true` if this handle is null.
-            pub const fn is_null(&self) -> bool {
-                self.0 == 0
-            }
-
-            /// Returns the raw handle value.
-            ///
-            /// This may for example be useful [here](`crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder::object_handle`).
-            #[inline]
-            pub fn object_handle(&self) -> u64 {
+            fn to_raw(self) -> u64 {
                 self.0
+            }
+
+            fn from_raw(raw: u64) -> Self {
+                $name(raw)
             }
         }
 
@@ -229,26 +218,15 @@ macro_rules! dispatchable_handle {
         #[derive(Eq, PartialEq, Ord, PartialOrd, Clone, Copy, Hash)]
         pub struct $name(pub *mut ());
 
-        impl $name {
-            /// The [`vk::ObjectType`](`crate::vk1_0::ObjectType`) of this handle.
-            pub const TYPE: $crate::vk1_0::ObjectType = $crate::vk1_0::ObjectType::$ty;
+        impl $crate::ObjectHandle for $name {
+            const TYPE: $crate::vk1_0::ObjectType = $crate::vk1_0::ObjectType::$ty;
 
-            /// Returns a null handle.
-            pub const fn null() -> Self {
-                $name(std::ptr::null_mut())
-            }
-
-            /// Returns `true` if this handle is null.
-            pub fn is_null(&self) -> bool {
-                self.0.is_null()
-            }
-
-            /// Returns the raw handle value.
-            ///
-            /// This may for example be useful [here](`crate::extensions::ext_debug_utils::DebugUtilsObjectNameInfoEXTBuilder::object_handle`).
-            #[inline]
-            pub fn object_handle(&self) -> u64 {
+            fn to_raw(self) -> u64 {
                 self.0 as u64
+            }
+
+            fn from_raw(raw: u64) -> Self {
+                $name(raw as _)
             }
         }
 
@@ -257,7 +235,7 @@ macro_rules! dispatchable_handle {
 
         impl Default for $name {
             fn default() -> $name {
-                $name::null()
+                $name(std::ptr::null_mut())
             }
         }
 
@@ -727,6 +705,33 @@ impl Debug for DeviceLoader {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         Debug::fmt(&self.handle, f)
     }
+}
+
+/// Vulkan object handles (dispatchable and non-dispatchable).
+///
+/// This can be useful for building generic abstractions around functions like
+/// [`DeviceLoader::debug_marker_set_object_name_ext`].
+pub trait ObjectHandle: Default + PartialEq {
+    /// An abstract object type.
+    const TYPE: vk1_0::ObjectType;
+
+    /// Get the null handle for this object.
+    ///
+    /// This is the same as [`Default::default`].
+    fn null() -> Self {
+        Default::default()
+    }
+
+    /// Is this handle null / [`Default::default`]?
+    fn is_null(self) -> bool {
+        self == Self::null()
+    }
+
+    /// Get this object's raw handle.
+    fn to_raw(self) -> u64;
+
+    /// Construct an object from an raw handle.
+    fn from_raw(raw: u64) -> Self;
 }
 
 /// Provides type-safe pointer chain support.

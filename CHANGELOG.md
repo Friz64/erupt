@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `features` utilities module for checking supported features
 - Add `features` example showcasing the `features` module
+- Introduce `ObjectHandle` trait
 
 ### Changed
 

@@ -5982,6 +5982,345 @@ impl DeviceLoader {
         })
     }
 }
+pub(crate) fn features2_bool_count(
+    structure_type: crate::vk1_0::StructureType,
+) -> Option<usize> {
+    match structure_type {
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_GENERATED_COMMANDS_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PRIVATE_DATA_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FEATURES_2 => Some(55usize),
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_VARIABLE_POINTERS_FEATURES => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTIVIEW_FEATURES => Some(3usize),
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PRESENT_ID_FEATURES_KHR => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PRESENT_WAIT_FEATURES_KHR => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_16BIT_STORAGE_FEATURES => {
+            Some(4usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_EXTENDED_TYPES_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SAMPLER_YCBCR_CONVERSION_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROTECTED_MEMORY_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_BLEND_OPERATION_ADVANCED_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_MULTI_DRAW_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_INLINE_UNIFORM_BLOCK_FEATURES => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_MAINTENANCE_4_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DRAW_PARAMETERS_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_FLOAT16_INT8_FEATURES => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_HOST_QUERY_RESET_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_GLOBAL_PRIORITY_QUERY_FEATURES_KHR => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEVICE_MEMORY_REPORT_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES => {
+            Some(20usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_TIMELINE_SEMAPHORE_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_8BIT_STORAGE_FEATURES => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_CONDITIONAL_RENDERING_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_MEMORY_MODEL_FEATURES => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_INT64_FEATURES => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_FEATURES_EXT => {
+            Some(12usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_ATOMIC_FLOAT_2_FEATURES_EXT => {
+            Some(12usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_ATTRIBUTE_DIVISOR_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_ASTC_DECODE_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_TRANSFORM_FEEDBACK_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_REPRESENTATIVE_FRAGMENT_TEST_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXCLUSIVE_SCISSOR_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_CORNER_SAMPLED_IMAGE_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_COMPUTE_SHADER_DERIVATIVES_FEATURES_NV => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_BARYCENTRIC_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_FOOTPRINT_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEDICATED_ALLOCATION_IMAGE_ALIASING_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADING_RATE_IMAGE_FEATURES_NV => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_INVOCATION_MASK_FEATURES_HUAWEI => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_MESH_SHADER_FEATURES_NV => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR => {
+            Some(5usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_PIPELINE_FEATURES_KHR => {
+            Some(5usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_2_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_OFFSET_FEATURES_QCOM => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SCALAR_BLOCK_LAYOUT_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_UNIFORM_BUFFER_STANDARD_LAYOUT_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEPTH_CLIP_ENABLE_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_MEMORY_PRIORITY_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PAGEABLE_DEVICE_LOCAL_MEMORY_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_BUFFER_DEVICE_ADDRESS_FEATURES_EXT => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGELESS_FRAMEBUFFER_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXTURE_COMPRESSION_ASTC_HDR_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_COOPERATIVE_MATRIX_FEATURES_NV => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_YCBCR_IMAGE_ARRAYS_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PERFORMANCE_QUERY_FEATURES_KHR => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_COVERAGE_REDUCTION_MODE_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_FUNCTIONS_2_FEATURES_INTEL => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_CLOCK_FEATURES_KHR => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_INDEX_TYPE_UINT8_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SM_BUILTINS_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADER_INTERLOCK_FEATURES_EXT => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SEPARATE_DEPTH_STENCIL_LAYOUTS_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PRIMITIVE_TOPOLOGY_LIST_RESTART_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_EXECUTABLE_PROPERTIES_FEATURES_KHR => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_DEMOTE_TO_HELPER_INVOCATION_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_TEXEL_BUFFER_ALIGNMENT_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBGROUP_SIZE_CONTROL_FEATURES => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINE_RASTERIZATION_FEATURES_EXT => {
+            Some(6usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_CREATION_CACHE_CONTROL_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_1_FEATURES => Some(12usize),
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_2_FEATURES => Some(47usize),
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_VULKAN_1_3_FEATURES => Some(15usize),
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_COHERENT_MEMORY_FEATURES_AMD => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_CUSTOM_BORDER_COLOR_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_BORDER_COLOR_SWIZZLE_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DIAGNOSTICS_CONFIG_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_ZERO_INITIALIZE_WORKGROUP_MEMORY_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_SUBGROUP_UNIFORM_CONTROL_FLOW_FEATURES_KHR => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_ROBUSTNESS_2_FEATURES_EXT => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_ROBUSTNESS_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR => {
+            Some(4usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PORTABILITY_SUBSET_FEATURES_KHR => {
+            Some(15usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBPASS_SHADING_FEATURES_HUAWEI => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_IMAGE_ATOMIC_INT64_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_FEATURES_KHR => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_TERMINATE_INVOCATION_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_SHADING_RATE_ENUMS_FEATURES_NV => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_2D_VIEW_OF_3D_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_MUTABLE_DESCRIPTOR_TYPE_FEATURES_VALVE => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DEPTH_CLIP_CONTROL_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_VERTEX_INPUT_DYNAMIC_STATE_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_COLOR_WRITE_ENABLE_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SYNCHRONIZATION_2_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PRIMITIVES_GENERATED_QUERY_FEATURES_EXT => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_INHERITED_VIEWPORT_SCISSOR_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_YCBCR_2_PLANE_444_FORMATS_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PROVOKING_VERTEX_FEATURES_EXT => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SHADER_INTEGER_DOT_PRODUCT_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_MOTION_BLUR_FEATURES_NV => {
+            Some(2usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_RGBA10X6_FORMATS_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DYNAMIC_RENDERING_FEATURES => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_RASTERIZATION_ORDER_ATTACHMENT_ACCESS_FEATURES_ARM => {
+            Some(3usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_DESCRIPTOR_SET_HOST_MAPPING_FEATURES_VALVE => {
+            Some(1usize)
+        }
+        _ => None,
+    }
+}
 /// Provides Vulkan feature items.
 pub mod vk1_0;
 /// Provides Vulkan feature items.

@@ -1,4 +1,6 @@
-use crate::{comment_gen::DocCommentGen, items::defines, loaders, origin::Origin, source::Source};
+use crate::{
+    comment_gen::DocCommentGen, items::defines, loaders, origin::Origin, source::Source, utilgen,
+};
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 use std::{
@@ -205,6 +207,7 @@ pub fn generate(source: &Source) {
 
     codemap.extend(defines::tokens(&comment_gen));
     codemap.extend(loaders::tokens(&comment_gen, source));
+    codemap.extend(utilgen::tokens(source));
 
     codemap.write(
         "erupt/src/generated/",

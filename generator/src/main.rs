@@ -7,6 +7,7 @@ mod loaders;
 mod name;
 mod origin;
 mod source;
+mod utilgen;
 
 use log::LevelFilter;
 pub use roxmltree::Node as XmlNode;

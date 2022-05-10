@@ -136,6 +136,10 @@ pub use crate::extensions::ext_host_query_reset::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_image_2d_view_of_3d::*;
 #[doc(no_inline)]
+pub use crate::extensions::ext_image_compression_control::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_image_compression_control_swapchain::*;
+#[doc(no_inline)]
 pub use crate::extensions::ext_image_drm_format_modifier::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_image_robustness::*;
@@ -167,6 +171,8 @@ pub use crate::extensions::ext_physical_device_drm::*;
 pub use crate::extensions::ext_pipeline_creation_cache_control::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_pipeline_creation_feedback::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_pipeline_properties::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_post_depth_coverage::*;
 #[doc(no_inline)]
@@ -209,6 +215,8 @@ pub use crate::extensions::ext_shader_subgroup_vote::*;
 pub use crate::extensions::ext_shader_viewport_index_layer::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_subgroup_size_control::*;
+#[doc(no_inline)]
+pub use crate::extensions::ext_subpass_merge_feedback::*;
 #[doc(no_inline)]
 pub use crate::extensions::ext_swapchain_colorspace::*;
 #[doc(no_inline)]
@@ -385,6 +393,8 @@ pub use crate::extensions::khr_present_wait::*;
 pub use crate::extensions::khr_push_descriptor::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_ray_query::*;
+#[doc(no_inline)]
+pub use crate::extensions::khr_ray_tracing_maintenance1::*;
 #[doc(no_inline)]
 pub use crate::extensions::khr_ray_tracing_pipeline::*;
 #[doc(no_inline)]

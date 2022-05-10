@@ -247,7 +247,8 @@ bitflags::bitflags! {
     FRAGMENT_DENSITY_MAP_READ_EXT = AccessFlagBits2::FRAGMENT_DENSITY_MAP_READ_EXT.0;
     const COLOR_ATTACHMENT_READ_NONCOHERENT_EXT =
     AccessFlagBits2::COLOR_ATTACHMENT_READ_NONCOHERENT_EXT.0; const
-    INVOCATION_MASK_READ_HUAWEI = AccessFlagBits2::INVOCATION_MASK_READ_HUAWEI.0; }
+    INVOCATION_MASK_READ_HUAWEI = AccessFlagBits2::INVOCATION_MASK_READ_HUAWEI.0; const
+    SHADER_BINDING_TABLE_READ_KHR = AccessFlagBits2::SHADER_BINDING_TABLE_READ_KHR.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkAccessFlagBits2.html) · Bits enum of [`AccessFlags2`]
 #[doc(alias = "VkAccessFlagBits2")]
@@ -344,6 +345,7 @@ impl std::fmt::Debug for AccessFlagBits2 {
                     "COLOR_ATTACHMENT_READ_NONCOHERENT_EXT"
                 }
                 &Self::INVOCATION_MASK_READ_HUAWEI => "INVOCATION_MASK_READ_HUAWEI",
+                &Self::SHADER_BINDING_TABLE_READ_KHR => "SHADER_BINDING_TABLE_READ_KHR",
                 _ => "(unknown variant)",
             },
         )
@@ -467,7 +469,9 @@ bitflags::bitflags! {
     .0; const TASK_SHADER_NV = PipelineStageFlagBits2::TASK_SHADER_NV.0; const
     MESH_SHADER_NV = PipelineStageFlagBits2::MESH_SHADER_NV.0; const
     SUBPASS_SHADING_HUAWEI = PipelineStageFlagBits2::SUBPASS_SHADING_HUAWEI.0; const
-    INVOCATION_MASK_HUAWEI = PipelineStageFlagBits2::INVOCATION_MASK_HUAWEI.0; }
+    INVOCATION_MASK_HUAWEI = PipelineStageFlagBits2::INVOCATION_MASK_HUAWEI.0; const
+    ACCELERATION_STRUCTURE_COPY_KHR =
+    PipelineStageFlagBits2::ACCELERATION_STRUCTURE_COPY_KHR.0; }
 }
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VkPipelineStageFlagBits2.html) · Bits enum of [`PipelineStageFlags2`]
 #[doc(alias = "VkPipelineStageFlagBits2")]
@@ -563,6 +567,9 @@ impl std::fmt::Debug for PipelineStageFlagBits2 {
                 &Self::MESH_SHADER_NV => "MESH_SHADER_NV",
                 &Self::SUBPASS_SHADING_HUAWEI => "SUBPASS_SHADING_HUAWEI",
                 &Self::INVOCATION_MASK_HUAWEI => "INVOCATION_MASK_HUAWEI",
+                &Self::ACCELERATION_STRUCTURE_COPY_KHR => {
+                    "ACCELERATION_STRUCTURE_COPY_KHR"
+                }
                 _ => "(unknown variant)",
             },
         )

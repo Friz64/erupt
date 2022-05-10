@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update Vulkan Headers to version 212
+- Update Vulkan Headers to version 213
 - Change from `Box` to reference in `create_{instance,device}_fn`
 - Pointer chain wrapper args are now a mut ref
 

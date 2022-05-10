@@ -127,6 +127,10 @@ pub mod ext_headless_surface;
 pub mod ext_host_query_reset;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_2d_view_of_3d.html) · Vulkan extension
 pub mod ext_image_2d_view_of_3d;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control.html) · Vulkan extension
+pub mod ext_image_compression_control;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_compression_control_swapchain.html) · Vulkan extension
+pub mod ext_image_compression_control_swapchain;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_drm_format_modifier.html) · Vulkan extension
 pub mod ext_image_drm_format_modifier;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_image_robustness.html) · Vulkan extension
@@ -159,6 +163,8 @@ pub mod ext_physical_device_drm;
 pub mod ext_pipeline_creation_cache_control;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_creation_feedback.html) · Vulkan extension
 pub mod ext_pipeline_creation_feedback;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_pipeline_properties.html) · Vulkan extension
+pub mod ext_pipeline_properties;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_post_depth_coverage.html) · Vulkan extension
 pub mod ext_post_depth_coverage;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_primitive_topology_list_restart.html) · Vulkan extension
@@ -201,6 +207,8 @@ pub mod ext_shader_subgroup_vote;
 pub mod ext_shader_viewport_index_layer;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_subgroup_size_control.html) · Vulkan extension
 pub mod ext_subgroup_size_control;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_subpass_merge_feedback.html) · Vulkan extension
+pub mod ext_subpass_merge_feedback;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_swapchain_colorspace.html) · Vulkan extension
 pub mod ext_swapchain_colorspace;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_EXT_texel_buffer_alignment.html) · Vulkan extension
@@ -377,6 +385,8 @@ pub mod khr_present_wait;
 pub mod khr_push_descriptor;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_query.html) · Vulkan extension
 pub mod khr_ray_query;
+///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_tracing_maintenance1.html) · Vulkan extension
+pub mod khr_ray_tracing_maintenance1;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_ray_tracing_pipeline.html) · Vulkan extension
 pub mod khr_ray_tracing_pipeline;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_KHR_relaxed_block_layout.html) · Vulkan extension

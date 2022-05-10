@@ -1543,6 +1543,7 @@ pub struct DeviceEnabled {
     pub khr_acceleration_structure: bool,
     pub khr_ray_tracing_pipeline: bool,
     pub nv_cooperative_matrix: bool,
+    pub khr_ray_tracing_maintenance1: bool,
     pub nvx_image_view_handle: bool,
     pub ext_full_screen_exclusive: bool,
     pub khr_performance_query: bool,
@@ -1566,6 +1567,8 @@ pub struct DeviceEnabled {
     pub khr_present_wait: bool,
     pub fuchsia_buffer_collection: bool,
     pub valve_descriptor_set_host_mapping: bool,
+    pub ext_image_compression_control: bool,
+    pub ext_pipeline_properties: bool,
     pub ext_host_query_reset: bool,
     pub khr_maintenance1: bool,
     pub khr_device_group: bool,
@@ -1721,6 +1724,9 @@ impl DeviceEnabled {
             nv_cooperative_matrix: enabled_extension(
                 crate::extensions::nv_cooperative_matrix::NV_COOPERATIVE_MATRIX_EXTENSION_NAME,
             ),
+            khr_ray_tracing_maintenance1: enabled_extension(
+                crate::extensions::khr_ray_tracing_maintenance1::KHR_RAY_TRACING_MAINTENANCE_1_EXTENSION_NAME,
+            ),
             nvx_image_view_handle: enabled_extension(
                 crate::extensions::nvx_image_view_handle::NVX_IMAGE_VIEW_HANDLE_EXTENSION_NAME,
             ),
@@ -1789,6 +1795,12 @@ impl DeviceEnabled {
             ),
             valve_descriptor_set_host_mapping: enabled_extension(
                 crate::extensions::valve_descriptor_set_host_mapping::VALVE_DESCRIPTOR_SET_HOST_MAPPING_EXTENSION_NAME,
+            ),
+            ext_image_compression_control: enabled_extension(
+                crate::extensions::ext_image_compression_control::EXT_IMAGE_COMPRESSION_CONTROL_EXTENSION_NAME,
+            ),
+            ext_pipeline_properties: enabled_extension(
+                crate::extensions::ext_pipeline_properties::EXT_PIPELINE_PROPERTIES_EXTENSION_NAME,
             ),
             ext_host_query_reset: enabled_extension(
                 crate::extensions::ext_host_query_reset::EXT_HOST_QUERY_RESET_EXTENSION_NAME,
@@ -2383,6 +2395,9 @@ pub struct DeviceLoader {
     pub cmd_trace_rays_indirect_khr: Option<
         extensions::khr_ray_tracing_pipeline::PFN_vkCmdTraceRaysIndirectKHR,
     >,
+    pub cmd_trace_rays_indirect2_khr: Option<
+        extensions::khr_ray_tracing_maintenance1::PFN_vkCmdTraceRaysIndirect2KHR,
+    >,
     pub get_device_acceleration_structure_compatibility_khr: Option<
         extensions::khr_acceleration_structure::PFN_vkGetDeviceAccelerationStructureCompatibilityKHR,
     >,
@@ -2635,6 +2650,12 @@ pub struct DeviceLoader {
     >,
     pub get_descriptor_set_host_mapping_valve: Option<
         extensions::valve_descriptor_set_host_mapping::PFN_vkGetDescriptorSetHostMappingVALVE,
+    >,
+    pub get_image_subresource_layout2_ext: Option<
+        extensions::ext_image_compression_control::PFN_vkGetImageSubresourceLayout2EXT,
+    >,
+    pub get_pipeline_properties_ext: Option<
+        extensions::ext_pipeline_properties::PFN_vkGetPipelinePropertiesEXT,
     >,
     pub reset_query_pool_ext: Option<
         extensions::ext_host_query_reset::PFN_vkResetQueryPoolEXT,
@@ -4456,6 +4477,17 @@ impl DeviceLoader {
             } else {
                 None
             },
+            cmd_trace_rays_indirect2_khr: if (device_enabled.khr_ray_tracing_maintenance1
+                && device_enabled.khr_ray_tracing_pipeline)
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::khr_ray_tracing_maintenance1::FN_CMD_TRACE_RAYS_INDIRECT2_KHR,
+                    ),
+                )
+            } else {
+                None
+            },
             get_device_acceleration_structure_compatibility_khr: if device_enabled
                 .khr_acceleration_structure
             {
@@ -5339,6 +5371,26 @@ impl DeviceLoader {
             } else {
                 None
             },
+            get_image_subresource_layout2_ext: if device_enabled
+                .ext_image_compression_control
+            {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_image_compression_control::FN_GET_IMAGE_SUBRESOURCE_LAYOUT2_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
+            get_pipeline_properties_ext: if device_enabled.ext_pipeline_properties {
+                std::mem::transmute(
+                    symbol(
+                        crate::extensions::ext_pipeline_properties::FN_GET_PIPELINE_PROPERTIES_EXT,
+                    ),
+                )
+            } else {
+                None
+            },
             reset_query_pool_ext: if device_enabled.ext_host_query_reset {
                 std::mem::transmute(
                     symbol(
@@ -6114,6 +6166,9 @@ pub(crate) fn features2_bool_count(
         crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR => {
             Some(1usize)
         }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_RAY_TRACING_MAINTENANCE_1_FEATURES_KHR => {
+            Some(2usize)
+        }
         crate::vk1_0::StructureType::PHYSICAL_DEVICE_FRAGMENT_DENSITY_MAP_FEATURES_EXT => {
             Some(3usize)
         }
@@ -6316,6 +6371,18 @@ pub(crate) fn features2_bool_count(
             Some(1usize)
         }
         crate::vk1_0::StructureType::PHYSICAL_DEVICE_DESCRIPTOR_SET_HOST_MAPPING_FEATURES_VALVE => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_SUBPASS_MERGE_FEEDBACK_FEATURES_EXT => {
+            Some(1usize)
+        }
+        crate::vk1_0::StructureType::PHYSICAL_DEVICE_PIPELINE_PROPERTIES_FEATURES_EXT => {
             Some(1usize)
         }
         _ => None,

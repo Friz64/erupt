@@ -423,15 +423,6 @@ impl Structure {
                 }
             });
 
-        let extendable_from_kind = match (
-            self.has_p_next(Mutability::Const),
-            self.has_p_next(Mutability::Mut),
-        ) {
-            (true, false) | (false, true) => Some(quote! { ExtendableFrom }),
-            (false, false) => None,
-            (true, true) => Some(quote! { unreachable!() }),
-        };
-
         let mut tokens = HashMap::new();
         tokens.insert(
             origin.clone(),
@@ -445,12 +436,12 @@ impl Structure {
             },
         );
 
-        let mut names = vec![&self.name];
+        let mut names_for_this = vec![&self.name];
         for alias in &source.aliases {
             if let Name::Type(alias_name) = &alias.name {
                 if let Name::Type(resolved) = alias.resolve(source) {
                     if resolved == &self.name {
-                        names.push(alias_name);
+                        names_for_this.push(alias_name);
                     }
                 }
             }
@@ -461,7 +452,7 @@ impl Structure {
                 .metadata
                 .extends
                 .iter()
-                .any(|extends| names.contains(&extends))
+                .any(|extends| names_for_this.contains(&extends))
         }) {
             let this_path = origin.module_path();
             let other_origin = other
@@ -478,10 +469,10 @@ impl Structure {
                 .entry(other_origin.clone())
                 .or_insert_with(TokenStream::new)
                 .extend(quote! {
-                    impl<'a> crate::#extendable_from_kind<'a, #other_ident>
+                    impl<'a> crate::ExtendableFrom<'a, #other_ident>
                         for crate:: #this_path #ident<'a> {}
 
-                    impl<'a> crate::#extendable_from_kind<'a, #other_builder_ident<'_>>
+                    impl<'a> crate::ExtendableFrom<'a, #other_builder_ident<'_>>
                         for crate:: #this_path #ident<'a> {}
                 });
         }

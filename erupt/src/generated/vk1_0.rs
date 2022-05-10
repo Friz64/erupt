@@ -3910,6 +3910,12 @@ impl std::fmt::Debug for QueryType {
                     "VIDEO_ENCODE_BITSTREAM_BUFFER_RANGE_KHR"
                 }
                 &Self::PRIMITIVES_GENERATED_EXT => "PRIMITIVES_GENERATED_EXT",
+                &Self::ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHR => {
+                    "ACCELERATION_STRUCTURE_SERIALIZATION_BOTTOM_LEVEL_POINTERS_KHR"
+                }
+                &Self::ACCELERATION_STRUCTURE_SIZE_KHR => {
+                    "ACCELERATION_STRUCTURE_SIZE_KHR"
+                }
                 _ => "(unknown variant)",
             },
         )
@@ -4040,6 +4046,9 @@ impl std::fmt::Debug for Result {
                 &Self::THREAD_DONE_KHR => "THREAD_DONE_KHR",
                 &Self::OPERATION_DEFERRED_KHR => "OPERATION_DEFERRED_KHR",
                 &Self::OPERATION_NOT_DEFERRED_KHR => "OPERATION_NOT_DEFERRED_KHR",
+                &Self::ERROR_COMPRESSION_EXHAUSTED_EXT => {
+                    "ERROR_COMPRESSION_EXHAUSTED_EXT"
+                }
                 _ => "(unknown variant)",
             },
         )
@@ -5641,6 +5650,15 @@ impl std::fmt::Debug for StructureType {
                 &Self::PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR => {
                     "PHYSICAL_DEVICE_WORKGROUP_MEMORY_EXPLICIT_LAYOUT_FEATURES_KHR"
                 }
+                &Self::PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_FEATURES_EXT"
+                }
+                &Self::IMAGE_COMPRESSION_CONTROL_EXT => "IMAGE_COMPRESSION_CONTROL_EXT",
+                &Self::SUBRESOURCE_LAYOUT_2_EXT => "SUBRESOURCE_LAYOUT_2_EXT",
+                &Self::IMAGE_SUBRESOURCE_2_EXT => "IMAGE_SUBRESOURCE_2_EXT",
+                &Self::IMAGE_COMPRESSION_PROPERTIES_EXT => {
+                    "IMAGE_COMPRESSION_PROPERTIES_EXT"
+                }
                 &Self::PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT => {
                     "PHYSICAL_DEVICE_4444_FORMATS_FEATURES_EXT"
                 }
@@ -5739,6 +5757,12 @@ impl std::fmt::Debug for StructureType {
                 &Self::PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV => {
                     "PHYSICAL_DEVICE_EXTERNAL_MEMORY_RDMA_FEATURES_NV"
                 }
+                &Self::PIPELINE_PROPERTIES_IDENTIFIER_EXT => {
+                    "PIPELINE_PROPERTIES_IDENTIFIER_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_PIPELINE_PROPERTIES_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_PIPELINE_PROPERTIES_FEATURES_EXT"
+                }
                 &Self::PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT => {
                     "PHYSICAL_DEVICE_EXTENDED_DYNAMIC_STATE_2_FEATURES_EXT"
                 }
@@ -5751,6 +5775,9 @@ impl std::fmt::Debug for StructureType {
                 }
                 &Self::PHYSICAL_DEVICE_PRIMITIVES_GENERATED_QUERY_FEATURES_EXT => {
                     "PHYSICAL_DEVICE_PRIMITIVES_GENERATED_QUERY_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_RAY_TRACING_MAINTENANCE_1_FEATURES_KHR => {
+                    "PHYSICAL_DEVICE_RAY_TRACING_MAINTENANCE_1_FEATURES_KHR"
                 }
                 &Self::PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT => {
                     "PHYSICAL_DEVICE_IMAGE_VIEW_MIN_LOD_FEATURES_EXT"
@@ -5796,6 +5823,21 @@ impl std::fmt::Debug for StructureType {
                 }
                 &Self::PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV => {
                     "PHYSICAL_DEVICE_LINEAR_COLOR_ATTACHMENT_FEATURES_NV"
+                }
+                &Self::PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_IMAGE_COMPRESSION_CONTROL_SWAPCHAIN_FEATURES_EXT"
+                }
+                &Self::PHYSICAL_DEVICE_SUBPASS_MERGE_FEEDBACK_FEATURES_EXT => {
+                    "PHYSICAL_DEVICE_SUBPASS_MERGE_FEEDBACK_FEATURES_EXT"
+                }
+                &Self::RENDER_PASS_CREATION_CONTROL_EXT => {
+                    "RENDER_PASS_CREATION_CONTROL_EXT"
+                }
+                &Self::RENDER_PASS_CREATION_FEEDBACK_INFO_EXT => {
+                    "RENDER_PASS_CREATION_FEEDBACK_INFO_EXT"
+                }
+                &Self::RENDER_PASS_SUBPASS_FEEDBACK_INFO_EXT => {
+                    "RENDER_PASS_SUBPASS_FEEDBACK_INFO_EXT"
                 }
                 _ => "(unknown variant)",
             },
@@ -21831,10 +21873,10 @@ pub const API_VERSION_1_2: u32 = make_api_version(0, 1, 2, 0);
 pub const API_VERSION_1_3: u32 = make_api_version(0, 1, 3, 0);
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION.html) · Define
 #[doc(alias = "VK_HEADER_VERSION")]
-pub const HEADER_VERSION: u32 = 212u32;
+pub const HEADER_VERSION: u32 = 213u32;
 ///[Vulkan Manual Page](https://www.khronos.org/registry/vulkan/specs/1.3-extensions/man/html/VK_HEADER_VERSION_COMPLETE.html) · Define
 #[doc(alias = "VK_HEADER_VERSION_COMPLETE")]
-pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 212u32);
+pub const HEADER_VERSION_COMPLETE: u32 = make_api_version(0, 1u32, 3u32, 213u32);
 ///Provided by [`crate::vk1_0`]
 impl<T> crate::CustomEntryLoader<T> {
     #[inline]

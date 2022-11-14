@@ -6,7 +6,7 @@ edition = "2021"
 
 [dependencies]
 erupt = { path = "../erupt" }
-winit = "0.26"
+winit = "0.27"
 structopt = "0.3"
 bytemuck = "1.5"
 libloading = "0.7"

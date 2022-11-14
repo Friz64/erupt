@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.23.0+213] - 2022-11-14
+
 ### Added
 
 - Add `features` utilities module for checking supported features
@@ -18,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update Vulkan Headers to version 213
 - Change from `Box` to reference in `create_{instance,device}_fn`
 - Pointer chain wrapper args are now a mut ref
+- Update `raw-window-handle` to 0.5
 
 ## [0.22.0+204] - 2022-01-25
 

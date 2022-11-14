@@ -5,6 +5,13 @@ Vulkan API bindings
 
 Take a look at the [`erupt` user guide](https://gitlab.com/Friz64/erupt/-/blob/main/USER_GUIDE.md).
 
+## **MAINTENANCE MODE NOTICE**
+
+It is not recommended to use erupt for new projects, use ash instead. There is
+work underway to rewrite ash using ideas from the erupt project, for updates see
+<https://github.com/ash-rs/ash/issues/344>. Simple patches to erupt will still
+be merged, but no large changes are to be expected.
+
 ## Features
 
 - Full Vulkan API coverage
